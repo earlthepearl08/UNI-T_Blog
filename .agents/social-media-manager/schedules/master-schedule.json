@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "created": "2026-01-29",
+    "manager": "social-media-manager",
+    "status": "pending",
+    "launch_date": "2026-02-15"
+  },
+  "posting_times": {
+    "facebook": {
+      "frequency": "1-2 per day",
+      "optimal_times": ["09:00", "19:00"],
+      "timezone": "Asia/Manila"
+    },
+    "instagram": {
+      "frequency": "1 per day",
+      "optimal_times": ["12:00", "18:00"],
+      "timezone": "Asia/Manila"
+    },
+    "linkedin": {
+      "frequency": "3-4 per week",
+      "optimal_times": ["08:00", "17:00"],
+      "timezone": "Asia/Manila"
+    },
+    "twitter": {
+      "frequency": "1-2 per day",
+      "optimal_times": ["10:00", "20:00"],
+      "timezone": "Asia/Manila"
+    }
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "start_date": "2026-02-15",
+      "theme": "Launch Week - Introduction to UNI-T",
+      "posts": []
+    },
+    {
+      "week": 2,
+      "start_date": "2026-02-22",
+      "theme": "Getting Started - Beginner Content",
+      "posts": []
+    }
+  ],
+  "notes": "Awaiting posting sequence from Marketing Analyst (T004)"
+}

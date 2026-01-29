@@ -1,0 +1,56 @@
+{
+  "project": "UNI-T Philippines Content Publishing",
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "Foundation Complete",
+      "target_date": "2026-02-01",
+      "status": "in_progress",
+      "criteria": [
+        { "item": "Content categorization finalized", "complete": false },
+        { "item": "Brand style guide created", "complete": false },
+        { "item": "Blog infrastructure live", "complete": true },
+        { "item": "Posting sequence defined", "complete": false }
+      ],
+      "notes": "Web infrastructure complete, awaiting marketing and design deliverables"
+    },
+    {
+      "id": "M2",
+      "name": "Content Production Ready",
+      "target_date": "2026-02-07",
+      "status": "pending",
+      "criteria": [
+        { "item": "All social media templates created", "complete": false },
+        { "item": "Blog featured image template ready", "complete": false },
+        { "item": "Automation tools configured", "complete": false },
+        { "item": "First 10 featured images complete", "complete": false }
+      ],
+      "notes": "Dependent on M1 completion"
+    },
+    {
+      "id": "M3",
+      "name": "Pre-Launch",
+      "target_date": "2026-02-14",
+      "status": "pending",
+      "criteria": [
+        { "item": "All 44 featured images complete", "complete": false },
+        { "item": "First week of posts scheduled", "complete": false },
+        { "item": "QA complete on all blog posts", "complete": false },
+        { "item": "Social accounts connected to automation", "complete": false }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "M4",
+      "name": "Launch",
+      "target_date": "2026-02-15",
+      "status": "pending",
+      "criteria": [
+        { "item": "First posts published", "complete": false },
+        { "item": "All systems operational", "complete": false },
+        { "item": "Monitoring in place", "complete": false }
+      ],
+      "notes": ""
+    }
+  ]
+}

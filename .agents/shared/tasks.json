@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "project": "UNI-T Philippines Content Publishing",
+    "created": "2026-01-29",
+    "total_posts": 44,
+    "target_launch": "2026-02-15",
+    "total_agents": 10
+  },
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Foundation",
+      "status": "in_progress",
+      "tasks": [
+        {
+          "id": "T001",
+          "title": "Finalize content categorization",
+          "assigned_to": "marketing-analyst",
+          "status": "in_progress",
+          "priority": "high",
+          "due": "2026-01-31",
+          "dependencies": [],
+          "handoff_to": ["seo-specialist", "copywriter"]
+        },
+        {
+          "id": "T002",
+          "title": "Create brand style guide",
+          "assigned_to": "graphic-designer",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-01",
+          "dependencies": [],
+          "handoff_to": ["content-editor", "copywriter"]
+        },
+        {
+          "id": "T003",
+          "title": "Set up blog infrastructure",
+          "assigned_to": "web-developer",
+          "status": "completed",
+          "priority": "high",
+          "due": "2026-01-29",
+          "dependencies": [],
+          "handoff_to": ["seo-specialist", "data-analyst"]
+        },
+        {
+          "id": "T004",
+          "title": "Define posting sequence strategy",
+          "assigned_to": "marketing-analyst",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-01",
+          "dependencies": ["T001"],
+          "handoff_to": ["social-media-manager", "copywriter"]
+        },
+        {
+          "id": "T012",
+          "title": "Complete keyword research for all 44 posts",
+          "assigned_to": "seo-specialist",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-02",
+          "dependencies": ["T001"],
+          "handoff_to": ["content-editor", "web-developer"]
+        },
+        {
+          "id": "T013",
+          "title": "Create editorial style guide",
+          "assigned_to": "content-editor",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-01",
+          "dependencies": ["T002"],
+          "handoff_to": ["copywriter"]
+        },
+        {
+          "id": "T014",
+          "title": "Set up analytics tracking",
+          "assigned_to": "data-analyst",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-03",
+          "dependencies": ["T003"],
+          "handoff_to": ["project-manager"]
+        },
+        {
+          "id": "T015",
+          "title": "Create community guidelines",
+          "assigned_to": "community-manager",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-05",
+          "dependencies": [],
+          "handoff_to": ["social-media-manager"]
+        },
+        {
+          "id": "T016",
+          "title": "Create platform copy guidelines",
+          "assigned_to": "copywriter",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-03",
+          "dependencies": ["T001", "T013"],
+          "handoff_to": ["social-media-manager"]
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "name": "Content Production",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "T005",
+          "title": "Create social media templates (5 platforms)",
+          "assigned_to": "graphic-designer",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-03",
+          "dependencies": ["T002"],
+          "handoff_to": ["copywriter", "social-media-manager"]
+        },
+        {
+          "id": "T006",
+          "title": "Create blog featured image template",
+          "assigned_to": "graphic-designer",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-03",
+          "dependencies": ["T002"],
+          "handoff_to": ["web-developer"]
+        },
+        {
+          "id": "T007",
+          "title": "Generate featured images for all 44 posts",
+          "assigned_to": "graphic-designer",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-10",
+          "dependencies": ["T006"],
+          "handoff_to": ["web-developer", "social-media-manager"]
+        },
+        {
+          "id": "T008",
+          "title": "Set up automation tools (Buffer/Meta)",
+          "assigned_to": "social-media-manager",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-05",
+          "dependencies": ["T004"],
+          "handoff_to": ["community-manager"]
+        },
+        {
+          "id": "T017",
+          "title": "QA review of all 44 blog posts",
+          "assigned_to": "content-editor",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-08",
+          "dependencies": ["T012", "T013"],
+          "handoff_to": ["web-developer", "copywriter"]
+        },
+        {
+          "id": "T018",
+          "title": "Optimize all post meta titles & descriptions",
+          "assigned_to": "seo-specialist",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-06",
+          "dependencies": ["T012"],
+          "handoff_to": ["content-editor", "web-developer"]
+        },
+        {
+          "id": "T019",
+          "title": "Adapt blog content for Facebook (44 posts)",
+          "assigned_to": "copywriter",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-09",
+          "dependencies": ["T017", "T005"],
+          "handoff_to": ["content-editor"]
+        },
+        {
+          "id": "T020",
+          "title": "Adapt blog content for Instagram (44 carousels)",
+          "assigned_to": "copywriter",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-10",
+          "dependencies": ["T017", "T005"],
+          "handoff_to": ["content-editor"]
+        },
+        {
+          "id": "T021",
+          "title": "Adapt blog content for LinkedIn (44 posts)",
+          "assigned_to": "copywriter",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-11",
+          "dependencies": ["T017", "T005"],
+          "handoff_to": ["content-editor"]
+        },
+        {
+          "id": "T022",
+          "title": "Adapt blog content for Twitter threads (44 posts)",
+          "assigned_to": "copywriter",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-11",
+          "dependencies": ["T017", "T005"],
+          "handoff_to": ["content-editor"]
+        },
+        {
+          "id": "T023",
+          "title": "Final QA of all social copy",
+          "assigned_to": "content-editor",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-12",
+          "dependencies": ["T019", "T020", "T021", "T022"],
+          "handoff_to": ["social-media-manager"]
+        },
+        {
+          "id": "T024",
+          "title": "Create response templates library",
+          "assigned_to": "community-manager",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-10",
+          "dependencies": ["T015"],
+          "handoff_to": []
+        },
+        {
+          "id": "T025",
+          "title": "Set up performance dashboards",
+          "assigned_to": "data-analyst",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-12",
+          "dependencies": ["T014"],
+          "handoff_to": ["project-manager", "marketing-analyst"]
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "name": "Launch & Distribution",
+      "status": "pending",
+      "tasks": [
+        {
+          "id": "T009",
+          "title": "Schedule first week of posts",
+          "assigned_to": "social-media-manager",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-14",
+          "dependencies": ["T023", "T007", "T008"],
+          "handoff_to": ["community-manager"]
+        },
+        {
+          "id": "T010",
+          "title": "Final QA of all blog posts on live site",
+          "assigned_to": "web-developer",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-14",
+          "dependencies": ["T007", "T018"],
+          "handoff_to": ["project-manager"]
+        },
+        {
+          "id": "T011",
+          "title": "Launch campaign",
+          "assigned_to": "project-manager",
+          "status": "pending",
+          "priority": "critical",
+          "due": "2026-02-15",
+          "dependencies": ["T009", "T010"],
+          "handoff_to": ["all-agents"]
+        },
+        {
+          "id": "T026",
+          "title": "Begin community monitoring",
+          "assigned_to": "community-manager",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-15",
+          "dependencies": ["T009", "T024"],
+          "handoff_to": ["data-analyst"]
+        },
+        {
+          "id": "T027",
+          "title": "Week 1 performance report",
+          "assigned_to": "data-analyst",
+          "status": "pending",
+          "priority": "high",
+          "due": "2026-02-22",
+          "dependencies": ["T011", "T025"],
+          "handoff_to": ["project-manager", "marketing-analyst"]
+        },
+        {
+          "id": "T028",
+          "title": "Technical SEO audit post-launch",
+          "assigned_to": "seo-specialist",
+          "status": "pending",
+          "priority": "medium",
+          "due": "2026-02-20",
+          "dependencies": ["T011"],
+          "handoff_to": ["web-developer"]
+        }
+      ]
+    }
+  ]
+}

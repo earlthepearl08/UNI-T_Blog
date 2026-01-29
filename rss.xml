@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UNI-T Philippines Blog</title>
+    <link>https://unit-blog.vercel.app</link>
+    <description>Expert guides on choosing and using UNI-T test instruments for Filipino professionals.</description>
+    <language>en-ph</language>
+    <lastBuildDate>Thu, 29 Jan 2026 10:24:49 GMT</lastBuildDate>
+    <atom:link href="https://unit-blog.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title><![CDATA[Brand Spotlight: UNI-T]]></title>
+      <link>https://unit-blog.vercel.app/posts/brand-spotlight_-uni-t.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/brand-spotlight_-uni-t.html</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: UNI‑T Tools That Power Precision and Progress | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Choosing the Right Battery Testers & Chargers for Home and Commercial Use]]></title>
+      <link>https://unit-blog.vercel.app/posts/choosing-the-right-battery-testers-chargers-for-home-and-commercial-use.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/choosing-the-right-battery-testers-chargers-for-home-and-commercial-use.html</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Battery Testers &amp; Chargers: Home to Business Picks | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Clamp Meters vs. Multimeters: When to Use Each and How to Pick the Right One]]></title>
+      <link>https://unit-blog.vercel.app/posts/clamp-meters-vs-multimeters_-when-to-use-each-and-how-to-pick-the-right-one.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/clamp-meters-vs-multimeters_-when-to-use-each-and-how-to-pick-the-right-one.html</guid>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Clamp Meters vs. Multimeters | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Do You Really Need a True RMS Meter: A Quick Guide for First-Time Buyers]]></title>
+      <link>https://unit-blog.vercel.app/posts/do-you-really-need-a-true-rms-meter_-a-quick-guide-for-first-time-buyers.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/do-you-really-need-a-true-rms-meter_-a-quick-guide-for-first-time-buyers.html</guid>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Do You Need a True RMS Meter? Find Out Now | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Entry-Level to Pro: What to Know Before Buying a Thermal Camera or Advanced Test Instrument]]></title>
+      <link>https://unit-blog.vercel.app/posts/entry-level-to-pro_-what-to-know-before-buying-a-thermal-camera-or-advanced-test.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/entry-level-to-pro_-what-to-know-before-buying-a-thermal-camera-or-advanced-test.html</guid>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Thermal Cameras: What to Know Before You Buy | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Essential Guide: Picking the Right Voltage or Insulation Tester for Safe Electrical Work]]></title>
+      <link>https://unit-blog.vercel.app/posts/essential-guide_-picking-the-right-voltage-or-insulation-tester-for-safe-electri.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/essential-guide_-picking-the-right-voltage-or-insulation-tester-for-safe-electri.html</guid>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Voltage &amp; Insulation Testers: Safe Picks That Work | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[HVAC Technicians’ Guide: Choosing the Right Electrical Test Instruments]]></title>
+      <link>https://unit-blog.vercel.app/posts/hvac-technicians-guide_-choosing-the-right-electrical-test-instruments.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/hvac-technicians-guide_-choosing-the-right-electrical-test-instruments.html</guid>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: HVAC Tech’s Guide to Electrical Test Instruments | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[How to Choose an Oscilloscope: Bandwidth, Channels, and Features Explained]]></title>
+      <link>https://unit-blog.vercel.app/posts/how-to-choose-an-oscilloscope_-bandwidth-channels-and-features-explained.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/how-to-choose-an-oscilloscope_-bandwidth-channels-and-features-explained.html</guid>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: How to Choose an Oscilloscope: A Buyer’s Guide | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Non-Contact Voltage Testers: Small Tools, Big Protection for Everyday Jobs]]></title>
+      <link>https://unit-blog.vercel.app/posts/non-contact-voltage-testers_-small-tools-big-protection-for-everyday-jobs.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/non-contact-voltage-testers_-small-tools-big-protection-for-everyday-jobs.html</guid>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Non-Contact Voltage Testers for Electrical Work | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[The Practical Guide to Choosing the Right Digital Multimeter for Work, Study, or Home Use]]></title>
+      <link>https://unit-blog.vercel.app/posts/the-practical-guide-to-choosing-the-right-digital-multimeter-for-work-study-or-h.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/the-practical-guide-to-choosing-the-right-digital-multimeter-for-work-study-or-h.html</guid>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Choosing the Right Multimeter in the PH | Kinmo]]></description>
+      <category>Equipment Guides</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[5 Red Flags to Avoid Fake Testers: Buy Authentic UNI-T Tools With Confidence]]></title>
+      <link>https://unit-blog.vercel.app/posts/5-red-flags-to-avoid-fake-testers_-buy-authentic-uni-t-tools-with-confidence.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/5-red-flags-to-avoid-fake-testers_-buy-authentic-uni-t-tools-with-confidence.html</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: 5 Red Flags to Avoid Fake Testers | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Advanced Digital Multimeters: What Features Matter for Pro-Level Electrical Work:]]></title>
+      <link>https://unit-blog.vercel.app/posts/advanced-digital-multimeters_-what-features-matter-for-pro-level-electrical-work.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/advanced-digital-multimeters_-what-features-matter-for-pro-level-electrical-work.html</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Advanced Digital Multimeter Features | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Basic Electrical Testing at Home: Simple Checks You Can Do (And When to Call a Pro)]]></title>
+      <link>https://unit-blog.vercel.app/posts/basic-electrical-testing-at-home_-simple-checks-you-can-do-and-when-to-call-a-pr.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/basic-electrical-testing-at-home_-simple-checks-you-can-do-and-when-to-call-a-pr.html</guid>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Simple Electrical Checks You Can Do | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Bench Type Testers vs. Handheld: When Do You Need a Bench Unit:]]></title>
+      <link>https://unit-blog.vercel.app/posts/bench-type-testers-vs-handheld_-when-do-you-need-a-bench-unit_.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/bench-type-testers-vs-handheld_-when-do-you-need-a-bench-unit_.html</guid>
+      <pubDate>Wed, 07 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Bench Type Testers vs. Handheld | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Borescopes & Inspection Cameras: Choosing the Right Model for Hard-to-Reach Jobs]]></title>
+      <link>https://unit-blog.vercel.app/posts/borescopes-inspection-cameras_-choosing-the-right-model-for-hard-to-reach-jobs.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/borescopes-inspection-cameras_-choosing-the-right-model-for-hard-to-reach-jobs.html</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Borescopes &amp; Inspection Cameras for Your Job | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Calibration Made Simple: How to Keep Your Test Instruments Accurate and Compliant]]></title>
+      <link>https://unit-blog.vercel.app/posts/calibration-made-simple_-how-to-keep-your-test-instruments-accurate-and-complian.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/calibration-made-simple_-how-to-keep-your-test-instruments-accurate-and-complian.html</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Tester Calibration Made Simple | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[DIY Electrical Safety: Must-Have Test Instruments for Your Home Tool Kit]]></title>
+      <link>https://unit-blog.vercel.app/posts/diy-electrical-safety_-must-have-test-instruments-for-your-home-tool-kit.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/diy-electrical-safety_-must-have-test-instruments-for-your-home-tool-kit.html</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Essential UNI-T Testers for Every Filipino Home | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Earth Ground Testers: How to Choose the Right Tool for Reliable Grounding Checks]]></title>
+      <link>https://unit-blog.vercel.app/posts/earth-ground-testers_-how-to-choose-the-right-tool-for-reliable-grounding-checks.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/earth-ground-testers_-how-to-choose-the-right-tool-for-reliable-grounding-checks.html</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Choosing the Right Earth Ground Tester | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[Environmental Testers Made Easy: Selecting the Right Tools for Temperature, Humidity & More]]></title>
+      <link>https://unit-blog.vercel.app/posts/environmental-testers-made-easy_-selecting-the-right-tools-for-temperature-humid.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/environmental-testers-made-easy_-selecting-the-right-tools-for-temperature-humid.html</guid>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: Environmental Testers 101 | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+    <item>
+      <title><![CDATA[How to Pick a Reliable Data Logger: Bandwidth, Memory, and Accuracy]]></title>
+      <link>https://unit-blog.vercel.app/posts/how-to-pick-a-reliable-data-logger_-bandwidth-memory-and-accuracy.html</link>
+      <guid isPermaLink="true">https://unit-blog.vercel.app/posts/how-to-pick-a-reliable-data-logger_-bandwidth-memory-and-accuracy.html</guid>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Meta Title: How to Pick a Reliable Data Logger | Kinmo]]></description>
+      <category>Safety & Techniques</category>
+      <author>UNI-T Philippines</author>
+    </item>
+  </channel>
+</rss>

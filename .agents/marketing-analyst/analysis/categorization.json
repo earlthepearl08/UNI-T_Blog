@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "created": "2026-01-29",
+    "analyst": "marketing-analyst",
+    "status": "in_progress",
+    "total_posts": 44,
+    "categorized": 0
+  },
+  "categories": {
+    "equipment-guides": {
+      "name": "Equipment Guides",
+      "description": "Product reviews, how-to guides, equipment comparisons",
+      "color": "#E31E24",
+      "posts": []
+    },
+    "safety-techniques": {
+      "name": "Safety & Techniques",
+      "description": "Best practices, safety tips, measurement techniques",
+      "color": "#FF6B35",
+      "posts": []
+    },
+    "professional-development": {
+      "name": "Professional Development",
+      "description": "Career advice, certifications, industry insights",
+      "color": "#2196F3",
+      "posts": []
+    },
+    "faqs": {
+      "name": "FAQs",
+      "description": "Common questions, troubleshooting, quick tips",
+      "color": "#4CAF50",
+      "posts": []
+    }
+  },
+  "difficulty_levels": {
+    "beginner": {
+      "description": "No prior knowledge required",
+      "posts": []
+    },
+    "intermediate": {
+      "description": "Basic electrical knowledge assumed",
+      "posts": []
+    },
+    "advanced": {
+      "description": "Professional-level content",
+      "posts": []
+    }
+  },
+  "posts": []
+}

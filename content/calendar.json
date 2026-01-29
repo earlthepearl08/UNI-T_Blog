@@ -1,0 +1,119 @@
+{
+  "title": "UNI-T Content Publishing Calendar",
+  "strategy": "1-2 posts per day, beginner to advanced progression",
+  "totalPosts": 44,
+  "durationDays": 30,
+  "postsPerDay": 1.5,
+  "schedule": [
+    {
+      "week": 1,
+      "theme": "Brand Introduction & Basics",
+      "posts": [
+        { "day": 1, "postId": 1, "title": "Brand Spotlight: UNI-T", "platform": "all", "note": "Launch post - introduce the brand" },
+        { "day": 2, "postId": 10, "title": "The Practical Guide to Choosing the Right Digital Multimeter", "platform": "all", "note": "Foundation - most popular tool" },
+        { "day": 3, "postId": 3, "title": "Clamp Meters vs. Multimeters", "platform": "all", "note": "Comparison helps decision-making" },
+        { "day": 4, "postId": 4, "title": "Do You Really Need a True RMS Meter", "platform": "all", "note": "Educational - build trust" },
+        { "day": 5, "postId": 21, "title": "How to Safely Use a Digital Multimeter", "platform": "all", "note": "Safety angle - weekend read" }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Specialized Equipment Deep Dives",
+      "posts": [
+        { "day": 6, "postId": 9, "title": "Non-Contact Voltage Testers", "platform": "all", "note": "Simple, affordable tool" },
+        { "day": 7, "postId": 6, "title": "Essential Guide: Voltage or Insulation Tester", "platform": "all", "note": "Safety-critical equipment" },
+        { "day": 8, "postId": 30, "title": "Your First Clamp Meter", "platform": "all", "note": "Beginner-friendly guide" },
+        { "day": 9, "postId": 7, "title": "HVAC Technicians' Guide", "platform": "all", "note": "Industry-specific" },
+        { "day": 10, "postId": 2, "title": "Battery Testers & Chargers", "platform": "all", "note": "Practical for many users" }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Advanced Tools & Techniques",
+      "posts": [
+        { "day": 11, "postId": 8, "title": "How to Choose an Oscilloscope", "platform": "all", "note": "Advanced users" },
+        { "day": 12, "postId": 5, "title": "Thermal Camera Buying Guide", "platform": "all", "note": "High-value product" },
+        { "day": 13, "postId": 27, "title": "Thermal Imager or Infrared Thermometer", "platform": "all", "note": "Comparison post" },
+        { "day": 14, "postId": 12, "title": "Advanced Digital Multimeters", "platform": "all", "note": "Pro-level content" },
+        { "day": 15, "postId": 22, "title": "Insulation Resistance Testers", "platform": "all", "note": "Safety compliance" }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Safety & Best Practices",
+      "posts": [
+        { "day": 16, "postId": 17, "title": "DIY Electrical Safety", "platform": "all", "note": "Home audience" },
+        { "day": 17, "postId": 13, "title": "Basic Electrical Testing at Home", "platform": "all", "note": "Practical tips" },
+        { "day": 18, "postId": 11, "title": "5 Red Flags to Avoid Fake Testers", "platform": "all", "note": "Trust building" },
+        { "day": 19, "postId": 16, "title": "Calibration Made Simple", "platform": "all", "note": "Maintenance focus" },
+        { "day": 20, "postId": 29, "title": "Troubleshooting Common Instrument Errors", "platform": "all", "note": "Problem-solving" }
+      ]
+    },
+    {
+      "week": 5,
+      "theme": "Specialized Applications",
+      "posts": [
+        { "day": 21, "postId": 26, "title": "Multimeters in Automotive Diagnostics", "platform": "all", "note": "Auto industry" },
+        { "day": 22, "postId": 18, "title": "Earth Ground Testers", "platform": "all", "note": "Technical audience" },
+        { "day": 23, "postId": 19, "title": "Environmental Testers Made Easy", "platform": "all", "note": "Niche but important" },
+        { "day": 24, "postId": 15, "title": "Borescopes & Inspection Cameras", "platform": "all", "note": "Visual inspection" },
+        { "day": 25, "postId": 14, "title": "Bench vs Handheld Testers", "platform": "all", "note": "Decision guide" }
+      ]
+    },
+    {
+      "week": 6,
+      "theme": "Network & Data Tools + Professional Development",
+      "posts": [
+        { "day": 26, "postId": 23, "title": "LAN Cable Testers 101", "platform": "all", "note": "IT audience" },
+        { "day": 27, "postId": 24, "title": "Network Testers Essential Tips", "platform": "all", "note": "IT/Networking" },
+        { "day": 28, "postId": 25, "title": "Socket Testers", "platform": "all", "note": "Simple but essential" },
+        { "day": 29, "postId": 20, "title": "How to Pick a Data Logger", "platform": "all", "note": "Data-focused" },
+        { "day": 30, "postId": 28, "title": "Top 10 Tools Every Electrician Should Own", "platform": "all", "note": "List post - high engagement" }
+      ]
+    },
+    {
+      "week": 7,
+      "theme": "Professional Development & Business",
+      "posts": [
+        { "day": 31, "postId": 31, "title": "Analog vs Digital Test Instruments", "platform": "all", "note": "Pro decision guide" },
+        { "day": 32, "postId": 32, "title": "Cost-Benefit Analysis: Quality Equipment", "platform": "linkedin", "note": "B2B focus" },
+        { "day": 33, "postId": 33, "title": "Emerging Trends in Industrial Safety", "platform": "linkedin", "note": "Industry insights" },
+        { "day": 34, "postId": 34, "title": "How to Vet Suppliers", "platform": "linkedin", "note": "Procurement audience" },
+        { "day": 35, "postId": 35, "title": "Training Programs for Testing Equipment", "platform": "all", "note": "HR/Training focus" }
+      ]
+    },
+    {
+      "week": 8,
+      "theme": "Common Mistakes & FAQs",
+      "posts": [
+        { "day": 36, "postId": 36, "title": "Top Mistakes Beginners Make", "platform": "all", "note": "Educational" },
+        { "day": 37, "postId": 37, "title": "Why Cheap Testers Cost More", "platform": "all", "note": "Value proposition" },
+        { "day": 38, "postId": 38, "title": "FAQs - Clamp Meters", "platform": "all", "note": "FAQ series start" },
+        { "day": 39, "postId": 39, "title": "FAQs - Digital Multimeters", "platform": "all", "note": "FAQ series" },
+        { "day": 40, "postId": 40, "title": "FAQs - Environmental Testers", "platform": "all", "note": "FAQ series" }
+      ]
+    },
+    {
+      "week": 9,
+      "theme": "FAQ Series Finale",
+      "posts": [
+        { "day": 41, "postId": 41, "title": "FAQs - Insulation Testers", "platform": "all", "note": "FAQ series" },
+        { "day": 42, "postId": 42, "title": "FAQs - LAN Cable Testers", "platform": "all", "note": "FAQ series" },
+        { "day": 43, "postId": 43, "title": "FAQs - Professional Multimeters", "platform": "all", "note": "FAQ series" },
+        { "day": 44, "postId": 44, "title": "FAQs - Thermal Imagers", "platform": "all", "note": "FAQ series finale" }
+      ]
+    }
+  ],
+  "socialMediaTiming": {
+    "facebook": { "times": ["09:00", "19:00"], "timezone": "Asia/Manila" },
+    "instagram": { "times": ["12:00", "18:00"], "timezone": "Asia/Manila" },
+    "linkedin": { "times": ["08:00", "17:00"], "timezone": "Asia/Manila" },
+    "twitter": { "times": ["10:00", "20:00"], "timezone": "Asia/Manila" }
+  },
+  "hashtagStrategy": {
+    "core": ["#UNIT", "#UNITPhilippines", "#Kinmo", "#TestInstruments"],
+    "equipment": ["#Multimeter", "#ClampMeter", "#ThermalImaging", "#Oscilloscope"],
+    "industry": ["#Electrician", "#HVAC", "#Engineering", "#Technician"],
+    "philippines": ["#PhilippinesElectrical", "#PinoyTechnician", "#MadeForPH"]
+  }
+}

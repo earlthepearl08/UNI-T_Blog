@@ -1,0 +1,164 @@
+{
+  "general": {
+    "name": "general",
+    "count": 12,
+    "posts": [
+      1,
+      11,
+      13,
+      14,
+      15,
+      25,
+      28,
+      29,
+      31,
+      32,
+      35,
+      37
+    ]
+  },
+  "battery-tester": {
+    "name": "battery-tester",
+    "count": 1,
+    "posts": [
+      2
+    ]
+  },
+  "multimeter": {
+    "name": "multimeter",
+    "count": 7,
+    "posts": [
+      3,
+      10,
+      12,
+      21,
+      26,
+      39,
+      43
+    ]
+  },
+  "clamp-meter": {
+    "name": "clamp-meter",
+    "count": 3,
+    "posts": [
+      3,
+      30,
+      38
+    ]
+  },
+  "guide": {
+    "name": "guide",
+    "count": 14,
+    "posts": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      10,
+      16,
+      18,
+      20,
+      21,
+      22,
+      23,
+      34,
+      36
+    ]
+  },
+  "thermal-imaging": {
+    "name": "thermal-imaging",
+    "count": 3,
+    "posts": [
+      5,
+      27,
+      44
+    ]
+  },
+  "voltage-tester": {
+    "name": "voltage-tester",
+    "count": 2,
+    "posts": [
+      6,
+      9
+    ]
+  },
+  "insulation-tester": {
+    "name": "insulation-tester",
+    "count": 3,
+    "posts": [
+      6,
+      22,
+      41
+    ]
+  },
+  "safety": {
+    "name": "safety",
+    "count": 5,
+    "posts": [
+      6,
+      17,
+      21,
+      22,
+      33
+    ]
+  },
+  "hvac": {
+    "name": "hvac",
+    "count": 1,
+    "posts": [
+      7
+    ]
+  },
+  "oscilloscope": {
+    "name": "oscilloscope",
+    "count": 1,
+    "posts": [
+      8
+    ]
+  },
+  "calibration": {
+    "name": "calibration",
+    "count": 1,
+    "posts": [
+      16
+    ]
+  },
+  "environmental": {
+    "name": "environmental",
+    "count": 2,
+    "posts": [
+      19,
+      40
+    ]
+  },
+  "network-testing": {
+    "name": "network-testing",
+    "count": 3,
+    "posts": [
+      23,
+      24,
+      42
+    ]
+  },
+  "automotive": {
+    "name": "automotive",
+    "count": 1,
+    "posts": [
+      26
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "count": 7,
+    "posts": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ]
+  }
+}
