@@ -57,7 +57,11 @@
       <a href="/categories/faqs/" class="category-pill">FAQs <span class="count">7</span></a>
     </div>
 
-    <div class="posts-grid">
+    <div class="search-container">
+      <input type="text" id="categorySearch" class="search-input" placeholder="Search in All Posts...">
+    </div>
+
+    <div class="posts-grid" id="postsGrid">
       
       <article class="post-card">
         <div class="post-card-image">
@@ -824,6 +828,26 @@
     }
     initTheme();
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+    // All Posts page search
+    const searchInput = document.getElementById('categorySearch');
+    const postsGrid = document.getElementById('postsGrid');
+    const allCards = postsGrid ? Array.from(postsGrid.querySelectorAll('.post-card')) : [];
+
+    if (searchInput && postsGrid) {
+      let debounceTimer;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const query = e.target.value.toLowerCase().trim();
+          allCards.forEach(card => {
+            const title = card.querySelector('.post-card-title')?.textContent.toLowerCase() || '';
+            const matches = !query || title.includes(query);
+            card.style.display = matches ? '' : 'none';
+          });
+        }, 200);
+      });
+    }
   </script>
 </body>
 </html>
