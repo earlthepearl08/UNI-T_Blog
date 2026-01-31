@@ -659,7 +659,7 @@ p {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  /* No border-radius needed - parent .post-card handles it with overflow:hidden */
 }
 
 .post-card-image img {
@@ -825,10 +825,8 @@ p {
   margin: -2rem auto 2rem;
   max-width: 600px;
   padding: 2rem;
-  /* Background matches page theme */
+  /* Background matches page theme - seamless with page */
   background: var(--bg-primary);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
 }
 
 .post-featured-image img {
@@ -1377,9 +1375,27 @@ p {
 
 /* CTA Section */
 .cta-section {
-  background: var(--uni-black);
+  background: linear-gradient(135deg, var(--uni-black) 0%, #2d1a1a 100%);
   padding: 4rem 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-section h2 {
@@ -1563,52 +1579,83 @@ p {
 }
 
 /* ==========================================
-   CTA SECTION ENHANCEMENT
+   TOAST NOTIFICATION
    ========================================== */
-.cta-section {
-  background: linear-gradient(135deg, var(--uni-black) 0%, #2d1a1a 100%);
-  position: relative;
-  overflow: hidden;
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--uni-black);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
-.cta-section .container {
-  position: relative;
-  z-index: 1;
+.toast svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--uni-red);
 }
 
 /* ==========================================
-   SMOOTH SCROLL
+   LOADING SPINNER OVERLAY
    ========================================== */
-html {
-  scroll-behavior: smooth;
+.loading-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 300px;
+}
+
+.loading-overlay .spinner {
+  width: 40px;
+  height: 40px;
+}
+
+/* ==========================================
+   BACK TO POSTS LINK
+   ========================================== */
+.back-to-posts {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.back-to-posts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-to-posts a:hover {
+  color: var(--uni-red);
+}
+
+.back-to-posts svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ==========================================
    MICRO-INTERACTIONS
    ========================================== */
-.btn {
-  transition: all 0.2s ease;
-}
-
 .btn:active {
   transform: scale(0.98);
-}
-
-.category-pill {
-  transition: all 0.2s ease;
-}
-
-.nav a {
-  transition: color 0.2s ease;
 }

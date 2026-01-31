@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipment Guides | UNI-T Philippines</title>
   <meta name="description" content="Browse Equipment Guides articles about UNI-T test instruments.">
+  <meta property="og:title" content="Equipment Guides | UNI-T Philippines">
+  <meta property="og:description" content="Expert guides on choosing and using UNI-T test instruments for every skill level.">
+  <meta property="og:image" content="/images/products/multimeter-ut61e.png">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -51,18 +55,22 @@
   <section class="container">
     <div class="categories">
       <a href="/posts/" class="category-pill">All Posts</a>
-      
+
         <a href="/categories/equipment-guides/" class="category-pill active">Equipment Guides</a>
-      
+
         <a href="/categories/safety-techniques/" class="category-pill ">Safety & Techniques</a>
-      
+
         <a href="/categories/professional/" class="category-pill ">Professional Development</a>
-      
+
         <a href="/categories/faqs/" class="category-pill ">FAQs</a>
-      
+
     </div>
 
-    <div class="posts-grid">
+    <div class="search-container">
+      <input type="text" id="categorySearch" class="search-input" placeholder="Search in Equipment Guides...">
+    </div>
+
+    <div class="posts-grid" id="postsGrid">
       
       <article class="post-card">
         <div class="post-card-image">
@@ -98,7 +106,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Clamp Meters vs. Multimeters: When to Use Each and How to Pick the Right One" loading="lazy">
+          <img src="/images/composites/clamp-vs-multimeter.png" alt="Clamp Meters vs. Multimeters: When to Use Each and How to Pick the Right One" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Equipment Guides</span>
@@ -114,7 +122,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Do You Really Need a True RMS Meter: A Quick Guide for First-Time Buyers" loading="lazy">
+          <img src="/images/products/ut61b.png" alt="Do You Really Need a True RMS Meter: A Quick Guide for First-Time Buyers" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Equipment Guides</span>
@@ -146,7 +154,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/voltage-detector-ut12s.png" alt="Essential Guide: Picking the Right Voltage or Insulation Tester for Safe Electrical Work" loading="lazy">
+          <img src="/images/products/insulation-tester-ut501a.png" alt="Essential Guide: Picking the Right Voltage or Insulation Tester for Safe Electrical Work" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Equipment Guides</span>
@@ -162,7 +170,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="HVAC Technicians’ Guide: Choosing the Right Electrical Test Instruments" loading="lazy">
+          <img src="/images/products/ut202a.png" alt="HVAC Technicians’ Guide: Choosing the Right Electrical Test Instruments" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Equipment Guides</span>
@@ -210,7 +218,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="The Practical Guide to Choosing the Right Digital Multimeter for Work, Study, or Home Use" loading="lazy">
+          <img src="/images/products/ut61d.png" alt="The Practical Guide to Choosing the Right Digital Multimeter for Work, Study, or Home Use" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Equipment Guides</span>
@@ -259,7 +267,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 UNI-T Philippines. Distributed by Kinmo PW Corporation.</p>
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation.</p>
       </div>
     </div>
   </footer>
@@ -282,6 +290,26 @@
     }
     initTheme();
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+    // Category page search
+    const searchInput = document.getElementById('categorySearch');
+    const postsGrid = document.getElementById('postsGrid');
+    const allCards = postsGrid ? Array.from(postsGrid.querySelectorAll('.post-card')) : [];
+
+    if (searchInput && postsGrid) {
+      let debounceTimer;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const query = e.target.value.toLowerCase().trim();
+          allCards.forEach(card => {
+            const title = card.querySelector('.post-card-title')?.textContent.toLowerCase() || '';
+            const matches = !query || title.includes(query);
+            card.style.display = matches ? '' : 'none';
+          });
+        }, 200);
+      });
+    }
   </script>
 </body>
 </html>

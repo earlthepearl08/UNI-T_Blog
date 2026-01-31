@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     themeToggle.addEventListener('click', toggleTheme);
   }
 
+  // Setup event delegation for dynamic content (fixes memory leak)
+  setupEventDelegation();
+
+  // Show loading spinners
+  showLoadingSpinners();
+
   await loadData();
   renderCategories();
   renderFeaturedPosts();
@@ -44,25 +50,110 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupSearch();
 });
 
-// Load posts and categories data
+// Show loading spinners in content containers
+function showLoadingSpinners() {
+  const spinnerHTML = `
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+  `;
+
+  const featuredContainer = document.getElementById('featuredPosts');
+  const allPostsContainer = document.getElementById('allPosts');
+
+  if (featuredContainer && !allPosts.length) {
+    featuredContainer.innerHTML = spinnerHTML;
+  }
+  if (allPostsContainer && !allPosts.length) {
+    allPostsContainer.innerHTML = spinnerHTML;
+  }
+}
+
+// Setup event delegation to prevent memory leaks
+function setupEventDelegation() {
+  // Category pills - delegate to container
+  const categoriesContainer = document.getElementById('categories');
+  if (categoriesContainer) {
+    categoriesContainer.addEventListener('click', (e) => {
+      const pill = e.target.closest('.category-pill');
+      if (!pill) return;
+
+      e.preventDefault();
+      currentCategory = pill.dataset.category;
+      currentPage = 1;
+
+      categoriesContainer.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      renderPosts();
+    });
+  }
+
+  // Pagination - delegate to container
+  const paginationContainer = document.getElementById('pagination');
+  if (paginationContainer) {
+    paginationContainer.addEventListener('click', (e) => {
+      const link = e.target.closest('a[data-page]');
+      if (!link) return;
+
+      e.preventDefault();
+      currentPage = parseInt(link.dataset.page);
+      renderPosts();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+// Load posts and categories data with proper error handling
 async function loadData() {
   try {
     const [postsRes, categoriesRes] = await Promise.all([
       fetch('/content/posts.json'),
       fetch('/content/categories.json')
     ]);
+
+    // Check HTTP status codes
+    if (!postsRes.ok) {
+      throw new Error(`Failed to load posts: ${postsRes.status} ${postsRes.statusText}`);
+    }
+    if (!categoriesRes.ok) {
+      throw new Error(`Failed to load categories: ${categoriesRes.status} ${categoriesRes.statusText}`);
+    }
+
     allPosts = await postsRes.json();
     categories = await categoriesRes.json();
+
+    // Validate data loaded correctly
+    if (!Array.isArray(allPosts) || allPosts.length === 0) {
+      console.warn('Posts data is empty or invalid');
+    }
+    if (!categories || Object.keys(categories).length === 0) {
+      console.warn('Categories data is empty or invalid');
+    }
+
   } catch (error) {
     console.error('Error loading data:', error);
-    // Fallback for static hosting - data might be embedded
+
+    // Show user-friendly error message
+    const errorContainer = document.getElementById('allPosts') || document.getElementById('featuredPosts');
+    if (errorContainer) {
+      errorContainer.innerHTML = `
+        <div class="error-message" style="text-align: center; padding: 2rem; color: var(--uni-red);">
+          <p>Unable to load content. Please refresh the page or try again later.</p>
+          <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 1rem;">Refresh Page</button>
+        </div>
+      `;
+    }
   }
 }
 
-// Render category pills
+// Render category pills (no longer adds event listeners - uses delegation)
 function renderCategories() {
   const container = document.getElementById('categories');
   if (!container) return;
+
+  // Don't render if no data loaded
+  if (!categories || Object.keys(categories).length === 0) return;
 
   const categoryHTML = Object.values(categories).map(cat => `
     <a href="/categories/${cat.slug}/" class="category-pill" data-category="${cat.slug}">
@@ -76,20 +167,6 @@ function renderCategories() {
     </a>
     ${categoryHTML}
   `;
-
-  // Add click handlers
-  container.querySelectorAll('.category-pill').forEach(pill => {
-    pill.addEventListener('click', (e) => {
-      e.preventDefault();
-      currentCategory = pill.dataset.category;
-      currentPage = 1;
-
-      container.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-
-      renderPosts();
-    });
-  });
 }
 
 // Render featured posts
@@ -97,7 +174,14 @@ function renderFeaturedPosts() {
   const container = document.getElementById('featuredPosts');
   if (!container) return;
 
-  const featured = allPosts.filter(p => p.featured).slice(0, 3);
+  // Don't render if no data loaded
+  if (!allPosts || allPosts.length === 0) return;
+
+  // Show all featured posts (up to 4)
+  const featured = allPosts.filter(p => p.featured).slice(0, 4);
+
+  if (featured.length === 0) return;
+
   container.innerHTML = featured.map(post => createPostCard(post, true)).join('');
 }
 
@@ -105,6 +189,9 @@ function renderFeaturedPosts() {
 function renderPosts() {
   const container = document.getElementById('allPosts');
   if (!container) return;
+
+  // Don't render if no data loaded
+  if (!allPosts || allPosts.length === 0) return;
 
   let filtered = allPosts;
 
@@ -152,16 +239,19 @@ function createPostCard(post, featured = false) {
   // Use post image if available, otherwise use category default
   const imageSrc = post.image || defaultImages[post.category] || '/images/products/multimeter-ut61e.png';
 
+  // Escape HTML in title to prevent XSS
+  const safeTitle = post.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
   return `
     <article class="post-card">
       <div class="post-card-image">
-        <img src="${imageSrc}" alt="${post.title}" loading="lazy">
+        <img src="${imageSrc}" alt="${safeTitle}" loading="lazy" onerror="this.src='/images/products/multimeter-ut61e.png'">
       </div>
       <div class="post-card-content">
         <span class="post-card-category">${post.categoryName}</span>
         ${featured ? '<span class="featured-badge">Featured</span>' : ''}
         <h3 class="post-card-title">
-          <a href="/posts/${post.slug}.html">${post.title}</a>
+          <a href="/posts/${post.slug}.html">${safeTitle}</a>
         </h3>
         <p class="post-card-excerpt">${cleanExcerpt(post.excerpt)}</p>
         <div class="post-card-meta">
@@ -175,6 +265,7 @@ function createPostCard(post, featured = false) {
 
 // Clean excerpt by removing meta tags
 function cleanExcerpt(excerpt) {
+  if (!excerpt) return '';
   return excerpt
     .replace(/Meta Title:.*?(?=\s|$)/gi, '')
     .replace(/Meta Description:.*?(?=\s|$)/gi, '')
@@ -183,7 +274,7 @@ function cleanExcerpt(excerpt) {
     .substring(0, 150) + '...';
 }
 
-// Render pagination
+// Render pagination (no longer adds event listeners - uses delegation)
 function renderPagination(totalPages) {
   const container = document.getElementById('pagination');
   if (!container || totalPages <= 1) {
@@ -210,16 +301,6 @@ function renderPagination(totalPages) {
   }
 
   container.innerHTML = html;
-
-  // Add click handlers
-  container.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      currentPage = parseInt(link.dataset.page);
-      renderPosts();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
 }
 
 // Setup search
@@ -231,7 +312,7 @@ function setupSearch() {
   input.addEventListener('input', (e) => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
-      searchQuery = e.target.value;
+      searchQuery = e.target.value.trim();
       currentPage = 1;
       renderPosts();
     }, 300);
@@ -257,6 +338,33 @@ function shareOnLinkedIn() {
 
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
-    alert('Link copied to clipboard!');
+    showToast('Link copied to clipboard!');
   });
+}
+
+// Toast notification
+function showToast(message) {
+  // Remove existing toast if any
+  const existingToast = document.querySelector('.toast');
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Create toast element
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    <span>${message}</span>
+  `;
+  document.body.appendChild(toast);
+
+  // Show toast
+  setTimeout(() => toast.classList.add('show'), 10);
+
+  // Hide and remove toast after 2.5 seconds
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
 }

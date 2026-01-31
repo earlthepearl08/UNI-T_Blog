@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Professional Development | UNI-T Philippines</title>
   <meta name="description" content="Browse Professional Development articles about UNI-T test instruments.">
+  <meta property="og:title" content="Professional Development | UNI-T Philippines">
+  <meta property="og:description" content="Career insights and professional tips for electricians and technicians using UNI-T instruments.">
+  <meta property="og:image" content="/images/products/clamp-meter-ut204.png">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -51,22 +55,26 @@
   <section class="container">
     <div class="categories">
       <a href="/posts/" class="category-pill">All Posts</a>
-      
+
         <a href="/categories/equipment-guides/" class="category-pill ">Equipment Guides</a>
-      
+
         <a href="/categories/safety-techniques/" class="category-pill ">Safety & Techniques</a>
-      
+
         <a href="/categories/professional/" class="category-pill active">Professional Development</a>
-      
+
         <a href="/categories/faqs/" class="category-pill ">FAQs</a>
-      
+
     </div>
 
-    <div class="posts-grid">
+    <div class="search-container">
+      <input type="text" id="categorySearch" class="search-input" placeholder="Search in Professional Development...">
+    </div>
+
+    <div class="posts-grid" id="postsGrid">
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Choosing Between Analog and Digital Test Instruments: What Professionals Need to Know" loading="lazy">
+          <img src="/images/products/ut139c.png" alt="Choosing Between Analog and Digital Test Instruments: What Professionals Need to Know" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -82,7 +90,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Cost-Benefit Analysis: Investing in High-Quality Testing Equipment" loading="lazy">
+          <img src="/images/products/ut890d.png" alt="Cost-Benefit Analysis: Investing in High-Quality Testing Equipment" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -114,7 +122,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="How to Vet Test Instrument Suppliers: 5 Questions to Ask" loading="lazy">
+          <img src="/images/products/ut61b.png" alt="How to Vet Test Instrument Suppliers: 5 Questions to Ask" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -130,7 +138,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="The Importance Training Programs for Effective Use of Advanced Testing Equipment" loading="lazy">
+          <img src="/images/products/ut61d.png" alt="The Importance Training Programs for Effective Use of Advanced Testing Equipment" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -146,7 +154,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Top Mistakes Beginners Make When Using Test Instruments" loading="lazy">
+          <img src="/images/products/ut123d.png" alt="Top Mistakes Beginners Make When Using Test Instruments" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -162,7 +170,7 @@
       
       <article class="post-card">
         <div class="post-card-image">
-          <img src="/images/products/multimeter-ut61e.png" alt="Why Cheap Testers Cost More in the Long Run" loading="lazy">
+          <img src="/images/products/ut195ds.png" alt="Why Cheap Testers Cost More in the Long Run" loading="lazy">
         </div>
         <div class="post-card-content">
           <span class="post-card-category">Professional Development</span>
@@ -211,7 +219,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 UNI-T Philippines. Distributed by Kinmo PW Corporation.</p>
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation.</p>
       </div>
     </div>
   </footer>
@@ -234,6 +242,26 @@
     }
     initTheme();
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+    // Category page search
+    const searchInput = document.getElementById('categorySearch');
+    const postsGrid = document.getElementById('postsGrid');
+    const allCards = postsGrid ? Array.from(postsGrid.querySelectorAll('.post-card')) : [];
+
+    if (searchInput && postsGrid) {
+      let debounceTimer;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const query = e.target.value.toLowerCase().trim();
+          allCards.forEach(card => {
+            const title = card.querySelector('.post-card-title')?.textContent.toLowerCase() || '';
+            const matches = !query || title.includes(query);
+            card.style.display = matches ? '' : 'none';
+          });
+        }, 200);
+      });
+    }
   </script>
 </body>
 </html>
