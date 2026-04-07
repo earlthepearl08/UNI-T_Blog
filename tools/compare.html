@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare UNI-T Instruments | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Compare UNI-T test instruments side-by-side. Multimeters, clamp meters, thermal cameras and more. Find the right tool for your needs.">
+
+  <meta property="og:title" content="Compare UNI-T Instruments">
+  <meta property="og:description" content="Compare UNI-T test instruments side-by-side to make informed purchase decisions.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* ── Compare Tool Styles ── */
+    .compare-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .compare-hero h1 {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .compare-hero h1 .accent { color: #E31E24; }
+    .compare-hero p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Category Filter */
+    .category-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 1.5rem 0 0;
+    }
+    .cat-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cat-btn:hover { background: rgba(255,255,255,0.2); }
+    .cat-btn.active {
+      background: #E31E24;
+      border-color: #E31E24;
+      color: #fff;
+    }
+
+    /* Selector Area */
+    .selector-area {
+      padding: 2rem 0;
+    }
+    .slots-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) {
+      .slots-row { grid-template-columns: 1fr; max-width: 400px; }
+    }
+
+    /* Slot card */
+    .slot-card {
+      border: 2px dashed var(--border, #ddd);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: center;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--card-bg, #fff);
+      transition: all 0.3s ease;
+    }
+    .slot-card.filled {
+      border-style: solid;
+      border-color: var(--border, #e0e0e0);
+    }
+    .slot-card .add-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--bg-alt, #f5f5f5);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: #999;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .slot-card .add-icon:hover {
+      background: #E31E24;
+      color: #fff;
+      transform: scale(1.1);
+    }
+    .slot-card .add-label {
+      color: var(--text-muted, #888);
+      font-size: 0.9rem;
+    }
+
+    /* Filled slot */
+    .slot-card .slot-img {
+      width: 80px; height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    .slot-card .slot-model {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text, #222);
+    }
+    .slot-card .slot-cat {
+      font-size: 0.75rem;
+      color: var(--text-muted, #888);
+      margin-top: 0.15rem;
+    }
+    .slot-card .slot-remove {
+      position: absolute;
+      top: 8px; right: 8px;
+      background: #E31E24;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 24px; height: 24px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s;
+    }
+    .slot-card .slot-remove:hover { transform: scale(1.15); }
+
+    /* Dropdown */
+    .slot-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: var(--card-bg, #fff);
+      border: 1px solid var(--border, #ddd);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      z-index: 100;
+      max-height: 320px;
+      overflow-y: auto;
+      display: none;
+      margin-top: 4px;
+    }
+    .slot-dropdown.open { display: block; animation: fadeSlide 0.2s ease; }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slot-dropdown .dd-search {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: none;
+      border-bottom: 1px solid var(--border, #eee);
+      font-size: 0.85rem;
+      outline: none;
+      background: transparent;
+      color: var(--text, #222);
+    }
+    .slot-dropdown .dd-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 0.75rem;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-size: 0.85rem;
+      color: var(--text, #222);
+    }
+    .slot-dropdown .dd-item:hover { background: var(--bg-alt, #f7f7f7); }
+    .slot-dropdown .dd-item img {
+      width: 36px; height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .slot-dropdown .dd-item-info { text-align: left; }
+    .slot-dropdown .dd-item-model { font-weight: 600; }
+    .slot-dropdown .dd-item-cat { font-size: 0.7rem; color: var(--text-muted, #888); }
+
+    /* Comparison Table */
+    .comparison-section {
+      padding: 2rem 0 3rem;
+    }
+    .comparison-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 12px;
+      border: 1px solid var(--border, #e0e0e0);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 0.85rem 1rem;
+      text-align: center;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border, #eee);
+      font-size: 0.9rem;
+    }
+    .compare-table th {
+      background: var(--bg-alt, #f7f7f7);
+      font-weight: 700;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .compare-table th:first-child,
+    .compare-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+      background: var(--bg-alt, #f7f7f7);
+      position: sticky;
+      left: 0;
+      z-index: 5;
+      min-width: 140px;
+    }
+    .compare-table th:first-child {
+      z-index: 15;
+    }
+    .compare-table tbody tr:nth-child(even) td:not(:first-child) {
+      background: var(--row-alt, rgba(0,0,0,0.02));
+    }
+    .compare-table .product-img {
+      width: 90px; height: 90px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 0.5rem;
+    }
+    .compare-table .model-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text, #222);
+    }
+    .compare-table .cell-diff {
+      background: rgba(227, 30, 36, 0.07) !important;
+    }
+
+    /* Stars */
+    .stars { color: #f5a623; font-size: 1rem; letter-spacing: 1px; }
+    .stars .empty { color: #ccc; }
+
+    /* Pros/Cons */
+    .pros-cons { text-align: left; display: inline-block; font-size: 0.8rem; line-height: 1.5; }
+    .pros-cons .pro::before { content: '+ '; color: #2ecc71; font-weight: 700; }
+    .pros-cons .con::before { content: '- '; color: #E31E24; font-weight: 700; }
+
+    /* Buttons row */
+    .actions-row {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border, #ddd);
+      background: var(--card-bg, #fff);
+      color: var(--text, #333);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { border-color: #E31E24; color: #E31E24; }
+    .action-btn.primary {
+      background: #E31E24;
+      color: #fff;
+      border-color: #E31E24;
+    }
+    .action-btn.primary:hover { background: #c91920; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--text-muted, #999);
+    }
+    .empty-state svg {
+      width: 64px; height: 64px;
+      margin-bottom: 1rem;
+      opacity: 0.4;
+    }
+    .empty-state h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: var(--text, #555);
+    }
+
+    /* CTA bottom */
+    .help-cta {
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #fff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .help-cta h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .help-cta p { color: rgba(255,255,255,0.7); margin-bottom: 1.25rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .help-cta .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .help-cta .btn-primary { background: #E31E24; color: #fff; }
+    .help-cta .btn-primary:hover { background: #c91920; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #222;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      z-index: 9999;
+      opacity: 0;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Dark mode overrides */
+    [data-theme="dark"] .compare-hero {
+      background: linear-gradient(135deg, #0d0d1a 0%, #111827 50%, #0a1628 100%);
+    }
+    [data-theme="dark"] .slot-card {
+      border-color: #333;
+      background: #1a1a2e;
+    }
+    [data-theme="dark"] .slot-card .add-icon {
+      background: #2a2a3e;
+      color: #666;
+    }
+    [data-theme="dark"] .slot-dropdown {
+      background: #1a1a2e;
+      border-color: #333;
+    }
+    [data-theme="dark"] .slot-dropdown .dd-item:hover {
+      background: #252540;
+    }
+    [data-theme="dark"] .comparison-wrapper {
+      border-color: #333;
+    }
+    [data-theme="dark"] .compare-table th,
+    [data-theme="dark"] .compare-table td:first-child {
+      background: #151528;
+    }
+    [data-theme="dark"] .compare-table td {
+      border-color: #2a2a3e;
+    }
+    [data-theme="dark"] .compare-table th {
+      border-color: #2a2a3e;
+    }
+    [data-theme="dark"] .compare-table tbody tr:nth-child(even) td:not(:first-child) {
+      background: rgba(255,255,255,0.02);
+    }
+    [data-theme="dark"] .compare-table .cell-diff {
+      background: rgba(227, 30, 36, 0.12) !important;
+    }
+    [data-theme="dark"] .action-btn {
+      background: #1a1a2e;
+      border-color: #333;
+      color: #ccc;
+    }
+    [data-theme="dark"] .stars .empty { color: #444; }
+    [data-theme="dark"] .toast { background: #333; }
+
+    /* Animations */
+    .slot-card { animation: slotIn 0.3s ease; }
+    @keyframes slotIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/posts/">All Posts</a>
+        <a href="/categories/equipment-guides/">Guides</a>
+        <a href="/categories/faqs/">FAQs</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://kinmo.com" target="_blank">Shop</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="compare-hero">
+    <div class="container">
+      <h1>Compare <span class="accent">UNI-T</span> Instruments</h1>
+      <p>Select 2-3 products to compare side-by-side and find the perfect tool for your needs.</p>
+      <div class="category-filter" id="categoryFilter">
+        <button class="cat-btn active" data-cat="all">All</button>
+        <button class="cat-btn" data-cat="Multimeters">Multimeters</button>
+        <button class="cat-btn" data-cat="Clamp Meters">Clamp Meters</button>
+        <button class="cat-btn" data-cat="Thermal Cameras">Thermal Cameras</button>
+        <button class="cat-btn" data-cat="Other">Other</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selector -->
+  <section class="selector-area">
+    <div class="container">
+      <div class="slots-row" id="slotsRow">
+        <!-- Slots rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="comparison-section">
+    <div class="container">
+      <div id="comparisonOutput"></div>
+
+      <div class="actions-row" id="actionsRow" style="display:none;">
+        <button class="action-btn" onclick="highlightDiffs()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          Highlight Differences
+        </button>
+        <button class="action-btn" onclick="clearAll()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Clear All
+        </button>
+        <button class="action-btn primary" onclick="shareComparison()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          Share Comparison
+        </button>
+      </div>
+
+      <!-- Help CTA -->
+      <div class="help-cta">
+        <h2>Need Help Choosing?</h2>
+        <p>Not sure which instrument is right for you? Browse our expert guides or contact our team for personalized recommendations.</p>
+        <a href="/categories/equipment-guides/" class="btn btn-primary">Browse Equipment Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-accent">UNI-T</span> Philippines
+          </a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety & Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/tools/compare.html">Compare Tools</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <script>
+  (function() {
+    // ── Product Database ──
+    const products = [
+      {
+        id: 'ut61e-plus',
+        model: 'UT61E+',
+        category: 'Multimeters',
+        image: '/images/products/ut61e.png',
+        priceRange: '\u20B15,500 - \u20B16,500',
+        priceLow: 5500,
+        specs: {
+          type: 'Digital Multimeter',
+          measurementRange: 'AC/DC Voltage, Current, Resistance, Capacitance, Frequency, Duty Cycle',
+          accuracy: '\u00B1(0.1%+5)',
+          count: '22,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 1000V / CAT IV 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'USB data logging',
+          powerSupply: '4x AA batteries',
+        },
+        bestFor: 'Professional technicians and engineers needing high accuracy and data logging capabilities.',
+        pros: ['Highest count display in class', 'USB data logging', 'CAT III 1000V rated', 'Excellent accuracy'],
+        cons: ['Higher price point', 'Larger form factor', 'Requires 4 batteries'],
+        rating: 5,
+        shopUrl: 'https://kinmo.com/?s=UT61E&post_type=product'
+      },
+      {
+        id: 'ut61d-plus',
+        model: 'UT61D+',
+        category: 'Multimeters',
+        image: '/images/products/ut61d.png',
+        priceRange: '\u20B13,800 - \u20B14,500',
+        priceLow: 3800,
+        specs: {
+          type: 'Digital Multimeter',
+          measurementRange: 'AC/DC Voltage, Current, Resistance, Capacitance, Frequency',
+          accuracy: '\u00B1(0.5%+2)',
+          count: '6,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AA batteries',
+        },
+        bestFor: 'Mid-range professional use with True RMS for accurate AC measurements.',
+        pros: ['True RMS measurement', 'Great value for money', 'Reliable build quality', 'Auto-range'],
+        cons: ['No data logging', 'Lower count than UT61E+', 'No USB connectivity'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT61D&post_type=product'
+      },
+      {
+        id: 'ut890c-plus',
+        model: 'UT890C+',
+        category: 'Multimeters',
+        image: '/images/products/ut890c.png',
+        priceRange: '\u20B12,800 - \u20B13,500',
+        priceLow: 2800,
+        specs: {
+          type: 'Digital Multimeter',
+          measurementRange: 'AC/DC Voltage, Current, Resistance, Capacitance, Frequency, Temperature',
+          accuracy: '\u00B1(0.5%+3)',
+          count: '6,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AA batteries',
+        },
+        bestFor: 'Reliable daily driver for electricians, HVAC techs, and maintenance professionals.',
+        pros: ['Temperature measurement included', 'True RMS', 'Affordable price', 'Durable build'],
+        cons: ['Basic feature set', 'No data logging', 'Plastic holster only'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT890C&post_type=product'
+      },
+      {
+        id: 'ut139c',
+        model: 'UT139C',
+        category: 'Multimeters',
+        image: '/images/products/ut139c.png',
+        priceRange: '\u20B11,500 - \u20B12,200',
+        priceLow: 1500,
+        specs: {
+          type: 'Digital Multimeter',
+          measurementRange: 'AC/DC Voltage, Current, Resistance, Capacitance, Frequency',
+          accuracy: '\u00B1(0.5%+3)',
+          count: '6,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AA batteries',
+        },
+        bestFor: 'Budget-friendly True RMS meter ideal for students, hobbyists, and light professional use.',
+        pros: ['Very affordable', 'True RMS at this price', 'Compact design', 'Easy to use'],
+        cons: ['Basic build quality', 'Limited advanced features', 'No temperature probe'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT139C&post_type=product'
+      },
+      {
+        id: 'ut61b-plus',
+        model: 'UT61B+',
+        category: 'Multimeters',
+        image: '/images/products/ut61b.png',
+        priceRange: '\u20B12,500 - \u20B13,000',
+        priceLow: 2500,
+        specs: {
+          type: 'Digital Multimeter',
+          measurementRange: 'AC/DC Voltage, Current, Resistance, Capacitance, Frequency',
+          accuracy: '\u00B1(0.5%+2)',
+          count: '6,000 count',
+          trueRMS: 'No',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AA batteries',
+        },
+        bestFor: 'Entry-level professional use with auto-ranging convenience at an accessible price.',
+        pros: ['Auto-range', 'Good build quality', 'Affordable entry point', 'Reliable measurements'],
+        cons: ['No True RMS', 'No data logging', 'Basic feature set'],
+        rating: 3.5,
+        shopUrl: 'https://kinmo.com/?s=UT61B&post_type=product'
+      },
+      {
+        id: 'ut204-plus',
+        model: 'UT204+',
+        category: 'Clamp Meters',
+        image: '/images/products/clamp-meter-ut204.png',
+        priceRange: '\u20B13,500 - \u20B14,500',
+        priceLow: 3500,
+        specs: {
+          type: 'Clamp Meter',
+          measurementRange: 'AC/DC 600A, Voltage, Resistance, Capacitance, Frequency',
+          accuracy: '\u00B1(2%+5)',
+          count: '6,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AAA batteries',
+        },
+        bestFor: 'Electricians and maintenance techs needing reliable AC/DC current measurement.',
+        pros: ['AC and DC current', 'True RMS', '600A range', 'NCV detection'],
+        cons: ['Larger jaw size', 'No inrush current', 'Basic data hold only'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT204&post_type=product'
+      },
+      {
+        id: 'ut210e',
+        model: 'UT210E',
+        category: 'Clamp Meters',
+        image: '/images/products/ut210e.png',
+        priceRange: '\u20B12,000 - \u20B12,800',
+        priceLow: 2000,
+        specs: {
+          type: 'Mini Clamp Meter',
+          measurementRange: 'AC/DC 100A, Voltage, Resistance, Capacitance',
+          accuracy: '\u00B1(2%+5)',
+          count: '2,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 300V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AAA batteries',
+        },
+        bestFor: 'Compact clamp meter for tight spaces, low-current circuits, and everyday use.',
+        pros: ['Ultra-compact design', 'Fits in tight spaces', 'AC and DC current', 'Affordable'],
+        cons: ['Limited to 100A', 'Lower safety category', '2000 count only'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT210E&post_type=product'
+      },
+      {
+        id: 'ut216c',
+        model: 'UT216C',
+        category: 'Clamp Meters',
+        image: '/images/products/ut216c.png',
+        priceRange: '\u20B14,000 - \u20B15,000',
+        priceLow: 4000,
+        specs: {
+          type: 'Clamp Meter',
+          measurementRange: 'AC/DC 600A, Voltage, Resistance, Capacitance, Frequency, Temperature',
+          accuracy: '\u00B1(1.5%+3)',
+          count: '6,000 count',
+          trueRMS: 'Yes',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '2x AAA batteries',
+        },
+        bestFor: 'Advanced electricians needing inrush current measurement and temperature readings.',
+        pros: ['Inrush current mode', 'Temperature measurement', 'Better accuracy', 'Full-featured'],
+        cons: ['Higher price point', 'Larger than UT210E', 'No data logging'],
+        rating: 4.5,
+        shopUrl: 'https://kinmo.com/?s=UT216C&post_type=product'
+      },
+      {
+        id: 'uti260b',
+        model: 'UTi260B',
+        category: 'Thermal Cameras',
+        image: '/images/products/thermal-imager-uti260b.png',
+        priceRange: '\u20B125,000 - \u20B130,000',
+        priceLow: 25000,
+        specs: {
+          type: 'Thermal Imager',
+          measurementRange: '-20\u00B0C to 550\u00B0C',
+          accuracy: '\u00B12\u00B0C or \u00B12%',
+          count: '256 x 192 resolution',
+          trueRMS: 'N/A',
+          safetyCategory: 'Industrial grade',
+          displayType: '2.8" LCD color display',
+          connectivity: 'USB, Wi-Fi',
+          powerSupply: 'Rechargeable Li-ion',
+        },
+        bestFor: 'Professional thermal inspection for electrical panels, HVAC, building diagnostics, and predictive maintenance.',
+        pros: ['High resolution sensor', 'Wide temperature range', 'Wi-Fi connectivity', 'Image fusion'],
+        cons: ['Premium price', 'Requires training', 'Heavier than pocket models'],
+        rating: 5,
+        shopUrl: 'https://kinmo.com/?s=UTi260B&post_type=product'
+      },
+      {
+        id: 'uti120s',
+        model: 'UTi120S',
+        category: 'Thermal Cameras',
+        image: '/images/products/thermal-imager-uti260b.png',
+        priceRange: '\u20B18,000 - \u20B112,000',
+        priceLow: 8000,
+        specs: {
+          type: 'Pocket Thermal Imager',
+          measurementRange: '-20\u00B0C to 400\u00B0C',
+          accuracy: '\u00B12\u00B0C or \u00B12%',
+          count: '120 x 90 resolution',
+          trueRMS: 'N/A',
+          safetyCategory: 'General use',
+          displayType: '2.0" LCD color display',
+          connectivity: 'USB',
+          powerSupply: 'Rechargeable Li-ion',
+        },
+        bestFor: 'Entry-level thermal imaging for quick inspections, HVAC checks, and educational use.',
+        pros: ['Very affordable for thermal', 'Pocket-sized', 'Easy to use', 'Quick startup'],
+        cons: ['Lower resolution', 'Narrower temp range', 'No Wi-Fi', 'Smaller display'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UTi120S&post_type=product'
+      },
+      {
+        id: 'ut501a',
+        model: 'UT501A',
+        category: 'Other',
+        image: '/images/products/insulation-tester-ut501a.png',
+        priceRange: '\u20B14,500 - \u20B15,500',
+        priceLow: 4500,
+        specs: {
+          type: 'Insulation Tester',
+          measurementRange: '1000V insulation test, 0.1M\u03A9 - 2G\u03A9',
+          accuracy: '\u00B1(3%+5)',
+          count: 'PI/DAR ratio',
+          trueRMS: 'N/A',
+          safetyCategory: 'CAT III 600V',
+          displayType: 'LCD with backlight',
+          connectivity: 'None',
+          powerSupply: '8x AA batteries',
+        },
+        bestFor: 'Insulation resistance testing for motors, cables, transformers, and electrical installations.',
+        pros: ['PI and DAR measurement', 'Up to 1000V test voltage', 'Auto-discharge', 'Reliable readings'],
+        cons: ['Single-purpose device', 'Requires many batteries', 'No data logging'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT501A&post_type=product'
+      },
+      {
+        id: 'ut12s',
+        model: 'UT12S',
+        category: 'Other',
+        image: '/images/products/voltage-detector-ut12s.png',
+        priceRange: '\u20B1800 - \u20B11,200',
+        priceLow: 800,
+        specs: {
+          type: 'Non-Contact Voltage Detector',
+          measurementRange: '90V - 1000V AC detection',
+          accuracy: 'N/A (presence detection)',
+          count: 'N/A',
+          trueRMS: 'N/A',
+          safetyCategory: 'CAT IV 1000V',
+          displayType: 'LED indicator + buzzer',
+          connectivity: 'None',
+          powerSupply: '2x AAA batteries',
+        },
+        bestFor: 'Quick, safe voltage presence detection before working on electrical circuits.',
+        pros: ['Very affordable', 'CAT IV rated', 'Flashlight built-in', 'Simple one-hand operation'],
+        cons: ['No measurement values', 'AC only detection', 'Cannot measure DC'],
+        rating: 4,
+        shopUrl: 'https://kinmo.com/?s=UT12S&post_type=product'
+      }
+    ];
+
+    // ── State ──
+    let selected = [null, null, null]; // up to 3 product IDs
+    let activeCategory = 'all';
+    let diffsHighlighted = false;
+
+    // ── DOM refs ──
+    const slotsRow = document.getElementById('slotsRow');
+    const comparisonOutput = document.getElementById('comparisonOutput');
+    const actionsRow = document.getElementById('actionsRow');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const toastEl = document.getElementById('toast');
+
+    // ── Init from URL params ──
+    function initFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const ids = params.get('compare');
+      if (ids) {
+        const parts = ids.split(',').slice(0, 3);
+        parts.forEach((id, i) => {
+          const p = products.find(pr => pr.id === id);
+          if (p) selected[i] = p.id;
+        });
+      }
+      render();
+    }
+
+    // ── Category filter ──
+    categoryFilter.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      activeCategory = btn.dataset.cat;
+      categoryFilter.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Close any open dropdowns and re-render
+      render();
+    });
+
+    // ── Render ──
+    function render() {
+      renderSlots();
+      renderComparison();
+    }
+
+    function getFilteredProducts() {
+      if (activeCategory === 'all') return products;
+      return products.filter(p => p.category === activeCategory);
+    }
+
+    function renderSlots() {
+      slotsRow.innerHTML = '';
+      for (let i = 0; i < 3; i++) {
+        const prod = selected[i] ? products.find(p => p.id === selected[i]) : null;
+        const card = document.createElement('div');
+        card.className = 'slot-card' + (prod ? ' filled' : '');
+        card.style.position = 'relative';
+
+        if (prod) {
+          card.innerHTML = `
+            <button class="slot-remove" data-slot="${i}" title="Remove">&times;</button>
+            <img class="slot-img" src="${prod.image}" alt="${prod.model}">
+            <div class="slot-model">${prod.model}</div>
+            <div class="slot-cat">${prod.category}</div>
+          `;
+          card.querySelector('.slot-remove').addEventListener('click', (e) => {
+            e.stopPropagation();
+            selected[i] = null;
+            diffsHighlighted = false;
+            render();
+          });
+        } else {
+          card.innerHTML = `
+            <div class="add-icon">+</div>
+            <div class="add-label">Add Product</div>
+            <div class="slot-dropdown" id="dd-${i}">
+              <input type="text" class="dd-search" placeholder="Search products...">
+              <div class="dd-list"></div>
+            </div>
+          `;
+          const addIcon = card.querySelector('.add-icon');
+          const addLabel = card.querySelector('.add-label');
+          const dropdown = card.querySelector('.slot-dropdown');
+          const searchInput = dropdown.querySelector('.dd-search');
+          const listEl = dropdown.querySelector('.dd-list');
+
+          function openDropdown() {
+            // Close other dropdowns
+            document.querySelectorAll('.slot-dropdown.open').forEach(d => d.classList.remove('open'));
+            dropdown.classList.add('open');
+            searchInput.value = '';
+            renderDropdownList('');
+            setTimeout(() => searchInput.focus(), 50);
+          }
+
+          addIcon.addEventListener('click', (e) => { e.stopPropagation(); openDropdown(); });
+          addLabel.addEventListener('click', (e) => { e.stopPropagation(); openDropdown(); });
+
+          searchInput.addEventListener('input', () => {
+            renderDropdownList(searchInput.value);
+          });
+          searchInput.addEventListener('click', (e) => e.stopPropagation());
+
+          function renderDropdownList(query) {
+            const available = getFilteredProducts().filter(p => !selected.includes(p.id));
+            const q = query.toLowerCase();
+            const filtered = available.filter(p =>
+              p.model.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
+            );
+            listEl.innerHTML = filtered.length === 0
+              ? '<div style="padding:1rem;color:#999;font-size:0.85rem;">No products found</div>'
+              : filtered.map(p => `
+                <div class="dd-item" data-id="${p.id}">
+                  <img src="${p.image}" alt="${p.model}">
+                  <div class="dd-item-info">
+                    <div class="dd-item-model">${p.model}</div>
+                    <div class="dd-item-cat">${p.category} &middot; ${p.priceRange}</div>
+                  </div>
+                </div>
+              `).join('');
+
+            listEl.querySelectorAll('.dd-item').forEach(item => {
+              item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                selected[i] = item.dataset.id;
+                diffsHighlighted = false;
+                dropdown.classList.remove('open');
+                render();
+              });
+            });
+          }
+        }
+        slotsRow.appendChild(card);
+      }
+    }
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.slot-dropdown.open').forEach(d => d.classList.remove('open'));
+    });
+
+    function renderComparison() {
+      const chosen = selected.filter(Boolean).map(id => products.find(p => p.id === id));
+      if (chosen.length < 2) {
+        actionsRow.style.display = 'none';
+        comparisonOutput.innerHTML = `
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            <h3>Select at least 2 products to compare</h3>
+            <p>Use the cards above to add UNI-T instruments, then see them compared side-by-side.</p>
+          </div>
+        `;
+        return;
+      }
+
+      actionsRow.style.display = 'flex';
+
+      const specRows = [
+        { label: 'Type', key: 'type' },
+        { label: 'Measurement Range', key: 'measurementRange' },
+        { label: 'Accuracy', key: 'accuracy' },
+        { label: 'Display Count / Resolution', key: 'count' },
+        { label: 'True RMS', key: 'trueRMS' },
+        { label: 'Safety Category', key: 'safetyCategory' },
+        { label: 'Display', key: 'displayType' },
+        { label: 'Connectivity', key: 'connectivity' },
+        { label: 'Power', key: 'powerSupply' },
+      ];
+
+      const rows = [];
+
+      // Product header row
+      rows.push('<tr><th></th>' + chosen.map(p => `
+        <th>
+          <img class="product-img" src="${p.image}" alt="${p.model}">
+          <div class="model-name">${p.model}</div>
+        </th>
+      `).join('') + '</tr>');
+
+      // Price
+      rows.push(makeRow('Price Range', chosen.map(p => `<strong>${p.priceRange}</strong>`)));
+
+      // Specs
+      specRows.forEach(sr => {
+        rows.push(makeRow(sr.label, chosen.map(p => p.specs[sr.key] || 'N/A')));
+      });
+
+      // Best For
+      rows.push(makeRow('Best For', chosen.map(p => `<em>${p.bestFor}</em>`)));
+
+      // Pros
+      rows.push(makeRow('Pros', chosen.map(p =>
+        '<div class="pros-cons">' + p.pros.map(x => `<div class="pro">${x}</div>`).join('') + '</div>'
+      )));
+
+      // Cons
+      rows.push(makeRow('Cons', chosen.map(p =>
+        '<div class="pros-cons">' + p.cons.map(x => `<div class="con">${x}</div>`).join('') + '</div>'
+      )));
+
+      // Rating
+      rows.push(makeRow('Rating', chosen.map(p => renderStars(p.rating))));
+
+      // Shop link
+      rows.push(makeRow('', chosen.map(p =>
+        `<a href="${p.shopUrl}" target="_blank" class="action-btn primary" style="text-decoration:none;display:inline-flex;margin-top:0.25rem;">Shop Now</a>`
+      )));
+
+      comparisonOutput.innerHTML = `
+        <div class="comparison-wrapper">
+          <table class="compare-table">
+            <thead>${rows[0]}</thead>
+            <tbody>${rows.slice(1).join('')}</tbody>
+          </table>
+        </div>
+      `;
+
+      if (diffsHighlighted) applyDiffHighlights();
+    }
+
+    function makeRow(label, cells) {
+      return '<tr><td>' + label + '</td>' + cells.map(c => '<td>' + c + '</td>').join('') + '</tr>';
+    }
+
+    function renderStars(rating) {
+      let html = '<div class="stars">';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= Math.floor(rating)) {
+          html += '\u2605';
+        } else if (i - 0.5 <= rating) {
+          html += '\u2605';
+        } else {
+          html += '<span class="empty">\u2605</span>';
+        }
+      }
+      html += '</div>';
+      return html;
+    }
+
+    // ── Highlight Differences ──
+    window.highlightDiffs = function() {
+      diffsHighlighted = !diffsHighlighted;
+      if (diffsHighlighted) {
+        applyDiffHighlights();
+        showToast('Differences highlighted');
+      } else {
+        document.querySelectorAll('.cell-diff').forEach(c => c.classList.remove('cell-diff'));
+        showToast('Highlights removed');
+      }
+    };
+
+    function applyDiffHighlights() {
+      const table = document.querySelector('.compare-table');
+      if (!table) return;
+      const bodyRows = table.querySelectorAll('tbody tr');
+      bodyRows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td')).slice(1); // skip label
+        if (cells.length < 2) return;
+        const texts = cells.map(c => c.textContent.trim());
+        const allSame = texts.every(t => t === texts[0]);
+        if (!allSame) {
+          cells.forEach(c => c.classList.add('cell-diff'));
+        } else {
+          cells.forEach(c => c.classList.remove('cell-diff'));
+        }
+      });
+    }
+
+    // ── Clear All ──
+    window.clearAll = function() {
+      selected = [null, null, null];
+      diffsHighlighted = false;
+      render();
+      showToast('Comparison cleared');
+    };
+
+    // ── Share ──
+    window.shareComparison = function() {
+      const ids = selected.filter(Boolean).join(',');
+      const url = window.location.origin + window.location.pathname + '?compare=' + ids;
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast('Comparison link copied to clipboard!');
+        }).catch(() => {
+          fallbackCopy(url);
+        });
+      } else {
+        fallbackCopy(url);
+      }
+    };
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Comparison link copied!');
+    }
+
+    // ── Toast ──
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add('show');
+      setTimeout(() => toastEl.classList.remove('show'), 2500);
+    }
+
+    // ── Back to Top ──
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ── Init ──
+    initFromURL();
+  })();
+  </script>
+</body>
+</html>

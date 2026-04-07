@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrical Safety Calculator | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Free electrical safety calculator: determine CAT ratings, calculate Ohm's Law, find wire sizes for Philippine standards, and convert units. Recommended UNI-T instruments included.">
+
+  <meta property="og:title" content="Electrical Safety Calculator | UNI-T Philippines">
+  <meta property="og:description" content="Determine CAT ratings, calculate Ohm's Law, find wire sizes, and convert units for electrical work.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* ===== Tool-specific styles ===== */
+
+    .tool-hero {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2d0607 50%, #1A1A1A 100%);
+      color: #fff;
+      padding: 3.5rem 0 2.5rem;
+      text-align: center;
+    }
+    .tool-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .tool-hero p {
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .tool-hero .hero-accent { color: var(--uni-red); }
+
+    /* Tabs */
+    .calc-tabs {
+      display: flex;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: 2px solid var(--border-color);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .calc-tabs::-webkit-scrollbar { display: none; }
+    .calc-tab {
+      flex: 1;
+      min-width: 160px;
+      padding: 1rem 1.25rem;
+      font-family: var(--font-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .calc-tab:hover { color: var(--text-primary); background: var(--bg-tertiary); }
+    .calc-tab.active {
+      color: var(--uni-red);
+      border-bottom-color: var(--uni-red);
+      background: var(--bg-primary);
+    }
+    .calc-tab svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* Panels */
+    .calc-panel {
+      display: none;
+      padding: 2rem 0;
+      animation: fadeIn 0.35s ease;
+    }
+    .calc-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Form elements */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 800px;
+    }
+    @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: 1fr; } }
+    .calc-grid.full-width { grid-template-columns: 1fr; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .form-group select,
+    .form-group input[type="number"],
+    .form-group input[type="text"] {
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--uni-red);
+      box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.12);
+    }
+
+    .form-group input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border-color);
+      outline: none;
+      margin-top: 0.5rem;
+    }
+    .form-group input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--uni-red);
+      cursor: pointer;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .range-value {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+    }
+    .range-value small {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .calc-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--uni-red);
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+    .calc-btn:hover { background: var(--uni-red-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(227,30,36,0.3); }
+
+    /* Results */
+    .result-area {
+      margin-top: 2rem;
+      animation: fadeIn 0.4s ease;
+    }
+    .result-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.3s;
+    }
+    .result-card.green { border-color: #22c55e; }
+    .result-card.yellow { border-color: #eab308; }
+    .result-card.orange { border-color: #f97316; }
+    .result-card.red { border-color: #ef4444; }
+
+    .cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 1rem;
+    }
+    .cat-badge.cat-i { background: #dcfce7; color: #166534; }
+    .cat-badge.cat-ii { background: #fef9c3; color: #854d0e; }
+    .cat-badge.cat-iii { background: #ffedd5; color: #9a3412; }
+    .cat-badge.cat-iv { background: #fee2e2; color: #991b1b; }
+    [data-theme="dark"] .cat-badge.cat-i { background: #14532d; color: #86efac; }
+    [data-theme="dark"] .cat-badge.cat-ii { background: #713f12; color: #fde047; }
+    [data-theme="dark"] .cat-badge.cat-iii { background: #7c2d12; color: #fdba74; }
+    [data-theme="dark"] .cat-badge.cat-iv { background: #7f1d1d; color: #fca5a5; }
+
+    .result-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .result-value {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .result-value small { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
+    .result-explain {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .result-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .result-item { text-align: center; padding: 1rem; background: var(--bg-secondary); border-radius: var(--border-radius); }
+
+    /* Ohm's law triangle */
+    .ohm-triangle {
+      width: 200px;
+      height: 180px;
+      margin: 1rem auto;
+      position: relative;
+    }
+    .ohm-triangle svg { width: 100%; height: 100%; }
+    .ohm-triangle text { font-family: var(--font-heading); font-weight: 700; }
+
+    /* Product recommendation */
+    .reco-section { margin-top: 2rem; }
+    .reco-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    .reco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .reco-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .reco-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .reco-card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 0.75rem; }
+    .reco-card h4 { font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-primary); }
+    .reco-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.4; }
+    .reco-card .reco-cat {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    [data-theme="dark"] .reco-card .reco-cat { background: #7f1d1d; color: #fca5a5; }
+    .reco-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--uni-red);
+    }
+
+    /* Unit converter toggles */
+    .converter-group {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .converter-group h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    .converter-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .converter-row input {
+      flex: 1;
+      min-width: 100px;
+      padding: 0.65rem 0.85rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    .converter-row input:focus { outline: none; border-color: var(--uni-red); }
+    .converter-row .unit-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      min-width: 40px;
+    }
+    .swap-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .swap-btn:hover { border-color: var(--uni-red); color: var(--uni-red); }
+    .swap-btn svg { width: 18px; height: 18px; }
+
+    /* CTA banner */
+    .tools-cta {
+      background: linear-gradient(135deg, #1A1A1A, #2d0607);
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: var(--border-radius-lg);
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .tools-cta h3 { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .tools-cta p { color: #ccc; margin-bottom: 1.25rem; }
+    .tools-cta .calc-btn { background: var(--uni-red); }
+
+    /* Wire gauge table */
+    .wire-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    .wire-table th, .wire-table td {
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .wire-table th {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .wire-table tr.recommended { background: rgba(227, 30, 36, 0.06); font-weight: 600; }
+    [data-theme="dark"] .wire-table tr.recommended { background: rgba(227, 30, 36, 0.15); }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 2rem 0;
+    }
+
+    /* Helper */
+    .hidden { display: none !important; }
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/posts/">All Posts</a>
+        <a href="/categories/equipment-guides/">Guides</a>
+        <a href="/categories/faqs/">FAQs</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://kinmo.com" target="_blank">Shop</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="tool-hero">
+    <div class="container">
+      <h1>Electrical <span class="hero-accent">Safety</span> Calculator</h1>
+      <p>Determine CAT ratings, calculate Ohm's Law, find wire sizes for Philippine standards, and convert common electrical units.</p>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="calc-tabs" role="tablist">
+    <button class="calc-tab active" data-tab="cat" role="tab" aria-selected="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      CAT Rating
+    </button>
+    <button class="calc-tab" data-tab="ohm" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+      Ohm's Law
+    </button>
+    <button class="calc-tab" data-tab="wire" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10M8 20V6m8 14V6"/></svg>
+      Wire Size
+    </button>
+    <button class="calc-tab" data-tab="convert" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4m0 0l4-4m-4 4h18M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      Unit Converter
+    </button>
+  </div>
+
+  <div class="container">
+
+    <!-- ==================== CAT RATING CALCULATOR ==================== -->
+    <div class="calc-panel active" id="panel-cat" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">CAT Rating Calculator</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Determine the correct IEC measurement category for your work environment.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="catEnv">Work Environment</label>
+          <select id="catEnv">
+            <option value="">-- Select environment --</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="industrial">Industrial</option>
+            <option value="utility">Utility / Distribution</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="catConnection">Connection Point</label>
+          <select id="catConnection">
+            <option value="">-- Select connection --</option>
+            <option value="protected">Protected electronic equipment / outlets</option>
+            <option value="receptacle">Wall receptacle / appliance outlets</option>
+            <option value="panel">Mains panel / sub-panel</option>
+            <option value="distribution">Distribution bus / feeders</option>
+            <option value="origin">Overhead / underground / utility entrance</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group mt-2" style="max-width:800px;">
+        <label for="catVoltage">Voltage Level</label>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <input type="range" id="catVoltage" min="0" max="1000" value="220" step="10">
+          <span class="range-value" id="catVoltageDisplay">220 <small>V</small></span>
+        </div>
+      </div>
+
+      <button class="calc-btn mt-2" onclick="calculateCAT()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        Determine CAT Rating
+      </button>
+
+      <div id="catResult" class="result-area hidden"></div>
+    </div>
+
+    <!-- ==================== OHM'S LAW CALCULATOR ==================== -->
+    <div class="calc-panel" id="panel-ohm" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Ohm's Law Calculator</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Enter any two values to calculate the rest. V = I x R</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start;">
+        <div style="flex:1;min-width:280px;">
+          <div class="calc-grid three-col">
+            <div class="form-group">
+              <label for="ohmV">Voltage (V)</label>
+              <input type="number" id="ohmV" placeholder="e.g. 220" step="any">
+            </div>
+            <div class="form-group">
+              <label for="ohmI">Current (A)</label>
+              <input type="number" id="ohmI" placeholder="e.g. 10" step="any">
+            </div>
+            <div class="form-group">
+              <label for="ohmR">Resistance (&#8486;)</label>
+              <input type="number" id="ohmR" placeholder="e.g. 22" step="any">
+            </div>
+          </div>
+          <button class="calc-btn mt-2" onclick="calculateOhm()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            Calculate
+          </button>
+          <button class="calc-btn mt-2" style="background:var(--bg-secondary);color:var(--text-primary);margin-left:0.5rem;" onclick="clearOhm()">Clear</button>
+        </div>
+
+        <!-- Triangle diagram -->
+        <div class="ohm-triangle">
+          <svg viewBox="0 0 200 180" id="ohmTriangleSvg">
+            <polygon points="100,10 10,170 190,170" fill="none" stroke="var(--border-color)" stroke-width="3"/>
+            <line x1="10" y1="120" x2="190" y2="120" stroke="var(--border-color)" stroke-width="2"/>
+            <line x1="100" y1="120" x2="100" y2="170" stroke="var(--border-color)" stroke-width="2"/>
+            <text x="100" y="85" text-anchor="middle" fill="var(--uni-red)" font-size="28" id="triV">V</text>
+            <text x="60" y="155" text-anchor="middle" fill="var(--text-primary)" font-size="24" id="triI">I</text>
+            <text x="140" y="155" text-anchor="middle" fill="var(--text-primary)" font-size="24" id="triR">R</text>
+          </svg>
+        </div>
+      </div>
+
+      <div id="ohmResult" class="result-area hidden"></div>
+    </div>
+
+    <!-- ==================== WIRE SIZE CALCULATOR ==================== -->
+    <div class="calc-panel" id="panel-wire" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Wire Size Calculator</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Find the recommended wire gauge based on Philippine Electrical Code standards (copper conductors).</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="wireCurrent">Current Load (Amps)</label>
+          <input type="number" id="wireCurrent" placeholder="e.g. 20" step="any" min="0">
+        </div>
+        <div class="form-group">
+          <label for="wireLength">One-Way Wire Length (meters)</label>
+          <input type="number" id="wireLength" placeholder="e.g. 30" step="any" min="0">
+        </div>
+        <div class="form-group">
+          <label for="wireVoltage">System Voltage (V)</label>
+          <input type="number" id="wireVoltage" value="220" step="any" min="1">
+        </div>
+        <div class="form-group">
+          <label for="wireDrop">Max Voltage Drop (%)</label>
+          <select id="wireDrop">
+            <option value="2">2% (recommended for feeders)</option>
+            <option value="3" selected>3% (standard branch circuits)</option>
+            <option value="5">5% (total combined max)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn mt-2" onclick="calculateWire()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10M8 20V6m8 14V6"/></svg>
+        Calculate Wire Size
+      </button>
+
+      <div id="wireResult" class="result-area hidden"></div>
+    </div>
+
+    <!-- ==================== UNIT CONVERTER ==================== -->
+    <div class="calc-panel" id="panel-convert" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Unit Converter</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Quick conversions for electricians and technicians.</p>
+
+      <!-- Temperature -->
+      <div class="converter-group">
+        <h4>Temperature</h4>
+        <div class="converter-row">
+          <input type="number" id="convTempA" placeholder="0" step="any" oninput="convertTemp('a')">
+          <span class="unit-label" id="convTempLabelA">&deg;C</span>
+          <button class="swap-btn" onclick="swapTemp()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
+          </button>
+          <input type="number" id="convTempB" placeholder="0" step="any" oninput="convertTemp('b')">
+          <span class="unit-label" id="convTempLabelB">&deg;F</span>
+        </div>
+      </div>
+
+      <!-- AWG <-> mm2 -->
+      <div class="converter-group">
+        <h4>Wire Gauge</h4>
+        <div class="converter-row">
+          <input type="number" id="convAwgA" placeholder="14" step="any" oninput="convertAwg('a')">
+          <span class="unit-label">AWG</span>
+          <button class="swap-btn" onclick="swapAwg()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
+          </button>
+          <input type="number" id="convAwgB" placeholder="2.08" step="any" oninput="convertAwg('b')">
+          <span class="unit-label">mm&sup2;</span>
+        </div>
+      </div>
+
+      <!-- HP <-> Watts -->
+      <div class="converter-group">
+        <h4>Power</h4>
+        <div class="converter-row">
+          <input type="number" id="convPowerA" placeholder="1" step="any" oninput="convertPower('a')">
+          <span class="unit-label">HP</span>
+          <button class="swap-btn" onclick="swapPower()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
+          </button>
+          <input type="number" id="convPowerB" placeholder="746" step="any" oninput="convertPower('b')">
+          <span class="unit-label">W</span>
+        </div>
+      </div>
+
+      <!-- PSI <-> Bar <-> kPa -->
+      <div class="converter-group">
+        <h4>Pressure</h4>
+        <div class="converter-row">
+          <input type="number" id="convPsiA" placeholder="14.5" step="any" oninput="convertPressure('psi')">
+          <span class="unit-label">PSI</span>
+          <input type="number" id="convPsiB" placeholder="1" step="any" oninput="convertPressure('bar')">
+          <span class="unit-label">Bar</span>
+          <input type="number" id="convPsiC" placeholder="100" step="any" oninput="convertPressure('kpa')">
+          <span class="unit-label">kPa</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need the Right Instruments?</h2>
+      <p>Browse UNI-T test instruments with the correct safety ratings for your work at Kinmo, the exclusive Philippine distributor.</p>
+      <a href="https://kinmo.com/product-category/uni-t/" class="btn btn-primary" target="_blank">Shop UNI-T Products</a>
+      <a href="/posts/how-to-safely-use-a-digital-multimeter_-a-beginners-practical-guide.html" class="btn btn-outline btn-outline-white ml-1">Safety Guide</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-accent">UNI-T</span> Philippines
+          </a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety & Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+            <li><a href="/rss.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // ===== Back to Top =====
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== Tab switching =====
+    document.querySelectorAll('.calc-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.calc-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ===== Voltage slider =====
+    const catVoltage = document.getElementById('catVoltage');
+    const catVoltageDisplay = document.getElementById('catVoltageDisplay');
+    catVoltage.addEventListener('input', () => {
+      catVoltageDisplay.innerHTML = catVoltage.value + ' <small>V</small>';
+    });
+
+    // ===== Product Data =====
+    const products = [
+      { name: 'UT61E+', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut61e.png', desc: 'True RMS digital multimeter with USB data logging', currentRange: 10, link: 'https://kinmo.com' },
+      { name: 'UT139C', cat: 'CAT III 600V / CAT IV 300V', type: 'multimeter', img: '/images/products/ut139c.png', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com' },
+      { name: 'UT890C', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890c.png', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com' },
+      { name: 'UT890D', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890d.png', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com' },
+      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut89xd.png', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com' },
+      { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut195ds.png', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com' },
+      { name: 'UT204+', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/clamp-meter-ut204.png', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT216C', cat: 'CAT III 600V / CAT IV 300V', type: 'clamp', img: '/images/products/ut216c.png', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.png', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com' },
+      { name: 'UT210E', cat: 'CAT III 300V / CAT II 600V', type: 'clamp', img: '/images/products/ut210e.png', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com' },
+      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.png', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT501A', cat: 'CAT III 600V', type: 'insulation', img: '/images/products/ut501a.png', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com' },
+      { name: 'UT12S', cat: 'CAT IV 1000V', type: 'detector', img: '/images/products/voltage-detector-ut12s.png', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com' },
+    ];
+
+    // ===== CAT Rating Calculator =====
+    function calculateCAT() {
+      const env = document.getElementById('catEnv').value;
+      const conn = document.getElementById('catConnection').value;
+      const voltage = parseInt(catVoltage.value);
+      const resultDiv = document.getElementById('catResult');
+
+      if (!env || !conn) {
+        resultDiv.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Please select both a work environment and connection point.</p></div>';
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
+      // Determine base CAT from connection point
+      let catLevel = 1;
+      let catName = 'CAT I';
+      let colorClass = 'green';
+      let badgeClass = 'cat-i';
+      let explanation = '';
+
+      const connectionMap = {
+        'protected': { cat: 1, desc: 'Protected electronic equipment and signal-level circuits have the lowest transient overvoltage risk.' },
+        'receptacle': { cat: 2, desc: 'Single-phase receptacle-connected loads (appliances, portable tools) at standard outlets.' },
+        'panel': { cat: 3, desc: 'Three-phase distribution, including panel boards, bus bars, and permanently connected equipment.' },
+        'distribution': { cat: 3, desc: 'Distribution-level wiring including feeders, sub-panels, and fixed installations.' },
+        'origin': { cat: 4, desc: 'Origin of installation: utility connections, service entrance, outdoor overhead, and underground lines.' }
+      };
+
+      catLevel = connectionMap[conn].cat;
+      explanation = connectionMap[conn].desc;
+
+      // Environment can bump category up
+      if (env === 'industrial' && catLevel < 3) {
+        catLevel = 3;
+        explanation += ' Industrial environments carry higher transient risk, requiring at minimum CAT III rated instruments.';
+      }
+      if (env === 'utility' && catLevel < 4) {
+        catLevel = 4;
+        explanation += ' Utility and distribution environments demand the highest safety category (CAT IV).';
+      }
+
+      // Higher voltage within the same environment can push CAT up
+      if (voltage > 600 && catLevel < 3) {
+        catLevel = 3;
+        explanation += ' Voltages above 600V require at minimum CAT III rated equipment.';
+      }
+      if (voltage > 600 && catLevel === 3 && (env === 'industrial' || env === 'utility')) {
+        catLevel = 4;
+        explanation += ' High voltage in industrial or utility environments requires CAT IV protection.';
+      }
+
+      const catLabels = { 1: 'CAT I', 2: 'CAT II', 3: 'CAT III', 4: 'CAT IV' };
+      const catColors = { 1: 'green', 2: 'yellow', 3: 'orange', 4: 'red' };
+      const catBadges = { 1: 'cat-i', 2: 'cat-ii', 3: 'cat-iii', 4: 'cat-iv' };
+      const catDescriptions = {
+        1: 'Protected electronic equipment. Signal levels, telecommunications, electronic circuits with transient protection.',
+        2: 'Local-level / receptacle. Appliances, portable tools, and other single-phase loads connected to outlets.',
+        3: 'Distribution level. Panel boards, bus bars, feeders, short branch circuits, and permanently connected equipment.',
+        4: 'Origin of installation. Utility connections, service entrance, meters, primary overcurrent protection.'
+      };
+
+      catName = catLabels[catLevel];
+      colorClass = catColors[catLevel];
+      badgeClass = catBadges[catLevel];
+
+      // Filter products that meet or exceed this CAT level
+      const recommended = products.filter(p => {
+        const match = p.cat.match(/CAT\s*(IV|III|II|I)/g);
+        if (!match) return false;
+        const catVals = { 'I': 1, 'II': 2, 'III': 3, 'IV': 4 };
+        return match.some(m => {
+          const level = m.replace('CAT ', '');
+          return catVals[level] >= catLevel;
+        });
+      });
+
+      let recoHTML = '';
+      if (recommended.length) {
+        recoHTML = `
+          <div class="reco-section">
+            <h3>Recommended UNI-T Instruments for ${catName}</h3>
+            <div class="reco-grid">
+              ${recommended.slice(0, 4).map(p => `
+                <div class="reco-card">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy">
+                  <h4>UNI-T ${p.name}</h4>
+                  <p>${p.desc}</p>
+                  <span class="reco-cat">${p.cat}</span>
+                  <br><a href="${p.link}" target="_blank">View Product &rarr;</a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      resultDiv.innerHTML = `
+        <div class="result-card ${colorClass}">
+          <div class="result-label">Required Safety Category</div>
+          <div class="cat-badge ${badgeClass}">${catName}</div>
+          <div class="result-label" style="margin-top:0.75rem;">What This Means</div>
+          <div class="result-explain">${catDescriptions[catLevel]}</div>
+          <hr class="section-divider">
+          <div class="result-label">Analysis</div>
+          <div class="result-explain">${explanation}</div>
+          <div class="result-row">
+            <div class="result-item">
+              <div class="result-label">Min. Voltage Rating</div>
+              <div class="result-value">${voltage} <small>V</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Category Level</div>
+              <div class="result-value">${catName}</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Transient Risk</div>
+              <div class="result-value">${['Low','Moderate','High','Very High'][catLevel - 1]}</div>
+            </div>
+          </div>
+        </div>
+        ${recoHTML}
+        <div class="tools-cta">
+          <h3>Always Use Properly Rated Instruments</h3>
+          <p>Using a meter rated below the required CAT level puts you at risk. Ensure your test instruments meet or exceed ${catName} ${voltage}V.</p>
+          <a href="/posts/how-to-safely-use-a-digital-multimeter_-a-beginners-practical-guide.html" class="calc-btn">Read Our Safety Guide</a>
+        </div>
+      `;
+      resultDiv.classList.remove('hidden');
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ===== Ohm's Law Calculator =====
+    function calculateOhm() {
+      const vEl = document.getElementById('ohmV');
+      const iEl = document.getElementById('ohmI');
+      const rEl = document.getElementById('ohmR');
+      const v = vEl.value !== '' ? parseFloat(vEl.value) : null;
+      const i = iEl.value !== '' ? parseFloat(iEl.value) : null;
+      const r = rEl.value !== '' ? parseFloat(rEl.value) : null;
+      const resultDiv = document.getElementById('ohmResult');
+
+      const filled = [v, i, r].filter(x => x !== null).length;
+      if (filled < 2) {
+        resultDiv.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Please enter at least two values.</p></div>';
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
+      let calcV = v, calcI = i, calcR = r, calcP, computed = '';
+
+      if (v !== null && i !== null && r === null) {
+        calcR = v / i; computed = 'resistance';
+        rEl.value = +calcR.toFixed(6);
+      } else if (v !== null && r !== null && i === null) {
+        calcI = v / r; computed = 'current';
+        iEl.value = +calcI.toFixed(6);
+      } else if (i !== null && r !== null && v === null) {
+        calcV = i * r; computed = 'voltage';
+        vEl.value = +calcV.toFixed(6);
+      } else {
+        // All three provided — check consistency
+        calcP = calcV * calcI;
+        computed = 'power-only';
+      }
+
+      calcP = calcV * calcI;
+
+      // Format
+      function fmt(val, unit) {
+        if (Math.abs(val) >= 1e6) return (val / 1e6).toFixed(3) + ' M' + unit;
+        if (Math.abs(val) >= 1e3) return (val / 1e3).toFixed(3) + ' k' + unit;
+        if (Math.abs(val) < 0.001 && val !== 0) return (val * 1e6).toFixed(3) + ' \u03BC' + unit;
+        if (Math.abs(val) < 1 && val !== 0) return (val * 1e3).toFixed(3) + ' m' + unit;
+        return val.toFixed(4) + ' ' + unit;
+      }
+
+      // Update triangle
+      document.getElementById('triV').textContent = calcV !== null ? +calcV.toFixed(2) + 'V' : 'V';
+      document.getElementById('triI').textContent = calcI !== null ? +calcI.toFixed(3) + 'A' : 'I';
+      document.getElementById('triR').textContent = calcR !== null ? +calcR.toFixed(2) + '\u03A9' : 'R';
+
+      resultDiv.innerHTML = `
+        <div class="result-card green">
+          <div class="result-row">
+            <div class="result-item" style="${computed === 'voltage' ? 'outline:2px solid var(--uni-red);border-radius:var(--border-radius);' : ''}">
+              <div class="result-label">Voltage</div>
+              <div class="result-value">${fmt(calcV, 'V')}</div>
+            </div>
+            <div class="result-item" style="${computed === 'current' ? 'outline:2px solid var(--uni-red);border-radius:var(--border-radius);' : ''}">
+              <div class="result-label">Current</div>
+              <div class="result-value">${fmt(calcI, 'A')}</div>
+            </div>
+            <div class="result-item" style="${computed === 'resistance' ? 'outline:2px solid var(--uni-red);border-radius:var(--border-radius);' : ''}">
+              <div class="result-label">Resistance</div>
+              <div class="result-value">${fmt(calcR, '\u03A9')}</div>
+            </div>
+            <div class="result-item" style="outline:2px solid #22c55e;border-radius:var(--border-radius);">
+              <div class="result-label">Power</div>
+              <div class="result-value">${fmt(calcP, 'W')}</div>
+            </div>
+          </div>
+        </div>
+        <div class="result-card" style="margin-top:1rem;">
+          <div class="result-label">Formulas Used</div>
+          <div class="result-explain" style="font-family:monospace;font-size:0.95rem;line-height:2;">
+            V = I &times; R = ${(+calcI.toFixed(4))} &times; ${(+calcR.toFixed(4))} = ${(+calcV.toFixed(4))} V<br>
+            P = V &times; I = ${(+calcV.toFixed(4))} &times; ${(+calcI.toFixed(4))} = ${(+calcP.toFixed(4))} W<br>
+            P = I&sup2; &times; R = ${(+calcI.toFixed(4))}&sup2; &times; ${(+calcR.toFixed(4))} = ${(+(calcI*calcI*calcR).toFixed(4))} W<br>
+            P = V&sup2; / R = ${(+calcV.toFixed(4))}&sup2; / ${(+calcR.toFixed(4))} = ${(+(calcV*calcV/calcR).toFixed(4))} W
+          </div>
+        </div>
+      `;
+      resultDiv.classList.remove('hidden');
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function clearOhm() {
+      document.getElementById('ohmV').value = '';
+      document.getElementById('ohmI').value = '';
+      document.getElementById('ohmR').value = '';
+      document.getElementById('ohmResult').classList.add('hidden');
+      document.getElementById('triV').textContent = 'V';
+      document.getElementById('triI').textContent = 'I';
+      document.getElementById('triR').textContent = 'R';
+    }
+
+    // ===== Wire Size Calculator =====
+    // Copper wire data: AWG, mm², resistance (ohm/m at 75°C), ampacity (TW @30°C)
+    const wireData = [
+      { awg: 14, mm2: 2.08, resistance: 0.00884, ampacity: 15 },
+      { awg: 12, mm2: 3.31, resistance: 0.00556, ampacity: 20 },
+      { awg: 10, mm2: 5.26, resistance: 0.00351, ampacity: 30 },
+      { awg: 8,  mm2: 8.37, resistance: 0.00221, ampacity: 40 },
+      { awg: 6,  mm2: 13.3, resistance: 0.00139, ampacity: 55 },
+      { awg: 4,  mm2: 21.2, resistance: 0.000874, ampacity: 70 },
+      { awg: 3,  mm2: 26.7, resistance: 0.000693, ampacity: 85 },
+      { awg: 2,  mm2: 33.6, resistance: 0.000551, ampacity: 95 },
+      { awg: 1,  mm2: 42.4, resistance: 0.000437, ampacity: 110 },
+      { awg: '1/0', mm2: 53.5, resistance: 0.000346, ampacity: 125 },
+      { awg: '2/0', mm2: 67.4, resistance: 0.000274, ampacity: 145 },
+      { awg: '3/0', mm2: 85.0, resistance: 0.000218, ampacity: 165 },
+      { awg: '4/0', mm2: 107,  resistance: 0.000173, ampacity: 195 },
+      { awg: 250, mm2: 127,  resistance: 0.000146, ampacity: 215, kcmil: true },
+      { awg: 350, mm2: 177,  resistance: 0.000105, ampacity: 260, kcmil: true },
+      { awg: 500, mm2: 253,  resistance: 0.0000735, ampacity: 320, kcmil: true },
+    ];
+
+    function calculateWire() {
+      const current = parseFloat(document.getElementById('wireCurrent').value);
+      const length = parseFloat(document.getElementById('wireLength').value);
+      const voltage = parseFloat(document.getElementById('wireVoltage').value);
+      const maxDrop = parseFloat(document.getElementById('wireDrop').value);
+      const resultDiv = document.getElementById('wireResult');
+
+      if (isNaN(current) || isNaN(length) || isNaN(voltage) || current <= 0 || length <= 0 || voltage <= 0) {
+        resultDiv.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Please fill in all fields with valid values.</p></div>';
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
+      const maxDropVolts = (maxDrop / 100) * voltage;
+
+      // Find minimum wire by voltage drop: Vd = 2 * I * R_per_m * L
+      // R_per_m <= maxDropVolts / (2 * I * L)
+      const maxResistance = maxDropVolts / (2 * current * length);
+
+      // Find wire that meets both ampacity and voltage drop
+      let recommended = null;
+      let tableRows = '';
+
+      for (let i = 0; i < wireData.length; i++) {
+        const w = wireData[i];
+        const vDrop = 2 * current * w.resistance * length;
+        const vDropPct = (vDrop / voltage) * 100;
+        const meetsAmpacity = current <= w.ampacity;
+        const meetsDrop = w.resistance <= maxResistance;
+        const meets = meetsAmpacity && meetsDrop;
+
+        if (meets && !recommended) recommended = { ...w, vDrop, vDropPct };
+
+        const isReco = recommended && recommended.awg === w.awg;
+        const awgLabel = w.kcmil ? w.awg + ' kcmil' : 'AWG ' + w.awg;
+
+        tableRows += `
+          <tr class="${isReco ? 'recommended' : ''}">
+            <td>${awgLabel}</td>
+            <td>${w.mm2} mm&sup2;</td>
+            <td>${w.ampacity} A</td>
+            <td>${vDropPct.toFixed(2)}%</td>
+            <td>${meets ? '<span style="color:#22c55e;font-weight:700;">Pass</span>' : '<span style="color:#ef4444;">Fail</span>'}</td>
+          </tr>
+        `;
+      }
+
+      if (!recommended) {
+        resultDiv.innerHTML = '<div class="result-card red"><p style="color:var(--text-primary);font-weight:600;">No standard wire size can handle this load within the specified voltage drop. Consider using a shorter run, higher voltage, or parallel conductors.</p></div>';
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
+      // Find clamp meters that can handle this current
+      const clampMeters = products.filter(p => p.type === 'clamp' && p.currentRange >= current);
+      let clampHTML = '';
+      if (clampMeters.length) {
+        clampHTML = `
+          <div class="reco-section">
+            <h3>UNI-T Clamp Meters for ${current}A Measurement</h3>
+            <div class="reco-grid">
+              ${clampMeters.slice(0, 3).map(p => `
+                <div class="reco-card">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy">
+                  <h4>UNI-T ${p.name}</h4>
+                  <p>${p.desc}</p>
+                  <span class="reco-cat">Up to ${p.currentRange}A</span>
+                  <br><a href="${p.link}" target="_blank">View Product &rarr;</a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      const awgLabel = recommended.kcmil ? recommended.awg + ' kcmil' : 'AWG ' + recommended.awg;
+
+      resultDiv.innerHTML = `
+        <div class="result-card green">
+          <div class="result-label">Recommended Wire Size</div>
+          <div class="result-value" style="font-size:2rem;">${awgLabel} <small>(${recommended.mm2} mm&sup2;)</small></div>
+          <div class="result-row">
+            <div class="result-item">
+              <div class="result-label">Voltage Drop</div>
+              <div class="result-value">${recommended.vDropPct.toFixed(2)} <small>%</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Drop in Volts</div>
+              <div class="result-value">${recommended.vDrop.toFixed(2)} <small>V</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Ampacity</div>
+              <div class="result-value">${recommended.ampacity} <small>A</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Load Current</div>
+              <div class="result-value">${current} <small>A</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-label">Wire Size Comparison Table</div>
+          <div style="overflow-x:auto;">
+            <table class="wire-table">
+              <thead><tr><th>Size</th><th>Area</th><th>Ampacity</th><th>V-Drop</th><th>Status</th></tr></thead>
+              <tbody>${tableRows}</tbody>
+            </table>
+          </div>
+        </div>
+        ${clampHTML}
+      `;
+      resultDiv.classList.remove('hidden');
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ===== Unit Converter =====
+
+    // Temperature
+    let tempMode = 'ctof'; // c-to-f
+    function convertTemp(from) {
+      const a = document.getElementById('convTempA');
+      const b = document.getElementById('convTempB');
+      if (tempMode === 'ctof') {
+        if (from === 'a') { b.value = a.value !== '' ? +((parseFloat(a.value) * 9/5 + 32).toFixed(4)) : ''; }
+        else { a.value = b.value !== '' ? +(((parseFloat(b.value) - 32) * 5/9).toFixed(4)) : ''; }
+      } else {
+        if (from === 'a') { b.value = a.value !== '' ? +(((parseFloat(a.value) - 32) * 5/9).toFixed(4)) : ''; }
+        else { a.value = b.value !== '' ? +((parseFloat(b.value) * 9/5 + 32).toFixed(4)) : ''; }
+      }
+    }
+    function swapTemp() {
+      tempMode = tempMode === 'ctof' ? 'ftoc' : 'ctof';
+      const lA = document.getElementById('convTempLabelA');
+      const lB = document.getElementById('convTempLabelB');
+      const a = document.getElementById('convTempA');
+      const b = document.getElementById('convTempB');
+      if (tempMode === 'ctof') { lA.innerHTML = '&deg;C'; lB.innerHTML = '&deg;F'; }
+      else { lA.innerHTML = '&deg;F'; lB.innerHTML = '&deg;C'; }
+      const tmp = a.value; a.value = b.value; b.value = tmp;
+    }
+
+    // AWG <-> mm2
+    function awgToMm2(awg) { return 0.012668 * Math.pow(92, ((36 - awg) / 19.5)); }
+    function mm2ToAwg(mm2) { return 36 - 19.5 * Math.log(mm2 / 0.012668) / Math.log(92); }
+    function convertAwg(from) {
+      const a = document.getElementById('convAwgA');
+      const b = document.getElementById('convAwgB');
+      if (from === 'a') { b.value = a.value !== '' ? +(awgToMm2(parseFloat(a.value)).toFixed(4)) : ''; }
+      else { a.value = b.value !== '' ? +(mm2ToAwg(parseFloat(b.value)).toFixed(2)) : ''; }
+    }
+    function swapAwg() {
+      const a = document.getElementById('convAwgA');
+      const b = document.getElementById('convAwgB');
+      const tmp = a.value; a.value = b.value; b.value = tmp;
+    }
+
+    // HP <-> Watts
+    function convertPower(from) {
+      const a = document.getElementById('convPowerA');
+      const b = document.getElementById('convPowerB');
+      if (from === 'a') { b.value = a.value !== '' ? +((parseFloat(a.value) * 745.7).toFixed(2)) : ''; }
+      else { a.value = b.value !== '' ? +((parseFloat(b.value) / 745.7).toFixed(6)) : ''; }
+    }
+    function swapPower() {
+      const a = document.getElementById('convPowerA');
+      const b = document.getElementById('convPowerB');
+      const tmp = a.value; a.value = b.value; b.value = tmp;
+    }
+
+    // Pressure
+    function convertPressure(from) {
+      const psi = document.getElementById('convPsiA');
+      const bar = document.getElementById('convPsiB');
+      const kpa = document.getElementById('convPsiC');
+      let barVal;
+      if (from === 'psi') {
+        barVal = parseFloat(psi.value) * 0.0689476;
+        bar.value = psi.value !== '' ? +(barVal.toFixed(6)) : '';
+        kpa.value = psi.value !== '' ? +((barVal * 100).toFixed(4)) : '';
+      } else if (from === 'bar') {
+        barVal = parseFloat(bar.value);
+        psi.value = bar.value !== '' ? +((barVal / 0.0689476).toFixed(4)) : '';
+        kpa.value = bar.value !== '' ? +((barVal * 100).toFixed(4)) : '';
+      } else {
+        barVal = parseFloat(kpa.value) / 100;
+        bar.value = kpa.value !== '' ? +(barVal.toFixed(6)) : '';
+        psi.value = kpa.value !== '' ? +((barVal / 0.0689476).toFixed(4)) : '';
+      }
+    }
+  </script>
+</body>
+</html>

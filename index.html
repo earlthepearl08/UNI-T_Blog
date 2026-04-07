@@ -39,6 +39,7 @@
         <a href="/posts/">All Posts</a>
         <a href="/categories/equipment-guides/">Guides</a>
         <a href="/categories/faqs/">FAQs</a>
+        <a href="/tools/">Tools</a>
         <a href="/contact.html">Contact</a>
         <a href="https://kinmo.com" target="_blank">Shop</a>
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -357,6 +358,125 @@
     </div>
   </section>
 
+  <!-- Interactive Tools -->
+  <section class="tools-showcase">
+    <div class="container">
+      <div class="section-header">
+        <h2>Free Interactive Tools</h2>
+        <p class="section-subtitle">More than just articles — use our free tools to find the right instrument, test your knowledge, and work smarter.</p>
+      </div>
+      <div class="tools-grid">
+        <a href="/tools/instrument-finder.html" class="tool-card">
+          <div class="tool-card-icon">🎯</div>
+          <div class="tool-card-content">
+            <h3>Instrument Finder Quiz</h3>
+            <p>Answer 7 questions, get your perfect UNI-T instrument recommendation</p>
+            <span class="tool-card-tag">Quiz • 2 min</span>
+          </div>
+        </a>
+        <a href="/tools/compare.html" class="tool-card">
+          <div class="tool-card-icon">⚖️</div>
+          <div class="tool-card-content">
+            <h3>Product Comparison</h3>
+            <p>Compare up to 3 instruments side-by-side with full specs</p>
+            <span class="tool-card-tag">Tool</span>
+          </div>
+        </a>
+        <a href="/tools/safety-calculator.html" class="tool-card">
+          <div class="tool-card-icon">🛡️</div>
+          <div class="tool-card-content">
+            <h3>Safety Calculator</h3>
+            <p>CAT ratings, Ohm's Law, wire sizing, and unit conversions</p>
+            <span class="tool-card-tag">Calculator</span>
+          </div>
+        </a>
+        <a href="/tools/knowledge-quiz.html" class="tool-card">
+          <div class="tool-card-icon">🧠</div>
+          <div class="tool-card-content">
+            <h3>Test Your Knowledge</h3>
+            <p>10 questions, 20-second timer — can you beat the average?</p>
+            <span class="tool-card-tag">Quiz • 5 min</span>
+          </div>
+        </a>
+        <a href="/tools/wiring-reference.html" class="tool-card">
+          <div class="tool-card-icon">🔌</div>
+          <div class="tool-card-content">
+            <h3>Wiring Color Code Reference</h3>
+            <p>PH wiring codes, resistor calculator, formulas & breaker guide</p>
+            <span class="tool-card-tag">Reference</span>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-3">
+        <a href="/tools/" class="btn btn-outline">View All Tools</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Trusted by Filipino Professionals</h2>
+        <p class="section-subtitle">See why technicians, engineers, and institutions choose UNI-T from Kinmo</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Bumili ako ng UT61E+ para sa shop ko. Sobrang accurate at reliable — worth every peso. Yung mga articles dito nakatulong para ma-decide kung alin ang kukunin."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JD</div>
+            <div>
+              <strong>Engr. Juan Dela Cruz</strong>
+              <span>Industrial Electrician, Laguna</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As an HVAC technician, the UTi260B thermal camera changed how I troubleshoot. Found a faulty compressor in minutes — before I would spend hours guessing."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MS</div>
+            <div>
+              <strong>Mark Santos</strong>
+              <span>HVAC Technician, Makati</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We equipped our entire electrical engineering lab with UNI-T instruments from Kinmo. Great quality, great support, and the student guides on this site are excellent."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RP</div>
+            <div>
+              <strong>Prof. Rosa Perez</strong>
+              <span>EE Department Head, Manila University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <h2>Stay Updated</h2>
+          <p>Get new guides, product reviews, and exclusive deals delivered to your inbox. No spam — just useful content for Filipino professionals.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="Enter your email address" required class="newsletter-input">
+            <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+          </div>
+          <p class="newsletter-note">Join 500+ Filipino technicians and engineers. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
@@ -421,6 +541,25 @@
     </svg>
   </button>
 
+  <script>
+    function handleNewsletterSignup(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Subscribed!';
+      btn.style.background = '#22c55e';
+      btn.disabled = true;
+      e.target.querySelector('input').disabled = true;
+      showToast('Thanks for subscribing! Check your inbox for a welcome guide.');
+      setTimeout(() => {
+        btn.textContent = 'Subscribe';
+        btn.style.background = '';
+        btn.disabled = false;
+        e.target.querySelector('input').disabled = false;
+        e.target.querySelector('input').value = '';
+      }, 5000);
+    }
+  </script>
   <script src="js/main.js"></script>
   <script>
     // Back to Top functionality

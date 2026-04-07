@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrument Finder Quiz | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Take our interactive quiz to find the perfect UNI-T test instrument for your needs. Personalized recommendations for Filipino professionals.">
+
+  <meta property="og:title" content="Find Your Perfect Test Instrument | UNI-T Philippines">
+  <meta property="og:description" content="Take our fun quiz to discover which UNI-T instrument is right for you!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/instrument-finder.html">
+  <meta property="og:image" content="/images/products/multimeter-ut61e.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Find Your Perfect Test Instrument | UNI-T Philippines">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Quiz-specific styles */
+    .quiz-wrapper {
+      min-height: 70vh;
+      padding: 2rem 0 4rem;
+    }
+
+    /* Progress Bar */
+    .quiz-progress {
+      position: sticky;
+      top: 70px;
+      z-index: 50;
+      background: var(--bg, #fff);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border, #e5e7eb);
+    }
+    [data-theme="dark"] .quiz-progress {
+      --bg: #1a1a2e;
+      --border: #2d2d44;
+    }
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--track, #e5e7eb);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .progress-track {
+      --track: #2d2d44;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #E31E24, #ff6b6b);
+      border-radius: 999px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0%;
+    }
+    .progress-text {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--muted, #6b7280);
+      margin-top: 0.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+    [data-theme="dark"] .progress-text {
+      --muted: #9ca3af;
+    }
+
+    /* Welcome Screen */
+    .quiz-welcome {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      animation: fadeInUp 0.6s ease;
+    }
+    .quiz-welcome h1 {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .quiz-welcome h1 .accent {
+      color: #E31E24;
+    }
+    .quiz-welcome p {
+      font-size: 1.15rem;
+      color: var(--muted, #6b7280);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    [data-theme="dark"] .quiz-welcome p {
+      --muted: #9ca3af;
+    }
+    .quiz-welcome .quiz-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .quiz-welcome .quiz-features {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .quiz-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted, #6b7280);
+    }
+    [data-theme="dark"] .quiz-feature {
+      --muted: #9ca3af;
+    }
+    .quiz-feature svg {
+      width: 18px;
+      height: 18px;
+      color: #E31E24;
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn-quiz {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: #E31E24;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .btn-quiz:hover {
+      background: #c91a1f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(227, 30, 36, 0.3);
+    }
+    .btn-quiz-outline {
+      background: transparent;
+      color: #E31E24;
+      border: 2px solid #E31E24;
+    }
+    .btn-quiz-outline:hover {
+      background: #E31E24;
+      color: #fff;
+    }
+    .btn-quiz-sm {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      border-radius: 8px;
+    }
+
+    /* Question Screen */
+    .quiz-question {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: none;
+    }
+    .quiz-question.active {
+      display: block;
+      animation: slideInRight 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .quiz-question.slide-out {
+      animation: slideOutLeft 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .question-number {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #E31E24;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .question-title {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.3;
+    }
+
+    /* Answer Options */
+    .answer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .answer-card {
+      background: var(--card-bg, #fff);
+      border: 2px solid var(--card-border, #e5e7eb);
+      border-radius: 14px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .answer-card {
+      --card-bg: #1e1e35;
+      --card-border: #2d2d44;
+    }
+    .answer-card:hover {
+      border-color: #E31E24;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(227, 30, 36, 0.12);
+    }
+    .answer-card.selected {
+      border-color: #E31E24;
+      background: rgba(227, 30, 36, 0.06);
+    }
+    [data-theme="dark"] .answer-card.selected {
+      background: rgba(227, 30, 36, 0.15);
+    }
+    .answer-card .answer-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .answer-card .answer-label {
+      display: block;
+      font-weight: 600;
+    }
+    .answer-card .answer-desc {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted, #6b7280);
+      margin-top: 0.25rem;
+    }
+    [data-theme="dark"] .answer-card .answer-desc {
+      --muted: #9ca3af;
+    }
+
+    /* Results Screen */
+    .quiz-results {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: none;
+      text-align: center;
+    }
+    .quiz-results.active {
+      display: block;
+      animation: fadeInUp 0.6s ease;
+    }
+    .result-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #E31E24, #ff6b6b);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .result-title {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .result-subtitle {
+      color: var(--muted, #6b7280);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    [data-theme="dark"] .result-subtitle {
+      --muted: #9ca3af;
+    }
+
+    .result-card {
+      background: var(--card-bg, #fff);
+      border: 2px solid var(--card-border, #e5e7eb);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+    [data-theme="dark"] .result-card {
+      --card-bg: #1e1e35;
+      --card-border: #2d2d44;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    .result-image {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      margin: 0 auto 1.5rem;
+      display: block;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+    }
+    .result-product-name {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #E31E24;
+      margin-bottom: 0.25rem;
+    }
+    .result-product-type {
+      font-size: 1rem;
+      color: var(--muted, #6b7280);
+      margin-bottom: 1.5rem;
+    }
+    [data-theme="dark"] .result-product-type {
+      --muted: #9ca3af;
+    }
+    .result-reason {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text, #374151);
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    [data-theme="dark"] .result-reason {
+      --text: #d1d5db;
+    }
+    .result-specs {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .spec-tag {
+      background: var(--tag-bg, #f3f4f6);
+      color: var(--tag-color, #374151);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+    [data-theme="dark"] .spec-tag {
+      --tag-bg: #2d2d44;
+      --tag-color: #d1d5db;
+    }
+    .result-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      margin-top: 1rem;
+    }
+    .share-section h4 {
+      font-size: 0.9rem;
+      color: var(--muted, #6b7280);
+      margin-bottom: 0.75rem;
+    }
+    [data-theme="dark"] .share-section h4 {
+      --muted: #9ca3af;
+    }
+    .share-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border, #d1d5db);
+      border-radius: 8px;
+      background: var(--bg, #fff);
+      color: var(--text, #374151);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+    }
+    [data-theme="dark"] .share-btn {
+      --border: #2d2d44;
+      --bg: #1e1e35;
+      --text: #d1d5db;
+    }
+    .share-btn:hover {
+      border-color: #E31E24;
+      color: #E31E24;
+    }
+    .share-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideOutLeft {
+      from { opacity: 1; transform: translateX(0); }
+      to { opacity: 0; transform: translateX(-60px); }
+    }
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Copy toast */
+    .copy-toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #1a1a2e;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .answer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+      }
+      .answer-card {
+        padding: 1rem 0.75rem;
+        font-size: 0.85rem;
+      }
+      .answer-card .answer-icon {
+        font-size: 1.6rem;
+      }
+      .result-image {
+        width: 160px;
+        height: 160px;
+      }
+      .result-card {
+        padding: 1.5rem 1rem;
+      }
+      .quiz-welcome .quiz-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/posts/">All Posts</a>
+        <a href="/categories/equipment-guides/">Guides</a>
+        <a href="/categories/faqs/">FAQs</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://kinmo.com" target="_blank">Shop</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Quiz Content -->
+  <main class="quiz-wrapper">
+    <div class="container">
+
+      <!-- Progress Bar (hidden on welcome) -->
+      <div class="quiz-progress" id="quizProgress" style="display:none;">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progressLabel">Question 1 of 7</span>
+          <span id="progressPercent">0%</span>
+        </div>
+      </div>
+
+      <!-- Welcome Screen -->
+      <div class="quiz-welcome" id="quizWelcome">
+        <span class="quiz-icon">&#128270;</span>
+        <h1>Find Your <span class="accent">Perfect</span> Test Instrument</h1>
+        <p>Answer 7 quick questions and we'll match you with the ideal UNI-T instrument for your needs, experience level, and budget.</p>
+        <div class="quiz-features">
+          <div class="quiz-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Takes 2 minutes
+          </div>
+          <div class="quiz-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            10 possible results
+          </div>
+          <div class="quiz-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/></svg>
+            Personalized pick
+          </div>
+        </div>
+        <button class="btn-quiz" onclick="startQuiz()">
+          Start Quiz
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Questions Container -->
+      <div id="questionsContainer"></div>
+
+      <!-- Results Screen -->
+      <div class="quiz-results" id="quizResults">
+        <span class="result-badge">Your Perfect Match</span>
+        <h2 class="result-title" id="resultTitle">We Found Your Instrument!</h2>
+        <p class="result-subtitle" id="resultSubtitle"></p>
+        <div class="result-card">
+          <img id="resultImage" class="result-image" src="" alt="">
+          <div class="result-product-name" id="resultProductName"></div>
+          <div class="result-product-type" id="resultProductType"></div>
+          <p class="result-reason" id="resultReason"></p>
+          <div class="result-specs" id="resultSpecs"></div>
+          <div class="result-actions">
+            <a id="resultShopLink" href="https://kinmo.com" target="_blank" class="btn-quiz">
+              Shop Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <button class="btn-quiz btn-quiz-outline" onclick="retakeQuiz()">
+              Retake Quiz
+            </button>
+          </div>
+        </div>
+
+        <div class="share-section">
+          <h4>Share Your Result</h4>
+          <div class="share-buttons">
+            <a class="share-btn" id="shareFacebook" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a class="share-btn" id="shareTwitter" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+            <button class="share-btn" id="shareCopyLink" onclick="copyResultLink()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              Copy Link
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Copy Toast -->
+  <div class="copy-toast" id="copyToast">Link copied to clipboard!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-accent">UNI-T</span> Philippines
+          </a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety & Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+            <li><a href="/rss.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ========== QUIZ DATA ==========
+    const questions = [
+      {
+        id: 'field',
+        label: 'Question 1 of 7',
+        title: "What's your primary field?",
+        options: [
+          { value: 'electrical', icon: '\u26A1', label: 'Electrical', desc: 'Power systems & wiring' },
+          { value: 'electronics', icon: '\uD83D\uDD2C', label: 'Electronics', desc: 'Circuits & components' },
+          { value: 'hvac', icon: '\u2744\uFE0F', label: 'HVAC', desc: 'Heating & cooling' },
+          { value: 'automotive', icon: '\uD83D\uDE97', label: 'Automotive', desc: 'Vehicle diagnostics' },
+          { value: 'student', icon: '\uD83C\uDF93', label: 'Student / Hobbyist', desc: 'Learning & DIY' },
+          { value: 'industrial', icon: '\uD83C\uDFED', label: 'Industrial Maintenance', desc: 'Plant & machinery' }
+        ]
+      },
+      {
+        id: 'experience',
+        label: 'Question 2 of 7',
+        title: "What's your experience level?",
+        options: [
+          { value: 'beginner', icon: '\uD83C\uDF31', label: 'Beginner', desc: 'Just getting started' },
+          { value: 'intermediate', icon: '\uD83D\uDCAA', label: 'Intermediate', desc: 'Comfortable with basics' },
+          { value: 'professional', icon: '\u2B50', label: 'Professional', desc: 'Daily use for work' },
+          { value: 'expert', icon: '\uD83C\uDFC6', label: 'Expert', desc: 'Advanced applications' }
+        ]
+      },
+      {
+        id: 'measurement',
+        label: 'Question 3 of 7',
+        title: 'What do you measure most?',
+        options: [
+          { value: 'voltage_current', icon: '\uD83D\uDD0B', label: 'Voltage & Current', desc: 'V, A, resistance' },
+          { value: 'temperature', icon: '\uD83C\uDF21\uFE0F', label: 'Temperature', desc: 'Thermal readings' },
+          { value: 'insulation', icon: '\uD83D\uDEE1\uFE0F', label: 'Insulation Resistance', desc: 'Megohm testing' },
+          { value: 'network', icon: '\uD83C\uDF10', label: 'Network Cables', desc: 'LAN & data cabling' },
+          { value: 'power_quality', icon: '\u23FB', label: 'Power Quality', desc: 'Harmonics & power factor' },
+          { value: 'multiple', icon: '\uD83D\uDD27', label: 'Multiple Things', desc: 'A bit of everything' }
+        ]
+      },
+      {
+        id: 'budget',
+        label: 'Question 4 of 7',
+        title: "What's your budget range?",
+        options: [
+          { value: 'low', icon: '\uD83D\uDCB5', label: 'Under \u20B13,000', desc: 'Budget-friendly' },
+          { value: 'mid', icon: '\uD83D\uDCB0', label: '\u20B13,000 \u2013 \u20B18,000', desc: 'Mid-range' },
+          { value: 'high', icon: '\uD83D\uDCB3', label: '\u20B18,000 \u2013 \u20B115,000', desc: 'Professional grade' },
+          { value: 'premium', icon: '\uD83D\uDC8E', label: '\u20B115,000+', desc: 'Top-tier investment' }
+        ]
+      },
+      {
+        id: 'workplace',
+        label: 'Question 5 of 7',
+        title: 'Where do you mostly work?',
+        options: [
+          { value: 'residential', icon: '\uD83C\uDFE0', label: 'Residential', desc: 'Homes & apartments' },
+          { value: 'commercial', icon: '\uD83C\uDFE2', label: 'Commercial Buildings', desc: 'Offices & retail' },
+          { value: 'industrial', icon: '\uD83C\uDFED', label: 'Industrial Plants', desc: 'Factories & utilities' },
+          { value: 'outdoor', icon: '\uD83C\uDF33', label: 'Outdoors / Field', desc: 'Construction & field work' },
+          { value: 'lab', icon: '\uD83E\uDDEA', label: 'Lab / Workshop', desc: 'Bench work & R&D' }
+        ]
+      },
+      {
+        id: 'feature',
+        label: 'Question 6 of 7',
+        title: 'What feature matters most to you?',
+        options: [
+          { value: 'accuracy', icon: '\uD83C\uDFAF', label: 'Accuracy', desc: 'Precise readings' },
+          { value: 'safety', icon: '\uD83D\uDEE1\uFE0F', label: 'Safety Rating', desc: 'CAT III/IV rated' },
+          { value: 'data_logging', icon: '\uD83D\uDCCA', label: 'Data Logging', desc: 'Record & export' },
+          { value: 'bluetooth', icon: '\uD83D\uDCF1', label: 'Bluetooth / App', desc: 'Wireless connectivity' },
+          { value: 'ruggedness', icon: '\uD83D\uDEE0\uFE0F', label: 'Ruggedness', desc: 'Built to last' },
+          { value: 'price', icon: '\uD83C\uDFF7\uFE0F', label: 'Price', desc: 'Best value for money' }
+        ]
+      },
+      {
+        id: 'frequency',
+        label: 'Question 7 of 7',
+        title: 'How often will you use it?',
+        options: [
+          { value: 'daily', icon: '\uD83D\uDCC5', label: 'Daily Professional Use', desc: 'My everyday tool' },
+          { value: 'weekly', icon: '\uD83D\uDDD3\uFE0F', label: 'Weekly', desc: 'Regular but not daily' },
+          { value: 'occasional', icon: '\uD83D\uDD04', label: 'Occasional / DIY', desc: 'When I need it' },
+          { value: 'learning', icon: '\uD83D\uDCDA', label: 'Learning / Training', desc: 'Educational use' }
+        ]
+      }
+    ];
+
+    // Product database
+    const products = {
+      ut61e: {
+        name: 'UNI-T UT61E+',
+        type: 'True RMS Digital Multimeter',
+        image: '/images/products/ut61e-new.jpg',
+        specs: ['22,000 Count', 'True RMS', 'USB Data Logging', 'CAT III 1000V'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut204: {
+        name: 'UNI-T UT204+',
+        type: 'Digital Clamp Meter',
+        image: '/images/products/clamp-meter-ut204.png',
+        specs: ['600A AC/DC', 'True RMS', 'Auto Range', 'CAT III 600V'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      uti260b: {
+        name: 'UNI-T UTi260B',
+        type: 'Thermal Imaging Camera',
+        image: '/images/products/thermal-imager-uti260b.png',
+        specs: ['256x192 Resolution', '-20 to 550\u00B0C', 'WiFi Enabled', '2MP Visual Camera'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut501a: {
+        name: 'UNI-T UT501A',
+        type: 'Insulation Resistance Tester',
+        image: '/images/products/ut501a-new.jpg',
+        specs: ['1000V Test', '0.1M\u03A9 \u2013 2G\u03A9', 'PI / DAR', 'Auto Discharge'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      utd2102: {
+        name: 'UNI-T UTD2102CEX+',
+        type: 'Digital Oscilloscope',
+        image: '/images/products/oscilloscope-utd2000.png',
+        specs: ['100MHz Bandwidth', '1GS/s Sample Rate', '7" Display', 'USB Storage'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut61d: {
+        name: 'UNI-T UT61D+',
+        type: 'True RMS Digital Multimeter',
+        image: '/images/products/ut61d-new.jpg',
+        specs: ['6,000 Count', 'True RMS', 'Auto Range', 'CAT III 600V'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut139c: {
+        name: 'UNI-T UT139C',
+        type: 'Digital Multimeter',
+        image: '/images/products/ut139c-new.jpg',
+        specs: ['6,000 Count', 'True RMS', 'NCV Detection', 'Budget-Friendly'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut12s: {
+        name: 'UNI-T UT12S',
+        type: 'Non-Contact Voltage Detector',
+        image: '/images/products/voltage-detector-ut12s.png',
+        specs: ['24V \u2013 1000V AC', 'LED + Buzzer', 'Pocket Size', 'CAT IV 1000V'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut890c: {
+        name: 'UNI-T UT890C+',
+        type: 'True RMS Digital Multimeter',
+        image: '/images/products/ut890c-new.jpg',
+        specs: ['6,000 Count', 'True RMS', 'LED Backlight', 'CAT III 600V'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      },
+      ut675a: {
+        name: 'UNI-T UT675A',
+        type: 'Battery Tester',
+        image: '/images/products/battery-tester-ut673a.png',
+        specs: ['12V Batteries', 'CCA Testing', 'Cranking Test', 'Print Results'],
+        shopUrl: 'https://kinmo.com/product-category/uni-t/',
+        reason: ''
+      }
+    };
+
+    // ========== QUIZ ENGINE ==========
+    let currentQuestion = 0;
+    let answers = {};
+
+    function startQuiz() {
+      document.getElementById('quizWelcome').style.display = 'none';
+      document.getElementById('quizProgress').style.display = 'block';
+      renderQuestions();
+      showQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = '';
+      questions.forEach((q, idx) => {
+        const div = document.createElement('div');
+        div.className = 'quiz-question';
+        div.id = 'question-' + idx;
+        div.innerHTML = `
+          <div class="question-number">${q.label}</div>
+          <h2 class="question-title">${q.title}</h2>
+          <div class="answer-grid">
+            ${q.options.map(opt => `
+              <div class="answer-card" data-question="${idx}" data-value="${opt.value}" onclick="selectAnswer(this, ${idx}, '${opt.value}')">
+                <span class="answer-icon">${opt.icon}</span>
+                <span class="answer-label">${opt.label}</span>
+                ${opt.desc ? `<span class="answer-desc">${opt.desc}</span>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function showQuestion(idx) {
+      currentQuestion = idx;
+      const el = document.getElementById('question-' + idx);
+      if (!el) return;
+
+      // Hide all questions
+      document.querySelectorAll('.quiz-question').forEach(q => {
+        q.classList.remove('active', 'slide-out');
+        q.style.display = 'none';
+      });
+
+      el.style.display = 'block';
+      // Force reflow for animation
+      void el.offsetWidth;
+      el.classList.add('active');
+
+      updateProgress(idx);
+    }
+
+    function updateProgress(idx) {
+      const pct = Math.round(((idx) / questions.length) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressLabel').textContent = `Question ${idx + 1} of ${questions.length}`;
+      document.getElementById('progressPercent').textContent = pct + '%';
+    }
+
+    function selectAnswer(card, questionIdx, value) {
+      // Mark selected
+      const siblings = card.parentElement.querySelectorAll('.answer-card');
+      siblings.forEach(s => s.classList.remove('selected'));
+      card.classList.add('selected');
+
+      // Store answer
+      answers[questions[questionIdx].id] = value;
+
+      // Auto-advance after a short delay
+      setTimeout(() => {
+        if (questionIdx < questions.length - 1) {
+          const current = document.getElementById('question-' + questionIdx);
+          current.classList.add('slide-out');
+          setTimeout(() => {
+            showQuestion(questionIdx + 1);
+          }, 300);
+        } else {
+          // Complete - show results
+          document.getElementById('progressFill').style.width = '100%';
+          document.getElementById('progressPercent').textContent = '100%';
+          document.getElementById('progressLabel').textContent = 'Complete!';
+          setTimeout(() => {
+            showResults();
+          }, 400);
+        }
+      }, 350);
+    }
+
+    // ========== RECOMMENDATION ENGINE ==========
+    function getRecommendation() {
+      const a = answers;
+      let scores = {};
+      Object.keys(products).forEach(k => scores[k] = 0);
+
+      // === Field scoring ===
+      if (a.field === 'electrical') { scores.ut204 += 3; scores.ut61e += 2; scores.ut890c += 2; scores.ut501a += 1; }
+      if (a.field === 'electronics') { scores.utd2102 += 3; scores.ut61e += 3; scores.ut61d += 2; }
+      if (a.field === 'hvac') { scores.uti260b += 4; scores.ut204 += 1; }
+      if (a.field === 'automotive') { scores.ut675a += 4; scores.ut204 += 1; scores.ut61d += 1; }
+      if (a.field === 'student') { scores.ut139c += 3; scores.ut12s += 2; scores.ut61d += 1; }
+      if (a.field === 'industrial') { scores.ut204 += 2; scores.ut890c += 2; scores.ut501a += 2; scores.ut61e += 2; }
+
+      // === Experience scoring ===
+      if (a.experience === 'beginner') { scores.ut139c += 3; scores.ut12s += 2; }
+      if (a.experience === 'intermediate') { scores.ut61d += 3; scores.ut890c += 2; scores.ut204 += 1; }
+      if (a.experience === 'professional') { scores.ut61e += 3; scores.ut890c += 2; scores.ut204 += 2; }
+      if (a.experience === 'expert') { scores.ut61e += 3; scores.utd2102 += 3; scores.uti260b += 1; }
+
+      // === Measurement scoring ===
+      if (a.measurement === 'voltage_current') { scores.ut61e += 3; scores.ut204 += 3; scores.ut61d += 2; scores.ut890c += 2; scores.ut139c += 1; }
+      if (a.measurement === 'temperature') { scores.uti260b += 5; }
+      if (a.measurement === 'insulation') { scores.ut501a += 5; }
+      if (a.measurement === 'network') { scores.ut61d += 1; scores.ut139c += 1; }
+      if (a.measurement === 'power_quality') { scores.ut204 += 3; scores.ut61e += 2; }
+      if (a.measurement === 'multiple') { scores.ut61e += 2; scores.ut61d += 2; scores.ut890c += 2; scores.ut204 += 1; }
+
+      // === Budget scoring ===
+      if (a.budget === 'low') { scores.ut12s += 3; scores.ut139c += 3; }
+      if (a.budget === 'mid') { scores.ut61d += 3; scores.ut890c += 3; scores.ut204 += 2; scores.ut675a += 2; }
+      if (a.budget === 'high') { scores.ut61e += 3; scores.ut204 += 2; scores.ut501a += 2; scores.uti260b += 1; }
+      if (a.budget === 'premium') { scores.utd2102 += 3; scores.uti260b += 3; scores.ut61e += 2; scores.ut501a += 2; }
+
+      // === Workplace scoring ===
+      if (a.workplace === 'residential') { scores.ut12s += 2; scores.ut139c += 1; scores.ut890c += 1; }
+      if (a.workplace === 'commercial') { scores.ut204 += 2; scores.ut890c += 1; scores.ut61e += 1; }
+      if (a.workplace === 'industrial') { scores.ut204 += 2; scores.ut501a += 2; scores.ut61e += 2; scores.uti260b += 1; }
+      if (a.workplace === 'outdoor') { scores.ut204 += 1; scores.ut890c += 2; scores.ut12s += 1; }
+      if (a.workplace === 'lab') { scores.utd2102 += 3; scores.ut61e += 2; scores.ut61d += 1; }
+
+      // === Feature scoring ===
+      if (a.feature === 'accuracy') { scores.ut61e += 3; scores.utd2102 += 2; }
+      if (a.feature === 'safety') { scores.ut204 += 2; scores.ut890c += 2; scores.ut12s += 2; }
+      if (a.feature === 'data_logging') { scores.ut61e += 3; scores.uti260b += 2; }
+      if (a.feature === 'bluetooth') { scores.uti260b += 2; scores.ut61e += 1; }
+      if (a.feature === 'ruggedness') { scores.ut890c += 3; scores.ut204 += 2; }
+      if (a.feature === 'price') { scores.ut139c += 3; scores.ut12s += 3; scores.ut61d += 1; }
+
+      // === Frequency scoring ===
+      if (a.frequency === 'daily') { scores.ut890c += 3; scores.ut61e += 2; scores.ut204 += 2; }
+      if (a.frequency === 'weekly') { scores.ut61d += 2; scores.ut890c += 1; scores.ut204 += 1; }
+      if (a.frequency === 'occasional') { scores.ut12s += 3; scores.ut139c += 2; }
+      if (a.frequency === 'learning') { scores.ut139c += 3; scores.ut61d += 2; scores.utd2102 += 1; }
+
+      // Find winner
+      let best = null;
+      let bestScore = -1;
+      Object.keys(scores).forEach(k => {
+        if (scores[k] > bestScore) {
+          bestScore = scores[k];
+          best = k;
+        }
+      });
+
+      return best;
+    }
+
+    function buildReason(productKey) {
+      const a = answers;
+      const fieldNames = { electrical: 'electrical work', electronics: 'electronics', hvac: 'HVAC', automotive: 'automotive diagnostics', student: 'learning and exploration', industrial: 'industrial maintenance' };
+      const expNames = { beginner: 'someone starting out', intermediate: 'an intermediate user', professional: 'a working professional', expert: 'an expert' };
+      const freqNames = { daily: 'daily use', weekly: 'regular use', occasional: 'occasional projects', learning: 'learning and training' };
+
+      const reasons = {
+        ut61e: `As ${expNames[a.experience]} in ${fieldNames[a.field]}, you need a multimeter that delivers lab-grade accuracy for ${freqNames[a.frequency]}. The UT61E+ with its 22,000-count display and USB data logging is the gold standard.`,
+        ut204: `For ${fieldNames[a.field]} in commercial and industrial settings, a clamp meter is essential. The UT204+ lets you measure up to 600A AC/DC without breaking a circuit -- perfect for ${freqNames[a.frequency]}.`,
+        uti260b: `Temperature measurement is your priority, and nothing beats a thermal camera for ${fieldNames[a.field]}. The UTi260B gives you a full thermal picture with WiFi connectivity for easy reporting.`,
+        ut501a: `Insulation resistance testing is critical for ${fieldNames[a.field]}. The UT501A provides reliable megohm readings up to 2G\u03A9 with polarization index -- an essential safety tool for ${freqNames[a.frequency]}.`,
+        utd2102: `As ${expNames[a.experience]} working in a ${a.workplace === 'lab' ? 'lab environment' : 'technical role'}, an oscilloscope opens up a whole new level of analysis. The UTD2102CEX+ with 100MHz bandwidth is perfect for signal work.`,
+        ut61d: `The UT61D+ hits the sweet spot -- it's capable enough for ${fieldNames[a.field]} but won't overwhelm ${expNames[a.experience]}. True RMS accuracy and auto-ranging make it ideal for ${freqNames[a.frequency]}.`,
+        ut139c: `As ${expNames[a.experience]}, the UT139C is your ideal starting companion. It's affordable, reliable, has all the essential functions, and the NCV detector adds a nice safety feature for ${fieldNames[a.field]}.`,
+        ut12s: `Sometimes you just need to know: "Is there voltage?" The UT12S is a pocket-sized, CAT IV-rated voltage detector that's perfect for quick safety checks during ${freqNames[a.frequency]}. Simple, reliable, and budget-friendly.`,
+        ut890c: `For ${freqNames[a.frequency]} in ${fieldNames[a.field]}, you need a multimeter that's tough and dependable. The UT890C+ is a rugged True RMS meter built for the daily grind -- it just works, every time.`,
+        ut675a: `For ${fieldNames[a.field]}, battery diagnostics are everything. The UT675A tests CCA, cranking performance, and overall battery health -- exactly what ${expNames[a.experience]} needs for reliable ${freqNames[a.frequency]}.`
+      };
+
+      return reasons[productKey] || 'This instrument is a great match for your needs!';
+    }
+
+    // ========== RESULTS ==========
+    function showResults() {
+      const productKey = getRecommendation();
+      const product = products[productKey];
+      const reason = buildReason(productKey);
+
+      document.getElementById('questionsContainer').style.display = 'none';
+      document.getElementById('quizProgress').style.display = 'none';
+
+      document.getElementById('resultImage').src = product.image;
+      document.getElementById('resultImage').alt = product.name;
+      document.getElementById('resultProductName').textContent = product.name;
+      document.getElementById('resultProductType').textContent = product.type;
+      document.getElementById('resultReason').textContent = reason;
+      document.getElementById('resultShopLink').href = product.shopUrl;
+
+      const specsContainer = document.getElementById('resultSpecs');
+      specsContainer.innerHTML = product.specs.map(s => `<span class="spec-tag">${s}</span>`).join('');
+
+      // Result subtitle
+      document.getElementById('resultSubtitle').textContent = `Based on your answers, here's the instrument that fits you best.`;
+
+      // Set up share links
+      const shareText = `I got the ${product.name} on the UNI-T Instrument Finder Quiz! Find your perfect test instrument:`;
+      const shareUrl = window.location.href;
+      document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+      document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+
+      // Show results
+      const results = document.getElementById('quizResults');
+      results.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Fire confetti
+      setTimeout(fireConfetti, 300);
+    }
+
+    function retakeQuiz() {
+      answers = {};
+      currentQuestion = 0;
+      document.getElementById('quizResults').classList.remove('active');
+      document.getElementById('quizResults').style.display = 'none';
+      document.getElementById('questionsContainer').style.display = 'block';
+      document.getElementById('quizProgress').style.display = 'block';
+      document.getElementById('progressFill').style.width = '0%';
+
+      // Re-render to clear selections
+      renderQuestions();
+      showQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function copyResultLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      });
+    }
+
+    // ========== CONFETTI ==========
+    function fireConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const pieces = [];
+      const colors = ['#E31E24', '#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff', '#ff6f91', '#845ef7'];
+      const total = 120;
+
+      for (let i = 0; i < total; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height * -1,
+          w: Math.random() * 10 + 5,
+          h: Math.random() * 6 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 4,
+          vy: Math.random() * 3 + 2,
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 10,
+          opacity: 1
+        });
+      }
+
+      let frame = 0;
+      const maxFrames = 180;
+
+      function animate() {
+        frame++;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (frame > maxFrames - 40) {
+          const fadeRatio = (maxFrames - frame) / 40;
+          pieces.forEach(p => p.opacity = Math.max(0, fadeRatio));
+        }
+
+        pieces.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.05;
+          p.rotation += p.rotSpeed;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.globalAlpha = p.opacity;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        });
+
+        if (frame < maxFrames) {
+          requestAnimationFrame(animate);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      animate();
+    }
+
+    // Handle window resize for confetti canvas
+    window.addEventListener('resize', () => {
+      const canvas = document.getElementById('confetti-canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>

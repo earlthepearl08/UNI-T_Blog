@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiring Color Code Reference | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Interactive Philippine wiring color codes, resistor color code calculator, electrical formulas, circuit breaker sizing, and IP ratings. The ultimate quick-reference for Filipino electricians.">
+
+  <meta property="og:title" content="Wiring Color Code Reference | UNI-T Philippines">
+  <meta property="og:description" content="Interactive Philippine wiring color codes, resistor calculator, formulas, and more.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* ===== Tool Page Layout ===== */
+    .tool-hero {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2d2d2d 100%);
+      color: #fff;
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    .tool-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .tool-hero p {
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .tool-hero .tool-actions {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .tool-hero .tool-actions .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1.25rem;
+    }
+
+    /* Sticky section nav */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 90;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-color);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      transition: background 0.3s;
+    }
+    .section-nav-inner {
+      display: flex;
+      gap: 0;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .section-nav a {
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+    .section-nav a:hover,
+    .section-nav a.active {
+      color: var(--uni-red);
+      border-bottom-color: var(--uni-red);
+    }
+
+    /* Sections */
+    .tool-section {
+      padding: 3rem 0;
+      scroll-margin-top: 120px;
+    }
+    .tool-section:nth-child(even) {
+      background: var(--bg-secondary);
+    }
+    .tool-section h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .tool-section .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+
+    /* ===== 1. Wiring Color Cards ===== */
+    .wire-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .wire-card {
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: var(--card-bg);
+      box-shadow: var(--shadow-sm);
+    }
+    .wire-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .wire-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    .wire-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .wire-card-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin: 0;
+    }
+    .wire-card-header .wire-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .wire-expand-icon {
+      margin-left: auto;
+      transition: transform 0.3s;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .wire-card.expanded .wire-expand-icon {
+      transform: rotate(180deg);
+    }
+    .wire-card-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 1.25rem;
+    }
+    .wire-card.expanded .wire-card-body {
+      max-height: 500px;
+      padding: 0 1.25rem 1.25rem;
+    }
+    .wire-detail {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .wire-detail strong {
+      color: var(--text-primary);
+    }
+    .wire-warning {
+      background: #FFF3CD;
+      color: #856404;
+      padding: 0.6rem 0.8rem;
+      border-radius: var(--border-radius);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    [data-theme="dark"] .wire-warning {
+      background: #3d3520;
+      color: #ffc107;
+    }
+    .wire-instrument {
+      background: var(--bg-secondary);
+      padding: 0.6rem 0.8rem;
+      border-radius: var(--border-radius);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      border-left: 3px solid var(--uni-red);
+    }
+
+    /* ===== 2. Resistor Calculator ===== */
+    .resistor-calc {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .resistor-calc {
+        grid-template-columns: 1fr;
+      }
+    }
+    .resistor-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .resistor-svg-wrap {
+      width: 100%;
+      max-width: 380px;
+    }
+    .resistor-svg-wrap svg {
+      width: 100%;
+      height: auto;
+    }
+    .band-selectors {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 380px;
+    }
+    .band-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .band-row label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      width: 90px;
+      flex-shrink: 0;
+      color: var(--text-secondary);
+    }
+    .band-row select {
+      flex: 1;
+      padding: 0.4rem 0.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--card-bg);
+      color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+    .resistor-result {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+    }
+    .resistor-result h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 1rem;
+    }
+    .result-value {
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--uni-red);
+      margin-bottom: 0.25rem;
+    }
+    .result-tolerance {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .reverse-calc {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .reverse-calc h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .reverse-input-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .reverse-input-row input {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+    .reverse-input-row select {
+      padding: 0.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--card-bg);
+      color: var(--text-primary);
+    }
+    .reverse-result-bands {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .reverse-band-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      background: var(--bg-primary);
+    }
+    .reverse-band-chip .chip-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    /* Common values table */
+    .common-values-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 1.5rem;
+    }
+    .common-values-table th,
+    .common-values-table td {
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .common-values-table th {
+      font-weight: 700;
+      background: var(--bg-secondary);
+      position: sticky;
+      top: 0;
+    }
+    .common-values-table tr:hover {
+      background: var(--bg-secondary);
+    }
+
+    /* Mode toggle */
+    .mode-toggle {
+      display: inline-flex;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .mode-toggle button {
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      background: var(--bg-primary);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mode-toggle button.active {
+      background: var(--uni-red);
+      color: #fff;
+    }
+
+    /* ===== 3. Formulas ===== */
+    .formula-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .formula-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .formula-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .formula-card-header {
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .formula-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--uni-red);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      font-family: var(--font-heading);
+      flex-shrink: 0;
+    }
+    .formula-card-header h3 {
+      font-size: 0.95rem;
+      margin: 0 0 0.15rem;
+    }
+    .formula-equation {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--uni-red);
+    }
+    .formula-card-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .formula-card.expanded .formula-card-body {
+      max-height: 400px;
+    }
+    .formula-card-body-inner {
+      padding: 0 1.25rem 1.25rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+    }
+    .formula-example {
+      background: var(--bg-secondary);
+      padding: 0.8rem 1rem;
+      border-radius: var(--border-radius);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    .formula-example strong {
+      color: var(--uni-red);
+    }
+
+    /* Ohm's law triangle */
+    .ohm-triangle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .ohm-triangle svg {
+      width: 120px;
+      height: 110px;
+    }
+
+    /* ===== 4. Breaker Table ===== */
+    .breaker-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .breaker-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      font-size: 0.92rem;
+    }
+    .breaker-table th {
+      background: #1A1A1A;
+      color: #fff;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .breaker-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .breaker-table tbody tr:hover {
+      background: var(--bg-secondary);
+    }
+    .breaker-table .wire-size-cell {
+      font-weight: 700;
+      font-family: var(--font-heading);
+    }
+    .breaker-table .amp-cell {
+      color: var(--uni-red);
+      font-weight: 700;
+    }
+
+    /* ===== 5. IP Rating Grid ===== */
+    .ip-reference {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .ip-reference {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ip-table-wrap {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .ip-table-wrap h3 {
+      padding: 1rem 1.25rem 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+    }
+    .ip-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .ip-table th {
+      background: var(--bg-secondary);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .ip-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .ip-table td:first-child {
+      font-weight: 700;
+      width: 50px;
+      text-align: center;
+    }
+    .ip-table tr:hover td {
+      background: var(--bg-secondary);
+    }
+    .ip-table tr.highlighted td {
+      background: rgba(227,30,36,0.08);
+    }
+    [data-theme="dark"] .ip-table tr.highlighted td {
+      background: rgba(227,30,36,0.15);
+    }
+
+    .ip-common-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .ip-chip {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid transparent;
+    }
+    .ip-chip:hover, .ip-chip.active {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--uni-red);
+    }
+    .ip-chip-code {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--uni-red);
+    }
+    .ip-chip-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .ip-detail-box {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
+      margin-top: 1rem;
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+    .ip-detail-box.visible {
+      display: block;
+    }
+    .ip-detail-box h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .ip-detail-box p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Print Styles ===== */
+    @media print {
+      .header, .footer, .section-nav, .tool-hero .tool-actions,
+      .back-to-top, #themeToggle, .mode-toggle, .reverse-calc,
+      .band-selectors select, .wire-expand-icon { display: none !important; }
+      .tool-hero { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 1.5rem 0; }
+      .tool-section { padding: 1.5rem 0; page-break-inside: avoid; }
+      .wire-card-body { max-height: none !important; padding: 0 1.25rem 1rem !important; }
+      .formula-card-body { max-height: none !important; }
+      .wire-card, .formula-card, .ip-chip, .resistor-result {
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+      }
+      body { font-size: 11pt; }
+      .wire-swatch, .ip-chip-code { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .tool-hero h1 { font-size: 1.5rem; }
+      .wire-grid { grid-template-columns: 1fr; }
+      .formula-grid { grid-template-columns: 1fr; }
+      .section-nav a { padding: 0.6rem 0.75rem; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/posts/">All Posts</a>
+        <a href="/categories/equipment-guides/">Guides</a>
+        <a href="/categories/faqs/">FAQs</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://kinmo.com" target="_blank">Shop</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="tool-hero">
+    <div class="container">
+      <h1>Wiring Color Code Reference</h1>
+      <p>Philippine wiring standards, resistor calculator, electrical formulas, breaker sizing, and IP ratings -- all in one page.</p>
+      <div class="tool-actions">
+        <button class="btn btn-primary" onclick="window.print()">
+          <svg style="width:16px;height:16px;vertical-align:-2px;margin-right:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print This Reference
+        </button>
+        <a href="/" class="btn btn-outline btn-outline-white">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Nav -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="section-nav-inner">
+      <a href="#wiring" class="active">Wiring Colors</a>
+      <a href="#resistor">Resistor Calculator</a>
+      <a href="#formulas">Formulas</a>
+      <a href="#breaker">Breaker Guide</a>
+      <a href="#ip-rating">IP Ratings</a>
+    </div>
+  </nav>
+
+  <!-- ==================== SECTION 1: Wiring Colors ==================== -->
+  <section class="tool-section" id="wiring">
+    <div class="container">
+      <h2>Philippine Wiring Color Codes</h2>
+      <p class="section-desc">Based on the Philippine Electrical Code (PEC) and IEC 60446 standards. Tap any wire to learn more.</p>
+      <div class="wire-grid" id="wireGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: Resistor Calculator ==================== -->
+  <section class="tool-section" id="resistor">
+    <div class="container">
+      <h2>Resistor Color Code Calculator</h2>
+      <p class="section-desc">Select band colors to calculate resistance, or enter a value to find the color code.</p>
+
+      <div class="mode-toggle" id="bandModeToggle">
+        <button class="active" data-mode="4">4-Band</button>
+        <button data-mode="5">5-Band</button>
+      </div>
+
+      <div class="resistor-calc">
+        <div class="resistor-visual">
+          <!-- SVG Resistor -->
+          <div class="resistor-svg-wrap">
+            <svg id="resistorSVG" viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+              <!-- Leads -->
+              <line x1="0" y1="60" x2="60" y2="60" stroke="#888" stroke-width="4"/>
+              <line x1="320" y1="60" x2="380" y2="60" stroke="#888" stroke-width="4"/>
+              <!-- Body -->
+              <rect x="60" y="25" width="260" height="70" rx="14" ry="14" fill="#D2B48C" stroke="#A08050" stroke-width="2"/>
+              <!-- Bands (positioned for 4-band, JS will adjust for 5) -->
+              <rect id="svgBand1" x="90"  y="25" width="18" height="70" rx="2" fill="#000"/>
+              <rect id="svgBand2" x="120" y="25" width="18" height="70" rx="2" fill="#000"/>
+              <rect id="svgBand3" x="150" y="25" width="18" height="70" rx="2" fill="#000" style="display:none"/>
+              <rect id="svgMultiplier" x="180" y="25" width="18" height="70" rx="2" fill="#000"/>
+              <rect id="svgTolerance" x="260" y="25" width="18" height="70" rx="2" fill="#FFD700"/>
+            </svg>
+          </div>
+
+          <!-- Band selectors -->
+          <div class="band-selectors" id="bandSelectors">
+            <div class="band-row">
+              <label>Band 1</label>
+              <select id="band1" data-band="1"></select>
+            </div>
+            <div class="band-row">
+              <label>Band 2</label>
+              <select id="band2" data-band="2"></select>
+            </div>
+            <div class="band-row" id="band3Row" style="display:none">
+              <label>Band 3</label>
+              <select id="band3" data-band="3"></select>
+            </div>
+            <div class="band-row">
+              <label>Multiplier</label>
+              <select id="bandMultiplier" data-band="multiplier"></select>
+            </div>
+            <div class="band-row">
+              <label>Tolerance</label>
+              <select id="bandTolerance" data-band="tolerance"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="resistor-result">
+          <h3>Resistance Value</h3>
+          <div class="result-value" id="resistanceValue">0 Ohm</div>
+          <div class="result-tolerance" id="toleranceValue">+/-5%</div>
+
+          <div class="reverse-calc">
+            <h4>Reverse Lookup: Value to Colors</h4>
+            <div class="reverse-input-row">
+              <input type="number" id="reverseInput" placeholder="e.g. 4700" min="0">
+              <select id="reverseUnit">
+                <option value="1">Ohm</option>
+                <option value="1000">kOhm</option>
+                <option value="1000000">MOhm</option>
+              </select>
+              <button class="btn btn-primary" onclick="reverseCalc()" style="padding:0.4rem 0.8rem;font-size:0.85rem">Go</button>
+            </div>
+            <div class="reverse-result-bands" id="reverseBands"></div>
+          </div>
+
+          <!-- Common values -->
+          <table class="common-values-table">
+            <thead><tr><th>Value</th><th>Band 1</th><th>Band 2</th><th>Multiplier</th></tr></thead>
+            <tbody>
+              <tr><td>100 Ohm</td><td>Brown</td><td>Black</td><td>Brown</td></tr>
+              <tr><td>220 Ohm</td><td>Red</td><td>Red</td><td>Brown</td></tr>
+              <tr><td>470 Ohm</td><td>Yellow</td><td>Violet</td><td>Brown</td></tr>
+              <tr><td>1 kOhm</td><td>Brown</td><td>Black</td><td>Red</td></tr>
+              <tr><td>4.7 kOhm</td><td>Yellow</td><td>Violet</td><td>Red</td></tr>
+              <tr><td>10 kOhm</td><td>Brown</td><td>Black</td><td>Orange</td></tr>
+              <tr><td>47 kOhm</td><td>Yellow</td><td>Violet</td><td>Orange</td></tr>
+              <tr><td>100 kOhm</td><td>Brown</td><td>Black</td><td>Yellow</td></tr>
+              <tr><td>1 MOhm</td><td>Brown</td><td>Black</td><td>Green</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: Formulas ==================== -->
+  <section class="tool-section" id="formulas">
+    <div class="container">
+      <h2>Electrical Formulas Quick Reference</h2>
+      <p class="section-desc">Tap any formula to see an example calculation.</p>
+      <div class="formula-grid" id="formulaGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 4: Breaker Guide ==================== -->
+  <section class="tool-section" id="breaker">
+    <div class="container">
+      <h2>Circuit Breaker Size Guide (Philippine)</h2>
+      <p class="section-desc">Wire size to breaker size mapping based on Philippine Electrical Code standards.</p>
+      <div class="breaker-table-wrap">
+        <table class="breaker-table">
+          <thead>
+            <tr>
+              <th>Wire Size (mm&sup2;)</th>
+              <th>Max Breaker (A)</th>
+              <th>Typical Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="wire-size-cell">1.5 mm&sup2;</td><td class="amp-cell">15A</td><td>Lighting circuits</td></tr>
+            <tr><td class="wire-size-cell">2.5 mm&sup2;</td><td class="amp-cell">20A</td><td>General outlets / convenience receptacles</td></tr>
+            <tr><td class="wire-size-cell">4.0 mm&sup2;</td><td class="amp-cell">25A</td><td>Heavy-duty outlets, small air-conditioning units</td></tr>
+            <tr><td class="wire-size-cell">6.0 mm&sup2;</td><td class="amp-cell">32A</td><td>Large AC units, electric water heaters</td></tr>
+            <tr><td class="wire-size-cell">10 mm&sup2;</td><td class="amp-cell">50A</td><td>Sub-panel feeds, electric ranges</td></tr>
+            <tr><td class="wire-size-cell">16 mm&sup2;</td><td class="amp-cell">63A</td><td>Main panel feed</td></tr>
+            <tr><td class="wire-size-cell">25 mm&sup2;</td><td class="amp-cell">80A</td><td>Large main feed / service entrance</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="wire-instrument" style="margin-top:1rem;max-width:600px;">
+        <strong>Pro Tip:</strong> Always verify wire gauge with a UNI-T UT61E+ multimeter (continuity and resistance check) before connecting to a breaker. Use a UT210E clamp meter to confirm actual load current.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: IP Ratings ==================== -->
+  <section class="tool-section" id="ip-rating">
+    <div class="container">
+      <h2>IP Rating Reference</h2>
+      <p class="section-desc">Ingress Protection ratings explained. The first digit = solid protection, the second = liquid protection.</p>
+
+      <div class="ip-reference">
+        <!-- First Digit -->
+        <div class="ip-table-wrap">
+          <h3>First Digit: Solid Particle Protection</h3>
+          <table class="ip-table">
+            <thead><tr><th>Level</th><th>Protection</th></tr></thead>
+            <tbody id="ipSolid"></tbody>
+          </table>
+        </div>
+        <!-- Second Digit -->
+        <div class="ip-table-wrap">
+          <h3>Second Digit: Liquid Ingress Protection</h3>
+          <table class="ip-table">
+            <thead><tr><th>Level</th><th>Protection</th></tr></thead>
+            <tbody id="ipLiquid"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem;font-family:var(--font-heading);">Common IP Ratings</h3>
+      <div class="ip-common-grid" id="ipCommonGrid"></div>
+      <div class="ip-detail-box" id="ipDetailBox"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need the Right Test Instrument?</h2>
+      <p>Browse the complete range of UNI-T test instruments at Kinmo, the exclusive Philippine distributor.</p>
+      <a href="https://kinmo.com/product-category/uni-t/" class="btn btn-primary" target="_blank">Shop UNI-T Products</a>
+      <a href="/contact.html" class="btn btn-outline btn-outline-white ml-1">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo"><span class="logo-accent">UNI-T</span> Philippines</a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety & Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+            <li><a href="/rss.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    /* ========================================================
+       DATA
+    ======================================================== */
+
+    const wireData = [
+      {
+        color: 'Black', hex: '#1A1A1A', textColor: '#fff',
+        function: 'Hot / Line (Phase A)', voltage: '220V',
+        description: 'The primary hot wire in Philippine residential wiring. Carries 220V from the service panel to outlets and switches.',
+        location: 'Found in most residential circuits from the panel to outlets and lighting.',
+        warning: 'ALWAYS assume black wires are live. Never touch without verifying with a voltage detector first.',
+        instrument: 'Use a UNI-T UT12S non-contact voltage detector to quickly check if the wire is energized before handling.'
+      },
+      {
+        color: 'Red', hex: '#E31E24', textColor: '#fff',
+        function: 'Hot / Line (Phase B)', voltage: '220V',
+        description: 'Second hot wire in a split-phase or multi-wire branch circuit. Also used as a switch leg or traveler wire in 3-way switch installations.',
+        location: 'Split-phase panels, 3-way switches, and 240V appliance circuits.',
+        warning: 'Red wires carry full voltage. In a 3-way switch circuit, the red wire may be live even if the switch is off.',
+        instrument: 'Verify with a UNI-T UT61E+ multimeter set to AC voltage mode. Measure between red and neutral for 220V.'
+      },
+      {
+        color: 'Blue', hex: '#1E88E5', textColor: '#fff',
+        function: 'Hot / Line (Phase C)', voltage: '380V (3-phase)',
+        description: 'Third phase conductor in a three-phase electrical system. Used in commercial and industrial installations.',
+        location: 'Commercial buildings, factories, large motor installations, and 3-phase distribution panels.',
+        warning: 'Three-phase systems carry higher voltages between phases (380V line-to-line). Use appropriate PPE and CAT III/IV rated instruments.',
+        instrument: 'Use a UNI-T UT204+ clamp meter to measure current on individual phases without breaking the circuit.'
+      },
+      {
+        color: 'White', hex: '#F5F5F5', textColor: '#333',
+        function: 'Neutral', voltage: '0V (ideally)',
+        description: 'The grounded conductor that completes the circuit and carries return current back to the panel. Should read 0V to ground under normal conditions.',
+        location: 'Every residential and commercial circuit. Runs from the neutral bus bar in the panel to every outlet and fixture.',
+        warning: 'A neutral wire CAN carry current and voltage if the circuit is loaded or if there is a fault. Never assume neutral is safe to touch.',
+        instrument: 'Use a UNI-T UT61E+ multimeter to measure voltage between neutral and ground -- it should be near 0V. Any significant reading indicates a wiring issue.'
+      },
+      {
+        color: 'Green', hex: '#2E7D32', textColor: '#fff',
+        function: 'Ground / Earth', voltage: '0V',
+        description: 'Safety grounding conductor. Provides a low-impedance path to earth for fault current, triggering the breaker to trip in case of a ground fault.',
+        location: 'Connected to every metal outlet box, appliance chassis, and the grounding bus bar in the panel.',
+        warning: 'Never use a ground wire as a neutral. If a ground wire shows voltage, there is a serious fault -- de-energize immediately.',
+        instrument: 'Use a UNI-T UT501A insulation tester to verify ground continuity and insulation resistance.'
+      },
+      {
+        color: 'Green/Yellow', hex: '#2E7D32', textColor: '#fff', stripe: '#FFD600',
+        function: 'Ground / Earth (IEC)', voltage: '0V',
+        description: 'International standard ground wire color per IEC 60446. Increasingly common in Philippine installations, especially in commercial and industrial settings.',
+        location: 'IEC-compliant installations, imported equipment, and modern commercial buildings.',
+        warning: 'Same safety rules as green ground. This is strictly a protective earth conductor -- never use for any other purpose.',
+        instrument: 'Verify ground bond integrity with a UNI-T UT522 earth resistance tester for proper grounding system performance.'
+      },
+      {
+        color: 'Orange', hex: '#FF9800', textColor: '#333',
+        function: 'Delta High Leg (3-phase)', voltage: '208V to ground',
+        description: 'Identifies the "wild" or "high" leg in a delta-connected 3-phase system. This leg produces a higher voltage to ground (208V instead of 120V).',
+        location: 'Older commercial buildings and industrial facilities with delta-configured transformers.',
+        warning: 'The high leg produces 208V to ground instead of the expected 120V. Connecting single-phase loads to this leg without a transformer can damage equipment.',
+        instrument: 'Use a UNI-T UT89X multimeter (CAT IV rated) to measure voltage between the orange wire and ground to confirm the high-leg voltage.'
+      },
+      {
+        color: 'Brown', hex: '#795548', textColor: '#fff',
+        function: 'Hot / Line (IEC)', voltage: '220V',
+        description: 'Standard hot/line wire color under IEC conventions. Used as the primary live conductor in European and IEC-compliant installations.',
+        location: 'IEC-compliant installations, imported machinery, and some modern Philippine commercial buildings.',
+        warning: 'If you see brown wires in a Philippine installation, confirm the wiring standard being used before working on the circuit.',
+        instrument: 'Verify with a UNI-T UT12S voltage detector, then confirm exact voltage with a UT61E+ multimeter.'
+      },
+      {
+        color: 'Gray', hex: '#9E9E9E', textColor: '#333',
+        function: 'Neutral (IEC)', voltage: '0V (ideally)',
+        description: 'IEC standard neutral conductor color. Used in place of white in European and IEC-compliant wiring systems.',
+        location: 'IEC-standard installations, imported equipment, and dual-standard commercial buildings.',
+        warning: 'Same precautions as white neutral. In mixed installations, verify the wiring standard to avoid confusion between gray neutral (IEC) and other uses.',
+        instrument: 'Use a UNI-T UT61E+ to measure the voltage between gray and ground. Should be near 0V if it is a true neutral.'
+      }
+    ];
+
+    const resistorColors = {
+      Black:   { value: 0, hex: '#1A1A1A', textColor: '#fff' },
+      Brown:   { value: 1, hex: '#8B4513', textColor: '#fff' },
+      Red:     { value: 2, hex: '#E31E24', textColor: '#fff' },
+      Orange:  { value: 3, hex: '#FF9800', textColor: '#333' },
+      Yellow:  { value: 4, hex: '#FFD600', textColor: '#333' },
+      Green:   { value: 5, hex: '#2E7D32', textColor: '#fff' },
+      Blue:    { value: 6, hex: '#1E88E5', textColor: '#fff' },
+      Violet:  { value: 7, hex: '#7B1FA2', textColor: '#fff' },
+      Gray:    { value: 8, hex: '#9E9E9E', textColor: '#333' },
+      White:   { value: 9, hex: '#F5F5F5', textColor: '#333' }
+    };
+    const multiplierColors = {
+      Black:   { mult: 1,          hex: '#1A1A1A', textColor: '#fff' },
+      Brown:   { mult: 10,         hex: '#8B4513', textColor: '#fff' },
+      Red:     { mult: 100,        hex: '#E31E24', textColor: '#fff' },
+      Orange:  { mult: 1000,       hex: '#FF9800', textColor: '#333' },
+      Yellow:  { mult: 10000,      hex: '#FFD600', textColor: '#333' },
+      Green:   { mult: 100000,     hex: '#2E7D32', textColor: '#fff' },
+      Blue:    { mult: 1000000,    hex: '#1E88E5', textColor: '#fff' },
+      Violet:  { mult: 10000000,   hex: '#7B1FA2', textColor: '#fff' },
+      Gray:    { mult: 100000000,  hex: '#9E9E9E', textColor: '#333' },
+      White:   { mult: 1000000000, hex: '#F5F5F5', textColor: '#333' },
+      Gold:    { mult: 0.1,        hex: '#FFD700', textColor: '#333' },
+      Silver:  { mult: 0.01,       hex: '#C0C0C0', textColor: '#333' }
+    };
+    const toleranceColors = {
+      Brown:  { tol: 1,  hex: '#8B4513', textColor: '#fff' },
+      Red:    { tol: 2,  hex: '#E31E24', textColor: '#fff' },
+      Green:  { tol: 0.5,hex: '#2E7D32', textColor: '#fff' },
+      Blue:   { tol: 0.25,hex:'#1E88E5', textColor: '#fff' },
+      Violet: { tol: 0.1,hex: '#7B1FA2', textColor: '#fff' },
+      Gray:   { tol: 0.05,hex:'#9E9E9E', textColor: '#333' },
+      Gold:   { tol: 5,  hex: '#FFD700', textColor: '#333' },
+      Silver: { tol: 10, hex: '#C0C0C0', textColor: '#333' }
+    };
+
+    const formulaData = [
+      {
+        name: "Ohm's Law", icon: 'V', equation: 'V = I x R',
+        hasTriangle: true,
+        description: 'Voltage (V) equals Current (I) times Resistance (R).',
+        example: '<strong>Example:</strong> A 100-ohm resistor with 0.5A flowing through it:<br>V = 0.5A x 100 ohm = <strong>50V</strong>'
+      },
+      {
+        name: 'Electrical Power', icon: 'P', equation: 'P = V x I',
+        description: 'Power (Watts) equals Voltage times Current.',
+        example: '<strong>Example:</strong> A 220V outlet supplying 5A:<br>P = 220V x 5A = <strong>1,100W (1.1 kW)</strong>'
+      },
+      {
+        name: 'Three-Phase Power', icon: '3P', equation: 'P = sqrt(3) x V x I x PF',
+        description: 'Total power in a balanced 3-phase system. PF is the power factor (typically 0.8-0.95 for motors).',
+        example: '<strong>Example:</strong> 380V, 10A per phase, PF = 0.85:<br>P = 1.732 x 380V x 10A x 0.85 = <strong>5,594W (5.6 kW)</strong>'
+      },
+      {
+        name: 'Capacitive Reactance', icon: 'Xc', equation: 'Xc = 1 / (2 pi f C)',
+        description: 'Opposition to AC current by a capacitor. Decreases with higher frequency or larger capacitance.',
+        example: '<strong>Example:</strong> 10uF capacitor at 60Hz:<br>Xc = 1 / (2 x 3.14159 x 60 x 0.00001) = <strong>265.3 ohm</strong>'
+      },
+      {
+        name: 'Inductive Reactance', icon: 'Xl', equation: 'Xl = 2 pi f L',
+        description: 'Opposition to AC current by an inductor. Increases with higher frequency or larger inductance.',
+        example: '<strong>Example:</strong> 50mH inductor at 60Hz:<br>Xl = 2 x 3.14159 x 60 x 0.05 = <strong>18.85 ohm</strong>'
+      },
+      {
+        name: 'Power Factor', icon: 'PF', equation: 'PF = P / S = cos(theta)',
+        description: 'Ratio of real power (W) to apparent power (VA). PF of 1.0 means all power is doing useful work.',
+        example: '<strong>Example:</strong> Motor draws 2,000VA but only 1,600W real power:<br>PF = 1600 / 2000 = <strong>0.80 (80%)</strong>'
+      }
+    ];
+
+    const ipSolidData = [
+      { level: 0, desc: 'No protection against contact or ingress of objects' },
+      { level: 1, desc: 'Protection against objects larger than 50mm (e.g., accidental hand contact)' },
+      { level: 2, desc: 'Protection against objects larger than 12.5mm (e.g., fingers)' },
+      { level: 3, desc: 'Protection against objects larger than 2.5mm (e.g., tools, thick wires)' },
+      { level: 4, desc: 'Protection against objects larger than 1mm (e.g., small wires, screws)' },
+      { level: 5, desc: 'Dust protected -- limited ingress permitted, no harmful deposits' },
+      { level: 6, desc: 'Dust tight -- complete protection against dust ingress' }
+    ];
+
+    const ipLiquidData = [
+      { level: 0, desc: 'No protection against water' },
+      { level: 1, desc: 'Protection against vertically dripping water' },
+      { level: 2, desc: 'Protection against dripping water when tilted up to 15 degrees' },
+      { level: 3, desc: 'Protection against spraying water at up to 60 degrees from vertical' },
+      { level: 4, desc: 'Protection against splashing water from any direction' },
+      { level: 5, desc: 'Protection against water jets (6.3mm nozzle) from any direction' },
+      { level: 6, desc: 'Protection against powerful water jets (12.5mm nozzle)' },
+      { level: 7, desc: 'Protection against temporary immersion (up to 1m for 30 minutes)' },
+      { level: 8, desc: 'Protection against continuous submersion beyond 1m' },
+      { level: 9, desc: 'Protection against high-pressure, high-temperature water jets (close range)' }
+    ];
+
+    const ipCommonData = [
+      { code: 'IP20', label: 'Indoor panels', solid: 2, liquid: 0,
+        desc: 'Protection from finger contact but no water protection. Typical for indoor panel boards, breaker boxes, and desktop instruments.',
+        instruments: 'Most UNI-T bench instruments like the UT8804N bench multimeter.' },
+      { code: 'IP44', label: 'Weatherproof', solid: 4, liquid: 4,
+        desc: 'Protected against solid objects over 1mm and splashing water. Common for outdoor junction boxes and weatherproof outlets.',
+        instruments: 'UNI-T UT61E+ and similar handheld multimeters.' },
+      { code: 'IP54', label: 'Dust + splash', solid: 5, liquid: 4,
+        desc: 'Dust protected with splash water resistance. Good for construction sites and light industrial environments.',
+        instruments: 'UNI-T UT204+ clamp meter and UT89X series multimeters.' },
+      { code: 'IP65', label: 'Dust tight + jets', solid: 6, liquid: 5,
+        desc: 'Completely dust tight and protected against water jets. Suitable for wash-down environments and outdoor permanent installations.',
+        instruments: 'UNI-T UTi260B thermal imager and outdoor-rated instruments.' },
+      { code: 'IP67', label: 'Submersible', solid: 6, liquid: 7,
+        desc: 'Dust tight and can survive temporary submersion up to 1m for 30 minutes. Ideal for harsh field conditions.',
+        instruments: 'Select UNI-T professional field instruments.' },
+      { code: 'IP68', label: 'Continuous submersion', solid: 6, liquid: 8,
+        desc: 'Dust tight and withstands continuous submersion. The highest common rating for portable instruments.',
+        instruments: 'Specialized UNI-T probes and sensors for underwater or buried applications.' }
+    ];
+
+    /* ========================================================
+       1. WIRING COLOR CARDS
+    ======================================================== */
+    const wireGrid = document.getElementById('wireGrid');
+    wireData.forEach(function(w, i) {
+      const card = document.createElement('div');
+      card.className = 'wire-card';
+      const stripeStyle = w.stripe
+        ? 'background:repeating-linear-gradient(135deg,' + w.hex + ' 0,' + w.hex + ' 6px,' + w.stripe + ' 6px,' + w.stripe + ' 12px);'
+        : 'background:' + w.hex + ';';
+      card.innerHTML =
+        '<div class="wire-card-header">' +
+          '<div class="wire-swatch" style="' + stripeStyle + '"></div>' +
+          '<div><h3 style="color:var(--text-primary)">' + w.color + '</h3>' +
+          '<div class="wire-label">' + w.function + ' &mdash; ' + w.voltage + '</div></div>' +
+          '<svg class="wire-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</div>' +
+        '<div class="wire-card-body">' +
+          '<div class="wire-detail"><strong>Description:</strong> ' + w.description + '</div>' +
+          '<div class="wire-detail"><strong>Where found:</strong> ' + w.location + '</div>' +
+          '<div class="wire-warning">&#9888; ' + w.warning + '</div>' +
+          '<div class="wire-instrument">&#128268; <strong>Verify with:</strong> ' + w.instrument + '</div>' +
+        '</div>';
+      card.querySelector('.wire-card-header').addEventListener('click', function() {
+        card.classList.toggle('expanded');
+      });
+      wireGrid.appendChild(card);
+    });
+
+    /* ========================================================
+       2. RESISTOR CALCULATOR
+    ======================================================== */
+    var bandMode = 4;
+
+    function populateSelect(sel, data, type) {
+      sel.innerHTML = '';
+      Object.keys(data).forEach(function(name) {
+        var opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        if (type === 'digit') opt.textContent += ' (' + data[name].value + ')';
+        else if (type === 'multiplier') opt.textContent += ' (x' + data[name].mult + ')';
+        else if (type === 'tolerance') opt.textContent += ' (+/-' + data[name].tol + '%)';
+        opt.style.background = data[name].hex;
+        opt.style.color = data[name].textColor;
+        sel.appendChild(opt);
+      });
+    }
+
+    function initSelects() {
+      populateSelect(document.getElementById('band1'), resistorColors, 'digit');
+      populateSelect(document.getElementById('band2'), resistorColors, 'digit');
+      populateSelect(document.getElementById('band3'), resistorColors, 'digit');
+      populateSelect(document.getElementById('bandMultiplier'), multiplierColors, 'multiplier');
+      populateSelect(document.getElementById('bandTolerance'), toleranceColors, 'tolerance');
+      // defaults
+      document.getElementById('band1').value = 'Yellow';
+      document.getElementById('band2').value = 'Violet';
+      document.getElementById('band3').value = 'Black';
+      document.getElementById('bandMultiplier').value = 'Red';
+      document.getElementById('bandTolerance').value = 'Gold';
+    }
+    initSelects();
+
+    function formatResistance(val) {
+      if (val >= 1e9) return (val / 1e9).toFixed(val % 1e9 === 0 ? 0 : 2) + ' G\u03A9';
+      if (val >= 1e6) return (val / 1e6).toFixed(val % 1e6 === 0 ? 0 : 2) + ' M\u03A9';
+      if (val >= 1e3) return (val / 1e3).toFixed(val % 1e3 === 0 ? 0 : 2) + ' k\u03A9';
+      if (val < 1 && val > 0) return val.toFixed(2) + ' \u03A9';
+      return val + ' \u03A9';
+    }
+
+    function updateResistor() {
+      var b1 = resistorColors[document.getElementById('band1').value].value;
+      var b2 = resistorColors[document.getElementById('band2').value].value;
+      var mult = multiplierColors[document.getElementById('bandMultiplier').value].mult;
+      var tol = toleranceColors[document.getElementById('bandTolerance').value].tol;
+      var val;
+      if (bandMode === 5) {
+        var b3 = resistorColors[document.getElementById('band3').value].value;
+        val = (b1 * 100 + b2 * 10 + b3) * mult;
+      } else {
+        val = (b1 * 10 + b2) * mult;
+      }
+      document.getElementById('resistanceValue').textContent = formatResistance(val);
+      document.getElementById('toleranceValue').textContent = '+/- ' + tol + '%';
+
+      // Update SVG bands
+      document.getElementById('svgBand1').setAttribute('fill', resistorColors[document.getElementById('band1').value].hex);
+      document.getElementById('svgBand2').setAttribute('fill', resistorColors[document.getElementById('band2').value].hex);
+      document.getElementById('svgMultiplier').setAttribute('fill', multiplierColors[document.getElementById('bandMultiplier').value].hex);
+      document.getElementById('svgTolerance').setAttribute('fill', toleranceColors[document.getElementById('bandTolerance').value].hex);
+
+      if (bandMode === 5) {
+        document.getElementById('svgBand3').setAttribute('fill', resistorColors[document.getElementById('band3').value].hex);
+      }
+    }
+
+    function setBandMode(mode) {
+      bandMode = mode;
+      var band3Row = document.getElementById('band3Row');
+      var svgBand3 = document.getElementById('svgBand3');
+      var svgMult = document.getElementById('svgMultiplier');
+      var svgTol = document.getElementById('svgTolerance');
+      if (mode === 5) {
+        band3Row.style.display = 'flex';
+        svgBand3.style.display = '';
+        // reposition
+        document.getElementById('svgBand1').setAttribute('x', '80');
+        document.getElementById('svgBand2').setAttribute('x', '108');
+        svgBand3.setAttribute('x', '136');
+        svgMult.setAttribute('x', '164');
+        svgTol.setAttribute('x', '260');
+      } else {
+        band3Row.style.display = 'none';
+        svgBand3.style.display = 'none';
+        document.getElementById('svgBand1').setAttribute('x', '90');
+        document.getElementById('svgBand2').setAttribute('x', '125');
+        svgMult.setAttribute('x', '160');
+        svgTol.setAttribute('x', '260');
+      }
+      updateResistor();
+    }
+
+    // Band mode toggle
+    document.getElementById('bandModeToggle').addEventListener('click', function(e) {
+      if (e.target.tagName !== 'BUTTON') return;
+      this.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
+      e.target.classList.add('active');
+      setBandMode(parseInt(e.target.dataset.mode));
+    });
+
+    // Listen to select changes
+    document.querySelectorAll('#bandSelectors select').forEach(function(sel) {
+      sel.addEventListener('change', updateResistor);
+    });
+
+    updateResistor();
+
+    // Reverse calculator
+    window.reverseCalc = function() {
+      var raw = parseFloat(document.getElementById('reverseInput').value);
+      var unit = parseFloat(document.getElementById('reverseUnit').value);
+      if (isNaN(raw) || raw <= 0) { document.getElementById('reverseBands').textContent = 'Enter a valid positive number.'; return; }
+      var ohms = raw * unit;
+
+      // Find 2-digit representation (4-band)
+      var multIndex = 0;
+      var temp = ohms;
+      if (temp >= 1) {
+        while (temp >= 100) { temp /= 10; multIndex++; }
+        while (temp < 10) { temp *= 10; multIndex--; }
+      }
+      var d1 = Math.floor(temp / 10);
+      var d2 = Math.round(temp % 10);
+      if (d2 >= 10) { d1++; d2 = 0; multIndex++; }
+      if (d1 > 9) { d1 = 1; d2 = 0; multIndex++; }
+
+      // Find color names
+      function digitToColor(d) {
+        for (var k in resistorColors) { if (resistorColors[k].value === d) return k; }
+        return null;
+      }
+      function multToColor(m) {
+        var target = Math.pow(10, m);
+        for (var k in multiplierColors) {
+          if (Math.abs(multiplierColors[k].mult - target) < 0.001 * target || multiplierColors[k].mult === target) return k;
+        }
+        // check gold/silver
+        if (m === -1) return 'Gold';
+        if (m === -2) return 'Silver';
+        return null;
+      }
+
+      var c1 = digitToColor(d1);
+      var c2 = digitToColor(d2);
+      var cm = multToColor(multIndex);
+
+      var container = document.getElementById('reverseBands');
+      container.innerHTML = '';
+      if (!c1 || !c2 || !cm) {
+        container.textContent = 'Cannot represent this value with standard 4-band color code.';
+        return;
+      }
+
+      function makeChip(name, data) {
+        var chip = document.createElement('span');
+        chip.className = 'reverse-band-chip';
+        chip.innerHTML = '<span class="chip-dot" style="background:' + data.hex + '"></span> ' + name;
+        return chip;
+      }
+      container.appendChild(makeChip(c1, resistorColors[c1]));
+      container.appendChild(makeChip(c2, resistorColors[c2]));
+      container.appendChild(makeChip(cm, multiplierColors[cm]));
+      var arrow = document.createElement('span');
+      arrow.textContent = ' = ' + formatResistance(ohms);
+      arrow.style.fontWeight = '700';
+      container.appendChild(arrow);
+    };
+
+    /* ========================================================
+       3. FORMULAS
+    ======================================================== */
+    var formulaGrid = document.getElementById('formulaGrid');
+    formulaData.forEach(function(f) {
+      var card = document.createElement('div');
+      card.className = 'formula-card';
+      var triangleHTML = '';
+      if (f.hasTriangle) {
+        triangleHTML =
+          '<div class="ohm-triangle">' +
+          '<svg viewBox="0 0 120 110">' +
+            '<polygon points="60,5 5,105 115,105" fill="none" stroke="var(--text-muted)" stroke-width="2"/>' +
+            '<line x1="5" y1="60" x2="115" y2="60" stroke="var(--text-muted)" stroke-width="1.5"/>' +
+            '<line x1="60" y1="60" x2="60" y2="105" stroke="var(--text-muted)" stroke-width="1.5"/>' +
+            '<text x="60" y="45" text-anchor="middle" font-size="16" font-weight="800" fill="var(--uni-red)">V</text>' +
+            '<text x="35" y="90" text-anchor="middle" font-size="16" font-weight="800" fill="var(--text-primary)">I</text>' +
+            '<text x="85" y="90" text-anchor="middle" font-size="16" font-weight="800" fill="var(--text-primary)">R</text>' +
+          '</svg>' +
+          '</div>';
+      }
+      card.innerHTML =
+        '<div class="formula-card-header">' +
+          '<div class="formula-icon">' + f.icon + '</div>' +
+          '<div><h3>' + f.name + '</h3><div class="formula-equation">' + f.equation + '</div></div>' +
+        '</div>' +
+        '<div class="formula-card-body"><div class="formula-card-body-inner">' +
+          triangleHTML +
+          '<p style="margin-bottom:0.75rem;font-size:0.9rem;color:var(--text-secondary)">' + f.description + '</p>' +
+          '<div class="formula-example">' + f.example + '</div>' +
+        '</div></div>';
+      card.querySelector('.formula-card-header').addEventListener('click', function() {
+        card.classList.toggle('expanded');
+      });
+      formulaGrid.appendChild(card);
+    });
+
+    /* ========================================================
+       5. IP RATINGS
+    ======================================================== */
+    // Solid table
+    var ipSolidBody = document.getElementById('ipSolid');
+    ipSolidData.forEach(function(r) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + r.level + '</td><td>' + r.desc + '</td>';
+      ipSolidBody.appendChild(tr);
+    });
+    // Liquid table
+    var ipLiquidBody = document.getElementById('ipLiquid');
+    ipLiquidData.forEach(function(r) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + r.level + '</td><td>' + r.desc + '</td>';
+      ipLiquidBody.appendChild(tr);
+    });
+
+    // Common IP chips
+    var ipCommonGrid = document.getElementById('ipCommonGrid');
+    var ipDetailBox = document.getElementById('ipDetailBox');
+
+    ipCommonData.forEach(function(ip) {
+      var chip = document.createElement('div');
+      chip.className = 'ip-chip';
+      chip.innerHTML = '<div class="ip-chip-code">' + ip.code + '</div><div class="ip-chip-label">' + ip.label + '</div>';
+      chip.addEventListener('click', function() {
+        // toggle active
+        document.querySelectorAll('.ip-chip').forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        // highlight table rows
+        document.querySelectorAll('.ip-table tr').forEach(function(r) { r.classList.remove('highlighted'); });
+        var solidRows = ipSolidBody.querySelectorAll('tr');
+        var liquidRows = ipLiquidBody.querySelectorAll('tr');
+        if (solidRows[ip.solid]) solidRows[ip.solid].classList.add('highlighted');
+        if (liquidRows[ip.liquid]) liquidRows[ip.liquid].classList.add('highlighted');
+        // show detail
+        ipDetailBox.innerHTML =
+          '<h4>' + ip.code + ' -- ' + ip.label + '</h4>' +
+          '<p>' + ip.desc + '</p>' +
+          '<p style="margin-top:0.75rem;"><strong>UNI-T Instruments:</strong> ' + ip.instruments + '</p>';
+        ipDetailBox.className = 'ip-detail-box visible';
+      });
+      ipCommonGrid.appendChild(chip);
+    });
+
+    /* ========================================================
+       SECTION NAV - scroll spy + active state
+    ======================================================== */
+    var navLinks = document.querySelectorAll('.section-nav a');
+    var sections = ['wiring', 'resistor', 'formulas', 'breaker', 'ip-rating'].map(function(id) {
+      return document.getElementById(id);
+    });
+
+    function updateActiveNav() {
+      var scrollPos = window.scrollY + 160;
+      var activeIndex = 0;
+      sections.forEach(function(sec, i) {
+        if (sec && sec.offsetTop <= scrollPos) activeIndex = i;
+      });
+      navLinks.forEach(function(l, i) {
+        l.classList.toggle('active', i === activeIndex);
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+
+    /* ========================================================
+       BACK TO TOP
+    ======================================================== */
+    var backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  })();
+  </script>
+</body>
+</html>
