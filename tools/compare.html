@@ -111,7 +111,7 @@
       transform: scale(1.1);
     }
     .slot-card .add-label {
-      color: var(--text-muted, #888);
+      color: var(--text-muted, #999);
       font-size: 0.9rem;
     }
 
@@ -124,11 +124,11 @@
     .slot-card .slot-model {
       font-weight: 700;
       font-size: 1rem;
-      color: var(--text, #222);
+      color: var(--text-primary, #222);
     }
     .slot-card .slot-cat {
       font-size: 0.75rem;
-      color: var(--text-muted, #888);
+      color: var(--text-muted, #999);
       margin-top: 0.15rem;
     }
     .slot-card .slot-remove {
@@ -174,7 +174,7 @@
       font-size: 0.85rem;
       outline: none;
       background: transparent;
-      color: var(--text, #222);
+      color: var(--text-primary, #222);
     }
     .slot-dropdown .dd-item {
       display: flex;
@@ -184,7 +184,7 @@
       cursor: pointer;
       transition: background 0.15s;
       font-size: 0.85rem;
-      color: var(--text, #222);
+      color: var(--text-primary, #222);
     }
     .slot-dropdown .dd-item:hover { background: var(--bg-alt, #f7f7f7); }
     .slot-dropdown .dd-item img {
@@ -194,7 +194,7 @@
     }
     .slot-dropdown .dd-item-info { text-align: left; }
     .slot-dropdown .dd-item-model { font-weight: 600; }
-    .slot-dropdown .dd-item-cat { font-size: 0.7rem; color: var(--text-muted, #888); }
+    .slot-dropdown .dd-item-cat { font-size: 0.7rem; color: var(--text-muted, #999); }
 
     /* Comparison Table */
     .comparison-section {
@@ -251,7 +251,7 @@
     .compare-table .model-name {
       font-size: 1.05rem;
       font-weight: 800;
-      color: var(--text, #222);
+      color: var(--text-primary, #222);
     }
     .compare-table .cell-diff {
       background: rgba(227, 30, 36, 0.07) !important;
@@ -282,7 +282,7 @@
       border-radius: 8px;
       border: 1px solid var(--border, #ddd);
       background: var(--card-bg, #fff);
-      color: var(--text, #333);
+      color: var(--text-primary, #333);
       font-size: 0.9rem;
       cursor: pointer;
       transition: all 0.2s;
@@ -309,7 +309,7 @@
     .empty-state h3 {
       font-size: 1.2rem;
       margin-bottom: 0.4rem;
-      color: var(--text, #555);
+      color: var(--text-secondary, #555);
     }
 
     /* CTA bottom */
@@ -360,63 +360,34 @@
       background: linear-gradient(135deg, #0d0d1a 0%, #111827 50%, #0a1628 100%);
     }
     [data-theme="dark"] .slot-card {
+      background: #1e1e2e;
       border-color: #333;
-      background: #1a1a2e;
+      color: #e0e0e0;
+    }
+    [data-theme="dark"] .slot-card .slot-model {
+      color: #fff;
+    }
+    [data-theme="dark"] .slot-card .slot-cat {
+      color: #aaa;
     }
     [data-theme="dark"] .slot-card .add-icon {
       background: #2a2a3e;
-      color: #666;
+      color: #888;
+    }
+    [data-theme="dark"] .slot-card .add-label {
+      color: #aaa;
     }
     [data-theme="dark"] .slot-dropdown {
-      background: #1a1a2e;
+      background: #1e1e2e;
       border-color: #333;
     }
-    [data-theme="dark"] .slot-dropdown .dd-item:hover {
-      background: #252540;
-    }
-    [data-theme="dark"] .comparison-wrapper {
-      border-color: #333;
-    }
-    [data-theme="dark"] .compare-table th,
-    [data-theme="dark"] .compare-table td:first-child {
-      background: #151528;
-    }
-    [data-theme="dark"] .compare-table td {
-      border-color: #2a2a3e;
-    }
-    [data-theme="dark"] .compare-table th {
-      border-color: #2a2a3e;
-    }
-    [data-theme="dark"] .compare-table tbody tr:nth-child(even) td:not(:first-child) {
-      background: rgba(255,255,255,0.02);
-    }
-    [data-theme="dark"] .compare-table .cell-diff {
-      background: rgba(227, 30, 36, 0.12) !important;
-    }
-    [data-theme="dark"] .action-btn {
-      background: #1a1a2e;
-      border-color: #333;
-      color: #ccc;
-    }
-    [data-theme="dark"] .compare-table td,
-    [data-theme="dark"] .compare-table th {
+    [data-theme="dark"] .slot-dropdown .dd-search {
+      background: #2a2a3e;
       color: #e0e0e0;
-      border-color: #333;
+      border-color: #444;
     }
-    [data-theme="dark"] .compare-table tr:nth-child(even) td {
-      background: rgba(255,255,255,0.04);
-    }
-    [data-theme="dark"] .compare-table .spec-label {
-      color: #ccc;
-    }
-    [data-theme="dark"] .slot-card {
-      color: #e0e0e0;
-    }
-    [data-theme="dark"] .dropdown-item {
-      color: #e0e0e0;
-    }
-    [data-theme="dark"] .dropdown-item:hover {
-      background: rgba(227,30,36,0.15);
+    [data-theme="dark"] .slot-dropdown .dd-search::placeholder {
+      color: #888;
     }
     [data-theme="dark"] .slot-dropdown .dd-item {
       color: #e0e0e0;
@@ -424,8 +395,75 @@
     [data-theme="dark"] .slot-dropdown .dd-item:hover {
       background: rgba(227,30,36,0.15);
     }
-    [data-theme="dark"] .slot-dropdown .dd-search {
+    [data-theme="dark"] .slot-dropdown .dd-item-cat,
+    [data-theme="dark"] .slot-dropdown .dd-item-price {
+      color: #aaa;
+    }
+    [data-theme="dark"] .dropdown-item {
       color: #e0e0e0;
+    }
+    [data-theme="dark"] .dropdown-item:hover {
+      background: rgba(227,30,36,0.15);
+    }
+    [data-theme="dark"] .comparison-wrapper {
+      border-color: #333;
+    }
+    [data-theme="dark"] .compare-table {
+      border-color: #333;
+    }
+    [data-theme="dark"] .compare-table th {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      border-color: #333;
+    }
+    [data-theme="dark"] .compare-table td {
+      color: #e0e0e0;
+      border-color: #333;
+      background: #121220;
+    }
+    [data-theme="dark"] .compare-table th:first-child,
+    [data-theme="dark"] .compare-table td:first-child {
+      background: #1a1a2e;
+    }
+    [data-theme="dark"] .compare-table tr:nth-child(even) td {
+      background: rgba(255,255,255,0.03);
+    }
+    [data-theme="dark"] .compare-table tbody tr:nth-child(even) td:not(:first-child) {
+      background: rgba(255,255,255,0.03);
+    }
+    [data-theme="dark"] .compare-table .cell-diff {
+      background: rgba(227, 30, 36, 0.12) !important;
+    }
+    [data-theme="dark"] .compare-table .spec-label {
+      color: #ccc;
+      background: #1a1a2e;
+    }
+    [data-theme="dark"] .compare-table .model-name {
+      color: #fff;
+    }
+    [data-theme="dark"] .compare-table .price-value {
+      color: #ff6b6b;
+    }
+    [data-theme="dark"] .action-btn {
+      color: #e0e0e0;
+      border-color: #444;
+      background: #1e1e2e;
+    }
+    [data-theme="dark"] .action-btn:hover {
+      background: #2a2a3e;
+      color: #fff;
+    }
+    [data-theme="dark"] .empty-state {
+      color: #aaa;
+    }
+    [data-theme="dark"] .empty-state h3 {
+      color: #ccc;
+    }
+    [data-theme="dark"] .pro-item {
+      color: #4ade80;
+    }
+    [data-theme="dark"] .con-item {
+      color: #f87171;
     }
     [data-theme="dark"] .stars .empty { color: #444; }
     [data-theme="dark"] .toast { background: #333; }
@@ -452,9 +490,25 @@
       <nav class="nav">
         <a href="/">Home</a>
         <a href="/posts/">All Posts</a>
-        <a href="/categories/equipment-guides/">Guides</a>
-        <a href="/categories/faqs/">FAQs</a>
-        <a href="/tools/" class="active">Tools</a>
+        <div class="nav-dropdown">
+          <a href="/categories/equipment-guides/">Guides <span class="dropdown-arrow">&#9660;</span></a>
+          <div class="nav-submenu">
+            <a href="/categories/equipment-guides/">Equipment Guides</a>
+            <a href="/categories/safety-techniques/">Safety &amp; Techniques</a>
+            <a href="/categories/professional/">Professional Development</a>
+            <a href="/categories/faqs/">FAQs</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="/tools/" class="active">Tools <span class="dropdown-arrow">&#9660;</span></a>
+          <div class="nav-submenu">
+            <a href="/tools/instrument-finder.html">Instrument Finder Quiz</a>
+            <a href="/tools/compare.html">Product Comparison</a>
+            <a href="/tools/safety-calculator.html">Safety Calculator</a>
+            <a href="/tools/knowledge-quiz.html">Knowledge Quiz</a>
+            <a href="/tools/wiring-reference.html">Wiring Reference</a>
+          </div>
+        </div>
         <a href="/contact.html">Contact</a>
         <a href="https://kinmo.com" target="_blank">Shop</a>
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
