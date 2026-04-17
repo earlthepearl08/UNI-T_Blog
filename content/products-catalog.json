@@ -1,7 +1,7 @@
 {
   "scrapedAt": "2026-04-17",
   "source": "Kinmo PW UNI-T Distributor Price List (PDF)",
-  "totalProducts": 418,
+  "totalProducts": 501,
   "categories": [
     {
       "id": "multimeters",
@@ -2092,7 +2092,7 @@
           "category": "Thermal Imagers",
           "subcategory": "EST / Body Temp Thermal",
           "description": "256x192; 30°C-45°C; 56°x42.2°; 25Hz; 2.8\" TFT; For body",
-          "image": null,
+          "image": "/images/products/uti260k.jpg",
           "keySpecs": [
             "256x192",
             "30°C-45°C",
@@ -2107,7 +2107,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
           "description": "120x90; -20°C-400°C; 50°x38°; 25Hz",
-          "image": null,
+          "image": "/images/products/uti120mobile.jpg",
           "keySpecs": [
             "120x90",
             "-20°C-400°C",
@@ -2122,7 +2122,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (iOS)",
           "description": "120x90; -20°C-400°C; 50°x38°; 25Hz",
-          "image": null,
+          "image": "/images/products/uti120ms.png",
           "keySpecs": [
             "120x90",
             "-20°C-400°C",
@@ -2137,7 +2137,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
           "description": "256x192; -20°C-200°C; 56°x42.2°; 25Hz; 3.2mm lens",
-          "image": null,
+          "image": "/images/products/uti720m.jpg",
           "keySpecs": [
             "256x192",
             "-20°C-200°C",
@@ -2152,7 +2152,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
           "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.2mm lens; EST screening mode",
-          "image": null,
+          "image": "/images/products/uti721m.jpg",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2167,7 +2167,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
           "description": "256x192; -20°C-550°C; 40°x30°; 25Hz; 4.3mm lens; Manual focus",
-          "image": null,
+          "image": "/images/products/uti722m.png",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2182,7 +2182,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
           "description": "400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus",
-          "image": null,
+          "image": "/images/products/uti740m.png",
           "keySpecs": [
             "400x300",
             "-20°C-550°C",
@@ -2197,7 +2197,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android+iOS)",
           "description": "400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus",
-          "image": null,
+          "image": "/images/products/uti740ms.png",
           "keySpecs": [
             "400x300",
             "-20°C-550°C",
@@ -2212,7 +2212,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
           "description": "120x90; -20°C-400°C; ≤25Hz; 2.4\" TFT (320x240)",
-          "image": null,
+          "image": "/images/products/uti120p.jpg",
           "keySpecs": [
             "120x90",
             "-20°C-400°C",
@@ -2226,7 +2226,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
           "description": "120x90; -20°C-400°C; 50°x38°; 25Hz; 3.5\" touch LCD",
-          "image": null,
+          "image": "/images/products/uti120t.jpg",
           "keySpecs": [
             "120x90",
             "-20°C-400°C",
@@ -2241,7 +2241,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
           "description": "256x192; -20°C-550°C; 56°x42°; 25Hz; 3.5\" touch LCD",
-          "image": null,
+          "image": "/images/products/uti720t.png",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2256,7 +2256,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "32x32; -20-1000°C; 30°x30°; 9Hz; 2.4\" LCD",
-          "image": null,
+          "image": "/images/products/uti32.png",
           "keySpecs": [
             "32x32",
             "-20-1000°C",
@@ -2286,7 +2286,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "160x120; -20-550°C; 40°x30°; 25Hz; 2.4\" TFT; 2MP digital camera",
-          "image": null,
+          "image": "/images/products/uti716s.png",
           "keySpecs": [
             "160x120",
             "-20-550°C",
@@ -2301,7 +2301,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "160x120; SR 320x240; -20-550°C; 40°x30°; 25Hz; 2.8\" TFT; 2MP camera; IP65; WiFi; Video; T-mix",
-          "image": null,
+          "image": "/images/products/uti716s.png",
           "keySpecs": [
             "160x120",
             "-20-550°C",
@@ -2317,7 +2317,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "120x90; -20°C-400°C; 50°x38°; 25Hz; 2.8\" TFT",
-          "image": null,
+          "image": "/images/products/uti120b.jpg",
           "keySpecs": [
             "120x90",
             "-20°C-400°C",
@@ -2332,7 +2332,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "256x192; -20°C-400°C; 56°x42.2°; 25Hz; 2.8\" TFT",
-          "image": null,
+          "image": "/images/products/uti720b.png",
           "keySpecs": [
             "256x192",
             "-20°C-400°C",
@@ -2362,7 +2362,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
           "description": "256x192; SR 512x384; -20°C-550°C; 56°x42°; 25Hz; 2.8\" TFT; 2MP camera; IP65; WiFi; Video; T-mix",
-          "image": null,
+          "image": "/images/products/uti720b.png",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2378,7 +2378,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Enhanced Thermal",
           "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5\" IPS; WiFi",
-          "image": null,
+          "image": "/images/products/uti720e.jpg",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2394,7 +2394,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Enhanced Thermal",
           "description": "320x240; -20°C-550°C; 56°x42°; 25Hz; 3.5\" IPS; WiFi",
-          "image": null,
+          "image": "/images/products/uti730e.jpg",
           "keySpecs": [
             "320x240",
             "-20°C-550°C",
@@ -2410,7 +2410,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5\" IPS touch; Laser ranging; 5MP camera; Video; WiFi",
-          "image": null,
+          "image": "/images/products/uti720v.png",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2426,7 +2426,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "320x240; -40°C-400°C; 56°x42°; 9Hz; 3.5\" IPS touch; Laser ranging; 5MP camera; Video; WiFi",
-          "image": null,
+          "image": "/images/products/uti730v.png",
           "keySpecs": [
             "320x240",
             "-40°C-400°C",
@@ -2490,7 +2490,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "384x288; SR 768x576; 10.5mm lens; 25°x19°; 30Hz; 4.3\" LCD touch (800x480); Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 8MP camera; WiFi; BT; Laser distance",
-          "image": null,
+          "image": "/images/products/uti384j.png",
           "keySpecs": [
             "384x288",
             "10.5mm lens",
@@ -2506,7 +2506,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "640x480; SR 1280x960; 17.7mm lens; 25°x19°; 30Hz; 4.3\" LCD touch; Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 13MP camera; WiFi; BT; Laser distance",
-          "image": null,
+          "image": "/images/products/uti640j.png",
           "keySpecs": [
             "640x480",
             "17.7mm lens",
@@ -2554,7 +2554,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "384x288; 20.3°x15.2°; 50Hz; 13.5mm lens; Manual focus; Laser pointer; Video output",
-          "image": null,
+          "image": "/images/products/utx313.jpg",
           "keySpecs": [
             "384x288",
             "20.3°x15.2°",
@@ -2569,7 +2569,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "384x288; 14.6°x11°; 50Hz; 18mm lens; Manual focus; Laser pointer; Video output",
-          "image": null,
+          "image": "/images/products/utx318.jpg",
           "keySpecs": [
             "384x288",
             "14.6°x11°",
@@ -2584,7 +2584,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "384x288; 10.5°x7.9°; 50Hz; 25mm lens; Manual focus; Laser pointer; Video output",
-          "image": null,
+          "image": "/images/products/utx325.jpg",
           "keySpecs": [
             "384x288",
             "10.5°x7.9°",
@@ -2599,7 +2599,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Photo/Video; WiFi; Multi-language",
-          "image": null,
+          "image": "/images/products/utx313m.png",
           "keySpecs": [
             "400x300",
             "20°x15°",
@@ -2615,7 +2615,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Photo/Video; WiFi; Multi-language",
-          "image": null,
+          "image": "/images/products/utx318m.png",
           "keySpecs": [
             "400x300",
             "14.6°x11°",
@@ -2631,7 +2631,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language",
-          "image": null,
+          "image": "/images/products/utx325m.png",
           "keySpecs": [
             "400x300",
             "10.5°x7.9°",
@@ -2647,7 +2647,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
-          "image": null,
+          "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
             "20°x15°",
@@ -2663,7 +2663,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
-          "image": null,
+          "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
             "14.6°x11°",
@@ -2679,7 +2679,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
-          "image": null,
+          "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
             "10.5°x7.9°",
@@ -2725,6 +2725,328 @@
       ]
     },
     {
+      "id": "laser-distance-meters",
+      "name": "Laser Distance Meters",
+      "description": "Pocket laser distance meters from 40m to 120m, with USB-C charging and laser-plus-tape combo formats.",
+      "icon": "📏",
+      "productCount": 22,
+      "products": [
+        {
+          "model": "LM50A",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "50m; LCD; m/ft/in; Front/Rear",
+          "image": null,
+          "keySpecs": [
+            "50m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM50A",
+          "regions": []
+        },
+        {
+          "model": "LM70A",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "70m; LCD; m/ft/in; Front/Rear",
+          "image": null,
+          "keySpecs": [
+            "70m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM70A",
+          "regions": []
+        },
+        {
+          "model": "LM100A",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "100m; LCD; m/ft/in; Front/Rear",
+          "image": null,
+          "keySpecs": [
+            "100m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM100A",
+          "regions": []
+        },
+        {
+          "model": "LM120A",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "120m; LCD; m/ft/in; Front/Rear",
+          "image": null,
+          "keySpecs": [
+            "120m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM120A",
+          "regions": []
+        },
+        {
+          "model": "LM40Mi",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "40m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "image": null,
+          "keySpecs": [
+            "40m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40Mi",
+          "regions": []
+        },
+        {
+          "model": "LM60Mi",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "60m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "image": null,
+          "keySpecs": [
+            "60m",
+            "LCD",
+            "m/ft/in",
+            "Front/Rear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60Mi",
+          "regions": []
+        },
+        {
+          "model": "LM40T",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "40m laser + 5m tape; 1.2\" LCD",
+          "image": null,
+          "keySpecs": [
+            "40m laser + 5m tape",
+            "1.2\" LCD"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40T",
+          "regions": []
+        },
+        {
+          "model": "LM60T",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "60m laser + 5m tape; 1.2\" LCD",
+          "image": null,
+          "keySpecs": [
+            "60m laser + 5m tape",
+            "1.2\" LCD"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60T",
+          "regions": []
+        },
+        {
+          "model": "LM40",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 40m max range, length/area/volume measurement",
+          "image": null,
+          "keySpecs": [
+            "40m range",
+            "Pocket",
+            "L/A/V"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM50",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 50m max range",
+          "image": null,
+          "keySpecs": [
+            "50m range",
+            "Pocket"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM50",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM60",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 60m max range",
+          "image": null,
+          "keySpecs": [
+            "60m range",
+            "Pocket"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM80",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "Laser distance meter, 80m max range",
+          "image": null,
+          "keySpecs": [
+            "80m range"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM80",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM100",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "Laser distance meter, 100m max range",
+          "image": null,
+          "keySpecs": [
+            "100m range"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM100",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM120",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "Laser distance meter, 120m max range",
+          "image": null,
+          "keySpecs": [
+            "120m range"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM120",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM150",
+          "category": "Laser Distance Meters",
+          "subcategory": "Laser Distance Meter",
+          "description": "Laser distance meter, 150m max range",
+          "image": null,
+          "keySpecs": [
+            "150m range"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM150",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM40-I",
+          "category": "Laser Distance Meters",
+          "subcategory": "Industrial Laser Distance Meter",
+          "description": "Industrial laser distance meter, 40m range, ±(2mm+5×10⁻⁵D) accuracy",
+          "image": null,
+          "keySpecs": [
+            "40m range",
+            "Industrial",
+            "Pythagoras"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40-I",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM50-I",
+          "category": "Laser Distance Meters",
+          "subcategory": "Industrial Laser Distance Meter",
+          "description": "Industrial laser distance meter, 50m range, ±(2mm+5×10⁻⁵D) accuracy",
+          "image": null,
+          "keySpecs": [
+            "50m range",
+            "Industrial"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM50-I",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM120-I",
+          "category": "Laser Distance Meters",
+          "subcategory": "Industrial Laser Distance Meter",
+          "description": "Industrial laser distance meter, 120m range, auto-leveling",
+          "image": null,
+          "keySpecs": [
+            "120m range",
+            "Auto-leveling"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM120-I",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM150-I",
+          "category": "Laser Distance Meters",
+          "subcategory": "Industrial Laser Distance Meter",
+          "description": "Industrial laser distance meter, 150m range, auto-leveling",
+          "image": null,
+          "keySpecs": [
+            "150m range",
+            "Auto-leveling"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM150-I",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM40e",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 40m range, 1.8'' LCD, ±2mm accuracy",
+          "image": null,
+          "keySpecs": [
+            "40m",
+            "±2mm",
+            "1.8'' LCD"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40e",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM50e",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 50m range, 1.8'' LCD, ±2mm accuracy",
+          "image": null,
+          "keySpecs": [
+            "50m",
+            "±2mm",
+            "1.8'' LCD"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM50e",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "LM60e",
+          "category": "Laser Distance Meters",
+          "subcategory": "Pocket Laser Distance Meter",
+          "description": "Pocket laser distance meter, 60m range, 1.8'' LCD, ±2mm accuracy",
+          "image": null,
+          "keySpecs": [
+            "60m",
+            "±2mm",
+            "1.8'' LCD"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60e",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
       "id": "ir-thermometers",
       "name": "Infrared Thermometers",
       "description": "Single, circle, and dual-laser non-contact infrared thermometers covering -50°C to 2200°C for industrial and HVAC use.",
@@ -2736,7 +3058,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-20°C~400°C; D:S 10:1; ε 0.95",
-          "image": null,
+          "image": "/images/products/ut300-series.jpg",
           "keySpecs": [
             "-20°C~400°C",
             "D:S 10:1",
@@ -2750,7 +3072,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~400°C; Single laser; D:S 12:1; ε 0.10-1.00",
-          "image": null,
+          "image": "/images/products/ut300-series.jpg",
           "keySpecs": [
             "-32°C~400°C",
             "Single laser",
@@ -2765,7 +3087,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-50°C~500°C; Single laser; D:S 12:1; ε 0.10-1.00",
-          "image": null,
+          "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-50°C~500°C",
             "Single laser",
@@ -2780,7 +3102,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-50°C~500°C; Circle laser; D:S 12:1; ε 0.10-1.00",
-          "image": null,
+          "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-50°C~500°C",
             "Circle laser",
@@ -2795,7 +3117,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "Mini IR Thermometer",
           "description": "-35°C~300°C; D:S 6:1; ε 0.95",
-          "image": null,
+          "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-35°C~300°C",
             "D:S 6:1",
@@ -2809,7 +3131,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~420°C; Single laser; D:S 12:1; ε 0.10-1.00",
-          "image": null,
+          "image": "/images/products/ut301-plus-series.jpg",
           "keySpecs": [
             "-32°C~420°C",
             "Single laser",
@@ -2839,7 +3161,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~600°C; Dual laser; D:S 12:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut301-plus-series.jpg",
           "keySpecs": [
             "-32°C~600°C",
             "Dual laser",
@@ -2854,7 +3176,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~700°C; Single laser; D:S 20:1; ε 0.10-1.00; Scheduled; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~700°C",
             "Single laser",
@@ -2869,7 +3191,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~1100°C; Circle laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1100°C",
             "Circle laser",
@@ -2884,7 +3206,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~1100°C; Dual laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1100°C",
             "Dual laser",
@@ -2899,7 +3221,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~800°C; Single laser; D:S 30:1; ε 0.10-1.00; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~800°C",
             "Single laser",
@@ -2914,7 +3236,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~1300°C; Circle laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1300°C",
             "Circle laser",
@@ -2929,7 +3251,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-32°C~1300°C; Dual laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled",
-          "image": null,
+          "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1300°C",
             "Dual laser",
@@ -2944,7 +3266,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-50°C~2000°C; D:S 50:1; ε 0.10-1.00; 99 storage; EBTN LCD",
-          "image": null,
+          "image": "/images/products/ut305s.jpg",
           "keySpecs": [
             "-50°C~2000°C",
             "D:S 50:1",
@@ -2959,7 +3281,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-50°C~1850°C; D:S 55:1; ε 0.10-1.00; Single laser; 999 storage",
-          "image": null,
+          "image": "/images/products/ut305-plus-series.jpg",
           "keySpecs": [
             "-50°C~1850°C",
             "D:S 55:1",
@@ -2974,7 +3296,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
           "description": "-50°C~2200°C; D:S 55:1; ε 0.10-1.00; Single laser; Class 2; 8-14μm; 999 storage",
-          "image": null,
+          "image": "/images/products/ut305-plus-series.jpg",
           "keySpecs": [
             "-50°C~2200°C",
             "D:S 55:1",
@@ -2989,7 +3311,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
           "description": "-35°C~450°C; D:S 10:1; ε 0.95; Single laser; Class 2; IP65",
-          "image": null,
+          "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~450°C",
             "D:S 10:1",
@@ -3005,7 +3327,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
           "description": "-35°C~650°C; D:S 12:1; ε 0.1-1; Dual lasers; Class 2; IP65",
-          "image": null,
+          "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~650°C",
             "D:S 12:1",
@@ -3021,7 +3343,7 @@
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
           "description": "-35°C~850°C; D:S 20:1; ε 0.1-1; Hi/Lo alarm; IP65",
-          "image": null,
+          "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~850°C",
             "D:S 20:1",
@@ -3061,7 +3383,7 @@
           "category": "Insulation Testers",
           "subcategory": "Insulation Tester",
           "description": "5GΩ; 1000V test; <2mA short; AC 30-750V; PI; DAR",
-          "image": null,
+          "image": "/images/products/ut500-series.jpg",
           "keySpecs": [
             "5GΩ",
             "1000V test",
@@ -3076,7 +3398,7 @@
           "category": "Insulation Testers",
           "subcategory": "Fast Insulation Tester",
           "description": "0-4GΩ; Low R 400Ω; AC/DC 600V; 1.0mA; <2mA short; Fast 10/s; DAR/PI; Compare; Auto-discharge",
-          "image": null,
+          "image": "/images/products/ut501e.jpg",
           "keySpecs": [
             "0-4GΩ",
             "Low R 400Ω",
@@ -3106,7 +3428,7 @@
           "category": "Insulation Testers",
           "subcategory": "Handheld HV Insulation Tester",
           "description": "1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 0-600V",
-          "image": null,
+          "image": "/images/products/ut505-series.jpg",
           "keySpecs": [
             "1000V/20GΩ",
             "1mA load",
@@ -3121,7 +3443,7 @@
           "category": "Insulation Testers",
           "subcategory": "Handheld HV Insulation Tester",
           "description": "1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 600V; Gen R 10MΩ; F 45-1kHz; C 100pF-500uF",
-          "image": null,
+          "image": "/images/products/ut505-series.jpg",
           "keySpecs": [
             "1000V/20GΩ",
             "1mA load",
@@ -3136,7 +3458,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "10GΩ; 1000V test; <2mA short; AC 600V; DC 600V; PI; DAR; storage",
-          "image": null,
+          "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "10GΩ",
             "1000V test",
@@ -3151,7 +3473,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "100GΩ; 2500V test; <1.8mA short; AC 30-750V; DC 1000V; PI; DAR; USB",
-          "image": null,
+          "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "100GΩ",
             "2500V test",
@@ -3166,7 +3488,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "250V/100GΩ; 500V/200GΩ; 1000V/400GΩ; 2500V/1TΩ; ~3.5mA short; PI; DAR; 999 storage",
-          "image": null,
+          "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "2500V/1TΩ",
             "~3.5mA short",
@@ -3181,7 +3503,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "250V/250GΩ; 500V/500GΩ; 1000V/1TΩ; 2500V/2.5TΩ; ~5mA short; C test; PI; DAR; 999 storage; 14.8V/5200mAh Li",
-          "image": null,
+          "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "1000V/1TΩ",
             "2500V/2.5TΩ",
@@ -3196,7 +3518,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "5000V/1000GΩ; DC 600V; >3mA short",
-          "image": null,
+          "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "DC 600V",
             ">3mA short"
@@ -3209,7 +3531,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "5000V/2TΩ; ~3.5mA short; PI; DAR; 999 storage; 5200mAh Li",
-          "image": null,
+          "image": "/images/products/ut513b-c.jpg",
           "keySpecs": [
             "5000V/2TΩ",
             "~3.5mA short",
@@ -3224,7 +3546,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "5000V/5TΩ; ~5mA short; C test; PI; DAR; 999 storage; Bluetooth; 14.8V/5200mAh Li",
-          "image": null,
+          "image": "/images/products/ut513b-c.jpg",
           "keySpecs": [
             "5000V/5TΩ",
             "~5mA short",
@@ -3240,7 +3562,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "0-10TΩ; 0-10000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V",
-          "image": null,
+          "image": "/images/products/ut515b.jpg",
           "keySpecs": [
             "0-10TΩ",
             "0-10000V",
@@ -3256,7 +3578,7 @@
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
           "description": "0-10TΩ; 0-12000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V",
-          "image": null,
+          "image": "/images/products/ut516b.jpg",
           "keySpecs": [
             "0-10TΩ",
             "0-12000V",
@@ -3272,7 +3594,7 @@
           "category": "Insulation Testers",
           "subcategory": "PV Insulation Tester",
           "description": "125-1000V/4GΩ; PV 500-1000V/4GΩ; DC 1000V; AC 600V; <1.5mA & <1.2mA short; Continue; Compare; Time; Stepping; Auto-discharge; HV alarm; DUT live; IP54",
-          "image": null,
+          "image": "/images/products/ut503pv.jpg",
           "keySpecs": [
             "DC 1000V",
             "AC 600V",
@@ -3506,7 +3828,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogging T/RH",
           "description": "-40°C~80°C; 0-100% RH",
-          "image": null,
+          "image": "/images/products/ut330-series.jpg",
           "keySpecs": [
             "-40°C~80°C",
             "0-100% RH"
@@ -3519,7 +3841,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogging T/RH/P",
           "description": "-40°C~80°C; 0-100% RH; 750-1100hPa",
-          "image": null,
+          "image": "/images/products/ut330-series.jpg",
           "keySpecs": [
             "-40°C~80°C",
             "0-100% RH"
@@ -3532,7 +3854,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogger",
           "description": "-30°C~70°C; 64000 storage; Alarm delay; IP65; Software",
-          "image": null,
+          "image": "/images/products/ut330t.jpg",
           "keySpecs": [
             "-30°C~70°C",
             "64000 storage",
@@ -3562,7 +3884,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogger T/RH",
           "description": "-30°C~70°C; 0-99.9% RH; 64000 storage; Auto power off; Alarm delay; Software & APP; Type-C",
-          "image": null,
+          "image": "/images/products/ut330th-thc.jpg",
           "keySpecs": [
             "-30°C~70°C",
             "0-99.9% RH",
@@ -3577,7 +3899,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
           "description": "-20-70°C ±0.5°C; Dew point; Wet bulb; Humidity; 299 storage; USB",
-          "image": null,
+          "image": "/images/products/ut331-plus.jpg",
           "keySpecs": [
             "-20-70°C ±0.5°C",
             "Dew point",
@@ -3622,7 +3944,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Mini T/RH Meter",
           "description": "-10-60°C; 0-100% RH; Overload; Auto power off",
-          "image": null,
+          "image": "/images/products/ut333.jpg",
           "keySpecs": [
             "-10-60°C",
             "0-100% RH",
@@ -3637,7 +3959,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Mini T/RH Meter",
           "description": "-10-60°C; 0-100% RH; Bluetooth; Overload; Auto power off",
-          "image": null,
+          "image": "/images/products/ut333.jpg",
           "keySpecs": [
             "-10-60°C",
             "0-100% RH",
@@ -3652,7 +3974,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
           "description": "LCD 4.5\"; -10-50°C; External probe; Humidity",
-          "image": null,
+          "image": "/images/products/a12t.jpg",
           "keySpecs": [
             "LCD 4.5\"",
             "-10-50°C",
@@ -3667,7 +3989,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
           "description": "LCD 4.5\"; -10-50°C; Humidity",
-          "image": null,
+          "image": "/images/products/a13t.jpg",
           "keySpecs": [
             "LCD 4.5\"",
             "-10-50°C",
@@ -3681,7 +4003,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Bluetooth T/RH Datalogger",
           "description": "-40°C~85°C ±0.3°C; 0-100% RH ±2.5%; 64000 storage; BT/PC; Audio+Visual alarm",
-          "image": null,
+          "image": "/images/products/a56-bt.png",
           "keySpecs": [
             "-40°C~85°C ±0.3°C",
             "0-100% RH ±2.5%",
@@ -3696,7 +4018,7 @@
           "category": "Temperature & Humidity Meters",
           "subcategory": "Bluetooth T/RH Datalogger",
           "description": "-40°C~85°C; 0-100% RH; 64000 storage; PC+BT; IP54; 3 sensor types",
-          "image": null,
+          "image": "/images/products/a57-bt.png",
           "keySpecs": [
             "-40°C~85°C",
             "0-100% RH",
@@ -3721,7 +4043,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "1m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD camera; IP67; Photo+Video; 32GB TF; 3000mAh Li",
-          "image": null,
+          "image": "/images/products/ut663b.png",
           "keySpecs": [
             "1m probe (fixed)",
             "5\" HD",
@@ -3737,7 +4059,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "2m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh",
-          "image": null,
+          "image": "/images/products/ut663b.png",
           "keySpecs": [
             "2m probe (fixed)",
             "5\" HD",
@@ -3753,7 +4075,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "3m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh",
-          "image": null,
+          "image": "/images/products/ut663b.png",
           "keySpecs": [
             "3m probe (fixed)",
             "5\" HD",
@@ -3785,7 +4107,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "1m probe (replaceable); 4.3\" HD; 300K HD camera; 70° FOV; IP67; 8 LED; 2000mAh Li; Side mirror, magnet, hook",
-          "image": null,
+          "image": "/images/products/ut665p.png",
           "keySpecs": [
             "1m probe (replaceable)",
             "4.3\" HD",
@@ -3801,7 +4123,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "5m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
-          "image": null,
+          "image": "/images/products/ut665p.png",
           "keySpecs": [
             "5m probe (replaceable)",
             "4.3\" HD",
@@ -3817,7 +4139,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "10m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
-          "image": null,
+          "image": "/images/products/ut665p.png",
           "keySpecs": [
             "4.3\" HD",
             "300K HD",
@@ -3832,7 +4154,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "1m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
-          "image": null,
+          "image": "/images/products/ut667.png",
           "keySpecs": [
             "1m probe (replaceable)",
             "4.3\" HD",
@@ -3848,7 +4170,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "5m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
-          "image": null,
+          "image": "/images/products/ut667.png",
           "keySpecs": [
             "5m probe (replaceable)",
             "4.3\" HD",
@@ -3864,7 +4186,7 @@
           "category": "Borescopes",
           "subcategory": "Borescope",
           "description": "10m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
-          "image": null,
+          "image": "/images/products/ut667.png",
           "keySpecs": [
             "4.3\" HD",
             "300K HD",
@@ -4186,7 +4508,7 @@
       "name": "Clamp Earth Ground Testers",
       "description": "Single-clamp earth resistance testers for measuring ground rod and bonding resistance without disconnecting the system.",
       "icon": "⏚",
-      "productCount": 8,
+      "productCount": 10,
       "products": [
         {
           "model": "UT273+",
@@ -4304,131 +4626,365 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT279",
           "regions": []
+        },
+        {
+          "model": "UT272A",
+          "category": "Clamp Earth Ground Testers",
+          "subcategory": "Earth Resistance Clamp Meter",
+          "description": "Earth clamp meter, 0.010–400Ω resistance, ±(1%+0.01Ω) accuracy, φ44mm jaw",
+          "image": null,
+          "keySpecs": [
+            "0.010-400Ω",
+            "φ44mm jaw",
+            "500-set memory"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT272A",
+          "officialUrl": "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT275A",
+          "category": "Clamp Earth Ground Testers",
+          "subcategory": "Earth Resistance + Current Clamp Meter",
+          "description": "Earth clamp meter with AC current, 0.010–1200Ω, 1mA–30A AC, Bluetooth, φ44mm jaw",
+          "image": null,
+          "keySpecs": [
+            "0.010-1200Ω",
+            "1mA-30A AC",
+            "Bluetooth",
+            "φ44mm"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT275A",
+          "officialUrl": "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+          "source": "instruments-uni-trend"
         }
       ]
     },
     {
-      "id": "laser-distance-meters",
-      "name": "Laser Distance Meters",
-      "description": "Pocket laser distance meters from 40m to 120m, with USB-C charging and laser-plus-tape combo formats.",
-      "icon": "📏",
-      "productCount": 8,
+      "id": "digital-oscilloscopes",
+      "name": "Digital Oscilloscopes",
+      "description": "Bench and handheld digital storage and mixed-signal oscilloscopes from 25MHz to 2GHz bandwidth.",
+      "icon": "📊",
+      "productCount": 10,
       "products": [
         {
-          "model": "LM50A",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "50m; LCD; m/ft/in; Front/Rear",
+          "model": "MSO7000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Mixed Signal Oscilloscope",
+          "description": "1GHz to 2GHz bandwidth, 4-channel mixed-signal oscilloscope with 10GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "50m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "1-2GHz BW",
+            "4 channels",
+            "10GSa/s",
+            "MSO"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM50A",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO7000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO7000X",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM70A",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "70m; LCD; m/ft/in; Front/Rear",
+          "model": "UPO7000L",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Digital Storage Oscilloscope",
+          "description": "1GHz to 2GHz bandwidth, 4-channel digital oscilloscope with 10GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "70m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "1-2GHz BW",
+            "4 channels",
+            "10GSa/s"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM70A",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO7000L",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO7000L",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM100A",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "100m; LCD; m/ft/in; Front/Rear",
+          "model": "MSO3000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Mixed Signal Oscilloscope",
+          "description": "350MHz to 500MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "100m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "350-500MHz BW",
+            "4 channels",
+            "5GSa/s",
+            "MSO"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM100A",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO3000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO3000X",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM120A",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "120m; LCD; m/ft/in; Front/Rear",
+          "model": "MSO2000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Mixed Signal Oscilloscope",
+          "description": "100MHz to 300MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "120m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "100-300MHz BW",
+            "4 channels",
+            "5GSa/s",
+            "MSO"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM120A",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO2000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO2000X",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM40Mi",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "40m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "model": "UPO1000",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Digital Storage Oscilloscope",
+          "description": "50MHz to 200MHz bandwidth, 4-channel digital oscilloscope with 2GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "40m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "50-200MHz BW",
+            "4 channels",
+            "2GSa/s"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40Mi",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1000",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1000",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM60Mi",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "60m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "model": "UPO1002",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Digital Storage Oscilloscope",
+          "description": "100MHz to 200MHz bandwidth, 2-channel digital oscilloscope with 1GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "60m",
-            "LCD",
-            "m/ft/in",
-            "Front/Rear"
+            "100-200MHz BW",
+            "2 channels",
+            "1GSa/s"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60Mi",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1002",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1002",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM40T",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "40m laser + 5m tape; 1.2\" LCD",
+          "model": "UTD2000CEX+",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Digital Storage Oscilloscope",
+          "description": "50MHz to 200MHz bandwidth, 2-channel entry-level oscilloscope with 1GSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "40m laser + 5m tape",
-            "1.2\" LCD"
+            "50-200MHz BW",
+            "2 channels",
+            "1GSa/s"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40T",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CEX%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CEX+",
+          "source": "instruments-uni-trend"
         },
         {
-          "model": "LM60T",
-          "category": "Laser Distance Meters",
-          "subcategory": "Laser Distance Meter",
-          "description": "60m laser + 5m tape; 1.2\" LCD",
+          "model": "UTD2000CL+",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Digital Storage Oscilloscope",
+          "description": "25MHz to 150MHz bandwidth, 2-channel oscilloscope with 500MSa/s sample rate",
           "image": null,
           "keySpecs": [
-            "60m laser + 5m tape",
-            "1.2\" LCD"
+            "25-150MHz BW",
+            "2 channels",
+            "500MSa/s"
           ],
-          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60T",
-          "regions": []
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CL%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CL+",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTD1000C",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Handheld Digital Oscilloscope",
+          "description": "60/100/200MHz bandwidth, 2-channel handheld digital oscilloscope",
+          "image": null,
+          "keySpecs": [
+            "60-200MHz BW",
+            "2 channels",
+            "Handheld"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000C",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000C",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTD1000L",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Handheld Digital Oscilloscope",
+          "description": "25MHz to 50MHz bandwidth, 1-2 channel handheld oscilloscope with 250MSa/s",
+          "image": null,
+          "keySpecs": [
+            "25-50MHz BW",
+            "1-2 channels",
+            "250MSa/s",
+            "Handheld"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000L",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000L",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "dc-power-supplies",
+      "name": "DC Power Supplies",
+      "description": "Linear, programmable, and high-power DC power supplies for R&D and production test.",
+      "icon": "🔋",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "UDP4303S",
+          "category": "DC Power Supplies",
+          "subcategory": "Programmable DC Power Supply",
+          "description": "4-channel programmable DC power supply, 0–32V, 0–3A per channel",
+          "image": null,
+          "keySpecs": [
+            "0-32V",
+            "0-3A",
+            "4 channels",
+            "Programmable"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP4303S",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP4303S",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP3000S",
+          "category": "DC Power Supplies",
+          "subcategory": "Programmable DC Power Supply",
+          "description": "4-channel programmable DC power supply, 0–30V, 0–5A per channel",
+          "image": null,
+          "keySpecs": [
+            "0-30V",
+            "0-5A",
+            "4 channels",
+            "Programmable"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000S",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000S",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP3000",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear DC Power Supply",
+          "description": "3-channel linear DC power supply, 30V, 5A per channel",
+          "image": null,
+          "keySpecs": [
+            "30V",
+            "5A",
+            "3 channels",
+            "Linear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP1000",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear DC Power Supply",
+          "description": "Single-channel linear DC power supply, 32V, 6A",
+          "image": null,
+          "keySpecs": [
+            "32V",
+            "6A",
+            "1 channel",
+            "Linear"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP1000",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP1000",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTP3300-II",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear DC Power Supply",
+          "description": "3-channel linear DC bench power supply, 32V, 5A per channel",
+          "image": null,
+          "keySpecs": [
+            "32V",
+            "5A",
+            "3 channels"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300-II",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300-II",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTP3300TFL-II",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear DC Power Supply",
+          "description": "Single-channel linear DC bench power supply, 30V, 5A",
+          "image": null,
+          "keySpecs": [
+            "30V",
+            "5A",
+            "1 channel"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300TFL-II",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300TFL-II",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP5000",
+          "category": "DC Power Supplies",
+          "subcategory": "High Power DC Power Supply",
+          "description": "Wide-range programmable DC power supply, 0–250V, 0–200A",
+          "image": null,
+          "keySpecs": [
+            "0-250V",
+            "0-200A",
+            "1 channel",
+            "High power"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP5000",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP5000",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP6720",
+          "category": "DC Power Supplies",
+          "subcategory": "High Power DC Power Supply",
+          "description": "Wide-range programmable DC power supply, 0–600V, 0–110A",
+          "image": null,
+          "keySpecs": [
+            "0-600V",
+            "0-110A",
+            "1 channel",
+            "High power"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6720",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6720",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP6900",
+          "category": "DC Power Supplies",
+          "subcategory": "Programmable DC Power Supply",
+          "description": "Programmable DC power supply, 0–150V, 0–25A",
+          "image": null,
+          "keySpecs": [
+            "0-150V",
+            "0-25A",
+            "1 channel"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6900",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6900",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UDP6700",
+          "category": "DC Power Supplies",
+          "subcategory": "Programmable DC Power Supply",
+          "description": "Programmable DC power supply, 0–80V, 0–30A",
+          "image": null,
+          "keySpecs": [
+            "0-80V",
+            "0-30A",
+            "1 channel"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6700",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6700",
+          "source": "instruments-uni-trend"
         }
       ]
     },
@@ -4638,6 +5194,120 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT685B%20KIT",
           "regions": []
+        }
+      ]
+    },
+    {
+      "id": "waveform-generators",
+      "name": "Waveform Generators",
+      "description": "Arbitrary waveform and function generators from 40MHz to 600MHz, 2 to 4 channels.",
+      "icon": "📊",
+      "productCount": 7,
+      "products": [
+        {
+          "model": "UTG9000T+",
+          "category": "Waveform Generators",
+          "subcategory": "Arbitrary Waveform Generator",
+          "description": "500MHz, 4-channel arbitrary waveform/function generator",
+          "image": null,
+          "keySpecs": [
+            "500MHz",
+            "4 channels",
+            "Arb waveform"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T+",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG9000T",
+          "category": "Waveform Generators",
+          "subcategory": "Arbitrary Waveform Generator",
+          "description": "600MHz, 4-channel arbitrary waveform/function generator",
+          "image": null,
+          "keySpecs": [
+            "600MHz",
+            "4 channels",
+            "Arb waveform"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG4000X",
+          "category": "Waveform Generators",
+          "subcategory": "Arbitrary Waveform Generator",
+          "description": "250MHz, 4-channel arbitrary waveform/function generator",
+          "image": null,
+          "keySpecs": [
+            "250MHz",
+            "4 channels",
+            "Arb waveform"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000X",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG4000A",
+          "category": "Waveform Generators",
+          "subcategory": "Arbitrary Waveform Generator",
+          "description": "200MHz, 2-channel arbitrary waveform/function generator",
+          "image": null,
+          "keySpecs": [
+            "200MHz",
+            "2 channels",
+            "Arb waveform"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000A",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000A",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG2000X",
+          "category": "Waveform Generators",
+          "subcategory": "Arbitrary Waveform Generator",
+          "description": "120MHz, 2-channel arbitrary waveform/function generator",
+          "image": null,
+          "keySpecs": [
+            "120MHz",
+            "2 channels",
+            "Arb waveform"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG2000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG2000X",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG900E",
+          "category": "Waveform Generators",
+          "subcategory": "Function/Arbitrary Generator",
+          "description": "60MHz, 2-channel function/arbitrary waveform generator",
+          "image": null,
+          "keySpecs": [
+            "60MHz",
+            "2 channels",
+            "Function/Arb"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG900E",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG900E",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTG1000X",
+          "category": "Waveform Generators",
+          "subcategory": "Function/Arbitrary Generator",
+          "description": "40MHz, 2-channel entry-level function/arbitrary waveform generator",
+          "image": null,
+          "keySpecs": [
+            "40MHz",
+            "2 channels",
+            "Function/Arb"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG1000X",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG1000X",
+          "source": "instruments-uni-trend"
         }
       ]
     },
@@ -4926,6 +5596,204 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT387S",
           "regions": []
+        }
+      ]
+    },
+    {
+      "id": "high-resolution-oscilloscopes",
+      "name": "High Resolution Oscilloscopes",
+      "description": "12-bit high-resolution mixed-signal and digital oscilloscopes from 70MHz to 8GHz bandwidth.",
+      "icon": "📊",
+      "productCount": 6,
+      "products": [
+        {
+          "model": "MSO8000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Mixed Signal Oscilloscope",
+          "description": "8GHz bandwidth, 4-channel high-resolution mixed-signal oscilloscope with 20GSa/s sample rate",
+          "image": null,
+          "keySpecs": [
+            "8GHz BW",
+            "4 channels",
+            "20GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO8000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO8000HD",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "MSO5000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Mixed Signal Oscilloscope",
+          "description": "350MHz to 1GHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 5GSa/s sample rate",
+          "image": null,
+          "keySpecs": [
+            "350MHz-1GHz BW",
+            "4 channels",
+            "5GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO5000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO5000HD",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "MSO3000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Mixed Signal Oscilloscope",
+          "description": "200MHz to 500MHz bandwidth, 4-channel 12-bit MSO with 2.5GSa/s sample rate",
+          "image": null,
+          "keySpecs": [
+            "200-500MHz BW",
+            "4 channels",
+            "2.5GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO3000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO3000HD",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "MSO1000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Mixed Signal Oscilloscope",
+          "description": "150MHz to 250MHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 2.5GSa/s",
+          "image": null,
+          "keySpecs": [
+            "150-250MHz BW",
+            "4 channels",
+            "2.5GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO1000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO1000HD",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UPO2000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Digital Oscilloscope",
+          "description": "70MHz to 200MHz bandwidth, 2/4 channel 12-bit oscilloscope with 2.5GSa/s sample rate",
+          "image": null,
+          "keySpecs": [
+            "70-200MHz BW",
+            "2/4 channels",
+            "2.5GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO2000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/UPO2000HD",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UPO1000HD",
+          "category": "High Resolution Oscilloscopes",
+          "subcategory": "12-bit Digital Oscilloscope",
+          "description": "80MHz to 150MHz bandwidth, 2/4 channel 12-bit digital oscilloscope with 1.25GSa/s",
+          "image": null,
+          "keySpecs": [
+            "80-150MHz BW",
+            "2/4 channels",
+            "1.25GSa/s",
+            "12-bit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1000HD",
+          "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/UPO1000HD",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "spectrum-analyzers",
+      "name": "Spectrum Analyzers",
+      "description": "Signal and spectrum analyzers from 9kHz entry-level up to 40GHz wideband.",
+      "icon": "📊",
+      "productCount": 6,
+      "products": [
+        {
+          "model": "UTS7000A",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Wideband signal/spectrum analyzer covering 2Hz to 40GHz",
+          "image": null,
+          "keySpecs": [
+            "2Hz-40GHz",
+            "Spectrum analyzer"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS7000A",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS7000A",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTS5000A",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Spectrum/signal analyzer covering 9kHz to 26.5GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-26.5GHz",
+            "Spectrum analyzer"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS5000A",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS5000A",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTS3000A",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-8.4GHz",
+            "Spectrum analyzer"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000A",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000A",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTS3000T+",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Tracking-generator spectrum analyzer covering 9kHz to 8.4GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-8.4GHz",
+            "Tracking generator"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000T%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000T+",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTS3000B",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-8.4GHz",
+            "Spectrum analyzer"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000B",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000B",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTS1000B",
+          "category": "Spectrum Analyzers",
+          "subcategory": "Signal/Spectrum Analyzer",
+          "description": "Entry-level spectrum analyzer covering 9kHz to 3.2GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-3.2GHz",
+            "Spectrum analyzer"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTS1000B",
+          "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS1000B",
+          "source": "instruments-uni-trend"
         }
       ]
     },
@@ -5855,6 +6723,148 @@
       ]
     },
     {
+      "id": "rf-signal-generators",
+      "name": "RF Signal Generators",
+      "description": "Analog and vector RF signal generators covering 9kHz up to 22GHz.",
+      "icon": "📊",
+      "productCount": 4,
+      "products": [
+        {
+          "model": "USG5000V",
+          "category": "RF Signal Generators",
+          "subcategory": "Vector RF Signal Generator",
+          "description": "Vector RF signal generator: CW 9kHz–22GHz, IQ 5MHz–6GHz",
+          "image": null,
+          "keySpecs": [
+            "CW 9kHz-22GHz",
+            "IQ 5MHz-6GHz",
+            "Vector"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=USG5000V",
+          "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG5000V",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "USG3000V",
+          "category": "RF Signal Generators",
+          "subcategory": "Vector RF Signal Generator",
+          "description": "Vector RF signal generator: CW 9kHz–6.5GHz, IQ 5MHz–6GHz",
+          "image": null,
+          "keySpecs": [
+            "CW 9kHz-6.5GHz",
+            "IQ 5MHz-6GHz",
+            "Vector"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=USG3000V",
+          "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG3000V",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "USG5000M",
+          "category": "RF Signal Generators",
+          "subcategory": "Analog RF Signal Generator",
+          "description": "Analog RF signal generator covering 9kHz to 22GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-22GHz",
+            "Analog",
+            "RF"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=USG5000M",
+          "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG5000M",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "USG3000M",
+          "category": "RF Signal Generators",
+          "subcategory": "Analog RF Signal Generator",
+          "description": "Analog RF signal generator covering 9kHz to 6.5GHz",
+          "image": null,
+          "keySpecs": [
+            "9kHz-6.5GHz",
+            "Analog",
+            "RF"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=USG3000M",
+          "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG3000M",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "bench-digital-multimeters",
+      "name": "Bench Digital Multimeters",
+      "description": "Bench-top precision digital multimeters from 3.75-digit to 6.5-digit resolution with USB/LAN/GPIB.",
+      "icon": "🔌",
+      "productCount": 4,
+      "products": [
+        {
+          "model": "UT8806E",
+          "category": "Bench Digital Multimeters",
+          "subcategory": "6.5-digit Bench DMM",
+          "description": "6½-digit bench multimeter, 10000 rdgs/s, 300kHz, 0.0035% DC accuracy with USB/LAN/RS-232C/GPIB",
+          "image": null,
+          "keySpecs": [
+            "6.5 digit",
+            "10000 rdgs/s",
+            "0.0035% DC",
+            "GPIB"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT8806E",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8806E",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT8805E",
+          "category": "Bench Digital Multimeters",
+          "subcategory": "5.5-digit Bench DMM",
+          "description": "5½-digit bench multimeter, 5000 rdgs/s, 100kHz, 0.015% DC accuracy with USB/LAN/RS232",
+          "image": null,
+          "keySpecs": [
+            "5.5 digit",
+            "5000 rdgs/s",
+            "0.015% DC",
+            "LAN"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT8805E",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8805E",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT8804E",
+          "category": "Bench Digital Multimeters",
+          "subcategory": "4.75-digit Bench DMM",
+          "description": "4⅚-digit bench multimeter, 100kHz, 0.025% DC accuracy with USB Device",
+          "image": null,
+          "keySpecs": [
+            "4.75 digit",
+            "100kHz",
+            "0.025% DC",
+            "USB"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT8804E",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8804E",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT8803E",
+          "category": "Bench Digital Multimeters",
+          "subcategory": "3.75-digit Bench DMM",
+          "description": "3⅚-digit entry bench multimeter, 100kHz, 0.3% DC accuracy with USB Device",
+          "image": null,
+          "keySpecs": [
+            "3.75 digit",
+            "100kHz",
+            "0.3% DC",
+            "USB"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT8803E",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8803E",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
       "id": "angle-meters",
       "name": "Angle Meters",
       "description": "Digital protractors and angle meters with magnetic mounting and laser-line projection for machining and layout.",
@@ -6217,6 +7227,224 @@
       ]
     },
     {
+      "id": "dc-electronic-loads",
+      "name": "DC Electronic Loads",
+      "description": "Programmable DC electronic loads from 150W to 3000W for power supply and battery testing.",
+      "icon": "🔋",
+      "productCount": 3,
+      "products": [
+        {
+          "model": "UTL8500X+",
+          "category": "DC Electronic Loads",
+          "subcategory": "Programmable DC Electronic Load",
+          "description": "Programmable DC electronic load, 200W–3000W, 500V/240A",
+          "image": null,
+          "keySpecs": [
+            "200-3000W",
+            "500V",
+            "240A"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8500X%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8500X+",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTL8500+",
+          "category": "DC Electronic Loads",
+          "subcategory": "Programmable DC Electronic Load",
+          "description": "Programmable DC electronic load, 150W/300W, 150V/30A",
+          "image": null,
+          "keySpecs": [
+            "150-300W",
+            "150V",
+            "30A"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8500%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8500+",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTL8200+",
+          "category": "DC Electronic Loads",
+          "subcategory": "Programmable DC Electronic Load",
+          "description": "Programmable DC electronic load, 400W, 150V/20A or 40A",
+          "image": null,
+          "keySpecs": [
+            "400W",
+            "150V",
+            "20-40A"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8200%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8200+",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "bench-lcr-meters",
+      "name": "Bench LCR Meters",
+      "description": "Bench-top LCR meters for precision component characterization up to 300kHz.",
+      "icon": "⚙️",
+      "productCount": 3,
+      "products": [
+        {
+          "model": "UTR2830",
+          "category": "Bench LCR Meters",
+          "subcategory": "Precision LCR Meter",
+          "description": "Precision LCR meter, 300kHz max, 0.05% accuracy, 6-digit display, 80 rdgs/s with DCR",
+          "image": null,
+          "keySpecs": [
+            "300kHz",
+            "0.05% acc",
+            "6-digit",
+            "DCR"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTR2830",
+          "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UTR2830",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT622",
+          "category": "Bench LCR Meters",
+          "subcategory": "LCR Meter",
+          "description": "Bench LCR meter, 100kHz max, 0.1% accuracy, 5-digit display, 20 rdgs/s",
+          "image": null,
+          "keySpecs": [
+            "100kHz",
+            "0.1% acc",
+            "5-digit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT622",
+          "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UT622",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTR2810+",
+          "category": "Bench LCR Meters",
+          "subcategory": "LCR Meter",
+          "description": "Bench LCR meter, 10kHz max, 0.1% accuracy, 6-digit display, 23 rdgs/s",
+          "image": null,
+          "keySpecs": [
+            "10kHz",
+            "0.1% acc",
+            "6-digit"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTR2810%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UTR2810+",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "bench-power-meters",
+      "name": "Bench Power Meters",
+      "description": "Bench-top digital power analyzers for AC/DC power, harmonics, and efficiency measurement.",
+      "icon": "📊",
+      "productCount": 3,
+      "products": [
+        {
+          "model": "UTE323",
+          "category": "Bench Power Meters",
+          "subcategory": "Digital Power Meter",
+          "description": "Bench power analyzer: 75mV–600V, 2.5mA–20A, DC to 300kHz, ±0.1% rdg accuracy",
+          "image": null,
+          "keySpecs": [
+            "75mV-600V",
+            "2.5mA-20A",
+            "DC-300kHz",
+            "5'' TFT"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTE323",
+          "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE323",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTE300",
+          "category": "Bench Power Meters",
+          "subcategory": "Digital Power Meter",
+          "description": "Bench power analyzer: 75mV–1000V, 25µA–50A, DC to 300kHz, ±0.1% rdg accuracy",
+          "image": null,
+          "keySpecs": [
+            "75mV-1000V",
+            "25µA-50A",
+            "DC-300kHz"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTE300",
+          "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE300",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UTE9800+",
+          "category": "Bench Power Meters",
+          "subcategory": "Digital Power Meter",
+          "description": "Bench power meter: 0.5V–600V, 0.05mA–20A, 40Hz–400Hz",
+          "image": null,
+          "keySpecs": [
+            "0.5V-600V",
+            "0.05mA-20A",
+            "40-400Hz"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTE9800%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE9800+",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "hipot-testers",
+      "name": "Hipot Testers",
+      "description": "AC/DC withstand voltage hipot testers up to 12kV for electrical safety verification.",
+      "icon": "🛡️",
+      "productCount": 3,
+      "products": [
+        {
+          "model": "UT5470",
+          "category": "Hipot Testers",
+          "subcategory": "AC/DC Hipot Tester",
+          "description": "AC/DC hipot tester: AC 0.05–10kV, DC 0.05–12kV, 5'' touchscreen",
+          "image": null,
+          "keySpecs": [
+            "AC 10kV",
+            "DC 12kV",
+            "5'' touch"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5470",
+          "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5470",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT5320R-SxA",
+          "category": "Hipot Testers",
+          "subcategory": "AC/DC Hipot Tester",
+          "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV, 4.3'' display",
+          "image": null,
+          "keySpecs": [
+            "AC 5kV",
+            "DC 6kV",
+            "4.3'' display"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5320R-SxA",
+          "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5320R-SxA",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT5300+",
+          "category": "Hipot Testers",
+          "subcategory": "AC/DC Hipot Tester",
+          "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV",
+          "image": null,
+          "keySpecs": [
+            "AC 5kV",
+            "DC 6kV",
+            "Bench"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5300%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5300+",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
       "id": "3-phase-power-analyzers",
       "name": "3-Phase Power Analyzers",
       "description": "3-phase clamp volt-ammeters measuring active, reactive, and apparent power, power factor, and phase angle.",
@@ -6447,6 +7675,44 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT225B",
           "regions": []
+        }
+      ]
+    },
+    {
+      "id": "bench-micro-ohm-meters",
+      "name": "Bench Micro Ohm Meters",
+      "description": "Bench micro-ohm and low-resistance meters with multi-channel scanning options.",
+      "icon": "⚡",
+      "productCount": 2,
+      "products": [
+        {
+          "model": "UT3515-Sx",
+          "category": "Bench Micro Ohm Meters",
+          "subcategory": "Multi-Channel Micro Ohm Meter",
+          "description": "Multi-channel micro ohm meter, scan mode 1µΩ–200kΩ, 230ms/10CH",
+          "image": null,
+          "keySpecs": [
+            "1µΩ-200kΩ",
+            "10 channels",
+            "230ms scan"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT3515-Sx",
+          "officialUrl": "https://instruments.uni-trend.com/products/micro-ohm-meters/UT3515-Sx",
+          "source": "instruments-uni-trend"
+        },
+        {
+          "model": "UT3510+",
+          "category": "Bench Micro Ohm Meters",
+          "subcategory": "Micro Ohm Meter",
+          "description": "Bench micro ohm meter, 1µΩ–20kΩ/2MΩ, 100 rdgs/s",
+          "image": null,
+          "keySpecs": [
+            "1µΩ-20kΩ",
+            "100 rdgs/s"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT3510%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/micro-ohm-meters/UT3510+",
+          "source": "instruments-uni-trend"
         }
       ]
     },
@@ -6704,6 +7970,152 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT673PV",
           "regions": []
+        }
+      ]
+    },
+    {
+      "id": "ac-power-sources",
+      "name": "AC Power Sources",
+      "description": "Programmable AC power sources for compliance testing and AC product validation.",
+      "icon": "🔋",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UAP500A-1000A",
+          "category": "AC Power Sources",
+          "subcategory": "Programmable AC Source",
+          "description": "Programmable AC power source, 1000VA, dual range L:150V/4.2A H:300V/8.4A",
+          "image": null,
+          "keySpecs": [
+            "1000VA",
+            "150V/300V",
+            "4.2A/8.4A",
+            "Programmable"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UAP500A%2F1000A",
+          "officialUrl": "https://instruments.uni-trend.com/products/ac-power-sources/UAP500A-1000A",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "bench-battery-testers",
+      "name": "Bench Battery Testers",
+      "description": "Bench battery internal resistance and voltage testers for production and QA lines.",
+      "icon": "🔋",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UT3560",
+          "category": "Bench Battery Testers",
+          "subcategory": "Battery Internal Resistance Tester",
+          "description": "Bench battery tester: 0.01mV–400V, 0.1µΩ–3.2kΩ, 0.01% V / 0.5% R accuracy",
+          "image": null,
+          "keySpecs": [
+            "0.01mV-400V",
+            "0.1µΩ-3.2kΩ",
+            "Half 2U"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT3560",
+          "officialUrl": "https://instruments.uni-trend.com/products/battery-testers/UT3560",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "electrical-safety-analyzers",
+      "name": "Electrical Safety Analyzers",
+      "description": "All-in-one electrical safety analyzers combining hipot, insulation, and ground-bond testing.",
+      "icon": "🛡️",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UT5400",
+          "category": "Electrical Safety Analyzers",
+          "subcategory": "Multi-Function Safety Analyzer",
+          "description": "All-in-one safety analyzer: ACW 5kV/100mA, DCW 6kV/10mA, IR to 50GΩ, GB 40A, 5'' touchscreen",
+          "image": null,
+          "keySpecs": [
+            "ACW 5kV",
+            "DCW 6kV",
+            "IR 50GΩ",
+            "GB 40A"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5400",
+          "officialUrl": "https://instruments.uni-trend.com/products/electrical-safety-analyzers/UT5400",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "bench-insulation-resistance-testers",
+      "name": "Bench Insulation Resistance Testers",
+      "description": "Programmable bench insulation resistance testers up to 1000V DC and 10TΩ.",
+      "icon": "🛡️",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UT5583",
+          "category": "Bench Insulation Resistance Testers",
+          "subcategory": "Programmable Insulation Tester",
+          "description": "Bench insulation resistance tester: 1V–1000V DC, 10kΩ–10TΩ, 4.3'' TFT LCD",
+          "image": null,
+          "keySpecs": [
+            "1V-1000V DC",
+            "10kΩ-10TΩ",
+            "4.3'' TFT"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5583",
+          "officialUrl": "https://instruments.uni-trend.com/products/insulation-resistance-testers/UT5583",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "ground-bond-testers",
+      "name": "Ground Bond Testers",
+      "description": "AC ground bond testers using the 4-terminal method for safety compliance verification.",
+      "icon": "🛡️",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UT5140",
+          "category": "Ground Bond Testers",
+          "subcategory": "AC Ground Bond Tester",
+          "description": "Ground bond tester: 1–40A test current, 0–600mΩ resistance, 4-terminal method, 4.3'' TFT",
+          "image": null,
+          "keySpecs": [
+            "1-40A",
+            "0-600mΩ",
+            "4-terminal"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT5140",
+          "officialUrl": "https://instruments.uni-trend.com/products/ground-bond-testers/UT5140",
+          "source": "instruments-uni-trend"
+        }
+      ]
+    },
+    {
+      "id": "multi-channel-temperature-loggers",
+      "name": "Multi-Channel Temperature Loggers",
+      "description": "Multi-channel bench temperature data loggers with up to 48 channels for thermal characterization.",
+      "icon": "🌡️",
+      "productCount": 1,
+      "products": [
+        {
+          "model": "UT3200+",
+          "category": "Multi-Channel Temperature Loggers",
+          "subcategory": "Temperature Data Logger",
+          "description": "Multi-channel temperature logger, up to 48 channels, 10 rdgs/s scan rate",
+          "image": null,
+          "keySpecs": [
+            "8-48 channels",
+            "10 rdgs/s",
+            "Bench"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT3200%2B",
+          "officialUrl": "https://instruments.uni-trend.com/products/multi-channel-temperature-loggers/UT3200+",
+          "source": "instruments-uni-trend"
         }
       ]
     }
