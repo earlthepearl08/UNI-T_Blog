@@ -2102,6 +2102,14 @@ p {
   justify-content: center;
   background: rgba(227, 30, 36, 0.08);
   border-radius: 12px;
+  color: #E31E24;
+}
+
+.tool-card-icon svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  stroke: currentColor;
 }
 
 .tool-card-content h3 {
@@ -2515,8 +2523,39 @@ p {
 .drawer-nav a .drawer-icon {
   font-size: 1.1rem;
   width: 22px;
+  height: 22px;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.85;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.drawer-nav a .drawer-icon svg {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  stroke: currentColor;
+}
+
+.drawer-footer-item .dfi-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.85);
+}
+
+.drawer-footer-item .dfi-icon svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  stroke: currentColor;
 }
 
 .drawer-nav a.sub-link {
@@ -2666,7 +2705,9 @@ body.drawer-open {
 }
 
 .catalog-promo-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background: rgba(255,255,255,0.2);
   padding: 0.35rem 0.85rem;
   border-radius: 20px;

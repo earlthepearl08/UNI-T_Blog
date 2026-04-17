@@ -15,7 +15,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; F 100kHz; VFD 600V",
-          "image": null,
+          "image": "/images/products/ut15b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
             "AC/DC 10A",
@@ -30,7 +30,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C",
-          "image": null,
+          "image": "/images/products/ut17b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
             "AC/DC 10A",
@@ -45,7 +45,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C; 12V LED test",
-          "image": null,
+          "image": "/images/products/ut18b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
             "AC/DC 10A",
@@ -90,7 +90,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
           "description": "AC/DC 1000V; 10A; R 40MΩ; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell",
-          "image": null,
+          "image": "/images/products/ut105-plus.png",
           "keySpecs": [
             "AC/DC 1000V",
             "10A",
@@ -105,7 +105,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
           "description": "AC/DC 1000V; 10A; R 60MΩ; C 10mF; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell; 12V battery test",
-          "image": null,
+          "image": "/images/products/ut107-plus.png",
           "keySpecs": [
             "AC/DC 1000V",
             "10A",
@@ -120,7 +120,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
           "description": "AC/DC 600V; R 40MΩ; F 100kHz; Temp -55°C~500°C",
-          "image": null,
+          "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
             "40MΩ",
@@ -135,7 +135,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
           "description": "AC/DC 600V; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C",
-          "image": null,
+          "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
             "40MΩ",
@@ -150,7 +150,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
           "description": "AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C",
-          "image": null,
+          "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC/DC 400mA",
@@ -180,7 +180,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
           "description": "AC/DC 600V; R 10MΩ; Dual display; NCV; LIVE; CAT III 600V",
-          "image": null,
+          "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
             "10MΩ",
@@ -196,7 +196,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
           "description": "AC/DC 600V; R 60MΩ; C 60mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V",
-          "image": null,
+          "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
             "60MΩ",
@@ -212,7 +212,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
           "description": "AC/DC 600V; R 60MΩ; C 99mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V",
-          "image": null,
+          "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
             "60MΩ",
@@ -228,7 +228,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Residential DMM",
           "description": "AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV",
-          "image": null,
+          "image": "/images/products/ut123t.png",
           "keySpecs": [
             "AC/DC 600V",
             "20MΩ",
@@ -244,7 +244,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Residential DMM",
           "description": "AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV",
-          "image": null,
+          "image": "/images/products/ut123t.png",
           "keySpecs": [
             "AC/DC 600V",
             "20MΩ",
@@ -275,7 +275,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Bluetooth DMM",
           "description": "AC/DC 600V; AC/DC 10A; F 50kHz; R 40MΩ; C 1000uF; LoZ; LPF; Diode; NCV; 60K count; True RMS; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut117c.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC/DC 10A",
@@ -291,7 +291,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pen DMM",
           "description": "DC/AC 300V; R 3MΩ; C 300uF; EF; Diode; Continuity buzzer",
-          "image": null,
+          "image": "/images/products/ut118b.png",
           "keySpecs": [
             "DC/AC 300V",
             "3MΩ",
@@ -306,7 +306,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pen DMM",
           "description": "AC/DC 600V; R 60MΩ; C 60mF; F 999.9kHz; 6000 count; Duty cycle; NCV/Live; True RMS; Diode/Continuity",
-          "image": null,
+          "image": "/images/products/ut118c.png",
           "keySpecs": [
             "AC/DC 600V",
             "60MΩ",
@@ -322,7 +322,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 600V; AC/DC 10A; R 200MΩ; C; Auto range",
-          "image": null,
+          "image": "/images/products/ut33a-plus.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC/DC 10A",
@@ -337,7 +337,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 600V; DC 10A; R 20MΩ; Manual",
-          "image": null,
+          "image": "/images/products/ut33b-plus.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC 10A",
@@ -352,7 +352,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 600V; DC 10A; R 200MΩ; Temp 1000°C; Manual",
-          "image": null,
+          "image": "/images/products/ut33c-plus.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC 10A",
@@ -367,7 +367,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 600V; DC 10A; R 200MΩ; NCV; Manual",
-          "image": null,
+          "image": "/images/products/ut33d-plus.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC 10A",
@@ -382,7 +382,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 250V; AC/DC 10A; R 200MΩ; C; Auto",
-          "image": null,
+          "image": "/images/products/ut131a.png",
           "keySpecs": [
             "AC/DC 250V",
             "AC/DC 10A",
@@ -397,7 +397,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 250V; DC 10A; R 20MΩ; Manual",
-          "image": null,
+          "image": "/images/products/ut131b.png",
           "keySpecs": [
             "AC/DC 250V",
             "DC 10A",
@@ -412,7 +412,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 250V; DC 10A; R 200MΩ; Temp 1000°C; Manual",
-          "image": null,
+          "image": "/images/products/ut131c.png",
           "keySpecs": [
             "AC/DC 250V",
             "DC 10A",
@@ -427,7 +427,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
           "description": "AC/DC 250V; DC 10A; R 200MΩ; NCV; Manual",
-          "image": null,
+          "image": "/images/products/ut131d.png",
           "keySpecs": [
             "AC/DC 250V",
             "DC 10A",
@@ -442,7 +442,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 60MΩ; C 9.999mF; F 10Hz~1MHz; Temp -40°C~1000°C; Auto",
-          "image": null,
+          "image": "/images/products/ut133a.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -457,7 +457,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 600V; DC 10A; R 60MΩ; C 9.999mF; Manual",
-          "image": null,
+          "image": "/images/products/ut133b.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC 10A",
@@ -472,7 +472,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Auto",
-          "image": null,
+          "image": "/images/products/ut136b-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -487,7 +487,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Temp 1000°C; Manual",
-          "image": null,
+          "image": "/images/products/ut136c-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -502,7 +502,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C",
-          "image": null,
+          "image": "/images/products/ut39c.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -517,7 +517,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V/750V; DC/AC 10A; R 200MΩ; C 10mF; Manual",
-          "image": null,
+          "image": "/images/products/ut39a-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -532,7 +532,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V/750V; DC/AC 10A; R 40MΩ; C 10mF; F 1MHz; Temp 1000°C; Manual",
-          "image": null,
+          "image": "/images/products/ut39c-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -547,7 +547,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 2000uF; F 2MHz; Temp 1000°C; Manual",
-          "image": null,
+          "image": "/images/products/ut39e-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -562,7 +562,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 20MΩ; Auto",
-          "image": null,
+          "image": "/images/products/ut139a.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -577,7 +577,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 40MΩ; C 100mF; F 10MHz; Auto",
-          "image": null,
+          "image": "/images/products/ut139b.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -607,7 +607,7 @@
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut139s.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -682,7 +682,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF",
-          "image": null,
+          "image": "/images/products/ut58a.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -697,7 +697,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF; Temp -40°C~1000°C",
-          "image": null,
+          "image": "/images/products/ut58b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -712,7 +712,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 100uF; F 20kHz; Temp -40°C~1000°C",
-          "image": null,
+          "image": "/images/products/ut58c.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -727,7 +727,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 20MΩ; C 100uF",
-          "image": null,
+          "image": "/images/products/ut58d.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -742,7 +742,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C",
-          "image": null,
+          "image": "/images/products/ut58e.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -757,7 +757,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 200MΩ; C 100uF",
-          "image": null,
+          "image": "/images/products/ut151a.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -772,7 +772,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 600V; DC/AC 10A; R 20MΩ; C 20uF; Temp -40°C~1000°C",
-          "image": null,
+          "image": "/images/products/ut151c.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 10A",
@@ -787,7 +787,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut60s.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -802,7 +802,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut60eu.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -817,7 +817,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut60bt.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -878,7 +878,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Auto",
-          "image": null,
+          "image": "/images/products/ut161b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -893,7 +893,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; Temp -40°C~1000°C; Auto",
-          "image": null,
+          "image": "/images/products/ut161d.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -908,7 +908,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 220MΩ; C 220mF; F 220MHz",
-          "image": null,
+          "image": "/images/products/ut161e.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -923,7 +923,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; 20K count",
-          "image": null,
+          "image": "/images/products/ut71a.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -938,7 +938,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 20K count",
-          "image": null,
+          "image": "/images/products/ut71b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -953,7 +953,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 40K count",
-          "image": null,
+          "image": "/images/products/ut71c.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -968,7 +968,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 9999 storage; 40K count",
-          "image": null,
+          "image": "/images/products/ut71d.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -998,7 +998,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Industrial True RMS DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut171b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -1014,7 +1014,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Industrial True RMS DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut171c.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -1046,7 +1046,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Professional DMM",
           "description": "DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz",
-          "image": null,
+          "image": "/images/products/ut191e.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 20A",
@@ -1061,7 +1061,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Professional DMM",
           "description": "DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut191t.png",
           "keySpecs": [
             "DC/AC 600V",
             "DC/AC 20A",
@@ -1076,7 +1076,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pro-Line DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; True RMS",
-          "image": null,
+          "image": "/images/products/ut195e.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -1092,7 +1092,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pro-Line DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut195m.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -1124,7 +1124,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Solar DMM",
           "description": "DC/AC 1700V/1500V; R 60MΩ; C 60mF; True RMS",
-          "image": null,
+          "image": "/images/products/ut196.png",
           "keySpecs": [
             "DC/AC 1700V",
             "60MΩ",
@@ -1139,7 +1139,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Industrial DMM",
           "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 60K count; 5m drop; IP67; Bluetooth; 12kV pulse protection; CAT IV 1000V & CAT III 1500V",
-          "image": null,
+          "image": "/images/products/ut197.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -1155,7 +1155,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Solar Pro DMM",
           "description": "DC/AC 2500V/1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 5m drop; IP67; Bluetooth; CAT IV 1000V & CAT III 1500V",
-          "image": null,
+          "image": "/images/products/ut197pv.png",
           "keySpecs": [
             "DC/AC 2500V",
             "DC/AC 10A",
@@ -1171,7 +1171,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut89x.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -1201,7 +1201,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
           "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 200mF; F 60MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut89xe.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -1246,7 +1246,7 @@
           "category": "Digital Multimeters",
           "subcategory": "2000V DMM",
           "description": "DC/AC 2000V; VFC 600V; R 60MΩ; C 60mF; F 10Hz~10kHz",
-          "image": null,
+          "image": "/images/products/ut892.png",
           "keySpecs": [
             "DC/AC 2000V",
             "VFC 600V",
@@ -1261,7 +1261,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Insulation R Multimeter",
           "description": "AC/DC 1000V; AC/DC 600mA; R; C; F; Temp; Insulation 1000V/2GΩ",
-          "image": null,
+          "image": "/images/products/ut533.png",
           "keySpecs": [
             "AC/DC 1000V",
             "AC/DC 600mA",
@@ -1285,7 +1285,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 200A; AC/DC 600V; R 20kΩ",
-          "image": null,
+          "image": "/images/products/ut200a.png",
           "keySpecs": [
             "AC 200A",
             "AC/DC 600V",
@@ -1299,7 +1299,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 400A; AC/DC 600V; R 3MΩ",
-          "image": null,
+          "image": "/images/products/ut200a-plus.png",
           "keySpecs": [
             "AC 400A",
             "AC/DC 600V",
@@ -1313,7 +1313,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 600A; AC/DC 600V; R 3MΩ; C",
-          "image": null,
+          "image": "/images/products/ut200a-plus.png",
           "keySpecs": [
             "AC 600A",
             "AC/DC 600V",
@@ -1328,7 +1328,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 400A; AC/DC 600V; R 40MΩ",
-          "image": null,
+          "image": "/images/products/ut201-plus.png",
           "keySpecs": [
             "AC 400A",
             "AC/DC 600V",
@@ -1342,7 +1342,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 400A; AC/DC 600V; R 40MΩ",
-          "image": null,
+          "image": "/images/products/ut201r.png",
           "keySpecs": [
             "AC 400A",
             "AC/DC 600V",
@@ -1356,7 +1356,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut202-plus.png",
           "keySpecs": [
             "AC 400A",
             "AC/DC 600V",
@@ -1386,7 +1386,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz",
-          "image": null,
+          "image": "/images/products/ut202f.png",
           "keySpecs": [
             "AC 600A",
             "AC/DC 600V",
@@ -1401,7 +1401,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut202r.png",
           "keySpecs": [
             "AC 400A",
             "AC/DC 600V",
@@ -1462,7 +1462,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 400A; AC/DC 600V; R 40MΩ; C 40mF; F 10MHz",
-          "image": null,
+          "image": "/images/products/ut203r.png",
           "keySpecs": [
             "DC/AC 400A",
             "AC/DC 600V",
@@ -1507,7 +1507,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "AC 1000A; AC/DC 600V; R 40MΩ; C; F",
-          "image": null,
+          "image": "/images/products/ut206.png",
           "keySpecs": [
             "AC 1000A",
             "AC/DC 600V",
@@ -1522,7 +1522,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 42mm jaw",
-          "image": null,
+          "image": "/images/products/ut205a-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 1000A",
@@ -1537,7 +1537,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 55mm jaw",
-          "image": null,
+          "image": "/images/products/ut205b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 1000A",
@@ -1552,7 +1552,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz",
-          "image": null,
+          "image": "/images/products/ut205e.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 1000A",
@@ -1582,7 +1582,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut206b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 1000A",
@@ -1597,7 +1597,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz",
-          "image": null,
+          "image": "/images/products/ut207b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 1000A",
@@ -1612,7 +1612,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut208b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 1000A",
@@ -1627,7 +1627,7 @@
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
           "description": "AC 200A",
-          "image": null,
+          "image": "/images/products/ut210a.png",
           "keySpecs": [
             "AC 200A"
           ],
@@ -1639,7 +1639,7 @@
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
           "description": "AC 200A; NCV; MAX/MIN",
-          "image": null,
+          "image": "/images/products/ut210b.png",
           "keySpecs": [
             "AC 200A",
             "NCV",
@@ -1653,7 +1653,7 @@
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
           "description": "AC/DC 600V; AC 200A; R 20MΩ; C 20mF; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut210c.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC 200A",
@@ -1668,7 +1668,7 @@
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
           "description": "AC/DC 600V; DC/AC 200A; R 20MΩ; C 20mF; F 60kHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut210d.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC/AC 200A",
@@ -1698,7 +1698,7 @@
           "category": "Clamp Meters",
           "subcategory": "High-Precision Clamp",
           "description": "AC/DC 600V; DC/AC 60A; R 60MΩ; C 62mF",
-          "image": null,
+          "image": "/images/products/ut211b.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC/AC 60A",
@@ -1713,7 +1713,7 @@
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
           "description": "AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz",
-          "image": null,
+          "image": "/images/products/ut213a.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC 400A",
@@ -1728,7 +1728,7 @@
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
           "description": "AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut213b.png",
           "keySpecs": [
             "AC/DC 600V",
             "AC 400A",
@@ -1744,7 +1744,7 @@
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
           "description": "AC/DC 600V; DC/AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut213c.png",
           "keySpecs": [
             "AC/DC 600V",
             "DC/AC 400A",
@@ -1760,7 +1760,7 @@
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
           "description": "DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF",
-          "image": null,
+          "image": "/images/products/ut216a.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 600A",
@@ -1775,7 +1775,7 @@
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
           "description": "DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF; F 1MHz; True RMS",
-          "image": null,
+          "image": "/images/products/ut216b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 600A",
@@ -1806,7 +1806,7 @@
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
           "description": "DC/AC 1000V/750V; DC/AC 600A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; OLED; True RMS",
-          "image": null,
+          "image": "/images/products/ut216d.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 600A",
@@ -1822,7 +1822,7 @@
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
           "description": "DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 10MHz; IP54; True RMS",
-          "image": null,
+          "image": "/images/products/ut219e.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 600A",
@@ -1838,7 +1838,7 @@
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
           "description": "DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS",
-          "image": null,
+          "image": "/images/products/ut219m.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 600A",
@@ -1854,7 +1854,7 @@
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
           "description": "DC/AC 1000V; DC/AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS",
-          "image": null,
+          "image": "/images/products/ut219ds.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 600A",
@@ -1870,7 +1870,7 @@
           "category": "Clamp Meters",
           "subcategory": "Power & Harmonics Clamp",
           "description": "AC 1000A; AC 1000V; F 15Hz~1000Hz; 1Ph 1000kW; 3Ph 3W 1732kW; 3Ph 4W 3000kW; 9999 count; 999 storage; USB",
-          "image": null,
+          "image": "/images/products/ut219p.png",
           "keySpecs": [
             "AC 1000A",
             "AC 1000V",
@@ -1885,7 +1885,7 @@
           "category": "Clamp Meters",
           "subcategory": "Pro AC/DC Clamp",
           "description": "AC/DC 999.9A; AC 999.9V/1500V; DC 999.9V/2500V; ACV LPF; 30/300/3000A flex; 999.9 kVA/2500 kVA DC; F 5-999.9Hz; R 999.9Ω/9.999kΩ/99.99kΩ; C 100uF/1000uF; Temp -40°C~400°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut219pv.png",
           "keySpecs": [
             "AC/DC 999.9A",
             "AC 999.9V",
@@ -1901,7 +1901,7 @@
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
           "description": "DC/AC 1000V/750V; AC 2000A; R 20MΩ",
-          "image": null,
+          "image": "/images/products/ut220.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 2000A",
@@ -1915,7 +1915,7 @@
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
           "description": "DC/AC 1000V/750V; DC/AC 2000A; R 66MΩ; F 20MHz",
-          "image": null,
+          "image": "/images/products/ut221.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 2000A",
@@ -1930,7 +1930,7 @@
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
           "description": "DC/AC 1000V; DC/AC 2500A; R 60MΩ; C 60mF; F 60MHz; Temp 1000°C; True RMS",
-          "image": null,
+          "image": "/images/products/ut222.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 2500A",
@@ -1961,7 +1961,7 @@
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
           "description": "DC/AC 60A; NCV; True RMS",
-          "image": null,
+          "image": "/images/products/ut256.png",
           "keySpecs": [
             "DC/AC 60A",
             "NCV",
@@ -1975,7 +1975,7 @@
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
           "description": "DC/AC 1000V; AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS",
-          "image": null,
+          "image": "/images/products/ut256a.png",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 200A",
@@ -1991,7 +1991,7 @@
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
           "description": "DC/AC 1000V/750V; DC/AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS",
-          "image": null,
+          "image": "/images/products/ut256b.png",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 200A",
@@ -2007,7 +2007,7 @@
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
           "description": "0-60A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage",
-          "image": null,
+          "image": "/images/products/ut251a.png",
           "keySpecs": [
             "0-60A leakage",
             "0-600V",
@@ -2022,7 +2022,7 @@
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
           "description": "0-600A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage",
-          "image": null,
+          "image": "/images/products/ut251c.png",
           "keySpecs": [
             "0-600A leakage",
             "0-600V",
@@ -2037,7 +2037,7 @@
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
           "description": "3mA-60A leakage; Harmonic 20; F 5Hz-5kHz; 3000 count; 40mm jaw; Bluetooth; CAT III 600V",
-          "image": null,
+          "image": "/images/products/ut251c-plus.png",
           "keySpecs": [
             "3mA-60A leakage",
             "Harmonic 20",
@@ -2053,7 +2053,7 @@
           "category": "Clamp Meters",
           "subcategory": "Large Jaws Leakage Clamp",
           "description": "0-1200A; 0-600V; 50/60Hz; 80x80mm jaw; Auto; RS232; 200 storage",
-          "image": null,
+          "image": "/images/products/ut253a.png",
           "keySpecs": [
             "0-1200A",
             "0-600V",
@@ -2068,7 +2068,7 @@
           "category": "Clamp Meters",
           "subcategory": "AC/DC Leakage Clamp",
           "description": "60A; 0-600V; 50/60Hz; 7mm jaw; Auto; RS232; 99 storage",
-          "image": null,
+          "image": "/images/products/ut258a.png",
           "keySpecs": [
             "60A",
             "0-600V",

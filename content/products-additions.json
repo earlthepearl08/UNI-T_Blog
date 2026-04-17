@@ -1,0 +1,892 @@
+{
+  "scrapedAt": "2026-04-17",
+  "sources": [
+    "https://instruments.uni-trend.com/",
+    "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes",
+    "https://instruments.uni-trend.com/products/digital-oscilloscopes",
+    "https://instruments.uni-trend.com/products/waveform-generators",
+    "https://instruments.uni-trend.com/products/RF-Signal-Generators",
+    "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers",
+    "https://instruments.uni-trend.com/products/dc-power-supplies",
+    "https://instruments.uni-trend.com/products/dc-electronic-loads",
+    "https://instruments.uni-trend.com/products/ac-power-sources",
+    "https://instruments.uni-trend.com/products/digital-multimeters",
+    "https://instruments.uni-trend.com/products/lcr-meters",
+    "https://instruments.uni-trend.com/products/battery-testers",
+    "https://instruments.uni-trend.com/products/micro-ohm-meters",
+    "https://instruments.uni-trend.com/products/power-meters",
+    "https://instruments.uni-trend.com/products/hipot-testers",
+    "https://instruments.uni-trend.com/products/electrical-safety-analyzers",
+    "https://instruments.uni-trend.com/products/insulation-resistance-testers",
+    "https://instruments.uni-trend.com/products/ground-bond-testers",
+    "https://instruments.uni-trend.com/products/multi-channel-temperature-loggers",
+    "https://meters.uni-trend.com/product/lm-series-2/",
+    "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+    "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+    "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+    "https://meters.uni-trend.com/product/ut673pv-solar-mppt-meter/"
+  ],
+  "newProductsFound": 83,
+  "scrapeNotes": {
+    "instrumentsSubdomain": "Working — clean HTML, full product listings extractable",
+    "metersSubdomain": "Working — WordPress-based, image URLs available",
+    "thermalSubdomain": "Not scraped this run — known JS-rendered SPA",
+    "surveyingSubdomain": "ECONNREFUSED on https://surveying.uni-trend.com/ — surveying products live on meters.uni-trend.com instead"
+  },
+  "categoriesAdded": [
+    "Bench Digital Multimeters",
+    "Digital Oscilloscopes",
+    "High Resolution Oscilloscopes",
+    "Waveform Generators",
+    "RF Signal Generators",
+    "Spectrum Analyzers",
+    "DC Power Supplies",
+    "DC Electronic Loads",
+    "AC Power Sources",
+    "Bench LCR Meters",
+    "Bench Battery Testers",
+    "Bench Micro Ohm Meters",
+    "Bench Power Meters",
+    "Hipot Testers",
+    "Electrical Safety Analyzers",
+    "Bench Insulation Resistance Testers",
+    "Ground Bond Testers",
+    "Multi-Channel Temperature Loggers"
+  ],
+  "categoriesEnriched": [
+    "Laser Distance Meters",
+    "Clamp Earth Ground Testers"
+  ],
+  "products": [
+    {
+      "model": "MSO8000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Mixed Signal Oscilloscope",
+      "description": "8GHz bandwidth, 4-channel high-resolution mixed-signal oscilloscope with 20GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO8000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250815/160035fd716da71fc852717609832.png",
+      "keySpecs": ["8GHz BW", "4 channels", "20GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO8000HD"
+    },
+    {
+      "model": "MSO5000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Mixed Signal Oscilloscope",
+      "description": "350MHz to 1GHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 5GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO5000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250311/180126c5055d355f41e05ccd06452.png",
+      "keySpecs": ["350MHz-1GHz BW", "4 channels", "5GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO5000HD"
+    },
+    {
+      "model": "MSO3000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Mixed Signal Oscilloscope",
+      "description": "200MHz to 500MHz bandwidth, 4-channel 12-bit MSO with 2.5GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO3000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240906/105831706d0ebc0954b739ad07813.png",
+      "keySpecs": ["200-500MHz BW", "4 channels", "2.5GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO3000HD"
+    },
+    {
+      "model": "MSO1000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Mixed Signal Oscilloscope",
+      "description": "150MHz to 250MHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 2.5GSa/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/MSO1000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250522/1508338102b24096289882ea04305.png",
+      "keySpecs": ["150-250MHz BW", "4 channels", "2.5GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO1000HD"
+    },
+    {
+      "model": "UPO2000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Digital Oscilloscope",
+      "description": "70MHz to 200MHz bandwidth, 2/4 channel 12-bit oscilloscope with 2.5GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/UPO2000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250416/10345864993497ce18bee05302121.png",
+      "keySpecs": ["70-200MHz BW", "2/4 channels", "2.5GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UPO2000HD"
+    },
+    {
+      "model": "UPO1000HD",
+      "category": "High Resolution Oscilloscopes",
+      "subcategory": "12-bit Digital Oscilloscope",
+      "description": "80MHz to 150MHz bandwidth, 2/4 channel 12-bit digital oscilloscope with 1.25GSa/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/high-resolution-oscilloscopes/UPO1000HD",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250701/100709b07a736efefbf8e3ac05043.png",
+      "keySpecs": ["80-150MHz BW", "2/4 channels", "1.25GSa/s", "12-bit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1000HD"
+    },
+    {
+      "model": "MSO7000X",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Mixed Signal Oscilloscope",
+      "description": "1GHz to 2GHz bandwidth, 4-channel mixed-signal oscilloscope with 10GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO7000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240627/140402d0bf9c61238725ea2803188.png",
+      "keySpecs": ["1-2GHz BW", "4 channels", "10GSa/s", "MSO"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO7000X"
+    },
+    {
+      "model": "UPO7000L",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Digital Storage Oscilloscope",
+      "description": "1GHz to 2GHz bandwidth, 4-channel digital oscilloscope with 10GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO7000L",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250529/1544051270b8ca2b0aabbb2407881.png",
+      "keySpecs": ["1-2GHz BW", "4 channels", "10GSa/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UPO7000L"
+    },
+    {
+      "model": "MSO3000X",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Mixed Signal Oscilloscope",
+      "description": "350MHz to 500MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO3000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240704/15293092557e6513c4aac23903643.png",
+      "keySpecs": ["350-500MHz BW", "4 channels", "5GSa/s", "MSO"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO3000X"
+    },
+    {
+      "model": "MSO2000X",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Mixed Signal Oscilloscope",
+      "description": "100MHz to 300MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO2000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240704/153801c6726163443b3a9afc06372.png",
+      "keySpecs": ["100-300MHz BW", "4 channels", "5GSa/s", "MSO"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=MSO2000X"
+    },
+    {
+      "model": "UPO1000",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Digital Storage Oscilloscope",
+      "description": "50MHz to 200MHz bandwidth, 4-channel digital oscilloscope with 2GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1000",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240312/1112374b20696f9ee89f425004285.png",
+      "keySpecs": ["50-200MHz BW", "4 channels", "2GSa/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1000"
+    },
+    {
+      "model": "UPO1002",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Digital Storage Oscilloscope",
+      "description": "100MHz to 200MHz bandwidth, 2-channel digital oscilloscope with 1GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1002",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240624/161217cdd00aabeab47b48b601695.png",
+      "keySpecs": ["100-200MHz BW", "2 channels", "1GSa/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1002"
+    },
+    {
+      "model": "UTD2000CEX+",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Digital Storage Oscilloscope",
+      "description": "50MHz to 200MHz bandwidth, 2-channel entry-level oscilloscope with 1GSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CEX+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240422/1635168adb6d3fb63f4414fb02604.png",
+      "keySpecs": ["50-200MHz BW", "2 channels", "1GSa/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CEX%2B"
+    },
+    {
+      "model": "UTD2000CL+",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Digital Storage Oscilloscope",
+      "description": "25MHz to 150MHz bandwidth, 2-channel oscilloscope with 500MSa/s sample rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CL+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240312/115455a90c7c2fa92f3d5ddc06032.png",
+      "keySpecs": ["25-150MHz BW", "2 channels", "500MSa/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CL%2B"
+    },
+    {
+      "model": "UTD1000C",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Handheld Digital Oscilloscope",
+      "description": "60/100/200MHz bandwidth, 2-channel handheld digital oscilloscope",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000C",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/1000570a1e43690bc4c8ec5b01407.png",
+      "keySpecs": ["60-200MHz BW", "2 channels", "Handheld"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000C"
+    },
+    {
+      "model": "UTD1000L",
+      "category": "Digital Oscilloscopes",
+      "subcategory": "Handheld Digital Oscilloscope",
+      "description": "25MHz to 50MHz bandwidth, 1-2 channel handheld oscilloscope with 250MSa/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000L",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/10021931e8f53812084a7b5805037.png",
+      "keySpecs": ["25-50MHz BW", "1-2 channels", "250MSa/s", "Handheld"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000L"
+    },
+    {
+      "model": "UTG9000T+",
+      "category": "Waveform Generators",
+      "subcategory": "Arbitrary Waveform Generator",
+      "description": "500MHz, 4-channel arbitrary waveform/function generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260121/1536088d24338e7c1c3b496e02361.png",
+      "keySpecs": ["500MHz", "4 channels", "Arb waveform"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T%2B"
+    },
+    {
+      "model": "UTG9000T",
+      "category": "Waveform Generators",
+      "subcategory": "Arbitrary Waveform Generator",
+      "description": "600MHz, 4-channel arbitrary waveform/function generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1415398bde31fed959a8338207742.png",
+      "keySpecs": ["600MHz", "4 channels", "Arb waveform"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T"
+    },
+    {
+      "model": "UTG4000X",
+      "category": "Waveform Generators",
+      "subcategory": "Arbitrary Waveform Generator",
+      "description": "250MHz, 4-channel arbitrary waveform/function generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260121/15400281cc4952901b7d526d05193.png",
+      "keySpecs": ["250MHz", "4 channels", "Arb waveform"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000X"
+    },
+    {
+      "model": "UTG4000A",
+      "category": "Waveform Generators",
+      "subcategory": "Arbitrary Waveform Generator",
+      "description": "200MHz, 2-channel arbitrary waveform/function generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000A",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1414012ed3a6e710dc65b1a904963.png",
+      "keySpecs": ["200MHz", "2 channels", "Arb waveform"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000A"
+    },
+    {
+      "model": "UTG2000X",
+      "category": "Waveform Generators",
+      "subcategory": "Arbitrary Waveform Generator",
+      "description": "120MHz, 2-channel arbitrary waveform/function generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG2000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240418/141028c12fdd9bc8d428fc6803142.png",
+      "keySpecs": ["120MHz", "2 channels", "Arb waveform"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG2000X"
+    },
+    {
+      "model": "UTG900E",
+      "category": "Waveform Generators",
+      "subcategory": "Function/Arbitrary Generator",
+      "description": "60MHz, 2-channel function/arbitrary waveform generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG900E",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1412075b0b878d50eb00aefe08157.png",
+      "keySpecs": ["60MHz", "2 channels", "Function/Arb"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG900E"
+    },
+    {
+      "model": "UTG1000X",
+      "category": "Waveform Generators",
+      "subcategory": "Function/Arbitrary Generator",
+      "description": "40MHz, 2-channel entry-level function/arbitrary waveform generator",
+      "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG1000X",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1411058807f09c3fa62509a704368.png",
+      "keySpecs": ["40MHz", "2 channels", "Function/Arb"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTG1000X"
+    },
+    {
+      "model": "USG5000V",
+      "category": "RF Signal Generators",
+      "subcategory": "Vector RF Signal Generator",
+      "description": "Vector RF signal generator: CW 9kHz–22GHz, IQ 5MHz–6GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG5000V",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20251224/1645342b859b77663e770aef03357.png",
+      "keySpecs": ["CW 9kHz-22GHz", "IQ 5MHz-6GHz", "Vector"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=USG5000V"
+    },
+    {
+      "model": "USG3000V",
+      "category": "RF Signal Generators",
+      "subcategory": "Vector RF Signal Generator",
+      "description": "Vector RF signal generator: CW 9kHz–6.5GHz, IQ 5MHz–6GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG3000V",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20251224/165031f5d3f5ed644d8c116808342.png",
+      "keySpecs": ["CW 9kHz-6.5GHz", "IQ 5MHz-6GHz", "Vector"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=USG3000V"
+    },
+    {
+      "model": "USG5000M",
+      "category": "RF Signal Generators",
+      "subcategory": "Analog RF Signal Generator",
+      "description": "Analog RF signal generator covering 9kHz to 22GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG5000M",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20241219/083032cbad9655f16699aea104598.png",
+      "keySpecs": ["9kHz-22GHz", "Analog", "RF"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=USG5000M"
+    },
+    {
+      "model": "USG3000M",
+      "category": "RF Signal Generators",
+      "subcategory": "Analog RF Signal Generator",
+      "description": "Analog RF signal generator covering 9kHz to 6.5GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/RF-Signal-Generators/USG3000M",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20241219/0832031dd11e02114aa7139f01963.png",
+      "keySpecs": ["9kHz-6.5GHz", "Analog", "RF"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=USG3000M"
+    },
+    {
+      "model": "UTS7000A",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Wideband signal/spectrum analyzer covering 2Hz to 40GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS7000A",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20251112/092236c00cc8c22b657dc41906341.png",
+      "keySpecs": ["2Hz-40GHz", "Spectrum analyzer"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS7000A"
+    },
+    {
+      "model": "UTS5000A",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Spectrum/signal analyzer covering 9kHz to 26.5GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS5000A",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240419/093408a2e8d55b2d48332f8a02764.png",
+      "keySpecs": ["9kHz-26.5GHz", "Spectrum analyzer"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS5000A"
+    },
+    {
+      "model": "UTS3000A",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000A",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240906/11383733bb28de730fd651a709698.png",
+      "keySpecs": ["9kHz-8.4GHz", "Spectrum analyzer"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000A"
+    },
+    {
+      "model": "UTS3000T+",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Tracking-generator spectrum analyzer covering 9kHz to 8.4GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000T+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240926/15275972fe408fbbe6d269d403692.png",
+      "keySpecs": ["9kHz-8.4GHz", "Tracking generator"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000T%2B"
+    },
+    {
+      "model": "UTS3000B",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS3000B",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/142705d4ab92796b76d35fab02845.png",
+      "keySpecs": ["9kHz-8.4GHz", "Spectrum analyzer"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS3000B"
+    },
+    {
+      "model": "UTS1000B",
+      "category": "Spectrum Analyzers",
+      "subcategory": "Signal/Spectrum Analyzer",
+      "description": "Entry-level spectrum analyzer covering 9kHz to 3.2GHz",
+      "officialUrl": "https://instruments.uni-trend.com/products/spectrum-analyzers-signal-analyzers/UTS1000B",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240424/1625302b27f0200c3b8dfaa404813.png",
+      "keySpecs": ["9kHz-3.2GHz", "Spectrum analyzer"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTS1000B"
+    },
+    {
+      "model": "UDP4303S",
+      "category": "DC Power Supplies",
+      "subcategory": "Programmable DC Power Supply",
+      "description": "4-channel programmable DC power supply, 0–32V, 0–3A per channel",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP4303S",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240805/1605341e263b5ba66fcc9b1906512.png",
+      "keySpecs": ["0-32V", "0-3A", "4 channels", "Programmable"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP4303S"
+    },
+    {
+      "model": "UDP3000S",
+      "category": "DC Power Supplies",
+      "subcategory": "Programmable DC Power Supply",
+      "description": "4-channel programmable DC power supply, 0–30V, 0–5A per channel",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000S",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240416/135229d2f80c2582985dc41401093.png",
+      "keySpecs": ["0-30V", "0-5A", "4 channels", "Programmable"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000S"
+    },
+    {
+      "model": "UDP3000",
+      "category": "DC Power Supplies",
+      "subcategory": "Linear DC Power Supply",
+      "description": "3-channel linear DC power supply, 30V, 5A per channel",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1457142905bb40381659301109578.png",
+      "keySpecs": ["30V", "5A", "3 channels", "Linear"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000"
+    },
+    {
+      "model": "UDP1000",
+      "category": "DC Power Supplies",
+      "subcategory": "Linear DC Power Supply",
+      "description": "Single-channel linear DC power supply, 32V, 6A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP1000",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145601d899dbb82804a66d7c03002.png",
+      "keySpecs": ["32V", "6A", "1 channel", "Linear"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP1000"
+    },
+    {
+      "model": "UTP3300-II",
+      "category": "DC Power Supplies",
+      "subcategory": "Linear DC Power Supply",
+      "description": "3-channel linear DC bench power supply, 32V, 5A per channel",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300-II",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145439d19b7a91be1a1408ad01849.png",
+      "keySpecs": ["32V", "5A", "3 channels"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300-II"
+    },
+    {
+      "model": "UTP3300TFL-II",
+      "category": "DC Power Supplies",
+      "subcategory": "Linear DC Power Supply",
+      "description": "Single-channel linear DC bench power supply, 30V, 5A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300TFL-II",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145259c89bfc3b50c27ebb2f03047.png",
+      "keySpecs": ["30V", "5A", "1 channel"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300TFL-II"
+    },
+    {
+      "model": "UDP5000",
+      "category": "DC Power Supplies",
+      "subcategory": "High Power DC Power Supply",
+      "description": "Wide-range programmable DC power supply, 0–250V, 0–200A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP5000",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250624/1629493330b8a3379fad4a7902576.png",
+      "keySpecs": ["0-250V", "0-200A", "1 channel", "High power"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP5000"
+    },
+    {
+      "model": "UDP6720",
+      "category": "DC Power Supplies",
+      "subcategory": "High Power DC Power Supply",
+      "description": "Wide-range programmable DC power supply, 0–600V, 0–110A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6720",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250903/081634f70003517a7b8d0d2407618.png",
+      "keySpecs": ["0-600V", "0-110A", "1 channel", "High power"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6720"
+    },
+    {
+      "model": "UDP6900",
+      "category": "DC Power Supplies",
+      "subcategory": "Programmable DC Power Supply",
+      "description": "Programmable DC power supply, 0–150V, 0–25A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6900",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240422/14084586fa5ab045a3e1415006415.png",
+      "keySpecs": ["0-150V", "0-25A", "1 channel"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6900"
+    },
+    {
+      "model": "UDP6700",
+      "category": "DC Power Supplies",
+      "subcategory": "Programmable DC Power Supply",
+      "description": "Programmable DC power supply, 0–80V, 0–30A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6700",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1450269b10f32d6e3acf304e07193.png",
+      "keySpecs": ["0-80V", "0-30A", "1 channel"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6700"
+    },
+    {
+      "model": "UTL8500X+",
+      "category": "DC Electronic Loads",
+      "subcategory": "Programmable DC Electronic Load",
+      "description": "Programmable DC electronic load, 200W–3000W, 500V/240A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8500X+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20251118/15120165ae9760378d8f893c05320.png",
+      "keySpecs": ["200-3000W", "500V", "240A"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8500X%2B"
+    },
+    {
+      "model": "UTL8500+",
+      "category": "DC Electronic Loads",
+      "subcategory": "Programmable DC Electronic Load",
+      "description": "Programmable DC electronic load, 150W/300W, 150V/30A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8500+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/0857244f7b15d7de9355bf5107230.png",
+      "keySpecs": ["150-300W", "150V", "30A"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8500%2B"
+    },
+    {
+      "model": "UTL8200+",
+      "category": "DC Electronic Loads",
+      "subcategory": "Programmable DC Electronic Load",
+      "description": "Programmable DC electronic load, 400W, 150V/20A or 40A",
+      "officialUrl": "https://instruments.uni-trend.com/products/dc-electronic-loads/UTL8200+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/085606fd886da6557e5c012107063.png",
+      "keySpecs": ["400W", "150V", "20-40A"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTL8200%2B"
+    },
+    {
+      "model": "UAP500A-1000A",
+      "category": "AC Power Sources",
+      "subcategory": "Programmable AC Source",
+      "description": "Programmable AC power source, 1000VA, dual range L:150V/4.2A H:300V/8.4A",
+      "officialUrl": "https://instruments.uni-trend.com/products/ac-power-sources/UAP500A-1000A",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/084616e0f723240c08a4113404468.png",
+      "keySpecs": ["1000VA", "150V/300V", "4.2A/8.4A", "Programmable"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UAP500A%2F1000A"
+    },
+    {
+      "model": "UT8806E",
+      "category": "Bench Digital Multimeters",
+      "subcategory": "6.5-digit Bench DMM",
+      "description": "6½-digit bench multimeter, 10000 rdgs/s, 300kHz, 0.0035% DC accuracy with USB/LAN/RS-232C/GPIB",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8806E",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1429407ba83bf5abce869e3800001.png",
+      "keySpecs": ["6.5 digit", "10000 rdgs/s", "0.0035% DC", "GPIB"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT8806E"
+    },
+    {
+      "model": "UT8805E",
+      "category": "Bench Digital Multimeters",
+      "subcategory": "5.5-digit Bench DMM",
+      "description": "5½-digit bench multimeter, 5000 rdgs/s, 100kHz, 0.015% DC accuracy with USB/LAN/RS232",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8805E",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/143440667567684422d5ca6908802.png",
+      "keySpecs": ["5.5 digit", "5000 rdgs/s", "0.015% DC", "LAN"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT8805E"
+    },
+    {
+      "model": "UT8804E",
+      "category": "Bench Digital Multimeters",
+      "subcategory": "4.75-digit Bench DMM",
+      "description": "4⅚-digit bench multimeter, 100kHz, 0.025% DC accuracy with USB Device",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8804E",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1433400dd52700376fbbaca508951.png",
+      "keySpecs": ["4.75 digit", "100kHz", "0.025% DC", "USB"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT8804E"
+    },
+    {
+      "model": "UT8803E",
+      "category": "Bench Digital Multimeters",
+      "subcategory": "3.75-digit Bench DMM",
+      "description": "3⅚-digit entry bench multimeter, 100kHz, 0.3% DC accuracy with USB Device",
+      "officialUrl": "https://instruments.uni-trend.com/products/digital-multimeters/UT8803E",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/143240d887fff54dcadb5e5a09421.png",
+      "keySpecs": ["3.75 digit", "100kHz", "0.3% DC", "USB"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT8803E"
+    },
+    {
+      "model": "UTR2830",
+      "category": "Bench LCR Meters",
+      "subcategory": "Precision LCR Meter",
+      "description": "Precision LCR meter, 300kHz max, 0.05% accuracy, 6-digit display, 80 rdgs/s with DCR",
+      "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UTR2830",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/09050613b00794ce5f4f677a02877.png",
+      "keySpecs": ["300kHz", "0.05% acc", "6-digit", "DCR"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTR2830"
+    },
+    {
+      "model": "UT622",
+      "category": "Bench LCR Meters",
+      "subcategory": "LCR Meter",
+      "description": "Bench LCR meter, 100kHz max, 0.1% accuracy, 5-digit display, 20 rdgs/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UT622",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/0902276953393d17e8b50bc807958.png",
+      "keySpecs": ["100kHz", "0.1% acc", "5-digit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT622"
+    },
+    {
+      "model": "UTR2810+",
+      "category": "Bench LCR Meters",
+      "subcategory": "LCR Meter",
+      "description": "Bench LCR meter, 10kHz max, 0.1% accuracy, 6-digit display, 23 rdgs/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/lcr-meters/UTR2810+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240805/1547581e7452a666ad3c8c7304783.png",
+      "keySpecs": ["10kHz", "0.1% acc", "6-digit"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTR2810%2B"
+    },
+    {
+      "model": "UT3560",
+      "category": "Bench Battery Testers",
+      "subcategory": "Battery Internal Resistance Tester",
+      "description": "Bench battery tester: 0.01mV–400V, 0.1µΩ–3.2kΩ, 0.01% V / 0.5% R accuracy",
+      "officialUrl": "https://instruments.uni-trend.com/products/battery-testers/UT3560",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/090937876ba34b7cf7da9fe005716.png",
+      "keySpecs": ["0.01mV-400V", "0.1µΩ-3.2kΩ", "Half 2U"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT3560"
+    },
+    {
+      "model": "UT3515-Sx",
+      "category": "Bench Micro Ohm Meters",
+      "subcategory": "Multi-Channel Micro Ohm Meter",
+      "description": "Multi-channel micro ohm meter, scan mode 1µΩ–200kΩ, 230ms/10CH",
+      "officialUrl": "https://instruments.uni-trend.com/products/micro-ohm-meters/UT3515-Sx",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250429/172729d62995b0dfe3a1f6d200142.png",
+      "keySpecs": ["1µΩ-200kΩ", "10 channels", "230ms scan"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT3515-Sx"
+    },
+    {
+      "model": "UT3510+",
+      "category": "Bench Micro Ohm Meters",
+      "subcategory": "Micro Ohm Meter",
+      "description": "Bench micro ohm meter, 1µΩ–20kΩ/2MΩ, 100 rdgs/s",
+      "officialUrl": "https://instruments.uni-trend.com/products/micro-ohm-meters/UT3510+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240815/11135122a086c385a7c5357009475.png",
+      "keySpecs": ["1µΩ-20kΩ", "100 rdgs/s"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT3510%2B"
+    },
+    {
+      "model": "UTE323",
+      "category": "Bench Power Meters",
+      "subcategory": "Digital Power Meter",
+      "description": "Bench power analyzer: 75mV–600V, 2.5mA–20A, DC to 300kHz, ±0.1% rdg accuracy",
+      "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE323",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250918/172649d26be8d931a1bdbdb705633.png",
+      "keySpecs": ["75mV-600V", "2.5mA-20A", "DC-300kHz", "5'' TFT"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTE323"
+    },
+    {
+      "model": "UTE300",
+      "category": "Bench Power Meters",
+      "subcategory": "Digital Power Meter",
+      "description": "Bench power analyzer: 75mV–1000V, 25µA–50A, DC to 300kHz, ±0.1% rdg accuracy",
+      "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE300",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/0919551f79b448747c541c7f03275.png",
+      "keySpecs": ["75mV-1000V", "25µA-50A", "DC-300kHz"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTE300"
+    },
+    {
+      "model": "UTE9800+",
+      "category": "Bench Power Meters",
+      "subcategory": "Digital Power Meter",
+      "description": "Bench power meter: 0.5V–600V, 0.05mA–20A, 40Hz–400Hz",
+      "officialUrl": "https://instruments.uni-trend.com/products/power-meters/UTE9800+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/091813d00667ce88eb69649a06027.png",
+      "keySpecs": ["0.5V-600V", "0.05mA-20A", "40-400Hz"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UTE9800%2B"
+    },
+    {
+      "model": "UT5470",
+      "category": "Hipot Testers",
+      "subcategory": "AC/DC Hipot Tester",
+      "description": "AC/DC hipot tester: AC 0.05–10kV, DC 0.05–12kV, 5'' touchscreen",
+      "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5470",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260106/161643cde99673c4289e132a05562.png",
+      "keySpecs": ["AC 10kV", "DC 12kV", "5'' touch"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5470"
+    },
+    {
+      "model": "UT5320R-SxA",
+      "category": "Hipot Testers",
+      "subcategory": "AC/DC Hipot Tester",
+      "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV, 4.3'' display",
+      "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5320R-SxA",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/092243a4f5752c1ddd90b83602764.png",
+      "keySpecs": ["AC 5kV", "DC 6kV", "4.3'' display"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5320R-SxA"
+    },
+    {
+      "model": "UT5300+",
+      "category": "Hipot Testers",
+      "subcategory": "AC/DC Hipot Tester",
+      "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV",
+      "officialUrl": "https://instruments.uni-trend.com/products/hipot-testers/UT5300+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/092453e677873056bc066c4704679.png",
+      "keySpecs": ["AC 5kV", "DC 6kV", "Bench"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5300%2B"
+    },
+    {
+      "model": "UT5400",
+      "category": "Electrical Safety Analyzers",
+      "subcategory": "Multi-Function Safety Analyzer",
+      "description": "All-in-one safety analyzer: ACW 5kV/100mA, DCW 6kV/10mA, IR to 50GΩ, GB 40A, 5'' touchscreen",
+      "officialUrl": "https://instruments.uni-trend.com/products/electrical-safety-analyzers/UT5400",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260106/164250903176f161de3ff6b602374.png",
+      "keySpecs": ["ACW 5kV", "DCW 6kV", "IR 50GΩ", "GB 40A"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5400"
+    },
+    {
+      "model": "UT5583",
+      "category": "Bench Insulation Resistance Testers",
+      "subcategory": "Programmable Insulation Tester",
+      "description": "Bench insulation resistance tester: 1V–1000V DC, 10kΩ–10TΩ, 4.3'' TFT LCD",
+      "officialUrl": "https://instruments.uni-trend.com/products/insulation-resistance-testers/UT5583",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240422/1424127cba5e1b03c562301b05596.png",
+      "keySpecs": ["1V-1000V DC", "10kΩ-10TΩ", "4.3'' TFT"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5583"
+    },
+    {
+      "model": "UT5140",
+      "category": "Ground Bond Testers",
+      "subcategory": "AC Ground Bond Tester",
+      "description": "Ground bond tester: 1–40A test current, 0–600mΩ resistance, 4-terminal method, 4.3'' TFT",
+      "officialUrl": "https://instruments.uni-trend.com/products/ground-bond-testers/UT5140",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20251211/140529e044fe3ade08378a4a08553.png",
+      "keySpecs": ["1-40A", "0-600mΩ", "4-terminal"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT5140"
+    },
+    {
+      "model": "UT3200+",
+      "category": "Multi-Channel Temperature Loggers",
+      "subcategory": "Temperature Data Logger",
+      "description": "Multi-channel temperature logger, up to 48 channels, 10 rdgs/s scan rate",
+      "officialUrl": "https://instruments.uni-trend.com/products/multi-channel-temperature-loggers/UT3200+",
+      "imageUrl": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/09303732015b7c072c14fe4705111.png",
+      "keySpecs": ["8-48 channels", "10 rdgs/s", "Bench"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT3200%2B"
+    },
+    {
+      "model": "LM40",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 40m max range, length/area/volume measurement",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM40-1-100x100.jpg",
+      "keySpecs": ["40m range", "Pocket", "L/A/V"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM40"
+    },
+    {
+      "model": "LM50",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 50m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM50-1-100x100.jpg",
+      "keySpecs": ["50m range", "Pocket"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM50"
+    },
+    {
+      "model": "LM60",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 60m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM60-1-100x100.jpg",
+      "keySpecs": ["60m range", "Pocket"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM60"
+    },
+    {
+      "model": "LM80",
+      "category": "Laser Distance Meters",
+      "subcategory": "Laser Distance Meter",
+      "description": "Laser distance meter, 80m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM80-1-100x100.jpg",
+      "keySpecs": ["80m range"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM80"
+    },
+    {
+      "model": "LM100",
+      "category": "Laser Distance Meters",
+      "subcategory": "Laser Distance Meter",
+      "description": "Laser distance meter, 100m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM100-1-100x100.jpg",
+      "keySpecs": ["100m range"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM100"
+    },
+    {
+      "model": "LM120",
+      "category": "Laser Distance Meters",
+      "subcategory": "Laser Distance Meter",
+      "description": "Laser distance meter, 120m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM120-1-100x100.jpg",
+      "keySpecs": ["120m range"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM120"
+    },
+    {
+      "model": "LM150",
+      "category": "Laser Distance Meters",
+      "subcategory": "Laser Distance Meter",
+      "description": "Laser distance meter, 150m max range",
+      "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM150-1-100x100.jpg",
+      "keySpecs": ["150m range"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM150"
+    },
+    {
+      "model": "LM40-I",
+      "category": "Laser Distance Meters",
+      "subcategory": "Industrial Laser Distance Meter",
+      "description": "Industrial laser distance meter, 40m range, ±(2mm+5×10⁻⁵D) accuracy",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40-I.jpg",
+      "keySpecs": ["40m range", "Industrial", "Pythagoras"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM40-I"
+    },
+    {
+      "model": "LM50-I",
+      "category": "Laser Distance Meters",
+      "subcategory": "Industrial Laser Distance Meter",
+      "description": "Industrial laser distance meter, 50m range, ±(2mm+5×10⁻⁵D) accuracy",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40-I.jpg",
+      "keySpecs": ["50m range", "Industrial"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM50-I"
+    },
+    {
+      "model": "LM120-I",
+      "category": "Laser Distance Meters",
+      "subcategory": "Industrial Laser Distance Meter",
+      "description": "Industrial laser distance meter, 120m range, auto-leveling",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40-I.jpg",
+      "keySpecs": ["120m range", "Auto-leveling"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM120-I"
+    },
+    {
+      "model": "LM150-I",
+      "category": "Laser Distance Meters",
+      "subcategory": "Industrial Laser Distance Meter",
+      "description": "Industrial laser distance meter, 150m range, auto-leveling",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40-i-lm50-i-lm120-i-lm150-i/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40-I.jpg",
+      "keySpecs": ["150m range", "Auto-leveling"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM150-I"
+    },
+    {
+      "model": "LM40e",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 40m range, 1.8'' LCD, ±2mm accuracy",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40e.jpg",
+      "keySpecs": ["40m", "±2mm", "1.8'' LCD"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM40e"
+    },
+    {
+      "model": "LM50e",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 50m range, 1.8'' LCD, ±2mm accuracy",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40e.jpg",
+      "keySpecs": ["50m", "±2mm", "1.8'' LCD"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM50e"
+    },
+    {
+      "model": "LM60e",
+      "category": "Laser Distance Meters",
+      "subcategory": "Pocket Laser Distance Meter",
+      "description": "Pocket laser distance meter, 60m range, 1.8'' LCD, ±2mm accuracy",
+      "officialUrl": "https://meters.uni-trend.com/product/lm40e-lm50e-lm60e/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2022/06/40e.jpg",
+      "keySpecs": ["60m", "±2mm", "1.8'' LCD"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=LM60e"
+    },
+    {
+      "model": "UT272A",
+      "category": "Clamp Earth Ground Testers",
+      "subcategory": "Earth Resistance Clamp Meter",
+      "description": "Earth clamp meter, 0.010–400Ω resistance, ±(1%+0.01Ω) accuracy, φ44mm jaw",
+      "officialUrl": "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2024/06/ut272a-ut275a.jpg",
+      "keySpecs": ["0.010-400Ω", "φ44mm jaw", "500-set memory"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT272A"
+    },
+    {
+      "model": "UT275A",
+      "category": "Clamp Earth Ground Testers",
+      "subcategory": "Earth Resistance + Current Clamp Meter",
+      "description": "Earth clamp meter with AC current, 0.010–1200Ω, 1mA–30A AC, Bluetooth, φ44mm jaw",
+      "officialUrl": "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+      "imageUrl": "https://meters.uni-trend.com/wp-content/uploads/2024/06/ut272a-ut275a.jpg",
+      "keySpecs": ["0.010-1200Ω", "1mA-30A AC", "Bluetooth", "φ44mm"],
+      "kinmoSearchUrl": "https://kinmo.com/search?q=UT275A"
+    }
+  ]
+}
