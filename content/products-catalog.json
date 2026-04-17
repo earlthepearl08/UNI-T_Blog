@@ -1,0 +1,1989 @@
+{
+  "scrapedAt": "2026-04-17",
+  "source": "uni-trend.com (meters.uni-trend.com, instruments.uni-trend.com); thermal cameras from training knowledge",
+  "notes": "Thermal subdomain (thermal.uni-trend.com) requires JS rendering and could not be scraped via WebFetch. Thermal camera entries are sourced from prior knowledge of UNI-T's product line and marked with source='knowledge'. All other entries scraped from official site.",
+  "categories": [
+    {
+      "id": "multimeters",
+      "name": "Digital Multimeters",
+      "description": "Handheld digital multimeters for electrical measurement, from entry-level to industrial-grade True RMS and high-voltage models.",
+      "icon": "MM",
+      "productCount": 12,
+      "products": [
+        {
+          "model": "UT118C",
+          "category": "Digital Multimeters",
+          "subcategory": "Pen-type",
+          "description": "Pen-type digital multimeter for basic electrical testing in tight spaces.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/12/UT118C-1-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut118c-pen-type-meter/",
+          "keySpecs": ["Pen-type form factor", "Auto-range", "Compact design", "Basic electrical testing"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT118C",
+          "source": "scraped"
+        },
+        {
+          "model": "UT197",
+          "category": "Digital Multimeters",
+          "subcategory": "Industrial",
+          "description": "Industrial-grade digital multimeter built for professional electrical and electronic work.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/02/UT197-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut197-industrial-digital-multimeter/",
+          "keySpecs": ["Industrial-grade", "Professional use", "True RMS", "CAT III/IV rated"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT197",
+          "source": "scraped"
+        },
+        {
+          "model": "UT197PV",
+          "category": "Digital Multimeters",
+          "subcategory": "Solar / PV",
+          "description": "Professional solar-focused multimeter with PV-specific test capabilities.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/03/UT197PV-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut197pv-professional-multimeter-solar-pro/",
+          "keySpecs": ["Solar/PV focus", "Professional grade", "DC voltage to 1500V", "True RMS"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT197PV",
+          "source": "scraped"
+        },
+        {
+          "model": "UT117C",
+          "category": "Digital Multimeters",
+          "subcategory": "Compact",
+          "description": "Fast response, high precision multimeter in a compact, easy-to-use form.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/05/UT117C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut117c/",
+          "keySpecs": ["Fast response", "High precision", "Compact size", "Easy operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT117C",
+          "source": "scraped"
+        },
+        {
+          "model": "UT121 Series",
+          "category": "Digital Multimeters",
+          "subcategory": "Large-screen",
+          "description": "Large-screen multimeters showing dual measurements simultaneously for at-a-glance diagnostics.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/11/UT121B-1--400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut121-series/",
+          "keySpecs": ["Large LCD screen", "Dual measurement display", "True RMS", "Auto-range"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT121",
+          "source": "scraped"
+        },
+        {
+          "model": "UT15B/UT17B/UT18B MAX",
+          "category": "Digital Multimeters",
+          "subcategory": "Professional",
+          "description": "True RMS professional multimeters built for responsive precision and field durability.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/07/UT18B-MAX-2-235x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut15b-17b-18b-max/",
+          "keySpecs": ["True RMS", "Drop-resistant build", "CAT III/IV rated", "Professional accuracy"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT18B+MAX",
+          "source": "scraped"
+        },
+        {
+          "model": "UT105+/UT107+",
+          "category": "Digital Multimeters",
+          "subcategory": "Automotive",
+          "description": "Automotive multimeters for conventional ICE and hybrid vehicle diagnostics.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/07/UT105_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut105plus-ut107plus/",
+          "keySpecs": ["Automotive functions", "RPM/dwell/duty cycle", "Hybrid-ready", "Temperature probe"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT107%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT892",
+          "category": "Digital Multimeters",
+          "subcategory": "High-voltage",
+          "description": "2000V AC/DC high-voltage digital multimeter with full overload safeguards.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT892-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut892/",
+          "keySpecs": ["2000V AC/DC", "Overload protection", "True RMS", "CAT III 1000V / CAT IV 600V"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT892",
+          "source": "scraped"
+        },
+        {
+          "model": "UT196",
+          "category": "Digital Multimeters",
+          "subcategory": "Solar / PV",
+          "description": "Rugged 1700V solar professional multimeter for outdoor and PV array environments.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT196_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut196/",
+          "keySpecs": ["1700V DC capable", "PV/solar use", "Rugged outdoor build", "True RMS"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT196",
+          "source": "scraped"
+        },
+        {
+          "model": "UT60 Series",
+          "category": "Digital Multimeters",
+          "subcategory": "General-purpose",
+          "description": "General-purpose meters measuring up to 1000V AC/DC, 10A current, and 100MΩ resistance.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT60EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut60-series/",
+          "keySpecs": ["1000V AC/DC", "10A current", "100MΩ resistance", "Auto-range"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT60",
+          "source": "scraped"
+        },
+        {
+          "model": "UT33+ Series",
+          "category": "Digital Multimeters",
+          "subcategory": "Entry-level",
+          "description": "Entry-level palm-sized multimeters that survive 2-meter drops.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT33D_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut33plus-series/",
+          "keySpecs": ["Palm-sized", "2m drop resistant", "Entry-level price", "Auto-range"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT33%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT15B/UT17B/UT18B PRO",
+          "category": "Digital Multimeters",
+          "subcategory": "Professional",
+          "description": "1000V True RMS professional multimeters (legacy line, MAX series is the successor).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/03/UT18B-PRO_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut15b-pro-ut17b-pro-ut18b-pro/",
+          "keySpecs": ["1000V CAT III", "True RMS", "Professional grade", "Discontinued"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT18B+PRO",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "clamp-meters",
+      "name": "Clamp Meters",
+      "description": "AC and AC/DC clamp meters from compact mini designs to large-jaw industrial models for current measurement without circuit interruption.",
+      "icon": "CL",
+      "productCount": 12,
+      "products": [
+        {
+          "model": "UT219P",
+          "category": "Clamp Meters",
+          "subcategory": "Power & Harmonics",
+          "description": "Intelligent handheld power and harmonics clamp meter for stable power-quality readings.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/02/UT219P-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut219p/",
+          "keySpecs": ["Power & harmonics analysis", "True RMS", "Single-phase power", "Handheld"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT219P",
+          "source": "scraped"
+        },
+        {
+          "model": "UT200A+/UT200B+",
+          "category": "Clamp Meters",
+          "subcategory": "Residential",
+          "description": "Compact AC clamp meters designed for household equipment repair and electrician work.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/02/UT200A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut200aplus-ut200bplus/",
+          "keySpecs": ["AC current", "Residential focus", "Compact", "Easy operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT200A%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT205B",
+          "category": "Clamp Meters",
+          "subcategory": "Large-jaw",
+          "description": "1000A AC clamp meter with large jaw for thick conductors and bus bars.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/02/UT205B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut205b/",
+          "keySpecs": ["1000A AC", "Large jaw opening", "Thick conductor support", "Industrial"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT205B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT256",
+          "category": "Clamp Meters",
+          "subcategory": "Fork meter",
+          "description": "CAT III 600V auto-ranging True RMS fork meter measuring 60A AC/DC.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/05/UT256-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut256/",
+          "keySpecs": ["Open-fork design", "60A AC/DC", "True RMS", "CAT III 600V"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT256",
+          "source": "scraped"
+        },
+        {
+          "model": "2117R",
+          "category": "Clamp Meters",
+          "subcategory": "True RMS",
+          "description": "True RMS 1000A clamp meter with voltage and resistance measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/2117R_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/2117r/",
+          "keySpecs": ["1000A True RMS", "Voltage measurement", "Resistance measurement", "Multi-function"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=2117R",
+          "source": "scraped"
+        },
+        {
+          "model": "UT202BT/UT202T",
+          "category": "Clamp Meters",
+          "subcategory": "Smart AC",
+          "description": "Smart AC clamp meters with automatic parameter detection (BT model adds Bluetooth).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT202BT-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut202bt-ut202t/",
+          "keySpecs": ["Auto parameter detection", "Bluetooth (BT)", "AC current", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT202BT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT205A+/UT206A+",
+          "category": "Clamp Meters",
+          "subcategory": "Large-jaw AC",
+          "description": "1000A AC clamp meters with lightweight design and backlit display.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT206A_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut205aplus-ut206aplus/",
+          "keySpecs": ["1000A AC", "Lightweight", "Backlit display", "Large jaw"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT206A%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT219 Series",
+          "category": "Clamp Meters",
+          "subcategory": "Professional",
+          "description": "Professional clamp meters for electricians, HVAC/R, and motor technicians.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT219E_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut219-series/",
+          "keySpecs": ["Professional grade", "HVAC/R use", "Motor diagnostics", "True RMS"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT219",
+          "source": "scraped"
+        },
+        {
+          "model": "UT200+ Series",
+          "category": "Clamp Meters",
+          "subcategory": "Multi-function",
+          "description": "400A/600A clamp meters measuring voltage, frequency, temperature, and current.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT204_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut200plus-series/",
+          "keySpecs": ["400A/600A", "Voltage + frequency + temperature", "Multi-function", "Auto-range"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT204%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT200R Series",
+          "category": "Clamp Meters",
+          "subcategory": "Digital",
+          "description": "400A/600A digital clamp meters with voltage and current measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT204R_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut200r-series/",
+          "keySpecs": ["400A/600A", "Voltage measurement", "Digital display", "Auto-range"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT204R",
+          "source": "scraped"
+        },
+        {
+          "model": "UT200 Series",
+          "category": "Clamp Meters",
+          "subcategory": "True RMS",
+          "description": "6000-count clamp meters with auto-range, large LCD, and True RMS measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT205E_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut200-series/",
+          "keySpecs": ["6000-count", "Auto-range", "True RMS", "Large LCD"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT205E",
+          "source": "scraped"
+        },
+        {
+          "model": "UT210 Series",
+          "category": "Clamp Meters",
+          "subcategory": "Mini",
+          "description": "Mini clamp meters engineered for confined workspaces (UT210E is a fan favorite).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT210A_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut210-series/",
+          "keySpecs": ["Mini form factor", "AC/DC current (UT210E)", "True RMS (UT210E)", "Tight-space access"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT210E",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "voltage-detectors",
+      "name": "Voltage Detectors",
+      "description": "Non-contact voltage detectors and electrical pen testers for safe, fast voltage presence checks.",
+      "icon": "VD",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "UT22B-EU",
+          "category": "Voltage Detectors",
+          "subcategory": "Electrician/DIY",
+          "description": "Simple AC/DC voltage measurement tool for electricians and DIYers.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT22B-EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut22b-eu/",
+          "keySpecs": ["AC/DC voltage", "Easy operation", "EU plug socket", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT22B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12S-US/UT12D-US",
+          "category": "Voltage Detectors",
+          "subcategory": "Non-contact",
+          "description": "Non-contact voltage detectors for low-voltage equipment maintenance.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12S-US_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12s-us-ut12d-us/",
+          "keySpecs": ["Non-contact", "LED + audio alert", "Low-voltage maintenance", "Pen-style"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12S",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12E-US/UT12M-US",
+          "category": "Voltage Detectors",
+          "subcategory": "Professional",
+          "description": "Professional-grade non-contact voltage detectors with adjustable sensitivity.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12E-US_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12e-us-ut12m-us/",
+          "keySpecs": ["Professional grade", "Adjustable sensitivity", "Non-contact", "IP-rated"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12E",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12S-EU/UT12D-EU",
+          "category": "Voltage Detectors",
+          "subcategory": "Non-contact",
+          "description": "Professional non-contact detectors for low-voltage equipment maintenance (EU spec).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12S-EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12s-eu-ut12d-eu/",
+          "keySpecs": ["Non-contact", "EU spec", "Low-voltage", "Pen-style"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12D",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12E-EU/UT12M-EU",
+          "category": "Voltage Detectors",
+          "subcategory": "Rugged",
+          "description": "IP67 dust/water resistant non-contact detectors that survive 2-meter drops.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12E-EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12e-eu-ut12m-eu/",
+          "keySpecs": ["IP67 rated", "2m drop resistant", "EU spec", "Non-contact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12M",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12S-ROW/UT12D-ROW",
+          "category": "Voltage Detectors",
+          "subcategory": "Non-contact",
+          "description": "Versatile non-contact detectors for low-voltage equipment testing (Rest of World spec).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12S-ROW_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12s-row-ut12d-row/",
+          "keySpecs": ["Non-contact", "ROW spec", "Versatile use", "Pen-style"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12S-ROW",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12E-ROW/UT12M-ROW",
+          "category": "Voltage Detectors",
+          "subcategory": "Rugged",
+          "description": "Durable non-contact detectors built for harsh environments.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT12E-ROW_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12e-row-ut12m-row/",
+          "keySpecs": ["Harsh-environment build", "ROW spec", "Non-contact", "Adjustable sensitivity"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12M-ROW",
+          "source": "scraped"
+        },
+        {
+          "model": "UT13A/UT13B",
+          "category": "Voltage Detectors",
+          "subcategory": "Adjustable",
+          "description": "Non-contact detectors with adjustable sensitivity for varied EMI environments.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/12A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut13a-ut13b/",
+          "keySpecs": ["Adjustable sensitivity", "EMI tolerant", "Non-contact", "Pen-style"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT13A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT12A/UT12B/UT12C",
+          "category": "Voltage Detectors",
+          "subcategory": "General",
+          "description": "Versatile testing tool for residential, commercial, and industrial electrical work.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/12A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut12a-ut12b-ut12c/",
+          "keySpecs": ["Residential/commercial/industrial", "Non-contact", "LED indicator", "Audible alert"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT12A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT11A/UT11B",
+          "category": "Voltage Detectors",
+          "subcategory": "Pocket",
+          "description": "Lightweight pocket-size non-contact voltage detectors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/11A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut11a-ut11b/",
+          "keySpecs": ["Pocket-size", "Lightweight", "Non-contact", "LED indicator"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT11A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "insulation-testers",
+      "name": "Insulation Resistance Testers",
+      "description": "Megohmmeters for insulation resistance testing on cables, motors, transformers, and PV systems, from 250V to 10kV test voltages.",
+      "icon": "IR",
+      "productCount": 12,
+      "products": [
+        {
+          "model": "UT501E",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Fast tester",
+          "description": "Fast insulation tester for general electrical equipment.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/01/UT501E-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut501e-fast-insulation-tester/",
+          "keySpecs": ["Fast measurement", "Up to 1kV test voltage", "General electrical equipment", "Digital display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT501E",
+          "source": "scraped"
+        },
+        {
+          "model": "UT503PV",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "PV",
+          "description": "PV insulation tester for photovoltaic system installation and maintenance.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/11/UT503PV-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut503pv-pv-insulation-tester/",
+          "keySpecs": ["PV/solar focus", "Insulation testing", "Field use", "DC system rated"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT503PV",
+          "source": "scraped"
+        },
+        {
+          "model": "UT515B",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "High-voltage",
+          "description": "10kV high-voltage insulation resistance tester for HV equipment and cables.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/06/UT515B-2-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut515b-10kv-insulation-resistance-tester/",
+          "keySpecs": ["10kV test voltage", "HV equipment", "PI/DAR/PI tests", "Large display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT515B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT512D/UT512E",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "2.5kV",
+          "description": "2.5kV insulation resistance testers for cables and motors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/06/UT512D-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut512d-ut512e/",
+          "keySpecs": ["2.5kV test voltage", "Cables and motors", "Digital display", "PI/DAR"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT512D",
+          "source": "scraped"
+        },
+        {
+          "model": "UT513B/UT513C",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "5kV",
+          "description": "5kV insulation resistance testers with high-voltage output for industrial use.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/06/UT513B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut513b-ut513c/",
+          "keySpecs": ["5kV test voltage", "Industrial grade", "PI/DAR tests", "High-voltage output"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT513C",
+          "source": "scraped"
+        },
+        {
+          "model": "UT516B",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Power equipment",
+          "description": "Insulation tester for power equipment and supply circuit maintenance.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT516B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut516b/",
+          "keySpecs": ["Power equipment", "Supply circuit maintenance", "Insulation resistance", "Field use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT516B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT500 Series",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "General",
+          "description": "Measures insulation resistance of electrical equipment and appliances.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT501A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut500-series/",
+          "keySpecs": ["General-purpose", "Multiple test voltages", "Equipment & appliance", "Analog/digital options"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT501A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT505 Series",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Combo",
+          "description": "Combines digital multimeter and insulation tester functionality in one tool.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT505A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut505-series/",
+          "keySpecs": ["DMM + insulation tester", "All-in-one", "Field-friendly", "Digital display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT505A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT510 Series",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Industrial",
+          "description": "For transformers, generators, and high-voltage motors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT513A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut510-series/",
+          "keySpecs": ["Transformers/generators", "HV motors", "Industrial grade", "PI/DAR tests"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT513A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT531",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Combo",
+          "description": "Integrates full-functional digital multimeter and digital insulation tester.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/531-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut531/",
+          "keySpecs": ["DMM + insulation", "Full-function DMM", "Digital insulation", "All-in-one"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT531",
+          "source": "scraped"
+        },
+        {
+          "model": "UT533",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "Combo True RMS",
+          "description": "Multimeter and insulation tester combo with True RMS capability.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/03/UT533-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut533/",
+          "keySpecs": ["DMM + insulation tester", "True RMS", "Combo tool", "Field use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT533",
+          "source": "scraped"
+        },
+        {
+          "model": "UT512A",
+          "category": "Insulation Resistance Testers",
+          "subcategory": "HV (legacy)",
+          "description": "Measures insulation on large transformers and motors (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/512A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut512a/",
+          "keySpecs": ["Large transformers/motors", "High voltage", "Discontinued", "Industrial"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT512A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "earth-resistance",
+      "name": "Earth & Ground Resistance Testers",
+      "description": "Earth and ground resistance testers including 2/3-wire stake methods, clamp-on, and double-clamp multifunctional units.",
+      "icon": "ER",
+      "productCount": 11,
+      "products": [
+        {
+          "model": "UT575B",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Multifunctional",
+          "description": "Double-clamp multifunctional earth testing device.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/03/UT575B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut575b-double-clamp-multifunctional-earth-tester/",
+          "keySpecs": ["Double-clamp design", "Multifunctional", "Stakeless option", "Field use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT575B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT520 Series",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Stake method",
+          "description": "Performs precise 3-wire and simple 2-wire earth resistance measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT522-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut520-series/",
+          "keySpecs": ["3-wire & 2-wire", "Stake method", "Precise measurement", "Earth resistance"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT522",
+          "source": "scraped"
+        },
+        {
+          "model": "UT526",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Multi-tester",
+          "description": "Tests insulation resistance, RCD status, and low-resistance continuity.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT526-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut526/",
+          "keySpecs": ["Insulation + RCD + continuity", "Multi-function", "Electrical safety", "Installation testing"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT526",
+          "source": "scraped"
+        },
+        {
+          "model": "UT572",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Auto-check",
+          "description": "Automatically checks interface connection and detects interference voltage.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT572-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut572/",
+          "keySpecs": ["Auto interface check", "Interference detection", "Earth resistance", "Field use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT572",
+          "source": "scraped"
+        },
+        {
+          "model": "UT523A",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Soil resistivity",
+          "description": "Earth resistance and soil resistivity testing instrument (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/523A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut523a/",
+          "keySpecs": ["Soil resistivity", "Earth resistance", "Discontinued", "Stake method"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT523A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT272A & UT275A",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Clamp-on",
+          "description": "Earth clamp meters for stakeless earth resistance measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/10/UT272A-UT275A-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut272a-ut275a-earth-clamp-meter/",
+          "keySpecs": ["Stakeless clamp-on", "Earth resistance", "Loop current", "Field-friendly"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT275A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT273+",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Clamp-on",
+          "description": "Earth clamp meter using EBTN dual-display screen for resistance and current.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/11/UT273-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut273plus/",
+          "keySpecs": ["EBTN dual display", "Resistance + current", "Clamp-on", "High contrast screen"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT273%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT278B/C/D Series",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Ground pile clamp",
+          "description": "Ground pile clamp earth resistance tester for in-field grounding system measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/11/UT278B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut278b-c-d-series-ground-pile-clamp-earth-resistance-tester/",
+          "keySpecs": ["Ground pile clamp", "Field measurement", "Multiple variants", "Grounding systems"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT278B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT275",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Stakeless",
+          "description": "Measures grounding systems without disconnecting circuit ground lines or auxiliary electrodes.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT275-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut275/",
+          "keySpecs": ["No disconnection needed", "No auxiliary electrodes", "Stakeless", "Clamp-on"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT275",
+          "source": "scraped"
+        },
+        {
+          "model": "UT270+ Series",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Outdoor",
+          "description": "Durable tools for outdoor work with strong interference rejection.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT276A_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut270plus-series/",
+          "keySpecs": ["Outdoor durable", "Interference rejection", "Clamp-on", "Field-grade"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT276A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT276A/UT278A",
+          "category": "Earth & Ground Resistance Testers",
+          "subcategory": "Clamp-on",
+          "description": "Quick, safe grounding-system measurement without disconnecting ground lines.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/278A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut276a-ut278a/",
+          "keySpecs": ["Clamp-on", "No disconnection", "Quick measurement", "Safe operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT278A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "thermal-imagers",
+      "name": "Thermal Imagers",
+      "description": "Handheld and smartphone thermal cameras for predictive maintenance, building inspection, electrical and HVAC diagnostics. UNI-T's UTi series is one of the most popular affordable thermal imager lines.",
+      "icon": "TH",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "UTi260B",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld entry",
+          "description": "Popular entry-level handheld thermal camera with 256x192 IR resolution and 25Hz refresh rate.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi260B.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["256x192 IR resolution", "25Hz refresh", "-15 to 550 degC", "2.8 inch screen"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi260B",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi260E",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld",
+          "description": "Mid-range handheld thermal imager with improved sensitivity and visible-light fusion.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi260E.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["256x192 IR resolution", "Visible-light fusion", "Wi-Fi connectivity", "Larger battery"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi260E",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi320E",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld professional",
+          "description": "Professional handheld thermal imager with 320x240 IR resolution and laser pointer.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi320E.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["320x240 IR resolution", "50mK NETD", "Laser pointer", "Visible-light fusion"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi320E",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi384G",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld professional",
+          "description": "High-resolution 384x288 handheld thermal imager for industrial and electrical inspection.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi384G.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["384x288 IR resolution", "50mK NETD", "GPS tagging", "Wi-Fi + report tools"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi384G",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi720E",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld high-resolution",
+          "description": "High-end handheld thermal camera with high IR resolution for advanced thermography.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi720E.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["High-resolution IR", "Wi-Fi + cloud", "Large screen", "Advanced analysis tools"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi720E",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi120Mobile",
+          "category": "Thermal Imagers",
+          "subcategory": "Smartphone",
+          "description": "USB-C smartphone thermal camera attachment for Android devices.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi120Mobile.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/smartphone-thermal-cameras/",
+          "keySpecs": ["120x90 IR resolution", "USB-C / Type-C", "Android compatible", "Pocket-sized"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi120Mobile",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi260M",
+          "category": "Thermal Imagers",
+          "subcategory": "Smartphone",
+          "description": "Higher-resolution smartphone thermal camera with 256x192 IR sensor.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi260M.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/smartphone-thermal-cameras/",
+          "keySpecs": ["256x192 IR resolution", "USB-C", "Android compatible", "App-based analysis"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi260M",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi89Pro",
+          "category": "Thermal Imagers",
+          "subcategory": "Compact handheld",
+          "description": "Compact handheld thermal imager with multimeter-style ergonomics for electricians.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi89Pro.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["Compact form", "Pistol grip", "Electrical inspection", "Affordable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi89Pro",
+          "source": "knowledge"
+        },
+        {
+          "model": "UTi165K",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld entry",
+          "description": "Affordable entry-level thermal imager with 160x120 IR sensor and SD card storage.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/UTi165K.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/handheld-thermal-cameras/",
+          "keySpecs": ["160x120 IR resolution", "SD card storage", "Entry-level price", "-20 to 400 degC"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTi165K",
+          "source": "knowledge"
+        },
+        {
+          "model": "TM1",
+          "category": "Thermal Imagers",
+          "subcategory": "Monocular",
+          "description": "Thermal imaging monocular for outdoor observation, hunting and security.",
+          "image": "https://thermal.uni-trend.com/wp-content/uploads/TM1.jpg",
+          "officialUrl": "https://thermal.uni-trend.com/products/thermal-imaging-monoculars/",
+          "keySpecs": ["Monocular form", "Outdoor observation", "Long detection range", "Recharge battery"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=TM1",
+          "source": "knowledge"
+        }
+      ]
+    },
+    {
+      "id": "infrared-thermometers",
+      "name": "Infrared Thermometers",
+      "description": "Non-contact infrared thermometers from compact economy units to professional 50:1 distance-to-spot models for industrial use.",
+      "icon": "IR",
+      "productCount": 9,
+      "products": [
+        {
+          "model": "UT305+ Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "Industrial",
+          "description": "For furnace kilns, heat-transfer pipes, building thermal bridges, cold storage and greenhouses.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT305C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut305plus-series/",
+          "keySpecs": ["Industrial range", "Wide temperature span", "Laser sighting", "High D:S ratio"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT305%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT300 Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "Economy",
+          "description": "Economical compact infrared thermometers for everyday use.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT300A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut300-series/",
+          "keySpecs": ["Compact form", "Economy price", "Basic IR thermometry", "Backlit display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT300",
+          "source": "scraped"
+        },
+        {
+          "model": "UT301+ Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "Durable",
+          "description": "Durable IR thermometers with high accuracy and repeatability.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT301A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut301-plus-series/",
+          "keySpecs": ["High accuracy", "Repeatable", "Durable build", "Laser sighting"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT301%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT302+/UT303+ Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "General-purpose",
+          "description": "Rapid surface-temperature determination via IR energy measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT303D-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut302-ut303-plus-series/",
+          "keySpecs": ["Fast response", "Surface temperature", "Laser sighting", "Adjustable emissivity"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT303%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT305S",
+          "category": "Infrared Thermometers",
+          "subcategory": "Long-range",
+          "description": "Professional model with 50:1 distance-to-spot ratio for distant targets.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT305S-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut305s/",
+          "keySpecs": ["50:1 D:S ratio", "Long-distance targeting", "Professional grade", "Dual laser"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT305S",
+          "source": "scraped"
+        },
+        {
+          "model": "UT306A",
+          "category": "Infrared Thermometers",
+          "subcategory": "Mini",
+          "description": "Mini IR thermometer engineered to counter environmental interference.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT306A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut306a/",
+          "keySpecs": ["Mini form", "Interference resistant", "Quick measurement", "Pocket-friendly"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT306A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT306 Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "Industrial",
+          "description": "Industrial applications in food, maintenance, and metalworking sectors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT306C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut306-series/",
+          "keySpecs": ["Industrial use", "Food & metalworking", "Maintenance focus", "Laser sighting"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT306",
+          "source": "scraped"
+        },
+        {
+          "model": "UT309 Series",
+          "category": "Infrared Thermometers",
+          "subcategory": "Professional rugged",
+          "description": "Professional line with the highest protection ratings for harsh environments.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT309E-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut309-series/",
+          "keySpecs": ["Highest protection rating", "Harsh environments", "Professional grade", "Dual laser"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT309E",
+          "source": "scraped"
+        },
+        {
+          "model": "UT309D",
+          "category": "Infrared Thermometers",
+          "subcategory": "Professional (legacy)",
+          "description": "Professional IR thermometer (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/309D-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut309d/",
+          "keySpecs": ["Professional grade", "Discontinued", "Replaced by UT309 Series", "IR thermometer"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT309D",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "battery-testers",
+      "name": "Battery Testers",
+      "description": "Battery internal-resistance and capacity testers for rechargeable cells, automotive batteries, and battery banks.",
+      "icon": "BT",
+      "productCount": 3,
+      "products": [
+        {
+          "model": "UT677A+/UT677C",
+          "category": "Battery Testers",
+          "subcategory": "Internal Resistance",
+          "description": "Internal resistance tester for cells, modules and rechargeable batteries.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/01/UT677A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut677aplus-ut677c-internal-resistance-tester/",
+          "keySpecs": ["Internal resistance", "Voltage measurement", "Battery health", "Bench-style"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT677A%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT677A",
+          "category": "Battery Testers",
+          "subcategory": "Internal Resistance (legacy)",
+          "description": "Measures internal resistance, voltage and temperature of rechargeable batteries (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/07/UT677A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut677a/",
+          "keySpecs": ["Internal resistance", "Voltage + temperature", "Rechargeable batteries", "Discontinued"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT677A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT673A/UT675A",
+          "category": "Battery Testers",
+          "subcategory": "Automotive",
+          "description": "Analyzes automobile battery health from 3Ah to 250Ah capacity range.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT673A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut673a-ut675a/",
+          "keySpecs": ["3Ah-250Ah range", "Automotive batteries", "CCA testing", "Health analysis"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT673A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "cable-testers",
+      "name": "Network & Cable Testers",
+      "description": "Cable continuity, wire-tracking, and TDR cable testers for Ethernet, telephone, BNC, HDMI and POE cabling.",
+      "icon": "CT",
+      "productCount": 6,
+      "products": [
+        {
+          "model": "UT681 Series",
+          "category": "Network & Cable Testers",
+          "subcategory": "Cable continuity",
+          "description": "Quickly checks continuity, shorts and faults on Ethernet, telephone, BNC and HDMI cables.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT681C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut681-series/",
+          "keySpecs": ["Ethernet/Telephone/BNC/HDMI", "Continuity & short detection", "Multiple variants", "Field-friendly"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT681",
+          "source": "scraped"
+        },
+        {
+          "model": "UT25CL",
+          "category": "Network & Cable Testers",
+          "subcategory": "Cable locator",
+          "description": "Cable locator device for tracing cables in walls and underground.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/01/UT25CL-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut25cl-cable-locator/",
+          "keySpecs": ["Cable locator", "Wall and underground tracing", "Field use", "Audio + visual indication"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT25CL",
+          "source": "scraped"
+        },
+        {
+          "model": "UT685A KIT",
+          "category": "Network & Cable Testers",
+          "subcategory": "TDR",
+          "description": "TDR (Time-Domain Reflectometer) cable tester kit for fault location and length measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2026/02/UT685A-KIT-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut685a-kit-tdr-cable-tester/",
+          "keySpecs": ["TDR fault location", "Length measurement", "Kit form", "Multiple cable types"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT685A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT685B KIT",
+          "category": "Network & Cable Testers",
+          "subcategory": "Multi-cable TDR",
+          "description": "Tests twisted pair, coaxial and POE network cables with TDR fault location.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/11/UT685B-KIT-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut685b-kit/",
+          "keySpecs": ["Twisted pair / coax / POE", "TDR fault location", "Kit form", "Network technician tool"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT685B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT683KIT",
+          "category": "Network & Cable Testers",
+          "subcategory": "Cable identifier",
+          "description": "Automatically identifies open, short, polarity and quickly distinguishes cable failures.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT683KIT-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut683kit/",
+          "keySpecs": ["Open/short/polarity check", "Cable failure ID", "Kit form", "Auto-detection"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT683KIT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT682 Series",
+          "category": "Network & Cable Testers",
+          "subcategory": "Wire tracker",
+          "description": "Tracks Ethernet, telephone, and power cables without opening insulation.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT682-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut682-series/",
+          "keySpecs": ["Non-invasive tracing", "Ethernet/telephone/power", "Tone & probe", "Field use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT682",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "power-quality",
+      "name": "Power Quality Analyzers",
+      "description": "Single-phase and three-phase power quality analyzers for harmonics, voltage stability and power monitoring.",
+      "icon": "PQ",
+      "productCount": 2,
+      "products": [
+        {
+          "model": "UT285C",
+          "category": "Power Quality Analyzers",
+          "subcategory": "Three-phase",
+          "description": "Three-phase power quality analyzer for industrial monitoring and harmonics analysis.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT285C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut285c/",
+          "keySpecs": ["Three-phase analysis", "Harmonics measurement", "Power quality logging", "Industrial use"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT285C",
+          "source": "scraped"
+        },
+        {
+          "model": "UT283A",
+          "category": "Power Quality Analyzers",
+          "subcategory": "Single-phase (legacy)",
+          "description": "Handheld multi-functional device for single-phase power system analysis (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/283A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut283a/",
+          "keySpecs": ["Single-phase", "Handheld", "Multi-function", "Discontinued"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT283A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "process-calibrators",
+      "name": "Process Calibrators",
+      "description": "Loop calibrators, temperature calibrators, and multifunction process calibrators for industrial instrumentation.",
+      "icon": "PC",
+      "productCount": 5,
+      "products": [
+        {
+          "model": "UT701",
+          "category": "Process Calibrators",
+          "subcategory": "Temperature",
+          "description": "For calibrating and repairing various temperature testers.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT701-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut701/",
+          "keySpecs": ["Temperature calibration", "Service tool", "Portable", "Multi-sensor support"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT701",
+          "source": "scraped"
+        },
+        {
+          "model": "UT705",
+          "category": "Process Calibrators",
+          "subcategory": "Loop",
+          "description": "High-accuracy DC current and transmitter analog current outputs.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT705-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut705/",
+          "keySpecs": ["High-accuracy DC current", "Transmitter simulation", "Loop calibration", "4-20mA"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT705",
+          "source": "scraped"
+        },
+        {
+          "model": "UT714",
+          "category": "Process Calibrators",
+          "subcategory": "Temperature multifunction",
+          "description": "Powerful temperature calibrator that sources and measures thermocouples, RTDs, and voltage.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT714-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut714/",
+          "keySpecs": ["Thermocouple + RTD + voltage", "Source & measure", "Multifunction", "Industrial calibration"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT714",
+          "source": "scraped"
+        },
+        {
+          "model": "UT715",
+          "category": "Process Calibrators",
+          "subcategory": "mA loop",
+          "description": "Powerful tool for calibration, repair and maintenance of mA loops.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT715-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut715/",
+          "keySpecs": ["mA loop calibration", "Source & measure", "Repair & maintenance", "Field-grade"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT715",
+          "source": "scraped"
+        },
+        {
+          "model": "UT725",
+          "category": "Process Calibrators",
+          "subcategory": "Combo",
+          "description": "Combines temperature process calibrator and loop process calibrator functions.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT725-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut725/",
+          "keySpecs": ["Temperature + loop", "Combo calibrator", "Industrial use", "Multi-function"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT725",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "environmental",
+      "name": "Environmental Testers",
+      "description": "Temperature/humidity, wind speed, sound level, light meters and other environmental measurement tools.",
+      "icon": "EV",
+      "productCount": 14,
+      "products": [
+        {
+          "model": "A56 BT",
+          "category": "Environmental Testers",
+          "subcategory": "Temp/Humidity Datalogger",
+          "description": "Bluetooth temperature and humidity datalogger for long-term monitoring.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/06/A56BT-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/a56-bt-temperature-humidity-datalogger/",
+          "keySpecs": ["Temp + humidity logging", "Bluetooth", "Long-period monitoring", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=A56+BT",
+          "source": "scraped"
+        },
+        {
+          "model": "A57 BT",
+          "category": "Environmental Testers",
+          "subcategory": "Temp/Humidity Datalogger",
+          "description": "Bluetooth temperature and humidity datalogger with extended capability.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/10/A57-BT-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/a57-bt-temperature-humidity-datalogger/",
+          "keySpecs": ["Temp + humidity logging", "Bluetooth", "Long-period monitoring", "Newer model"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=A57+BT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT330TH/UT330THC",
+          "category": "Environmental Testers",
+          "subcategory": "Temp/Humidity",
+          "description": "High-precision temperature and humidity sensors for long-period monitoring.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/02/UT330TH-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut330th-ut330thc/",
+          "keySpecs": ["High-precision sensors", "Long-period monitoring", "Temp + humidity", "Datalogging"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT330TH",
+          "source": "scraped"
+        },
+        {
+          "model": "UT330+ Series",
+          "category": "Environmental Testers",
+          "subcategory": "Temp/Humidity",
+          "description": "Low-power-consumption temperature and humidity meters.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT331_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut330-plus-series/",
+          "keySpecs": ["Low power consumption", "Temp + humidity", "Long battery life", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT331",
+          "source": "scraped"
+        },
+        {
+          "model": "UT333/UT333BT",
+          "category": "Environmental Testers",
+          "subcategory": "Temp/Humidity",
+          "description": "Mini temp/humidity meters with LCD readout (BT model has Bluetooth).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT333-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut333-ut333bt/",
+          "keySpecs": ["Mini form", "Temp + humidity", "LCD display", "Bluetooth (BT)"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT333BT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT362H",
+          "category": "Environmental Testers",
+          "subcategory": "Hot-wire Anemometer",
+          "description": "Hot-wire anemometer for precise low-velocity wind speed measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/05/UT362H-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut362h-hot-wire-anemometer/",
+          "keySpecs": ["Hot-wire sensor", "Low-velocity precision", "HVAC use", "Telescoping probe"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT362H",
+          "source": "scraped"
+        },
+        {
+          "model": "UT361/UT362",
+          "category": "Environmental Testers",
+          "subcategory": "Anemometer",
+          "description": "Anemometers for energy saving, HVAC, fishing and ventilation industries.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT361-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut360-series/",
+          "keySpecs": ["HVAC + ventilation", "Wind speed", "Energy saving", "Handheld"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT362",
+          "source": "scraped"
+        },
+        {
+          "model": "UT363/UT363BT",
+          "category": "Environmental Testers",
+          "subcategory": "Mini Anemometer",
+          "description": "Mini wind speed and temperature meters measuring up to 30m/s.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT363BT-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut363-ut363bt/",
+          "keySpecs": ["Up to 30 m/s", "Mini form", "Temp measurement", "Bluetooth (BT)"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT363BT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT363S",
+          "category": "Environmental Testers",
+          "subcategory": "Split Anemometer",
+          "description": "Split-type anemometer with quick detection, low consumption and high accuracy.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT363S-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut363s/",
+          "keySpecs": ["Split-type design", "Quick detection", "Low power", "High accuracy"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT363S",
+          "source": "scraped"
+        },
+        {
+          "model": "UT352",
+          "category": "Environmental Testers",
+          "subcategory": "Sound Level",
+          "description": "Sound level meter outputting dB results with up to 20-hour continuous operation.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT352-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut352/",
+          "keySpecs": ["dB readout", "20-hour battery", "Low power", "Noise measurement"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT352",
+          "source": "scraped"
+        },
+        {
+          "model": "UT353/UT353BT",
+          "category": "Environmental Testers",
+          "subcategory": "Sound Level",
+          "description": "Sound level meters that convert ambient sound to electric signal and display on LCD.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT353-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut353-ut353bt/",
+          "keySpecs": ["LCD display", "Sound to electric signal", "Bluetooth (BT)", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT353BT",
+          "source": "scraped"
+        },
+        {
+          "model": "UT381A",
+          "category": "Environmental Testers",
+          "subcategory": "Illuminance",
+          "description": "Illuminance meter for measuring light intensity in workplaces.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/10/UT381A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut381a-illuminance-meter/",
+          "keySpecs": ["Illuminance / lux", "Workplace lighting", "Digital display", "Portable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT381A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT381PV",
+          "category": "Environmental Testers",
+          "subcategory": "Solar Irradiance",
+          "description": "Solar irradiance meter for PV site assessment and panel performance.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/11/UT381PV-1.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut381pv-solar-irradiance-meter/",
+          "keySpecs": ["Solar irradiance W/m2", "PV site assessment", "Panel performance", "Portable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT381PV",
+          "source": "scraped"
+        },
+        {
+          "model": "UT380 Series",
+          "category": "Environmental Testers",
+          "subcategory": "Light Meter",
+          "description": "Measures light intensity in Lux or FC with high 100/s sampling rate.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT382-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut380-series/",
+          "keySpecs": ["Lux / FC units", "100/s sampling", "Light intensity", "Portable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT382",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "lcr-meters",
+      "name": "LCR Meters",
+      "description": "Inductance, capacitance and resistance meters for component testing and production.",
+      "icon": "LC",
+      "productCount": 2,
+      "products": [
+        {
+          "model": "UT612",
+          "category": "LCR Meters",
+          "subcategory": "Handheld",
+          "description": "Measures inductance, capacitance and resistance for production lines and component inspection.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT612-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut612/",
+          "keySpecs": ["L/C/R measurement", "Production line use", "Component inspection", "Multiple test frequencies"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT612",
+          "source": "scraped"
+        },
+        {
+          "model": "UT611",
+          "category": "LCR Meters",
+          "subcategory": "Handheld (legacy)",
+          "description": "Measures L/C/R for production lines and component inspection (discontinued).",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/611-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut611/",
+          "keySpecs": ["L/C/R measurement", "Production use", "Discontinued", "Replaced by UT612"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT611",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "oscilloscopes",
+      "name": "Digital Oscilloscopes",
+      "description": "Bench digital oscilloscopes from entry-level 50MHz portables to 2GHz mixed-signal flagships, plus handheld scope meters.",
+      "icon": "OS",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "MSO7000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Flagship MSO",
+          "description": "High-bandwidth 1-2 GHz scope with 4 analog channels, 10 GSa/s sampling and 1 Gpts memory.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240627/140402d0bf9c61238725ea2803188.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO7000X",
+          "keySpecs": ["1-2 GHz bandwidth", "10 GSa/s sample rate", "1 Gpts memory", "4 analog channels"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO7000X",
+          "source": "scraped"
+        },
+        {
+          "model": "UPO7000L",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Premium",
+          "description": "Premium oscilloscope offering 1-2 GHz bandwidth with 10 GSa/s real-time sampling.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250529/1544051270b8ca2b0aabbb2407881.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO7000L",
+          "keySpecs": ["1-2 GHz bandwidth", "10 GSa/s sampling", "Premium tier", "Bench scope"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO7000L",
+          "source": "scraped"
+        },
+        {
+          "model": "MSO3000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Mid-range MSO",
+          "description": "Mid-range mixed-signal scope with 350-500 MHz bandwidth, 16 digital channels and 500 Mpts memory.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240704/15293092557e6513c4aac23903643.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO3000X",
+          "keySpecs": ["350-500 MHz", "16 digital channels", "500 Mpts memory", "Mixed-signal"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO3000X",
+          "source": "scraped"
+        },
+        {
+          "model": "MSO2000X",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Entry MSO",
+          "description": "Entry-level MSO featuring 100-300 MHz bandwidth, 5 GSa/s and 16 digital channels.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240704/153801c6726163443b3a9afc06372.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/MSO2000X",
+          "keySpecs": ["100-300 MHz", "5 GSa/s", "16 digital channels", "Mixed-signal entry"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=MSO2000X",
+          "source": "scraped"
+        },
+        {
+          "model": "UPO1000",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Bench portable",
+          "description": "Portable bench scope with 50-200 MHz, 2 GSa/s sampling and 56 Mpts memory depth.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240312/1112374b20696f9ee89f425004285.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1000",
+          "keySpecs": ["50-200 MHz", "2 GSa/s", "56 Mpts memory", "Portable bench"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1000",
+          "source": "scraped"
+        },
+        {
+          "model": "UPO1002",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Compact dual-channel",
+          "description": "Compact dual-channel oscilloscope, 100-200 MHz bandwidth, 1 GSa/s sampling.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240624/161217cdd00aabeab47b48b601695.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UPO1002",
+          "keySpecs": ["100-200 MHz", "1 GSa/s", "Dual channel", "Compact bench"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UPO1002",
+          "source": "scraped"
+        },
+        {
+          "model": "UTD2000CEX+",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Handheld",
+          "description": "Handheld scope with 50-200 MHz bandwidth, 1 GSa/s and 64 kpts memory.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240422/1635168adb6d3fb63f4414fb02604.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CEX+",
+          "keySpecs": ["50-200 MHz", "1 GSa/s", "Handheld scope meter", "64 kpts memory"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CEX%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UTD2000CL+/CL",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Portable",
+          "description": "Portable instrument featuring 25-150 MHz bandwidth and 500 MSa/s sample rate.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240312/115455a90c7c2fa92f3d5ddc06032.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD2000CL+",
+          "keySpecs": ["25-150 MHz", "500 MSa/s", "Portable", "Battery operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD2000CL%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UTD1000C",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Handheld",
+          "description": "Basic handheld scope with 60-200 MHz selectable bandwidth and 200 MSa/s to 1 GSa/s sampling.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/1000570a1e43690bc4c8ec5b01407.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000C",
+          "keySpecs": ["60-200 MHz", "Up to 1 GSa/s", "Handheld", "Selectable bandwidth"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000C",
+          "source": "scraped"
+        },
+        {
+          "model": "UTD1000L",
+          "category": "Digital Oscilloscopes",
+          "subcategory": "Entry handheld",
+          "description": "Entry-level portable scope with 25-50 MHz bandwidth and 250 MSa/s sampling.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240408/10021931e8f53812084a7b5805037.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/digital-oscilloscopes/UTD1000L",
+          "keySpecs": ["25-50 MHz", "250 MSa/s", "Entry-level", "Handheld"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTD1000L",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "function-generators",
+      "name": "Waveform / Function Generators",
+      "description": "Arbitrary waveform and function generators from 5MHz hobbyist units to 600MHz 4-channel professional models.",
+      "icon": "WG",
+      "productCount": 7,
+      "products": [
+        {
+          "model": "UTG9000T+",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Flagship",
+          "description": "500 MHz max frequency, 2.5 GSa/s sample rate, 16-bit resolution, 4 channels.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260121/1536088d24338e7c1c3b496e02361.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T+",
+          "keySpecs": ["500 MHz", "2.5 GSa/s", "16-bit", "4 channels"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG9000T",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Flagship",
+          "description": "600 MHz output capability with 2.5 GSa/s sampling, 16-bit, 4-channel design.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1415398bde31fed959a8338207742.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG9000T",
+          "keySpecs": ["600 MHz", "2.5 GSa/s", "16-bit", "4 channels"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG9000T",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG4000X",
+          "category": "Waveform / Function Generators",
+          "subcategory": "High-performance",
+          "description": "250 MHz frequency, 2.5 GSa/s rate, 16-bit, 4 channels with 128 Mpts memory.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20260121/15400281cc4952901b7d526d05193.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000X",
+          "keySpecs": ["250 MHz", "2.5 GSa/s", "16-bit / 4 channels", "128 Mpts memory"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000X",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG4000A",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Mid-range",
+          "description": "200 MHz max output, 500 MSa/s sampling, 16-bit dual-channel generator.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1414012ed3a6e710dc65b1a904963.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG4000A",
+          "keySpecs": ["200 MHz", "500 MSa/s", "16-bit", "Dual-channel"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG4000A",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG2000X",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Bench",
+          "description": "120 MHz, 625 MSa/s, 16-bit, 2 channels with 64 Mpts capacity.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240418/141028c12fdd9bc8d428fc6803142.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG2000X",
+          "keySpecs": ["120 MHz", "625 MSa/s", "16-bit / 2 ch", "64 Mpts memory"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG2000X",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG900E",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Hobbyist",
+          "description": "60 MHz output, 200 MSa/s sampling, 14-bit 2-channel hobbyist solution.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1412075b0b878d50eb00aefe08157.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG900E",
+          "keySpecs": ["60 MHz", "200 MSa/s", "14-bit / 2 ch", "Hobbyist tier"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG900E",
+          "source": "scraped"
+        },
+        {
+          "model": "UTG1000X",
+          "category": "Waveform / Function Generators",
+          "subcategory": "Entry",
+          "description": "40 MHz capability, 200 MSa/s, 16-bit, 2 channels with 4 kpts memory.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1411058807f09c3fa62509a704368.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/waveform-generators/UTG1000X",
+          "keySpecs": ["40 MHz", "200 MSa/s", "16-bit / 2 ch", "4 kpts memory"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTG1000X",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "dc-power-supplies",
+      "name": "DC Power Supplies",
+      "description": "Linear and switching DC power supplies from single-channel benchtop to 2000W high-power lab units.",
+      "icon": "PS",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "UDP4303S",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear bench",
+          "description": "Linear 4-channel DC supply, 297W total, 0-32V, 0-3A per channel.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240805/1605341e263b5ba66fcc9b1906512.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP4303S",
+          "keySpecs": ["Linear", "4 channels", "297W", "0-32V / 0-3A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP4303S",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP3000S",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear bench",
+          "description": "Linear 4-channel DC supply, 328W total, 0-30V, 0-5A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240416/135229d2f80c2582985dc41401093.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000S",
+          "keySpecs": ["Linear", "4 channels", "328W", "0-30V / 0-5A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000S",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP3000",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear bench",
+          "description": "Linear 3-channel DC supply, 315W, 30V, 5A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1457142905bb40381659301109578.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP3000",
+          "keySpecs": ["Linear", "3 channels", "315W", "30V / 5A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP3000",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP1000",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear single",
+          "description": "Linear single-channel DC supply, 192W, 32V, 6A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145601d899dbb82804a66d7c03002.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP1000",
+          "keySpecs": ["Linear", "1 channel", "192W", "32V / 6A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP1000",
+          "source": "scraped"
+        },
+        {
+          "model": "UTP3300-II",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear bench",
+          "description": "Linear 3-channel DC supply, 335W, 32V, 5A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145439d19b7a91be1a1408ad01849.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300-II",
+          "keySpecs": ["Linear", "3 channels", "335W", "32V / 5A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300-II",
+          "source": "scraped"
+        },
+        {
+          "model": "UTP3300TFL-II",
+          "category": "DC Power Supplies",
+          "subcategory": "Linear single",
+          "description": "Linear single-channel DC supply, 150W, 30V, 5A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/145259c89bfc3b50c27ebb2f03047.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UTP3300TFL-II",
+          "keySpecs": ["Linear", "1 channel", "150W", "30V / 5A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UTP3300TFL-II",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP5000",
+          "category": "DC Power Supplies",
+          "subcategory": "High-power switching",
+          "description": "Switching single-channel high-power supply, 2000W, 0-250V, 0-200A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250624/1629493330b8a3379fad4a7902576.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP5000",
+          "keySpecs": ["Switching", "2000W", "0-250V", "0-200A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP5000",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP6720",
+          "category": "DC Power Supplies",
+          "subcategory": "High-voltage switching",
+          "description": "Switching single-channel high-voltage supply, 1500W, 0-600V, 0-110A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20250903/081634f70003517a7b8d0d2407618.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6720",
+          "keySpecs": ["Switching", "1500W", "0-600V", "0-110A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6720",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP6900",
+          "category": "DC Power Supplies",
+          "subcategory": "Switching",
+          "description": "Switching single-channel supply, 600W, 0-150V, 0-25A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240422/14084586fa5ab045a3e1415006415.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6900",
+          "keySpecs": ["Switching", "600W", "0-150V", "0-25A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6900",
+          "source": "scraped"
+        },
+        {
+          "model": "UDP6700",
+          "category": "DC Power Supplies",
+          "subcategory": "Switching",
+          "description": "Switching single-channel supply, 360W, 0-80V, 0-30A.",
+          "image": "https://unitrend.oss-cn-hongkong.aliyuncs.com/uploads/image/20240319/1450269b10f32d6e3acf304e07193.png",
+          "officialUrl": "https://instruments.uni-trend.com/products/dc-power-supplies/UDP6700",
+          "keySpecs": ["Switching", "360W", "0-80V", "0-30A"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UDP6700",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "electrical-power-tools",
+      "name": "Electrical Power Tools",
+      "description": "Specialty current measurement: AC/DC clamp sensors, Flex clamps, leakage current meters, large-current measurement, and phase indicators.",
+      "icon": "EP",
+      "productCount": 10,
+      "products": [
+        {
+          "model": "UT-CS07",
+          "category": "Electrical Power Tools",
+          "subcategory": "Clamp sensor",
+          "description": "AC/DC 1000A clamp sensor for use with multimeters and analyzers.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/03/UT-CS07-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut-cs07-ac-dc-1000a-clamp-sensor/",
+          "keySpecs": ["AC/DC 1000A", "Clamp sensor", "Use with DMM", "Industrial"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT-CS07",
+          "source": "scraped"
+        },
+        {
+          "model": "UT251C+",
+          "category": "Electrical Power Tools",
+          "subcategory": "Leakage current",
+          "description": "AC leakage current clamp meter for high-sensitivity leakage measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/04/UT251C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut251cplus-ac-leakage-current-clamp/",
+          "keySpecs": ["AC leakage current", "High sensitivity", "Clamp design", "Electrical safety"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT251C%2B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT281E+/UT281F",
+          "category": "Electrical Power Tools",
+          "subcategory": "Flex clamp",
+          "description": "10000A flexible Rogowski-coil current clamp for very large conductors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2025/03/UT281F-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut281eplus-flex-clamp/",
+          "keySpecs": ["10000A", "Flexible Rogowski coil", "Large conductors", "Bus bar measurement"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT281F",
+          "source": "scraped"
+        },
+        {
+          "model": "UT255C",
+          "category": "Electrical Power Tools",
+          "subcategory": "Wireless fork",
+          "description": "Wireless meter for measuring large currents up to 9999A with fork design.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/08/UT255C-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut255c/",
+          "keySpecs": ["Up to 9999A", "Wireless display", "Fork design", "High-current measurement"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT255C",
+          "source": "scraped"
+        },
+        {
+          "model": "UT268B",
+          "category": "Electrical Power Tools",
+          "subcategory": "Wireless power",
+          "description": "Multi-function wireless meter measuring 1000A with power analysis capabilities.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/08/UT268B-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut268b/",
+          "keySpecs": ["1000A", "Power analysis", "Wireless display", "Multi-function"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT268B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT279",
+          "category": "Electrical Power Tools",
+          "subcategory": "Transformer testing",
+          "description": "Transformer grounding current tester for leakage measurement on substation equipment.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/08/UT279-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut279-transformer-grounding-current-tester/",
+          "keySpecs": ["Transformer grounding", "Leakage measurement", "Substation use", "Specialized"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT279",
+          "source": "scraped"
+        },
+        {
+          "model": "UT262E",
+          "category": "Electrical Power Tools",
+          "subcategory": "Phase detector",
+          "description": "Non-contact phase detector that eliminates shock risk from bare-wire contact.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT262E-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut262e/",
+          "keySpecs": ["Non-contact phase", "No bare-wire contact", "Three-phase", "Safe operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT262E",
+          "source": "scraped"
+        },
+        {
+          "model": "UT251 Series",
+          "category": "Electrical Power Tools",
+          "subcategory": "Leakage clamp",
+          "description": "High-accuracy meters designed for testing AC leakage current.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT251A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut251-series/",
+          "keySpecs": ["AC leakage current", "High accuracy", "Clamp design", "Multiple variants"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT251A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT253A",
+          "category": "Electrical Power Tools",
+          "subcategory": "Leakage clamp",
+          "description": "Large-jaw meter measuring leakage current up to 2000A with high precision.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT253A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut253a/",
+          "keySpecs": ["Up to 2000A leakage", "Large jaw", "High precision", "Industrial"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT253A",
+          "source": "scraped"
+        },
+        {
+          "model": "UT261 Series",
+          "category": "Electrical Power Tools",
+          "subcategory": "Phase sequence",
+          "description": "Phase sequence and motor rotation indicators for three-phase systems.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT261A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut261-series/",
+          "keySpecs": ["Phase sequence", "Motor rotation", "Three-phase", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT261A",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "borescopes",
+      "name": "Borescopes",
+      "description": "Industrial borescopes for engine, pipeline, drain and inner-wall inspection.",
+      "icon": "BS",
+      "productCount": 4,
+      "products": [
+        {
+          "model": "UT663B",
+          "category": "Borescopes",
+          "subcategory": "Rotatable",
+          "description": "360-degree rotatable industrial borescope for tight inspection.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/11/UT663B-0-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut663b-360rotatable-industrial-borescope/",
+          "keySpecs": ["360 deg rotatable lens", "Industrial", "Articulating", "Built-in display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT663B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT665P",
+          "category": "Borescopes",
+          "subcategory": "Single-lens handheld",
+          "description": "Handheld single-lens industrial borescope for general inspection use.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/11/UT665P-0-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut665p-handheld-single-lens-industrial-borescope/",
+          "keySpecs": ["Handheld", "Single-lens", "Industrial", "Portable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT665P",
+          "source": "scraped"
+        },
+        {
+          "model": "UT667",
+          "category": "Borescopes",
+          "subcategory": "Industrial",
+          "description": "Industrial borescope for general inspection applications.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/11/UT667-0-400x388.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut667-industrial-borescope/",
+          "keySpecs": ["Industrial use", "Built-in screen", "Photo/video capture", "Portable"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT667",
+          "source": "scraped"
+        },
+        {
+          "model": "UT665",
+          "category": "Borescopes",
+          "subcategory": "General",
+          "description": "Useful for inspecting automobile engines, pipelines, inner walls and drain pipes.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT665-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut665/",
+          "keySpecs": ["Automotive engine", "Pipeline inspection", "Inner walls", "Drain pipes"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT665",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "laser-distance",
+      "name": "Laser Distance Meters",
+      "description": "Laser distance meters and laser tapes for design, construction, engineering and inspection work.",
+      "icon": "LD",
+      "productCount": 8,
+      "products": [
+        {
+          "model": "LM40Mi/LM60Mi",
+          "category": "Laser Distance Meters",
+          "subcategory": "Mini",
+          "description": "Mini laser distance meters for everyday measurement up to 40m / 60m.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2024/03/LM40Mi-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm40mi-lm60mi-mini-laser-distance-meter/",
+          "keySpecs": ["40m / 60m range", "Mini form", "Pocket-size", "Single-button operation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60Mi",
+          "source": "scraped"
+        },
+        {
+          "model": "LM T Series",
+          "category": "Laser Distance Meters",
+          "subcategory": "Tape + Laser",
+          "description": "2-in-1 laser tapes combining traditional tape and laser distance measurement.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM60T-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-t-series/",
+          "keySpecs": ["Tape + laser", "2-in-1 design", "Construction use", "Backlit display"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60T",
+          "source": "scraped"
+        },
+        {
+          "model": "LM A Series",
+          "category": "Laser Distance Meters",
+          "subcategory": "Multi-function",
+          "description": "Measures area, volume with addition/subtraction; stores 99 data groups.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM-70A-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-a-series/",
+          "keySpecs": ["Area + volume", "Add/subtract operations", "99 data memory", "Multi-function"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM70A",
+          "source": "scraped"
+        },
+        {
+          "model": "LM-I Series",
+          "category": "Laser Distance Meters",
+          "subcategory": "Portable",
+          "description": "Portable meters for length, area and volume with one-button operation.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM60-I_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-i-series/",
+          "keySpecs": ["Length/area/volume", "One-button", "Portable", "Backlit"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM60-I",
+          "source": "scraped"
+        },
+        {
+          "model": "LM Series",
+          "category": "Laser Distance Meters",
+          "subcategory": "General",
+          "description": "Used in design, construction, engineering inspection and accident-evidence gathering.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/05/LM40-1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm-series-2/",
+          "keySpecs": ["Construction", "Engineering inspection", "Evidence gathering", "Multi-purpose"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM40",
+          "source": "scraped"
+        },
+        {
+          "model": "UT390M",
+          "category": "Laser Distance Meters",
+          "subcategory": "Lightweight",
+          "description": "Lightweight, easy-to-operate laser distance meter.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/390M-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut390m/",
+          "keySpecs": ["Lightweight", "Easy operation", "Compact", "Field-friendly"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT390M",
+          "source": "scraped"
+        },
+        {
+          "model": "LD50",
+          "category": "Laser Distance Meters",
+          "subcategory": "Compact",
+          "description": "Measures distance, area, volume with +/-1.5mm accuracy.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/50-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ld50/",
+          "keySpecs": ["+/-1.5 mm accuracy", "Distance/area/volume", "50m range", "Compact"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LD50",
+          "source": "scraped"
+        },
+        {
+          "model": "LM50G/LM70G/LM100G",
+          "category": "Laser Distance Meters",
+          "subcategory": "Professional",
+          "description": "Professional-grade meters for design, construction and inspection.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/50G-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/lm50g-lm70g-lm100g/",
+          "keySpecs": ["50/70/100m range", "Professional grade", "Construction use", "Accurate"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=LM100G",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "socket-testers",
+      "name": "Socket Testers",
+      "description": "Socket and outlet testers for verifying wiring correctness in residential, commercial and industrial premises.",
+      "icon": "ST",
+      "productCount": 4,
+      "products": [
+        {
+          "model": "UT07 Series",
+          "category": "Socket Testers",
+          "subcategory": "Wiring check",
+          "description": "Used in commercial and residential areas to check socket-wiring errors.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT07B-EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut07-series/",
+          "keySpecs": ["Wiring error detection", "Commercial/residential", "Multiple plug types", "LED indicators"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT07",
+          "source": "scraped"
+        },
+        {
+          "model": "UT08 Series",
+          "category": "Socket Testers",
+          "subcategory": "110-125V",
+          "description": "Fast wiring verification for 110-125V outlets.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT08A-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut08-series/",
+          "keySpecs": ["110-125V", "Fast verification", "Residential", "LED indicators"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT08",
+          "source": "scraped"
+        },
+        {
+          "model": "UT230B-EU",
+          "category": "Socket Testers",
+          "subcategory": "Energy monitor",
+          "description": "Monitors operation status: voltage, current, time, power consumption and energy cost.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/04/UT230B-EU_1-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut230b-eu/",
+          "keySpecs": ["Energy monitoring", "V/A/W/kWh + cost", "EU plug", "Plug-through design"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT230B",
+          "source": "scraped"
+        },
+        {
+          "model": "UT230B-US/UK/IND",
+          "category": "Socket Testers",
+          "subcategory": "Energy monitor",
+          "description": "Energy monitor variants for US, UK and Indian plug standards.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2022/06/230B-US-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut230b-us-uk-ind/",
+          "keySpecs": ["Energy monitoring", "US/UK/IND plug variants", "V/A/W/kWh + cost", "Plug-through"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT230B-US",
+          "source": "scraped"
+        }
+      ]
+    },
+    {
+      "id": "solar-mppt",
+      "name": "Solar / PV Tools",
+      "description": "Solar-focused testing tools: PV clamp meters, MPPT analyzers and solar irradiance for renewable energy work.",
+      "icon": "SP",
+      "productCount": 2,
+      "products": [
+        {
+          "model": "UT219PV",
+          "category": "Solar / PV Tools",
+          "subcategory": "AC/DC Clamp",
+          "description": "Professional AC/DC clamp meter optimized for solar/PV applications.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/12/UT219PV-1-800x800-1-400x400.png",
+          "officialUrl": "https://meters.uni-trend.com/product/ut219pv-professional-ac-dc-clamp-meter/",
+          "keySpecs": ["AC/DC current", "Solar/PV use", "Professional grade", "True RMS"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT219PV",
+          "source": "scraped"
+        },
+        {
+          "model": "UT673PV",
+          "category": "Solar / PV Tools",
+          "subcategory": "MPPT Analyzer",
+          "description": "Solar MPPT meter for analyzing performance of renewable energy systems.",
+          "image": "https://meters.uni-trend.com/wp-content/uploads/2023/12/UT673PV-1-2-400x400.jpg",
+          "officialUrl": "https://meters.uni-trend.com/product/ut673pv-solar-mppt-meter/",
+          "keySpecs": ["MPPT analysis", "PV string testing", "I-V curve", "Performance evaluation"],
+          "kinmoSearchUrl": "https://kinmo.com/search?q=UT673PV",
+          "source": "scraped"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power &amp; Load Calculator | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Free Power & Load calculator: convert kW to Amperes, transpose voltages between 220V/380V/440V systems, and size motors for 1-Phase or 3-Phase circuits with proper wire and breaker recommendations.">
+
+  <meta property="og:title" content="Power & Load Calculator | UNI-T Philippines">
+  <meta property="og:description" content="Convert kW to Amperes, transpose voltage systems, and size motors with wire and breaker recommendations for Philippine 1P/3P circuits.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* ===== Tool-specific styles ===== */
+
+    .tool-hero {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2d0607 50%, #1A1A1A 100%);
+      color: #fff;
+      padding: 3.5rem 0 2.5rem;
+      text-align: center;
+    }
+    .tool-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .tool-hero p {
+      color: #ccc;
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+    .tool-hero .hero-accent { color: var(--uni-red); }
+
+    /* Tabs */
+    .calc-tabs {
+      display: flex;
+      gap: 0;
+      background: var(--bg-secondary);
+      border-bottom: 2px solid var(--border-color);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .calc-tabs::-webkit-scrollbar { display: none; }
+    .calc-tab {
+      flex: 1;
+      min-width: 170px;
+      padding: 1rem 1.25rem;
+      font-family: var(--font-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .calc-tab:hover { color: var(--text-primary); background: var(--bg-tertiary); }
+    .calc-tab.active {
+      color: var(--uni-red);
+      border-bottom-color: var(--uni-red);
+      background: var(--bg-primary);
+    }
+    .calc-tab svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* Panels */
+    .calc-panel {
+      display: none;
+      padding: 2rem 0;
+      animation: fadeIn 0.35s ease;
+    }
+    .calc-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Form elements */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 800px;
+    }
+    @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: 1fr; } }
+    .calc-grid.full-width { grid-template-columns: 1fr; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .form-group .helper-text {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: -0.15rem;
+    }
+    .form-group select,
+    .form-group input[type="number"],
+    .form-group input[type="text"] {
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--uni-red);
+      box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.12);
+    }
+
+    .calc-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--uni-red);
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+    .calc-btn:hover { background: var(--uni-red-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(227,30,36,0.3); }
+
+    /* Toggle pill */
+    .toggle-pill {
+      display: inline-flex;
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .toggle-pill button {
+      padding: 0.5rem 1.1rem;
+      border: none;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-pill button.active {
+      background: var(--uni-red);
+      color: #fff;
+    }
+
+    /* Results */
+    .result-area {
+      margin-top: 2rem;
+      animation: fadeIn 0.4s ease;
+    }
+    .result-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.3s;
+    }
+    .result-card.green { border-color: #22c55e; }
+    .result-card.yellow { border-color: #eab308; }
+    .result-card.orange { border-color: #f97316; }
+    .result-card.red { border-color: #ef4444; }
+    .result-card.primary { border-color: var(--uni-red); }
+
+    .big-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      font-weight: 800;
+      color: var(--uni-red);
+      line-height: 1;
+      margin: 0.4rem 0 0.25rem;
+    }
+    .big-number small { font-size: 1.1rem; font-weight: 600; color: var(--text-muted); margin-left: 0.25rem; }
+
+    .result-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .result-value {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .result-value small { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
+    .result-explain {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .result-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .result-item {
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-secondary);
+      border-radius: var(--border-radius);
+    }
+
+    /* Formula card */
+    .formula-card {
+      background: var(--bg-secondary);
+      border: 1px dashed var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .formula-card strong { color: var(--uni-red); font-family: var(--font-main); }
+
+    /* Side-by-side voltage transposition */
+    .vt-compare {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    @media (max-width: 640px) {
+      .vt-compare { grid-template-columns: 1fr; }
+      .vt-arrow { transform: rotate(90deg); justify-self: center; }
+    }
+    .vt-side {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .vt-side.target { border-color: var(--uni-red); }
+    .vt-side h4 {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .vt-side .vt-volts {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .vt-side .vt-current {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--uni-red);
+      line-height: 1;
+    }
+    .vt-side .vt-current small { font-size: 0.95rem; color: var(--text-muted); }
+    .vt-arrow {
+      color: var(--uni-red);
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    /* Wire/breaker badge */
+    .spec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0.25rem 0.35rem 0.25rem 0;
+    }
+    .spec-badge svg { width: 14px; height: 14px; color: var(--uni-red); }
+
+    /* Product recommendation */
+    .reco-section { margin-top: 2rem; }
+    .reco-section h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    .reco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .reco-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .reco-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .reco-card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 0.75rem; }
+    .reco-card h4 { font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.25rem; color: var(--text-primary); }
+    .reco-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.4; }
+    .reco-card .reco-cat {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    [data-theme="dark"] .reco-card .reco-cat { background: #7f1d1d; color: #fca5a5; }
+    .reco-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--uni-red);
+    }
+
+    /* Warning callout */
+    .callout {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      background: rgba(234, 179, 8, 0.1);
+      border-left: 4px solid #eab308;
+      border-radius: var(--border-radius);
+      margin: 1rem 0;
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .callout.danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-left-color: #ef4444;
+    }
+    .callout.info {
+      background: rgba(59, 130, 246, 0.1);
+      border-left-color: #3b82f6;
+    }
+    [data-theme="dark"] .callout { background: rgba(234, 179, 8, 0.18); }
+    [data-theme="dark"] .callout.danger { background: rgba(239, 68, 68, 0.18); }
+    [data-theme="dark"] .callout.info { background: rgba(59, 130, 246, 0.18); }
+    .callout-icon { font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
+
+    /* CTA banner */
+    .tools-cta {
+      background: linear-gradient(135deg, #1A1A1A, #2d0607);
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: var(--border-radius-lg);
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .tools-cta h3 { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .tools-cta p { color: #ccc; margin-bottom: 1.25rem; }
+    .tools-cta .calc-btn { background: var(--uni-red); }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 1.5rem 0;
+    }
+
+    /* Helper */
+    .hidden { display: none !important; }
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Side Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="side-drawer" id="sideDrawer" aria-label="Site navigation">
+    <div class="drawer-header">
+      <div class="drawer-title"><span class="accent">UNI-T</span> Philippines</div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-nav">
+      <div class="drawer-section">
+        <a href="/"><span class="drawer-icon">&#127968;</span> Home</a>
+        <a href="/posts/"><span class="drawer-icon">&#128240;</span> All Posts</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Guides</span>
+        <a href="/categories/equipment-guides/"><span class="drawer-icon">&#128736;&#65039;</span> Equipment Guides</a>
+        <a href="/categories/safety-techniques/"><span class="drawer-icon">&#9888;&#65039;</span> Safety &amp; Techniques</a>
+        <a href="/categories/professional/"><span class="drawer-icon">&#128188;</span> Professional Dev</a>
+        <a href="/categories/faqs/"><span class="drawer-icon">&#10067;</span> FAQs</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Interactive Tools</span>
+        <a href="/tools/instrument-finder.html"><span class="drawer-icon">&#127919;</span> Instrument Finder Quiz</a>
+        <a href="/tools/compare.html"><span class="drawer-icon">&#9878;&#65039;</span> Product Comparison</a>
+        <a href="/tools/safety-calculator.html"><span class="drawer-icon">&#128737;&#65039;</span> Safety Calculator</a>
+        <a href="/tools/power-calculator.html"><span class="drawer-icon">&#9889;</span> Power &amp; Load Calculator</a>
+        <a href="/tools/knowledge-quiz.html"><span class="drawer-icon">&#129504;</span> Knowledge Quiz</a>
+        <a href="/tools/wiring-reference.html"><span class="drawer-icon">&#128268;</span> Wiring Reference</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <a href="/contact.html"><span class="drawer-icon">&#9993;&#65039;</span> Contact Us</a>
+        <a href="https://kinmo.com" target="_blank" rel="noopener"><span class="drawer-icon">&#128722;</span> Visit Shop</a>
+      </div>
+    </div>
+
+    <div class="drawer-theme-toggle" id="drawerThemeToggle">
+      <span class="toggle-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        Dark Mode
+      </span>
+      <span class="toggle-switch"></span>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-footer-item">&#128222; <a href="tel:+639778407799">+63 977 840 7799</a></div>
+      <div class="drawer-footer-item">&#128231; <a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></div>
+      <div class="drawer-footer-item">&#128205; Diliman, Quezon City</div>
+    </div>
+  </aside>
+
+  <script>
+  (function() {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const drawer = document.getElementById('sideDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const closeBtn = document.getElementById('drawerClose');
+    const themeToggle = document.getElementById('drawerThemeToggle');
+
+    if (!hamburger || !drawer) return;
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      hamburger.classList.add('open');
+      document.body.classList.add('drawer-open');
+
+      const currentPath = window.location.pathname;
+      drawer.querySelectorAll('.drawer-nav a').forEach(a => {
+        a.classList.remove('active');
+        const href = a.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '/') ||
+            (currentPath.startsWith(href) && href !== '/' && href.length > 1 && !href.startsWith('http'))) {
+          a.classList.add('active');
+        }
+      });
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    }
+
+    hamburger.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e) {}
+      });
+    }
+  })();
+  </script>
+
+
+  <!-- Hero -->
+  <section class="tool-hero">
+    <div class="container">
+      <h1>Power &amp; Load <span class="hero-accent">Calculator</span></h1>
+      <p>Calculate amperes from kW, transpose voltages, and size motors for any 1P or 3P system &mdash; with wire, breaker, and instrument recommendations.</p>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="calc-tabs" role="tablist">
+    <button class="calc-tab active" data-tab="ptoi" role="tab" aria-selected="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Power &rarr; Current
+    </button>
+    <button class="calc-tab" data-tab="itop" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14l4-6 4 6"/></svg>
+      Current &rarr; Power
+    </button>
+    <button class="calc-tab" data-tab="vt" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
+      Voltage Transposition
+    </button>
+    <button class="calc-tab" data-tab="motor" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+      Motor HP
+    </button>
+  </div>
+
+  <div class="container">
+
+    <!-- ==================== TAB 1: POWER -> CURRENT ==================== -->
+    <div class="calc-panel active" id="panel-ptoi" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Power to Current (kW &rarr; Amperes)</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Convert load power in kilowatts to running current. Live results update as you type.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="ptoiPower">Load Power (kW)</label>
+          <input type="number" id="ptoiPower" value="5" min="0" step="0.1">
+        </div>
+        <div class="form-group">
+          <label for="ptoiVoltage">Voltage System</label>
+          <select id="ptoiVoltage"></select>
+        </div>
+        <div class="form-group">
+          <label for="ptoiPF">Power Factor (cos &phi;)</label>
+          <input type="number" id="ptoiPF" value="0.85" min="0.1" max="1.0" step="0.05">
+          <span class="helper-text">Typical: 0.85 motors, 0.95 lighting, 1.0 resistive</span>
+        </div>
+        <div class="form-group">
+          <label for="ptoiEff">Efficiency (&eta;)</label>
+          <input type="number" id="ptoiEff" value="1.0" min="0.1" max="1.0" step="0.05">
+          <span class="helper-text">Use &lt;1.0 if entering mechanical kW (motor shaft output)</span>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <strong>1-Phase:</strong> I = (P &times; 1000) / (V &times; PF &times; &eta;)<br>
+        <strong>3-Phase:</strong> I = (P &times; 1000) / (&radic;3 &times; V &times; PF &times; &eta;)
+      </div>
+
+      <div id="ptoiResult" class="result-area"></div>
+    </div>
+
+    <!-- ==================== TAB 2: CURRENT -> POWER ==================== -->
+    <div class="calc-panel" id="panel-itop" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Current to Power (Amperes &rarr; kW)</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Reverse calculator &mdash; useful when measuring with a clamp meter and you need real power.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="itopCurrent">Measured Current (A)</label>
+          <input type="number" id="itopCurrent" value="20" min="0" step="0.1">
+        </div>
+        <div class="form-group">
+          <label for="itopVoltage">Voltage System</label>
+          <select id="itopVoltage"></select>
+        </div>
+        <div class="form-group">
+          <label for="itopPF">Power Factor (cos &phi;)</label>
+          <input type="number" id="itopPF" value="0.85" min="0.1" max="1.0" step="0.05">
+          <span class="helper-text">Use a power-quality meter for accurate PF measurement</span>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <strong>1-Phase:</strong> P = V &times; I &times; PF / 1000 (kW)<br>
+        <strong>3-Phase:</strong> P = &radic;3 &times; V &times; I &times; PF / 1000 (kW)
+      </div>
+
+      <div id="itopResult" class="result-area"></div>
+    </div>
+
+    <!-- ==================== TAB 3: VOLTAGE TRANSPOSITION ==================== -->
+    <div class="calc-panel" id="panel-vt" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Voltage Transposition</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Bringing equipment from the US (120V/240V) or EU (230V/400V)? Find the equivalent current at your local PH voltage.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="vtSourceV">Source Voltage System</label>
+          <select id="vtSourceV"></select>
+        </div>
+        <div class="form-group">
+          <label for="vtTargetV">Target Voltage System</label>
+          <select id="vtTargetV"></select>
+        </div>
+      </div>
+
+      <div class="form-group mt-2" style="max-width:800px;">
+        <label>Source Input Type</label>
+        <div class="toggle-pill" id="vtInputToggle">
+          <button type="button" class="active" data-mode="current">Enter Current (A)</button>
+          <button type="button" data-mode="power">Enter Power (kW)</button>
+        </div>
+      </div>
+
+      <div class="calc-grid mt-1">
+        <div class="form-group" id="vtCurrentGroup">
+          <label for="vtSourceI">Source Current (A)</label>
+          <input type="number" id="vtSourceI" value="10" min="0" step="0.1">
+        </div>
+        <div class="form-group hidden" id="vtPowerGroup">
+          <label for="vtSourceP">Source Power (kW)</label>
+          <input type="number" id="vtSourceP" value="2.2" min="0" step="0.1">
+        </div>
+        <div class="form-group">
+          <label for="vtPF">Power Factor (cos &phi;)</label>
+          <input type="number" id="vtPF" value="0.85" min="0.1" max="1.0" step="0.05">
+        </div>
+      </div>
+
+      <button class="calc-btn mt-2" onclick="calculateVT()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
+        Transpose
+      </button>
+
+      <div id="vtResult" class="result-area"></div>
+    </div>
+
+    <!-- ==================== TAB 4: MOTOR HP ==================== -->
+    <div class="calc-panel" id="panel-motor" role="tabpanel">
+      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Motor HP Calculator</h2>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Quick reference for motor full-load amps (FLA), locked-rotor amps (LRA), and starter sizing.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="motorHP">Motor Rating (HP)</label>
+          <select id="motorHP">
+            <option value="0.5">0.5 HP</option>
+            <option value="1">1 HP</option>
+            <option value="2">2 HP</option>
+            <option value="3" selected>3 HP</option>
+            <option value="5">5 HP</option>
+            <option value="7.5">7.5 HP</option>
+            <option value="10">10 HP</option>
+            <option value="15">15 HP</option>
+            <option value="20">20 HP</option>
+            <option value="25">25 HP</option>
+            <option value="30">30 HP</option>
+            <option value="40">40 HP</option>
+            <option value="50">50 HP</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="motorVoltage">Voltage System</label>
+          <select id="motorVoltage"></select>
+        </div>
+        <div class="form-group">
+          <label for="motorEff">Motor Efficiency (&eta;)</label>
+          <input type="number" id="motorEff" value="0.85" min="0.1" max="1.0" step="0.05">
+        </div>
+        <div class="form-group">
+          <label for="motorPF">Motor Power Factor</label>
+          <input type="number" id="motorPF" value="0.85" min="0.1" max="1.0" step="0.05">
+        </div>
+        <div class="form-group">
+          <label for="motorSF">Service Factor</label>
+          <input type="number" id="motorSF" value="1.0" min="1.0" max="1.5" step="0.05">
+          <span class="helper-text">Continuous-duty motors: 1.15. Standard: 1.0</span>
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <strong>FLA (1P):</strong> I = (HP &times; 746) / (V &times; PF &times; &eta;)<br>
+        <strong>FLA (3P):</strong> I = (HP &times; 746) / (&radic;3 &times; V &times; PF &times; &eta;)<br>
+        <strong>LRA &asymp; 6 &times; FLA</strong> (Code G/H letter typical)
+      </div>
+
+      <div id="motorResult" class="result-area"></div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Verify Your Calculations on Site</h2>
+      <p>UNI-T clamp meters and power analyzers from Kinmo &mdash; the official Philippine distributor &mdash; let you measure what you calculated.</p>
+      <a href="https://kinmo.com/product-category/uni-t/" class="btn btn-primary" target="_blank">Shop Clamp Meters</a>
+      <a href="/tools/compare.html" class="btn btn-outline btn-outline-white ml-1">Compare Instruments</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-accent">UNI-T</span> Philippines
+          </a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety &amp; Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+            <li><a href="/rss.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // ===== Back to Top =====
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 300);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== Tab switching =====
+    document.querySelectorAll('.calc-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.calc-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ===== Voltage system definitions =====
+    // phases: 1 or 3, volts: line-to-line for 3P, line-to-neutral for 1P
+    const VOLTAGE_SYSTEMS = [
+      { id: '1p-220', label: '1-Phase 220V (PH residential)', phases: 1, volts: 220, default1: true },
+      { id: '1p-230', label: '1-Phase 230V', phases: 1, volts: 230 },
+      { id: '1p-240', label: '1-Phase 240V', phases: 1, volts: 240 },
+      { id: '3p-220', label: '3-Phase 220V (Delta)', phases: 3, volts: 220 },
+      { id: '3p-230', label: '3-Phase 230V', phases: 3, volts: 230 },
+      { id: '3p-380', label: '3-Phase 380V (PH industrial)', phases: 3, volts: 380, default3: true },
+      { id: '3p-400', label: '3-Phase 400V', phases: 3, volts: 400 },
+      { id: '3p-415', label: '3-Phase 415V', phases: 3, volts: 415 },
+      { id: '3p-440', label: '3-Phase 440V', phases: 3, volts: 440 },
+      { id: '3p-480', label: '3-Phase 480V', phases: 3, volts: 480 },
+    ];
+
+    function findSystem(id) { return VOLTAGE_SYSTEMS.find(s => s.id === id); }
+
+    function populateVoltageSelect(selectId, defaultId) {
+      const sel = document.getElementById(selectId);
+      VOLTAGE_SYSTEMS.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.id;
+        opt.textContent = s.label;
+        if (s.id === defaultId) opt.selected = true;
+        sel.appendChild(opt);
+      });
+    }
+
+    populateVoltageSelect('ptoiVoltage', '1p-220');
+    populateVoltageSelect('itopVoltage', '1p-220');
+    populateVoltageSelect('vtSourceV', '1p-240');   // common US import
+    populateVoltageSelect('vtTargetV', '1p-220');   // PH residential
+    populateVoltageSelect('motorVoltage', '3p-380');
+
+    // ===== Product catalog =====
+    const products = [
+      { name: 'UT210E', cat: 'CAT III 300V', type: 'clamp', img: '/images/products/ut210e.png', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com' },
+      { name: 'UT204+', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/clamp-meter-ut204.png', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT216C', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut216c.png', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.png', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com' },
+      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.png', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com' },
+      { name: 'UT203', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut203.png', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com' },
+    ];
+
+    // ===== Wire & breaker lookup tables =====
+    // Suggested copper conductor (mm²) — PEC-aligned simplified lookup
+    function suggestWireSize(amps) {
+      if (amps <= 15) return '2.5 mm&sup2;';
+      if (amps <= 25) return '4 mm&sup2;';
+      if (amps <= 32) return '6 mm&sup2;';
+      if (amps <= 50) return '10 mm&sup2;';
+      if (amps <= 80) return '16 mm&sup2;';
+      if (amps <= 100) return '25 mm&sup2;';
+      if (amps <= 150) return '35 mm&sup2;';
+      if (amps <= 200) return '50 mm&sup2;';
+      if (amps <= 250) return '70 mm&sup2;';
+      if (amps <= 320) return '95 mm&sup2;';
+      if (amps <= 400) return '120 mm&sup2;';
+      return '150 mm&sup2; or larger';
+    }
+
+    // Standard breaker sizes (IEC) — round up to next available
+    const BREAKER_SIZES = [6, 10, 13, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000];
+    function suggestBreaker(amps) {
+      // Branch circuit conventional: breaker = ceil(1.25 * load) for continuous loads
+      const target = amps;
+      for (let i = 0; i < BREAKER_SIZES.length; i++) {
+        if (BREAKER_SIZES[i] >= target) return BREAKER_SIZES[i];
+      }
+      return BREAKER_SIZES[BREAKER_SIZES.length - 1];
+    }
+
+    // Recommend a clamp meter that can handle the calculated current
+    function suggestClamp(amps) {
+      // Sort by smallest range that still covers
+      const fitted = products
+        .filter(p => p.type === 'clamp' && p.currentRange >= amps * 1.2) // 20% headroom
+        .sort((a, b) => a.currentRange - b.currentRange);
+      return fitted.length ? fitted.slice(0, 3) : products.filter(p => p.type === 'clamp').sort((a, b) => b.currentRange - a.currentRange).slice(0, 3);
+    }
+
+    function clampRecoHTML(amps, heading) {
+      const recos = suggestClamp(amps);
+      if (!recos.length) return '';
+      return `
+        <div class="reco-section">
+          <h3>${heading || 'Recommended UNI-T Clamp Meter'}</h3>
+          <div class="reco-grid">
+            ${recos.map(p => `
+              <div class="reco-card">
+                <img src="${p.img}" alt="${p.name}" loading="lazy">
+                <h4>UNI-T ${p.name}</h4>
+                <p>${p.desc}</p>
+                <span class="reco-cat">Up to ${p.currentRange}A</span>
+                <br><a href="${p.link}" target="_blank">View Product &rarr;</a>
+              </div>
+            `).join('')}
+          </div>
+          <p style="text-align:center;margin-top:1rem;">
+            <a href="/tools/compare.html" style="color:var(--uni-red);font-weight:600;">Compare these instruments side-by-side &rarr;</a>
+          </p>
+        </div>
+      `;
+    }
+
+    // ===== Number formatting =====
+    function fmt(val, decimals) {
+      if (decimals === undefined) decimals = 2;
+      if (val === null || val === undefined || !isFinite(val)) return '&mdash;';
+      return Number(val.toFixed(decimals)).toLocaleString('en-US');
+    }
+
+    // ====================================================================
+    // TAB 1: POWER -> CURRENT
+    // ====================================================================
+    function calcPtoI() {
+      const P = parseFloat(document.getElementById('ptoiPower').value);
+      const sys = findSystem(document.getElementById('ptoiVoltage').value);
+      const PF = parseFloat(document.getElementById('ptoiPF').value);
+      const eta = parseFloat(document.getElementById('ptoiEff').value);
+      const out = document.getElementById('ptoiResult');
+
+      if (isNaN(P) || P < 0 || isNaN(PF) || PF <= 0 || isNaN(eta) || eta <= 0) {
+        out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter valid power, power factor, and efficiency values.</p></div>';
+        return;
+      }
+
+      const V = sys.volts;
+      // 1-Phase: I = (P * 1000) / (V * PF * eta)
+      // 3-Phase: I = (P * 1000) / (sqrt(3) * V * PF * eta)
+      const denom = (sys.phases === 3 ? Math.sqrt(3) : 1) * V * PF * eta;
+      const I = (P * 1000) / denom;
+
+      // Apparent power S = P / PF (kVA)
+      const S = P / PF;
+      // Reactive power Q = sqrt(S^2 - P^2) (kVAR)
+      const Q = Math.sqrt(Math.max(S * S - P * P, 0));
+
+      const wireSize = suggestWireSize(I);
+      const breaker = suggestBreaker(I);
+
+      out.innerHTML = `
+        <div class="result-card primary">
+          <div class="result-label">Calculated Current</div>
+          <div class="big-number">${fmt(I, 2)}<small>A</small></div>
+          <div class="result-explain">
+            ${sys.phases === 1 ? 'Single-phase' : 'Three-phase'} load drawing ${fmt(I, 2)} amperes at ${V}V.
+          </div>
+          <div class="result-row">
+            <div class="result-item">
+              <div class="result-label">Real Power (P)</div>
+              <div class="result-value">${fmt(P, 2)} <small>kW</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Apparent Power (S)</div>
+              <div class="result-value">${fmt(S, 2)} <small>kVA</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Reactive Power (Q)</div>
+              <div class="result-value">${fmt(Q, 2)} <small>kVAR</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-label">Suggested Circuit Sizing</div>
+          <div style="margin-top:0.5rem;">
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10"/></svg>
+              Wire: ${wireSize} (Cu)
+            </span>
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
+              Breaker: ${breaker} A
+            </span>
+          </div>
+          <p class="result-explain" style="margin-top:0.75rem;">
+            Simplified lookup based on PEC ampacity for THHN/THWN copper at 30&deg;C ambient. For long runs, increase one size to limit voltage drop. Always verify with the latest Philippine Electrical Code and consider derating for ambient temperature, conduit fill, and continuous loads (1.25&times; for &gt;3 hour loads).
+          </p>
+        </div>
+
+        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter to Verify')}
+      `;
+    }
+
+    ['ptoiPower', 'ptoiVoltage', 'ptoiPF', 'ptoiEff'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcPtoI);
+      document.getElementById(id).addEventListener('change', calcPtoI);
+    });
+    calcPtoI();
+
+    // ====================================================================
+    // TAB 2: CURRENT -> POWER
+    // ====================================================================
+    function calcItoP() {
+      const I = parseFloat(document.getElementById('itopCurrent').value);
+      const sys = findSystem(document.getElementById('itopVoltage').value);
+      const PF = parseFloat(document.getElementById('itopPF').value);
+      const out = document.getElementById('itopResult');
+
+      if (isNaN(I) || I < 0 || isNaN(PF) || PF <= 0) {
+        out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter a valid current and power factor.</p></div>';
+        return;
+      }
+
+      const V = sys.volts;
+      // 1-Phase: P = V * I * PF / 1000 (kW)
+      // 3-Phase: P = sqrt(3) * V * I * PF / 1000 (kW)
+      const k = sys.phases === 3 ? Math.sqrt(3) : 1;
+      const P = (k * V * I * PF) / 1000;
+      const S = (k * V * I) / 1000; // kVA
+      const Q = Math.sqrt(Math.max(S * S - P * P, 0));
+
+      out.innerHTML = `
+        <div class="result-card primary">
+          <div class="result-label">Real Power Drawn</div>
+          <div class="big-number">${fmt(P, 3)}<small>kW</small></div>
+          <div class="result-explain">
+            ${sys.phases === 1 ? 'Single-phase' : 'Three-phase'} load at ${V}V drawing ${fmt(I, 2)}A with PF ${PF}.
+          </div>
+          <div class="result-row">
+            <div class="result-item">
+              <div class="result-label">Real Power (P)</div>
+              <div class="result-value">${fmt(P, 3)} <small>kW</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Apparent Power (S)</div>
+              <div class="result-value">${fmt(S, 3)} <small>kVA</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Reactive Power (Q)</div>
+              <div class="result-value">${fmt(Q, 3)} <small>kVAR</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout info">
+          <span class="callout-icon">&#128161;</span>
+          <div>For accurate kW measurement on inductive loads (motors, transformers, ballasts), measure power factor with a true power meter. Assumed PF can be off by 20-30% for unloaded motors.</div>
+        </div>
+
+        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter for This Range')}
+      `;
+    }
+
+    ['itopCurrent', 'itopVoltage', 'itopPF'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcItoP);
+      document.getElementById(id).addEventListener('change', calcItoP);
+    });
+    calcItoP();
+
+    // ====================================================================
+    // TAB 3: VOLTAGE TRANSPOSITION
+    // ====================================================================
+    let vtMode = 'current'; // 'current' or 'power'
+    document.querySelectorAll('#vtInputToggle button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#vtInputToggle button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        vtMode = btn.dataset.mode;
+        document.getElementById('vtCurrentGroup').classList.toggle('hidden', vtMode !== 'current');
+        document.getElementById('vtPowerGroup').classList.toggle('hidden', vtMode !== 'power');
+      });
+    });
+
+    function calculateVT() {
+      const src = findSystem(document.getElementById('vtSourceV').value);
+      const tgt = findSystem(document.getElementById('vtTargetV').value);
+      const PF = parseFloat(document.getElementById('vtPF').value);
+      const out = document.getElementById('vtResult');
+
+      if (isNaN(PF) || PF <= 0) {
+        out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter a valid power factor.</p></div>';
+        return;
+      }
+
+      const kSrc = src.phases === 3 ? Math.sqrt(3) : 1;
+      const kTgt = tgt.phases === 3 ? Math.sqrt(3) : 1;
+
+      let P_kW, sourceI;
+      if (vtMode === 'current') {
+        sourceI = parseFloat(document.getElementById('vtSourceI').value);
+        if (isNaN(sourceI) || sourceI < 0) {
+          out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter a valid source current.</p></div>';
+          return;
+        }
+        // P = k * V * I * PF / 1000  (kW)
+        P_kW = (kSrc * src.volts * sourceI * PF) / 1000;
+      } else {
+        P_kW = parseFloat(document.getElementById('vtSourceP').value);
+        if (isNaN(P_kW) || P_kW < 0) {
+          out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter a valid source power.</p></div>';
+          return;
+        }
+        // I = (P * 1000) / (k * V * PF)
+        sourceI = (P_kW * 1000) / (kSrc * src.volts * PF);
+      }
+
+      // Target current for the same power
+      const targetI = (P_kW * 1000) / (kTgt * tgt.volts * PF);
+      const ratio = targetI / sourceI;
+
+      const tgtWire = suggestWireSize(targetI);
+      const tgtBreaker = suggestBreaker(targetI);
+
+      let warning = '';
+      if (targetI > 200) {
+        warning = `<div class="callout danger">
+          <span class="callout-icon">&#9888;&#65039;</span>
+          <div><strong>Heads up:</strong> Target current of ${fmt(targetI, 1)}A exceeds typical residential breaker sizes. You will need industrial-grade breakers (${tgtBreaker}A+) and properly sized feeders.</div>
+        </div>`;
+      } else if (targetI > 100) {
+        warning = `<div class="callout">
+          <span class="callout-icon">&#9888;&#65039;</span>
+          <div>Target current ${fmt(targetI, 1)}A requires a ${tgtBreaker}A breaker &mdash; verify your panel can accept this branch and that wiring meets the suggested ${tgtWire} cross-section.</div>
+        </div>`;
+      }
+
+      let phaseWarning = '';
+      if (src.phases !== tgt.phases) {
+        phaseWarning = `<div class="callout">
+          <span class="callout-icon">&#128268;</span>
+          <div><strong>Phase change:</strong> Going from ${src.phases}-phase to ${tgt.phases}-phase. The equipment must be physically rewired or replaced &mdash; not just connected differently. A ${tgt.phases}-phase circuit cannot directly run ${src.phases}-phase equipment.</div>
+        </div>`;
+      }
+
+      out.innerHTML = `
+        <div class="result-card primary">
+          <div class="result-label">Equivalent Power (Constant)</div>
+          <div class="big-number">${fmt(P_kW, 3)}<small>kW</small></div>
+          <div class="result-explain">Real power stays constant when you transpose voltages &mdash; only the current changes.</div>
+
+          <hr class="section-divider">
+
+          <div class="vt-compare">
+            <div class="vt-side">
+              <h4>Source</h4>
+              <div class="vt-volts">${src.label}</div>
+              <div class="vt-current">${fmt(sourceI, 2)}<small> A</small></div>
+            </div>
+            <div class="vt-arrow">&rarr;</div>
+            <div class="vt-side target">
+              <h4>Target (PH)</h4>
+              <div class="vt-volts">${tgt.label}</div>
+              <div class="vt-current">${fmt(targetI, 2)}<small> A</small></div>
+            </div>
+          </div>
+
+          <p class="result-explain" style="text-align:center;margin-top:1rem;">
+            <strong style="color:var(--uni-red);">${ratio >= 1 ? fmt(ratio, 2) + '&times; more' : fmt(1 / ratio, 2) + '&times; less'}</strong>
+            current at ${tgt.volts}V vs ${src.volts}V
+          </p>
+        </div>
+
+        ${phaseWarning}
+        ${warning}
+
+        <div class="result-card">
+          <div class="result-label">Target Circuit Sizing (${tgt.volts}V)</div>
+          <div style="margin-top:0.5rem;">
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10"/></svg>
+              Wire: ${tgtWire}
+            </span>
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
+              Breaker: ${tgtBreaker} A
+            </span>
+          </div>
+          <p class="result-explain" style="margin-top:0.75rem;">
+            Lower-voltage equipment running at higher voltage may overheat or destroy windings. Higher-voltage equipment running at lower voltage will under-perform or stall under load. Always check the equipment nameplate for permitted voltage range (typically &plusmn;10%).
+          </p>
+        </div>
+
+        ${clampRecoHTML(targetI, 'Recommended Clamp Meter for ' + fmt(targetI, 0) + 'A')}
+      `;
+    }
+
+    // ====================================================================
+    // TAB 4: MOTOR HP
+    // ====================================================================
+    function calcMotor() {
+      const HP = parseFloat(document.getElementById('motorHP').value);
+      const sys = findSystem(document.getElementById('motorVoltage').value);
+      const eta = parseFloat(document.getElementById('motorEff').value);
+      const PF = parseFloat(document.getElementById('motorPF').value);
+      const SF = parseFloat(document.getElementById('motorSF').value);
+      const out = document.getElementById('motorResult');
+
+      if (isNaN(HP) || HP <= 0 || isNaN(eta) || eta <= 0 || isNaN(PF) || PF <= 0 || isNaN(SF) || SF < 1) {
+        out.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary);font-weight:600;">Enter valid motor parameters.</p></div>';
+        return;
+      }
+
+      // FLA (Full Load Amps)
+      // 1P: FLA = (HP * 746) / (V * PF * eta)
+      // 3P: FLA = (HP * 746) / (sqrt(3) * V * PF * eta)
+      const k = sys.phases === 3 ? Math.sqrt(3) : 1;
+      const FLA = (HP * 746) / (k * sys.volts * PF * eta);
+
+      // Service factor amps
+      const SFA = FLA * SF;
+
+      // LRA — locked-rotor amps, NEC code letter G typical 6x FLA
+      const LRA = FLA * 6;
+
+      // NEC 430 sizing: branch-circuit short-circuit & ground-fault protection
+      // Inverse-time breaker = 250% of FLA
+      const breakerRaw = FLA * 2.5;
+      const breaker = suggestBreaker(breakerRaw);
+
+      // Conductor sized for 125% of FLA
+      const wireAmps = FLA * 1.25;
+      const wireSize = suggestWireSize(wireAmps);
+
+      // Recommended starter size — based on FLA buckets
+      let starter;
+      if (FLA <= 9) starter = 'NEMA Size 00 / IEC 6A';
+      else if (FLA <= 18) starter = 'NEMA Size 0 / IEC 12A';
+      else if (FLA <= 27) starter = 'NEMA Size 1 / IEC 18A';
+      else if (FLA <= 45) starter = 'NEMA Size 2 / IEC 32A';
+      else if (FLA <= 90) starter = 'NEMA Size 3 / IEC 65A';
+      else if (FLA <= 135) starter = 'NEMA Size 4 / IEC 95A';
+      else if (FLA <= 270) starter = 'NEMA Size 5 / IEC 185A';
+      else starter = 'NEMA Size 6 or larger / Soft-starter / VFD';
+
+      const kW_input = (HP * 0.746) / eta;
+
+      out.innerHTML = `
+        <div class="result-card primary">
+          <div class="result-label">Full Load Current (FLA)</div>
+          <div class="big-number">${fmt(FLA, 2)}<small>A</small></div>
+          <div class="result-explain">
+            ${HP} HP ${sys.phases === 1 ? 'single-phase' : 'three-phase'} motor at ${sys.volts}V running at full mechanical load.
+          </div>
+          <div class="result-row">
+            <div class="result-item">
+              <div class="result-label">Locked Rotor (LRA)</div>
+              <div class="result-value">${fmt(LRA, 1)} <small>A</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Service Factor Amps</div>
+              <div class="result-value">${fmt(SFA, 2)} <small>A</small></div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Input Power</div>
+              <div class="result-value">${fmt(kW_input, 2)} <small>kW</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-label">NEC 430-Compliant Sizing</div>
+          <div style="margin-top:0.75rem;">
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10"/></svg>
+              Conductor: ${wireSize} (125% &times; FLA = ${fmt(wireAmps, 1)}A)
+            </span>
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
+              Inverse-Time Breaker: ${breaker}A (250% &times; FLA)
+            </span>
+            <span class="spec-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+              Starter: ${starter}
+            </span>
+          </div>
+          <p class="result-explain" style="margin-top:0.75rem;">
+            <strong>NEC Article 430</strong> requires conductors sized at 125% of motor FLA. Inverse-time breakers may go up to 250% of FLA (or 400% for non-time-delay fuses) for short-circuit and ground-fault protection &mdash; not overload. Overload protection is set at 115-125% of nameplate FLA in the starter.
+          </p>
+        </div>
+
+        <div class="callout info">
+          <span class="callout-icon">&#128161;</span>
+          <div><strong>Inrush:</strong> The ${fmt(LRA, 0)}A locked-rotor current lasts only a few cycles during start. Use Type D MCBs or motor-rated breakers, or step up to a soft-starter / VFD if frequent starts cause nuisance trips.</div>
+        </div>
+
+        ${clampRecoHTML(LRA, 'Recommended Clamp Meter (sized for inrush)')}
+      `;
+    }
+
+    ['motorHP', 'motorVoltage', 'motorEff', 'motorPF', 'motorSF'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcMotor);
+      document.getElementById(id).addEventListener('change', calcMotor);
+    });
+    calcMotor();
+
+  </script>
+</body>
+</html>

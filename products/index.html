@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete UNI-T Product Catalog | UNI-T Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="/images/brand/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/brand/favicon.svg">
+  <meta name="description" content="Browse the complete UNI-T product catalog: 163 test instruments across 21 categories. Multimeters, clamp meters, thermal imagers, oscilloscopes and more. Buy direct from Kinmo, the official Philippine distributor.">
+
+  <meta property="og:title" content="Complete UNI-T Product Catalog | UNI-T Philippines">
+  <meta property="og:description" content="163 UNI-T test instruments across 21 categories. Find your model and buy from the official Philippine distributor.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* ===== Catalog page styles ===== */
+
+    /* Hero */
+    .catalog-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 4rem 0 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .catalog-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 20%, rgba(227,30,36,0.15), transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04), transparent 50%);
+      pointer-events: none;
+    }
+    .catalog-hero .container { position: relative; z-index: 1; }
+    .catalog-hero .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(227, 30, 36, 0.15);
+      border: 1px solid rgba(227, 30, 36, 0.4);
+      color: #ff8a8e;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .catalog-hero .pill-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--uni-red);
+      box-shadow: 0 0 0 4px rgba(227,30,36,0.25);
+    }
+    .catalog-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.85rem, 4.5vw, 2.85rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+    .catalog-hero h1 .accent { color: var(--uni-red); }
+    .catalog-hero p {
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* Featured categories tiles */
+    .featured-cats {
+      padding: 2.5rem 0 1rem;
+    }
+    .featured-cats h2 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    .featured-cats .sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.85rem;
+    }
+    @media (max-width: 1024px) { .feat-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 540px)  { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+    .feat-tile {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.25rem 0.85rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .feat-tile:hover {
+      transform: translateY(-3px);
+      border-color: var(--uni-red);
+      box-shadow: var(--shadow-md);
+    }
+    .feat-tile .icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .feat-tile .name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .feat-tile .count {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Filter bar (sticky) */
+    .filter-bar {
+      position: sticky;
+      top: 70px;
+      z-index: 50;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      margin-top: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    [data-theme="dark"] .filter-bar { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.85rem 2.75rem 0.85rem 2.75rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--uni-red);
+      box-shadow: 0 0 0 3px rgba(227,30,36,0.12);
+    }
+    .search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: none;
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .search-clear:hover { background: var(--uni-red); color: #fff; }
+    .search-clear.visible { display: flex; }
+
+    .sort-wrap {
+      position: relative;
+    }
+    .sort-select {
+      padding: 0.85rem 2.5rem 0.85rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+    }
+    .sort-select:focus { outline: none; border-color: var(--uni-red); }
+
+    /* Category pills */
+    .cat-pills-scroll {
+      margin-top: 0.85rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .cat-pills-scroll::-webkit-scrollbar { display: none; }
+    .cat-pills {
+      display: flex;
+      gap: 0.5rem;
+      padding-bottom: 0.25rem;
+      flex-wrap: nowrap;
+      width: max-content;
+    }
+    .cat-pill {
+      padding: 0.5rem 0.95rem;
+      border: 1.5px solid var(--border-color);
+      border-radius: 999px;
+      background: var(--card-bg);
+      color: var(--text-secondary);
+      font-family: var(--font-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .cat-pill:hover {
+      border-color: var(--uni-red);
+      color: var(--uni-red);
+    }
+    .cat-pill.active {
+      background: var(--uni-red);
+      border-color: var(--uni-red);
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(227,30,36,0.25);
+    }
+    .cat-pill .count {
+      opacity: 0.7;
+      font-weight: 600;
+      margin-left: 0.25rem;
+    }
+    .cat-pill.active .count { opacity: 0.85; }
+
+    /* Result meta */
+    .result-meta {
+      padding: 1.25rem 0 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .result-meta strong { color: var(--text-primary); font-weight: 700; }
+
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      padding: 1rem 0 3rem;
+    }
+    @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 780px)  { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px)  { .product-grid { grid-template-columns: 1fr; } }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      animation: cardFade 0.35s ease both;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--uni-red);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    }
+    [data-theme="dark"] .product-card:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
+
+    @keyframes cardFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-img-wrap {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .card-img-wrap { background: #f8f8f8; }
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0.75rem;
+      transition: transform 0.3s;
+    }
+    .product-card:hover .card-img-wrap img { transform: scale(1.04); }
+
+    .img-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #E31E24 0%, #B8181D 100%);
+      letter-spacing: -0.04em;
+    }
+
+    .cat-tag {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(26,26,26,0.85);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+      max-width: calc(100% - 1.5rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .card-body {
+      padding: 1rem 1.1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-model {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .chip {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.22rem 0.55rem;
+      border-radius: 4px;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      line-height: 1.2;
+    }
+    .card-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .card-btn {
+      flex: 1;
+      text-align: center;
+      padding: 0.65rem 0.5rem;
+      border-radius: var(--border-radius);
+      font-size: 0.83rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      font-family: var(--font-main);
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+    }
+    .card-btn-primary {
+      background: var(--uni-red);
+      color: #fff;
+      border-color: var(--uni-red);
+    }
+    .card-btn-primary:hover {
+      background: var(--uni-red-dark);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(227,30,36,0.3);
+    }
+    .card-btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+    .card-btn-secondary:hover {
+      border-color: var(--uni-red);
+      color: var(--uni-red);
+    }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      background: var(--card-bg);
+      border: 1px dashed var(--border-color);
+      border-radius: var(--border-radius-lg);
+    }
+    .empty-state .icon {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.5;
+    }
+    .empty-state h3 {
+      font-family: var(--font-heading);
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .empty-state p {
+      color: var(--text-muted);
+      max-width: 400px;
+      margin: 0 auto 1.25rem;
+    }
+    .empty-state .calc-btn,
+    .empty-state .reset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--uni-red);
+      color: #fff;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .empty-state .reset-btn:hover { background: var(--uni-red-dark); }
+
+    /* Loading skeleton */
+    .skeleton-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      padding: 1rem 0 3rem;
+    }
+    @media (max-width: 1100px) { .skeleton-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 780px)  { .skeleton-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px)  { .skeleton-grid { grid-template-columns: 1fr; } }
+    .skeleton-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      height: 380px;
+    }
+    .skeleton-card::before {
+      content: '';
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.05), transparent);
+      animation: shimmer 1.5s infinite;
+    }
+    [data-theme="dark"] .skeleton-card::before {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    }
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Bottom CTA */
+    .bottom-cta {
+      padding: 3rem 0 4rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+    .bottom-cta h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .bottom-cta .lead {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 780px) { .cta-grid { grid-template-columns: 1fr; } }
+    .cta-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.25s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .cta-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--uni-red);
+      box-shadow: var(--shadow-md);
+    }
+    .cta-card .icon { font-size: 2.2rem; }
+    .cta-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      margin: 0;
+      color: var(--text-primary);
+    }
+    .cta-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0 0 0.5rem;
+      line-height: 1.5;
+    }
+    .cta-card .arrow {
+      font-weight: 700;
+      color: var(--uni-red);
+      font-size: 0.9rem;
+    }
+
+    /* Tighter container on small screens */
+    @media (max-width: 540px) {
+      .container { padding: 0 1rem; }
+      .catalog-hero { padding: 3rem 0 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-accent">UNI-T</span> Philippines
+      </a>
+      <span class="distributor-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Official Distributor
+      </span>
+      <nav class="nav">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Side Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="side-drawer" id="sideDrawer" aria-label="Site navigation">
+    <div class="drawer-header">
+      <div class="drawer-title"><span class="accent">UNI-T</span> Philippines</div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-nav">
+      <div class="drawer-section">
+        <a href="/"><span class="drawer-icon">&#127968;</span> Home</a>
+        <a href="/posts/"><span class="drawer-icon">&#128240;</span> All Posts</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Guides</span>
+        <a href="/categories/equipment-guides/"><span class="drawer-icon">&#128736;&#65039;</span> Equipment Guides</a>
+        <a href="/categories/safety-techniques/"><span class="drawer-icon">&#9888;&#65039;</span> Safety &amp; Techniques</a>
+        <a href="/categories/professional/"><span class="drawer-icon">&#128188;</span> Professional Dev</a>
+        <a href="/categories/faqs/"><span class="drawer-icon">&#10067;</span> FAQs</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Browse</span>
+        <a href="/products/"><span class="drawer-icon">&#128230;</span> All Products</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Interactive Tools</span>
+        <a href="/tools/instrument-finder.html"><span class="drawer-icon">&#127919;</span> Instrument Finder Quiz</a>
+        <a href="/tools/compare.html"><span class="drawer-icon">&#9878;&#65039;</span> Product Comparison</a>
+        <a href="/tools/safety-calculator.html"><span class="drawer-icon">&#128737;&#65039;</span> Safety Calculator</a>
+        <a href="/tools/power-calculator.html"><span class="drawer-icon">&#9889;</span> Power &amp; Load Calculator</a>
+        <a href="/tools/knowledge-quiz.html"><span class="drawer-icon">&#129504;</span> Knowledge Quiz</a>
+        <a href="/tools/wiring-reference.html"><span class="drawer-icon">&#128268;</span> Wiring Reference</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <a href="/contact.html"><span class="drawer-icon">&#9993;&#65039;</span> Contact Us</a>
+        <a href="https://kinmo.com" target="_blank" rel="noopener"><span class="drawer-icon">&#128722;</span> Visit Shop</a>
+      </div>
+    </div>
+
+    <div class="drawer-theme-toggle" id="drawerThemeToggle">
+      <span class="toggle-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        Dark Mode
+      </span>
+      <span class="toggle-switch"></span>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-footer-item">&#128222; <a href="tel:+639778407799">+63 977 840 7799</a></div>
+      <div class="drawer-footer-item">&#128231; <a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></div>
+      <div class="drawer-footer-item">&#128205; Diliman, Quezon City</div>
+    </div>
+  </aside>
+
+  <script>
+  (function() {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const drawer = document.getElementById('sideDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const closeBtn = document.getElementById('drawerClose');
+    const themeToggle = document.getElementById('drawerThemeToggle');
+
+    if (!hamburger || !drawer) return;
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      hamburger.classList.add('open');
+      document.body.classList.add('drawer-open');
+
+      const currentPath = window.location.pathname;
+      drawer.querySelectorAll('.drawer-nav a').forEach(a => {
+        a.classList.remove('active');
+        const href = a.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '/') ||
+            (currentPath.startsWith(href) && href !== '/' && href.length > 1 && !href.startsWith('http'))) {
+          a.classList.add('active');
+        }
+      });
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    }
+
+    hamburger.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e) {}
+      });
+    }
+  })();
+  </script>
+
+
+  <!-- Hero -->
+  <section class="catalog-hero">
+    <div class="container">
+      <span class="pill-badge">163 Products</span>
+      <h1>Complete UNI-T <span class="accent">Product Catalog</span></h1>
+      <p>Browse every UNI-T test instrument across 21 categories. Click any product to find it on Kinmo.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Featured categories -->
+    <section class="featured-cats">
+      <h2>Featured Categories</h2>
+      <p class="sub">Jump straight to the most-requested instrument families.</p>
+      <div class="feat-grid" id="featuredGrid"></div>
+    </section>
+  </div>
+
+  <!-- Sticky filter bar -->
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-row">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by model number (e.g. UT61E+, UTi260B)..." autocomplete="off">
+          <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
+        </div>
+        <div class="sort-wrap">
+          <select id="sortSelect" class="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="az">A &ndash; Z</option>
+            <option value="za">Z &ndash; A</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+      <div class="cat-pills-scroll">
+        <div class="cat-pills" id="catPills"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="result-meta" id="resultMeta">
+      <span><strong id="resultCount">0</strong> products</span>
+      <span id="activeFilter"></span>
+    </div>
+
+    <div class="skeleton-grid" id="skeletonGrid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+
+    <div class="product-grid" id="productGrid" style="display:none;"></div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <h2>Need Help Finding the Right Tool?</h2>
+      <p class="lead">Our interactive tools and team are here to make the choice easy.</p>
+      <div class="cta-grid">
+        <a href="/contact.html" class="cta-card">
+          <span class="icon">&#9993;&#65039;</span>
+          <h3>Can't find what you need?</h3>
+          <p>Reach out to Kinmo and we'll help you source the right UNI-T instrument.</p>
+          <span class="arrow">Contact us &rarr;</span>
+        </a>
+        <a href="/tools/compare.html" class="cta-card">
+          <span class="icon">&#9878;&#65039;</span>
+          <h3>Looking to compare products?</h3>
+          <p>Stack any UNI-T instruments side-by-side on specs, features, and price tier.</p>
+          <span class="arrow">Open comparison tool &rarr;</span>
+        </a>
+        <a href="/tools/instrument-finder.html" class="cta-card">
+          <span class="icon">&#127919;</span>
+          <h3>Need help choosing?</h3>
+          <p>Take a 60-second quiz and we'll recommend the best instrument for your work.</p>
+          <span class="arrow">Start the quiz &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-accent">UNI-T</span> Philippines
+          </a>
+          <p class="footer-description">Your trusted source for professional test instruments. Expert guides and resources for Filipino technicians, engineers, and institutions.</p>
+          <p class="footer-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Official Philippine Distributor
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
+            <li><a href="/categories/safety-techniques/">Safety &amp; Techniques</a></li>
+            <li><a href="/categories/professional/">Professional Development</a></li>
+            <li><a href="/categories/faqs/">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/products/">All Products</a></li>
+            <li><a href="/posts/">All Articles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
+            <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
+            <li><a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+
+  <script>
+    // ===== Back to top =====
+    (function() {
+      const btn = document.getElementById('backToTop');
+      if (!btn) return;
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.scrollY > 300);
+      });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    // ===== Catalog logic =====
+    (function() {
+      // Featured tiles config (per spec: 6 tiles with given icons)
+      const FEATURED = [
+        { id: 'multimeters',        emoji: '\uD83D\uDD0C', label: 'Multimeters' },
+        { id: 'clamp-meters',       emoji: '\u26A1',        label: 'Clamp Meters' },
+        { id: 'thermal-imagers',    emoji: '\uD83C\uDF21\uFE0F', label: 'Thermal Imagers' },
+        { id: 'insulation-testers', emoji: '\uD83D\uDEE1\uFE0F', label: 'Insulation Testers' },
+        { id: 'oscilloscopes',      emoji: '\uD83D\uDCCA', label: 'Oscilloscopes' },
+        { id: 'environmental',      emoji: '\uD83D\uDCA7', label: 'Environmental' }
+      ];
+
+      // Map category id -> emoji for cat-tag icons (covers all 21)
+      const CAT_EMOJI = {
+        'multimeters':           '\uD83D\uDD0C',
+        'clamp-meters':          '\u26A1',
+        'voltage-detectors':     '\uD83D\uDD0D',
+        'insulation-testers':    '\uD83D\uDEE1\uFE0F',
+        'earth-resistance':      '\uD83C\uDF0D',
+        'thermal-imagers':       '\uD83C\uDF21\uFE0F',
+        'infrared-thermometers': '\uD83D\uDCC8',
+        'battery-testers':       '\uD83D\uDD0B',
+        'cable-testers':         '\uD83D\uDD17',
+        'power-quality':         '\uD83D\uDCCA',
+        'process-calibrators':   '\uD83D\uDEE0\uFE0F',
+        'environmental':         '\uD83D\uDCA7',
+        'lcr-meters':            '\uD83D\uDD2C',
+        'oscilloscopes':         '\uD83D\uDCC9',
+        'function-generators':   '\uD83C\uDFB6',
+        'dc-power-supplies':     '\uD83D\uDD0C',
+        'electrical-power-tools':'\uD83D\uDD27',
+        'borescopes':            '\uD83D\uDD2D',
+        'laser-distance':        '\uD83D\uDCCF',
+        'socket-testers':        '\uD83D\uDD0C',
+        'solar-mppt':            '\u2600\uFE0F'
+      };
+
+      // State
+      let allProducts = [];      // flattened
+      let categoriesMeta = [];   // [{id, name, count, emoji}]
+      let activeCategory = 'all';
+      let activeSearch = '';
+      let activeSort = 'featured';
+      let searchTimer = null;
+
+      // DOM refs
+      const featuredGrid = document.getElementById('featuredGrid');
+      const catPillsEl   = document.getElementById('catPills');
+      const grid         = document.getElementById('productGrid');
+      const skeleton     = document.getElementById('skeletonGrid');
+      const searchInput  = document.getElementById('searchInput');
+      const searchClear  = document.getElementById('searchClear');
+      const sortSelect   = document.getElementById('sortSelect');
+      const resultCount  = document.getElementById('resultCount');
+      const activeFilter = document.getElementById('activeFilter');
+
+      // ----- Init -----
+      function init() {
+        readUrlState();
+        loadCatalog();
+      }
+
+      function readUrlState() {
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('category');
+        const q   = params.get('search');
+        const s   = params.get('sort');
+        if (cat) activeCategory = cat;
+        if (q)   activeSearch = q;
+        if (s)   activeSort = s;
+
+        if (activeSearch) {
+          searchInput.value = activeSearch;
+          searchClear.classList.add('visible');
+        }
+        if (['featured','az','za','newest'].includes(activeSort)) {
+          sortSelect.value = activeSort;
+        }
+      }
+
+      function writeUrlState(replace) {
+        const params = new URLSearchParams();
+        if (activeCategory && activeCategory !== 'all') params.set('category', activeCategory);
+        if (activeSearch) params.set('search', activeSearch);
+        if (activeSort && activeSort !== 'featured') params.set('sort', activeSort);
+        const q = params.toString();
+        const url = window.location.pathname + (q ? '?' + q : '');
+        if (replace) {
+          history.replaceState(null, '', url);
+        } else {
+          history.pushState(null, '', url);
+        }
+      }
+
+      async function loadCatalog() {
+        try {
+          const res = await fetch('/content/products-catalog.json', { cache: 'force-cache' });
+          if (!res.ok) throw new Error('Failed to load catalog');
+          const data = await res.json();
+
+          const out = [];
+          data.categories.forEach((cat, catIdx) => {
+            categoriesMeta.push({
+              id: cat.id,
+              name: cat.name,
+              count: (cat.products || []).length,
+              emoji: CAT_EMOJI[cat.id] || '\uD83D\uDD0E'
+            });
+            (cat.products || []).forEach((p, idx) => {
+              out.push({
+                model: p.model,
+                category: p.category,
+                categoryId: cat.id,
+                subcategory: p.subcategory || '',
+                description: p.description || '',
+                image: p.image,
+                officialUrl: p.officialUrl,
+                kinmoSearchUrl: p.kinmoSearchUrl,
+                keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
+                source: p.source || 'scraped',
+                _featuredOrder: catIdx * 1000 + idx,
+                // Newer products sit later in their category arrays — approximate by reverse insert order
+                _newestOrder: (data.categories.length - catIdx) * 1000 + (cat.products.length - idx)
+              });
+            });
+          });
+          allProducts = out;
+
+          renderFeatured();
+          renderPills();
+          skeleton.style.display = 'none';
+          grid.style.display = 'grid';
+          render();
+        } catch (err) {
+          console.error(err);
+          skeleton.style.display = 'none';
+          grid.style.display = 'grid';
+          grid.innerHTML = `
+            <div class="empty-state">
+              <div class="icon">&#9888;&#65039;</div>
+              <h3>Couldn't load the catalog</h3>
+              <p>Please refresh the page. If the problem persists, contact us and we'll help you find the right product.</p>
+              <a href="/contact.html" class="reset-btn">Contact Kinmo</a>
+            </div>`;
+        }
+      }
+
+      // ----- Featured tiles -----
+      function renderFeatured() {
+        const frag = document.createDocumentFragment();
+        FEATURED.forEach(f => {
+          const meta = categoriesMeta.find(c => c.id === f.id);
+          const count = meta ? meta.count : 0;
+          const tile = document.createElement('div');
+          tile.className = 'feat-tile';
+          tile.setAttribute('role', 'button');
+          tile.setAttribute('tabindex', '0');
+          tile.dataset.cat = f.id;
+          tile.innerHTML = `
+            <span class="icon" aria-hidden="true">${f.emoji}</span>
+            <span class="name">${f.label}</span>
+            <span class="count">${count} products</span>
+          `;
+          tile.addEventListener('click', () => selectCategory(f.id, true));
+          tile.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectCategory(f.id, true); }
+          });
+          frag.appendChild(tile);
+        });
+        featuredGrid.innerHTML = '';
+        featuredGrid.appendChild(frag);
+      }
+
+      // ----- Category pills -----
+      function renderPills() {
+        const frag = document.createDocumentFragment();
+        const all = document.createElement('button');
+        all.className = 'cat-pill' + (activeCategory === 'all' ? ' active' : '');
+        all.dataset.cat = 'all';
+        all.innerHTML = `All Products <span class="count">(${allProducts.length})</span>`;
+        all.addEventListener('click', () => selectCategory('all'));
+        frag.appendChild(all);
+
+        categoriesMeta.forEach(c => {
+          const btn = document.createElement('button');
+          btn.className = 'cat-pill' + (activeCategory === c.id ? ' active' : '');
+          btn.dataset.cat = c.id;
+          btn.innerHTML = `${c.name} <span class="count">(${c.count})</span>`;
+          btn.addEventListener('click', () => selectCategory(c.id));
+          frag.appendChild(btn);
+        });
+
+        catPillsEl.innerHTML = '';
+        catPillsEl.appendChild(frag);
+      }
+
+      function selectCategory(id, scrollToGrid) {
+        activeCategory = id;
+        // Update pill active state without rebuilding
+        catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.cat === id);
+        });
+        writeUrlState();
+        render();
+        if (scrollToGrid) {
+          // scroll so the filter bar (which is sticky at top:70) lands at top of viewport
+          const target = document.querySelector('.filter-bar');
+          if (target) {
+            const y = target.getBoundingClientRect().top + window.scrollY - 70;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      }
+
+      // ----- Filter / sort -----
+      function getFiltered() {
+        const q = activeSearch.trim().toLowerCase();
+        let list = allProducts;
+        if (activeCategory !== 'all') {
+          list = list.filter(p => p.categoryId === activeCategory);
+        }
+        if (q) {
+          list = list.filter(p =>
+            p.model.toLowerCase().includes(q) ||
+            p.category.toLowerCase().includes(q) ||
+            (p.subcategory && p.subcategory.toLowerCase().includes(q)) ||
+            (p.description && p.description.toLowerCase().includes(q)) ||
+            p.keySpecs.some(s => s.toLowerCase().includes(q))
+          );
+        }
+        switch (activeSort) {
+          case 'az':       list = list.slice().sort((a, b) => a.model.localeCompare(b.model)); break;
+          case 'za':       list = list.slice().sort((a, b) => b.model.localeCompare(a.model)); break;
+          case 'newest':   list = list.slice().sort((a, b) => b._newestOrder - a._newestOrder); break;
+          case 'featured':
+          default:         list = list.slice().sort((a, b) => a._featuredOrder - b._featuredOrder); break;
+        }
+        return list;
+      }
+
+      // ----- Card renderer -----
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[c]));
+      }
+
+      function buildCard(p) {
+        const card = document.createElement('article');
+        card.className = 'product-card';
+
+        const safeModel  = escapeHtml(p.model);
+        const safeCat    = escapeHtml(p.category);
+        const safeDesc   = escapeHtml(p.description);
+        const fallbackLetter = (p.model || '?').replace(/[^A-Za-z0-9]/g, '').charAt(0).toUpperCase() || '?';
+
+        // Image with onerror fallback
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'card-img-wrap';
+
+        const tag = document.createElement('span');
+        tag.className = 'cat-tag';
+        const emoji = CAT_EMOJI[p.categoryId] || '';
+        tag.textContent = (emoji ? emoji + ' ' : '') + p.category;
+        imgWrap.appendChild(tag);
+
+        if (p.image) {
+          const img = document.createElement('img');
+          img.src = p.image;
+          img.alt = `UNI-T ${p.model}`;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.referrerPolicy = 'no-referrer';
+          img.onerror = function() {
+            const fb = document.createElement('div');
+            fb.className = 'img-fallback';
+            fb.textContent = fallbackLetter;
+            this.replaceWith(fb);
+          };
+          imgWrap.appendChild(img);
+        } else {
+          const fb = document.createElement('div');
+          fb.className = 'img-fallback';
+          fb.textContent = fallbackLetter;
+          imgWrap.appendChild(fb);
+        }
+
+        // Body
+        const body = document.createElement('div');
+        body.className = 'card-body';
+
+        const chipsHtml = (p.keySpecs || [])
+          .slice(0, 3)
+          .map(s => `<span class="chip">${escapeHtml(s)}</span>`)
+          .join('');
+
+        body.innerHTML = `
+          <div class="card-model">UNI-T ${safeModel}</div>
+          <div class="card-desc">${safeDesc}</div>
+          ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
+          <div class="card-actions">
+            <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" target="_blank" rel="noopener" aria-label="Buy ${safeModel} on Kinmo">
+              Buy on Kinmo
+            </a>
+            <a class="card-btn card-btn-secondary" href="${encodeURI(p.officialUrl || '#')}" target="_blank" rel="noopener" aria-label="View specs for ${safeModel}">
+              View Specs
+            </a>
+          </div>
+        `;
+
+        card.appendChild(imgWrap);
+        card.appendChild(body);
+        return card;
+      }
+
+      function buildEmptyState() {
+        const div = document.createElement('div');
+        div.className = 'empty-state';
+        div.innerHTML = `
+          <div class="icon">&#128269;</div>
+          <h3>No products match your search</h3>
+          <p>Try a different model number, clear your category filter, or check spelling. We carry 163 UNI-T products in total.</p>
+          <button class="reset-btn" id="resetFilters">Clear filters</button>
+        `;
+        div.querySelector('#resetFilters').addEventListener('click', resetFilters);
+        return div;
+      }
+
+      function render() {
+        const list = getFiltered();
+        // Use a doc fragment for performance
+        const frag = document.createDocumentFragment();
+
+        if (list.length === 0) {
+          frag.appendChild(buildEmptyState());
+        } else {
+          for (let i = 0; i < list.length; i++) {
+            frag.appendChild(buildCard(list[i]));
+          }
+        }
+
+        grid.innerHTML = '';
+        grid.appendChild(frag);
+
+        resultCount.textContent = list.length;
+        const filterBits = [];
+        if (activeCategory !== 'all') {
+          const meta = categoriesMeta.find(c => c.id === activeCategory);
+          if (meta) filterBits.push(`in <strong>${meta.name}</strong>`);
+        }
+        if (activeSearch) filterBits.push(`matching <strong>"${escapeHtml(activeSearch)}"</strong>`);
+        activeFilter.innerHTML = filterBits.join(' ');
+      }
+
+      function resetFilters() {
+        activeCategory = 'all';
+        activeSearch = '';
+        searchInput.value = '';
+        searchClear.classList.remove('visible');
+        catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.cat === 'all');
+        });
+        writeUrlState();
+        render();
+      }
+
+      // ----- Wire up controls -----
+      searchInput.addEventListener('input', () => {
+        const v = searchInput.value;
+        searchClear.classList.toggle('visible', !!v);
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+          activeSearch = v;
+          writeUrlState(true);
+          render();
+        }, 200);
+      });
+
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        activeSearch = '';
+        searchClear.classList.remove('visible');
+        writeUrlState();
+        render();
+        searchInput.focus();
+      });
+
+      sortSelect.addEventListener('change', () => {
+        activeSort = sortSelect.value;
+        writeUrlState();
+        render();
+      });
+
+      window.addEventListener('popstate', () => {
+        // Re-read URL on back/forward
+        const params = new URLSearchParams(window.location.search);
+        activeCategory = params.get('category') || 'all';
+        activeSearch = params.get('search') || '';
+        activeSort = params.get('sort') || 'featured';
+        searchInput.value = activeSearch;
+        searchClear.classList.toggle('visible', !!activeSearch);
+        sortSelect.value = ['featured','az','za','newest'].includes(activeSort) ? activeSort : 'featured';
+        catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.cat === activeCategory);
+        });
+        render();
+      });
+
+      init();
+    })();
+  </script>
+</body>
+</html>
