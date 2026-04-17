@@ -401,6 +401,27 @@
     [data-theme="dark"] .callout { background: rgba(234, 179, 8, 0.18); }
     [data-theme="dark"] .callout.danger { background: rgba(239, 68, 68, 0.18); }
     [data-theme="dark"] .callout.info { background: rgba(59, 130, 246, 0.18); }
+
+    [data-theme="dark"] input[type="number"],
+    [data-theme="dark"] input[type="text"],
+    [data-theme="dark"] select {
+      background: #1e1e2e !important;
+      color: #e0e0e0 !important;
+      border-color: #444 !important;
+    }
+
+    [data-theme="dark"] input[type="number"]::placeholder,
+    [data-theme="dark"] input[type="text"]::placeholder {
+      color: #888 !important;
+    }
+
+    [data-theme="dark"] input[type="range"] {
+      background: #2a2a3e !important;
+    }
+
+    [data-theme="dark"] label {
+      color: #ccc !important;
+    }
     .callout-icon { font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
 
     /* CTA banner */

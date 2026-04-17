@@ -401,6 +401,27 @@
     .wire-table tr.recommended { background: rgba(227, 30, 36, 0.06); font-weight: 600; }
     [data-theme="dark"] .wire-table tr.recommended { background: rgba(227, 30, 36, 0.15); }
 
+    [data-theme="dark"] input[type="number"],
+    [data-theme="dark"] input[type="text"],
+    [data-theme="dark"] select {
+      background: #1e1e2e !important;
+      color: #e0e0e0 !important;
+      border-color: #444 !important;
+    }
+
+    [data-theme="dark"] input[type="number"]::placeholder,
+    [data-theme="dark"] input[type="text"]::placeholder {
+      color: #888 !important;
+    }
+
+    [data-theme="dark"] input[type="range"] {
+      background: #2a2a3e !important;
+    }
+
+    [data-theme="dark"] label {
+      color: #ccc !important;
+    }
+
     .section-divider {
       border: none;
       border-top: 1px solid var(--border-color);

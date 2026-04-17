@@ -1,0 +1,597 @@
+UNI-T DISTRIBUTOR PRICE LIST (Authoritative source — Kinmo PW carries these)
+Source: PDF provided by user, 2026-04-17
+Note: All -ROW, -US, -EU, -UK regional suffixes denote the SAME product with regional plug/standards differences.
+
+=== ELECTRONICS / ELECTRICAL METERS ===
+
+[Socket Testers]
+UT07A-UK | Socket Tester | AC 230V 50-60Hz; Rated current 10A; Socket test
+UT07A-EU | Socket Tester | AC 230V 50-60Hz; Rated current 10A; Socket test
+UT07B-EU | Socket Tester | AC 230V 50-60Hz; Rated current 10A; Socket test; RCD test 30mA leakage
+UT08A | Socket Tester | AC 125V 50-60Hz; Wiring check
+UT08B | Socket Tester | AC 125V 50-60Hz; Wiring check; GFCI test
+
+[Non-Contact Voltage Detectors — UT12 family, multiple regions]
+UT12S (ROW/US/EU) | NCV Detector | AC 90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Flashlight; Audible+LED
+UT12D (ROW/US/EU) | NCV Detector | AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Flashlight; Audible+LED
+UT12E (ROW/US/EU) | NCV Detector | AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Vibration; Flashlight; Audible+LED
+UT12M (ROW/US/EU) | NCV Detector | AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Magnetic solenoid detect; Flashlight; Audible+LED
+
+[Voltage and Continuity Testers]
+UT15B | V/Continuity Tester | AC/DC 12-690V; Phase rotation; Continuity; Polarity
+UT15C | V/Continuity Tester | AC/DC 12-690V; Phase rotation; Continuity; Polarity; LCD
+UT18C | V/Continuity Tester | AC/DC 12-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight
+UT18D | V/Continuity Tester | AC/DC 6-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; RCD; Flashlight
+UT18E | V/Continuity Tester | AC/DC 12-1000V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight
+UT22B-EU | V/Continuity Tester | AC/DC 12-400V; Polarity
+
+[True RMS Digital Multimeters — MAX series]
+UT15B MAX | True RMS DMM | AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; F 100kHz; VFD 600V
+UT17B MAX | True RMS DMM | AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C
+UT18B MAX | True RMS DMM | AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C; 12V LED test
+
+[Automotive Multipurpose Meters]
+UT105 | Auto Multipurpose | AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Dwell 4/6/8 CYL
+UT107 | Auto Multipurpose | AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Temp -40°C~1000°C; Dwell 4/6/9 CYL
+UT105+ | Auto Multipurpose | AC/DC 1000V; 10A; R 40MΩ; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell
+UT107+ | Auto Multipurpose | AC/DC 1000V; 10A; R 60MΩ; C 10mF; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell; 12V battery test
+
+[Pocket-Size Digital Multimeters]
+UT120A | Pocket DMM | AC/DC 600V; R 40MΩ; F 100kHz; Temp -55°C~500°C
+UT120B | Pocket DMM | AC/DC 600V; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C
+UT120C | Pocket DMM | AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C
+UT125C | Pocket DMM | AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 60kHz
+
+[Smart / Residential Multimeters]
+UT121A | Smart DMM | AC/DC 600V; R 10MΩ; Dual display; NCV; LIVE; CAT III 600V
+UT121B | Smart DMM | AC/DC 600V; R 60MΩ; C 60mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V
+UT122 | Smart DMM | AC/DC 600V; R 60MΩ; C 99mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V
+UT123 | Residential DMM | AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV
+UT123T | Residential DMM | AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV
+UT123D | Smart DMM | AC/DC 600V; AC/DC 10A; R 40MΩ; C 4000uF
+
+[SMD Testers]
+UT116A | SMD Tester | R 30MΩ; C 30mF; Diode 3V; LED 21V/1mA; Continuity <30Ω; DC V 36V
+UT116C | SMD Tester | R 60MΩ; C 100mF; Diode 3.2V; LED 21V/1mA; Continuity <50Ω; Battery test 10mA
+
+[Pen-Type / Slim Multimeters]
+UT117C | Bluetooth DMM | AC/DC 600V; AC/DC 10A; F 50kHz; R 40MΩ; C 1000uF; LoZ; LPF; Diode; NCV; 60K count; True RMS; Bluetooth
+UT118B | Pen DMM | DC/AC 300V; R 3MΩ; C 300uF; EF; Diode; Continuity buzzer
+UT118C | Pen DMM | AC/DC 600V; R 60MΩ; C 60mF; F 999.9kHz; 6000 count; Duty cycle; NCV/Live; True RMS; Diode/Continuity
+
+[Circuit Breaker Testers]
+UT25A | Circuit Breaker Tester | US; GFCI 90-120V AC; 47-63Hz; 6mA leakage
+
+[Palm-Size Digital Multimeters]
+UT33A+ | Palm DMM | AC/DC 600V; AC/DC 10A; R 200MΩ; C; Auto range
+UT33B+ | Palm DMM | AC/DC 600V; DC 10A; R 20MΩ; Manual
+UT33C+ | Palm DMM | AC/DC 600V; DC 10A; R 200MΩ; Temp 1000°C; Manual
+UT33D+ | Palm DMM | AC/DC 600V; DC 10A; R 200MΩ; NCV; Manual
+UT131A | Palm DMM | AC/DC 250V; AC/DC 10A; R 200MΩ; C; Auto
+UT131B | Palm DMM | AC/DC 250V; DC 10A; R 20MΩ; Manual
+UT131C | Palm DMM | AC/DC 250V; DC 10A; R 200MΩ; Temp 1000°C; Manual
+UT131D | Palm DMM | AC/DC 250V; DC 10A; R 200MΩ; NCV; Manual
+
+[Handheld Digital Multimeters]
+UT133A | Handheld DMM | DC/AC 600V; DC/AC 10A; R 60MΩ; C 9.999mF; F 10Hz~1MHz; Temp -40°C~1000°C; Auto
+UT133B | Handheld DMM | DC/AC 600V; DC 10A; R 60MΩ; C 9.999mF; Manual
+UT136B+ | Handheld DMM | DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Auto
+UT136C+ | Handheld DMM | DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Temp 1000°C; Manual
+UT39C | Handheld DMM | DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C
+UT39A+ | Handheld DMM | DC/AC 1000V/750V; DC/AC 10A; R 200MΩ; C 10mF; Manual
+UT39C+ | Handheld DMM | DC/AC 1000V/750V; DC/AC 10A; R 40MΩ; C 10mF; F 1MHz; Temp 1000°C; Manual
+UT39E+ | Handheld DMM | DC/AC 1000V; DC/AC 20A; R 200MΩ; C 2000uF; F 2MHz; Temp 1000°C; Manual
+
+[True RMS Handheld Multimeters]
+UT139A | True RMS DMM | DC/AC 600V; DC/AC 10A; R 20MΩ; Auto
+UT139B | True RMS DMM | DC/AC 600V; DC/AC 10A; R 40MΩ; C 100mF; F 10MHz; Auto
+UT139C | True RMS DMM | DC/AC 600V; DC/AC 10A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C; Auto
+UT139S | True RMS DMM | DC/AC 600V; DC/AC 10A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C; True RMS
+
+[Universal Digital Multimeters]
+UT51 | Universal DMM | DC/AC 1000V/750V; DC/AC 10A; R 200MΩ
+UT52 | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF
+UT53 | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF; Temp 1000°C
+UT55 | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp 1000°C
+UT58A | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF
+UT58B | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF; Temp -40°C~1000°C
+UT58C | Universal DMM | DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 100uF; F 20kHz; Temp -40°C~1000°C
+UT58D | Universal DMM | DC/AC 1000V; DC/AC 20A; R 20MΩ; C 100uF
+UT58E | Universal DMM | DC/AC 1000V; DC/AC 20A; R 200MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C
+UT151A | Universal DMM | DC/AC 600V; DC/AC 10A; R 200MΩ; C 100uF
+UT151C | Universal DMM | DC/AC 600V; DC/AC 10A; R 20MΩ; C 20uF; Temp -40°C~1000°C
+
+[Standard Digital Multimeters — UT60 / UT61 / UT161 series]
+UT60S | DMM | DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C
+UT60EU | DMM | DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C
+UT60BT | DMM | DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C; Bluetooth
+UT61B+ | DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Auto
+UT61D+ | DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; Auto
+UT61E+ | DMM | DC/AC 1000V; DC/AC 20A; R 220MΩ; C 220mF; F 220MHz; Auto
+UT161B | DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Auto
+UT161D | DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; Temp -40°C~1000°C; Auto
+UT161E | DMM | DC/AC 1000V; DC/AC 20A; R 220MΩ; C 220mF; F 220MHz
+
+[Intelligent Digital Multimeters — UT71 series]
+UT71A | Intelligent DMM | DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; 20K count
+UT71B | Intelligent DMM | DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 20K count
+UT71C | Intelligent DMM | DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 40K count
+UT71D | Intelligent DMM | DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 9999 storage; 40K count
+UT71E | Intelligent DMM | DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 100 storage; Power 2500W; 4-20mA%; 40K count
+
+[Industrial / Datalogging Multimeters]
+UT171B | Industrial True RMS DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS
+UT171C | Industrial True RMS DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS
+UT181A | Datalogging DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 60MHz; Temp 1000°C; True RMS
+
+[Professional Pro-Line Multimeters]
+UT191E | Professional DMM | DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz
+UT191T | Professional DMM | DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C
+UT195E | Pro-Line DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; True RMS
+UT195M | Pro-Line DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; True RMS
+UT195DS | Pro-Line DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 40MHz; True RMS
+UT196 | Solar DMM | DC/AC 1700V/1500V; R 60MΩ; C 60mF; True RMS
+UT197 | Industrial DMM | DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 60K count; 5m drop; IP67; Bluetooth; 12kV pulse protection; CAT IV 1000V & CAT III 1500V
+UT197PV | Pro Multimeter Solar Pro | DC/AC 2500V/1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 5m drop; IP67; Bluetooth; CAT IV 1000V & CAT III 1500V
+
+[Standard Multimeters — UT89 / UT890 / UT892]
+UT89X | DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz; Temp 1000°C
+UT89XD | DMM | DC/AC 1000V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz
+UT89XE | DMM | DC/AC 1000V; DC/AC 20A; R 200MΩ; C 200mF; F 60MHz; Temp 1000°C
+UT890C | DMM | DC/AC 1000V/750V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C
+UT890D+ | DMM | DC/AC 1000V/750V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz
+UT892 | 2000V DMM | DC/AC 2000V; VFC 600V; R 60MΩ; C 60mF; F 10Hz~10kHz
+
+=== CLAMP METERS ===
+
+[UT200 series — basic/mid clamp]
+UT200A | Clamp Meter | AC 200A; AC/DC 600V; R 20kΩ
+UT200A+ | Clamp Meter | AC 400A; AC/DC 600V; R 3MΩ
+UT200B+ | Clamp Meter | AC 600A; AC/DC 600V; R 3MΩ; C
+UT201+ | Clamp Meter | AC 400A; AC/DC 600V; R 40MΩ
+UT201R | Clamp Meter | AC 400A; AC/DC 600V; R 40MΩ
+UT202+ | Clamp Meter | AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C
+UT202A+ | Clamp Meter | AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz
+UT202F | Clamp Meter | AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz
+UT202R | Clamp Meter | AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C
+UT202T | Smart Clamp | AC 600A; AC/DC 600V; R 6MΩ; F 1000Hz; C 100mF
+UT202BT | Smart Clamp | AC/DC 600V; AC/DC 600A; R 100MΩ; F 1000Hz; C 100mF; Temp 1000°C; Bluetooth
+UT203+ | Clamp Meter | DC/AC 400A; AC/DC 600V; R 40MΩ; C 40mF; F 10MHz
+UT203R | Clamp Meter | DC/AC 400A; AC/DC 600V; R 40MΩ; C 40mF; F 10MHz
+UT204+ | Clamp Meter | DC/AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz; Temp -40°C~1000°C
+UT204R | Clamp Meter | DC/AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C
+UT206 | Clamp Meter | AC 1000A; AC/DC 600V; R 40MΩ; C; F
+UT205A+ | Clamp Meter | DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 42mm jaw
+UT205B | Clamp Meter | DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 55mm jaw
+UT205E | Clamp Meter | DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz
+UT206A+ | Clamp Meter | DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C
+UT206B | Clamp Meter | DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C
+UT207B | Clamp Meter | DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz
+UT208B | Clamp Meter | DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C
+
+[Mini Clamp Meters — UT210 series]
+UT210A | Mini Clamp | AC 200A
+UT210B | Mini Clamp | AC 200A; NCV; MAX/MIN
+UT210C | Mini Clamp | AC/DC 600V; AC 200A; R 20MΩ; C 20mF; Temp 1000°C
+UT210D | Mini Clamp | AC/DC 600V; DC/AC 200A; R 20MΩ; C 20mF; F 60kHz; Temp 1000°C
+UT210E | Mini Clamp | AC/DC 600V; DC/AC 100A; R 20MΩ; C 20mF
+UT211B | High-Precision Clamp | AC/DC 600V; DC/AC 60A; R 60MΩ; C 62mF
+
+[400A Clamp Meters — UT213 series]
+UT213A | 400A Clamp | AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz
+UT213B | 400A Clamp | AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS
+UT213C | 400A Clamp | AC/DC 600V; DC/AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS
+
+[600A Clamp Meters — UT216 series]
+UT216A | 600A Clamp | DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF
+UT216B | 600A Clamp | DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF; F 1MHz; True RMS
+UT216C | 600A Clamp | DC/AC 1000V/750V; DC/AC 600A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C
+UT216D | 600A Clamp | DC/AC 1000V/750V; DC/AC 600A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; OLED; True RMS
+
+[Pro-Line Clamp Meters — UT219 series]
+UT219E | Pro-Line Clamp | DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 10MHz; IP54; True RMS
+UT219M | Pro-Line Clamp | DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS
+UT219DS | Pro-Line Clamp | DC/AC 1000V; DC/AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS
+UT219P | Power & Harmonics Clamp | AC 1000A; AC 1000V; F 15Hz~1000Hz; 1Ph 1000kW; 3Ph 3W 1732kW; 3Ph 4W 3000kW; 9999 count; 999 storage; USB
+UT219PV | Pro AC/DC Clamp | AC/DC 999.9A; AC 999.9V/1500V; DC 999.9V/2500V; ACV LPF; 30/300/3000A flex; 999.9 kVA/2500 kVA DC; F 5-999.9Hz; R 999.9Ω/9.999kΩ/99.99kΩ; C 100uF/1000uF; Temp -40°C~400°C; True RMS
+
+[High Current Clamp Meters]
+UT220 | High Current Clamp | DC/AC 1000V/750V; AC 2000A; R 20MΩ
+UT221 | High Current Clamp | DC/AC 1000V/750V; DC/AC 2000A; R 66MΩ; F 20MHz
+UT222 | High Current Clamp | DC/AC 1000V; DC/AC 2500A; R 60MΩ; C 60mF; F 60MHz; Temp 1000°C; True RMS
+2117R | Clamp Meter | DC/AC 1000V; AC 1000A; R 60MΩ; C 6mF; 33mm jaw
+
+[Power Socket Monitors]
+UT230B-EU | Power Socket Monitor | 100V-260V; 0-16A; 45-65Hz; 1-3680W; PF 0-1; Energy 0-9999kWh
+
+[Fork Meters]
+UT256 | Fork Meter | DC/AC 60A; NCV; True RMS
+UT256A | Fork Meter | DC/AC 1000V; AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS
+UT256B | Fork Meter | DC/AC 1000V/750V; DC/AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS
+
+[Phase Sequence / Phase Detection]
+UT261A | Phase Sequence Indicator | Contact; Phase sequence; Missing phase; LCD; Up to 400Hz
+UT261B | Phase Sequence Indicator | Contact; Phase sequence; Missing phase; Motor rotation; Up to 400Hz
+UT262E | Non-contact Phase Sequence | Phase sequence R/L; Missing phase; Live power; Circuit break; AC 70-1000V; LED+Buzzer; Auto power off
+
+[Wireless Transformer Turns Ratio Testers]
+UT225A | Wireless Transformer Tester | Primary 0-3000A; ±1%FS; Online 380V/220V; Wireless 100m; 3000 storage; Insulation 110Vrms
+UT225B | Wireless Transformer Tester | Primary 0-800A; ±0.5%FS; Online 35kV; Wireless 100m; 3000 storage; Insulation 3700Vrms
+
+[Leakage Current Clamp Meters]
+UT251A | Leakage Clamp | 0-60A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage
+UT251C | Leakage Clamp | 0-600A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage
+UT251C+ | Leakage Clamp | 3mA-60A leakage; Harmonic 20; F 5Hz-5kHz; 3000 count; 40mm jaw; Bluetooth; CAT III 600V
+UT253A | Large Jaws Leakage Clamp | 0-1200A; 0-600V; 50/60Hz; 80x80mm jaw; Auto; RS232; 200 storage
+UT258A | AC/DC Leakage Clamp | 60A; 0-600V; 50/60Hz; 7mm jaw; Auto; RS232; 99 storage
+
+[High Voltage Clamp Meters]
+UT255A | HV Clamp | 0-600A; 0-69kV; 50/60Hz; 33mm jaw; Auto; 99 storage
+UT255B | HV Clamp | 0-600A; 0-69kV; 50/60Hz; 33mm jaw; Wireless ≤30m; Auto; 99 storage
+UT255C | HV Clamp | 0-1000A; 0-60kV; 50/60Hz; 68mm jaw; Auto; 99 storage
+UT255E | HV Clamp | AC 20kA; F 45-75Hz; Phase distance 150m; <35kV; Max Ø168mm hook; 3.5" color LCD; 9999 storage
+
+[3-Phase Clamp Voltammeter]
+UT267B | 3-Phase Clamp Voltammeter | AC 20A; AC 600V; 45-65Hz; AP 12kW; SP 12kVA; RP 12kVAR; PF -1 to 1; Phase 0-360°; Current vector 0mA-60A
+UT268B | 3-Phase Clamp Voltammeter | AC 600V; AC 1000A; AP 600kW; SP 600kVA; RP 600kVAR; PF -1 to 1; Phase 0-360°
+
+[Clamp Earth Ground Testers]
+UT273+ | Clamp Earth Tester | Earth R 600Ω; 20A; 32mm jaw
+UT275 | Clamp Earth Tester | Earth R 1200Ω; 30A; 28mm jaw
+UT276A+ | Clamp Earth Tester | Earth R 590Ω; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD
+UT278A+ | Clamp Earth Tester | Earth R 800Ω; 20A; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD
+UT278B | Clamp Earth Tester | Earth R 0-1500Ω; AC 0-40A; 1uA resolution; 3/4-wire 0-3kΩ; Earth V 600V
+UT278C | Clamp Earth Tester | Earth R 0-1800Ω; Leakage 0-50A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ; 68mm jaw
+UT278D | Clamp Earth Tester | Earth R 0-2000Ω; Leakage 0-60A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ
+UT279 | Clamp Earth Tester | AC 0-100A; AC 0-600V; F 10Hz-1000Hz; Transformer core ground current; AC leakage online
+
+[Flex Clamp / Flex CT]
+UT281E+ | True RMS Flex Clamp | AC 10000A; AC/DC 1000V; F 45-400Hz; 1100mm flex coil; CAT IV 600V
+
+[3-Phase Power Quality Analyzer]
+UT285C | 3-Phase Power Quality Analyzer | Phase-to-N 1000V; Phase-to-Phase 2000V; DC 1000V; 10mA-1000A; AP 9999.9kW; RP 9999.9kVAR; SP 9999.9kVA; Phase -179°-180°; Harmonic 0-99.9%; K factor 1-99.99
+
+[Flex Clamp Sensors / CTs]
+UT-CS06A | Flex Clamp Sensor | 400A AC; 50-400Hz; CAT III 300V/CAT II 600V
+UT-CS09D | Flex Clamp Sensor | 30A/300A/3000A AC; 45-500Hz; 45.7cm flex
+UT-CS07 | Flex Clamp Sensor | 1000A AC/DC; 50-400Hz; CAT III 1500V/CAT IV 600V
+
+=== INSULATION TESTERS ===
+
+[Standard Insulation Testers]
+UT501A | Insulation Tester | 5GΩ; 1000V test; <2mA short; AC 30-750V
+UT501B | Insulation Tester | 5GΩ; 1000V test; <2mA short; AC 30-750V; PI; DAR
+UT501E | Fast Insulation Tester | 0-4GΩ; Low R 400Ω; AC/DC 600V; 1.0mA; <2mA short; Fast 10/s; DAR/PI; Compare; Auto-discharge
+UT502A | Insulation Tester | 20GΩ; 2500V test; <2mA short; AC 30-750V; PI; DAR
+
+[High Voltage Insulation Testers]
+UT505A | Handheld HV IR | 1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 0-600V
+UT505B | Handheld HV IR | 1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 600V; Gen R 10MΩ; F 45-1kHz; C 100pF-500uF
+UT511 | HV Insulation Tester | 10GΩ; 1000V test; <2mA short; AC 600V; DC 600V; PI; DAR; storage
+UT512 | HV Insulation Tester | 100GΩ; 2500V test; <1.8mA short; AC 30-750V; DC 1000V; PI; DAR; USB
+UT512D | HV Insulation Tester | 250V/100GΩ; 500V/200GΩ; 1000V/400GΩ; 2500V/1TΩ; ~3.5mA short; PI; DAR; 999 storage
+UT512E | HV Insulation Tester | 250V/250GΩ; 500V/500GΩ; 1000V/1TΩ; 2500V/2.5TΩ; ~5mA short; C test; PI; DAR; 999 storage; 14.8V/5200mAh Li
+UT513A | HV Insulation Tester | 5000V/1000GΩ; DC 600V; >3mA short
+UT513B | HV Insulation Tester | 5000V/2TΩ; ~3.5mA short; PI; DAR; 999 storage; 5200mAh Li
+UT513C | HV Insulation Tester | 5000V/5TΩ; ~5mA short; C test; PI; DAR; 999 storage; Bluetooth; 14.8V/5200mAh Li
+UT515B | HV Insulation Tester | 0-10TΩ; 0-10000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V
+UT516B | HV Insulation Tester | 0-10TΩ; 0-12000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V
+
+[PV Insulation Tester]
+UT503PV | PV Insulation Tester | 125-1000V/4GΩ; PV 500-1000V/4GΩ; DC 1000V; AC 600V; <1.5mA & <1.2mA short; Continue; Compare; Time; Stepping; Auto-discharge; HV alarm; DUT live; IP54
+
+[Insulation Multimeter / Combo]
+UT533 | Insulation R Multimeter | AC/DC 1000V; AC/DC 600mA; R; C; F; Temp; Insulation 1000V/2GΩ
+
+=== EARTH GROUND TESTERS ===
+UT521 | Earth Ground Tester | 0-2000Ω; AC earth V 200V; 50/60Hz; 20 storage; 2/3-wire
+UT522 | Earth Ground Tester | 0-4000Ω; AC earth V 400V; 50/60Hz; 20 storage; 2/3-wire
+UT526 | Multifunction Electric Tester | IR 250V/500V/1000V; <2mA; RCD 220V 45-65Hz; 10/30/100/300mA; LowR 0-2000Ω; AC/DC 440V
+UT528AU | Safety/PAT Tester | Earth/Protective Conductor; IR; Leakage; Class 2; Polarity
+UT572 | Earth Ground Tester | 4Ω-40kΩ; Soil resistivity 4Ω-40kΩ; Disturbance V 50V; 2/3/4-wire; F selectable; RH/RS/RK
+UT575B | Earth Ground Tester | 2/3/4-wire 0-300kΩ; Selective ground 3000Ω; Double clamp 100Ω; Earth V 100V; Earth I 600A; Soil resistivity; F 128/111/105/94Hz auto; Short test 250mA; Open V 40V
+
+=== RCD / INSTALLATION TESTERS ===
+UT582+ | RCD Tester | x1/2; x1; x5; AUTO RAMP; 195-253V; V 30-600V; F 45-65Hz; 1V resolution
+UT586+ | RCD Tester | RCD 10-1000mA; 0-2000ms @ 0°/180°; Multi-level; V 30-480V; Wiring check; Phase angle selection; Auto RAMP
+UT593 | Multifunctional Installation Tester | IR 1000V/1000MΩ; <2mA; LowR 199Ω; Line Z 2000Ω; 230V output; 20A test; PFC 26kA; No-trip loop Z 2000Ω
+UT595 | Multifunctional Installation Tester | IR 1000V/1000MΩ; <2mA; LowR 0-199Ω; Line Z; No-trip loop Z; AC 0-440V; F 45-60Hz
+
+=== INDUCTANCE / CAPACITANCE / LCR METERS ===
+UT601 | LC Meter | R 20Ω-2000MΩ; C 200pF-20mF
+UT603 | LC Meter | R 200Ω-20MΩ; C 2nF-600uF; L 2mH-20H
+UT612 | LCR Meter | R 20Ω-200MΩ; C 200pF-20mF; L 20uH-2000H; Test F 100Hz/120Hz/1kHz/10kHz/100kHz; L/C/R/DCR/Q/D/θ/ESR
+
+=== DC RESISTANCE / MICRO OHM METERS ===
+UT620A | Digital Micro Ohm Meter | 60mΩ/10A - 6kΩ/100uA; 10uΩ resolution
+UT620C+ | Digital Micro Ohm Meter | 0.001mΩ-300kΩ; 1μΩ; ≥1A test; 4-wire; 2/s; Type-C; 5200mAh
+UT620T | DC Resistance Tester | 10A test; 0.1μΩ-1.0000MΩ; 0.1μΩ resolution; PC software
+UT625A | Low Resistance Ohmmeter | 100A test; 0.1uΩ-1000mΩ; 4-wire kelvin; 5-100A DC step; 10/20/30/60s; 100A up to 60s, 200A up to 180s
+UT625B | Low Resistance Ohmmeter | 200A test; 0.1uΩ-2000mΩ; 4-wire kelvin; 5-200A DC step; 10/20/30/60s; 200A up to 60s, 100A up to 120s
+
+=== USB / LED TESTERS ===
+UT658 | USB Tester | Input 3-9V; 0-3A; Capacity 0-9999mAh; 10 storage
+UT658B | USB Tester | Input 3-9V; 0-3.5A; Capacity 0-9999mAh; 10 storage
+UT658A | USB Tester | Type-A I/O; 2.0/3.0; 4-24VDC; Type-A 0.05-3A; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh
+UT658C | USB Tester | Type-C I/O; 2.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh
+UT658DUAL | USB Tester | Type-A & Type-C I/O; 2.0/3.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh
+UT658LOAD | USB Tester | Type-A I/O; 2.0/3.0; 4-24VDC; 0.05-3ADC; 0-99999mAh; 0-1000Wh; Equivalent R 1-480Ω
+UT659A | LED Tester | Output 300V; 30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight
+UT659D | LED Tester | Output 24V/300V; 2mA/30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight
+
+=== CABLE TESTERS / NETWORK ===
+UT681L | Cable Tester | RJ45/RJ11
+UT681C | Cable Tester | RJ45/RJ11/BNC
+UT681HDMI | Cable Tester | HDMI/MINI-HDMI
+UT682 | Cable Tester | LAN/telephone/coax/electric; Wire alignment
+UT682D | Cable Tester | Telephone/twisted-pair/electric
+UT683KIT | Cable Tester | Wire tracking RJ11>3000m; RJ45>100m; NCV; Headset jack
+UT685B KIT | Cable Tester | UTP/FTP/SSTP; 500m length; POE; Ethernet port test
+
+=== CABLE LOCATOR ===
+UT25CL | Cable Locator | TX 33kHz; AC/DC 8-480V; AC 50/60Hz/2.5%±3deg; RX 33kHz; Bipolar 0-0.5m; Unipolar 0-2.5m; NCV 80-1000V; Multi-TX 8
+
+=== FIBER OPTIC ===
+UT691-01 | Visual Fault Locator | ≥1mW; 2-3km
+UT691-10 | Visual Fault Locator | ≥10mW; 8-10km
+UT692D | Fiber Optic Tester | -70 to +10 dBm; FC/SC/ST
+UT692G | Fiber Optic Tester | -50 to +26 dBm; FC/SC/ST
+UT693D | Fiber Optic Tester | Optical Multimeter (Power Meter & VFL); -70 to +10 dBm; VFL 10mW; 8-10km
+
+=== PROCESS CALIBRATORS ===
+UT701 | Process Calibrator | DC mV 100/1000mV; R 500Ω/5000Ω; TC J/K/T/E/R/S/B/N; RTD Pt10/100; Cu50/100
+UT705 | Process Calibrator | DC 30V; DC 24mA; Loop 24mA; Source 24mA
+UT714 | Process Calibrator | DC mV 50/500mV/30V; R 500Ω/5000Ω; TC R/S/K/E/J/T/N/B/L/U; RTD Pt100/200/500/1000/Cu/Ni; Continuity; Source 100mV/1000mV/10V
+UT715 | Process Calibrator | DC 200mV/30V; DC 24mA; Loop 24mA; F 100Hz/1k/10k/100kHz; Continuity; Source 100mV/1000mV/10V; F source 200/2k/20k; Pulse 100/1k/10kHz; Loop 24V
+UT725 | Process Calibrator | DC 50/500mV/50V; DC 20mA; Loop 20mA; R 500Ω/5000Ω; F 100Hz-100kHz; TC R/S/K/E/J/T/N/B/L/U/XK/BP; RTD Pt/Cu/Ni; Source 100mV/1000mV/10V; F source 200Hz-100kHz
+
+=== BATTERY TESTERS ===
+UT673A | Battery Tester | 12V battery 7-16VDC; 12/24V cranking 7-30VDC; 12/24V charging 7-30VDC
+UT675A | Battery Tester | 12V battery 7-16VDC; 12/24V cranking 7-30VDC; 12/24V charging 7-30VDC; USB; Print
+UT677A+ | Battery Resistance Tester | R 0-3Ω; V 0-71V; 4-terminal; 500 storage; Bluetooth
+UT677C | Battery Resistance Tester | R 0-3Ω; V 0-120V; 4-terminal; 500 storage; Bluetooth
+
+=== ACOUSTIC IMAGER ===
+UT568B | Acoustic Imager | 138-ch MEMS mic; 2-100kHz; Acoustic 60°x40°; 25FPS; 20-120dB SPL; 4.3" touch
+
+=== SOLAR / PV TOOLS ===
+UT673PV | Solar MPPT Tester | Max 5-800W; Imax 0-35A; Vmax 12-60V; OCV 12-60V; Isc 0-35A; Reverse polarity protect; OV/OC/OT/OP protect; Manual/Auto MPPT
+
+=== PIPELINE / WALL ===
+UT661D | Pipeline Blockage Detector | Signal wire 35m; 10h battery
+
+=== INFRARED THERMOMETERS ===
+UT300A+ | IR Thermometer | -20°C~400°C; D:S 10:1; ε 0.95
+UT300S | IR Thermometer | -32°C~400°C; Single laser; D:S 12:1; ε 0.10-1.00
+UT306S | IR Thermometer | -50°C~500°C; Single laser; D:S 12:1; ε 0.10-1.00
+UT306C | IR Thermometer | -50°C~500°C; Circle laser; D:S 12:1; ε 0.10-1.00
+UT306A | Mini IR Thermometer | -35°C~300°C; D:S 6:1; ε 0.95
+UT301A+ | IR Thermometer | -32°C~420°C; Single laser; D:S 12:1; ε 0.10-1.00
+UT301C+ | IR Thermometer | -32°C~600°C; Circle laser; D:S 12:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm
+UT301D+ | IR Thermometer | -32°C~600°C; Dual laser; D:S 12:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm
+UT302A+ | IR Thermometer | -32°C~700°C; Single laser; D:S 20:1; ε 0.10-1.00; Scheduled; Hi/Lo alarm
+UT302C+ | IR Thermometer | -32°C~1100°C; Circle laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm
+UT302D+ | IR Thermometer | -32°C~1100°C; Dual laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm
+UT303A+ | IR Thermometer | -32°C~800°C; Single laser; D:S 30:1; ε 0.10-1.00; Hi/Lo alarm
+UT303C+ | IR Thermometer | -32°C~1300°C; Circle laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm
+UT303D+ | IR Thermometer | -32°C~1300°C; Dual laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled
+UT305S | IR Thermometer | -50°C~2000°C; D:S 50:1; ε 0.10-1.00; 99 storage; EBTN LCD
+UT305A+ | IR Thermometer | -50°C~1850°C; D:S 55:1; ε 0.10-1.00; Single laser; 999 storage
+UT305C+ | IR Thermometer | -50°C~2200°C; D:S 55:1; ε 0.10-1.00; Single laser; Class 2; 8-14μm; 999 storage
+UT309A | Pro IR Thermometer | -35°C~450°C; D:S 10:1; ε 0.95; Single laser; Class 2; IP65
+UT309C | Pro IR Thermometer | -35°C~650°C; D:S 12:1; ε 0.1-1; Dual lasers; Class 2; IP65
+UT309E | Pro IR Thermometer | -35°C~850°C; D:S 20:1; ε 0.1-1; Hi/Lo alarm; IP65
+
+=== CONTACT THERMOMETERS / PROBES ===
+UT320A | Contact Thermometer | K/J; Single; °C/°F
+UT320D | Contact Thermometer | K/J; Dual; °C/°F; T1-T2 difference
+UT320T | 2-in-1 Thermometer | IR 40-300°C; Probe -40 to 300°C; IP54; Max/Min/Diff/Lock
+UT325 | Contact Thermometer | Dual; K/J/T/E/R/S/N; °C/°F/K; 100 storage; USB
+UT325F | 4-Channel Thermometer | -200°C~1372°C Type-K; 7 TC types; T1-T2; APP/PC; 72000 storage
+
+=== TEMPERATURE / HUMIDITY METERS ===
+UT330B | Datalogging T/RH | -40°C~80°C; 0-100% RH
+UT330C | Datalogging T/RH/P | -40°C~80°C; 0-100% RH; 750-1100hPa
+UT330T | Datalogger | -30°C~70°C; 64000 storage; Alarm delay; IP65; Software
+UT330TH | Datalogger T/RH | -30°C~70°C; 0-99.9% RH; 64000 storage; Alarm delay; Software; Type-A
+UT330THC | Datalogger T/RH | -30°C~70°C; 0-99.9% RH; 64000 storage; Auto power off; Alarm delay; Software & APP; Type-C
+UT331+ | T/RH Meter | -20-70°C ±0.5°C; Dew point; Wet bulb; Humidity; 299 storage; USB
+UT332+ | T/RH Meter | -20-70°C ±0.3°C; Dew point; Wet bulb; Humidity; 999 storage; USB
+UT333S | T/RH Meter | -10-60°C; 0-100% RH; Overload alarm; Hold; Auto power off; Split design
+UT333 | Mini T/RH Meter | -10-60°C; 0-100% RH; Overload; Auto power off
+UT333BT | Mini T/RH Meter | -10-60°C; 0-100% RH; Bluetooth; Overload; Auto power off
+A12T | T/RH Meter | LCD 4.5"; -10-50°C; External probe; Humidity
+A13T | T/RH Meter | LCD 4.5"; -10-50°C; Humidity
+A56 BT | Bluetooth T/RH Datalogger | -40°C~85°C ±0.3°C; 0-100% RH ±2.5%; 64000 storage; BT/PC; Audio+Visual alarm
+A57 BT | Bluetooth T/RH Datalogger | -40°C~85°C; 0-100% RH; 64000 storage; PC+BT; IP54; 3 sensor types
+A61 | Digital Thermometer | 40-250°C; 12mm probe; NTC; 20s stabilize
+A63 | 2-in-1 Food Thermometer | IR 40-300°C; Probe -50 to 300°C; LED alarm; HACCP; T1-T2 diff
+
+=== ENVIRONMENTAL — VIBRATION ===
+UT311A | Vibration Tester | Acc 0.1-199.9 m/s²; Vel 0.1-199.9 mm/s; Disp 0.001-1999μm; Flashlight; Rotatable; 2.4" TFT; 1350mAh Li
+UT312A | Vibration Tester | Split type; same specs as UT311A
+UT315A | Vibration Tester | Acc 0-199.9 m/s² (10Hz-10kHz); Vel 0-19.99 cm/s (10Hz-1kHz); Disp 1-1.999mm (10Hz-500Hz); USB
+
+=== ENVIRONMENTAL — RADIATION / GAS / LEAK ===
+UT334A | Radiation Dose Meter | X, β, γ rays; 0.05μSv-50mSv; Audio+Visual alarm
+UT336A | Refrigerant Leak Detector | Negative Corona; 3g/a max; 6-step sensitivity; Audio+Light alarm; CFC/HCFC/HFC
+UT336B | Refrigerant Leak Detector | Semiconductor; 3g/a max; 6-step; Audio+Visual; Auto-reset; Probe light
+UT336P | Wireless Pressure Gauge | -1 to 60bar; ±0.5%FS; Hi/Lo switching+LED; Hi/Lo alarms; Superheat/subcooling auto; Bluetooth; 8000 offline
+UT336P Kit | Wireless Pressure Gauge Kit | UT336P + Temperature Clamp
+UT337A | CO Tester | 0-1000ppm
+UT337B | Particle Counter | 6-channel 0.3-10.0μm; ISO/EU-GMP modes; T/RH/Dew point; 10000 storage; WiFi/APP; Camera
+
+=== COATING / THICKNESS ===
+UT343A | Coating Thickness | 0-1750μm; Single/Continuous; EBTN; Ferrous/Non-ferrous; Audio+Visual alarm; 199 storage
+UT343D | Coating Thickness | 0-1250μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 500 storage
+UT343E | Coating Thickness | 0-2000μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 3300 storage; Bluetooth
+UT345A | Ultrasonic Thickness | 1.00-300.00mm; Sound velocity 1000-9999 m/s
+
+=== LPG TANK ===
+UT345C | LPG Tank Level Checker | Steel/aluminum standard propane/butane LPG; 8-14" (~200-350mm); R/G LED; Flashlight
+
+=== HARDNESS ===
+UT347A | Leeb Hardness Tester | HL/HB/HRC/HRB/HV/HS; 4 modes; 7 impact devices; 640x480 camera; Bluetooth
+
+=== SOUND ===
+UT352 | Sound Level Meter | 30-130 dB; 31.5Hz-8kHz; FAST/SLOW; Analogue out; 63 storage
+UT353 | Mini Sound Level Meter | 30-130 dB A-weight; F/S 125ms/1000ms; 31.5Hz-8kHz; Overload; Auto power off
+UT353BT | Mini Sound Level Meter | Same as UT353 + Bluetooth
+
+=== AIR FLOW / WIND ===
+UT361 | Anemometer | 2-30 m/s; Wind count 0.001-9999x100; T 0-40°C; 2044 storage
+UT362 | Anemometer | 2-30 m/s; T 0-40°C; 2045 storage; USB
+UT362H | Anemometer | 0-30 m/s; -20-70°C; Flow 0-999900 m³/min; ±(4%+0.1m/s); Pt sensor; Split; 99 storage
+UT363 | Mini Anemometer | 0-30 m/s; -10-50°C; Wind scale 0-12; Auto power off
+UT363BT | Mini Anemometer | Same as UT363 + Bluetooth
+UT363S | Anemometer | 0.4-30 m/s; -10-50°C; Wind scale 0-12; Sampling rate; Overload
+
+=== PRESSURE ===
+UT366A | Digital Manometer | kPa/mbar/bar/psi/mmHg/inH2O/inHg/ozin2/kgcm2/ftH2O/mmH2O/hPa; m/s fpm; Auto power off; FSTN
+UT366A Pitot Tube | Pitot Tube for UT366A
+
+=== TACHOMETERS ===
+UT371 | Non-contact Tachometer | 10-99999 RPM; 0-99999 counts
+UT372 | Non-contact Tachometer | 10-99999 RPM; 0-99999 counts; USB
+UT372D | 2-in-1 Tachometer | m/ft/in; 10 group storage; Bluetooth
+UT373 | Mini Non-contact Tachometer | 10.0-99999 RPM; 0-99999 counts; Auto power off; Laser-on indication
+
+=== MOISTURE METERS ===
+UT377A | Wood Moisture Meter | 2-40%; 2/s refresh; Auto power off; 4 wood categories; Ambient T correction
+UT377B | Wood Moisture Meter | Wood+building; 7.0-54.8%; 2/s; 7 wood categories; LED flashlight; 2m drop
+UT377C | Pinless Moisture Meter | Non-destructive; EBTN color; Wood 4-32%; Building 0-99.9%; Wood ±4%; Flashlight; Audio-Light alarm
+
+=== LIGHT METERS ===
+UT381A | Illuminance Meter | 0-400000 Lux; APP; 99 storage; Color correction; Integrated+split probe
+UT383 | Mini Light Meter | 0-199900 Lux; 1Fc 0-9999 Fc; Overload; Auto power off
+UT383BT | Mini Light Meter | Same as UT383 + Bluetooth
+UT383S | Digital Light Meter | 0-199900 Lux; MAX/MIN; Overload; Split design
+
+=== LASER POWER ===
+UT385 | Laser Power Meter | 0uW-39.99mW; 400-1100nm; Optional 520/633/650/780nm
+
+=== PM2.5 / CO2 ===
+A25D | PM2.5 Meter | PM2.5; T; RH
+A37 | CO2 Meter | CO2; T; RH
+
+=== WALL SCANNERS ===
+UT387A | Wall Scanner | StudScan ferrous 19mm/non-ferrous 19mm/Cu live 50mm/wood 19mm; ThickScan ferrous 28.5mm/non-ferrous 28.5mm/Cu live 50mm/wood 28.5mm
+UT387C | Wall Scanner | Wood beam, metal, electric wire; Metal-scan 76mm; Stud-scan wood 28.5mm; Thick-scan wood 38mm; AC wire 51mm
+UT387D | Wall Scanner | Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm
+UT387E | Wall Scanner | Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm
+UT387LM | Wall Scanner + Laser | Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m
+UT387S | Wall Scanner + Moisture | Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m; Wood moisture 6-40%
+
+=== ANGLE METERS ===
+LM320D | Angle Meter | 4x90°; HD backlit; Li-ion; Two-side magnets
+LM320E | Angle Meter | 4x90°; HD backlit; Li-ion; Two-side lasers; Two-side magnets
+LM320F | Angle Meter | 4x90°; HD backlit; Li-ion; Three-side lasers; Three-side magnets
+
+=== LASER DISTANCE METERS ===
+LM50A | Laser Distance Meter | 50m; LCD; m/ft/in; Front/Rear
+LM70A | Laser Distance Meter | 70m; LCD; m/ft/in; Front/Rear
+LM100A | Laser Distance Meter | 100m; LCD; m/ft/in; Front/Rear
+LM120A | Laser Distance Meter | 120m; LCD; m/ft/in; Front/Rear
+LM40Mi | Laser Distance Meter | 40m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C
+LM60Mi | Laser Distance Meter | 60m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C
+LM40T | Laser Distance Meter | 40m laser + 5m tape; 1.2" LCD
+LM60T | Laser Distance Meter | 60m laser + 5m tape; 1.2" LCD
+
+=== LASER LEVELS ===
+LM570LD-II | Laser Level | Green LD; 2 lines
+LM570R-I | Laser Level | Red; 1V1H; H110°/V110°
+LM573LD-II | Laser Level | Green LD; 3D 12 lines
+LM575LD | Laser Level | Green LD; 3D 12 lines
+LM576LD | Laser Level | Osram green LD; 3D 16 lines
+LM585LD | Laser Level | Osram green LD; 8 lines
+LM573R | Laser Level | 12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote
+LM575R | Laser Level | 12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote
+LM576R | Laser Level | 16 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote
+LM585R | Laser Level | 8 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote
+
+=== LASER RANGEFINDERS ===
+LM600 | Laser Rangefinder | 5-600yd; 7X mag; 25mm objective; Height 250yd; Angle
+LM1000 | Laser Rangefinder | 5-1000yd; 7X mag; 25mm objective; Height 450yd; Velocity; Angle
+LM1500 | Laser Rangefinder | 5-1500yd; 7X mag; 25mm objective; Height 451yd; Velocity; Angle
+LM2000 | Laser Rangefinder | 2000m; Type-C charging; USB export
+LM600G | Golf Rangefinder | 3-600m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off
+LM800G | Golf Rangefinder | 3-800m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off
+LM1000G | Golf Rangefinder | 3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off
+LM1200G | Golf Rangefinder | 3-1200m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off
+LM1500G | Golf Rangefinder | 3-1500m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off
+LM600A | Pro Rangefinder | 3-600m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display
+LM800A | Pro Rangefinder | 3-800m; Same features as LM600A + 800m range
+LM1000A | Pro Rangefinder | 3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display
+LM1200A | Pro Rangefinder | 3-1200m; Same as LM1000A + longer range
+LM1500A | Pro Rangefinder | 3-1500m; Same as LM1000A + longest range
+
+=== BORESCOPES ===
+UT663B | Borescope | 1m probe (fixed); 5" HD; 180° bi-direction; 8 LED; 1000K HD camera; IP67; Photo+Video; 32GB TF; 3000mAh Li
+UT663B-2m | Borescope | 2m probe (fixed); 5" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh
+UT663B-3m | Borescope | 3m probe (fixed); 5" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh
+UT665 | Borescope | 640x480; 1m probe; 2.4" LCD; 9mm lens; 4 LED; IP67 probe
+UT665P | Borescope | 1m probe (replaceable); 4.3" HD; 300K HD camera; 70° FOV; IP67; 8 LED; 2000mAh Li; Side mirror, magnet, hook
+UT665P-5m | Borescope | 5m probe (replaceable); 4.3" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh
+UT665P-10m | Borescope | 10m probe (replaceable); 4.3" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh
+UT667 | Borescope | 1m probe (replaceable); 4.3" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh
+UT667-5m | Borescope | 5m probe (replaceable); 4.3" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh
+UT667-10m | Borescope | 10m probe (replaceable); 4.3" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh
+
+=== THERMAL IMAGERS ===
+
+[Body Temp / EST]
+UTi260K | EST Thermal Imager | 256x192; 30°C-45°C; 56°x42.2°; 25Hz; 2.8" TFT; For body
+
+[Smartphone Thermal]
+UTi120Mobile | Smartphone Thermal (Android) | 120x90; -20°C-400°C; 50°x38°; 25Hz
+UTi120MS | Smartphone Thermal (iOS) | 120x90; -20°C-400°C; 50°x38°; 25Hz
+UTi720M | Smartphone Thermal (Android) | 256x192; -20°C-200°C; 56°x42.2°; 25Hz; 3.2mm lens
+UTi721M | Smartphone Thermal (Android) | 256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.2mm lens; EST screening mode
+UTi722M | Smartphone Thermal (Android) | 256x192; -20°C-550°C; 40°x30°; 25Hz; 4.3mm lens; Manual focus
+UTi740M | Smartphone Thermal (Android) | 400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus
+UTi740MS | Smartphone Thermal (Android+iOS) | 400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus
+
+[Portable Thermal]
+UTi120P | Portable Thermal | 120x90; -20°C-400°C; ≤25Hz; 2.4" TFT (320x240)
+UTi120T | Portable Thermal | 120x90; -20°C-400°C; 50°x38°; 25Hz; 3.5" touch LCD
+UTi720T | Portable Thermal | 256x192; -20°C-550°C; 56°x42°; 25Hz; 3.5" touch LCD
+
+[Heavy Duty Thermal]
+UTi32 | Heavy Duty Thermal | 32x32; -20-1000°C; 30°x30°; 9Hz; 2.4" LCD
+UTi712S | Heavy Duty Thermal | 120x90; -20-400°C; 50°x38°; 25Hz; 2.4" TFT
+UTi716S | Heavy Duty Thermal | 160x120; -20-550°C; 40°x30°; 25Hz; 2.4" TFT; 2MP digital camera
+UTi716B | Heavy Duty Thermal | 160x120; SR 320x240; -20-550°C; 40°x30°; 25Hz; 2.8" TFT; 2MP camera; IP65; WiFi; Video; T-mix
+UTi120B | Heavy Duty Thermal | 120x90; -20°C-400°C; 50°x38°; 25Hz; 2.8" TFT
+UTi720A | Heavy Duty Thermal | 256x192; -20°C-400°C; 56°x42.2°; 25Hz; 2.8" TFT
+UTi260B | Heavy Duty Thermal | 256x192; -20°C-550°C; 56°x42°; 25Hz; 2.8" TFT
+UTi720B | Heavy Duty Thermal | 256x192; SR 512x384; -20°C-550°C; 56°x42°; 25Hz; 2.8" TFT; 2MP camera; IP65; WiFi; Video; T-mix
+
+[Enhanced Thermal]
+UTi720E | Enhanced Thermal | 256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5" IPS; WiFi
+UTi730E | Enhanced Thermal | 320x240; -20°C-550°C; 56°x42°; 25Hz; 3.5" IPS; WiFi
+
+[Professional Enhanced Thermal]
+UTi720V | Pro Enhanced Thermal | 256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5" IPS touch; Laser ranging; 5MP camera; Video; WiFi
+UTi730V | Pro Enhanced Thermal | 320x240; -40°C-400°C; 56°x42°; 9Hz; 3.5" IPS touch; Laser ranging; 5MP camera; Video; WiFi
+UTi740H | Pro Enhanced Thermal | 384x288; -30°C-650°C; 28°x21°; 25Hz; 4.3" IPS; Manual focus; WiFi
+UTi256G | Pro Enhanced Thermal | 256x192; -20°C-550°C; 28°x20°; 30Hz; 3.5" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer
+UTi384G | Pro Enhanced Thermal | 384x288; -20°C-550°C; 42°x30°; 30Hz; 3.5" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer; Video
+UTi384J | Pro Enhanced Thermal | 384x288; SR 768x576; 10.5mm lens; 25°x19°; 30Hz; 4.3" LCD touch (800x480); Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 8MP camera; WiFi; BT; Laser distance
+UTi640J | Pro Enhanced Thermal | 640x480; SR 1280x960; 17.7mm lens; 25°x19°; 30Hz; 4.3" LCD touch; Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 13MP camera; WiFi; BT; Laser distance
+UTi760X | Pro Enhanced Thermal | 640x512; SR 1280x1024; NETD<35mK; 18mm lens; 24°x19.3°; 30Hz; 5" IPS touch; Auto/manual focus; -20°C-1200°C; ±1.5°C/1.5%; 13MP camera; WiFi; BT; Laser rangefinder; Replaceable battery; IP54; 2m drop
+
+[Monoculars]
+UTx210W | Thermal Monocular | 256x192; 17.5°x13.1°; 50Hz; 10mm lens; Video output; Focus-free; WiFi
+UTx313 | Thermal Monocular | 384x288; 20.3°x15.2°; 50Hz; 13.5mm lens; Manual focus; Laser pointer; Video output
+UTx318 | Thermal Monocular | 384x288; 14.6°x11°; 50Hz; 18mm lens; Manual focus; Laser pointer; Video output
+UTx325 | Thermal Monocular | 384x288; 10.5°x7.9°; 50Hz; 25mm lens; Manual focus; Laser pointer; Video output
+UTx313M | Thermal Monocular | 400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Photo/Video; WiFi; Multi-language
+UTx318M | Thermal Monocular | 400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Photo/Video; WiFi; Multi-language
+UTx325M | Thermal Monocular | 400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language
+UTx313MR | Thermal Monocular | 400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Laser ranging up to 1000m; Photo/Video; WiFi
+UTx318MR | Thermal Monocular | 400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Laser ranging up to 1000m; Photo/Video; WiFi
+UTx325MR | Thermal Monocular | 400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Laser ranging up to 1000m; Photo/Video; WiFi
+UTx625M | Thermal Monocular | 640x512; 17.4°x14°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language
+UTx635M | Thermal Monocular | 640x512; 12.5°x10°; 25mK; 50Hz; 35mm lens; Photo/Video; WiFi; Multi-language
+
+=== END OF DISTRIBUTOR LIST ===
