@@ -18,48 +18,131 @@
         <span class="logo-accent">UNI-T</span> Philippines
       </a>
       <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/posts/">All Posts</a>
-        <div class="nav-dropdown">
-          <a href="/categories/equipment-guides/" class="active">Guides <span class="dropdown-arrow">&#9660;</span></a>
-          <div class="nav-submenu">
-            <a href="/categories/equipment-guides/">Equipment Guides</a>
-            <a href="/categories/safety-techniques/">Safety &amp; Techniques</a>
-            <a href="/categories/professional/">Professional Development</a>
-            <a href="/categories/faqs/">FAQs</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <a href="/tools/">Tools <span class="dropdown-arrow">&#9660;</span></a>
-          <div class="nav-submenu">
-            <a href="/tools/instrument-finder.html">Instrument Finder Quiz</a>
-            <a href="/tools/compare.html">Product Comparison</a>
-            <a href="/tools/safety-calculator.html">Safety Calculator</a>
-            <a href="/tools/knowledge-quiz.html">Knowledge Quiz</a>
-            <a href="/tools/wiring-reference.html">Wiring Reference</a>
-          </div>
-        </div>
-        <a href="/contact.html">Contact</a>
-        <a href="https://kinmo.com" target="_blank">Shop</a>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </nav>
     </div>
   </header>
+
+  <!-- Side Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="side-drawer" id="sideDrawer" aria-label="Site navigation">
+    <div class="drawer-header">
+      <div class="drawer-title"><span class="accent">UNI-T</span> Philippines</div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-nav">
+      <div class="drawer-section">
+        <a href="/"><span class="drawer-icon">&#127968;</span> Home</a>
+        <a href="/posts/"><span class="drawer-icon">&#128240;</span> All Posts</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Guides</span>
+        <a href="/categories/equipment-guides/"><span class="drawer-icon">&#128736;&#65039;</span> Equipment Guides</a>
+        <a href="/categories/safety-techniques/"><span class="drawer-icon">&#9888;&#65039;</span> Safety &amp; Techniques</a>
+        <a href="/categories/professional/"><span class="drawer-icon">&#128188;</span> Professional Dev</a>
+        <a href="/categories/faqs/"><span class="drawer-icon">&#10067;</span> FAQs</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <span class="drawer-section-label">Interactive Tools</span>
+        <a href="/tools/instrument-finder.html"><span class="drawer-icon">&#127919;</span> Instrument Finder Quiz</a>
+        <a href="/tools/compare.html"><span class="drawer-icon">&#9878;&#65039;</span> Product Comparison</a>
+        <a href="/tools/safety-calculator.html"><span class="drawer-icon">&#128737;&#65039;</span> Safety Calculator</a>
+        <a href="/tools/knowledge-quiz.html"><span class="drawer-icon">&#129504;</span> Knowledge Quiz</a>
+        <a href="/tools/wiring-reference.html"><span class="drawer-icon">&#128268;</span> Wiring Reference</a>
+      </div>
+
+      <div class="drawer-divider"></div>
+
+      <div class="drawer-section">
+        <a href="/contact.html"><span class="drawer-icon">&#9993;&#65039;</span> Contact Us</a>
+        <a href="https://kinmo.com" target="_blank" rel="noopener"><span class="drawer-icon">&#128722;</span> Visit Shop</a>
+      </div>
+    </div>
+
+    <div class="drawer-theme-toggle" id="drawerThemeToggle">
+      <span class="toggle-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        Dark Mode
+      </span>
+      <span class="toggle-switch"></span>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-footer-item">&#128222; <a href="tel:+639778407799">+63 977 840 7799</a></div>
+      <div class="drawer-footer-item">&#128231; <a href="mailto:e2shop.kinmo@gmail.com">e2shop.kinmo@gmail.com</a></div>
+      <div class="drawer-footer-item">&#128205; Diliman, Quezon City</div>
+    </div>
+  </aside>
+
+  <script>
+  (function() {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const drawer = document.getElementById('sideDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const closeBtn = document.getElementById('drawerClose');
+    const themeToggle = document.getElementById('drawerThemeToggle');
+
+    if (!hamburger || !drawer) return;
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      hamburger.classList.add('open');
+      document.body.classList.add('drawer-open');
+
+      const currentPath = window.location.pathname;
+      drawer.querySelectorAll('.drawer-nav a').forEach(a => {
+        a.classList.remove('active');
+        const href = a.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '/') ||
+            (currentPath.startsWith(href) && href !== '/' && href.length > 1 && !href.startsWith('http'))) {
+          a.classList.add('active');
+        }
+      });
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+    }
+
+    hamburger.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e) {}
+      });
+    }
+  })();
+  </script>
+
 
   <section class="hero" style="padding: 3rem 0;">
     <div class="container">
@@ -306,7 +389,7 @@
       localStorage.setItem('theme', newTheme);
     }
     initTheme();
-    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+    (function(){var t=document.getElementById('themeToggle'); if(t) t.addEventListener('click', toggleTheme);})();
 
     // Category page search
     const searchInput = document.getElementById('categorySearch');
