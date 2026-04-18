@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test Your Knowledge | UNI-T Philippines</title>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/images/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/apple-touch-icon.png">
@@ -586,7 +587,7 @@
         Official Distributor
       </span>
       <nav class="nav">
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideDrawer">
           <span></span>
           <span></span>
           <span></span>
@@ -675,7 +676,10 @@
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
+      // A11y: move focus into drawer
+      setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -693,6 +697,9 @@
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      // A11y: return focus to hamburger
+      hamburger.focus();
     }
 
     hamburger.addEventListener('click', openDrawer);

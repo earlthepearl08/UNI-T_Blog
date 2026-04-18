@@ -623,7 +623,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 10A; R 200MΩ",
-          "image": null,
+          "image": "/images/products/ut51.jpg",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 10A",
@@ -637,7 +637,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF",
-          "image": null,
+          "image": "/images/products/ut52.jpg",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -652,7 +652,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut53.jpg",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",
@@ -667,7 +667,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
           "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp 1000°C",
-          "image": null,
+          "image": "/images/products/ut55.jpg",
           "keySpecs": [
             "DC/AC 1000V",
             "DC/AC 20A",

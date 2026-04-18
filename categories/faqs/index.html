@@ -9,6 +9,7 @@
   <meta property="og:description" content="Frequently asked questions about UNI-T test instruments answered by experts.">
   <meta property="og:image" content="/images/products/oscilloscope-utd2000.png">
   <meta property="og:type" content="website">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
         <span class="logo-accent">UNI-T</span> Philippines
       </a>
       <nav class="nav">
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideDrawer">
           <span></span>
           <span></span>
           <span></span>
@@ -107,7 +108,10 @@
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
+      // A11y: move focus into drawer
+      setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -125,6 +129,9 @@
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      // A11y: return focus to hamburger
+      hamburger.focus();
     }
 
     hamburger.addEventListener('click', openDrawer);

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Complete UNI-T Product Catalog | UNI-T Philippines</title>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/images/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/apple-touch-icon.png">
@@ -137,12 +138,12 @@
       top: 70px;
       z-index: 50;
       background: var(--bg-primary);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
       padding: 1rem 0;
       margin-top: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
     }
-    [data-theme="dark"] .filter-bar { box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    [data-theme="dark"] .filter-bar { box-shadow: 0 4px 16px rgba(0,0,0,0.5); }
 
     @media (max-width: 768px) {
       .filter-bar {
@@ -332,7 +333,13 @@
       justify-content: center;
       overflow: hidden;
     }
-    [data-theme="dark"] .card-img-wrap { background: #f8f8f8; }
+    [data-theme="dark"] .card-img-wrap {
+      background: #f0f0f0;
+    }
+    [data-theme="dark"] .card-img-wrap img {
+      mix-blend-mode: multiply;
+      filter: brightness(0.95);
+    }
     .card-img-wrap img {
       width: 100%;
       height: 100%;
@@ -633,7 +640,7 @@
         Official Distributor
       </span>
       <nav class="nav">
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideDrawer">
           <span></span>
           <span></span>
           <span></span>
@@ -728,7 +735,10 @@
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
+      // A11y: move focus into drawer
+      setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -746,6 +756,9 @@
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      // A11y: return focus to hamburger
+      hamburger.focus();
     }
 
     hamburger.addEventListener('click', openDrawer);
@@ -772,7 +785,7 @@
     <div class="container">
       <span class="pill-badge">504 Products</span>
       <h1>Complete UNI-T <span class="accent">Product Catalog</span></h1>
-      <p>Browse every UNI-T test instrument across 54 categories. Click any product to find it on Kinmo.</p>
+      <p>Browse every UNI-T test instrument across 72 categories. Click any product to find it on Kinmo.</p>
     </div>
   </section>
 
@@ -931,37 +944,88 @@
     (function() {
       // Featured tiles config (per spec: 6 tiles with given icons)
       const FEATURED = [
-        { id: 'multimeters',        emoji: '\uD83D\uDD0C', label: 'Multimeters' },
-        { id: 'clamp-meters',       emoji: '\u26A1',        label: 'Clamp Meters' },
-        { id: 'thermal-imagers',    emoji: '\uD83C\uDF21\uFE0F', label: 'Thermal Imagers' },
-        { id: 'insulation-testers', emoji: '\uD83D\uDEE1\uFE0F', label: 'Insulation Testers' },
-        { id: 'oscilloscopes',      emoji: '\uD83D\uDCCA', label: 'Oscilloscopes' },
-        { id: 'environmental',      emoji: '\uD83D\uDCA7', label: 'Environmental' }
+        { id: 'multimeters',                  emoji: '\uD83D\uDD0C',        label: 'Multimeters' },
+        { id: 'clamp-meters',                 emoji: '\u26A1',              label: 'Clamp Meters' },
+        { id: 'thermal-imagers',              emoji: '\uD83C\uDF21\uFE0F',  label: 'Thermal Imagers' },
+        { id: 'ir-thermometers',              emoji: '\uD83C\uDF21\uFE0F',  label: 'IR Thermometers' },
+        { id: 'insulation-testers',           emoji: '\uD83D\uDEE1\uFE0F',  label: 'Insulation Testers' },
+        { id: 'digital-oscilloscopes',        emoji: '\uD83D\uDCCA',        label: 'Oscilloscopes' }
       ];
 
-      // Map category id -> emoji for cat-tag icons (covers all 21)
+      // Map category id -> emoji for cat-tag icons (covers all 72 categories)
       const CAT_EMOJI = {
-        'multimeters':           '\uD83D\uDD0C',
-        'clamp-meters':          '\u26A1',
-        'voltage-detectors':     '\uD83D\uDD0D',
-        'insulation-testers':    '\uD83D\uDEE1\uFE0F',
-        'earth-resistance':      '\uD83C\uDF0D',
-        'thermal-imagers':       '\uD83C\uDF21\uFE0F',
-        'infrared-thermometers': '\uD83D\uDCC8',
-        'battery-testers':       '\uD83D\uDD0B',
-        'cable-testers':         '\uD83D\uDD17',
-        'power-quality':         '\uD83D\uDCCA',
-        'process-calibrators':   '\uD83D\uDEE0\uFE0F',
-        'environmental':         '\uD83D\uDCA7',
-        'lcr-meters':            '\uD83D\uDD2C',
-        'oscilloscopes':         '\uD83D\uDCC9',
-        'function-generators':   '\uD83C\uDFB6',
-        'dc-power-supplies':     '\uD83D\uDD0C',
-        'electrical-power-tools':'\uD83D\uDD27',
-        'borescopes':            '\uD83D\uDD2D',
-        'laser-distance':        '\uD83D\uDCCF',
-        'socket-testers':        '\uD83D\uDD0C',
-        'solar-mppt':            '\u2600\uFE0F'
+        'multimeters':                          '\uD83D\uDD0C',
+        'clamp-meters':                         '\u26A1',
+        'thermal-imagers':                      '\uD83C\uDF21\uFE0F',
+        'laser-distance-meters':                '\uD83D\uDCCF',
+        'ir-thermometers':                      '\uD83C\uDF21\uFE0F',
+        'insulation-testers':                   '\uD83D\uDEE1\uFE0F',
+        'laser-rangefinders':                   '\uD83C\uDFAF',
+        'temperature-humidity-meters':          '\uD83D\uDCA7',
+        'borescopes':                           '\uD83D\uDD2D',
+        'laser-levels':                         '\uD83D\uDCD0',
+        'socket-continuity-testers':            '\uD83D\uDD0C',
+        'clamp-earth-ground-testers':           '\u26D3\uFE0F',
+        'digital-oscilloscopes':                '\uD83D\uDCCA',
+        'dc-power-supplies':                    '\uD83D\uDD0B',
+        'contact-thermometers':                 '\uD83C\uDF21\uFE0F',
+        'network-cable-testers':                '\uD83D\uDD17',
+        'waveform-generators':                  '\uD83C\uDFB6',
+        'anemometers':                          '\uD83C\uDF2A\uFE0F',
+        'usb-testers':                          '\uD83D\uDD0C',
+        'wall-scanners':                        '\uD83D\uDD0D',
+        'high-resolution-oscilloscopes':        '\uD83D\uDCCA',
+        'spectrum-analyzers':                   '\uD83D\uDCC8',
+        'fiber-optic-testers':                  '\uD83D\uDCA1',
+        'micro-ohm-meters':                     '\u26A1',
+        'process-calibrators':                  '\uD83D\uDEE0\uFE0F',
+        'air-quality-meters':                   '\uD83D\uDCA8',
+        'battery-testers':                      '\uD83D\uDD0B',
+        'earth-ground-testers':                 '\u26D3\uFE0F',
+        'flex-clamp-sensors':                   '\u26A1',
+        'high-voltage-clamp-meters':            '\u26A1',
+        'installation-testers':                 '\uD83D\uDEE1\uFE0F',
+        'light-meters':                         '\uD83D\uDCA1',
+        'tachometers':                          '\u23F1\uFE0F',
+        'thickness-gauges':                     '\uD83D\uDCCF',
+        'voltage-detectors':                    '\uD83D\uDCE1',
+        'rf-signal-generators':                 '\uD83D\uDCE1',
+        'bench-digital-multimeters':            '\uD83D\uDD0C',
+        'angle-meters':                         '\uD83D\uDCD0',
+        'lcr-meters':                           '\u2699\uFE0F',
+        'moisture-meters':                      '\uD83D\uDCA7',
+        'phase-sequence-testers':               '\uD83D\uDD04',
+        'pressure-gauges':                      '\uD83C\uDF2C\uFE0F',
+        'sound-level-meters':                   '\uD83D\uDD0A',
+        'vibration-meters':                     '\u2699\uFE0F',
+        'dc-electronic-loads':                  '\uD83D\uDD0B',
+        'bench-lcr-meters':                     '\u2699\uFE0F',
+        'bench-power-meters':                   '\uD83D\uDCCA',
+        'hipot-testers':                        '\uD83D\uDEE1\uFE0F',
+        '3-phase-power-analyzers':              '\uD83D\uDCCA',
+        'led-testers':                          '\uD83D\uDCA1',
+        'rcd-testers':                          '\uD83D\uDEE1\uFE0F',
+        'refrigerant-leak-detectors':           '\uD83D\uDCA8',
+        'smd-testers':                          '\uD83D\uDD0D',
+        'transformer-turns-ratio-testers':      '\u26A1',
+        'bench-micro-ohm-meters':               '\u26A1',
+        'acoustic-imagers':                     '\uD83D\uDCE1',
+        'cable-locators':                       '\uD83D\uDD17',
+        'circuit-breaker-testers':              '\uD83D\uDEE1\uFE0F',
+        'hardness-testers':                     '\uD83D\uDD28',
+        'lpg-tank-checkers':                    '\u26FD',
+        'laser-power-meters':                   '\uD83D\uDCA1',
+        'pipeline-detectors':                   '\uD83D\uDD0D',
+        'power-monitors':                       '\uD83D\uDCCA',
+        'power-quality-analyzers':              '\uD83D\uDCCA',
+        'radiation-detectors':                  '\u2622\uFE0F',
+        'solar-pv-tools':                       '\u2600\uFE0F',
+        'ac-power-sources':                     '\uD83D\uDD0B',
+        'bench-battery-testers':                '\uD83D\uDD0B',
+        'electrical-safety-analyzers':          '\uD83D\uDEE1\uFE0F',
+        'bench-insulation-resistance-testers':  '\uD83D\uDEE1\uFE0F',
+        'ground-bond-testers':                  '\u26D3\uFE0F',
+        'multi-channel-temperature-loggers':    '\uD83C\uDF21\uFE0F'
       };
 
       // State
@@ -1301,6 +1365,9 @@
         searchClear.classList.toggle('visible', !!v);
         clearTimeout(searchTimer);
         searchTimer = setTimeout(() => {
+          const trimmed = v.trim();
+          // Skip single-char queries to avoid rendering hundreds of cards. Empty string still resets.
+          if (trimmed.length === 1) return;
           activeSearch = v;
           writeUrlState(true);
           render();

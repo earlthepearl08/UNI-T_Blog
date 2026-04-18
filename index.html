@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNI-T Philippines | Test Instruments Blog & Resources</title>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
   <link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/images/brand/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/brand/apple-touch-icon.png">
@@ -36,7 +37,7 @@
         Official Distributor
       </span>
       <nav class="nav">
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sideDrawer">
           <span></span>
           <span></span>
           <span></span>
@@ -125,7 +126,10 @@
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
+      // A11y: move focus into drawer
+      setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -143,6 +147,9 @@
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      // A11y: return focus to hamburger
+      hamburger.focus();
     }
 
     hamburger.addEventListener('click', openDrawer);
@@ -188,7 +195,7 @@
               <div class="hero-stat-label">Expert Guides</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-number">100+</div>
+              <div class="hero-stat-number">500+</div>
               <div class="hero-stat-label">Products</div>
             </div>
             <div class="hero-stat">
@@ -523,47 +530,33 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials-section section-alt">
+  <!-- Trust Signals (replaces fabricated testimonials) -->
+  <section class="trust-signals section-alt">
     <div class="container">
       <div class="section-header">
-        <h2>Trusted by Filipino Professionals</h2>
-        <p class="section-subtitle">See why technicians, engineers, and institutions choose UNI-T from Kinmo</p>
+        <h2>Why Kinmo for UNI-T</h2>
+        <p class="section-subtitle">The official UNI-T distributor in the Philippines since 2014</p>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Bumili ako ng UT61E+ para sa shop ko. Sobrang accurate at reliable — worth every peso. Yung mga articles dito nakatulong para ma-decide kung alin ang kukunin."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">JD</div>
-            <div>
-              <strong>Engr. Juan Dela Cruz</strong>
-              <span>Industrial Electrician, Laguna</span>
-            </div>
-          </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-number">10+</div>
+          <div class="trust-label">Years as Official Distributor</div>
+          <p class="trust-desc">Authorized UNI-T partner serving Filipino professionals nationwide</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"As an HVAC technician, the UTi260B thermal camera changed how I troubleshoot. Found a faulty compressor in minutes — before I would spend hours guessing."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MS</div>
-            <div>
-              <strong>Mark Santos</strong>
-              <span>HVAC Technician, Makati</span>
-            </div>
-          </div>
+        <div class="trust-card">
+          <div class="trust-number">500+</div>
+          <div class="trust-label">UNI-T Products Available</div>
+          <p class="trust-desc">From handheld multimeters to bench oscilloscopes — full catalog stocked locally</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"We equipped our entire electrical engineering lab with UNI-T instruments from Kinmo. Great quality, great support, and the student guides on this site are excellent."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RP</div>
-            <div>
-              <strong>Prof. Rosa Perez</strong>
-              <span>EE Department Head, Manila University</span>
-            </div>
-          </div>
+        <div class="trust-card">
+          <div class="trust-number">100%</div>
+          <div class="trust-label">Authentic, Warranty-Backed</div>
+          <p class="trust-desc">Genuine UNI-T units with manufacturer warranty and local support</p>
         </div>
+      </div>
+      <div class="trust-actions">
+        <a href="https://kinmo.com" target="_blank" rel="noopener" class="btn btn-primary">Visit Kinmo Shop</a>
+        <a href="/contact.html" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
   </section>
@@ -587,7 +580,7 @@
             <span class="stat-label">Products</span>
           </div>
           <div class="stat">
-            <span class="stat-num">21</span>
+            <span class="stat-num">72</span>
             <span class="stat-label">Categories</span>
           </div>
           <div class="stat">
@@ -609,10 +602,10 @@
         </div>
         <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
           <div class="newsletter-input-group">
-            <input type="email" placeholder="Enter your email address" required class="newsletter-input">
+            <input type="email" placeholder="Enter your email" required class="newsletter-input" id="newsletterEmail">
             <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
           </div>
-          <p class="newsletter-note">Get email updates with new guides, product reviews, and tips. Unsubscribe anytime.</p>
+          <p class="newsletter-note">We'll open your mail app with a pre-filled subscribe request to Kinmo. No spam, unsubscribe anytime.</p>
         </form>
       </div>
     </div>
@@ -685,20 +678,16 @@
   <script>
     function handleNewsletterSignup(e) {
       e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value;
+      const email = document.getElementById('newsletterEmail').value.trim();
+      if (!email) return;
+      // Open the user's mail client with a pre-filled subscribe email to Kinmo
+      const subject = encodeURIComponent('Subscribe to UNI-T Philippines Newsletter');
+      const body = encodeURIComponent(`Hi Kinmo team,\n\nPlease add me to the UNI-T Philippines newsletter.\n\nEmail: ${email}\n\nThanks!`);
+      window.location.href = `mailto:e2shop.kinmo@gmail.com?subject=${subject}&body=${body}`;
+      // Show feedback
       const btn = e.target.querySelector('button');
-      btn.textContent = 'Subscribed!';
-      btn.style.background = '#22c55e';
-      btn.disabled = true;
-      e.target.querySelector('input').disabled = true;
-      showToast('Thanks for subscribing! Check your inbox for a welcome guide.');
-      setTimeout(() => {
-        btn.textContent = 'Subscribe';
-        btn.style.background = '';
-        btn.disabled = false;
-        e.target.querySelector('input').disabled = false;
-        e.target.querySelector('input').value = '';
-      }, 5000);
+      btn.textContent = 'Email opened';
+      setTimeout(() => { btn.textContent = 'Subscribe'; }, 3000);
     }
   </script>
   <script src="js/main.js"></script>
