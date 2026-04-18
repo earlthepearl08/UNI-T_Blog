@@ -234,8 +234,49 @@
     .sort-select:focus { outline: none; border-color: var(--uni-red); }
 
     /* Category pills */
-    .cat-pills-scroll {
+    .cat-pills-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-top: 0.85rem;
+      margin-bottom: 0.5rem;
+      gap: 1rem;
+    }
+    .cat-pills-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .cat-pills-label strong {
+      color: var(--uni-red);
+      font-weight: 800;
+    }
+    .cat-pills-scroll-hint {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      opacity: 0.7;
+    }
+    .cat-pills-wrap {
+      position: relative;
+    }
+    .cat-pills-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 8px;
+      width: 60px;
+      background: linear-gradient(to right, transparent, var(--bg-primary));
+      pointer-events: none;
+      opacity: 0.95;
+      transition: opacity 0.2s;
+    }
+    .cat-pills-wrap.scrolled-end::after { opacity: 0; }
+    .cat-pills-scroll {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
@@ -364,22 +405,27 @@
     }
 
     .cat-tag {
-      position: absolute;
-      top: 0.75rem;
-      left: 0.75rem;
-      background: rgba(26,26,26,0.85);
-      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(227, 30, 36, 0.08);
+      color: var(--uni-red);
       font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      backdrop-filter: blur(4px);
-      max-width: calc(100% - 1.5rem);
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      margin-bottom: 0.5rem;
+      align-self: flex-start;
+    }
+    [data-theme="dark"] .cat-tag {
+      background: rgba(227, 30, 36, 0.18);
+      color: #ff6b6f;
     }
 
     .card-body {
@@ -1145,8 +1191,19 @@
           </select>
         </div>
       </div>
-      <div class="cat-pills-scroll">
-        <div class="cat-pills" id="catPills"></div>
+      <div class="cat-pills-header">
+        <span class="cat-pills-label">Browse by category — <strong id="catCount">72</strong> categories</span>
+        <span class="cat-pills-scroll-hint" id="catScrollHint">
+          Scroll for more
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </span>
+      </div>
+      <div class="cat-pills-wrap" id="catPillsWrap">
+        <div class="cat-pills-scroll" id="catPillsScroll">
+          <div class="cat-pills" id="catPills"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1516,6 +1573,10 @@
 
       // ----- Category pills -----
       function renderPills() {
+        // Update the "X categories" label
+        const catCountEl = document.getElementById('catCount');
+        if (catCountEl) catCountEl.textContent = categoriesMeta.length;
+
         const frag = document.createDocumentFragment();
         const all = document.createElement('button');
         all.className = 'cat-pill' + (activeCategory === 'all' ? ' active' : '');
@@ -1535,6 +1596,21 @@
 
         catPillsEl.innerHTML = '';
         catPillsEl.appendChild(frag);
+
+        // Wire up scroll-end detection for the gradient fade
+        const scroller = document.getElementById('catPillsScroll');
+        const wrap = document.getElementById('catPillsWrap');
+        const hint = document.getElementById('catScrollHint');
+        if (scroller && wrap) {
+          const updateScrollState = () => {
+            const atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4;
+            wrap.classList.toggle('scrolled-end', atEnd);
+            if (hint) hint.style.opacity = atEnd ? '0' : '0.7';
+          };
+          scroller.addEventListener('scroll', updateScrollState, { passive: true });
+          // Hide the hint on small screens after first scroll
+          updateScrollState();
+        }
       }
 
       function selectCategory(id, scrollToGrid) {
@@ -1602,15 +1678,9 @@
         const safeDesc   = escapeHtml(p.description);
         const fallbackLetter = (p.model || '?').replace(/[^A-Za-z0-9]/g, '').charAt(0).toUpperCase() || '?';
 
-        // Image with onerror fallback
+        // Image with onerror fallback (no overlay tag — moved to body for clarity)
         const imgWrap = document.createElement('div');
         imgWrap.className = 'card-img-wrap';
-
-        const tag = document.createElement('span');
-        tag.className = 'cat-tag';
-        const emoji = CAT_EMOJI[p.categoryId] || '';
-        tag.textContent = (emoji ? emoji + ' ' : '') + p.category;
-        imgWrap.appendChild(tag);
 
         if (p.image) {
           const img = document.createElement('img');
@@ -1642,7 +1712,11 @@
           .map(s => `<span class="chip">${escapeHtml(s)}</span>`)
           .join('');
 
+        const emoji = CAT_EMOJI[p.categoryId] || '';
+        const catTagHtml = `<span class="cat-tag">${emoji ? escapeHtml(emoji) + ' ' : ''}${escapeHtml(p.category)}</span>`;
+
         body.innerHTML = `
+          ${catTagHtml}
           <div class="card-model">UNI-T ${safeModel}</div>
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
