@@ -427,6 +427,48 @@
       background: rgba(227, 30, 36, 0.18);
       color: #ff6b6f;
     }
+    .cat-tag-clickable {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .cat-tag-clickable:hover {
+      background: rgba(227, 30, 36, 0.18);
+      transform: translateY(-1px);
+    }
+    [data-theme="dark"] .cat-tag-clickable:hover {
+      background: rgba(227, 30, 36, 0.28);
+    }
+
+    .card-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted, #6b7280);
+      font-weight: 500;
+      align-self: center;
+      font-style: italic;
+    }
+
+    .hint-text-mobile { display: none; }
+    @media (max-width: 768px) {
+      .hint-text-desktop { display: none; }
+      .hint-text-mobile { display: inline; }
+    }
+
+    .modal-desc-empty {
+      background: rgba(227, 30, 36, 0.06);
+      border-left: 3px solid var(--uni-red, #E31E24);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+    }
+    .modal-desc-empty a {
+      color: var(--uni-red, #E31E24);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    [data-theme="dark"] .modal-desc-empty {
+      background: rgba(227, 30, 36, 0.12);
+    }
 
     .card-body {
       padding: 1rem 1.1rem 1.1rem;
@@ -1185,16 +1227,16 @@
         <div class="sort-wrap">
           <select id="sortSelect" class="sort-select" aria-label="Sort products">
             <option value="featured">Featured</option>
-            <option value="az">A &ndash; Z</option>
-            <option value="za">Z &ndash; A</option>
-            <option value="newest">Newest</option>
+            <option value="az">Model: A &rarr; Z</option>
+            <option value="za">Model: Z &rarr; A</option>
           </select>
         </div>
       </div>
       <div class="cat-pills-header">
         <span class="cat-pills-label">Browse by category — <strong id="catCount">72</strong> categories</span>
         <span class="cat-pills-scroll-hint" id="catScrollHint">
-          Scroll for more
+          <span class="hint-text-desktop">Scroll for more</span>
+          <span class="hint-text-mobile">Swipe for more</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
@@ -1713,7 +1755,7 @@
           .join('');
 
         const emoji = CAT_EMOJI[p.categoryId] || '';
-        const catTagHtml = `<span class="cat-tag">${emoji ? escapeHtml(emoji) + ' ' : ''}${escapeHtml(p.category)}</span>`;
+        const catTagHtml = `<button type="button" class="cat-tag cat-tag-clickable" data-cat-filter="${escapeHtml(p.categoryId)}" aria-label="Filter by ${escapeHtml(p.category)}">${emoji ? escapeHtml(emoji) + ' ' : ''}${escapeHtml(p.category)}</button>`;
 
         body.innerHTML = `
           ${catTagHtml}
@@ -1721,26 +1763,20 @@
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
           <div class="card-actions">
-            <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" target="_blank" rel="noopener" aria-label="Buy ${safeModel} on Kinmo">
+            <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" aria-label="Buy ${safeModel} on Kinmo">
               Buy on Kinmo
             </a>
-            <button type="button" class="card-btn card-btn-secondary" data-action="view-details" aria-label="View full details for ${safeModel}">
-              View Details
-            </button>
+            <span class="card-hint" aria-hidden="true">Click card for details &rarr;</span>
           </div>
         `;
 
         card.appendChild(imgWrap);
         card.appendChild(body);
 
-        // Whole-card click opens the modal, except when the user hits an action button.
+        // Whole-card click opens the modal, except when the user hits an action button or the cat-tag filter.
         card.addEventListener('click', (e) => {
-          if (e.target.closest('.card-btn-primary')) return; // let Buy link open normally
-          if (e.target.closest('[data-action="view-details"]')) {
-            e.preventDefault();
-            openProductModal(p);
-            return;
-          }
+          if (e.target.closest('.card-btn')) return; // let Buy link open normally
+          if (e.target.closest('.cat-tag-clickable')) return; // let cat-tag filter handler run
           openProductModal(p);
         });
         card.addEventListener('keydown', (e) => {
@@ -1787,7 +1823,10 @@
             <div class="modal-category">${escapeHtml(product.category)}</div>
             <h2 id="productModalTitle" class="modal-title">UNI-T ${escapeHtml(product.model)}</h2>
             ${product.subcategory ? `<div class="modal-subcat">${escapeHtml(product.subcategory)}</div>` : ''}
-            <p class="modal-desc">${escapeHtml(product.description || 'No description available for this model. Contact Kinmo for full specifications and pricing.')}</p>
+            ${product.description
+              ? `<p class="modal-desc">${escapeHtml(product.description)}</p>`
+              : `<p class="modal-desc modal-desc-empty">Detailed description coming soon. <a href="/contact.html">Contact Kinmo</a> for full specifications.</p>`
+            }
             ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div></div>` : ''}
             ${regionsHtml}
             <div class="modal-actions">
@@ -1940,6 +1979,18 @@
         render();
       });
 
+      // Event delegation for clickable category tags on cards
+      grid.addEventListener('click', (e) => {
+        const tag = e.target.closest('.cat-tag-clickable');
+        if (!tag) return;
+        e.stopPropagation();
+        const catId = tag.dataset.catFilter;
+        if (catId) {
+          selectCategory(catId, true);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+
       loadMoreBtn.addEventListener('click', () => {
         pageSize += PAGE_SIZE;
         render();
@@ -1956,7 +2007,7 @@
         pageSize = PAGE_SIZE;
         searchInput.value = activeSearch;
         searchClear.classList.toggle('visible', !!activeSearch);
-        sortSelect.value = ['featured','az','za','newest'].includes(activeSort) ? activeSort : 'featured';
+        sortSelect.value = ['featured','az','za'].includes(activeSort) ? activeSort : 'featured';
         catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
           p.classList.toggle('active', p.dataset.cat === activeCategory);
         });

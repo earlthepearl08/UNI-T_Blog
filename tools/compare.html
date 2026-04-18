@@ -1314,7 +1314,7 @@
       // Subcategory row (only if any has one)
       const hasSub = chosen.some(p => p.subcategory);
       const subRow = hasSub ? `
-        <tr>
+        <tr data-diffable="true">
           <td>Subcategory</td>
           ${chosen.map(p => '<td>' + (p.subcategory ? '<span class="spec-chip">' + escapeHtml(p.subcategory) + '</span>' : '<span class="spec-no">—</span>') + '</td>').join('')}
         </tr>
@@ -1336,7 +1336,7 @@
 
       // Spec rows: ✓ if product has this exact spec, — otherwise
       const specRows = allSpecs.map(spec => `
-        <tr>
+        <tr data-diffable="true">
           <td>${escapeHtml(spec)}</td>
           ${chosen.map(p => {
             const has = p.keySpecs.some(s => s.trim().toLowerCase() === spec.toLowerCase());
@@ -1392,14 +1392,14 @@
     function applyDiffHighlights() {
       const table = comparisonOutput.querySelector('.compare-table');
       if (!table) return;
-      const rows = table.querySelectorAll('tbody tr');
+      // Only diff rows explicitly marked as diffable (spec rows + subcategory).
+      // Description, image header, and Buy row are all skipped.
+      const rows = table.querySelectorAll('tbody tr[data-diffable="true"]');
       rows.forEach(row => {
         const cells = Array.from(row.querySelectorAll('td')).slice(1);
         if (cells.length < 2) return;
-        // skip the buy-button row
-        if (cells.some(c => c.querySelector('.buy-btn'))) return;
-        const texts = cells.map(c => c.textContent.trim());
-        const allSame = texts.every(t => t === texts[0]);
+        const values = cells.map(c => c.textContent.trim().toLowerCase().replace(/[\s\-_]/g, ''));
+        const allSame = values.every(v => v === values[0]);
         if (!allSame) {
           cells.forEach(c => c.classList.add('cell-diff'));
         } else {
