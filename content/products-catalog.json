@@ -14,7 +14,7 @@
           "model": "UT15B MAX",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; F 100kHz; VFD 600V",
+          "description": "Tough True RMS field multimeter for electricians working around VFDs and motor drives. The entry point into the MAX series for daily industrial troubleshooting.",
           "image": "/images/products/ut15b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -29,7 +29,7 @@
           "model": "UT17B MAX",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C",
+          "description": "True RMS multimeter built for HVAC techs and industrial electricians who need temperature measurement plus VFD-safe voltage testing in one rugged unit.",
           "image": "/images/products/ut17b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -44,7 +44,7 @@
           "model": "UT18B MAX",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "AC/DC 1000V; AC/DC 10A; R 60MΩ; C 6000uF; VFD 600V; Temp 500°C; 12V LED test",
+          "description": "Top-tier MAX series True RMS multimeter with 12V LED test for automotive and lighting techs who also handle VFDs and temperature jobs.",
           "image": "/images/products/ut18b-max.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -59,7 +59,7 @@
           "model": "UT105",
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
-          "description": "AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Dwell 4/6/8 CYL",
+          "description": "Entry-level automotive multimeter for shop mechanics doing basic ignition and dwell angle work on 4/6/8 cylinder engines.",
           "image": "/images/products/ut105.jpg",
           "keySpecs": [
             "AC 750V",
@@ -74,7 +74,7 @@
           "model": "UT107",
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
-          "description": "AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Temp -40°C~1000°C; Dwell 4/6/9 CYL",
+          "description": "Automotive multimeter that adds temperature probe to the UT105 — useful for diagnosing overheating components alongside dwell and tach checks.",
           "image": "/images/products/ut107.jpg",
           "keySpecs": [
             "AC 750V",
@@ -89,7 +89,7 @@
           "model": "UT105+",
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
-          "description": "AC/DC 1000V; 10A; R 40MΩ; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell",
+          "description": "Upgraded automotive meter with VFC filter for hybrid and EV inverter work — handles RPM, dwell, and high-frequency signals the original UT105 can't touch.",
           "image": "/images/products/ut105-plus.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -104,7 +104,7 @@
           "model": "UT107+",
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
-          "description": "AC/DC 1000V; 10A; R 60MΩ; C 10mF; F 10MHz; Temp -40°C~1000°C; VFC; RPM; Dwell; 12V battery test",
+          "description": "Top-spec automotive meter with built-in 12V battery test — the one to grab if you also do alternator and starter diagnostics, not just engine timing.",
           "image": "/images/products/ut107-plus.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -119,7 +119,7 @@
           "model": "UT120A",
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
-          "description": "AC/DC 600V; R 40MΩ; F 100kHz; Temp -55°C~500°C",
+          "description": "Pocket multimeter with surprisingly wide temperature range for service techs doing quick refrigeration or HVAC checks on the go.",
           "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -134,7 +134,7 @@
           "model": "UT120B",
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
-          "description": "AC/DC 600V; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C",
+          "description": "Pocket multimeter that adds capacitance to the UT120A — handy for technicians checking start caps on small motors and appliances.",
           "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -149,7 +149,7 @@
           "model": "UT120C",
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
-          "description": "AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 100kHz; Temp -55°C~500°C",
+          "description": "Top of the UT120 pocket family — adds 400mA current measurement so you don't need a second meter for low-current control circuits.",
           "image": "/images/products/ut120c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -164,7 +164,7 @@
           "model": "UT125C",
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
-          "description": "AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 60kHz",
+          "description": "Slim pocket multimeter for service callouts where a full DMM is overkill. Strips out temperature for a slightly lower price than the UT120C.",
           "image": "/images/products/ut125c.jpg",
           "keySpecs": [
             "AC/DC 600V",
@@ -179,7 +179,7 @@
           "model": "UT121A",
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
-          "description": "AC/DC 600V; R 10MΩ; Dual display; NCV; LIVE; CAT III 600V",
+          "description": "Dual-display smart multimeter with NCV and LIVE detection — built for residential electricians who want to see voltage and frequency at the same time.",
           "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -195,7 +195,7 @@
           "model": "UT121B",
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
-          "description": "AC/DC 600V; R 60MΩ; C 60mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V",
+          "description": "Smart dual-display DMM with capacitance and temperature, built for electricians who want one meter that handles motor caps, thermistors, and panel checks.",
           "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -211,7 +211,7 @@
           "model": "UT122",
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
-          "description": "AC/DC 600V; R 60MΩ; C 99mF; F 10Hz; Temp -40°C~1000°C; Dual; NCV; LIVE; CAT III 600V",
+          "description": "Step up from the UT121B with bigger capacitance range — for electricians regularly testing larger motor run capacitors and PFC banks.",
           "image": "/images/products/ut121b.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -227,7 +227,7 @@
           "model": "UT123",
           "category": "Digital Multimeters",
           "subcategory": "Residential DMM",
-          "description": "AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV",
+          "description": "Simple residential multimeter for home wiring, outlet checks, and basic continuity testing. Friendly for apprentices and DIY homeowners.",
           "image": "/images/products/ut123t.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -243,7 +243,7 @@
           "model": "UT123T",
           "category": "Digital Multimeters",
           "subcategory": "Residential DMM",
-          "description": "AC/DC 600V; R 20MΩ; Temp 300°C; Continuity; NCV",
+          "description": "Same residential workhorse as the UT123 in updated trim — basic AC/DC voltage, continuity, and NCV for everyday house calls.",
           "image": "/images/products/ut123t.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -259,7 +259,7 @@
           "model": "UT123D",
           "category": "Digital Multimeters",
           "subcategory": "Smart DMM",
-          "description": "AC/DC 600V; AC/DC 10A; R 40MΩ; C 4000uF",
+          "description": "Pocket-sized smart multimeter for quick checks on the go. Slips into a tool pouch without sacrificing 4000-count resolution or capacitance testing.",
           "image": "/images/products/ut123d.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -274,7 +274,7 @@
           "model": "UT117C",
           "category": "Digital Multimeters",
           "subcategory": "Bluetooth DMM",
-          "description": "AC/DC 600V; AC/DC 10A; F 50kHz; R 40MΩ; C 1000uF; LoZ; LPF; Diode; NCV; 60K count; True RMS; Bluetooth",
+          "description": "60,000-count Bluetooth multimeter with LoZ and LPF for chasing ghost voltages and VFD circuits. The smart pick if you log readings to your phone in the field.",
           "image": "/images/products/ut117c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -290,7 +290,7 @@
           "model": "UT118B",
           "category": "Digital Multimeters",
           "subcategory": "Pen DMM",
-          "description": "DC/AC 300V; R 3MΩ; C 300uF; EF; Diode; Continuity buzzer",
+          "description": "Pen-style multimeter for one-handed continuity and voltage checks in tight panels and junction boxes. Fits in a shirt pocket like a marker.",
           "image": "/images/products/ut118b.png",
           "keySpecs": [
             "DC/AC 300V",
@@ -305,7 +305,7 @@
           "model": "UT118C",
           "category": "Digital Multimeters",
           "subcategory": "Pen DMM",
-          "description": "AC/DC 600V; R 60MΩ; C 60mF; F 999.9kHz; 6000 count; Duty cycle; NCV/Live; True RMS; Diode/Continuity",
+          "description": "True RMS pen multimeter with duty cycle and big capacitance range — basically a full DMM stuffed into a pen body for techs working in cramped spots.",
           "image": "/images/products/ut118c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -321,7 +321,7 @@
           "model": "UT33A+",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 600V; AC/DC 10A; R 200MΩ; C; Auto range",
+          "description": "Auto-ranging palm multimeter for students, hobbyists, and apprentices learning the trade. The easy-button version of the UT33 family.",
           "image": "/images/products/ut33a-plus.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -336,7 +336,7 @@
           "model": "UT33B+",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 600V; DC 10A; R 20MΩ; Manual",
+          "description": "Manual-range palm multimeter — the cheapest UT33 for techs who prefer dialing in ranges themselves and don't need fancy extras.",
           "image": "/images/products/ut33b-plus.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -351,7 +351,7 @@
           "model": "UT33C+",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 600V; DC 10A; R 200MΩ; Temp 1000°C; Manual",
+          "description": "Manual-range palm DMM with K-type temperature input — the budget pick for HVAC and appliance repair students.",
           "image": "/images/products/ut33c-plus.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -366,7 +366,7 @@
           "model": "UT33D+",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 600V; DC 10A; R 200MΩ; NCV; Manual",
+          "description": "Palm DMM with NCV for residential electricians who want a cheap second meter that beeps when wires are live.",
           "image": "/images/products/ut33d-plus.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -381,7 +381,7 @@
           "model": "UT131A",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 250V; AC/DC 10A; R 200MΩ; C; Auto",
+          "description": "Compact 250V auto-ranging palm meter — sized for residential 230V work, not industrial. Great as a starter meter for new electricians.",
           "image": "/images/products/ut131a.png",
           "keySpecs": [
             "AC/DC 250V",
@@ -396,7 +396,7 @@
           "model": "UT131B",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 250V; DC 10A; R 20MΩ; Manual",
+          "description": "Manual-range 250V palm DMM — bare-bones option for hobby electronics, learning labs, and basic home wiring checks.",
           "image": "/images/products/ut131b.png",
           "keySpecs": [
             "AC/DC 250V",
@@ -411,7 +411,7 @@
           "model": "UT131C",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 250V; DC 10A; R 200MΩ; Temp 1000°C; Manual",
+          "description": "UT131 with K-type temperature input — appliance and small-engine techs get a basic palm meter that doubles as a thermometer.",
           "image": "/images/products/ut131c.png",
           "keySpecs": [
             "AC/DC 250V",
@@ -426,7 +426,7 @@
           "model": "UT131D",
           "category": "Digital Multimeters",
           "subcategory": "Palm DMM",
-          "description": "AC/DC 250V; DC 10A; R 200MΩ; NCV; Manual",
+          "description": "Palm DMM with NCV — pick this if you want the cheapest UT131 with non-contact live wire detection for residential work.",
           "image": "/images/products/ut131d.png",
           "keySpecs": [
             "AC/DC 250V",
@@ -441,7 +441,7 @@
           "model": "UT133A",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 60MΩ; C 9.999mF; F 10Hz~1MHz; Temp -40°C~1000°C; Auto",
+          "description": "Auto-ranging handheld with frequency and temperature — solid all-rounder for electricians and HVAC techs who want one meter for daily field work.",
           "image": "/images/products/ut133a.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -456,7 +456,7 @@
           "model": "UT133B",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 600V; DC 10A; R 60MΩ; C 9.999mF; Manual",
+          "description": "Manual-range handheld DMM — strips the temperature and auto-ranging from the UT133A for techs who want simpler, cheaper, and faster.",
           "image": "/images/products/ut133b.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -471,7 +471,7 @@
           "model": "UT136B+",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Auto",
+          "description": "1000V auto-ranging handheld for industrial electricians who need wide frequency measurement for VFDs and motor drives.",
           "image": "/images/products/ut136b-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -486,7 +486,7 @@
           "model": "UT136C+",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400Hz~40MHz; Temp 1000°C; Manual",
+          "description": "Manual-range version of the UT136B+ with added temperature input — for techs who want full control plus thermocouple support at 1000V.",
           "image": "/images/products/ut136c-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -501,7 +501,7 @@
           "model": "UT39C",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C",
+          "description": "Long-running 20A handheld with temperature — a no-nonsense workhorse that's been on Filipino electrician benches for years.",
           "image": "/images/products/ut39c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -516,7 +516,7 @@
           "model": "UT39A+",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 10A; R 200MΩ; C 10mF; Manual",
+          "description": "Refresh of the classic UT39 with bigger resistance range — the entry handheld for general electrical work without temp or frequency.",
           "image": "/images/products/ut39a-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -531,7 +531,7 @@
           "model": "UT39C+",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 10A; R 40MΩ; C 10mF; F 1MHz; Temp 1000°C; Manual",
+          "description": "Updated UT39C with frequency support added — for electricians who want the familiar UT39 layout plus VFD-friendly Hz measurement.",
           "image": "/images/products/ut39c-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -546,7 +546,7 @@
           "model": "UT39E+",
           "category": "Digital Multimeters",
           "subcategory": "Handheld DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 2000uF; F 2MHz; Temp 1000°C; Manual",
+          "description": "Top of the UT39+ family — 20A current, 200MΩ resistance, and full frequency and temperature for industrial maintenance teams.",
           "image": "/images/products/ut39e-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -561,7 +561,7 @@
           "model": "UT139A",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 20MΩ; Auto",
+          "description": "Entry True RMS multimeter — the cheapest way into accurate readings on non-sinusoidal waveforms from drives and electronics.",
           "image": "/images/products/ut139a.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -576,7 +576,7 @@
           "model": "UT139B",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 40MΩ; C 100mF; F 10MHz; Auto",
+          "description": "True RMS multimeter with bigger capacitance and frequency than the UT139A — the right step up for techs who need motor cap and Hz readings.",
           "image": "/images/products/ut139b.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -591,7 +591,7 @@
           "model": "UT139C",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C; Auto",
+          "description": "Affordable True RMS multimeter for electricians who need real measurements without lab-grade pricing. The right balance of features for daily field work.",
           "image": "/images/products/ut139c.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -606,7 +606,7 @@
           "model": "UT139S",
           "category": "Digital Multimeters",
           "subcategory": "True RMS DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C; True RMS",
+          "description": "Top of the UT139 family — same temperature and capacitance as the UT139C with refined True RMS performance for serious field techs.",
           "image": "/images/products/ut139s.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -622,7 +622,7 @@
           "model": "UT51",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 10A; R 200MΩ",
+          "description": "Classic universal DMM — basic AC/DC voltage and current at 1000V. Cheap, simple, and proven for general electrical work.",
           "image": "/images/products/ut51.jpg",
           "keySpecs": [
             "DC/AC 1000V",
@@ -636,7 +636,7 @@
           "model": "UT52",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF",
+          "description": "Step-up from the UT51 with 20A current and capacitance — for techs who occasionally measure motor caps but don't need temp.",
           "image": "/images/products/ut52.jpg",
           "keySpecs": [
             "DC/AC 1000V",
@@ -651,7 +651,7 @@
           "model": "UT53",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 20uF; Temp 1000°C",
+          "description": "UT52 with K-type temperature added — the budget pick for techs who want a basic 20A meter that handles thermocouples too.",
           "image": "/images/products/ut53.jpg",
           "keySpecs": [
             "DC/AC 1000V",
@@ -666,7 +666,7 @@
           "model": "UT55",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 20uF; F 20kHz; Temp 1000°C",
+          "description": "Top of the UT5x universal series with frequency added — covers basic V/A/R/C/F/Temp on a single dial for general-purpose work.",
           "image": "/images/products/ut55.jpg",
           "keySpecs": [
             "DC/AC 1000V",
@@ -681,7 +681,7 @@
           "model": "UT58A",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF",
+          "description": "Larger-display universal DMM — easier to read in dim Philippine basements and electrical rooms than the UT5x series.",
           "image": "/images/products/ut58a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -696,7 +696,7 @@
           "model": "UT58B",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 200MΩ; C 100uF; Temp -40°C~1000°C",
+          "description": "UT58A with K-type temperature input — for techs who want the bigger display plus thermocouple readings on appliances and motors.",
           "image": "/images/products/ut58b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -711,7 +711,7 @@
           "model": "UT58C",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 20MΩ; C 100uF; F 20kHz; Temp -40°C~1000°C",
+          "description": "UT58 with frequency added on top of temperature — full general-purpose meter for techs juggling motors, drives, and HVAC work.",
           "image": "/images/products/ut58c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -726,7 +726,7 @@
           "model": "UT58D",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 20MΩ; C 100uF",
+          "description": "Mid-range UT58 — same big display as the UT58A but cheaper, without the higher resistance range. Good general-use meter for shop electricians.",
           "image": "/images/products/ut58d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -741,7 +741,7 @@
           "model": "UT58E",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 20uF; F 20kHz; Temp -40°C~1000°C",
+          "description": "Top-spec UT58 with full feature set — high resistance, frequency, and temperature on a single dial for techs who want one meter for everything.",
           "image": "/images/products/ut58e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -756,7 +756,7 @@
           "model": "UT151A",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 200MΩ; C 100uF",
+          "description": "Affordable 600V universal DMM — sized right for residential and small-commercial electricians who don't need 1000V capability.",
           "image": "/images/products/ut151a.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -771,7 +771,7 @@
           "model": "UT151C",
           "category": "Digital Multimeters",
           "subcategory": "Universal DMM",
-          "description": "DC/AC 600V; DC/AC 10A; R 20MΩ; C 20uF; Temp -40°C~1000°C",
+          "description": "UT151 with K-type temperature added — for residential and HVAC techs who don't need 1000V but want thermocouple support.",
           "image": "/images/products/ut151c.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -786,7 +786,7 @@
           "model": "UT60S",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C",
+          "description": "Updated UT60 family standard meter — solid all-around DMM with full V/A/R/C/F/Temp coverage at a fair price.",
           "image": "/images/products/ut60s.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -801,7 +801,7 @@
           "model": "UT60EU",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C",
+          "description": "EU-market variant of the UT60S — same feature set, sold under the UT60 EU model code for European distribution channels.",
           "image": "/images/products/ut60eu.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -816,7 +816,7 @@
           "model": "UT60BT",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 100MΩ; C 10mF; F 10MHz; Temp 1000°C; Bluetooth",
+          "description": "UT60 with Bluetooth — log readings to the iENV app for techs creating service reports straight from the panel without writing them down.",
           "image": "/images/products/ut60bt.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -832,7 +832,7 @@
           "model": "UT61B+",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Auto",
+          "description": "Refreshed UT61B for general electrical work — auto-ranging without temperature, cheaper than the UT61D+ but still 1000V capable.",
           "image": "/images/products/ut61b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -847,7 +847,7 @@
           "model": "UT61D+",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; Auto",
+          "description": "UT61 with 20A current and temperature — popular Filipino electrician pick when you need higher current capacity than the UT61B+.",
           "image": "/images/products/ut61d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -862,7 +862,7 @@
           "model": "UT61E+",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 220MΩ; C 220mF; F 220MHz; Auto",
+          "description": "22000-count UT61 — high-resolution meter for electronics technicians and lab work who need 220MHz frequency and big capacitance ranges.",
           "image": "/images/products/ut61e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -877,7 +877,7 @@
           "model": "UT161B",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Auto",
+          "description": "Mid-range standard DMM with full feature coverage — sits between the UT139 and UT181 for techs who want one all-purpose meter.",
           "image": "/images/products/ut161b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -892,7 +892,7 @@
           "model": "UT161D",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; Temp -40°C~1000°C; Auto",
+          "description": "UT161 with 20A current and temperature — the practical pick for industrial maintenance teams who need a step up from the UT161B.",
           "image": "/images/products/ut161d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -907,7 +907,7 @@
           "model": "UT161E",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 220MΩ; C 220mF; F 220MHz",
+          "description": "22000-count UT161 for advanced electronics work — same high-resolution upgrade as the UT61E+ in the newer chassis.",
           "image": "/images/products/ut161e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -922,7 +922,7 @@
           "model": "UT71A",
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; 20K count",
+          "description": "Entry of the UT71 intelligent series — 20,000-count DMM with 200MHz frequency, built for electronics labs and R&D benches.",
           "image": "/images/products/ut71a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -937,7 +937,7 @@
           "model": "UT71B",
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 20MΩ; C 20mF; F 200MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 20K count",
+          "description": "UT71A with temperature, 4-20mA loop percentage, and onboard storage — for instrumentation techs commissioning industrial process loops.",
           "image": "/images/products/ut71b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -952,7 +952,7 @@
           "model": "UT71C",
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 100 set storage; 4-20mA%; 40K count",
+          "description": "40,000-count UT71 — bigger ranges and faster frequency response than the UT71B for serious electronics and lab measurements.",
           "image": "/images/products/ut71c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -967,7 +967,7 @@
           "model": "UT71D",
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 9999 storage; 40K count",
+          "description": "UT71C with deep 9999-set storage for unattended logging — pick this if you want to walk away and let the meter record overnight.",
           "image": "/images/products/ut71d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -982,7 +982,7 @@
           "model": "UT71E",
           "category": "Digital Multimeters",
           "subcategory": "Intelligent DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 40MΩ; C 40mF; F 400MHz; Temp -40°C~1000°C; 100 storage; Power 2500W; 4-20mA%; 40K count",
+          "description": "Top of the UT71 family — adds 2500W power measurement to the 40K-count platform for energy auditors and load testing in the field.",
           "image": "/images/products/ut71e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -997,7 +997,7 @@
           "model": "UT171B",
           "category": "Digital Multimeters",
           "subcategory": "Industrial True RMS DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS",
+          "description": "Industrial True RMS DMM built for plant maintenance — rugged enough for daily abuse with full feature set for motor and drive work.",
           "image": "/images/products/ut171b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1013,7 +1013,7 @@
           "model": "UT171C",
           "category": "Digital Multimeters",
           "subcategory": "Industrial True RMS DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C; True RMS",
+          "description": "UT171C trim of the industrial True RMS line — same platform as the UT171B with calibration tweaks for higher-accuracy plant work.",
           "image": "/images/products/ut171c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1029,7 +1029,7 @@
           "model": "UT181A",
           "category": "Digital Multimeters",
           "subcategory": "Datalogging DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 60MHz; Temp 1000°C; True RMS",
+          "description": "Premium 60,000-count datalogging multimeter for advanced troubleshooting and field reporting. Color screen plus Bluetooth/USB makes it the go-to for industrial maintenance teams.",
           "image": "/images/products/ut181a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1045,7 +1045,7 @@
           "model": "UT191E",
           "category": "Digital Multimeters",
           "subcategory": "Professional DMM",
-          "description": "DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz",
+          "description": "Pro-grade 600V multimeter with 20A current — built tougher than the UT139 for electricians on heavy commercial sites.",
           "image": "/images/products/ut191e.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -1060,7 +1060,7 @@
           "model": "UT191T",
           "category": "Digital Multimeters",
           "subcategory": "Professional DMM",
-          "description": "DC/AC 600V; DC/AC 20A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
+          "description": "UT191E with K-type temperature added — the top choice in the UT191 line for HVAC and motor maintenance work.",
           "image": "/images/products/ut191t.png",
           "keySpecs": [
             "DC/AC 600V",
@@ -1075,7 +1075,7 @@
           "model": "UT195E",
           "category": "Digital Multimeters",
           "subcategory": "Pro-Line DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 10MHz; True RMS",
+          "description": "Pro-Line True RMS DMM — 1000V capable workhorse for industrial maintenance teams who don't need temp or datalogging.",
           "image": "/images/products/ut195e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1091,7 +1091,7 @@
           "model": "UT195M",
           "category": "Digital Multimeters",
           "subcategory": "Pro-Line DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; True RMS",
+          "description": "Mid-range Pro-Line with temperature and 40MHz bandwidth — the all-around pick for techs servicing VFDs, motors, and sensors.",
           "image": "/images/products/ut195m.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1107,7 +1107,7 @@
           "model": "UT195DS",
           "category": "Digital Multimeters",
           "subcategory": "Pro-Line DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 60mF; F 40MHz; True RMS",
+          "description": "Top Pro-Line model with datalogging and dual-source measurement — for industrial techs documenting commissioning and troubleshooting work.",
           "image": "/images/products/ut195ds.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1123,7 +1123,7 @@
           "model": "UT196",
           "category": "Digital Multimeters",
           "subcategory": "Solar DMM",
-          "description": "DC/AC 1700V/1500V; R 60MΩ; C 60mF; True RMS",
+          "description": "1700V solar-rated multimeter for PV installers working on residential and small commercial solar arrays in the Philippines.",
           "image": "/images/products/ut196.png",
           "keySpecs": [
             "DC/AC 1700V",
@@ -1138,7 +1138,7 @@
           "model": "UT197",
           "category": "Digital Multimeters",
           "subcategory": "Industrial DMM",
-          "description": "DC/AC 1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 60K count; 5m drop; IP67; Bluetooth; 12kV pulse protection; CAT IV 1000V & CAT III 1500V",
+          "description": "Bulletproof industrial DMM — IP67, 5m drop rated, 12kV pulse protection, and Bluetooth datalogging. Built for the worst plant and field conditions.",
           "image": "/images/products/ut197.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1154,7 +1154,7 @@
           "model": "UT197PV",
           "category": "Digital Multimeters",
           "subcategory": "Solar Pro DMM",
-          "description": "DC/AC 2500V/1000V; DC/AC 10A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; True RMS; 5m drop; IP67; Bluetooth; CAT IV 1000V & CAT III 1500V",
+          "description": "Solar version of the UT197 with 2500V DC capability — purpose-built for utility-scale PV installers and string voltage testing.",
           "image": "/images/products/ut197pv.png",
           "keySpecs": [
             "DC/AC 2500V",
@@ -1170,7 +1170,7 @@
           "model": "UT89X",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz; Temp 1000°C",
+          "description": "Heavy-duty 20A standard DMM — popular Filipino electrician choice for high-current measurements without stepping up to a clamp meter.",
           "image": "/images/products/ut89x.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1185,7 +1185,7 @@
           "model": "UT89XD",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz",
+          "description": "UT89X without the temperature input — slightly cheaper for techs who don't use thermocouples and want the same 20A handling.",
           "image": "/images/products/ut89xd.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1200,7 +1200,7 @@
           "model": "UT89XE",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V; DC/AC 20A; R 200MΩ; C 200mF; F 60MHz; Temp 1000°C",
+          "description": "Top of the UT89X family with bigger ranges and 60MHz frequency — built for techs who want one meter for both heavy current and electronics work.",
           "image": "/images/products/ut89xe.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1215,7 +1215,7 @@
           "model": "UT890C",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz; Temp -40°C~1000°C",
+          "description": "Compact 20A standard DMM — simple feature set and reliable build, a long-time favorite at Filipino hardware stores.",
           "image": "/images/products/ut890c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1230,7 +1230,7 @@
           "model": "UT890D+",
           "category": "Digital Multimeters",
           "subcategory": "Standard DMM",
-          "description": "DC/AC 1000V/750V; DC/AC 20A; R 60MΩ; C 100mF; F 10MHz",
+          "description": "UT890C variant without temperature — same compact build at a slightly lower price for techs who skip thermocouple work.",
           "image": "/images/products/ut890d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1245,7 +1245,7 @@
           "model": "UT892",
           "category": "Digital Multimeters",
           "subcategory": "2000V DMM",
-          "description": "DC/AC 2000V; VFC 600V; R 60MΩ; C 60mF; F 10Hz~10kHz",
+          "description": "Specialized 2000V multimeter for solar string testing and HV electronics — handles voltages most general meters can't safely touch.",
           "image": "/images/products/ut892.png",
           "keySpecs": [
             "DC/AC 2000V",
@@ -1260,7 +1260,7 @@
           "model": "UT533",
           "category": "Digital Multimeters",
           "subcategory": "Insulation R Multimeter",
-          "description": "AC/DC 1000V; AC/DC 600mA; R; C; F; Temp; Insulation 1000V/2GΩ",
+          "description": "Multimeter and 1000V insulation tester in one — for electricians who occasionally check insulation but don't want to carry a separate megger.",
           "image": "/images/products/ut533.png",
           "keySpecs": [
             "AC/DC 1000V",
@@ -1284,7 +1284,7 @@
           "model": "UT200A",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 200A; AC/DC 600V; R 20kΩ",
+          "description": "Cheapest UT200 clamp — AC-only 200A for residential electricians doing basic load checks on single-phase circuits.",
           "image": "/images/products/ut200a.png",
           "keySpecs": [
             "AC 200A",
@@ -1298,7 +1298,7 @@
           "model": "UT200A+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 400A; AC/DC 600V; R 3MΩ",
+          "description": "Updated UT200A doubled to 400A — the cheap entry into AC clamp meters for techs who outgrew 200A on small commercial loads.",
           "image": "/images/products/ut200a-plus.png",
           "keySpecs": [
             "AC 400A",
@@ -1312,7 +1312,7 @@
           "model": "UT200B+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 600A; AC/DC 600V; R 3MΩ; C",
+          "description": "600A AC clamp with capacitance — bumps up jaw capacity for techs working on 3-phase commercial panels.",
           "image": "/images/products/ut200a-plus.png",
           "keySpecs": [
             "AC 600A",
@@ -1327,7 +1327,7 @@
           "model": "UT201+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 400A; AC/DC 600V; R 40MΩ",
+          "description": "400A AC clamp with bigger 40MΩ resistance range — the right step up from the UT200 line for general electrical service work.",
           "image": "/images/products/ut201-plus.png",
           "keySpecs": [
             "AC 400A",
@@ -1341,7 +1341,7 @@
           "model": "UT201R",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 400A; AC/DC 600V; R 40MΩ",
+          "description": "Regional variant of the UT201+ — same specs, sold under the UT201R model code in select markets.",
           "image": "/images/products/ut201r.png",
           "keySpecs": [
             "AC 400A",
@@ -1355,7 +1355,7 @@
           "model": "UT202+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C",
+          "description": "UT201+ with capacitance and temperature added — a popular general-use AC clamp for HVAC and electrician routine work.",
           "image": "/images/products/ut202-plus.png",
           "keySpecs": [
             "AC 400A",
@@ -1370,7 +1370,7 @@
           "model": "UT202A+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz",
+          "description": "600A AC clamp with full feature set including frequency — for techs who handle motor drives and need Hz readings without a separate meter.",
           "image": "/images/products/ut202a.png",
           "keySpecs": [
             "AC 600A",
@@ -1385,7 +1385,7 @@
           "model": "UT202F",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz",
+          "description": "Same as the UT202A+ in a slightly different chassis — pick whichever your distributor stocks for general 600A AC work.",
           "image": "/images/products/ut202f.png",
           "keySpecs": [
             "AC 600A",
@@ -1400,7 +1400,7 @@
           "model": "UT202R",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 400A; AC/DC 600V; R 40MΩ; C 4mF; Temp 1000°C",
+          "description": "Regional variant of the UT202+ — same 400A specs and capacitance/temp combo, sold under the UT202R label.",
           "image": "/images/products/ut202r.png",
           "keySpecs": [
             "AC 400A",
@@ -1415,7 +1415,7 @@
           "model": "UT202T",
           "category": "Clamp Meters",
           "subcategory": "Smart Clamp",
-          "description": "AC 600A; AC/DC 600V; R 6MΩ; F 1000Hz; C 100mF",
+          "description": "Smart 600A AC clamp with auto-mode switching — points the clamp at the wire and figures out V or A on its own. Beginner-friendly.",
           "image": "/images/products/ut202t.jpg",
           "keySpecs": [
             "AC 600A",
@@ -1430,7 +1430,7 @@
           "model": "UT202BT",
           "category": "Clamp Meters",
           "subcategory": "Smart Clamp",
-          "description": "AC/DC 600V; AC/DC 600A; R 100MΩ; F 1000Hz; C 100mF; Temp 1000°C; Bluetooth",
+          "description": "AC/DC smart clamp with Bluetooth — log readings to the iENV app for techs who report measurements straight from the panel to phone.",
           "image": "/images/products/ut202bt.jpg",
           "keySpecs": [
             "AC/DC 600V",
@@ -1446,7 +1446,7 @@
           "model": "UT203+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 400A; AC/DC 600V; R 40MΩ; C 40mF; F 10MHz",
+          "description": "Cheapest AC/DC 400A clamp — opens the door to DC measurements for solar, battery, and automotive techs.",
           "image": "/images/products/ut203.png",
           "keySpecs": [
             "DC/AC 400A",
@@ -1461,7 +1461,7 @@
           "model": "UT203R",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 400A; AC/DC 600V; R 40MΩ; C 40mF; F 10MHz",
+          "description": "Regional variant of the UT203+ — same AC/DC 400A specs, sold under the UT203R model code in select markets.",
           "image": "/images/products/ut203r.png",
           "keySpecs": [
             "DC/AC 400A",
@@ -1476,7 +1476,7 @@
           "model": "UT204+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz; Temp -40°C~1000°C",
+          "description": "AC/DC 600A clamp with temperature — the workhorse mid-tier clamp for HVAC, solar, and automotive techs in one tool.",
           "image": "/images/products/clamp-meter-ut204.png",
           "keySpecs": [
             "DC/AC 600A",
@@ -1491,7 +1491,7 @@
           "model": "UT204R",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 600A; AC/DC 600V; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C",
+          "description": "Regional variant of the UT204+ — same AC/DC 600A platform with capacitance and temp, sold under the UT204R label.",
           "image": "/images/products/clamp-meter-ut204.png",
           "keySpecs": [
             "DC/AC 600A",
@@ -1506,7 +1506,7 @@
           "model": "UT206",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "AC 1000A; AC/DC 600V; R 40MΩ; C; F",
+          "description": "Original 1000A AC clamp — entry into the high-current bracket for techs working bigger 3-phase motor circuits.",
           "image": "/images/products/ut206.png",
           "keySpecs": [
             "AC 1000A",
@@ -1521,7 +1521,7 @@
           "model": "UT205A+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 42mm jaw",
+          "description": "1000A AC clamp with 42mm jaw — fits standard service entry conductors for industrial maintenance teams on heavy circuits.",
           "image": "/images/products/ut205a-plus.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1536,7 +1536,7 @@
           "model": "UT205B",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 40MΩ; C 40mF; F 10MHz; 55mm jaw",
+          "description": "Same 1000A platform as UT205A+ with bigger 55mm jaw — pick this when you need to clamp around fat busbars or bundled conductors.",
           "image": "/images/products/ut205b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1551,7 +1551,7 @@
           "model": "UT205E",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz",
+          "description": "Refreshed 1000A AC clamp with bigger resistance and capacitance ranges — the modernized pick over the older UT205A+.",
           "image": "/images/products/ut205e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1566,7 +1566,7 @@
           "model": "UT206A+",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 10MHz; Temp 1000°C",
+          "description": "1000A AC clamp with temperature input — the practical heavy-duty meter for HVAC techs servicing big chillers and rooftop units.",
           "image": "/images/products/ut206a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1581,7 +1581,7 @@
           "model": "UT206B",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
+          "description": "Variant of the UT206A+ with 1MHz frequency cap — same heavy-duty 1000A platform at a slightly different price point.",
           "image": "/images/products/ut206b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1596,7 +1596,7 @@
           "model": "UT207B",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz",
+          "description": "AC/DC 1000A clamp without temperature — the budget pick for solar and battery techs needing both DC and AC at high current.",
           "image": "/images/products/ut207b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1611,7 +1611,7 @@
           "model": "UT208B",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; DC/AC 1000A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
+          "description": "AC/DC 1000A clamp with temperature added — the full-featured choice for industrial techs who need DC current plus thermocouple work.",
           "image": "/images/products/ut208b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1626,7 +1626,7 @@
           "model": "UT210A",
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
-          "description": "AC 200A",
+          "description": "Bare-bones mini AC clamp — current-only at 200A, the cheapest way to confirm load on residential branch circuits.",
           "image": "/images/products/ut210a.png",
           "keySpecs": [
             "AC 200A"
@@ -1638,7 +1638,7 @@
           "model": "UT210B",
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
-          "description": "AC 200A; NCV; MAX/MIN",
+          "description": "Mini AC clamp with NCV and MAX/MIN — slightly more useful than the UT210A for inrush capture and live wire detection.",
           "image": "/images/products/ut210b.png",
           "keySpecs": [
             "AC 200A",
@@ -1652,7 +1652,7 @@
           "model": "UT210C",
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
-          "description": "AC/DC 600V; AC 200A; R 20MΩ; C 20mF; Temp 1000°C",
+          "description": "Mini clamp with full DMM functions plus temperature — the compact AC clamp for HVAC techs measuring single-phase loads in tight panels.",
           "image": "/images/products/ut210c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1667,7 +1667,7 @@
           "model": "UT210D",
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
-          "description": "AC/DC 600V; DC/AC 200A; R 20MΩ; C 20mF; F 60kHz; Temp 1000°C",
+          "description": "Top of the UT210 mini clamp family — adds DC current and frequency for solar techs and motor drive troubleshooting.",
           "image": "/images/products/ut210d.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1682,7 +1682,7 @@
           "model": "UT210E",
           "category": "Clamp Meters",
           "subcategory": "Mini Clamp",
-          "description": "AC/DC 600V; DC/AC 100A; R 20MΩ; C 20mF",
+          "description": "Compact AC/DC clamp for tight panels where a full-size jaw won't fit. Ideal for residential electrical work and HVAC techs measuring single-phase loads.",
           "image": "/images/products/ut210e.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1697,7 +1697,7 @@
           "model": "UT211B",
           "category": "Clamp Meters",
           "subcategory": "High-Precision Clamp",
-          "description": "AC/DC 600V; DC/AC 60A; R 60MΩ; C 62mF",
+          "description": "High-precision low-current clamp for electronics labs and instrumentation — measures down to mA range with accuracy a 600A clamp can't touch.",
           "image": "/images/products/ut211b.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1712,7 +1712,7 @@
           "model": "UT213A",
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
-          "description": "AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz",
+          "description": "Mid-size 400A AC clamp — full DMM functions in a compact body for everyday electrician work without going overboard on jaw size.",
           "image": "/images/products/ut213a.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1727,7 +1727,7 @@
           "model": "UT213B",
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
-          "description": "AC/DC 600V; AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS",
+          "description": "True RMS 400A clamp with temperature — accurate readings on distorted waveforms from inverters and electronic loads.",
           "image": "/images/products/ut213b.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1743,7 +1743,7 @@
           "model": "UT213C",
           "category": "Clamp Meters",
           "subcategory": "400A Clamp",
-          "description": "AC/DC 600V; DC/AC 400A; R 40MΩ; C 40mF; F 1MHz; Temp 1000°C; True RMS",
+          "description": "Top of the UT213 family — adds DC current to the True RMS platform for solar, EV, and battery backup techs.",
           "image": "/images/products/ut213c.png",
           "keySpecs": [
             "AC/DC 600V",
@@ -1759,7 +1759,7 @@
           "model": "UT216A",
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
-          "description": "DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF",
+          "description": "Entry 600A AC clamp from the UT216 family — basic V/A/R/C without temperature for general electrical service work.",
           "image": "/images/products/ut216a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1774,7 +1774,7 @@
           "model": "UT216B",
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
-          "description": "DC/AC 1000V/750V; AC 600A; R 60MΩ; C 60mF; F 1MHz; True RMS",
+          "description": "True RMS 600A AC clamp — accurate on VFD outputs and distorted commercial loads where average-responding meters lie.",
           "image": "/images/products/ut216b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1790,7 +1790,7 @@
           "model": "UT216C",
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
-          "description": "DC/AC 1000V/750V; DC/AC 600A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C",
+          "description": "Advanced 600A clamp with inrush current capture and temperature probe — built for electricians diagnosing motor starts and HVAC compressor faults.",
           "image": "/images/products/ut216c.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1805,7 +1805,7 @@
           "model": "UT216D",
           "category": "Clamp Meters",
           "subcategory": "600A Clamp",
-          "description": "DC/AC 1000V/750V; DC/AC 600A; R 60MΩ; C 60mF; F 1MHz; Temp 1000°C; OLED; True RMS",
+          "description": "Top of the UT216 family with OLED display — easier to read in dark electrical rooms, plus True RMS for clean readings on dirty loads.",
           "image": "/images/products/ut216d.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1821,7 +1821,7 @@
           "model": "UT219E",
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
-          "description": "DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 10MHz; IP54; True RMS",
+          "description": "Pro-Line True RMS 600A clamp with IP54 rating — built for outdoor service and rough industrial environments where dust and water are real.",
           "image": "/images/products/ut219e.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1837,7 +1837,7 @@
           "model": "UT219M",
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
-          "description": "DC/AC 1000V; AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS",
+          "description": "Mid Pro-Line clamp with temperature and 40MHz bandwidth — for industrial techs needing thermocouple support plus high-frequency readings.",
           "image": "/images/products/ut219m.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1853,7 +1853,7 @@
           "model": "UT219DS",
           "category": "Clamp Meters",
           "subcategory": "Pro-Line Clamp",
-          "description": "DC/AC 1000V; DC/AC 600A; R 60MΩ; C 60mF; F 40MHz; Temp 1000°C; IP54; True RMS",
+          "description": "Top Pro-Line clamp with AC/DC current — the full IP54-rated kit for solar installers and industrial maintenance teams in the field.",
           "image": "/images/products/ut219ds.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1869,7 +1869,7 @@
           "model": "UT219P",
           "category": "Clamp Meters",
           "subcategory": "Power & Harmonics Clamp",
-          "description": "AC 1000A; AC 1000V; F 15Hz~1000Hz; 1Ph 1000kW; 3Ph 3W 1732kW; 3Ph 4W 3000kW; 9999 count; 999 storage; USB",
+          "description": "Power and harmonics clamp for energy auditors — measures single and 3-phase kW with USB logging for documenting plant power quality jobs.",
           "image": "/images/products/ut219p.png",
           "keySpecs": [
             "AC 1000A",
@@ -1884,7 +1884,7 @@
           "model": "UT219PV",
           "category": "Clamp Meters",
           "subcategory": "Pro AC/DC Clamp",
-          "description": "AC/DC 999.9A; AC 999.9V/1500V; DC 999.9V/2500V; ACV LPF; 30/300/3000A flex; 999.9 kVA/2500 kVA DC; F 5-999.9Hz; R 999.9Ω/9.999kΩ/99.99kΩ; C 100uF/1000uF; Temp -40°C~400°C; True RMS",
+          "description": "Solar-rated pro clamp handling 1500V AC and 2500V DC plus flex sensor input — the all-in-one for utility-scale PV commissioning.",
           "image": "/images/products/ut219pv.png",
           "keySpecs": [
             "AC/DC 999.9A",
@@ -1900,7 +1900,7 @@
           "model": "UT220",
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
-          "description": "DC/AC 1000V/750V; AC 2000A; R 20MΩ",
+          "description": "2000A AC clamp — for industrial maintenance teams measuring service entrances, large generators, and main switchgear.",
           "image": "/images/products/ut220.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1914,7 +1914,7 @@
           "model": "UT221",
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
-          "description": "DC/AC 1000V/750V; DC/AC 2000A; R 66MΩ; F 20MHz",
+          "description": "AC/DC 2000A clamp — adds DC measurement to the UT220 platform for solar farms and large battery system installations.",
           "image": "/images/products/ut221.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1929,7 +1929,7 @@
           "model": "UT222",
           "category": "Clamp Meters",
           "subcategory": "High Current Clamp",
-          "description": "DC/AC 1000V; DC/AC 2500A; R 60MΩ; C 60mF; F 60MHz; Temp 1000°C; True RMS",
+          "description": "Top of the high-current line at 2500A AC/DC True RMS — for utility crews and heavy industrial techs working on the biggest service mains.",
           "image": "/images/products/ut222.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1945,7 +1945,7 @@
           "model": "2117R",
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
-          "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 6mF; 33mm jaw",
+          "description": "1000A AC clamp with 33mm jaw — sub-brand variant for techs who want a slim 1000A jaw at a lower price than the UT205 family.",
           "image": "/images/products/2117r.jpg",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1960,7 +1960,7 @@
           "model": "UT256",
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
-          "description": "DC/AC 60A; NCV; True RMS",
+          "description": "Open-fork meter with 60A AC/DC range — slips onto live wires without disconnecting, perfect for quick load checks in cramped boxes.",
           "image": "/images/products/ut256.png",
           "keySpecs": [
             "DC/AC 60A",
@@ -1974,7 +1974,7 @@
           "model": "UT256A",
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
-          "description": "DC/AC 1000V; AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS",
+          "description": "Fork meter with full DMM functions and 200A AC range — for residential electricians who want one tool for both panel and outlet work.",
           "image": "/images/products/ut256a.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -1990,7 +1990,7 @@
           "model": "UT256B",
           "category": "Clamp Meters",
           "subcategory": "Fork Meter",
-          "description": "DC/AC 1000V/750V; DC/AC 200A; R 60MΩ; C 60mF; F 10kHz; NCV; True RMS",
+          "description": "AC/DC 200A fork meter — adds DC measurement to the UT256A platform for techs working on solar, EV, and battery circuits.",
           "image": "/images/products/ut256b.png",
           "keySpecs": [
             "DC/AC 1000V",
@@ -2006,7 +2006,7 @@
           "model": "UT251A",
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
-          "description": "0-60A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage",
+          "description": "Leakage current clamp for chasing nuisance trips on RCD/RCBO devices — the entry tool for electricians diagnosing earth leakage problems.",
           "image": "/images/products/ut251a.png",
           "keySpecs": [
             "0-60A leakage",
@@ -2021,7 +2021,7 @@
           "model": "UT251C",
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
-          "description": "0-600A leakage; 0-600V; 50/60Hz; 25x30mm jaw; Auto; RS232; 99 storage",
+          "description": "Leakage clamp with 600A range — for industrial techs who also need normal current measurement, not just earth leakage diagnosis.",
           "image": "/images/products/ut251c.png",
           "keySpecs": [
             "0-600A leakage",
@@ -2036,7 +2036,7 @@
           "model": "UT251C+",
           "category": "Clamp Meters",
           "subcategory": "Leakage Current Clamp",
-          "description": "3mA-60A leakage; Harmonic 20; F 5Hz-5kHz; 3000 count; 40mm jaw; Bluetooth; CAT III 600V",
+          "description": "Bluetooth leakage clamp with 20-order harmonic analysis — for power quality auditors investigating intermittent RCD trips with phone-based reports.",
           "image": "/images/products/ut251c-plus.png",
           "keySpecs": [
             "3mA-60A leakage",
@@ -2052,7 +2052,7 @@
           "model": "UT253A",
           "category": "Clamp Meters",
           "subcategory": "Large Jaws Leakage Clamp",
-          "description": "0-1200A; 0-600V; 50/60Hz; 80x80mm jaw; Auto; RS232; 200 storage",
+          "description": "Big 80mm-jaw leakage clamp — wraps around busbars and bundled cables that smaller leakage meters can't fit, for industrial substation work.",
           "image": "/images/products/ut253a.png",
           "keySpecs": [
             "0-1200A",
@@ -2067,7 +2067,7 @@
           "model": "UT258A",
           "category": "Clamp Meters",
           "subcategory": "AC/DC Leakage Clamp",
-          "description": "60A; 0-600V; 50/60Hz; 7mm jaw; Auto; RS232; 99 storage",
+          "description": "AC/DC leakage clamp with tiny 7mm jaw — squeezes into PCB and wiring harness gaps where standard leakage clamps can't reach.",
           "image": "/images/products/ut258a.png",
           "keySpecs": [
             "60A",
@@ -3418,7 +3418,7 @@
           "model": "UT501A",
           "category": "Insulation Testers",
           "subcategory": "Insulation Tester",
-          "description": "5GΩ; 1000V test; <2mA short; AC 30-750V",
+          "description": "Entry-level 1000V insulation tester for verifying motor windings, transformers, and cable runs. The simplest pass/fail megger in the line.",
           "image": "/images/products/ut501a.png",
           "keySpecs": [
             "5GΩ",
@@ -3433,7 +3433,7 @@
           "model": "UT501B",
           "category": "Insulation Testers",
           "subcategory": "Insulation Tester",
-          "description": "5GΩ; 1000V test; <2mA short; AC 30-750V; PI; DAR",
+          "description": "1000V insulation tester with PI/DAR ratios for serious diagnostic work — not just pass/fail. The next step up from the UT501A.",
           "image": "/images/products/ut500-series.jpg",
           "keySpecs": [
             "5GΩ",
@@ -3448,7 +3448,7 @@
           "model": "UT501E",
           "category": "Insulation Testers",
           "subcategory": "Fast Insulation Tester",
-          "description": "0-4GΩ; Low R 400Ω; AC/DC 600V; 1.0mA; <2mA short; Fast 10/s; DAR/PI; Compare; Auto-discharge",
+          "description": "Fast-mode 10/sec insulation tester for production line and panel manufacturers — auto-discharge and compare mode speed up repetitive QC checks.",
           "image": "/images/products/ut501e.jpg",
           "keySpecs": [
             "0-4GΩ",
@@ -3463,7 +3463,7 @@
           "model": "UT502A",
           "category": "Insulation Testers",
           "subcategory": "Insulation Tester",
-          "description": "20GΩ; 2500V test; <2mA short; AC 30-750V; PI; DAR",
+          "description": "2500V insulation tester for medium-voltage motors and transformers — the right step up when 1000V isn't enough to stress the insulation.",
           "image": "/images/products/ut502a.png",
           "keySpecs": [
             "20GΩ",
@@ -3478,7 +3478,7 @@
           "model": "UT505A",
           "category": "Insulation Testers",
           "subcategory": "Handheld HV Insulation Tester",
-          "description": "1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 0-600V",
+          "description": "Handheld 1000V insulation tester with bigger 20GΩ range than the UT501 — the step up for techs needing more headroom on long cable runs.",
           "image": "/images/products/ut505-series.jpg",
           "keySpecs": [
             "1000V/20GΩ",
@@ -3493,7 +3493,7 @@
           "model": "UT505B",
           "category": "Insulation Testers",
           "subcategory": "Handheld HV Insulation Tester",
-          "description": "1000V/20GΩ; 1mA load; <2mA short; DC 600V; AC 600V; Gen R 10MΩ; F 45-1kHz; C 100pF-500uF",
+          "description": "Handheld insulation + general multimeter combo. Two instruments in one for electricians who need IR testing without carrying a separate megger.",
           "image": "/images/products/ut505-series.jpg",
           "keySpecs": [
             "1000V/20GΩ",
@@ -3508,7 +3508,7 @@
           "model": "UT511",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "10GΩ; 1000V test; <2mA short; AC 600V; DC 600V; PI; DAR; storage",
+          "description": "1000V insulation tester with onboard storage for compliance jobs — log readings on-device without paper logs or a phone connection.",
           "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "10GΩ",
@@ -3523,7 +3523,7 @@
           "model": "UT512",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "100GΩ; 2500V test; <1.8mA short; AC 30-750V; DC 1000V; PI; DAR; USB",
+          "description": "2500V insulation tester with USB output — for industrial maintenance teams documenting megger readings into PC reports for plant audits.",
           "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "100GΩ",
@@ -3538,7 +3538,7 @@
           "model": "UT512D",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "250V/100GΩ; 500V/200GΩ; 1000V/400GΩ; 2500V/1TΩ; ~3.5mA short; PI; DAR; 999 storage",
+          "description": "Multi-voltage 2500V tester with 1TΩ ceiling — covers 250V to 2500V test ranges with 999-set memory for repetitive plant audits.",
           "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "2500V/1TΩ",
@@ -3553,7 +3553,7 @@
           "model": "UT512E",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "250V/250GΩ; 500V/500GΩ; 1000V/1TΩ; 2500V/2.5TΩ; ~5mA short; C test; PI; DAR; 999 storage; 14.8V/5200mAh Li",
+          "description": "Higher-resolution UT512D — 2.5TΩ ceiling at 2500V plus capacitance test, for advanced cable diagnostics and long-feeder testing.",
           "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "1000V/1TΩ",
@@ -3568,7 +3568,7 @@
           "model": "UT513A",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "5000V/1000GΩ; DC 600V; >3mA short",
+          "description": "5000V insulation tester for high-voltage motors, generators, and substation equipment — basic entry into the 5kV megger category.",
           "image": "/images/products/ut510-series.jpg",
           "keySpecs": [
             "DC 600V",
@@ -3581,7 +3581,7 @@
           "model": "UT513B",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "5000V/2TΩ; ~3.5mA short; PI; DAR; 999 storage; 5200mAh Li",
+          "description": "5000V tester with 2TΩ range and onboard storage — for substation crews who need PI/DAR analysis and 999-test recall in the field.",
           "image": "/images/products/ut513b-c.jpg",
           "keySpecs": [
             "5000V/2TΩ",
@@ -3596,7 +3596,7 @@
           "model": "UT513C",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "5000V/5TΩ; ~5mA short; C test; PI; DAR; 999 storage; Bluetooth; 14.8V/5200mAh Li",
+          "description": "Top of the UT513 line with Bluetooth, 5TΩ range, and capacitance — for HV crews who report megger results straight from the field to phone.",
           "image": "/images/products/ut513b-c.jpg",
           "keySpecs": [
             "5000V/5TΩ",
@@ -3612,7 +3612,7 @@
           "model": "UT515B",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "0-10TΩ; 0-10000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V",
+          "description": "10kV insulation tester with 10TΩ ceiling — for utility and substation engineers testing transmission cables and switchgear at full HV stress levels.",
           "image": "/images/products/ut515b.jpg",
           "keySpecs": [
             "0-10TΩ",
@@ -3628,7 +3628,7 @@
           "model": "UT516B",
           "category": "Insulation Testers",
           "subcategory": "HV Insulation Tester",
-          "description": "0-10TΩ; 0-12000V; AC 30-750V; DC 30-1000V; 3.7-5mA short; Stepping 10%; DAR/PI; 9999 count; 5200mAh Li; CAT IV 600V",
+          "description": "12kV megger — top of the UNI-T insulation line, for utility crews testing the highest-voltage transmission and substation gear in the country.",
           "image": "/images/products/ut516b.jpg",
           "keySpecs": [
             "0-10TΩ",
@@ -3644,7 +3644,7 @@
           "model": "UT503PV",
           "category": "Insulation Testers",
           "subcategory": "PV Insulation Tester",
-          "description": "125-1000V/4GΩ; PV 500-1000V/4GΩ; DC 1000V; AC 600V; <1.5mA & <1.2mA short; Continue; Compare; Time; Stepping; Auto-discharge; HV alarm; DUT live; IP54",
+          "description": "PV-specific insulation tester for solar installers — IP54 outdoor-rated with auto-discharge and live circuit alarms for safe array commissioning.",
           "image": "/images/products/ut503pv.jpg",
           "keySpecs": [
             "DC 1000V",

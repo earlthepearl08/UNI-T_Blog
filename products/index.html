@@ -515,6 +515,37 @@
     }
     .empty-state .reset-btn:hover { background: var(--uni-red-dark); }
 
+    /* Load more pagination */
+    .load-more-btn {
+      background: var(--uni-red, #E31E24);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 2rem;
+      border-radius: var(--border-radius, 8px);
+      font-family: var(--font-main, 'Inter', sans-serif);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(227,30,36,0.25);
+    }
+    .load-more-btn:hover {
+      background: var(--uni-red-dark, #b8181d);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(227,30,36,0.35);
+    }
+    .load-more-btn:focus-visible {
+      outline: 2px solid var(--uni-red, #E31E24);
+      outline-offset: 3px;
+    }
+    .load-more-btn:disabled {
+      background: var(--text-muted, #6b7280);
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    [data-theme="dark"] .load-more-info { color: var(--text-muted, #9ca3af); }
+
     /* Loading skeleton */
     .skeleton-grid {
       display: grid;
@@ -827,7 +858,7 @@
 
   <div class="container">
     <div class="result-meta" id="resultMeta">
-      <span><strong id="resultCount">0</strong> products</span>
+      <span>Showing <strong id="resultCount">0</strong> products</span>
       <span id="activeFilter"></span>
     </div>
 
@@ -843,6 +874,13 @@
     </div>
 
     <div class="product-grid" id="productGrid" style="display:none;"></div>
+
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none; text-align:center; margin: 2rem 0 4rem;">
+      <button class="load-more-btn" id="loadMoreBtn" type="button">
+        Load 48 more
+      </button>
+      <p class="load-more-info" id="loadMoreInfo" style="margin-top: 0.75rem; color: var(--text-muted, #6b7280); font-size: 0.85rem;"></p>
+    </div>
   </div>
 
   <!-- Bottom CTA -->
@@ -1035,6 +1073,8 @@
       let activeSearch = '';
       let activeSort = 'featured';
       let searchTimer = null;
+      const PAGE_SIZE = 48;
+      let pageSize = PAGE_SIZE; // current visible count, grows on Load More
 
       // DOM refs
       const featuredGrid = document.getElementById('featuredGrid');
@@ -1046,6 +1086,9 @@
       const sortSelect   = document.getElementById('sortSelect');
       const resultCount  = document.getElementById('resultCount');
       const activeFilter = document.getElementById('activeFilter');
+      const loadMoreWrap = document.getElementById('loadMoreWrap');
+      const loadMoreBtn  = document.getElementById('loadMoreBtn');
+      const loadMoreInfo = document.getElementById('loadMoreInfo');
 
       // ----- Init -----
       function init() {
@@ -1191,6 +1234,7 @@
 
       function selectCategory(id, scrollToGrid) {
         activeCategory = id;
+        pageSize = PAGE_SIZE;
         // Update pill active state without rebuilding
         catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
           p.classList.toggle('active', p.dataset.cat === id);
@@ -1323,21 +1367,31 @@
 
       function render() {
         const list = getFiltered();
+        // Cap page size to total available so "showing X of Y" stays accurate
+        const visibleCount = Math.min(pageSize, list.length);
+        const visible = list.slice(0, visibleCount);
+
         // Use a doc fragment for performance
         const frag = document.createDocumentFragment();
 
         if (list.length === 0) {
           frag.appendChild(buildEmptyState());
         } else {
-          for (let i = 0; i < list.length; i++) {
-            frag.appendChild(buildCard(list[i]));
+          for (let i = 0; i < visible.length; i++) {
+            frag.appendChild(buildCard(visible[i]));
           }
         }
 
         grid.innerHTML = '';
         grid.appendChild(frag);
 
-        resultCount.textContent = list.length;
+        // Result count: "Showing X of Y products"
+        if (list.length === 0) {
+          resultCount.textContent = '0';
+        } else {
+          resultCount.textContent = `${visibleCount} of ${list.length}`;
+        }
+
         const filterBits = [];
         if (activeCategory !== 'all') {
           const meta = categoriesMeta.find(c => c.id === activeCategory);
@@ -1345,11 +1399,24 @@
         }
         if (activeSearch) filterBits.push(`matching <strong>"${escapeHtml(activeSearch)}"</strong>`);
         activeFilter.innerHTML = filterBits.join(' ');
+
+        // Toggle Load More button
+        if (list.length > pageSize) {
+          const remaining = list.length - pageSize;
+          const nextBatch = Math.min(PAGE_SIZE, remaining);
+          loadMoreWrap.style.display = 'block';
+          loadMoreBtn.textContent = `Load ${nextBatch} more`;
+          loadMoreBtn.disabled = false;
+          loadMoreInfo.textContent = `${remaining} more product${remaining === 1 ? '' : 's'} available`;
+        } else {
+          loadMoreWrap.style.display = 'none';
+        }
       }
 
       function resetFilters() {
         activeCategory = 'all';
         activeSearch = '';
+        pageSize = PAGE_SIZE;
         searchInput.value = '';
         searchClear.classList.remove('visible');
         catPillsEl.querySelectorAll('.cat-pill').forEach(p => {
@@ -1369,6 +1436,7 @@
           // Skip single-char queries to avoid rendering hundreds of cards. Empty string still resets.
           if (trimmed.length === 1) return;
           activeSearch = v;
+          pageSize = PAGE_SIZE;
           writeUrlState(true);
           render();
         }, 200);
@@ -1377,6 +1445,7 @@
       searchClear.addEventListener('click', () => {
         searchInput.value = '';
         activeSearch = '';
+        pageSize = PAGE_SIZE;
         searchClear.classList.remove('visible');
         writeUrlState();
         render();
@@ -1385,8 +1454,16 @@
 
       sortSelect.addEventListener('change', () => {
         activeSort = sortSelect.value;
+        pageSize = PAGE_SIZE;
         writeUrlState();
         render();
+      });
+
+      loadMoreBtn.addEventListener('click', () => {
+        pageSize += PAGE_SIZE;
+        render();
+        // Smooth scroll to where new content starts
+        window.scrollBy({ top: 100, behavior: 'smooth' });
       });
 
       window.addEventListener('popstate', () => {
@@ -1395,6 +1472,7 @@
         activeCategory = params.get('category') || 'all';
         activeSearch = params.get('search') || '';
         activeSort = params.get('sort') || 'featured';
+        pageSize = PAGE_SIZE;
         searchInput.value = activeSearch;
         searchClear.classList.toggle('visible', !!activeSearch);
         sortSelect.value = ['featured','az','za','newest'].includes(activeSort) ? activeSort : 'featured';
