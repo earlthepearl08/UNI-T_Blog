@@ -60,7 +60,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
           "description": "AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Dwell 4/6/8 CYL",
-          "image": null,
+          "image": "/images/products/ut105.jpg",
           "keySpecs": [
             "AC 750V",
             "DC 1000V",
@@ -75,7 +75,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Automotive Multipurpose",
           "description": "AC 750V; DC 1000V; 10A; R 20MΩ; F 2kHz; Temp -40°C~1000°C; Dwell 4/6/9 CYL",
-          "image": null,
+          "image": "/images/products/ut107.jpg",
           "keySpecs": [
             "AC 750V",
             "DC 1000V",
@@ -165,7 +165,7 @@
           "category": "Digital Multimeters",
           "subcategory": "Pocket DMM",
           "description": "AC/DC 600V; AC/DC 400mA; R 40MΩ; C 100uF; F 60kHz",
-          "image": null,
+          "image": "/images/products/ut125c.jpg",
           "keySpecs": [
             "AC/DC 600V",
             "AC/DC 400mA",
@@ -1416,7 +1416,7 @@
           "category": "Clamp Meters",
           "subcategory": "Smart Clamp",
           "description": "AC 600A; AC/DC 600V; R 6MΩ; F 1000Hz; C 100mF",
-          "image": null,
+          "image": "/images/products/ut202t.jpg",
           "keySpecs": [
             "AC 600A",
             "AC/DC 600V",
@@ -1431,7 +1431,7 @@
           "category": "Clamp Meters",
           "subcategory": "Smart Clamp",
           "description": "AC/DC 600V; AC/DC 600A; R 100MΩ; F 1000Hz; C 100mF; Temp 1000°C; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut202bt.jpg",
           "keySpecs": [
             "AC/DC 600V",
             "AC/DC 600A",
@@ -1946,7 +1946,7 @@
           "category": "Clamp Meters",
           "subcategory": "Clamp Meter",
           "description": "DC/AC 1000V; AC 1000A; R 60MΩ; C 6mF; 33mm jaw",
-          "image": null,
+          "image": "/images/products/2117r.jpg",
           "keySpecs": [
             "DC/AC 1000V",
             "AC 1000A",
@@ -2442,7 +2442,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "384x288; -30°C-650°C; 28°x21°; 25Hz; 4.3\" IPS; Manual focus; WiFi",
-          "image": null,
+          "image": "/images/products/uti740h.jpg",
           "keySpecs": [
             "384x288",
             "-30°C-650°C",
@@ -2458,7 +2458,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "256x192; -20°C-550°C; 28°x20°; 30Hz; 3.5\" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer",
-          "image": null,
+          "image": "/images/products/uti256g.jpg",
           "keySpecs": [
             "256x192",
             "-20°C-550°C",
@@ -2474,7 +2474,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "384x288; -20°C-550°C; 42°x30°; 30Hz; 3.5\" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer; Video",
-          "image": null,
+          "image": "/images/products/uti384g.jpg",
           "keySpecs": [
             "384x288",
             "-20°C-550°C",
@@ -2522,7 +2522,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
           "description": "640x512; SR 1280x1024; NETD<35mK; 18mm lens; 24°x19.3°; 30Hz; 5\" IPS touch; Auto/manual focus; -20°C-1200°C; ±1.5°C/1.5%; 13MP camera; WiFi; BT; Laser rangefinder; Replaceable battery; IP54; 2m drop",
-          "image": null,
+          "image": "/images/products/uti760x.png",
           "keySpecs": [
             "640x512",
             "NETD<35mK",
@@ -2538,7 +2538,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "256x192; 17.5°x13.1°; 50Hz; 10mm lens; Video output; Focus-free; WiFi",
-          "image": null,
+          "image": "/images/products/utx210w.png",
           "keySpecs": [
             "256x192",
             "17.5°x13.1°",
@@ -2695,7 +2695,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "640x512; 17.4°x14°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language",
-          "image": null,
+          "image": "/images/products/utx625m.png",
           "keySpecs": [
             "640x512",
             "17.4°x14°",
@@ -2711,7 +2711,7 @@
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
           "description": "640x512; 12.5°x10°; 25mK; 50Hz; 35mm lens; Photo/Video; WiFi; Multi-language",
-          "image": null,
+          "image": "/images/products/utx635m.png",
           "keySpecs": [
             "640x512",
             "12.5°x10°",
@@ -2736,7 +2736,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "50m; LCD; m/ft/in; Front/Rear",
-          "image": null,
+          "image": "/images/products/lm50a.jpg",
           "keySpecs": [
             "50m",
             "LCD",
@@ -2751,7 +2751,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "70m; LCD; m/ft/in; Front/Rear",
-          "image": null,
+          "image": "/images/products/lm70a.jpg",
           "keySpecs": [
             "70m",
             "LCD",
@@ -2766,7 +2766,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "100m; LCD; m/ft/in; Front/Rear",
-          "image": null,
+          "image": "/images/products/lm100a.jpg",
           "keySpecs": [
             "100m",
             "LCD",
@@ -2781,7 +2781,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "120m; LCD; m/ft/in; Front/Rear",
-          "image": null,
+          "image": "/images/products/lm120a.jpg",
           "keySpecs": [
             "120m",
             "LCD",
@@ -2796,7 +2796,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "40m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
-          "image": null,
+          "image": "/images/products/lm40mi.jpg",
           "keySpecs": [
             "40m",
             "LCD",
@@ -2811,7 +2811,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "60m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
-          "image": null,
+          "image": "/images/products/lm60mi.jpg",
           "keySpecs": [
             "60m",
             "LCD",
@@ -2826,7 +2826,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "40m laser + 5m tape; 1.2\" LCD",
-          "image": null,
+          "image": "/images/products/lm40t.jpg",
           "keySpecs": [
             "40m laser + 5m tape",
             "1.2\" LCD"
@@ -2839,7 +2839,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "60m laser + 5m tape; 1.2\" LCD",
-          "image": null,
+          "image": "/images/products/lm60t.jpg",
           "keySpecs": [
             "60m laser + 5m tape",
             "1.2\" LCD"
@@ -2852,7 +2852,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 40m max range, length/area/volume measurement",
-          "image": null,
+          "image": "/images/products/lm40.jpg",
           "keySpecs": [
             "40m range",
             "Pocket",
@@ -2867,7 +2867,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 50m max range",
-          "image": null,
+          "image": "/images/products/lm50.jpg",
           "keySpecs": [
             "50m range",
             "Pocket"
@@ -2881,7 +2881,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 60m max range",
-          "image": null,
+          "image": "/images/products/lm60.jpg",
           "keySpecs": [
             "60m range",
             "Pocket"
@@ -2895,7 +2895,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "Laser distance meter, 80m max range",
-          "image": null,
+          "image": "/images/products/lm80.jpg",
           "keySpecs": [
             "80m range"
           ],
@@ -2908,7 +2908,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "Laser distance meter, 100m max range",
-          "image": null,
+          "image": "/images/products/lm100.jpg",
           "keySpecs": [
             "100m range"
           ],
@@ -2921,7 +2921,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "Laser distance meter, 120m max range",
-          "image": null,
+          "image": "/images/products/lm120.jpg",
           "keySpecs": [
             "120m range"
           ],
@@ -2934,7 +2934,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
           "description": "Laser distance meter, 150m max range",
-          "image": null,
+          "image": "/images/products/lm150.jpg",
           "keySpecs": [
             "150m range"
           ],
@@ -2947,7 +2947,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
           "description": "Industrial laser distance meter, 40m range, ±(2mm+5×10⁻⁵D) accuracy",
-          "image": null,
+          "image": "/images/products/lm40-i.jpg",
           "keySpecs": [
             "40m range",
             "Industrial",
@@ -2962,7 +2962,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
           "description": "Industrial laser distance meter, 50m range, ±(2mm+5×10⁻⁵D) accuracy",
-          "image": null,
+          "image": "/images/products/lm50-i.jpg",
           "keySpecs": [
             "50m range",
             "Industrial"
@@ -2976,7 +2976,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
           "description": "Industrial laser distance meter, 120m range, auto-leveling",
-          "image": null,
+          "image": "/images/products/lm120-i.jpg",
           "keySpecs": [
             "120m range",
             "Auto-leveling"
@@ -2990,7 +2990,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
           "description": "Industrial laser distance meter, 150m range, auto-leveling",
-          "image": null,
+          "image": "/images/products/lm150-i.jpg",
           "keySpecs": [
             "150m range",
             "Auto-leveling"
@@ -3004,7 +3004,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 40m range, 1.8'' LCD, ±2mm accuracy",
-          "image": null,
+          "image": "/images/products/lm40e.jpg",
           "keySpecs": [
             "40m",
             "±2mm",
@@ -3019,7 +3019,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 50m range, 1.8'' LCD, ±2mm accuracy",
-          "image": null,
+          "image": "/images/products/lm50e.jpg",
           "keySpecs": [
             "50m",
             "±2mm",
@@ -3034,7 +3034,7 @@
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
           "description": "Pocket laser distance meter, 60m range, 1.8'' LCD, ±2mm accuracy",
-          "image": null,
+          "image": "/images/products/lm60e.jpg",
           "keySpecs": [
             "60m",
             "±2mm",
@@ -3619,7 +3619,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
           "description": "5-600yd; 7X mag; 25mm objective; Height 250yd; Angle",
-          "image": null,
+          "image": "/images/products/lm600.jpg",
           "keySpecs": [
             "5-600yd",
             "7X mag",
@@ -3634,7 +3634,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
           "description": "5-1000yd; 7X mag; 25mm objective; Height 450yd; Velocity; Angle",
-          "image": null,
+          "image": "/images/products/lm1000.jpg",
           "keySpecs": [
             "5-1000yd",
             "7X mag",
@@ -3649,7 +3649,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
           "description": "5-1500yd; 7X mag; 25mm objective; Height 451yd; Velocity; Angle",
-          "image": null,
+          "image": "/images/products/lm1500.jpg",
           "keySpecs": [
             "5-1500yd",
             "7X mag",
@@ -3664,7 +3664,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
           "description": "2000m; Type-C charging; USB export",
-          "image": null,
+          "image": "/images/products/lm2000.jpg",
           "keySpecs": [
             "2000m",
             "Type-C charging",
@@ -3678,7 +3678,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
           "description": "3-600m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
-          "image": null,
+          "image": "/images/products/lm600g.jpg",
           "keySpecs": [
             "3-600m",
             "Flagpole lock",
@@ -3693,7 +3693,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
           "description": "3-800m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
-          "image": null,
+          "image": "/images/products/lm800g.jpg",
           "keySpecs": [
             "3-800m",
             "Flagpole lock",
@@ -3708,7 +3708,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
           "description": "3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
-          "image": null,
+          "image": "/images/products/lm1000g.jpg",
           "keySpecs": [
             "3-1000m",
             "Flagpole lock",
@@ -3723,7 +3723,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
           "description": "3-1200m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
-          "image": null,
+          "image": "/images/products/lm1200g.jpg",
           "keySpecs": [
             "3-1200m",
             "Flagpole lock",
@@ -3738,7 +3738,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
           "description": "3-1500m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
-          "image": null,
+          "image": "/images/products/lm1500g.jpg",
           "keySpecs": [
             "3-1500m",
             "Flagpole lock",
@@ -3753,7 +3753,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
           "description": "3-600m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display",
-          "image": null,
+          "image": "/images/products/lm600a.jpg",
           "keySpecs": [
             "3-600m",
             "Flagpole lock",
@@ -3768,7 +3768,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
           "description": "3-800m; Same features as LM600A + 800m range",
-          "image": null,
+          "image": "/images/products/lm800a.jpg",
           "keySpecs": [
             "3-800m"
           ],
@@ -3780,7 +3780,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
           "description": "3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display",
-          "image": null,
+          "image": "/images/products/lm1000a.jpg",
           "keySpecs": [
             "3-1000m",
             "Flagpole lock",
@@ -3795,7 +3795,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
           "description": "3-1200m; Same as LM1000A + longer range",
-          "image": null,
+          "image": "/images/products/lm1200a.jpg",
           "keySpecs": [
             "3-1200m"
           ],
@@ -3807,7 +3807,7 @@
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
           "description": "3-1500m; Same as LM1000A + longest range",
-          "image": null,
+          "image": "/images/products/lm1500a.jpg",
           "keySpecs": [
             "3-1500m"
           ],
@@ -4210,7 +4210,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Green LD; 2 lines",
-          "image": null,
+          "image": "/images/products/lm570ld-ii.jpg",
           "keySpecs": [
             "Green LD",
             "2 lines"
@@ -4223,7 +4223,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Red; 1V1H; H110°/V110°",
-          "image": null,
+          "image": "/images/products/lm570r-i.jpg",
           "keySpecs": [
             "Red",
             "1V1H"
@@ -4236,7 +4236,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Green LD; 3D 12 lines",
-          "image": null,
+          "image": "/images/products/lm573ld-ii.jpg",
           "keySpecs": [
             "Green LD",
             "3D 12 lines"
@@ -4249,7 +4249,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Green LD; 3D 12 lines",
-          "image": null,
+          "image": "/images/products/lm575ld.jpg",
           "keySpecs": [
             "Green LD",
             "3D 12 lines"
@@ -4262,7 +4262,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Osram green LD; 3D 16 lines",
-          "image": null,
+          "image": "/images/products/lm576ld.jpg",
           "keySpecs": [
             "Osram green LD",
             "3D 16 lines"
@@ -4275,7 +4275,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "Osram green LD; 8 lines",
-          "image": null,
+          "image": "/images/products/lm585ld.jpg",
           "keySpecs": [
             "Osram green LD",
             "8 lines"
@@ -4288,7 +4288,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
-          "image": null,
+          "image": "/images/products/lm573r.jpg",
           "keySpecs": [
             "12 red lines",
             "3 brightness",
@@ -4303,7 +4303,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
-          "image": null,
+          "image": "/images/products/lm575r.jpg",
           "keySpecs": [
             "12 red lines",
             "3 brightness",
@@ -4318,7 +4318,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "16 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
-          "image": null,
+          "image": "/images/products/lm576r.jpg",
           "keySpecs": [
             "16 red lines",
             "3 brightness",
@@ -4333,7 +4333,7 @@
           "category": "Laser Levels",
           "subcategory": "Laser Level",
           "description": "8 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
-          "image": null,
+          "image": "/images/products/lm585r.jpg",
           "keySpecs": [
             "8 red lines",
             "3 brightness",
@@ -4357,7 +4357,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
           "description": "AC 230V 50-60Hz; Rated current 10A; Socket test",
-          "image": null,
+          "image": "/images/products/ut07a.jpg",
           "keySpecs": [
             "AC 230V 50-60Hz",
             "Rated current 10A",
@@ -4374,7 +4374,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
           "description": "AC 230V 50-60Hz; Rated current 10A; Socket test; RCD test 30mA leakage",
-          "image": null,
+          "image": "/images/products/ut07b.jpg",
           "keySpecs": [
             "AC 230V 50-60Hz",
             "Rated current 10A",
@@ -4404,7 +4404,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
           "description": "AC 125V 50-60Hz; Wiring check; GFCI test",
-          "image": null,
+          "image": "/images/products/ut08b.jpg",
           "keySpecs": [
             "AC 125V 50-60Hz",
             "Wiring check",
@@ -4418,7 +4418,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 12-690V; Phase rotation; Continuity; Polarity",
-          "image": null,
+          "image": "/images/products/ut15b.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
             "Phase rotation",
@@ -4433,7 +4433,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 12-690V; Phase rotation; Continuity; Polarity; LCD",
-          "image": null,
+          "image": "/images/products/ut15c.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
             "Phase rotation",
@@ -4448,7 +4448,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 12-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight",
-          "image": null,
+          "image": "/images/products/ut18c.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
             "LCD",
@@ -4463,7 +4463,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 6-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; RCD; Flashlight",
-          "image": null,
+          "image": "/images/products/ut18d.jpg",
           "keySpecs": [
             "AC/DC 6-690V",
             "LCD",
@@ -4478,7 +4478,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 12-1000V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight",
-          "image": null,
+          "image": "/images/products/ut18d.jpg",
           "keySpecs": [
             "AC/DC 12-1000V",
             "LCD",
@@ -4493,7 +4493,7 @@
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
           "description": "AC/DC 12-400V; Polarity",
-          "image": null,
+          "image": "/images/products/ut22b-eu.jpg",
           "keySpecs": [
             "AC/DC 12-400V",
             "Polarity"
@@ -4515,7 +4515,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 600Ω; 20A; 32mm jaw",
-          "image": null,
+          "image": "/images/products/ut273-plus.jpg",
           "keySpecs": [
             "Earth R 600Ω",
             "20A",
@@ -4529,7 +4529,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 1200Ω; 30A; 28mm jaw",
-          "image": null,
+          "image": "/images/products/ut275.jpg",
           "keySpecs": [
             "Earth R 1200Ω",
             "30A",
@@ -4543,7 +4543,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 590Ω; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD",
-          "image": null,
+          "image": "/images/products/ut276a-plus.jpg",
           "keySpecs": [
             "Earth R 590Ω",
             "32mm jaw",
@@ -4558,7 +4558,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 800Ω; 20A; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD",
-          "image": null,
+          "image": "/images/products/ut278a-plus.jpg",
           "keySpecs": [
             "Earth R 800Ω",
             "20A",
@@ -4573,7 +4573,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 0-1500Ω; AC 0-40A; 1uA resolution; 3/4-wire 0-3kΩ; Earth V 600V",
-          "image": null,
+          "image": "/images/products/ut278b.jpg",
           "keySpecs": [
             "Earth R 0-1500Ω",
             "AC 0-40A",
@@ -4588,7 +4588,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 0-1800Ω; Leakage 0-50A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ; 68mm jaw",
-          "image": null,
+          "image": "/images/products/ut278c.jpg",
           "keySpecs": [
             "Earth R 0-1800Ω",
             "Leakage 0-50A",
@@ -4603,7 +4603,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "Earth R 0-2000Ω; Leakage 0-60A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ",
-          "image": null,
+          "image": "/images/products/ut278d.jpg",
           "keySpecs": [
             "Earth R 0-2000Ω",
             "Leakage 0-60A",
@@ -4617,7 +4617,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
           "description": "AC 0-100A; AC 0-600V; F 10Hz-1000Hz; Transformer core ground current; AC leakage online",
-          "image": null,
+          "image": "/images/products/ut278d.jpg",
           "keySpecs": [
             "AC 0-100A",
             "AC 0-600V",
@@ -4632,7 +4632,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Earth Resistance Clamp Meter",
           "description": "Earth clamp meter, 0.010–400Ω resistance, ±(1%+0.01Ω) accuracy, φ44mm jaw",
-          "image": null,
+          "image": "/images/products/ut272a.png",
           "keySpecs": [
             "0.010-400Ω",
             "φ44mm jaw",
@@ -4647,7 +4647,7 @@
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Earth Resistance + Current Clamp Meter",
           "description": "Earth clamp meter with AC current, 0.010–1200Ω, 1mA–30A AC, Bluetooth, φ44mm jaw",
-          "image": null,
+          "image": "/images/products/ut275a.png",
           "keySpecs": [
             "0.010-1200Ω",
             "1mA-30A AC",
@@ -4672,7 +4672,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
           "description": "1GHz to 2GHz bandwidth, 4-channel mixed-signal oscilloscope with 10GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso7000x.png",
           "keySpecs": [
             "1-2GHz BW",
             "4 channels",
@@ -4688,7 +4688,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
           "description": "1GHz to 2GHz bandwidth, 4-channel digital oscilloscope with 10GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/upo7000l.png",
           "keySpecs": [
             "1-2GHz BW",
             "4 channels",
@@ -4703,7 +4703,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
           "description": "350MHz to 500MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso3000x.png",
           "keySpecs": [
             "350-500MHz BW",
             "4 channels",
@@ -4719,7 +4719,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
           "description": "100MHz to 300MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso2000x.png",
           "keySpecs": [
             "100-300MHz BW",
             "4 channels",
@@ -4735,7 +4735,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
           "description": "50MHz to 200MHz bandwidth, 4-channel digital oscilloscope with 2GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/upo1000.png",
           "keySpecs": [
             "50-200MHz BW",
             "4 channels",
@@ -4750,7 +4750,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
           "description": "100MHz to 200MHz bandwidth, 2-channel digital oscilloscope with 1GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/upo1002.png",
           "keySpecs": [
             "100-200MHz BW",
             "2 channels",
@@ -4765,7 +4765,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
           "description": "50MHz to 200MHz bandwidth, 2-channel entry-level oscilloscope with 1GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/utd2000cex-plus.png",
           "keySpecs": [
             "50-200MHz BW",
             "2 channels",
@@ -4780,7 +4780,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
           "description": "25MHz to 150MHz bandwidth, 2-channel oscilloscope with 500MSa/s sample rate",
-          "image": null,
+          "image": "/images/products/utd2000cl-plus.png",
           "keySpecs": [
             "25-150MHz BW",
             "2 channels",
@@ -4795,7 +4795,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Handheld Digital Oscilloscope",
           "description": "60/100/200MHz bandwidth, 2-channel handheld digital oscilloscope",
-          "image": null,
+          "image": "/images/products/utd1000c.png",
           "keySpecs": [
             "60-200MHz BW",
             "2 channels",
@@ -4810,7 +4810,7 @@
           "category": "Digital Oscilloscopes",
           "subcategory": "Handheld Digital Oscilloscope",
           "description": "25MHz to 50MHz bandwidth, 1-2 channel handheld oscilloscope with 250MSa/s",
-          "image": null,
+          "image": "/images/products/utd1000l.png",
           "keySpecs": [
             "25-50MHz BW",
             "1-2 channels",
@@ -4835,7 +4835,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
           "description": "4-channel programmable DC power supply, 0–32V, 0–3A per channel",
-          "image": null,
+          "image": "/images/products/udp4303s.png",
           "keySpecs": [
             "0-32V",
             "0-3A",
@@ -4851,7 +4851,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
           "description": "4-channel programmable DC power supply, 0–30V, 0–5A per channel",
-          "image": null,
+          "image": "/images/products/udp3000s.png",
           "keySpecs": [
             "0-30V",
             "0-5A",
@@ -4867,7 +4867,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
           "description": "3-channel linear DC power supply, 30V, 5A per channel",
-          "image": null,
+          "image": "/images/products/udp3000.png",
           "keySpecs": [
             "30V",
             "5A",
@@ -4883,7 +4883,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
           "description": "Single-channel linear DC power supply, 32V, 6A",
-          "image": null,
+          "image": "/images/products/udp1000.png",
           "keySpecs": [
             "32V",
             "6A",
@@ -4899,7 +4899,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
           "description": "3-channel linear DC bench power supply, 32V, 5A per channel",
-          "image": null,
+          "image": "/images/products/utp3300-ii.png",
           "keySpecs": [
             "32V",
             "5A",
@@ -4914,7 +4914,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
           "description": "Single-channel linear DC bench power supply, 30V, 5A",
-          "image": null,
+          "image": "/images/products/utp3300tfl-ii.png",
           "keySpecs": [
             "30V",
             "5A",
@@ -4929,7 +4929,7 @@
           "category": "DC Power Supplies",
           "subcategory": "High Power DC Power Supply",
           "description": "Wide-range programmable DC power supply, 0–250V, 0–200A",
-          "image": null,
+          "image": "/images/products/udp5000.png",
           "keySpecs": [
             "0-250V",
             "0-200A",
@@ -4945,7 +4945,7 @@
           "category": "DC Power Supplies",
           "subcategory": "High Power DC Power Supply",
           "description": "Wide-range programmable DC power supply, 0–600V, 0–110A",
-          "image": null,
+          "image": "/images/products/udp6720.png",
           "keySpecs": [
             "0-600V",
             "0-110A",
@@ -4961,7 +4961,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
           "description": "Programmable DC power supply, 0–150V, 0–25A",
-          "image": null,
+          "image": "/images/products/udp6900.png",
           "keySpecs": [
             "0-150V",
             "0-25A",
@@ -4976,7 +4976,7 @@
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
           "description": "Programmable DC power supply, 0–80V, 0–30A",
-          "image": null,
+          "image": "/images/products/udp6700.png",
           "keySpecs": [
             "0-80V",
             "0-30A",
@@ -5000,7 +5000,7 @@
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
           "description": "K/J; Single; °C/°F",
-          "image": null,
+          "image": "/images/products/ut320a.jpg",
           "keySpecs": [
             "K/J",
             "Single",
@@ -5014,7 +5014,7 @@
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
           "description": "K/J; Dual; °C/°F; T1-T2 difference",
-          "image": null,
+          "image": "/images/products/ut320d.jpg",
           "keySpecs": [
             "K/J",
             "Dual",
@@ -5029,7 +5029,7 @@
           "category": "Contact Thermometers",
           "subcategory": "2-in-1 Thermometer",
           "description": "IR 40-300°C; Probe -40 to 300°C; IP54; Max/Min/Diff/Lock",
-          "image": null,
+          "image": "/images/products/ut320t.jpg",
           "keySpecs": [
             "IR 40-300°C",
             "Probe -40 to 300°C",
@@ -5044,7 +5044,7 @@
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
           "description": "Dual; K/J/T/E/R/S/N; °C/°F/K; 100 storage; USB",
-          "image": null,
+          "image": "/images/products/ut325.jpg",
           "keySpecs": [
             "Dual",
             "K/J/T/E/R/S/N",
@@ -5059,7 +5059,7 @@
           "category": "Contact Thermometers",
           "subcategory": "4-Channel Thermometer",
           "description": "-200°C~1372°C Type-K; 7 TC types; T1-T2; APP/PC; 72000 storage",
-          "image": null,
+          "image": "/images/products/ut325f.jpg",
           "keySpecs": [
             "7 TC types",
             "T1-T2",
@@ -5074,7 +5074,7 @@
           "category": "Contact Thermometers",
           "subcategory": "Digital Thermometer",
           "description": "40-250°C; 12mm probe; NTC; 20s stabilize",
-          "image": null,
+          "image": "/images/products/a61.jpg",
           "keySpecs": [
             "40-250°C",
             "12mm probe",
@@ -5089,7 +5089,7 @@
           "category": "Contact Thermometers",
           "subcategory": "2-in-1 Food Thermometer",
           "description": "IR 40-300°C; Probe -50 to 300°C; LED alarm; HACCP; T1-T2 diff",
-          "image": null,
+          "image": "/images/products/a63.jpg",
           "keySpecs": [
             "IR 40-300°C",
             "Probe -50 to 300°C",
@@ -5149,7 +5149,7 @@
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
           "description": "LAN/telephone/coax/electric; Wire alignment",
-          "image": null,
+          "image": "/images/products/ut682.jpg",
           "keySpecs": [
             "Wire alignment"
           ],
@@ -5161,7 +5161,7 @@
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
           "description": "Telephone/twisted-pair/electric",
-          "image": null,
+          "image": "/images/products/ut682d.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT682D",
           "regions": []
@@ -5171,7 +5171,7 @@
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
           "description": "Wire tracking RJ11>3000m; RJ45>100m; NCV; Headset jack",
-          "image": null,
+          "image": "/images/products/ut683kit.jpg",
           "keySpecs": [
             "RJ45>100m",
             "NCV",
@@ -5185,7 +5185,7 @@
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
           "description": "UTP/FTP/SSTP; 500m length; POE; Ethernet port test",
-          "image": null,
+          "image": "/images/products/ut685b-kit.jpg",
           "keySpecs": [
             "UTP/FTP/SSTP",
             "500m length",
@@ -5209,7 +5209,7 @@
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
           "description": "500MHz, 4-channel arbitrary waveform/function generator",
-          "image": null,
+          "image": "/images/products/utg9000t-plus.png",
           "keySpecs": [
             "500MHz",
             "4 channels",
@@ -5224,7 +5224,7 @@
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
           "description": "600MHz, 4-channel arbitrary waveform/function generator",
-          "image": null,
+          "image": "/images/products/utg9000t.png",
           "keySpecs": [
             "600MHz",
             "4 channels",
@@ -5239,7 +5239,7 @@
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
           "description": "250MHz, 4-channel arbitrary waveform/function generator",
-          "image": null,
+          "image": "/images/products/utg4000x.png",
           "keySpecs": [
             "250MHz",
             "4 channels",
@@ -5254,7 +5254,7 @@
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
           "description": "200MHz, 2-channel arbitrary waveform/function generator",
-          "image": null,
+          "image": "/images/products/utg4000a.png",
           "keySpecs": [
             "200MHz",
             "2 channels",
@@ -5269,7 +5269,7 @@
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
           "description": "120MHz, 2-channel arbitrary waveform/function generator",
-          "image": null,
+          "image": "/images/products/utg2000x.png",
           "keySpecs": [
             "120MHz",
             "2 channels",
@@ -5284,7 +5284,7 @@
           "category": "Waveform Generators",
           "subcategory": "Function/Arbitrary Generator",
           "description": "60MHz, 2-channel function/arbitrary waveform generator",
-          "image": null,
+          "image": "/images/products/utg900e.png",
           "keySpecs": [
             "60MHz",
             "2 channels",
@@ -5299,7 +5299,7 @@
           "category": "Waveform Generators",
           "subcategory": "Function/Arbitrary Generator",
           "description": "40MHz, 2-channel entry-level function/arbitrary waveform generator",
-          "image": null,
+          "image": "/images/products/utg1000x.png",
           "keySpecs": [
             "40MHz",
             "2 channels",
@@ -5323,7 +5323,7 @@
           "category": "Anemometers",
           "subcategory": "Anemometer",
           "description": "2-30 m/s; Wind count 0.001-9999x100; T 0-40°C; 2044 storage",
-          "image": null,
+          "image": "/images/products/ut361.jpg",
           "keySpecs": [
             "2-30 m/s",
             "T 0-40°C",
@@ -5337,7 +5337,7 @@
           "category": "Anemometers",
           "subcategory": "Anemometer",
           "description": "2-30 m/s; T 0-40°C; 2045 storage; USB",
-          "image": null,
+          "image": "/images/products/ut362.jpg",
           "keySpecs": [
             "2-30 m/s",
             "T 0-40°C",
@@ -5352,7 +5352,7 @@
           "category": "Anemometers",
           "subcategory": "Anemometer",
           "description": "0-30 m/s; -20-70°C; Flow 0-999900 m³/min; ±(4%+0.1m/s); Pt sensor; Split; 99 storage",
-          "image": null,
+          "image": "/images/products/ut362h.png",
           "keySpecs": [
             "0-30 m/s",
             "-20-70°C",
@@ -5367,7 +5367,7 @@
           "category": "Anemometers",
           "subcategory": "Mini Anemometer",
           "description": "0-30 m/s; -10-50°C; Wind scale 0-12; Auto power off",
-          "image": null,
+          "image": "/images/products/ut363.jpg",
           "keySpecs": [
             "0-30 m/s",
             "-10-50°C",
@@ -5382,7 +5382,7 @@
           "category": "Anemometers",
           "subcategory": "Mini Anemometer",
           "description": "Same as UT363 + Bluetooth",
-          "image": null,
+          "image": "/images/products/ut363bt.jpg",
           "keySpecs": [
             "Bluetooth"
           ],
@@ -5394,7 +5394,7 @@
           "category": "Anemometers",
           "subcategory": "Anemometer",
           "description": "0.4-30 m/s; -10-50°C; Wind scale 0-12; Sampling rate; Overload",
-          "image": null,
+          "image": "/images/products/ut363s.jpg",
           "keySpecs": [
             "0.4-30 m/s",
             "-10-50°C",
@@ -5418,7 +5418,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Input 3-9V; 0-3A; Capacity 0-9999mAh; 10 storage",
-          "image": null,
+          "image": "/images/products/ut658.jpg",
           "keySpecs": [
             "Input 3-9V",
             "0-3A",
@@ -5433,7 +5433,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Input 3-9V; 0-3.5A; Capacity 0-9999mAh; 10 storage",
-          "image": null,
+          "image": "/images/products/ut658b.jpg",
           "keySpecs": [
             "Input 3-9V",
             "0-3.5A",
@@ -5448,7 +5448,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Type-A I/O; 2.0/3.0; 4-24VDC; Type-A 0.05-3A; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
-          "image": null,
+          "image": "/images/products/ut658a.jpg",
           "keySpecs": [
             "Type-A I/O",
             "2.0/3.0",
@@ -5463,7 +5463,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Type-C I/O; 2.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
-          "image": null,
+          "image": "/images/products/ut658c.jpg",
           "keySpecs": [
             "Type-C I/O",
             "2.0/4.0",
@@ -5478,7 +5478,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Type-A & Type-C I/O; 2.0/3.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
-          "image": null,
+          "image": "/images/products/ut658dual.jpg",
           "keySpecs": [
             "Type-A & Type-C I/O",
             "2.0/3.0/4.0",
@@ -5493,7 +5493,7 @@
           "category": "USB Testers",
           "subcategory": "USB Tester",
           "description": "Type-A I/O; 2.0/3.0; 4-24VDC; 0.05-3ADC; 0-99999mAh; 0-1000Wh; Equivalent R 1-480Ω",
-          "image": null,
+          "image": "/images/products/ut658load.jpg",
           "keySpecs": [
             "Type-A I/O",
             "2.0/3.0",
@@ -5517,7 +5517,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
           "description": "StudScan ferrous 19mm/non-ferrous 19mm/Cu live 50mm/wood 19mm; ThickScan ferrous 28.5mm/non-ferrous 28.5mm/Cu live 50mm/wood 28.5mm",
-          "image": null,
+          "image": "/images/products/ut387a.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT387A",
           "regions": []
@@ -5527,7 +5527,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
           "description": "Wood beam, metal, electric wire; Metal-scan 76mm; Stud-scan wood 28.5mm; Thick-scan wood 38mm; AC wire 51mm",
-          "image": null,
+          "image": "/images/products/ut387c.jpg",
           "keySpecs": [
             "Metal-scan 76mm",
             "Stud-scan wood 28.5mm",
@@ -5542,7 +5542,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
           "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm",
-          "image": null,
+          "image": "/images/products/ut387d.jpg",
           "keySpecs": [
             "Ferrous 100mm",
             "Non-ferrous 80mm",
@@ -5557,7 +5557,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
           "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm",
-          "image": null,
+          "image": "/images/products/ut387e.jpg",
           "keySpecs": [
             "Ferrous 100mm",
             "Non-ferrous 80mm",
@@ -5572,7 +5572,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner + Laser",
           "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m",
-          "image": null,
+          "image": "/images/products/ut387lm.jpg",
           "keySpecs": [
             "Ferrous 100mm",
             "Non-ferrous 80mm",
@@ -5587,7 +5587,7 @@
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner + Moisture",
           "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m; Wood moisture 6-40%",
-          "image": null,
+          "image": "/images/products/ut387s.jpg",
           "keySpecs": [
             "Ferrous 100mm",
             "Non-ferrous 80mm",
@@ -5611,7 +5611,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
           "description": "8GHz bandwidth, 4-channel high-resolution mixed-signal oscilloscope with 20GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso8000hd.png",
           "keySpecs": [
             "8GHz BW",
             "4 channels",
@@ -5627,7 +5627,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
           "description": "350MHz to 1GHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 5GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso5000hd.png",
           "keySpecs": [
             "350MHz-1GHz BW",
             "4 channels",
@@ -5643,7 +5643,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
           "description": "200MHz to 500MHz bandwidth, 4-channel 12-bit MSO with 2.5GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/mso3000hd.png",
           "keySpecs": [
             "200-500MHz BW",
             "4 channels",
@@ -5659,7 +5659,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
           "description": "150MHz to 250MHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 2.5GSa/s",
-          "image": null,
+          "image": "/images/products/mso1000hd.png",
           "keySpecs": [
             "150-250MHz BW",
             "4 channels",
@@ -5675,7 +5675,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Digital Oscilloscope",
           "description": "70MHz to 200MHz bandwidth, 2/4 channel 12-bit oscilloscope with 2.5GSa/s sample rate",
-          "image": null,
+          "image": "/images/products/upo2000hd.png",
           "keySpecs": [
             "70-200MHz BW",
             "2/4 channels",
@@ -5691,7 +5691,7 @@
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Digital Oscilloscope",
           "description": "80MHz to 150MHz bandwidth, 2/4 channel 12-bit digital oscilloscope with 1.25GSa/s",
-          "image": null,
+          "image": "/images/products/upo1000hd.png",
           "keySpecs": [
             "80-150MHz BW",
             "2/4 channels",
@@ -5716,7 +5716,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Wideband signal/spectrum analyzer covering 2Hz to 40GHz",
-          "image": null,
+          "image": "/images/products/uts7000a.png",
           "keySpecs": [
             "2Hz-40GHz",
             "Spectrum analyzer"
@@ -5730,7 +5730,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Spectrum/signal analyzer covering 9kHz to 26.5GHz",
-          "image": null,
+          "image": "/images/products/uts5000a.png",
           "keySpecs": [
             "9kHz-26.5GHz",
             "Spectrum analyzer"
@@ -5744,7 +5744,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
-          "image": null,
+          "image": "/images/products/uts3000a.png",
           "keySpecs": [
             "9kHz-8.4GHz",
             "Spectrum analyzer"
@@ -5758,7 +5758,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Tracking-generator spectrum analyzer covering 9kHz to 8.4GHz",
-          "image": null,
+          "image": "/images/products/uts3000t-plus.png",
           "keySpecs": [
             "9kHz-8.4GHz",
             "Tracking generator"
@@ -5772,7 +5772,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
-          "image": null,
+          "image": "/images/products/uts3000b.png",
           "keySpecs": [
             "9kHz-8.4GHz",
             "Spectrum analyzer"
@@ -5786,7 +5786,7 @@
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
           "description": "Entry-level spectrum analyzer covering 9kHz to 3.2GHz",
-          "image": null,
+          "image": "/images/products/uts1000b.png",
           "keySpecs": [
             "9kHz-3.2GHz",
             "Spectrum analyzer"
@@ -5809,7 +5809,7 @@
           "category": "Fiber Optic Testers",
           "subcategory": "Visual Fault Locator",
           "description": "≥1mW; 2-3km",
-          "image": null,
+          "image": "/images/products/ut691-01.jpg",
           "keySpecs": [
             "≥1mW",
             "2-3km"
@@ -5822,7 +5822,7 @@
           "category": "Fiber Optic Testers",
           "subcategory": "Visual Fault Locator",
           "description": "≥10mW; 8-10km",
-          "image": null,
+          "image": "/images/products/ut691-10.jpg",
           "keySpecs": [
             "≥10mW",
             "8-10km"
@@ -5835,7 +5835,7 @@
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
           "description": "-70 to +10 dBm; FC/SC/ST",
-          "image": null,
+          "image": "/images/products/ut692d.jpg",
           "keySpecs": [
             "-70 to +10 dBm",
             "FC/SC/ST"
@@ -5848,7 +5848,7 @@
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
           "description": "-50 to +26 dBm; FC/SC/ST",
-          "image": null,
+          "image": "/images/products/ut692g.jpg",
           "keySpecs": [
             "-50 to +26 dBm",
             "FC/SC/ST"
@@ -5861,7 +5861,7 @@
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
           "description": "Optical Multimeter (Power Meter & VFL); -70 to +10 dBm; VFL 10mW; 8-10km",
-          "image": null,
+          "image": "/images/products/ut693d.jpg",
           "keySpecs": [
             "-70 to +10 dBm",
             "VFL 10mW",
@@ -5884,7 +5884,7 @@
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Digital Micro Ohm Meter",
           "description": "60mΩ/10A - 6kΩ/100uA; 10uΩ resolution",
-          "image": null,
+          "image": "/images/products/ut620a.jpg",
           "keySpecs": [
             "60mΩ/10A - 6kΩ/100uA",
             "10uΩ resolution"
@@ -5897,7 +5897,7 @@
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Digital Micro Ohm Meter",
           "description": "0.001mΩ-300kΩ; 1μΩ; ≥1A test; 4-wire; 2/s; Type-C; 5200mAh",
-          "image": null,
+          "image": "/images/products/ut620c-plus.jpg",
           "keySpecs": [
             "1μΩ",
             "≥1A test",
@@ -5912,7 +5912,7 @@
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "DC Resistance Tester",
           "description": "10A test; 0.1μΩ-1.0000MΩ; 0.1μΩ resolution; PC software",
-          "image": null,
+          "image": "/images/products/ut620t.png",
           "keySpecs": [
             "10A test",
             "0.1μΩ-1.0000MΩ",
@@ -5927,7 +5927,7 @@
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Low Resistance Ohmmeter",
           "description": "100A test; 0.1uΩ-1000mΩ; 4-wire kelvin; 5-100A DC step; 10/20/30/60s; 100A up to 60s, 200A up to 180s",
-          "image": null,
+          "image": "/images/products/ut625a.png",
           "keySpecs": [
             "100A test",
             "0.1uΩ-1000mΩ",
@@ -5942,7 +5942,7 @@
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Low Resistance Ohmmeter",
           "description": "200A test; 0.1uΩ-2000mΩ; 4-wire kelvin; 5-200A DC step; 10/20/30/60s; 200A up to 60s, 100A up to 120s",
-          "image": null,
+          "image": "/images/products/ut625b.png",
           "keySpecs": [
             "200A test",
             "0.1uΩ-2000mΩ",
@@ -5966,7 +5966,7 @@
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
           "description": "DC mV 100/1000mV; R 500Ω/5000Ω; TC J/K/T/E/R/S/B/N; RTD Pt10/100; Cu50/100",
-          "image": null,
+          "image": "/images/products/ut701.jpg",
           "keySpecs": [
             "TC J/K/T/E/R/S/B/N",
             "RTD Pt10/100",
@@ -5980,7 +5980,7 @@
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
           "description": "DC 30V; DC 24mA; Loop 24mA; Source 24mA",
-          "image": null,
+          "image": "/images/products/ut705.jpg",
           "keySpecs": [
             "DC 30V",
             "DC 24mA",
@@ -5995,7 +5995,7 @@
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
           "description": "DC mV 50/500mV/30V; R 500Ω/5000Ω; TC R/S/K/E/J/T/N/B/L/U; RTD Pt100/200/500/1000/Cu/Ni; Continuity; Source 100mV/1000mV/10V",
-          "image": null,
+          "image": "/images/products/ut714.jpg",
           "keySpecs": [
             "DC mV 50/500mV/30V",
             "TC R/S/K/E/J/T/N/B/L/U",
@@ -6009,7 +6009,7 @@
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
           "description": "DC 200mV/30V; DC 24mA; Loop 24mA; F 100Hz/1k/10k/100kHz; Continuity; Source 100mV/1000mV/10V; F source 200/2k/20k; Pulse 100/1k/10kHz; Loop 24V",
-          "image": null,
+          "image": "/images/products/ut715.jpg",
           "keySpecs": [
             "DC 200mV",
             "DC 24mA",
@@ -6024,7 +6024,7 @@
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
           "description": "DC 50/500mV/50V; DC 20mA; Loop 20mA; R 500Ω/5000Ω; F 100Hz-100kHz; TC R/S/K/E/J/T/N/B/L/U/XK/BP; RTD Pt/Cu/Ni; Source 100mV/1000mV/10V; F source 200Hz-100kHz",
-          "image": null,
+          "image": "/images/products/ut725.jpg",
           "keySpecs": [
             "DC 50/500mV",
             "DC 20mA",
@@ -6048,7 +6048,7 @@
           "category": "Air Quality Meters",
           "subcategory": "CO Tester",
           "description": "0-1000ppm",
-          "image": null,
+          "image": "/images/products/ut337a.jpg",
           "keySpecs": [
             "0-1000ppm"
           ],
@@ -6060,7 +6060,7 @@
           "category": "Air Quality Meters",
           "subcategory": "Particle Counter",
           "description": "6-channel 0.3-10.0μm; ISO/EU-GMP modes; T/RH/Dew point; 10000 storage; WiFi/APP; Camera",
-          "image": null,
+          "image": "/images/products/ut337b.png",
           "keySpecs": [
             "6-channel 0.3-10.0μm",
             "ISO/EU-GMP modes",
@@ -6076,7 +6076,7 @@
           "category": "Air Quality Meters",
           "subcategory": "PM2.5 Meter",
           "description": "PM2.5; T; RH",
-          "image": null,
+          "image": "/images/products/a25d.jpg",
           "keySpecs": [
             "PM2.5",
             "T",
@@ -6090,7 +6090,7 @@
           "category": "Air Quality Meters",
           "subcategory": "CO2 Meter",
           "description": "CO2; T; RH",
-          "image": null,
+          "image": "/images/products/a37.jpg",
           "keySpecs": [
             "CO2",
             "T",
@@ -6125,7 +6125,7 @@
           "category": "Battery Testers",
           "subcategory": "Battery Tester",
           "description": "12V battery 7-16VDC; 12/24V cranking 7-30VDC; 12/24V charging 7-30VDC; USB; Print",
-          "image": null,
+          "image": "/images/products/ut675a.jpg",
           "keySpecs": [
             "12V battery 7-16VDC",
             "USB",
@@ -6139,7 +6139,7 @@
           "category": "Battery Testers",
           "subcategory": "Battery Resistance Tester",
           "description": "R 0-3Ω; V 0-71V; 4-terminal; 500 storage; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut677a-plus.jpg",
           "keySpecs": [
             "R 0-3Ω",
             "V 0-71V",
@@ -6155,7 +6155,7 @@
           "category": "Battery Testers",
           "subcategory": "Battery Resistance Tester",
           "description": "R 0-3Ω; V 0-120V; 4-terminal; 500 storage; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut677c.jpg",
           "keySpecs": [
             "R 0-3Ω",
             "V 0-120V",
@@ -6195,7 +6195,7 @@
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
           "description": "0-4000Ω; AC earth V 400V; 50/60Hz; 20 storage; 2/3-wire",
-          "image": null,
+          "image": "/images/products/ut522.jpg",
           "keySpecs": [
             "0-4000Ω",
             "AC earth V 400V",
@@ -6210,7 +6210,7 @@
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
           "description": "4Ω-40kΩ; Soil resistivity 4Ω-40kΩ; Disturbance V 50V; 2/3/4-wire; F selectable; RH/RS/RK",
-          "image": null,
+          "image": "/images/products/ut572.jpg",
           "keySpecs": [
             "4Ω-40kΩ",
             "Disturbance V 50V",
@@ -6225,7 +6225,7 @@
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
           "description": "2/3/4-wire 0-300kΩ; Selective ground 3000Ω; Double clamp 100Ω; Earth V 100V; Earth I 600A; Soil resistivity; F 128/111/105/94Hz auto; Short test 250mA; Open V 40V",
-          "image": null,
+          "image": "/images/products/ut575b.jpg",
           "keySpecs": [
             "2/3/4-wire 0-300kΩ",
             "Selective ground 3000Ω",
@@ -6249,7 +6249,7 @@
           "category": "Flex Clamp Sensors",
           "subcategory": "True RMS Flex Clamp",
           "description": "AC 10000A; AC/DC 1000V; F 45-400Hz; 1100mm flex coil; CAT IV 600V",
-          "image": null,
+          "image": "/images/products/ut281e-plus.png",
           "keySpecs": [
             "AC 10000A",
             "AC/DC 1000V",
@@ -6265,7 +6265,7 @@
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
           "description": "400A AC; 50-400Hz; CAT III 300V/CAT II 600V",
-          "image": null,
+          "image": "/images/products/ut-cs06a.jpg",
           "keySpecs": [
             "400A AC",
             "50-400Hz",
@@ -6279,7 +6279,7 @@
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
           "description": "30A/300A/3000A AC; 45-500Hz; 45.7cm flex",
-          "image": null,
+          "image": "/images/products/ut-cs09d.jpg",
           "keySpecs": [
             "45-500Hz",
             "45.7cm flex"
@@ -6292,7 +6292,7 @@
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
           "description": "1000A AC/DC; 50-400Hz; CAT III 1500V/CAT IV 600V",
-          "image": null,
+          "image": "/images/products/ut-cs07.jpg",
           "keySpecs": [
             "1000A AC/DC",
             "50-400Hz",
@@ -6315,7 +6315,7 @@
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
           "description": "0-600A; 0-69kV; 50/60Hz; 33mm jaw; Auto; 99 storage",
-          "image": null,
+          "image": "/images/products/ut255a.jpg",
           "keySpecs": [
             "0-600A",
             "0-69kV",
@@ -6330,7 +6330,7 @@
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
           "description": "0-600A; 0-69kV; 50/60Hz; 33mm jaw; Wireless ≤30m; Auto; 99 storage",
-          "image": null,
+          "image": "/images/products/ut255b.jpg",
           "keySpecs": [
             "0-600A",
             "0-69kV",
@@ -6345,7 +6345,7 @@
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
           "description": "0-1000A; 0-60kV; 50/60Hz; 68mm jaw; Auto; 99 storage",
-          "image": null,
+          "image": "/images/products/ut255c.jpg",
           "keySpecs": [
             "0-1000A",
             "0-60kV",
@@ -6360,7 +6360,7 @@
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
           "description": "AC 20kA; F 45-75Hz; Phase distance 150m; <35kV; Max Ø168mm hook; 3.5\" color LCD; 9999 storage",
-          "image": null,
+          "image": "/images/products/ut255b.jpg",
           "keySpecs": [
             "AC 20kA",
             "F 45-75Hz",
@@ -6384,7 +6384,7 @@
           "category": "Installation Testers",
           "subcategory": "Multifunction Electric Tester",
           "description": "IR 250V/500V/1000V; <2mA; RCD 220V 45-65Hz; 10/30/100/300mA; LowR 0-2000Ω; AC/DC 440V",
-          "image": null,
+          "image": "/images/products/ut526.jpg",
           "keySpecs": [
             "<2mA",
             "RCD 220V 45-65Hz",
@@ -6399,7 +6399,7 @@
           "category": "Installation Testers",
           "subcategory": "Safety / PAT Tester",
           "description": "Earth/Protective Conductor; IR; Leakage; Class 2; Polarity",
-          "image": null,
+          "image": "/images/products/ut528au.jpg",
           "keySpecs": [
             "IR",
             "Leakage",
@@ -6414,7 +6414,7 @@
           "category": "Installation Testers",
           "subcategory": "Multifunctional Installation Tester",
           "description": "IR 1000V/1000MΩ; <2mA; LowR 199Ω; Line Z 2000Ω; 230V output; 20A test; PFC 26kA; No-trip loop Z 2000Ω",
-          "image": null,
+          "image": "/images/products/ut593.jpg",
           "keySpecs": [
             "<2mA",
             "LowR 199Ω",
@@ -6429,7 +6429,7 @@
           "category": "Installation Testers",
           "subcategory": "Multifunctional Installation Tester",
           "description": "IR 1000V/1000MΩ; <2mA; LowR 0-199Ω; Line Z; No-trip loop Z; AC 0-440V; F 45-60Hz",
-          "image": null,
+          "image": "/images/products/ut595.jpg",
           "keySpecs": [
             "<2mA",
             "LowR 0-199Ω",
@@ -6453,7 +6453,7 @@
           "category": "Light Meters",
           "subcategory": "Illuminance Meter",
           "description": "0-400000 Lux; APP; 99 storage; Color correction; Integrated+split probe",
-          "image": null,
+          "image": "/images/products/ut381a.jpg",
           "keySpecs": [
             "APP",
             "99 storage",
@@ -6468,7 +6468,7 @@
           "category": "Light Meters",
           "subcategory": "Mini Light Meter",
           "description": "0-199900 Lux; 1Fc 0-9999 Fc; Overload; Auto power off",
-          "image": null,
+          "image": "/images/products/ut383.jpg",
           "keySpecs": [
             "1Fc 0-9999 Fc",
             "Overload",
@@ -6482,7 +6482,7 @@
           "category": "Light Meters",
           "subcategory": "Mini Light Meter",
           "description": "Same as UT383 + Bluetooth",
-          "image": null,
+          "image": "/images/products/ut383bt.jpg",
           "keySpecs": [
             "Bluetooth"
           ],
@@ -6494,7 +6494,7 @@
           "category": "Light Meters",
           "subcategory": "Digital Light Meter",
           "description": "0-199900 Lux; MAX/MIN; Overload; Split design",
-          "image": null,
+          "image": "/images/products/ut383s.jpg",
           "keySpecs": [
             "MAX/MIN",
             "Overload",
@@ -6517,7 +6517,7 @@
           "category": "Tachometers",
           "subcategory": "Non-contact Tachometer",
           "description": "10-99999 RPM; 0-99999 counts",
-          "image": null,
+          "image": "/images/products/ut371.jpg",
           "keySpecs": [
             "10-99999 RPM",
             "0-99999 counts"
@@ -6530,7 +6530,7 @@
           "category": "Tachometers",
           "subcategory": "Non-contact Tachometer",
           "description": "10-99999 RPM; 0-99999 counts; USB",
-          "image": null,
+          "image": "/images/products/ut372.jpg",
           "keySpecs": [
             "10-99999 RPM",
             "0-99999 counts",
@@ -6544,7 +6544,7 @@
           "category": "Tachometers",
           "subcategory": "2-in-1 Tachometer",
           "description": "m/ft/in; 10 group storage; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut372d.jpg",
           "keySpecs": [
             "m/ft/in",
             "10 group storage",
@@ -6558,7 +6558,7 @@
           "category": "Tachometers",
           "subcategory": "Mini Tachometer",
           "description": "10.0-99999 RPM; 0-99999 counts; Auto power off; Laser-on indication",
-          "image": null,
+          "image": "/images/products/ut373.jpg",
           "keySpecs": [
             "10.0-99999 RPM",
             "0-99999 counts",
@@ -6582,7 +6582,7 @@
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
           "description": "0-1750μm; Single/Continuous; EBTN; Ferrous/Non-ferrous; Audio+Visual alarm; 199 storage",
-          "image": null,
+          "image": "/images/products/ut343a.jpg",
           "keySpecs": [
             "0-1750μm",
             "Single/Continuous",
@@ -6597,7 +6597,7 @@
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
           "description": "0-1250μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 500 storage",
-          "image": null,
+          "image": "/images/products/ut343d.jpg",
           "keySpecs": [
             "0-1250μm",
             "TFT LCD",
@@ -6612,7 +6612,7 @@
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
           "description": "0-2000μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 3300 storage; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut343e.jpg",
           "keySpecs": [
             "0-2000μm",
             "TFT LCD",
@@ -6628,7 +6628,7 @@
           "category": "Thickness Gauges",
           "subcategory": "Ultrasonic Thickness",
           "description": "1.00-300.00mm; Sound velocity 1000-9999 m/s",
-          "image": null,
+          "image": "/images/products/ut345a.jpg",
           "keySpecs": [
             "1.00-300.00mm"
           ],
@@ -6734,7 +6734,7 @@
           "category": "RF Signal Generators",
           "subcategory": "Vector RF Signal Generator",
           "description": "Vector RF signal generator: CW 9kHz–22GHz, IQ 5MHz–6GHz",
-          "image": null,
+          "image": "/images/products/usg5000v.png",
           "keySpecs": [
             "CW 9kHz-22GHz",
             "IQ 5MHz-6GHz",
@@ -6749,7 +6749,7 @@
           "category": "RF Signal Generators",
           "subcategory": "Vector RF Signal Generator",
           "description": "Vector RF signal generator: CW 9kHz–6.5GHz, IQ 5MHz–6GHz",
-          "image": null,
+          "image": "/images/products/usg3000v.png",
           "keySpecs": [
             "CW 9kHz-6.5GHz",
             "IQ 5MHz-6GHz",
@@ -6764,7 +6764,7 @@
           "category": "RF Signal Generators",
           "subcategory": "Analog RF Signal Generator",
           "description": "Analog RF signal generator covering 9kHz to 22GHz",
-          "image": null,
+          "image": "/images/products/usg5000m.png",
           "keySpecs": [
             "9kHz-22GHz",
             "Analog",
@@ -6779,7 +6779,7 @@
           "category": "RF Signal Generators",
           "subcategory": "Analog RF Signal Generator",
           "description": "Analog RF signal generator covering 9kHz to 6.5GHz",
-          "image": null,
+          "image": "/images/products/usg3000m.png",
           "keySpecs": [
             "9kHz-6.5GHz",
             "Analog",
@@ -6803,7 +6803,7 @@
           "category": "Bench Digital Multimeters",
           "subcategory": "6.5-digit Bench DMM",
           "description": "6½-digit bench multimeter, 10000 rdgs/s, 300kHz, 0.0035% DC accuracy with USB/LAN/RS-232C/GPIB",
-          "image": null,
+          "image": "/images/products/ut8806e.png",
           "keySpecs": [
             "6.5 digit",
             "10000 rdgs/s",
@@ -6819,7 +6819,7 @@
           "category": "Bench Digital Multimeters",
           "subcategory": "5.5-digit Bench DMM",
           "description": "5½-digit bench multimeter, 5000 rdgs/s, 100kHz, 0.015% DC accuracy with USB/LAN/RS232",
-          "image": null,
+          "image": "/images/products/ut8805e.png",
           "keySpecs": [
             "5.5 digit",
             "5000 rdgs/s",
@@ -6835,7 +6835,7 @@
           "category": "Bench Digital Multimeters",
           "subcategory": "4.75-digit Bench DMM",
           "description": "4⅚-digit bench multimeter, 100kHz, 0.025% DC accuracy with USB Device",
-          "image": null,
+          "image": "/images/products/ut8804e.png",
           "keySpecs": [
             "4.75 digit",
             "100kHz",
@@ -6851,7 +6851,7 @@
           "category": "Bench Digital Multimeters",
           "subcategory": "3.75-digit Bench DMM",
           "description": "3⅚-digit entry bench multimeter, 100kHz, 0.3% DC accuracy with USB Device",
-          "image": null,
+          "image": "/images/products/ut8803e.png",
           "keySpecs": [
             "3.75 digit",
             "100kHz",
@@ -6876,7 +6876,7 @@
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
           "description": "4x90°; HD backlit; Li-ion; Two-side magnets",
-          "image": null,
+          "image": "/images/products/lm320d.png",
           "keySpecs": [
             "4x90°",
             "HD backlit",
@@ -6891,7 +6891,7 @@
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
           "description": "4x90°; HD backlit; Li-ion; Two-side lasers; Two-side magnets",
-          "image": null,
+          "image": "/images/products/lm320e.png",
           "keySpecs": [
             "4x90°",
             "HD backlit",
@@ -6906,7 +6906,7 @@
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
           "description": "4x90°; HD backlit; Li-ion; Three-side lasers; Three-side magnets",
-          "image": null,
+          "image": "/images/products/lm320f.png",
           "keySpecs": [
             "4x90°",
             "HD backlit",
@@ -6930,7 +6930,7 @@
           "category": "LCR & Component Meters",
           "subcategory": "LC Meter",
           "description": "R 20Ω-2000MΩ; C 200pF-20mF",
-          "image": null,
+          "image": "/images/products/ut601.jpg",
           "keySpecs": [
             "R 20Ω-2000MΩ",
             "C 200pF-20mF"
@@ -6943,7 +6943,7 @@
           "category": "LCR & Component Meters",
           "subcategory": "LC Meter",
           "description": "R 200Ω-20MΩ; C 2nF-600uF; L 2mH-20H",
-          "image": null,
+          "image": "/images/products/ut603.jpg",
           "keySpecs": [
             "R 200Ω-20MΩ",
             "C 2nF-600uF",
@@ -6957,7 +6957,7 @@
           "category": "LCR & Component Meters",
           "subcategory": "LCR Meter",
           "description": "R 20Ω-200MΩ; C 200pF-20mF; L 20uH-2000H; Test F 100Hz/120Hz/1kHz/10kHz/100kHz; L/C/R/DCR/Q/D/θ/ESR",
-          "image": null,
+          "image": "/images/products/ut612.jpg",
           "keySpecs": [
             "R 20Ω-200MΩ",
             "C 200pF-20mF",
@@ -6981,7 +6981,7 @@
           "category": "Moisture Meters",
           "subcategory": "Wood Moisture Meter",
           "description": "2-40%; 2/s refresh; Auto power off; 4 wood categories; Ambient T correction",
-          "image": null,
+          "image": "/images/products/ut377a.jpg",
           "keySpecs": [
             "2-40%",
             "2/s refresh",
@@ -6996,7 +6996,7 @@
           "category": "Moisture Meters",
           "subcategory": "Wood Moisture Meter",
           "description": "Wood+building; 7.0-54.8%; 2/s; 7 wood categories; LED flashlight; 2m drop",
-          "image": null,
+          "image": "/images/products/ut377b.png",
           "keySpecs": [
             "Wood+building",
             "7.0-54.8%",
@@ -7011,7 +7011,7 @@
           "category": "Moisture Meters",
           "subcategory": "Pinless Moisture Meter",
           "description": "Non-destructive; EBTN color; Wood 4-32%; Building 0-99.9%; Wood ±4%; Flashlight; Audio-Light alarm",
-          "image": null,
+          "image": "/images/products/ut377c.jpg",
           "keySpecs": [
             "Non-destructive",
             "EBTN color",
@@ -7035,7 +7035,7 @@
           "category": "Phase Sequence Testers",
           "subcategory": "Phase Sequence Indicator",
           "description": "Contact; Phase sequence; Missing phase; LCD; Up to 400Hz",
-          "image": null,
+          "image": "/images/products/ut261a.jpg",
           "keySpecs": [
             "Contact",
             "Phase sequence",
@@ -7050,7 +7050,7 @@
           "category": "Phase Sequence Testers",
           "subcategory": "Phase Sequence Indicator",
           "description": "Contact; Phase sequence; Missing phase; Motor rotation; Up to 400Hz",
-          "image": null,
+          "image": "/images/products/ut261b.jpg",
           "keySpecs": [
             "Contact",
             "Phase sequence",
@@ -7065,7 +7065,7 @@
           "category": "Phase Sequence Testers",
           "subcategory": "Non-contact Phase Sequence",
           "description": "Phase sequence R/L; Missing phase; Live power; Circuit break; AC 70-1000V; LED+Buzzer; Auto power off",
-          "image": null,
+          "image": "/images/products/ut262e.jpg",
           "keySpecs": [
             "Phase sequence R/L",
             "Missing phase",
@@ -7089,7 +7089,7 @@
           "category": "Pressure Gauges",
           "subcategory": "Wireless Pressure Gauge",
           "description": "-1 to 60bar; ±0.5%FS; Hi/Lo switching+LED; Hi/Lo alarms; Superheat/subcooling auto; Bluetooth; 8000 offline",
-          "image": null,
+          "image": "/images/products/ut336a.jpg",
           "keySpecs": [
             "-1 to 60bar",
             "±0.5%FS",
@@ -7105,7 +7105,7 @@
           "category": "Pressure Gauges",
           "subcategory": "Wireless Pressure Gauge Kit",
           "description": "UT336P + Temperature Clamp",
-          "image": null,
+          "image": "/images/products/ut336a.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT336P%20Kit",
           "regions": []
@@ -7115,7 +7115,7 @@
           "category": "Pressure Gauges",
           "subcategory": "Digital Manometer",
           "description": "kPa/mbar/bar/psi/mmHg/inH2O/inHg/ozin2/kgcm2/ftH2O/mmH2O/hPa; m/s fpm; Auto power off; FSTN",
-          "image": null,
+          "image": "/images/products/ut366a.jpg",
           "keySpecs": [
             "m/s fpm",
             "Auto power off",
@@ -7138,7 +7138,7 @@
           "category": "Sound Level Meters",
           "subcategory": "Sound Level Meter",
           "description": "30-130 dB; 31.5Hz-8kHz; FAST/SLOW; Analogue out; 63 storage",
-          "image": null,
+          "image": "/images/products/ut352.jpg",
           "keySpecs": [
             "30-130 dB",
             "31.5Hz-8kHz",
@@ -7153,7 +7153,7 @@
           "category": "Sound Level Meters",
           "subcategory": "Mini Sound Level Meter",
           "description": "30-130 dB A-weight; F/S 125ms/1000ms; 31.5Hz-8kHz; Overload; Auto power off",
-          "image": null,
+          "image": "/images/products/ut353.jpg",
           "keySpecs": [
             "30-130 dB A-weight",
             "31.5Hz-8kHz",
@@ -7168,7 +7168,7 @@
           "category": "Sound Level Meters",
           "subcategory": "Mini Sound Level Meter",
           "description": "Same as UT353 + Bluetooth",
-          "image": null,
+          "image": "/images/products/ut353bt.jpg",
           "keySpecs": [
             "Bluetooth"
           ],
@@ -7189,7 +7189,7 @@
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
           "description": "Acc 0.1-199.9 m/s²; Vel 0.1-199.9 mm/s; Disp 0.001-1999μm; Flashlight; Rotatable; 2.4\" TFT; 1350mAh Li",
-          "image": null,
+          "image": "/images/products/ut311a.jpg",
           "keySpecs": [
             "Acc 0.1-199.9 m/s²",
             "Vel 0.1-199.9 mm/s",
@@ -7204,7 +7204,7 @@
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
           "description": "Split type; same specs as UT311A",
-          "image": null,
+          "image": "/images/products/ut312a.jpg",
           "keySpecs": [
             "Split type",
             "same specs as UT311A"
@@ -7217,7 +7217,7 @@
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
           "description": "Acc 0-199.9 m/s² (10Hz-10kHz); Vel 0-19.99 cm/s (10Hz-1kHz); Disp 1-1.999mm (10Hz-500Hz); USB",
-          "image": null,
+          "image": "/images/products/ut311a.jpg",
           "keySpecs": [
             "USB"
           ],
@@ -7238,7 +7238,7 @@
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
           "description": "Programmable DC electronic load, 200W–3000W, 500V/240A",
-          "image": null,
+          "image": "/images/products/utl8500x-plus.png",
           "keySpecs": [
             "200-3000W",
             "500V",
@@ -7253,7 +7253,7 @@
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
           "description": "Programmable DC electronic load, 150W/300W, 150V/30A",
-          "image": null,
+          "image": "/images/products/utl8500-plus.png",
           "keySpecs": [
             "150-300W",
             "150V",
@@ -7268,7 +7268,7 @@
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
           "description": "Programmable DC electronic load, 400W, 150V/20A or 40A",
-          "image": null,
+          "image": "/images/products/utl8200-plus.png",
           "keySpecs": [
             "400W",
             "150V",
@@ -7292,7 +7292,7 @@
           "category": "Bench LCR Meters",
           "subcategory": "Precision LCR Meter",
           "description": "Precision LCR meter, 300kHz max, 0.05% accuracy, 6-digit display, 80 rdgs/s with DCR",
-          "image": null,
+          "image": "/images/products/utr2830.png",
           "keySpecs": [
             "300kHz",
             "0.05% acc",
@@ -7308,7 +7308,7 @@
           "category": "Bench LCR Meters",
           "subcategory": "LCR Meter",
           "description": "Bench LCR meter, 100kHz max, 0.1% accuracy, 5-digit display, 20 rdgs/s",
-          "image": null,
+          "image": "/images/products/ut622.png",
           "keySpecs": [
             "100kHz",
             "0.1% acc",
@@ -7323,7 +7323,7 @@
           "category": "Bench LCR Meters",
           "subcategory": "LCR Meter",
           "description": "Bench LCR meter, 10kHz max, 0.1% accuracy, 6-digit display, 23 rdgs/s",
-          "image": null,
+          "image": "/images/products/utr2810-plus.png",
           "keySpecs": [
             "10kHz",
             "0.1% acc",
@@ -7347,7 +7347,7 @@
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
           "description": "Bench power analyzer: 75mV–600V, 2.5mA–20A, DC to 300kHz, ±0.1% rdg accuracy",
-          "image": null,
+          "image": "/images/products/ute323.png",
           "keySpecs": [
             "75mV-600V",
             "2.5mA-20A",
@@ -7363,7 +7363,7 @@
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
           "description": "Bench power analyzer: 75mV–1000V, 25µA–50A, DC to 300kHz, ±0.1% rdg accuracy",
-          "image": null,
+          "image": "/images/products/ute300.png",
           "keySpecs": [
             "75mV-1000V",
             "25µA-50A",
@@ -7378,7 +7378,7 @@
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
           "description": "Bench power meter: 0.5V–600V, 0.05mA–20A, 40Hz–400Hz",
-          "image": null,
+          "image": "/images/products/ute9800-plus.png",
           "keySpecs": [
             "0.5V-600V",
             "0.05mA-20A",
@@ -7402,7 +7402,7 @@
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
           "description": "AC/DC hipot tester: AC 0.05–10kV, DC 0.05–12kV, 5'' touchscreen",
-          "image": null,
+          "image": "/images/products/ut5470.png",
           "keySpecs": [
             "AC 10kV",
             "DC 12kV",
@@ -7417,7 +7417,7 @@
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
           "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV, 4.3'' display",
-          "image": null,
+          "image": "/images/products/ut5320r-sxa.png",
           "keySpecs": [
             "AC 5kV",
             "DC 6kV",
@@ -7432,7 +7432,7 @@
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
           "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV",
-          "image": null,
+          "image": "/images/products/ut5300-plus.png",
           "keySpecs": [
             "AC 5kV",
             "DC 6kV",
@@ -7456,7 +7456,7 @@
           "category": "3-Phase Power Analyzers",
           "subcategory": "3-Phase Clamp Volt Ammeter",
           "description": "AC 20A; AC 600V; 45-65Hz; AP 12kW; SP 12kVA; RP 12kVAR; PF -1 to 1; Phase 0-360°; Current vector 0mA-60A",
-          "image": null,
+          "image": "/images/products/ut267b.jpg",
           "keySpecs": [
             "AC 20A",
             "AC 600V",
@@ -7471,7 +7471,7 @@
           "category": "3-Phase Power Analyzers",
           "subcategory": "3-Phase Clamp Volt Ammeter",
           "description": "AC 600V; AC 1000A; AP 600kW; SP 600kVA; RP 600kVAR; PF -1 to 1; Phase 0-360°",
-          "image": null,
+          "image": "/images/products/ut268b.jpg",
           "keySpecs": [
             "AC 600V",
             "AC 1000A",
@@ -7495,7 +7495,7 @@
           "category": "LED Testers",
           "subcategory": "LED Tester",
           "description": "Output 300V; 30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight",
-          "image": null,
+          "image": "/images/products/ut659a.jpg",
           "keySpecs": [
             "Output 300V",
             "30mA",
@@ -7510,7 +7510,7 @@
           "category": "LED Testers",
           "subcategory": "LED Tester",
           "description": "Output 24V/300V; 2mA/30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight",
-          "image": null,
+          "image": "/images/products/ut659d.jpg",
           "keySpecs": [
             "Output 24V/300V",
             "2mA/30mA",
@@ -7534,7 +7534,7 @@
           "category": "RCD Testers",
           "subcategory": "RCD Tester",
           "description": "x1/2; x1; x5; AUTO RAMP; 195-253V; V 30-600V; F 45-65Hz; 1V resolution",
-          "image": null,
+          "image": "/images/products/ut582-plus.jpg",
           "keySpecs": [
             "x1/2",
             "x1",
@@ -7549,7 +7549,7 @@
           "category": "RCD Testers",
           "subcategory": "RCD Tester",
           "description": "RCD 10-1000mA; 0-2000ms @ 0°/180°; Multi-level; V 30-480V; Wiring check; Phase angle selection; Auto RAMP",
-          "image": null,
+          "image": "/images/products/ut586-plus.jpg",
           "keySpecs": [
             "RCD 10-1000mA",
             "Multi-level",
@@ -7573,7 +7573,7 @@
           "category": "Refrigerant Leak Detectors",
           "subcategory": "Refrigerant Leak Detector",
           "description": "Negative Corona; 3g/a max; 6-step sensitivity; Audio+Light alarm; CFC/HCFC/HFC",
-          "image": null,
+          "image": "/images/products/ut336a.jpg",
           "keySpecs": [
             "Negative Corona",
             "3g/a max",
@@ -7588,7 +7588,7 @@
           "category": "Refrigerant Leak Detectors",
           "subcategory": "Refrigerant Leak Detector",
           "description": "Semiconductor; 3g/a max; 6-step; Audio+Visual; Auto-reset; Probe light",
-          "image": null,
+          "image": "/images/products/ut336b.png",
           "keySpecs": [
             "Semiconductor",
             "3g/a max",
@@ -7612,7 +7612,7 @@
           "category": "SMD Testers",
           "subcategory": "SMD Tester",
           "description": "R 30MΩ; C 30mF; Diode 3V; LED 21V/1mA; Continuity <30Ω; DC V 36V",
-          "image": null,
+          "image": "/images/products/ut116a.jpg",
           "keySpecs": [
             "30MΩ",
             "C 30mF",
@@ -7627,7 +7627,7 @@
           "category": "SMD Testers",
           "subcategory": "SMD Tester",
           "description": "R 60MΩ; C 100mF; Diode 3.2V; LED 21V/1mA; Continuity <50Ω; Battery test 10mA",
-          "image": null,
+          "image": "/images/products/ut116c.jpg",
           "keySpecs": [
             "60MΩ",
             "C 100mF",
@@ -7651,7 +7651,7 @@
           "category": "Transformer Turns Ratio Testers",
           "subcategory": "Wireless Transformer Tester",
           "description": "Primary 0-3000A; ±1%FS; Online 380V/220V; Wireless 100m; 3000 storage; Insulation 110Vrms",
-          "image": null,
+          "image": "/images/products/ut225a.jpg",
           "keySpecs": [
             "Primary 0-3000A",
             "±1%FS",
@@ -7666,7 +7666,7 @@
           "category": "Transformer Turns Ratio Testers",
           "subcategory": "Wireless Transformer Tester",
           "description": "Primary 0-800A; ±0.5%FS; Online 35kV; Wireless 100m; 3000 storage; Insulation 3700Vrms",
-          "image": null,
+          "image": "/images/products/ut225b.jpg",
           "keySpecs": [
             "Primary 0-800A",
             "±0.5%FS",
@@ -7690,7 +7690,7 @@
           "category": "Bench Micro Ohm Meters",
           "subcategory": "Multi-Channel Micro Ohm Meter",
           "description": "Multi-channel micro ohm meter, scan mode 1µΩ–200kΩ, 230ms/10CH",
-          "image": null,
+          "image": "/images/products/ut3515-sx.png",
           "keySpecs": [
             "1µΩ-200kΩ",
             "10 channels",
@@ -7705,7 +7705,7 @@
           "category": "Bench Micro Ohm Meters",
           "subcategory": "Micro Ohm Meter",
           "description": "Bench micro ohm meter, 1µΩ–20kΩ/2MΩ, 100 rdgs/s",
-          "image": null,
+          "image": "/images/products/ut3510-plus.png",
           "keySpecs": [
             "1µΩ-20kΩ",
             "100 rdgs/s"
@@ -7728,7 +7728,7 @@
           "category": "Acoustic Imagers",
           "subcategory": "Acoustic Imager",
           "description": "138-ch MEMS mic; 2-100kHz; Acoustic 60°x40°; 25FPS; 20-120dB SPL; 4.3\" touch",
-          "image": null,
+          "image": "/images/products/ut568b.jpg",
           "keySpecs": [
             "138-ch MEMS mic",
             "2-100kHz",
@@ -7752,7 +7752,7 @@
           "category": "Cable Locators",
           "subcategory": "Cable Locator",
           "description": "TX 33kHz; AC/DC 8-480V; AC 50/60Hz/2.5%±3deg; RX 33kHz; Bipolar 0-0.5m; Unipolar 0-2.5m; NCV 80-1000V; Multi-TX 8",
-          "image": null,
+          "image": "/images/products/ut25cl.jpg",
           "keySpecs": [
             "TX 33kHz",
             "AC/DC 8-480V",
@@ -7777,7 +7777,7 @@
           "category": "Circuit Breaker Testers",
           "subcategory": "Circuit Breaker Tester",
           "description": "US; GFCI 90-120V AC; 47-63Hz; 6mA leakage",
-          "image": null,
+          "image": "/images/products/ut25a.jpg",
           "keySpecs": [
             "US",
             "GFCI 90-120V AC",
@@ -7801,7 +7801,7 @@
           "category": "Hardness Testers",
           "subcategory": "Leeb Hardness Tester",
           "description": "HL/HB/HRC/HRB/HV/HS; 4 modes; 7 impact devices; 640x480 camera; Bluetooth",
-          "image": null,
+          "image": "/images/products/ut347a.jpg",
           "keySpecs": [
             "HL/HB/HRC/HRB/HV/HS",
             "4 modes",
@@ -7825,7 +7825,7 @@
           "category": "LPG Tank Checkers",
           "subcategory": "LPG Tank Level Checker",
           "description": "Steel/aluminum standard propane/butane LPG; 8-14\" (~200-350mm); R/G LED; Flashlight",
-          "image": null,
+          "image": "/images/products/ut345c.jpg",
           "keySpecs": [
             "R/G LED",
             "Flashlight"
@@ -7847,7 +7847,7 @@
           "category": "Laser Power Meters",
           "subcategory": "Laser Power Meter",
           "description": "0uW-39.99mW; 400-1100nm; Optional 520/633/650/780nm",
-          "image": null,
+          "image": "/images/products/ut385.jpg",
           "keySpecs": [
             "0uW-39.99mW"
           ],
@@ -7868,7 +7868,7 @@
           "category": "Pipeline Detectors",
           "subcategory": "Pipeline Blockage Detector",
           "description": "Signal wire 35m; 10h battery",
-          "image": null,
+          "image": "/images/products/ut661d.jpg",
           "keySpecs": [
             "Signal wire 35m",
             "10h battery"
@@ -7890,7 +7890,7 @@
           "category": "Power Monitors",
           "subcategory": "Power Socket Monitor",
           "description": "100V-260V; 0-16A; 45-65Hz; 1-3680W; PF 0-1; Energy 0-9999kWh",
-          "image": null,
+          "image": "/images/products/ut230b-eu.jpg",
           "keySpecs": [
             "0-16A",
             "45-65Hz",
@@ -7914,7 +7914,7 @@
           "category": "Power Quality Analyzers",
           "subcategory": "3-Phase Power Quality Analyzer",
           "description": "Phase-to-N 1000V; Phase-to-Phase 2000V; DC 1000V; 10mA-1000A; AP 9999.9kW; RP 9999.9kVAR; SP 9999.9kVA; Phase -179°-180°; Harmonic 0-99.9%; K factor 1-99.99",
-          "image": null,
+          "image": "/images/products/ut285c.jpg",
           "keySpecs": [
             "Phase-to-N 1000V",
             "Phase-to-Phase 2000V",
@@ -7938,7 +7938,7 @@
           "category": "Radiation Detectors",
           "subcategory": "Radiation Dose Meter",
           "description": "X, β, γ rays; 0.05μSv-50mSv; Audio+Visual alarm",
-          "image": null,
+          "image": "/images/products/ut334a.jpg",
           "keySpecs": [
             "X, β, γ rays",
             "0.05μSv-50mSv",
@@ -7961,7 +7961,7 @@
           "category": "Solar / PV Tools",
           "subcategory": "Solar MPPT Tester",
           "description": "Max 5-800W; Imax 0-35A; Vmax 12-60V; OCV 12-60V; Isc 0-35A; Reverse polarity protect; OV/OC/OT/OP protect; Manual/Auto MPPT",
-          "image": null,
+          "image": "/images/products/ut673pv.jpg",
           "keySpecs": [
             "Max 5-800W",
             "Imax 0-35A",
@@ -7985,7 +7985,7 @@
           "category": "AC Power Sources",
           "subcategory": "Programmable AC Source",
           "description": "Programmable AC power source, 1000VA, dual range L:150V/4.2A H:300V/8.4A",
-          "image": null,
+          "image": "/images/products/uap500a-1000a.png",
           "keySpecs": [
             "1000VA",
             "150V/300V",
@@ -8010,7 +8010,7 @@
           "category": "Bench Battery Testers",
           "subcategory": "Battery Internal Resistance Tester",
           "description": "Bench battery tester: 0.01mV–400V, 0.1µΩ–3.2kΩ, 0.01% V / 0.5% R accuracy",
-          "image": null,
+          "image": "/images/products/ut3560.png",
           "keySpecs": [
             "0.01mV-400V",
             "0.1µΩ-3.2kΩ",
@@ -8034,7 +8034,7 @@
           "category": "Electrical Safety Analyzers",
           "subcategory": "Multi-Function Safety Analyzer",
           "description": "All-in-one safety analyzer: ACW 5kV/100mA, DCW 6kV/10mA, IR to 50GΩ, GB 40A, 5'' touchscreen",
-          "image": null,
+          "image": "/images/products/ut5400.png",
           "keySpecs": [
             "ACW 5kV",
             "DCW 6kV",
@@ -8059,7 +8059,7 @@
           "category": "Bench Insulation Resistance Testers",
           "subcategory": "Programmable Insulation Tester",
           "description": "Bench insulation resistance tester: 1V–1000V DC, 10kΩ–10TΩ, 4.3'' TFT LCD",
-          "image": null,
+          "image": "/images/products/ut5583.png",
           "keySpecs": [
             "1V-1000V DC",
             "10kΩ-10TΩ",
@@ -8083,7 +8083,7 @@
           "category": "Ground Bond Testers",
           "subcategory": "AC Ground Bond Tester",
           "description": "Ground bond tester: 1–40A test current, 0–600mΩ resistance, 4-terminal method, 4.3'' TFT",
-          "image": null,
+          "image": "/images/products/ut5140.png",
           "keySpecs": [
             "1-40A",
             "0-600mΩ",
@@ -8107,7 +8107,7 @@
           "category": "Multi-Channel Temperature Loggers",
           "subcategory": "Temperature Data Logger",
           "description": "Multi-channel temperature logger, up to 48 channels, 10 rdgs/s scan rate",
-          "image": null,
+          "image": "/images/products/ut3200-plus.png",
           "keySpecs": [
             "8-48 channels",
             "10 rdgs/s",
