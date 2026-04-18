@@ -657,6 +657,301 @@
       .container { padding: 0 1rem; }
       .catalog-hero { padding: 3rem 0 2rem; }
     }
+
+    /* Add a subtle keyboard focus indicator on cards */
+    .product-card:focus-visible {
+      outline: 3px solid var(--uni-red, #E31E24);
+      outline-offset: 3px;
+    }
+
+    /* ===== Product Detail Modal ===== */
+    .product-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9000;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 4vh 1rem 1rem;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .product-modal-overlay.open {
+      display: flex;
+      animation: pmFadeIn 0.2s ease;
+    }
+    @keyframes pmFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    body.product-modal-open { overflow: hidden; }
+
+    .product-modal {
+      position: relative;
+      background: var(--card-bg, #fff);
+      border: 1px solid var(--border-color, #e5e7eb);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 800px;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+      animation: pmSlideUp 0.25s ease;
+    }
+    @keyframes pmSlideUp {
+      from { transform: translateY(20px); opacity: 0.5; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+    [data-theme="dark"] .product-modal {
+      background: #1a1a2e;
+      border-color: #2a2a3e;
+    }
+
+    .product-modal-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--text-primary, #111);
+      border: none;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.15s, color 0.15s, transform 0.15s;
+    }
+    .product-modal-close:hover {
+      background: var(--uni-red, #E31E24);
+      color: #fff;
+      transform: scale(1.05);
+    }
+    [data-theme="dark"] .product-modal-close {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary, #f3f4f6);
+    }
+    [data-theme="dark"] .product-modal-close:hover {
+      background: var(--uni-red, #E31E24);
+      color: #fff;
+    }
+
+    .product-modal-content {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+    @media (max-width: 720px) {
+      .product-modal-content {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+      }
+    }
+
+    .modal-image {
+      background: #fff;
+      border: 1px solid var(--border-color, #e5e7eb);
+      border-radius: 10px;
+      aspect-ratio: 1 / 1;
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      align-self: start;
+    }
+    [data-theme="dark"] .modal-image {
+      background: #f0f0f0;
+      border-color: #2a2a3e;
+    }
+    .modal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0.75rem;
+    }
+    [data-theme="dark"] .modal-image img {
+      mix-blend-mode: multiply;
+      filter: brightness(0.95);
+    }
+    .modal-img-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: 5rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #E31E24 0%, #B8181D 100%);
+      letter-spacing: -0.04em;
+    }
+
+    .modal-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .modal-category {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--uni-red, #E31E24);
+      margin-bottom: 0.4rem;
+    }
+    .modal-title {
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      font-weight: 800;
+      color: var(--text-primary, #111);
+      margin: 0 0 0.25rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      padding-right: 2.5rem;
+    }
+    .modal-subcat {
+      color: var(--text-secondary, #555);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+    .modal-desc {
+      color: var(--text-secondary, #555);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0.5rem 0 1rem;
+    }
+    .modal-specs {
+      margin: 0.25rem 0 1rem;
+    }
+    .modal-specs-label {
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted, #6b7280);
+      margin-bottom: 0.5rem;
+    }
+    .modal-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .modal-chip {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      background: var(--bg-secondary, #f3f4f6);
+      color: var(--text-primary, #111);
+      border: 1px solid var(--border-color, #e5e7eb);
+      line-height: 1.3;
+    }
+    [data-theme="dark"] .modal-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: #2a2a3e;
+      color: var(--text-primary, #f3f4f6);
+    }
+    .modal-regions {
+      font-size: 0.85rem;
+      color: var(--text-muted, #6b7280);
+      margin-bottom: 1rem;
+    }
+    .modal-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+    .modal-btn {
+      flex: 1 1 auto;
+      min-width: 140px;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      border-radius: var(--border-radius, 8px);
+      font-family: var(--font-main, 'Inter', sans-serif);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      line-height: 1.1;
+    }
+    .modal-btn-primary {
+      background: var(--uni-red, #E31E24);
+      color: #fff;
+      border-color: var(--uni-red, #E31E24);
+    }
+    .modal-btn-primary:hover {
+      background: var(--uni-red-dark, #B8181D);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(227, 30, 36, 0.3);
+    }
+    .modal-btn-secondary {
+      background: transparent;
+      color: var(--text-primary, #111);
+      border-color: var(--border-color, #e5e7eb);
+    }
+    .modal-btn-secondary:hover {
+      border-color: var(--uni-red, #E31E24);
+      color: var(--uni-red, #E31E24);
+    }
+    [data-theme="dark"] .modal-btn-secondary { color: var(--text-primary, #f3f4f6); }
+    .modal-btn-outline {
+      background: transparent;
+      color: var(--text-secondary, #555);
+      border-color: var(--border-color, #e5e7eb);
+    }
+    .modal-btn-outline:hover {
+      border-color: var(--text-primary, #111);
+      color: var(--text-primary, #111);
+    }
+    [data-theme="dark"] .modal-btn-outline { color: var(--text-secondary, #cbd5e1); }
+    [data-theme="dark"] .modal-btn-outline:hover {
+      border-color: var(--text-primary, #f3f4f6);
+      color: var(--text-primary, #f3f4f6);
+    }
+
+    /* Mobile: full-screen modal */
+    @media (max-width: 640px) {
+      .product-modal-overlay {
+        padding: 0;
+      }
+      .product-modal {
+        max-width: 100%;
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+      }
+      .modal-image {
+        max-width: 240px;
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
+      }
+      .modal-actions .modal-btn {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -957,6 +1252,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="product-modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <div class="product-modal" id="productModalInner">
+      <button class="product-modal-close" id="productModalClose" aria-label="Close product details">&times;</button>
+      <div class="product-modal-content" id="productModalContent">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
 
   <!-- Back to Top -->
   <button id="backToTop" class="back-to-top" aria-label="Back to top">
@@ -1287,6 +1592,10 @@
       function buildCard(p) {
         const card = document.createElement('article');
         card.className = 'product-card';
+        card.style.cursor = 'pointer';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `View details for UNI-T ${p.model}`);
 
         const safeModel  = escapeHtml(p.model);
         const safeCat    = escapeHtml(p.category);
@@ -1341,16 +1650,114 @@
             <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" target="_blank" rel="noopener" aria-label="Buy ${safeModel} on Kinmo">
               Buy on Kinmo
             </a>
-            <a class="card-btn card-btn-secondary" href="${encodeURI(p.officialUrl || '#')}" target="_blank" rel="noopener" aria-label="View specs for ${safeModel}">
-              View Specs
-            </a>
+            <button type="button" class="card-btn card-btn-secondary" data-action="view-details" aria-label="View full details for ${safeModel}">
+              View Details
+            </button>
           </div>
         `;
 
         card.appendChild(imgWrap);
         card.appendChild(body);
+
+        // Whole-card click opens the modal, except when the user hits an action button.
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('.card-btn-primary')) return; // let Buy link open normally
+          if (e.target.closest('[data-action="view-details"]')) {
+            e.preventDefault();
+            openProductModal(p);
+            return;
+          }
+          openProductModal(p);
+        });
+        card.addEventListener('keydown', (e) => {
+          if ((e.key === 'Enter' || e.key === ' ') && e.target === card) {
+            e.preventDefault();
+            openProductModal(p);
+          }
+        });
+
         return card;
       }
+
+      // ----- Product detail modal -----
+      function openProductModal(product) {
+        const modal = document.getElementById('productModal');
+        const content = document.getElementById('productModalContent');
+        if (!modal || !content) return;
+
+        const fallbackLetter = (product.model || '?').replace(/[^A-Za-z0-9]/g, '').charAt(0).toUpperCase() || '?';
+        const allSpecsChips = (product.keySpecs || [])
+          .map(s => `<span class="modal-chip">${escapeHtml(s)}</span>`)
+          .join('');
+        const slug = (product.model || '')
+          .toLowerCase()
+          .replace(/\+/g, '-plus')
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z0-9-]/g, '');
+
+        const officialBtn = product.officialUrl
+          ? `<a class="modal-btn modal-btn-outline" href="${encodeURI(product.officialUrl)}" target="_blank" rel="noopener" aria-label="View ${escapeHtml(product.model)} on UNI-T official site">View on UNI-T <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg></a>`
+          : '';
+
+        const imageHtml = product.image
+          ? `<img src="${encodeURI(product.image)}" alt="UNI-T ${escapeHtml(product.model)}" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;modal-img-fallback&quot;>${fallbackLetter}</div>'">`
+          : `<div class="modal-img-fallback">${fallbackLetter}</div>`;
+
+        const regionsHtml = (product.regions && product.regions.length)
+          ? `<div class="modal-regions">Available regions: ${escapeHtml(product.regions.join(', '))}</div>`
+          : '';
+
+        content.innerHTML = `
+          <div class="modal-image">${imageHtml}</div>
+          <div class="modal-info">
+            <div class="modal-category">${escapeHtml(product.category)}</div>
+            <h2 id="productModalTitle" class="modal-title">UNI-T ${escapeHtml(product.model)}</h2>
+            ${product.subcategory ? `<div class="modal-subcat">${escapeHtml(product.subcategory)}</div>` : ''}
+            <p class="modal-desc">${escapeHtml(product.description || 'No description available for this model. Contact Kinmo for full specifications and pricing.')}</p>
+            ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div></div>` : ''}
+            ${regionsHtml}
+            <div class="modal-actions">
+              <a class="modal-btn modal-btn-primary" href="${encodeURI(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">
+                Buy on Kinmo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg>
+              </a>
+              <a class="modal-btn modal-btn-secondary" href="/tools/compare.html?compare=${encodeURIComponent(slug)}">
+                Compare with Others
+              </a>
+              ${officialBtn}
+            </div>
+          </div>
+        `;
+
+        modal.classList.add('open');
+        document.body.classList.add('product-modal-open');
+        // A11y: focus close button
+        setTimeout(() => {
+          const closeBtn = document.getElementById('productModalClose');
+          if (closeBtn) closeBtn.focus();
+        }, 100);
+      }
+
+      function closeProductModal() {
+        const modal = document.getElementById('productModal');
+        if (!modal) return;
+        modal.classList.remove('open');
+        document.body.classList.remove('product-modal-open');
+      }
+
+      // Wire up modal close handlers (once)
+      (function wireProductModal() {
+        const modal = document.getElementById('productModal');
+        const closeBtn = document.getElementById('productModalClose');
+        if (!modal || !closeBtn) return;
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeProductModal();
+        });
+        closeBtn.addEventListener('click', closeProductModal);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.classList.contains('open')) closeProductModal();
+        });
+      })();
 
       function buildEmptyState() {
         const div = document.createElement('div');
