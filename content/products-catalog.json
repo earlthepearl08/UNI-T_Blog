@@ -1,7 +1,7 @@
 {
-  "scrapedAt": "2026-04-17",
+  "scrapedAt": "2026-04-18",
   "source": "Kinmo PW UNI-T Distributor Price List (PDF)",
-  "totalProducts": 501,
+  "totalProducts": 504,
   "categories": [
     {
       "id": "multimeters",
@@ -2085,7 +2085,7 @@
       "name": "Thermal Imagers",
       "description": "Smartphone, handheld, heavy-duty, enhanced, pro, and monocular thermal imagers for predictive maintenance, building diagnostics, and inspection.",
       "icon": "🌡️",
-      "productCount": 41,
+      "productCount": 44,
       "products": [
         {
           "model": "UTi260K",
@@ -2721,6 +2721,57 @@
           ],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UTx635M",
           "regions": []
+        },
+        {
+          "model": "UTi260M",
+          "category": "Thermal Imagers",
+          "subcategory": "Smartphone Thermal Cameras",
+          "description": "Pro-grade Android smartphone thermal camera module with 256x192 IR resolution and dual measurement modes for both elevated body temperature and industrial inspection. Plugs into Type-C, ships with a 1m extension cable.",
+          "image": "/images/products/uti260m.png",
+          "keySpecs": [
+            "256x192 IR resolution",
+            "-20 to 550 degC range",
+            "25 Hz frame rate",
+            "<50 mK NETD",
+            "USB-C, Android 6.0+"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/?s=UTi260M&post_type=product",
+          "officialUrl": "https://thermal.uni-trend.com/product/uti260m/",
+          "source": "thermal-uni-trend"
+        },
+        {
+          "model": "UTi89Pro",
+          "category": "Thermal Imagers",
+          "subcategory": "Handheld Entry-Level Thermal",
+          "description": "Compact handheld thermal camera aimed at HVAC, electrical, and DIY troubleshooting. IP65 rated with 2 m drop durability, 5 color palettes, and on-board 16 GB microSD storage.",
+          "image": "/images/products/uti89pro.png",
+          "keySpecs": [
+            "80x60 IR (4,800 px)",
+            "-10 to 400 degC range",
+            "9 Hz frame rate",
+            "150 mK NETD",
+            "IP65 / 2 m drop / Type-C"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/?s=UTi89Pro&post_type=product",
+          "officialUrl": "https://thermal.uni-trend.com/product/uti89-pro/",
+          "source": "thermal-uni-trend"
+        },
+        {
+          "model": "UTi165K",
+          "category": "Thermal Imagers",
+          "subcategory": "Body Temperature Screening / Medical",
+          "description": "Tripod-mountable thermal camera dedicated to elevated body temperature (EBT) screening at 30 to 45 degC with +/-0.5 degC accuracy. Real-time PC software streaming with auto high-temp alarm makes it suitable for clinic, school, and entrance screening.",
+          "image": "/images/products/uti165k.png",
+          "keySpecs": [
+            "160x120 IR + 640x480 visible",
+            "30-45 degC body-temp range",
+            "+/-0.5 degC @ 1 m accuracy",
+            "<50 mK NETD",
+            "PC software + auto alarm"
+          ],
+          "kinmoSearchUrl": "https://kinmo.com/?s=UTi165K&post_type=product",
+          "officialUrl": "https://thermal.uni-trend.com/product/uti165k/",
+          "source": "thermal-uni-trend"
         }
       ]
     },

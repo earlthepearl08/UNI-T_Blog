@@ -1,0 +1,94 @@
+{
+  "scrapedAt": "2026-04-17",
+  "productsFound": 3,
+  "products": [
+    {
+      "model": "UTi260M",
+      "fullName": "UNI-T UTi260M Smartphone Thermal Imager (Android USB-C)",
+      "category": "Thermal Imagers",
+      "subcategory": "Smartphone Thermal Cameras",
+      "description": "Pro-grade Android smartphone thermal camera module with 256x192 IR resolution and dual measurement modes for both elevated body temperature and industrial inspection. Plugs into Type-C, ships with a 1m extension cable.",
+      "image": "/images/products/uti260m.png",
+      "imageRemoteUrl": "https://tufzen.com/cdn/shop/files/3807pg_600x.jpg?v=1765874649",
+      "keySpecs": [
+        "256x192 IR resolution",
+        "-20 to 550 degC range",
+        "25 Hz frame rate",
+        "<50 mK NETD",
+        "USB-C, Android 6.0+"
+      ],
+      "officialUrl": "https://thermal.uni-trend.com/product/uti260m/",
+      "kinmoSearchUrl": "https://kinmo.com/?s=UTi260M&post_type=product",
+      "source": "manuals.plus + tufzen (uni-trend page is JS-rendered, returned empty on direct fetch)",
+      "notes": "Specs cross-verified between official UNI-T product manual (via manuals.plus) and the UTi256M/UTi260M shared spec sheet. Image is from a reseller (Tufzen) - UNI-T's own thermal subdomain renders in JS so the official wp-content image URL could not be captured directly. The image-scraper agent should confirm/replace if a uni-trend.com CDN image is found."
+    },
+    {
+      "model": "UTi89Pro",
+      "fullName": "UNI-T UTi89 Pro Handheld Thermal Imager",
+      "category": "Thermal Imagers",
+      "subcategory": "Handheld Entry-Level Thermal",
+      "description": "Compact handheld thermal camera aimed at HVAC, electrical, and DIY troubleshooting. IP65 rated with 2 m drop durability, 5 color palettes, and on-board 16 GB microSD storage.",
+      "image": "/images/products/uti89pro.png",
+      "imageRemoteUrl": "https://www.ukobd2.com/upload/pro/uni-t-thermal-imager-uti89-pro-10772-1.jpg",
+      "keySpecs": [
+        "80x60 IR (4,800 px)",
+        "-10 to 400 degC range",
+        "9 Hz frame rate",
+        "150 mK NETD",
+        "IP65 / 2 m drop / Type-C"
+      ],
+      "officialUrl": "https://thermal.uni-trend.com/product/uti89-pro/",
+      "kinmoSearchUrl": "https://kinmo.com/?s=UTi89Pro&post_type=product",
+      "source": "Amazon listing + manuals.plus + ukobd2 (official thermal subdomain JS-rendered)",
+      "notes": "Specs confirmed across Amazon, manuals.plus, and AliExpress listings - all consistent. Image URL is from a reseller; image-scraper should attempt to find a higher-res official UNI-T image."
+    },
+    {
+      "model": "UTi165K",
+      "fullName": "UNI-T UTi165K Body Temperature Screening Thermal Imager",
+      "category": "Thermal Imagers",
+      "subcategory": "Body Temperature Screening / Medical",
+      "description": "Tripod-mountable thermal camera dedicated to elevated body temperature (EBT) screening at 30 to 45 degC with +/-0.5 degC accuracy. Real-time PC software streaming with auto high-temp alarm makes it suitable for clinic, school, and entrance screening.",
+      "image": "/images/products/uti165k.png",
+      "imageRemoteUrl": "https://digilifeweb.com/image/cache/catalog/Thermo%20Hygro/Thermal%20Camera/Thermal-Camera-UNIT-UTI165K-unit-digilife-500x500.jpg",
+      "keySpecs": [
+        "160x120 IR + 640x480 visible",
+        "30-45 degC body-temp range",
+        "+/-0.5 degC @ 1 m accuracy",
+        "<50 mK NETD",
+        "PC software + auto alarm"
+      ],
+      "officialUrl": "https://thermal.uni-trend.com/product/uti165k/",
+      "kinmoSearchUrl": "https://kinmo.com/?s=UTi165K&post_type=product",
+      "source": "Multiple reseller listings + UNI-T Made-in-China page (official subdomain JS-rendered)",
+      "notes": "The UTi165K is purpose-built for fever screening and is a different product family from the general UTi165A+ industrial imager - copy should not conflate them. Image is from a reseller; image-scraper should try to upgrade to an official UNI-T CDN image."
+    }
+  ],
+  "notFound": [
+    {
+      "model": "TM1",
+      "reason": "No UNI-T product named 'TM1', 'UT-TM1', 'UTM1', or 'ThermalMaster TM1' was found across uni-trend.com, thermal.uni-trend.com, meters.uni-trend.com, uni-trendus.com (US store), uni-t-shop.eu (EU store), Kinmo PH, Amazon UNI-T storefront, or general Google. The closest match in name is 'Thermal Master P1' / 'P3' - but Thermal Master is a separate brand (thermalmaster.com), not a UNI-T product line. The 'TM1' SKU on the Kinmo invoice is most likely either: (a) Kinmo's internal SKU code, (b) a regionally branded Philippines-only variant, or (c) a typo. Recommend asking the user/Kinmo to share the product photo or barcode so we can identify the actual UNI-T model number.",
+      "searchAttempts": [
+        "Google: \"UNI-T TM1\" thermal imager",
+        "Google: \"ThermalMaster TM1\" UNI-T",
+        "Google: \"UNI-T TM1\" infrared thermometer non-contact",
+        "Google: \"UT-TM1\" OR \"UTM1\" UNI-T pocket thermal",
+        "uni-trendus.com search: TM1 (returned only UTS-T01 antenna)",
+        "kinmo.com search: TM1 (Nothing Found)"
+      ]
+    }
+  ],
+  "sourcesConsulted": [
+    "https://thermal.uni-trend.com/product/uti260m/",
+    "https://thermal.uni-trend.com/product/uti165k/",
+    "https://thermal.uni-trend.com/product/uti89-pro/",
+    "https://manuals.plus/uni-t/uti260m-thermal-imager-manual",
+    "https://manuals.plus/uni-t/uti165k-professional-thermal-imager-manual",
+    "https://manuals.plus/m/c80701f1ae155365695906dfd19690d963e3253bf9ed79f482d6434d50021bd8",
+    "https://uni-trendus.com/collections/smartphone-thermal-imagers",
+    "https://uni-t-shop.eu/collections/smartphone-thermal-cameras",
+    "https://www.amazon.com/UNI-T-UTi256M-Resolution-Infrared-Recording/dp/B0BX8T293X",
+    "https://tufzen.com/products/uni-t-thermal-imager-for-smart-phone-uti260m-uti256m-256x192-pixel-thermographic-camera-thermal-camera-pcb-circuit-failure-test",
+    "https://www.ukobd2.com/wholesale/uni-t-thermal-imager-uti89-pro-10772.html",
+    "https://digilifeweb.com/Thermal-Camera-UNI-T-UTi165K"
+  ]
+}
