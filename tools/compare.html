@@ -31,107 +31,135 @@
     }
     .compare-hero h1 .accent { color: #E31E24; }
     .compare-hero p {
-      color: rgba(255,255,255,0.7);
-      font-size: 1.1rem;
-      max-width: 600px;
+      color: rgba(255,255,255,0.75);
+      font-size: 1.05rem;
+      max-width: 640px;
       margin: 0 auto;
     }
-
-    /* Category Filter */
-    .category-filter {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-      margin: 1.5rem 0 0;
-    }
-    .cat-btn {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+    .compare-hero .stat-pill {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(227,30,36,0.15);
+      border: 1px solid rgba(227,30,36,0.4);
       color: #fff;
-      padding: 0.4rem 1rem;
       border-radius: 999px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .cat-btn:hover { background: rgba(255,255,255,0.2); }
-    .cat-btn.active {
-      background: #E31E24;
-      border-color: #E31E24;
-      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     /* Selector Area */
     .selector-area {
-      padding: 2rem 0;
+      padding: 2rem 0 1rem;
+      background: var(--bg-secondary, #f9fafb);
     }
+    [data-theme="dark"] .selector-area { background: #0f0f1a; }
     .slots-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-    @media (max-width: 700px) {
-      .slots-row { grid-template-columns: 1fr; max-width: 400px; }
+    @media (max-width: 760px) {
+      .slots-row { grid-template-columns: 1fr; max-width: 420px; }
     }
 
     /* Slot card */
     .slot-card {
-      border: 2px dashed var(--border, #ddd);
-      border-radius: 12px;
+      border: 2px dashed var(--border-color, #d1d5db);
+      border-radius: 14px;
       padding: 1.25rem;
       text-align: center;
-      min-height: 180px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
       background: var(--card-bg, #fff);
-      transition: all 0.3s ease;
+      transition: border-color 0.2s, transform 0.2s;
     }
     .slot-card.filled {
       border-style: solid;
-      border-color: var(--border, #e0e0e0);
+      border-color: var(--border-color, #e5e7eb);
+      cursor: default;
+    }
+    .slot-card.empty { cursor: pointer; }
+    .slot-card.empty:hover {
+      border-color: #E31E24;
+      transform: translateY(-2px);
     }
     .slot-card .add-icon {
-      width: 48px; height: 48px;
+      width: 52px; height: 52px;
       border-radius: 50%;
-      background: var(--bg-alt, #f5f5f5);
+      background: var(--bg-secondary, #f3f4f6);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      color: #999;
-      margin-bottom: 0.5rem;
-      cursor: pointer;
+      font-size: 1.7rem;
+      color: #888;
+      margin-bottom: 0.6rem;
       transition: all 0.2s;
+      pointer-events: none;
     }
-    .slot-card .add-icon:hover {
+    .slot-card.empty:hover .add-icon {
       background: #E31E24;
       color: #fff;
-      transform: scale(1.1);
     }
     .slot-card .add-label {
-      color: var(--text-muted, #999);
-      font-size: 0.9rem;
+      color: var(--text-muted, #6b7280);
+      font-size: 0.92rem;
+      font-weight: 500;
+      pointer-events: none;
+    }
+    .slot-card .add-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted, #9ca3af);
+      margin-top: 0.25rem;
+      pointer-events: none;
     }
 
     /* Filled slot */
     .slot-card .slot-img {
-      width: 80px; height: 80px;
+      width: 88px; height: 88px;
       object-fit: contain;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      background: #fff;
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .slot-card .slot-img-fallback {
+      width: 88px; height: 88px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #E31E24, #c91920);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.6rem;
+      margin-bottom: 0.6rem;
     }
     .slot-card .slot-model {
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--text-primary, #222);
+      font-size: 1.05rem;
+      color: var(--text-primary, #111);
+      line-height: 1.2;
     }
     .slot-card .slot-cat {
       font-size: 0.75rem;
-      color: var(--text-muted, #999);
-      margin-top: 0.15rem;
+      color: var(--text-muted, #6b7280);
+      margin-top: 0.25rem;
+    }
+    .slot-card .slot-replace {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--uni-red, #E31E24);
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-decoration: underline;
+      padding: 0;
     }
     .slot-card .slot-remove {
       position: absolute;
@@ -140,65 +168,209 @@
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 24px; height: 24px;
-      font-size: 0.85rem;
+      width: 26px; height: 26px;
+      font-size: 0.95rem;
+      line-height: 1;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: transform 0.2s;
     }
     .slot-card .slot-remove:hover { transform: scale(1.15); }
 
-    /* Dropdown */
-    .slot-dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0; right: 0;
-      background: var(--card-bg, #fff);
-      border: 1px solid var(--border, #ddd);
-      border-radius: 10px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-      z-index: 100;
-      max-height: 320px;
-      overflow-y: auto;
+    /* Picker Modal */
+    .picker-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 9000;
       display: none;
-      margin-top: 4px;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 4vh 1rem 1rem;
+      overflow-y: auto;
     }
-    .slot-dropdown.open { display: block; animation: fadeSlide 0.2s ease; }
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .slot-dropdown .dd-search {
+    .picker-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .picker-modal {
+      background: var(--card-bg, #fff);
+      border-radius: 14px;
       width: 100%;
-      padding: 0.6rem 0.75rem;
-      border: none;
-      border-bottom: 1px solid var(--border, #eee);
-      font-size: 0.85rem;
-      outline: none;
-      background: transparent;
-      color: var(--text-primary, #222);
+      max-width: 640px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      overflow: hidden;
+      animation: slideUp 0.25s ease;
     }
-    .slot-dropdown .dd-item {
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0.6; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    [data-theme="dark"] .picker-modal { background: #1a1a2e; }
+    .picker-header {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
-      padding: 0.55rem 0.75rem;
-      cursor: pointer;
-      transition: background 0.15s;
-      font-size: 0.85rem;
-      color: var(--text-primary, #222);
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color, #e5e7eb);
     }
-    .slot-dropdown .dd-item:hover { background: var(--bg-alt, #f7f7f7); }
-    .slot-dropdown .dd-item img {
-      width: 36px; height: 36px;
+    [data-theme="dark"] .picker-header { border-color: #2a2a3e; }
+    .picker-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary, #111);
+    }
+    .picker-close {
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--text-secondary, #555);
+      cursor: pointer;
+      padding: 0 0.25rem;
+    }
+    .picker-close:hover { color: #E31E24; }
+    .picker-search {
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border-color, #f3f4f6);
+    }
+    [data-theme="dark"] .picker-search { border-color: #2a2a3e; }
+    .picker-search input {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color, #e5e7eb);
+      background: var(--bg-secondary, #f9fafb);
+      color: var(--text-primary, #111);
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .picker-search input:focus {
+      border-color: #E31E24;
+      background: var(--card-bg, #fff);
+    }
+    [data-theme="dark"] .picker-search input {
+      background: #0f0f1a;
+      border-color: #2a2a3e;
+      color: #e5e7eb;
+    }
+    .picker-cats {
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      border-bottom: 1px solid var(--border-color, #f3f4f6);
+      max-height: 92px;
+      overflow-y: auto;
+    }
+    [data-theme="dark"] .picker-cats { border-color: #2a2a3e; }
+    .picker-cat-pill {
+      background: var(--bg-secondary, #f3f4f6);
+      border: 1px solid transparent;
+      color: var(--text-secondary, #555);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .picker-cat-pill:hover { border-color: #E31E24; color: #E31E24; }
+    .picker-cat-pill.active {
+      background: #E31E24;
+      color: #fff;
+      border-color: #E31E24;
+    }
+    [data-theme="dark"] .picker-cat-pill {
+      background: #2a2a3e;
+      color: #cbd5e1;
+    }
+    .picker-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem 0;
+    }
+    .picker-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.6rem 1.25rem;
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    .picker-item:hover { background: var(--bg-secondary, #f9fafb); }
+    [data-theme="dark"] .picker-item:hover { background: rgba(227,30,36,0.1); }
+    .picker-item.disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .picker-item img {
+      width: 44px; height: 44px;
       object-fit: contain;
       flex-shrink: 0;
+      background: #fff;
+      border-radius: 6px;
+      padding: 3px;
     }
-    .slot-dropdown .dd-item-info { text-align: left; }
-    .slot-dropdown .dd-item-model { font-weight: 600; }
-    .slot-dropdown .dd-item-cat { font-size: 0.7rem; color: var(--text-muted, #999); }
+    .picker-item .pi-fallback {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #E31E24, #c91920);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .picker-item .pi-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .picker-item .pi-model {
+      font-weight: 600;
+      color: var(--text-primary, #111);
+      font-size: 0.95rem;
+    }
+    .picker-item .pi-cat {
+      font-size: 0.75rem;
+      color: var(--text-muted, #6b7280);
+      margin-top: 0.1rem;
+    }
+    .picker-item .pi-tag {
+      font-size: 0.7rem;
+      color: var(--text-muted, #9ca3af);
+      font-style: italic;
+      margin-left: 0.5rem;
+    }
+    .picker-empty {
+      padding: 2rem 1.25rem;
+      text-align: center;
+      color: var(--text-muted, #9ca3af);
+      font-size: 0.9rem;
+    }
+    .picker-loading {
+      padding: 2rem 1.25rem;
+      text-align: center;
+      color: var(--text-muted, #9ca3af);
+    }
+    .picker-count {
+      padding: 0.45rem 1.25rem;
+      font-size: 0.72rem;
+      color: var(--text-muted, #9ca3af);
+      border-top: 1px solid var(--border-color, #f3f4f6);
+      text-align: center;
+      background: var(--bg-secondary, #f9fafb);
+    }
+    [data-theme="dark"] .picker-count {
+      border-color: #2a2a3e;
+      background: #0f0f1a;
+    }
 
-    /* Comparison Table */
+    /* Comparison Section */
     .comparison-section {
       padding: 2rem 0 3rem;
     }
@@ -206,69 +378,187 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       border-radius: 12px;
-      border: 1px solid var(--border, #e0e0e0);
+      border: 1px solid var(--border-color, #e5e7eb);
+      background: var(--card-bg, #fff);
+    }
+    [data-theme="dark"] .comparison-wrapper {
+      border-color: #2a2a3e;
+      background: #1a1a2e;
     }
     .compare-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 600px;
+      min-width: 640px;
     }
     .compare-table th,
     .compare-table td {
-      padding: 0.85rem 1rem;
+      padding: 0.95rem 1rem;
       text-align: center;
       vertical-align: top;
-      border-bottom: 1px solid var(--border, #eee);
+      border-bottom: 1px solid var(--border-color, #f3f4f6);
       font-size: 0.9rem;
+      color: var(--text-primary, #111);
     }
-    .compare-table th {
-      background: var(--bg-alt, #f7f7f7);
+    [data-theme="dark"] .compare-table th,
+    [data-theme="dark"] .compare-table td {
+      border-color: #2a2a3e;
+      color: #e5e7eb;
+    }
+    .compare-table thead th {
+      background: var(--bg-secondary, #f9fafb);
       font-weight: 700;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      vertical-align: bottom;
+      padding: 1.25rem 1rem;
     }
+    [data-theme="dark"] .compare-table thead th { background: #0f0f1a; }
     .compare-table th:first-child,
     .compare-table td:first-child {
       text-align: left;
       font-weight: 600;
-      background: var(--bg-alt, #f7f7f7);
-      position: sticky;
-      left: 0;
-      z-index: 5;
-      min-width: 140px;
+      background: var(--bg-secondary, #f9fafb);
+      min-width: 160px;
+      color: var(--text-secondary, #4b5563);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-    .compare-table th:first-child {
-      z-index: 15;
-    }
-    .compare-table tbody tr:nth-child(even) td:not(:first-child) {
-      background: var(--row-alt, rgba(0,0,0,0.02));
+    [data-theme="dark"] .compare-table th:first-child,
+    [data-theme="dark"] .compare-table td:first-child {
+      background: #0f0f1a;
+      color: #9ca3af;
     }
     .compare-table .product-img {
-      width: 90px; height: 90px;
+      width: 110px; height: 110px;
       object-fit: contain;
       display: block;
-      margin: 0 auto 0.5rem;
+      margin: 0 auto 0.6rem;
+      background: #fff;
+      border-radius: 8px;
+      padding: 6px;
+    }
+    .compare-table .product-img-fallback {
+      width: 110px; height: 110px;
+      margin: 0 auto 0.6rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #E31E24, #c91920);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.6rem;
     }
     .compare-table .model-name {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 800;
-      color: var(--text-primary, #222);
+      color: var(--text-primary, #111);
+      letter-spacing: -0.01em;
+    }
+    [data-theme="dark"] .compare-table .model-name { color: #fff; }
+    .compare-table .model-cat {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-muted, #6b7280);
+      margin-top: 0.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .compare-table .desc-cell {
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: var(--text-secondary, #4b5563);
+      text-align: left;
+    }
+    [data-theme="dark"] .compare-table .desc-cell { color: #cbd5e1; }
+    .compare-table .spec-yes {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #059669;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    [data-theme="dark"] .compare-table .spec-yes { color: #34d399; }
+    .compare-table .spec-no {
+      color: var(--text-muted, #9ca3af);
+      font-size: 1.1rem;
+    }
+    .compare-table .spec-chip {
+      display: inline-block;
+      background: var(--bg-secondary, #f3f4f6);
+      color: var(--text-primary, #111);
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    [data-theme="dark"] .compare-table .spec-chip {
+      background: #2a2a3e;
+      color: #e5e7eb;
     }
     .compare-table .cell-diff {
       background: rgba(227, 30, 36, 0.07) !important;
+      position: relative;
+    }
+    [data-theme="dark"] .compare-table .cell-diff {
+      background: rgba(227, 30, 36, 0.18) !important;
+    }
+    .compare-table .diff-row td:not(:first-child) {
+      position: relative;
+    }
+    .compare-table .diff-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #E31E24;
+      background: rgba(227,30,36,0.12);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      margin-left: 0.3rem;
+      vertical-align: middle;
     }
 
-    /* Stars */
-    .stars { color: #f5a623; font-size: 1rem; letter-spacing: 1px; }
-    .stars .empty { color: #ccc; }
+    /* Buy buttons row */
+    .compare-table .buy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1rem;
+      background: #E31E24;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .compare-table .buy-btn:hover { background: #c91920; }
+    .compare-table .official-link {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
+      color: var(--text-muted, #6b7280);
+    }
+    .compare-table .official-link a {
+      color: var(--text-secondary, #4b5563);
+      text-decoration: underline;
+    }
 
-    /* Pros/Cons */
-    .pros-cons { text-align: left; display: inline-block; font-size: 0.8rem; line-height: 1.5; }
-    .pros-cons .pro::before { content: '+ '; color: #2ecc71; font-weight: 700; }
-    .pros-cons .con::before { content: '- '; color: #E31E24; font-weight: 700; }
+    /* Mobile vertical card layout */
+    @media (max-width: 640px) {
+      .scroll-hint {
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted, #9ca3af);
+        margin-bottom: 0.5rem;
+        font-style: italic;
+      }
+    }
+    .scroll-hint { display: none; }
 
-    /* Buttons row */
+    /* Actions Row */
     .actions-row {
       display: flex;
       gap: 0.75rem;
@@ -282,10 +572,11 @@
       gap: 0.4rem;
       padding: 0.6rem 1.25rem;
       border-radius: 8px;
-      border: 1px solid var(--border, #ddd);
+      border: 1px solid var(--border-color, #d1d5db);
       background: var(--card-bg, #fff);
-      color: var(--text-primary, #333);
-      font-size: 0.9rem;
+      color: var(--text-primary, #111);
+      font-size: 0.88rem;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -295,13 +586,27 @@
       color: #fff;
       border-color: #E31E24;
     }
-    .action-btn.primary:hover { background: #c91920; }
+    .action-btn.primary:hover { background: #c91920; color: #fff; }
+    .action-btn.active {
+      background: #E31E24;
+      color: #fff;
+      border-color: #E31E24;
+    }
+    [data-theme="dark"] .action-btn {
+      background: #1a1a2e;
+      border-color: #2a2a3e;
+      color: #e5e7eb;
+    }
+    [data-theme="dark"] .action-btn:hover {
+      background: rgba(227,30,36,0.15);
+      color: #fff;
+    }
 
     /* Empty state */
     .empty-state {
       text-align: center;
       padding: 4rem 1rem;
-      color: var(--text-muted, #999);
+      color: var(--text-muted, #6b7280);
     }
     .empty-state svg {
       width: 64px; height: 64px;
@@ -311,7 +616,14 @@
     .empty-state h3 {
       font-size: 1.2rem;
       margin-bottom: 0.4rem;
-      color: var(--text-secondary, #555);
+      color: var(--text-secondary, #4b5563);
+      font-weight: 700;
+    }
+    [data-theme="dark"] .empty-state h3 { color: #cbd5e1; }
+    .empty-state p {
+      max-width: 420px;
+      margin: 0.5rem auto 0;
+      line-height: 1.5;
     }
 
     /* CTA bottom */
@@ -319,22 +631,49 @@
       background: linear-gradient(135deg, #1a1a2e, #0f3460);
       color: #fff;
       border-radius: 16px;
-      padding: 2.5rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       margin-top: 3rem;
     }
-    .help-cta h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .help-cta p { color: rgba(255,255,255,0.7); margin-bottom: 1.25rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .help-cta h2 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+    .help-cta p {
+      color: rgba(255,255,255,0.75);
+      margin: 0 auto 1.5rem;
+      max-width: 520px;
+      line-height: 1.55;
+    }
+    .help-cta .cta-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     .help-cta .btn {
-      display: inline-block;
-      padding: 0.7rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.75rem 1.4rem;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s;
+      font-size: 0.95rem;
     }
     .help-cta .btn-primary { background: #E31E24; color: #fff; }
     .help-cta .btn-primary:hover { background: #c91920; }
+    .help-cta .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .help-cta .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.4);
+    }
 
     /* Toast */
     .toast {
@@ -351,131 +690,27 @@
       opacity: 0;
       transition: all 0.3s ease;
       pointer-events: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     }
     .toast.show {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
+    [data-theme="dark"] .toast { background: #2a2a3e; }
 
-    /* Dark mode overrides */
+    /* Dark hero */
     [data-theme="dark"] .compare-hero {
       background: linear-gradient(135deg, #0d0d1a 0%, #111827 50%, #0a1628 100%);
     }
-    [data-theme="dark"] .slot-card {
-      background: #1e1e2e;
-      border-color: #333;
-      color: #e0e0e0;
-    }
-    [data-theme="dark"] .slot-card .slot-model {
-      color: #fff;
-    }
-    [data-theme="dark"] .slot-card .slot-cat {
-      color: #aaa;
-    }
-    [data-theme="dark"] .slot-card .add-icon {
-      background: #2a2a3e;
-      color: #888;
-    }
-    [data-theme="dark"] .slot-card .add-label {
-      color: #aaa;
-    }
-    [data-theme="dark"] .slot-dropdown {
-      background: #1e1e2e;
-      border-color: #333;
-    }
-    [data-theme="dark"] .slot-dropdown .dd-search {
-      background: #2a2a3e;
-      color: #e0e0e0;
-      border-color: #444;
-    }
-    [data-theme="dark"] .slot-dropdown .dd-search::placeholder {
-      color: #888;
-    }
-    [data-theme="dark"] .slot-dropdown .dd-item {
-      color: #e0e0e0;
-    }
-    [data-theme="dark"] .slot-dropdown .dd-item:hover {
-      background: rgba(227,30,36,0.15);
-    }
-    [data-theme="dark"] .slot-dropdown .dd-item-cat,
-    [data-theme="dark"] .slot-dropdown .dd-item-price {
-      color: #aaa;
-    }
-    [data-theme="dark"] .dropdown-item {
-      color: #e0e0e0;
-    }
-    [data-theme="dark"] .dropdown-item:hover {
-      background: rgba(227,30,36,0.15);
-    }
-    [data-theme="dark"] .comparison-wrapper {
-      border-color: #333;
-    }
-    [data-theme="dark"] .compare-table {
-      border-color: #333;
-    }
-    [data-theme="dark"] .compare-table th {
-      background: #1a1a2e;
-      color: #e0e0e0;
-      border-color: #333;
-    }
-    [data-theme="dark"] .compare-table td {
-      color: #e0e0e0;
-      border-color: #333;
-      background: #121220;
-    }
-    [data-theme="dark"] .compare-table th:first-child,
-    [data-theme="dark"] .compare-table td:first-child {
-      background: #1a1a2e;
-    }
-    [data-theme="dark"] .compare-table tr:nth-child(even) td {
-      background: rgba(255,255,255,0.03);
-    }
-    [data-theme="dark"] .compare-table tbody tr:nth-child(even) td:not(:first-child) {
-      background: rgba(255,255,255,0.03);
-    }
-    [data-theme="dark"] .compare-table .cell-diff {
-      background: rgba(227, 30, 36, 0.12) !important;
-    }
-    [data-theme="dark"] .compare-table .spec-label {
-      color: #ccc;
-      background: #1a1a2e;
-    }
-    [data-theme="dark"] .compare-table .model-name {
-      color: #fff;
-    }
-    [data-theme="dark"] .compare-table .price-value {
-      color: #ff6b6b;
-    }
-    [data-theme="dark"] .action-btn {
-      color: #e0e0e0;
-      border-color: #444;
-      background: #1e1e2e;
-    }
-    [data-theme="dark"] .action-btn:hover {
-      background: #2a2a3e;
-      color: #fff;
-    }
-    [data-theme="dark"] .empty-state {
-      color: #aaa;
-    }
-    [data-theme="dark"] .empty-state h3 {
-      color: #ccc;
-    }
-    [data-theme="dark"] .pro-item {
-      color: #4ade80;
-    }
-    [data-theme="dark"] .con-item {
-      color: #f87171;
-    }
-    [data-theme="dark"] .stars .empty { color: #444; }
-    [data-theme="dark"] .toast { background: #333; }
 
     /* Animations */
     .slot-card { animation: slotIn 0.3s ease; }
     @keyframes slotIn {
-      from { opacity: 0; transform: scale(0.95); }
+      from { opacity: 0; transform: scale(0.96); }
       to { opacity: 1; transform: scale(1); }
     }
+
+    body.modal-open { overflow: hidden; }
   </style>
 </head>
 <body>
@@ -628,21 +863,8 @@
   <section class="compare-hero">
     <div class="container">
       <h1>Compare <span class="accent">UNI-T</span> Instruments</h1>
-      <p>Select 2-3 products to compare side-by-side and find the perfect tool for your needs.</p>
-      <div class="category-filter" id="categoryFilter">
-        <button class="cat-btn active" data-cat="all">All</button>
-        <button class="cat-btn" data-cat="Multimeters">Multimeters</button>
-        <button class="cat-btn" data-cat="Clamp Meters">Clamp Meters</button>
-        <button class="cat-btn" data-cat="Thermal Cameras">Thermal</button>
-        <button class="cat-btn" data-cat="Oscilloscopes">Oscilloscopes</button>
-        <button class="cat-btn" data-cat="Insulation Testers">Insulation</button>
-        <button class="cat-btn" data-cat="Earth Ground Testers">Ground Testers</button>
-        <button class="cat-btn" data-cat="Voltage Detectors">Detectors</button>
-        <button class="cat-btn" data-cat="Environmental">Environmental</button>
-        <button class="cat-btn" data-cat="Network Testers">Network</button>
-        <button class="cat-btn" data-cat="Battery Testers">Battery</button>
-        <button class="cat-btn" data-cat="Power Analyzers">Power</button>
-      </div>
+      <p>Select up to three products to see specs, descriptions, and key features side-by-side.</p>
+      <span class="stat-pill" id="catalogStat">Loading catalog...</span>
     </div>
   </section>
 
@@ -661,15 +883,15 @@
       <div id="comparisonOutput"></div>
 
       <div class="actions-row" id="actionsRow" style="display:none;">
-        <button class="action-btn" onclick="highlightDiffs()">
+        <button class="action-btn" id="diffBtn" type="button">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
           Highlight Differences
         </button>
-        <button class="action-btn" onclick="clearAll()">
+        <button class="action-btn" id="clearBtn" type="button">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           Clear All
         </button>
-        <button class="action-btn primary" onclick="shareComparison()">
+        <button class="action-btn primary" id="shareBtn" type="button">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
           Share Comparison
         </button>
@@ -678,11 +900,35 @@
       <!-- Help CTA -->
       <div class="help-cta">
         <h2>Need Help Choosing?</h2>
-        <p>Not sure which instrument is right for you? Browse our expert guides or contact our team for personalized recommendations.</p>
-        <a href="/categories/equipment-guides/" class="btn btn-primary">Browse Equipment Guides</a>
+        <p>Not sure which instrument is right for you? Take the Instrument Finder quiz to get a personalized recommendation, or browse our equipment guides.</p>
+        <div class="cta-buttons">
+          <a href="/tools/instrument-finder.html" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            Try the Instrument Finder
+          </a>
+          <a href="/categories/equipment-guides/" class="btn btn-secondary">Browse Equipment Guides</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Picker Modal -->
+  <div class="picker-overlay" id="pickerOverlay" role="dialog" aria-modal="true" aria-labelledby="pickerTitle">
+    <div class="picker-modal">
+      <div class="picker-header">
+        <h3 id="pickerTitle">Add a product to compare</h3>
+        <button class="picker-close" id="pickerClose" aria-label="Close picker">&times;</button>
+      </div>
+      <div class="picker-search">
+        <input type="text" id="pickerSearch" placeholder="Search by model, category, or spec..." autocomplete="off">
+      </div>
+      <div class="picker-cats" id="pickerCats"></div>
+      <div class="picker-list" id="pickerList">
+        <div class="picker-loading">Loading products...</div>
+      </div>
+      <div class="picker-count" id="pickerCount"></div>
+    </div>
+  </div>
 
   <!-- Toast -->
   <div class="toast" id="toast"></div>
@@ -744,204 +990,293 @@
   <script src="/js/main.js"></script>
   <script>
   (function() {
-    // ── Product Database ──
-    const products = [
-      // === MULTIMETERS ===
-      {id:'ut61e-plus',model:'UT61E+',category:'Multimeters',image:'/images/products/ut61e.png',price:'\u20B15,500\u2013\u20B16,500',type:'Bench/Field DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.1%+5)',count:'22,000',trueRMS:'Yes',safety:'CAT III 1000V / CAT IV 600V',display:'Backlit LCD',connectivity:'USB data logging',power:'AA batteries',bestFor:'Professional lab & field work needing top accuracy and data logging',pros:['Highest accuracy','USB logging','22K count','Wide safety rating'],cons:['Premium price','Bulkier size'],rating:5},
-      {id:'ut61d-plus',model:'UT61D+',category:'Multimeters',image:'/images/products/ut61d.png',price:'\u20B13,800\u2013\u20B14,500',type:'Handheld DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.5%+2)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Mid-range professional work with True RMS accuracy',pros:['True RMS','Good accuracy','Affordable pro-grade'],cons:['No data logging','6K count only'],rating:4},
-      {id:'ut890c-plus',model:'UT890C+',category:'Multimeters',image:'/images/products/ut890c.png',price:'\u20B12,800\u2013\u20B13,500',type:'Handheld DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.5%+3)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'9V battery',bestFor:'Reliable daily-use multimeter for working professionals',pros:['True RMS','Temperature measurement','Durable build'],cons:['No data logging','Basic connectivity'],rating:4},
-      {id:'ut890d',model:'UT890D',category:'Multimeters',image:'/images/products/ut890d.png',price:'\u20B13,200\u2013\u20B13,800',type:'Handheld DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.3%+2)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Dual backlit LCD',connectivity:'None',power:'9V battery',bestFor:'Upgraded daily driver with dual display and better accuracy',pros:['Dual display','Better accuracy','True RMS'],cons:['No USB','Similar price to UT61D+'],rating:4},
-      {id:'ut139c',model:'UT139C',category:'Multimeters',image:'/images/products/ut139c.png',price:'\u20B11,500\u2013\u20B12,200',type:'Handheld DMM',range:'AC/DC 600V, 10A',accuracy:'\u00B1(0.5%+3)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Budget-friendly True RMS for students and beginners',pros:['Affordable','True RMS','Compact'],cons:['600V max','No advanced features'],rating:4},
-      {id:'ut61b-plus',model:'UT61B+',category:'Multimeters',image:'/images/products/ut61b.png',price:'\u20B12,500\u2013\u20B13,000',type:'Handheld DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.5%+2)',count:'6,000',trueRMS:'No',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Entry-level professional multimeter with good range',pros:['1000V range','Good accuracy','Affordable'],cons:['No True RMS','Basic features'],rating:3},
-      {id:'ut89xd',model:'UT89XD',category:'Multimeters',image:'/images/products/ut89xd.png',price:'\u20B12,200\u2013\u20B12,800',type:'Handheld DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.5%+3)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD with LED',connectivity:'None',power:'AA batteries',bestFor:'Rugged field multimeter with LED flashlight',pros:['LED flashlight','True RMS','Rugged design'],cons:['No data logging','Basic connectivity'],rating:4},
-      {id:'ut123d',model:'UT123D',category:'Multimeters',image:'/images/products/ut123d.png',price:'\u20B11,800\u2013\u20B12,500',type:'Pocket DMM',range:'AC/DC 600V, 4A',accuracy:'\u00B1(0.7%+3)',count:'4,000',trueRMS:'No',safety:'CAT III 300V',display:'Small backlit LCD',connectivity:'None',power:'CR2032 batteries',bestFor:'Ultra-compact pocket multimeter for quick checks',pros:['Pocket-sized','Lightweight','NCV detection'],cons:['Limited range','Lower accuracy','No True RMS'],rating:3},
-      {id:'ut181a',model:'UT181A',category:'Multimeters',image:'/images/products/ut181a.png',price:'\u20B112,000\u2013\u20B115,000',type:'Data Logging DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.025%+5)',count:'60,000',trueRMS:'Yes',safety:'CAT III 1000V / CAT IV 600V',display:'Color TFT LCD',connectivity:'USB + Bluetooth',power:'Rechargeable Li-ion',bestFor:'Premium data-logging multimeter for advanced professionals',pros:['60K count','Color screen','Bluetooth+USB','Best accuracy'],cons:['Expensive','Heavier','Overkill for basic tasks'],rating:5},
-      {id:'ut202a',model:'UT202A',category:'Multimeters',image:'/images/products/ut202a.png',price:'\u20B11,800\u2013\u20B12,500',type:'Handheld DMM',range:'AC/DC 600V, 10A',accuracy:'\u00B1(0.8%+3)',count:'4,000',trueRMS:'No',safety:'CAT II 600V',display:'LCD',connectivity:'None',power:'9V battery',bestFor:'Basic affordable multimeter for home and light commercial use',pros:['Very affordable','Easy to use','Data hold'],cons:['No True RMS','4K count','CAT II only'],rating:3},
-
-      // === CLAMP METERS ===
-      {id:'ut204-plus',model:'UT204+',category:'Clamp Meters',image:'/images/products/clamp-meter-ut204.png',price:'\u20B13,500\u2013\u20B14,500',type:'Full-size Clamp',range:'AC/DC 600A, 600V',accuracy:'\u00B1(2%+5)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Electricians measuring AC/DC current in commercial installations',pros:['AC/DC current','True RMS','Good jaw size'],cons:['No inrush','Bulkier than mini'],rating:4},
-      {id:'ut210e',model:'UT210E',category:'Clamp Meters',image:'/images/products/ut210e.png',price:'\u20B12,000\u2013\u20B12,800',type:'Mini Clamp',range:'AC/DC 100A, 600V',accuracy:'\u00B1(2%+5)',count:'2,000',trueRMS:'Yes',safety:'CAT III 300V',display:'LCD',connectivity:'None',power:'AAA batteries',bestFor:'Compact clamp meter for tight spaces and light-duty current measurement',pros:['Ultra-compact','AC/DC','Affordable','VFC mode'],cons:['100A max','Lower safety rating','2K count'],rating:4},
-      {id:'ut216c',model:'UT216C',category:'Clamp Meters',image:'/images/products/ut216c.png',price:'\u20B14,000\u2013\u20B15,000',type:'Advanced Clamp',range:'AC/DC 600A, 600V',accuracy:'\u00B1(1.5%+3)',count:'6,000',trueRMS:'Yes',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AAA batteries',bestFor:'Advanced electricians needing inrush current and temperature',pros:['Inrush current','Temperature probe','Better accuracy'],cons:['Pricier','No Bluetooth'],rating:5},
-      {id:'ut206a',model:'UT206A',category:'Clamp Meters',image:'/images/products/ut206a.png',price:'\u20B12,800\u2013\u20B13,500',type:'Full-size Clamp',range:'AC 1000A, 600V',accuracy:'\u00B1(2%+5)',count:'4,000',trueRMS:'No',safety:'CAT III 600V',display:'LCD',connectivity:'None',power:'9V battery',bestFor:'High-current AC measurement up to 1000A for industrial use',pros:['1000A AC range','Affordable','Reliable'],cons:['AC only','No True RMS','4K count'],rating:3},
-      {id:'ut08a',model:'UT08A',category:'Clamp Meters',image:'/images/products/ut08a.png',price:'\u20B11,500\u2013\u20B12,000',type:'Mini Clamp',range:'AC 600A, 600V',accuracy:'\u00B1(2.5%+5)',count:'4,000',trueRMS:'No',safety:'CAT III 300V',display:'LCD',connectivity:'None',power:'AAA batteries',bestFor:'Budget-friendly basic AC clamp meter for residential work',pros:['Very affordable','Compact','Easy to use'],cons:['AC only','No True RMS','Basic features'],rating:3},
-
-      // === THERMAL CAMERAS ===
-      {id:'uti260b',model:'UTi260B',category:'Thermal Cameras',image:'/images/products/thermal-imager-uti260b.png',price:'\u20B125,000\u2013\u20B130,000',type:'Professional Thermal',range:'-20\u00B0C to 550\u00B0C',accuracy:'\u00B12\u00B0C',count:'256\u00D7192 px',trueRMS:'N/A',safety:'N/A',display:'2.8" TFT',connectivity:'Wi-Fi, USB',power:'Rechargeable Li-ion',bestFor:'Professional HVAC, electrical, and building inspection',pros:['High resolution','Wide range','Wi-Fi transfer','Image fusion'],cons:['Premium price','Learning curve'],rating:5},
-      {id:'uti120s',model:'UTi120S',category:'Thermal Cameras',image:'/images/products/uti712s.png',price:'\u20B18,000\u2013\u20B112,000',type:'Pocket Thermal',range:'-20\u00B0C to 400\u00B0C',accuracy:'\u00B12\u00B0C',count:'120\u00D790 px',trueRMS:'N/A',safety:'N/A',display:'2.0" TFT',connectivity:'USB',power:'Built-in rechargeable',bestFor:'Entry-level thermal scanning for quick troubleshooting',pros:['Pocket-sized','Affordable','Easy to use','Good battery'],cons:['Lower resolution','Shorter range','No Wi-Fi'],rating:4},
-      {id:'uti712s',model:'UTi712S',category:'Thermal Cameras',image:'/images/products/uti712s.png',price:'\u20B145,000\u2013\u20B155,000',type:'Advanced Thermal',range:'-20\u00B0C to 650\u00B0C',accuracy:'\u00B12\u00B0C',count:'256\u00D7192 px',trueRMS:'N/A',safety:'N/A',display:'3.5" TFT touchscreen',connectivity:'Wi-Fi, Bluetooth, USB',power:'Rechargeable Li-ion',bestFor:'Advanced professional inspections with detailed analysis',pros:['Touchscreen','Bluetooth+Wi-Fi','Wide range','Report generation'],cons:['Expensive','Heavier'],rating:5},
-
-      // === OSCILLOSCOPES ===
-      {id:'utd2102cex',model:'UTD2102CEX+',category:'Oscilloscopes',image:'/images/products/oscilloscope-utd2000.png',price:'\u20B118,000\u2013\u20B125,000',type:'Digital Oscilloscope',range:'100MHz, 1GS/s',accuracy:'\u00B13%',count:'100MHz BW',trueRMS:'N/A',safety:'N/A',display:'7" TFT Color',connectivity:'USB',power:'AC adapter',bestFor:'Electronics labs, R&D, education, and signal analysis',pros:['100MHz bandwidth','1GS/s sample rate','Large screen','USB storage'],cons:['Bench-only','Heavy','Expensive'],rating:5},
-
-      // === INSULATION TESTERS ===
-      {id:'ut501a',model:'UT501A',category:'Insulation Testers',image:'/images/products/ut501a.png',price:'\u20B14,500\u2013\u20B15,500',type:'Insulation Tester',range:'0.1M\u03A9\u20132G\u03A9',accuracy:'\u00B1(3%+5)',count:'1000V test',trueRMS:'N/A',safety:'CAT III 600V',display:'Backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Insulation resistance testing for cables, motors, and transformers',pros:['PI/DAR ratios','Auto-discharge','Compact','1000V test'],cons:['No Bluetooth','Basic display'],rating:4},
-      {id:'ut502a',model:'UT502A',category:'Insulation Testers',image:'/images/products/ut502a.png',price:'\u20B16,500\u2013\u20B18,000',type:'Insulation Tester',range:'0.1M\u03A9\u201320G\u03A9',accuracy:'\u00B1(3%+5)',count:'2500V test',trueRMS:'N/A',safety:'CAT III 1000V',display:'Backlit LCD',connectivity:'USB',power:'AA batteries',bestFor:'Advanced insulation testing for industrial motors and HV cables',pros:['2500V test','20G\u03A9 range','USB data','Higher safety rating'],cons:['Pricier','Larger'],rating:5},
-
-      // === EARTH GROUND TESTERS ===
-      {id:'ut521',model:'UT521',category:'Earth Ground Testers',image:'/images/products/ut521.png',price:'\u20B18,000\u2013\u20B110,000',type:'Earth Ground Tester',range:'0\u20132000\u03A9',accuracy:'\u00B1(2%+3)',count:'2000\u03A9',trueRMS:'N/A',safety:'CAT III 300V',display:'Backlit LCD',connectivity:'USB',power:'AA batteries',bestFor:'Grounding system verification and earth resistance measurement',pros:['Accurate ground testing','USB logging','Auto-ranging'],cons:['Requires ground stakes','Specialized use'],rating:4},
-      {id:'ut71e',model:'UT71E',category:'Earth Ground Testers',image:'/images/products/ut71e.png',price:'\u20B16,500\u2013\u20B18,500',type:'Earth/Loop Tester',range:'0\u20132000\u03A9',accuracy:'\u00B1(1%+3)',count:'40,000',trueRMS:'Yes',safety:'CAT IV 600V',display:'Backlit LCD',connectivity:'USB, Bluetooth',power:'AA batteries',bestFor:'Advanced earth and loop impedance testing for industrial sites',pros:['40K count','Bluetooth','CAT IV','Multi-function'],cons:['Complex for beginners','Expensive'],rating:5},
-
-      // === VOLTAGE DETECTORS ===
-      {id:'ut12s',model:'UT12S',category:'Voltage Detectors',image:'/images/products/voltage-detector-ut12s.png',price:'\u20B1800\u2013\u20B11,200',type:'Non-contact Detector',range:'90V\u20131000V AC',accuracy:'N/A',count:'N/A',trueRMS:'N/A',safety:'CAT IV 1000V',display:'LED + buzzer',connectivity:'None',power:'AAA batteries',bestFor:'Quick live wire verification before working on circuits',pros:['Pen-style','CAT IV','LED + vibration + buzzer','Very affordable'],cons:['AC only','No measurement reading','Detection only'],rating:4},
-
-      // === ENVIRONMENTAL METERS ===
-      {id:'ut333s',model:'UT333S',category:'Environmental',image:'/images/products/environmental-ut333s.png',price:'\u20B12,500\u2013\u20B13,500',type:'Thermo-Hygrometer',range:'-20\u00B0C to 60\u00B0C, 0\u2013100% RH',accuracy:'\u00B11\u00B0C, \u00B13%RH',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'Backlit LCD',connectivity:'Bluetooth',power:'AAA batteries',bestFor:'HVAC technicians and data center monitoring',pros:['Bluetooth app','Compact','Dew point calculation'],cons:['Limited range','No data logging built-in'],rating:4},
-      {id:'ut330th',model:'UT330TH',category:'Environmental',image:'/images/products/ut330th.png',price:'\u20B13,000\u2013\u20B14,000',type:'Data Logger',range:'-40\u00B0C to 80\u00B0C, 0\u2013100% RH',accuracy:'\u00B10.5\u00B0C, \u00B13%RH',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'No display (USB download)',connectivity:'USB',power:'CR2032 battery',bestFor:'Unattended temperature and humidity logging for cold chain and storage',pros:['60,000 records','USB download','Compact','Long battery'],cons:['No real-time display','PC software required'],rating:4},
-      {id:'ut301c',model:'UT301C',category:'Environmental',image:'/images/products/ut301c.png',price:'\u20B12,000\u2013\u20B12,800',type:'IR Thermometer',range:'-32\u00B0C to 600\u00B0C',accuracy:'\u00B11.5%',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'Backlit LCD',connectivity:'None',power:'9V battery',bestFor:'Non-contact surface temperature measurement for HVAC and cooking',pros:['Wide range','Laser pointer','Adjustable emissivity'],cons:['Surface only','No ambient reading'],rating:4},
-
-      // === NETWORK TESTERS ===
-      {id:'ut681c',model:'UT681C',category:'Network Testers',image:'/images/products/network-tester-ut681.png',price:'\u20B11,800\u2013\u20B12,500',type:'Cable Tester',range:'RJ45/RJ11/BNC/USB',accuracy:'N/A',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'LED indicators',connectivity:'None',power:'9V battery',bestFor:'Testing and tracing network, phone, and coax cables',pros:['Multi-cable types','Tone generator','Remote unit included'],cons:['Basic testing only','No TDR','No certification'],rating:3},
-
-      // === BATTERY TESTERS ===
-      {id:'ut673a',model:'UT673A',category:'Battery Testers',image:'/images/products/battery-tester-ut673a.png',price:'\u20B13,500\u2013\u20B14,500',type:'Battery Analyzer',range:'1.5V\u201324V DC batteries',accuracy:'\u00B1(1%+3)',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'Color LCD',connectivity:'None',power:'Built-in rechargeable',bestFor:'Automotive and UPS battery health testing',pros:['CCA/internal resistance','Color display','Print-ready reports'],cons:['Specialized use','No Bluetooth'],rating:4},
-      {id:'ut665',model:'UT665',category:'Battery Testers',image:'/images/products/ut665.png',price:'\u20B12,500\u2013\u20B13,200',type:'Battery Tester',range:'12V lead-acid batteries',accuracy:'\u00B1(2%+3)',count:'N/A',trueRMS:'N/A',safety:'N/A',display:'LCD',connectivity:'None',power:'Powered by test battery',bestFor:'Quick 12V automotive and motorcycle battery health checks',pros:['No batteries needed','Quick test','Affordable'],cons:['12V only','Basic display','No CCA'],rating:3},
-
-      // === POWER QUALITY ===
-      {id:'ut195ds',model:'UT195DS',category:'Power Analyzers',image:'/images/products/ut195ds.png',price:'\u20B18,000\u2013\u20B110,000',type:'Industrial DMM',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.3%+2)',count:'6,000',trueRMS:'Yes',safety:'CAT IV 600V / CAT III 1000V',display:'Dual backlit LCD',connectivity:'None',power:'AA batteries',bestFor:'Industrial maintenance with motor drive and power measurements',pros:['CAT IV rated','LoZ mode','VFD filter','IP65 rated'],cons:['Expensive','Heavy','Specialized'],rating:5},
-      {id:'ut8803e',model:'UT8803E',category:'Power Analyzers',image:'/images/products/ut8803e.png',price:'\u20B115,000\u2013\u20B120,000',type:'Bench Multimeter',range:'AC/DC 1000V, 10A',accuracy:'\u00B1(0.015%+3)',count:'55,000',trueRMS:'Yes',safety:'CAT II 600V',display:'4.3" TFT Color',connectivity:'USB, RS-232, LAN',power:'AC adapter',bestFor:'Lab-grade bench multimeter for R&D and calibration',pros:['55K count','Color TFT','Multiple interfaces','Top accuracy'],cons:['Bench-only','Very expensive','Not portable'],rating:5}
-    ];
+    'use strict';
 
     // ── State ──
-    let selected = [null, null, null]; // up to 3 product IDs
-    let activeCategory = 'all';
+    let allProducts = [];          // flat list across categories
+    let categories = [];           // [{name, count}]
+    let selected = [null, null, null]; // model strings
+    let activeCatFilter = 'all';
+    let pickerSlot = -1;           // which slot we're filling
     let diffsHighlighted = false;
+    let searchDebounce = null;
 
     // ── DOM refs ──
-    const slotsRow = document.getElementById('slotsRow');
+    const slotsRow         = document.getElementById('slotsRow');
     const comparisonOutput = document.getElementById('comparisonOutput');
-    const actionsRow = document.getElementById('actionsRow');
-    const categoryFilter = document.getElementById('categoryFilter');
-    const toastEl = document.getElementById('toast');
+    const actionsRow       = document.getElementById('actionsRow');
+    const toastEl          = document.getElementById('toast');
+    const catalogStat      = document.getElementById('catalogStat');
+    const pickerOverlay    = document.getElementById('pickerOverlay');
+    const pickerClose      = document.getElementById('pickerClose');
+    const pickerSearch     = document.getElementById('pickerSearch');
+    const pickerCats       = document.getElementById('pickerCats');
+    const pickerList       = document.getElementById('pickerList');
+    const pickerCount      = document.getElementById('pickerCount');
+    const diffBtn          = document.getElementById('diffBtn');
+    const clearBtn         = document.getElementById('clearBtn');
+    const shareBtn         = document.getElementById('shareBtn');
 
-    // ── Init from URL params ──
+    // ── Slug helpers (URL share format) ──
+    function slugify(model) {
+      return String(model).toLowerCase()
+        .replace(/\+/g, '-plus')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9\-]/g, '')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+    }
+    function findBySlug(slug) {
+      return allProducts.find(p => slugify(p.model) === slug);
+    }
+    function findByModel(model) {
+      return allProducts.find(p => p.model === model);
+    }
+
+    // ── Image fallback markup ──
+    function imgOrFallback(p, cls, fallbackCls) {
+      const initial = (p.model || '?').charAt(0).toUpperCase();
+      if (p.image) {
+        return `<img class="${cls}" src="${p.image}" alt="${escapeHtml(p.model)}" loading="lazy" onerror="this.outerHTML='<div class=\\'${fallbackCls}\\'>${escapeAttr(initial)}</div>'">`;
+      }
+      return `<div class="${fallbackCls}">${escapeAttr(initial)}</div>`;
+    }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    function escapeAttr(s) {
+      return String(s).replace(/['"\\]/g, '');
+    }
+
+    // ── Fetch catalog ──
+    async function loadCatalog() {
+      try {
+        const cacheBust = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+        const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        allProducts = [];
+        categories = [];
+        (data.categories || []).forEach(cat => {
+          (cat.products || []).forEach(p => {
+            allProducts.push({
+              model: p.model,
+              category: cat.name || p.category || 'Uncategorized',
+              categoryIcon: cat.icon || '',
+              subcategory: p.subcategory || '',
+              description: p.description || '',
+              image: p.image || null,
+              keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
+              kinmoSearchUrl: p.kinmoSearchUrl || ('https://kinmo.com/?s=' + encodeURIComponent(p.model)),
+              officialUrl: p.officialUrl || ''
+            });
+          });
+          if (cat.name) categories.push({ name: cat.name, icon: cat.icon || '', count: (cat.products || []).length });
+        });
+
+        catalogStat.textContent = allProducts.length + ' UNI-T products available';
+        renderPickerCats();
+        initFromURL();
+      } catch (err) {
+        console.error('Catalog load failed:', err);
+        catalogStat.textContent = 'Failed to load catalog. Refresh to retry.';
+        catalogStat.style.background = 'rgba(239,68,68,0.2)';
+        catalogStat.style.borderColor = 'rgba(239,68,68,0.5)';
+        pickerList.innerHTML = '<div class="picker-empty">Could not load product catalog. Please refresh the page.</div>';
+        renderSlots();
+        renderComparison();
+      }
+    }
+
+    // ── URL params ──
     function initFromURL() {
       const params = new URLSearchParams(window.location.search);
       const ids = params.get('compare');
       if (ids) {
         const parts = ids.split(',').slice(0, 3);
-        parts.forEach((id, i) => {
-          const p = products.find(pr => pr.id === id);
-          if (p) selected[i] = p.id;
+        parts.forEach((slug, i) => {
+          const p = findBySlug(slug.trim());
+          if (p) selected[i] = p.model;
         });
       }
       render();
     }
+    function updateURL() {
+      const slugs = selected.filter(Boolean).map(m => slugify(m));
+      const url = new URL(window.location.href);
+      if (slugs.length) url.searchParams.set('compare', slugs.join(','));
+      else url.searchParams.delete('compare');
+      window.history.replaceState({}, '', url.toString());
+    }
 
-    // ── Category filter ──
-    categoryFilter.addEventListener('click', (e) => {
-      const btn = e.target.closest('.cat-btn');
-      if (!btn) return;
-      activeCategory = btn.dataset.cat;
-      categoryFilter.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      // Close any open dropdowns and re-render
-      render();
-    });
-
-    // ── Render ──
+    // ── Render slot cards ──
     function render() {
       renderSlots();
       renderComparison();
-    }
-
-    function getFilteredProducts() {
-      if (activeCategory === 'all') return products;
-      return products.filter(p => p.category === activeCategory);
+      updateURL();
     }
 
     function renderSlots() {
       slotsRow.innerHTML = '';
       for (let i = 0; i < 3; i++) {
-        const prod = selected[i] ? products.find(p => p.id === selected[i]) : null;
+        const model = selected[i];
+        const prod = model ? findByModel(model) : null;
         const card = document.createElement('div');
-        card.className = 'slot-card' + (prod ? ' filled' : '');
-        card.style.position = 'relative';
+        card.className = 'slot-card ' + (prod ? 'filled' : 'empty');
 
         if (prod) {
           card.innerHTML = `
-            <button class="slot-remove" data-slot="${i}" title="Remove">&times;</button>
-            <img class="slot-img" src="${prod.image}" alt="${prod.model}">
-            <div class="slot-model">${prod.model}</div>
-            <div class="slot-cat">${prod.category}</div>
+            <button class="slot-remove" type="button" aria-label="Remove ${escapeAttr(prod.model)}">&times;</button>
+            ${imgOrFallback(prod, 'slot-img', 'slot-img-fallback')}
+            <div class="slot-model">${escapeHtml(prod.model)}</div>
+            <div class="slot-cat">${escapeHtml(prod.category)}</div>
+            <button class="slot-replace" type="button">Replace</button>
           `;
           card.querySelector('.slot-remove').addEventListener('click', (e) => {
             e.stopPropagation();
             selected[i] = null;
             diffsHighlighted = false;
+            updateDiffBtn();
             render();
           });
+          card.querySelector('.slot-replace').addEventListener('click', (e) => {
+            e.stopPropagation();
+            openPicker(i);
+          });
         } else {
+          card.setAttribute('role', 'button');
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('aria-label', 'Add product to compare slot ' + (i + 1));
           card.innerHTML = `
             <div class="add-icon">+</div>
             <div class="add-label">Add Product</div>
-            <div class="slot-dropdown" id="dd-${i}">
-              <input type="text" class="dd-search" placeholder="Search products...">
-              <div class="dd-list"></div>
-            </div>
+            <div class="add-hint">Click to search ${allProducts.length || '500+'} models</div>
           `;
-          const addIcon = card.querySelector('.add-icon');
-          const addLabel = card.querySelector('.add-label');
-          const dropdown = card.querySelector('.slot-dropdown');
-          const searchInput = dropdown.querySelector('.dd-search');
-          const listEl = dropdown.querySelector('.dd-list');
-
-          function openDropdown() {
-            // Close other dropdowns
-            document.querySelectorAll('.slot-dropdown.open').forEach(d => d.classList.remove('open'));
-            dropdown.classList.add('open');
-            searchInput.value = '';
-            renderDropdownList('');
-            setTimeout(() => searchInput.focus(), 50);
-          }
-
-          addIcon.addEventListener('click', (e) => { e.stopPropagation(); openDropdown(); });
-          addLabel.addEventListener('click', (e) => { e.stopPropagation(); openDropdown(); });
-
-          searchInput.addEventListener('input', () => {
-            renderDropdownList(searchInput.value);
+          card.addEventListener('click', () => openPicker(i));
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openPicker(i);
+            }
           });
-          searchInput.addEventListener('click', (e) => e.stopPropagation());
-
-          function renderDropdownList(query) {
-            const available = getFilteredProducts().filter(p => !selected.includes(p.id));
-            const q = query.toLowerCase();
-            const filtered = available.filter(p =>
-              p.model.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
-            );
-            listEl.innerHTML = filtered.length === 0
-              ? '<div style="padding:1rem;color:#999;font-size:0.85rem;">No products found</div>'
-              : filtered.map(p => `
-                <div class="dd-item" data-id="${p.id}">
-                  <img src="${p.image}" alt="${p.model}">
-                  <div class="dd-item-info">
-                    <div class="dd-item-model">${p.model}</div>
-                    <div class="dd-item-cat">${p.category} &middot; ${p.price}</div>
-                  </div>
-                </div>
-              `).join('');
-
-            listEl.querySelectorAll('.dd-item').forEach(item => {
-              item.addEventListener('click', (e) => {
-                e.stopPropagation();
-                selected[i] = item.dataset.id;
-                diffsHighlighted = false;
-                dropdown.classList.remove('open');
-                render();
-              });
-            });
-          }
         }
         slotsRow.appendChild(card);
       }
     }
 
-    // Close dropdowns on outside click
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.slot-dropdown.open').forEach(d => d.classList.remove('open'));
+    // ── Picker modal ──
+    function openPicker(slotIdx) {
+      pickerSlot = slotIdx;
+      activeCatFilter = 'all';
+      pickerSearch.value = '';
+      pickerOverlay.classList.add('open');
+      document.body.classList.add('modal-open');
+      renderPickerCats();
+      renderPickerList();
+      setTimeout(() => pickerSearch.focus(), 60);
+    }
+    function closePicker() {
+      pickerOverlay.classList.remove('open');
+      document.body.classList.remove('modal-open');
+      pickerSlot = -1;
+    }
+    pickerClose.addEventListener('click', closePicker);
+    pickerOverlay.addEventListener('click', (e) => {
+      if (e.target === pickerOverlay) closePicker();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && pickerOverlay.classList.contains('open')) closePicker();
     });
 
+    function renderPickerCats() {
+      const pills = ['<button type="button" class="picker-cat-pill ' + (activeCatFilter === 'all' ? 'active' : '') + '" data-cat="all">All (' + allProducts.length + ')</button>'];
+      categories.forEach(c => {
+        pills.push('<button type="button" class="picker-cat-pill ' + (activeCatFilter === c.name ? 'active' : '') + '" data-cat="' + escapeAttr(c.name) + '">' + escapeHtml(c.name) + ' (' + c.count + ')</button>');
+      });
+      pickerCats.innerHTML = pills.join('');
+      pickerCats.querySelectorAll('.picker-cat-pill').forEach(b => {
+        b.addEventListener('click', () => {
+          activeCatFilter = b.dataset.cat;
+          renderPickerCats();
+          renderPickerList();
+        });
+      });
+    }
+
+    function renderPickerList() {
+      const q = pickerSearch.value.trim().toLowerCase();
+      let filtered = allProducts;
+
+      if (activeCatFilter !== 'all') {
+        filtered = filtered.filter(p => p.category === activeCatFilter);
+      }
+      if (q) {
+        filtered = filtered.filter(p =>
+          p.model.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          (p.subcategory && p.subcategory.toLowerCase().includes(q)) ||
+          (p.description && p.description.toLowerCase().includes(q)) ||
+          p.keySpecs.some(s => s.toLowerCase().includes(q))
+        );
+      }
+
+      // Cap rendered DOM to first 80 items for performance
+      const MAX = 80;
+      const displayed = filtered.slice(0, MAX);
+      const overflow = filtered.length - displayed.length;
+
+      if (filtered.length === 0) {
+        pickerList.innerHTML = '<div class="picker-empty">No products match. Try a different search or category.</div>';
+        pickerCount.textContent = '0 products';
+        return;
+      }
+
+      pickerList.innerHTML = displayed.map(p => {
+        const isSelected = selected.includes(p.model);
+        const initial = escapeAttr((p.model || '?').charAt(0).toUpperCase());
+        const imgHtml = p.image
+          ? '<img src="' + p.image + '" alt="' + escapeHtml(p.model) + '" loading="lazy" onerror="this.outerHTML=\'<div class=\\\'pi-fallback\\\'>' + initial + '</div>\'">'
+          : '<div class="pi-fallback">' + initial + '</div>';
+        return `
+          <div class="picker-item ${isSelected ? 'disabled' : ''}" data-model="${escapeAttr(p.model)}">
+            ${imgHtml}
+            <div class="pi-info">
+              <div class="pi-model">${escapeHtml(p.model)}${isSelected ? '<span class="pi-tag">already added</span>' : ''}</div>
+              <div class="pi-cat">${escapeHtml(p.category)}${p.subcategory ? ' · ' + escapeHtml(p.subcategory) : ''}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      pickerList.querySelectorAll('.picker-item').forEach(el => {
+        if (el.classList.contains('disabled')) return;
+        el.addEventListener('click', () => {
+          const model = el.dataset.model;
+          if (pickerSlot >= 0) {
+            selected[pickerSlot] = model;
+            diffsHighlighted = false;
+            updateDiffBtn();
+            closePicker();
+            render();
+          }
+        });
+      });
+
+      pickerCount.textContent = overflow > 0
+        ? 'Showing ' + displayed.length + ' of ' + filtered.length + ' — refine search to see more'
+        : filtered.length + ' ' + (filtered.length === 1 ? 'product' : 'products');
+    }
+
+    pickerSearch.addEventListener('input', () => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(renderPickerList, 200);
+    });
+
+    // ── Comparison table ──
     function renderComparison() {
-      const chosen = selected.filter(Boolean).map(id => products.find(p => p.id === id));
+      const chosen = selected.filter(Boolean).map(m => findByModel(m)).filter(Boolean);
+
       if (chosen.length < 2) {
         actionsRow.style.display = 'none';
         comparisonOutput.innerHTML = `
@@ -951,7 +1286,7 @@
               <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
             </svg>
             <h3>Select at least 2 products to compare</h3>
-            <p>Use the cards above to add UNI-T instruments, then see them compared side-by-side.</p>
+            <p>Use the slots above to add UNI-T instruments. Search across all ${allProducts.length || '500+'} models in the catalog.</p>
           </div>
         `;
         return;
@@ -959,62 +1294,93 @@
 
       actionsRow.style.display = 'flex';
 
-      const specRows = [
-        { label: 'Type', key: 'type' },
-        { label: 'Range', key: 'range' },
-        { label: 'Accuracy', key: 'accuracy' },
-        { label: 'Count / Resolution', key: 'count' },
-        { label: 'True RMS', key: 'trueRMS' },
-        { label: 'Safety Rating', key: 'safety' },
-        { label: 'Display', key: 'display' },
-        { label: 'Connectivity', key: 'connectivity' },
-        { label: 'Power', key: 'power' },
-      ];
-
-      const rows = [];
-
-      // Product header row
-      rows.push('<tr><th></th>' + chosen.map(p => `
+      // Header row: image, model, category
+      const headerCells = chosen.map(p => `
         <th>
-          <img class="product-img" src="${p.image}" alt="${p.model}">
-          <div class="model-name">${p.model}</div>
+          ${imgOrFallback(p, 'product-img', 'product-img-fallback')}
+          <div class="model-name">${escapeHtml(p.model)}</div>
+          <div class="model-cat">${escapeHtml(p.category)}</div>
         </th>
-      `).join('') + '</tr>');
+      `).join('');
 
-      // Price
-      rows.push(makeRow('Price Range', chosen.map(p => `<strong>${p.price}</strong>`)));
+      // Description row
+      const descRow = `
+        <tr>
+          <td>Description</td>
+          ${chosen.map(p => '<td class="desc-cell">' + (p.description ? escapeHtml(p.description) : '<em style="color:#9ca3af">No description available</em>') + '</td>').join('')}
+        </tr>
+      `;
 
-      // Specs
-      specRows.forEach(sr => {
-        rows.push(makeRow(sr.label, chosen.map(p => p[sr.key] || 'N/A')));
+      // Subcategory row (only if any has one)
+      const hasSub = chosen.some(p => p.subcategory);
+      const subRow = hasSub ? `
+        <tr>
+          <td>Subcategory</td>
+          ${chosen.map(p => '<td>' + (p.subcategory ? '<span class="spec-chip">' + escapeHtml(p.subcategory) + '</span>' : '<span class="spec-no">—</span>') + '</td>').join('')}
+        </tr>
+      ` : '';
+
+      // Build union of all keySpecs across selected products (preserving order)
+      const allSpecs = [];
+      const seen = new Set();
+      chosen.forEach(p => {
+        p.keySpecs.forEach(s => {
+          const key = s.trim();
+          const lower = key.toLowerCase();
+          if (!seen.has(lower)) {
+            seen.add(lower);
+            allSpecs.push(key);
+          }
+        });
       });
 
-      // Best For
-      rows.push(makeRow('Best For', chosen.map(p => `<em>${p.bestFor}</em>`)));
+      // Spec rows: ✓ if product has this exact spec, — otherwise
+      const specRows = allSpecs.map(spec => `
+        <tr>
+          <td>${escapeHtml(spec)}</td>
+          ${chosen.map(p => {
+            const has = p.keySpecs.some(s => s.trim().toLowerCase() === spec.toLowerCase());
+            return '<td>' + (has ? '<span class="spec-yes">✓</span>' : '<span class="spec-no">—</span>') + '</td>';
+          }).join('')}
+        </tr>
+      `).join('');
 
-      // Pros
-      rows.push(makeRow('Pros', chosen.map(p =>
-        '<div class="pros-cons">' + p.pros.map(x => `<div class="pro">${x}</div>`).join('') + '</div>'
-      )));
+      const specsSection = allSpecs.length > 0 ? specRows : `
+        <tr>
+          <td>Key Specs</td>
+          <td colspan="${chosen.length}" style="text-align:center;color:#9ca3af;font-style:italic;">
+            No spec chips available for these products. See description above or visit the product page.
+          </td>
+        </tr>
+      `;
 
-      // Cons
-      rows.push(makeRow('Cons', chosen.map(p =>
-        '<div class="pros-cons">' + p.cons.map(x => `<div class="con">${x}</div>`).join('') + '</div>'
-      )));
-
-      // Rating
-      rows.push(makeRow('Rating', chosen.map(p => renderStars(p.rating))));
-
-      // Shop link
-      rows.push(makeRow('', chosen.map(p =>
-        `<a href="https://kinmo.com/?s=${encodeURIComponent(p.model)}&post_type=product" target="_blank" class="action-btn primary" style="text-decoration:none;display:inline-flex;margin-top:0.25rem;">Shop Now</a>`
-      )));
+      // Buy row
+      const buyRow = `
+        <tr>
+          <td></td>
+          ${chosen.map(p => `
+            <td>
+              <a class="buy-btn" href="${escapeHtml(p.kinmoSearchUrl)}" target="_blank" rel="noopener">
+                Buy on Kinmo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+              ${p.officialUrl ? '<span class="official-link"><a href="' + escapeHtml(p.officialUrl) + '" target="_blank" rel="noopener">Official spec sheet</a></span>' : ''}
+            </td>
+          `).join('')}
+        </tr>
+      `;
 
       comparisonOutput.innerHTML = `
+        <div class="scroll-hint">← Swipe to compare →</div>
         <div class="comparison-wrapper">
           <table class="compare-table">
-            <thead>${rows[0]}</thead>
-            <tbody>${rows.slice(1).join('')}</tbody>
+            <thead><tr><th></th>${headerCells}</tr></thead>
+            <tbody>
+              ${descRow}
+              ${subRow}
+              ${specsSection}
+              ${buyRow}
+            </tbody>
           </table>
         </div>
       `;
@@ -1022,44 +1388,16 @@
       if (diffsHighlighted) applyDiffHighlights();
     }
 
-    function makeRow(label, cells) {
-      return '<tr><td>' + label + '</td>' + cells.map(c => '<td>' + c + '</td>').join('') + '</tr>';
-    }
-
-    function renderStars(rating) {
-      let html = '<div class="stars">';
-      for (let i = 1; i <= 5; i++) {
-        if (i <= Math.floor(rating)) {
-          html += '\u2605';
-        } else if (i - 0.5 <= rating) {
-          html += '\u2605';
-        } else {
-          html += '<span class="empty">\u2605</span>';
-        }
-      }
-      html += '</div>';
-      return html;
-    }
-
-    // ── Highlight Differences ──
-    window.highlightDiffs = function() {
-      diffsHighlighted = !diffsHighlighted;
-      if (diffsHighlighted) {
-        applyDiffHighlights();
-        showToast('Differences highlighted');
-      } else {
-        document.querySelectorAll('.cell-diff').forEach(c => c.classList.remove('cell-diff'));
-        showToast('Highlights removed');
-      }
-    };
-
+    // ── Differences ──
     function applyDiffHighlights() {
-      const table = document.querySelector('.compare-table');
+      const table = comparisonOutput.querySelector('.compare-table');
       if (!table) return;
-      const bodyRows = table.querySelectorAll('tbody tr');
-      bodyRows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td')).slice(1); // skip label
+      const rows = table.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td')).slice(1);
         if (cells.length < 2) return;
+        // skip the buy-button row
+        if (cells.some(c => c.querySelector('.buy-btn'))) return;
         const texts = cells.map(c => c.textContent.trim());
         const allSame = texts.every(t => t === texts[0]);
         if (!allSame) {
@@ -1069,31 +1407,49 @@
         }
       });
     }
+    function clearDiffHighlights() {
+      comparisonOutput.querySelectorAll('.cell-diff').forEach(c => c.classList.remove('cell-diff'));
+    }
+    function updateDiffBtn() {
+      diffBtn.classList.toggle('active', diffsHighlighted);
+    }
+    diffBtn.addEventListener('click', () => {
+      diffsHighlighted = !diffsHighlighted;
+      updateDiffBtn();
+      if (diffsHighlighted) {
+        applyDiffHighlights();
+        showToast('Differences highlighted');
+      } else {
+        clearDiffHighlights();
+        showToast('Highlights removed');
+      }
+    });
 
-    // ── Clear All ──
-    window.clearAll = function() {
+    // ── Clear ──
+    clearBtn.addEventListener('click', () => {
       selected = [null, null, null];
       diffsHighlighted = false;
+      updateDiffBtn();
       render();
       showToast('Comparison cleared');
-    };
+    });
 
     // ── Share ──
-    window.shareComparison = function() {
-      const ids = selected.filter(Boolean).join(',');
-      const url = window.location.origin + window.location.pathname + '?compare=' + ids;
-
+    shareBtn.addEventListener('click', () => {
+      const slugs = selected.filter(Boolean).map(m => slugify(m));
+      if (slugs.length < 2) {
+        showToast('Add at least 2 products first');
+        return;
+      }
+      const url = window.location.origin + window.location.pathname + '?compare=' + slugs.join(',');
       if (navigator.clipboard) {
         navigator.clipboard.writeText(url).then(() => {
-          showToast('Comparison link copied to clipboard!');
-        }).catch(() => {
-          fallbackCopy(url);
-        });
+          showToast('Comparison link copied!');
+        }).catch(() => fallbackCopy(url));
       } else {
         fallbackCopy(url);
       }
-    };
-
+    });
     function fallbackCopy(text) {
       const ta = document.createElement('textarea');
       ta.value = text;
@@ -1101,7 +1457,7 @@
       ta.style.left = '-9999px';
       document.body.appendChild(ta);
       ta.select();
-      document.execCommand('copy');
+      try { document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta);
       showToast('Comparison link copied!');
     }
@@ -1113,17 +1469,19 @@
       setTimeout(() => toastEl.classList.remove('show'), 2500);
     }
 
-    // ── Back to Top ──
+    // ── Back to top (page-level) ──
     const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 300);
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 300);
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // ── Init ──
-    initFromURL();
+    loadCatalog();
   })();
   </script>
 </body>
