@@ -1023,7 +1023,9 @@
 
       async function loadCatalog() {
         try {
-          const res = await fetch('/content/products-catalog.json', { cache: 'force-cache' });
+          // Cache-bust with a daily-rotating query string so updates show without hard-refresh
+          const cacheBust = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+          const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
           if (!res.ok) throw new Error('Failed to load catalog');
           const data = await res.json();
 
