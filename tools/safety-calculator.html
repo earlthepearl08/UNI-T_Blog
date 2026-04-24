@@ -1065,6 +1065,14 @@
         return;
       }
 
+      // Divide-by-zero guards
+      if ((v !== null && i !== null && r === null && i === 0) ||
+          (v !== null && r !== null && i === null && r === 0)) {
+        resultDiv.innerHTML = '<div class="result-card yellow"><p style="color:var(--text-primary, #111);font-weight:600;">Cannot calculate &mdash; input would divide by zero. Please check your values.</p></div>';
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
       let calcV = v, calcI = i, calcR = r, calcP, computed = '';
 
       if (v !== null && i !== null && r === null) {
@@ -1084,8 +1092,9 @@
 
       calcP = calcV * calcI;
 
-      // Format
+      // Format (handles non-finite gracefully)
       function fmt(val, unit) {
+        if (val === null || val === undefined || !isFinite(val) || isNaN(val)) return '\u2014';
         if (Math.abs(val) >= 1e6) return (val / 1e6).toFixed(3) + ' M' + unit;
         if (Math.abs(val) >= 1e3) return (val / 1e3).toFixed(3) + ' k' + unit;
         if (Math.abs(val) < 0.001 && val !== 0) return (val * 1e6).toFixed(3) + ' \u03BC' + unit;
@@ -1144,24 +1153,21 @@
     }
 
     // ===== Wire Size Calculator =====
-    // Copper wire data: AWG, mm², resistance (ohm/m at 75°C), ampacity (TW @30°C)
+    // Copper wire data: PEC standard mm² sizes (primary), AWG (secondary reference)
+    // resistance in ohm/m at 75°C copper, ampacity per PEC THHN/THWN @30°C ambient
     const wireData = [
-      { awg: 14, mm2: 2.08, resistance: 0.00884, ampacity: 15 },
-      { awg: 12, mm2: 3.31, resistance: 0.00556, ampacity: 20 },
-      { awg: 10, mm2: 5.26, resistance: 0.00351, ampacity: 30 },
-      { awg: 8,  mm2: 8.37, resistance: 0.00221, ampacity: 40 },
-      { awg: 6,  mm2: 13.3, resistance: 0.00139, ampacity: 55 },
-      { awg: 4,  mm2: 21.2, resistance: 0.000874, ampacity: 70 },
-      { awg: 3,  mm2: 26.7, resistance: 0.000693, ampacity: 85 },
-      { awg: 2,  mm2: 33.6, resistance: 0.000551, ampacity: 95 },
-      { awg: 1,  mm2: 42.4, resistance: 0.000437, ampacity: 110 },
-      { awg: '1/0', mm2: 53.5, resistance: 0.000346, ampacity: 125 },
-      { awg: '2/0', mm2: 67.4, resistance: 0.000274, ampacity: 145 },
-      { awg: '3/0', mm2: 85.0, resistance: 0.000218, ampacity: 165 },
-      { awg: '4/0', mm2: 107,  resistance: 0.000173, ampacity: 195 },
-      { awg: 250, mm2: 127,  resistance: 0.000146, ampacity: 215, kcmil: true },
-      { awg: 350, mm2: 177,  resistance: 0.000105, ampacity: 260, kcmil: true },
-      { awg: 500, mm2: 253,  resistance: 0.0000735, ampacity: 320, kcmil: true },
+      { mm2: 1.5,  awg: 16,    resistance: 0.01380,  ampacity: 15 },
+      { mm2: 2.5,  awg: 14,    resistance: 0.00822,  ampacity: 20 },
+      { mm2: 4.0,  awg: 12,    resistance: 0.00514,  ampacity: 25 },
+      { mm2: 6.0,  awg: 10,    resistance: 0.00343,  ampacity: 32 },
+      { mm2: 10,   awg: 8,     resistance: 0.00206,  ampacity: 50 },
+      { mm2: 16,   awg: 6,     resistance: 0.00128,  ampacity: 63 },
+      { mm2: 25,   awg: 4,     resistance: 0.000823, ampacity: 80 },
+      { mm2: 35,   awg: 2,     resistance: 0.000588, ampacity: 100 },
+      { mm2: 50,   awg: 1,     resistance: 0.000411, ampacity: 125 },
+      { mm2: 70,   awg: '2/0', resistance: 0.000294, ampacity: 160 },
+      { mm2: 95,   awg: '3/0', resistance: 0.000216, ampacity: 195 },
+      { mm2: 120,  awg: '4/0', resistance: 0.000172, ampacity: 230 },
     ];
 
     function calculateWire() {
@@ -1197,13 +1203,14 @@
 
         if (meets && !recommended) recommended = { ...w, vDrop, vDropPct };
 
-        const isReco = recommended && recommended.awg === w.awg;
-        const awgLabel = w.kcmil ? w.awg + ' kcmil' : 'AWG ' + w.awg;
+        const isReco = recommended && recommended.mm2 === w.mm2;
+        const sizeLabel = w.mm2 + ' mm&sup2;';
+        const awgRef = 'AWG ' + w.awg;
 
         tableRows += `
           <tr class="${isReco ? 'recommended' : ''}">
-            <td>${awgLabel}</td>
-            <td>${w.mm2} mm&sup2;</td>
+            <td>${sizeLabel}</td>
+            <td>${awgRef}</td>
             <td>${w.ampacity} A</td>
             <td>${vDropPct.toFixed(2)}%</td>
             <td>${meets ? '<span style="color:#22c55e;font-weight:700;">Pass</span>' : '<span style="color:#ef4444;">Fail</span>'}</td>
@@ -1239,12 +1246,13 @@
         `;
       }
 
-      const awgLabel = recommended.kcmil ? recommended.awg + ' kcmil' : 'AWG ' + recommended.awg;
+      const sizeLabel = recommended.mm2 + ' mm&sup2;';
+      const awgRef = 'AWG ' + recommended.awg;
 
       resultDiv.innerHTML = `
         <div class="result-card green">
           <div class="result-label">Recommended Wire Size</div>
-          <div class="result-value" style="font-size:2rem;">${awgLabel} <small>(${recommended.mm2} mm&sup2;)</small></div>
+          <div class="result-value" style="font-size:2rem;">${sizeLabel} <small>(${awgRef}, ~${recommended.ampacity}A capacity)</small></div>
           <div class="result-row">
             <div class="result-item">
               <div class="result-label">Voltage Drop</div>
@@ -1268,7 +1276,7 @@
           <div class="result-label">Wire Size Comparison Table</div>
           <div style="overflow-x:auto;">
             <table class="wire-table">
-              <thead><tr><th>Size</th><th>Area</th><th>Ampacity</th><th>V-Drop</th><th>Status</th></tr></thead>
+              <thead><tr><th>Size (mm&sup2;)</th><th>AWG ref.</th><th>Ampacity</th><th>V-Drop</th><th>Status</th></tr></thead>
               <tbody>${tableRows}</tbody>
             </table>
           </div>

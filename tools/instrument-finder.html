@@ -177,6 +177,26 @@
     .quiz-question.slide-out {
       animation: slideOutLeft 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
+    .quiz-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      border: 1px solid var(--border-color, #d1d5db);
+      color: var(--text-secondary, #555);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+    }
+    .quiz-back-btn:hover {
+      background: var(--bg-secondary, #f3f4f6);
+      color: var(--text-primary, #111);
+    }
 
     .question-number {
       font-size: 0.85rem;
@@ -961,7 +981,7 @@
       ut675a: {
         name: 'UNI-T UT675A',
         type: 'Battery Tester',
-        image: '/images/products/battery-tester-ut673a.png',
+        image: '/images/products/ut675a.jpg',
         specs: ['12V Batteries', 'CCA Testing', 'Cranking Test', 'Print Results'],
         shopUrl: 'https://kinmo.com/product-category/uni-t/',
         reason: ''
@@ -971,6 +991,7 @@
     // ========== QUIZ ENGINE ==========
     let currentQuestion = 0;
     let answers = {};
+    let questionHistory = [];
 
     function startQuiz() {
       document.getElementById('quizWelcome').style.display = 'none';
@@ -988,6 +1009,7 @@
         div.className = 'quiz-question';
         div.id = 'question-' + idx;
         div.innerHTML = `
+          ${idx > 0 ? `<button type="button" class="quiz-back-btn" onclick="goBack()" aria-label="Go back to previous question">&larr; Back</button>` : ''}
           <div class="question-number">${q.label}</div>
           <h2 class="question-title">${q.title}</h2>
           <div class="answer-grid">
@@ -1036,8 +1058,10 @@
       siblings.forEach(s => s.classList.remove('selected'));
       card.classList.add('selected');
 
-      // Store answer
-      answers[questions[questionIdx].id] = value;
+      // Store answer + push to history
+      const qid = questions[questionIdx].id;
+      answers[qid] = value;
+      questionHistory.push(qid);
 
       // Auto-advance after a short delay
       setTimeout(() => {
@@ -1133,17 +1157,21 @@
       const expNames = { beginner: 'someone starting out', intermediate: 'an intermediate user', professional: 'a working professional', expert: 'an expert' };
       const freqNames = { daily: 'daily use', weekly: 'regular use', occasional: 'occasional projects', learning: 'learning and training' };
 
+      const fieldText = fieldNames[a.field] || 'your work';
+      const expText = expNames[a.experience] || 'a skilled user';
+      const freqText = freqNames[a.frequency] || 'regular use';
+
       const reasons = {
-        ut61e: `As ${expNames[a.experience]} in ${fieldNames[a.field]}, you need a multimeter that delivers lab-grade accuracy for ${freqNames[a.frequency]}. The UT61E+ with its 22,000-count display and USB data logging is the gold standard.`,
-        ut204: `For ${fieldNames[a.field]} in commercial and industrial settings, a clamp meter is essential. The UT204+ lets you measure up to 600A AC/DC without breaking a circuit -- perfect for ${freqNames[a.frequency]}.`,
-        uti260b: `Temperature measurement is your priority, and nothing beats a thermal camera for ${fieldNames[a.field]}. The UTi260B gives you a full thermal picture with WiFi connectivity for easy reporting.`,
-        ut501a: `Insulation resistance testing is critical for ${fieldNames[a.field]}. The UT501A provides reliable megohm readings up to 2G\u03A9 with polarization index -- an essential safety tool for ${freqNames[a.frequency]}.`,
-        utd2102: `As ${expNames[a.experience]} working in a ${a.workplace === 'lab' ? 'lab environment' : 'technical role'}, an oscilloscope opens up a whole new level of analysis. The UTD2102CEX+ with 100MHz bandwidth is perfect for signal work.`,
-        ut61d: `The UT61D+ hits the sweet spot -- it's capable enough for ${fieldNames[a.field]} but won't overwhelm ${expNames[a.experience]}. True RMS accuracy and auto-ranging make it ideal for ${freqNames[a.frequency]}.`,
-        ut139c: `As ${expNames[a.experience]}, the UT139C is your ideal starting companion. It's affordable, reliable, has all the essential functions, and the NCV detector adds a nice safety feature for ${fieldNames[a.field]}.`,
-        ut12s: `Sometimes you just need to know: "Is there voltage?" The UT12S is a pocket-sized, CAT IV-rated voltage detector that's perfect for quick safety checks during ${freqNames[a.frequency]}. Simple, reliable, and budget-friendly.`,
-        ut890c: `For ${freqNames[a.frequency]} in ${fieldNames[a.field]}, you need a multimeter that's tough and dependable. The UT890C+ is a rugged True RMS meter built for the daily grind -- it just works, every time.`,
-        ut675a: `For ${fieldNames[a.field]}, battery diagnostics are everything. The UT675A tests CCA, cranking performance, and overall battery health -- exactly what ${expNames[a.experience]} needs for reliable ${freqNames[a.frequency]}.`
+        ut61e: `As ${expText} in ${fieldText}, you need a multimeter that delivers lab-grade accuracy for ${freqText}. The UT61E+ with its 22,000-count display and USB data logging is the gold standard.`,
+        ut204: `For ${fieldText} in commercial and industrial settings, a clamp meter is essential. The UT204+ lets you measure up to 600A AC/DC without breaking a circuit -- perfect for ${freqText}.`,
+        uti260b: `Temperature measurement is your priority, and nothing beats a thermal camera for ${fieldText}. The UTi260B gives you a full thermal picture with WiFi connectivity for easy reporting.`,
+        ut501a: `Insulation resistance testing is critical for ${fieldText}. The UT501A provides reliable megohm readings up to 2G\u03A9 with polarization index -- an essential safety tool for ${freqText}.`,
+        utd2102: `As ${expText} working in a ${a.workplace === 'lab' ? 'lab environment' : 'technical role'}, an oscilloscope opens up a whole new level of analysis. The UTD2102CEX+ with 100MHz bandwidth is perfect for signal work.`,
+        ut61d: `The UT61D+ hits the sweet spot -- it's capable enough for ${fieldText} but won't overwhelm ${expText}. True RMS accuracy and auto-ranging make it ideal for ${freqText}.`,
+        ut139c: `As ${expText}, the UT139C is your ideal starting companion. It's affordable, reliable, has all the essential functions, and the NCV detector adds a nice safety feature for ${fieldText}.`,
+        ut12s: `Sometimes you just need to know: "Is there voltage?" The UT12S is a pocket-sized, CAT IV-rated voltage detector that's perfect for quick safety checks during ${freqText}. Simple, reliable, and budget-friendly.`,
+        ut890c: `For ${freqText} in ${fieldText}, you need a multimeter that's tough and dependable. The UT890C+ is a rugged True RMS meter built for the daily grind -- it just works, every time.`,
+        ut675a: `For ${fieldText}, battery diagnostics are everything. The UT675A tests CCA, cranking performance, and overall battery health -- exactly what ${expText} needs for reliable ${freqText}.`
       };
 
       return reasons[productKey] || 'This instrument is a great match for your needs!';
@@ -1187,8 +1215,19 @@
       setTimeout(fireConfetti, 300);
     }
 
+    function goBack() {
+      if (currentQuestion <= 0) return;
+      // Pop last answer from history (the answer for the question we're going back to)
+      const lastId = questionHistory.pop();
+      if (lastId) delete answers[lastId];
+      // Re-render so selected state clears, then show previous question
+      renderQuestions();
+      showQuestion(currentQuestion - 1);
+    }
+
     function retakeQuiz() {
       answers = {};
+      questionHistory = [];
       currentQuestion = 0;
       document.getElementById('quizResults').classList.remove('active');
       document.getElementById('quizResults').style.display = 'none';
@@ -1202,9 +1241,30 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function fallbackCopyToClipboard(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+    function copyToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text)
+          .then(() => true)
+          .catch(() => fallbackCopyToClipboard(text));
+      }
+      return Promise.resolve(fallbackCopyToClipboard(text));
+    }
     function copyResultLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => {
+      Promise.resolve(copyToClipboard(window.location.href)).then(ok => {
         const toast = document.getElementById('copyToast');
+        toast.textContent = ok ? 'Link copied!' : 'Copy failed - please copy manually';
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 2000);
       });

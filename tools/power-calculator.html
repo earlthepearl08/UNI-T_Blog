@@ -1012,8 +1012,9 @@
       // Reactive power Q = sqrt(S^2 - P^2) (kVAR)
       const Q = Math.sqrt(Math.max(S * S - P * P, 0));
 
-      const wireSize = suggestWireSize(I);
-      const breaker = suggestBreaker(I);
+      // Per NEC/PEC: continuous loads (>3hr) require breaker sized at 125% of load
+      const wireSize = suggestWireSize(I * 1.25);
+      const breaker = suggestBreaker(I * 1.25);
 
       out.innerHTML = `
         <div class="result-card primary">
@@ -1039,7 +1040,7 @@
         </div>
 
         <div class="result-card">
-          <div class="result-label">Suggested Circuit Sizing</div>
+          <div class="result-label">Suggested Circuit Sizing (125% continuous load)</div>
           <div style="margin-top:0.5rem;">
             <span class="spec-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M4 20V10m16 10V10"/></svg>
@@ -1047,7 +1048,7 @@
             </span>
             <span class="spec-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
-              Breaker: ${breaker} A
+              Breaker: ${breaker} A (recommended)
             </span>
           </div>
           <p class="result-explain" style="margin-top:0.75rem;">
@@ -1194,13 +1195,14 @@
 
       let phaseWarning = '';
       if (src.phases !== tgt.phases) {
-        phaseWarning = `<div class="callout">
-          <span class="callout-icon">&#128268;</span>
-          <div><strong>Phase change:</strong> Going from ${src.phases}-phase to ${tgt.phases}-phase. The equipment must be physically rewired or replaced &mdash; not just connected differently. A ${tgt.phases}-phase circuit cannot directly run ${src.phases}-phase equipment.</div>
+        phaseWarning = `<div class="callout danger" style="border:2px solid var(--uni-red, #E31E24); margin-bottom: 1rem;">
+          <span class="callout-icon">&#9888;&#65039;</span>
+          <div><strong>Phase mismatch &mdash; ${src.phases}-phase to ${tgt.phases}-phase is NOT directly interchangeable.</strong> The equipment must be physically rewired or replaced. The numbers below show the equivalent current draw for reference only &mdash; do not connect ${src.phases}-phase equipment to a ${tgt.phases}-phase circuit.</div>
         </div>`;
       }
 
       out.innerHTML = `
+        ${phaseWarning}
         <div class="result-card primary">
           <div class="result-label">Equivalent Power (Constant)</div>
           <div class="big-number">${fmt(P_kW, 3)}<small>kW</small></div>
@@ -1228,7 +1230,6 @@
           </p>
         </div>
 
-        ${phaseWarning}
         ${warning}
 
         <div class="result-card">
