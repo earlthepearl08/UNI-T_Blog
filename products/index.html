@@ -1179,7 +1179,11 @@
     closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      if (e.key !== 'Escape') return;
+      // Don't steal ESC from a modal layered above the drawer
+      if (document.body.classList.contains('product-modal-open') ||
+          document.body.classList.contains('modal-open')) return;
+      if (drawer.classList.contains('open')) closeDrawer();
     });
 
     if (themeToggle) {
@@ -1513,8 +1517,12 @@
           searchInput.value = activeSearch;
           searchClear.classList.add('visible');
         }
-        if (['featured','az','za','newest'].includes(activeSort)) {
+        if (['featured','az','za'].includes(activeSort)) {
           sortSelect.value = activeSort;
+        } else {
+          // Unknown/legacy value (e.g. ?sort=newest from old links) — fall back to featured
+          activeSort = 'featured';
+          sortSelect.value = 'featured';
         }
       }
 
@@ -1560,9 +1568,7 @@
                 kinmoSearchUrl: p.kinmoSearchUrl,
                 keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
                 source: p.source || 'scraped',
-                _featuredOrder: catIdx * 1000 + idx,
-                // Newer products sit later in their category arrays — approximate by reverse insert order
-                _newestOrder: (data.categories.length - catIdx) * 1000 + (cat.products.length - idx)
+                _featuredOrder: catIdx * 1000 + idx
               });
             });
           });
@@ -1693,7 +1699,6 @@
         switch (activeSort) {
           case 'az':       list = list.slice().sort((a, b) => a.model.localeCompare(b.model)); break;
           case 'za':       list = list.slice().sort((a, b) => b.model.localeCompare(a.model)); break;
-          case 'newest':   list = list.slice().sort((a, b) => b._newestOrder - a._newestOrder); break;
           case 'featured':
           default:         list = list.slice().sort((a, b) => a._featuredOrder - b._featuredOrder); break;
         }
@@ -1810,8 +1815,8 @@
           : '';
 
         const imageHtml = product.image
-          ? `<img src="${encodeURI(product.image)}" alt="UNI-T ${escapeHtml(product.model)}" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;modal-img-fallback&quot;>${fallbackLetter}</div>'">`
-          : `<div class="modal-img-fallback">${fallbackLetter}</div>`;
+          ? `<img id="modalProductImg" src="${encodeURI(product.image)}" alt="UNI-T ${escapeHtml(product.model)}" referrerpolicy="no-referrer">`
+          : `<div class="modal-img-fallback">${escapeHtml(fallbackLetter)}</div>`;
 
         const regionsHtml = (product.regions && product.regions.length)
           ? `<div class="modal-regions">Available regions: ${escapeHtml(product.regions.join(', '))}</div>`
@@ -1842,6 +1847,17 @@
           </div>
         `;
 
+        // Attach onerror handler safely (no inline JS / outerHTML interpolation)
+        const modalImg = document.getElementById('modalProductImg');
+        if (modalImg) {
+          modalImg.onerror = function() {
+            const fb = document.createElement('div');
+            fb.className = 'modal-img-fallback';
+            fb.textContent = fallbackLetter;
+            this.replaceWith(fb);
+          };
+        }
+
         modal.classList.add('open');
         document.body.classList.add('product-modal-open');
         // A11y: focus close button
@@ -1868,7 +1884,11 @@
         });
         closeBtn.addEventListener('click', closeProductModal);
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && modal.classList.contains('open')) closeProductModal();
+          if (e.key !== 'Escape') return;
+          if (modal.classList.contains('open')) {
+            e.stopPropagation();
+            closeProductModal();
+          }
         });
       })();
 

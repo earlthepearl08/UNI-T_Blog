@@ -844,7 +844,11 @@
     closeBtn.addEventListener('click', closeDrawer);
     backdrop.addEventListener('click', closeDrawer);
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+      if (e.key !== 'Escape') return;
+      // Defer to any modal that's layered over the drawer (e.g. picker)
+      if (document.body.classList.contains('modal-open') ||
+          document.body.classList.contains('product-modal-open')) return;
+      if (drawer.classList.contains('open')) closeDrawer();
     });
 
     if (themeToggle) {
@@ -1034,12 +1038,27 @@
     }
 
     // ── Image fallback markup ──
+    // Returns an HTML string with no inline onerror. Caller must invoke
+    // attachImgFallbacks(rootEl) after inserting into DOM so handlers wire up safely.
     function imgOrFallback(p, cls, fallbackCls) {
       const initial = (p.model || '?').charAt(0).toUpperCase();
       if (p.image) {
-        return `<img class="${cls}" src="${p.image}" alt="${escapeHtml(p.model)}" loading="lazy" onerror="this.outerHTML='<div class=\\'${fallbackCls}\\'>${escapeAttr(initial)}</div>'">`;
+        return `<img class="${cls}" src="${escapeHtml(p.image)}" alt="${escapeHtml(p.model)}" loading="lazy" data-fallback-letter="${escapeHtml(initial)}" data-fallback-class="${escapeHtml(fallbackCls)}">`;
       }
-      return `<div class="${fallbackCls}">${escapeAttr(initial)}</div>`;
+      return `<div class="${fallbackCls}">${escapeHtml(initial)}</div>`;
+    }
+    // Walk a root element and attach safe onerror handlers to images that
+    // were rendered via imgOrFallback (or any image carrying data-fallback-letter).
+    function attachImgFallbacks(rootEl) {
+      if (!rootEl) return;
+      rootEl.querySelectorAll('img[data-fallback-letter]').forEach(img => {
+        img.onerror = function() {
+          const fb = document.createElement('div');
+          fb.className = this.getAttribute('data-fallback-class') || '';
+          fb.textContent = this.getAttribute('data-fallback-letter') || '';
+          this.replaceWith(fb);
+        };
+      });
     }
     function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1093,14 +1112,25 @@
     function initFromURL() {
       const params = new URLSearchParams(window.location.search);
       const ids = params.get('compare');
+      const notFound = [];
       if (ids) {
-        const parts = ids.split(',').slice(0, 3);
+        const parts = ids.split(',').map(s => s.trim()).filter(Boolean).slice(0, 3);
         parts.forEach((slug, i) => {
-          const p = findBySlug(slug.trim());
-          if (p) selected[i] = p.model;
+          const p = findBySlug(slug);
+          if (p) {
+            selected[i] = p.model;
+          } else {
+            notFound.push(slug);
+          }
         });
       }
       render();
+      if (notFound.length > 0) {
+        // Defer so toast appears after layout settles
+        setTimeout(() => {
+          showToast(notFound.length + ' product' + (notFound.length > 1 ? 's' : '') + ' from the shared link not found: ' + notFound.join(', '), 5000);
+        }, 200);
+      }
     }
     function updateURL() {
       const slugs = selected.filter(Boolean).map(m => slugify(m));
@@ -1163,6 +1193,7 @@
         }
         slotsRow.appendChild(card);
       }
+      attachImgFallbacks(slotsRow);
     }
 
     // ── Picker modal ──
@@ -1186,7 +1217,11 @@
       if (e.target === pickerOverlay) closePicker();
     });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && pickerOverlay.classList.contains('open')) closePicker();
+      if (e.key !== 'Escape') return;
+      if (pickerOverlay.classList.contains('open')) {
+        e.stopPropagation();
+        closePicker();
+      }
     });
 
     function renderPickerCats() {
@@ -1234,9 +1269,9 @@
 
       pickerList.innerHTML = displayed.map(p => {
         const isSelected = selected.includes(p.model);
-        const initial = escapeAttr((p.model || '?').charAt(0).toUpperCase());
+        const initial = escapeHtml((p.model || '?').charAt(0).toUpperCase());
         const imgHtml = p.image
-          ? '<img src="' + p.image + '" alt="' + escapeHtml(p.model) + '" loading="lazy" onerror="this.outerHTML=\'<div class=\\\'pi-fallback\\\'>' + initial + '</div>\'">'
+          ? '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.model) + '" loading="lazy" data-fallback-letter="' + initial + '" data-fallback-class="pi-fallback">'
           : '<div class="pi-fallback">' + initial + '</div>';
         return `
           <div class="picker-item ${isSelected ? 'disabled' : ''}" data-model="${escapeAttr(p.model)}">
@@ -1248,6 +1283,7 @@
           </div>
         `;
       }).join('');
+      attachImgFallbacks(pickerList);
 
       pickerList.querySelectorAll('.picker-item').forEach(el => {
         if (el.classList.contains('disabled')) return;
@@ -1384,6 +1420,7 @@
           </table>
         </div>
       `;
+      attachImgFallbacks(comparisonOutput);
 
       if (diffsHighlighted) applyDiffHighlights();
     }
@@ -1463,10 +1500,12 @@
     }
 
     // ── Toast ──
-    function showToast(msg) {
+    let _toastTimer = null;
+    function showToast(msg, duration) {
       toastEl.textContent = msg;
       toastEl.classList.add('show');
-      setTimeout(() => toastEl.classList.remove('show'), 2500);
+      if (_toastTimer) clearTimeout(_toastTimer);
+      _toastTimer = setTimeout(() => toastEl.classList.remove('show'), duration || 2500);
     }
 
     // ── Back to top (page-level) ──

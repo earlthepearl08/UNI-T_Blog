@@ -678,16 +678,34 @@
   <script>
     function handleNewsletterSignup(e) {
       e.preventDefault();
-      const email = document.getElementById('newsletterEmail').value.trim();
+      const emailInput = document.getElementById('newsletterEmail');
+      const email = emailInput.value.trim();
       if (!email) return;
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        emailInput.focus();
+        return;
+      }
       // Open the user's mail client with a pre-filled subscribe email to Kinmo
       const subject = encodeURIComponent('Subscribe to UNI-T Philippines Newsletter');
       const body = encodeURIComponent(`Hi Kinmo team,\n\nPlease add me to the UNI-T Philippines newsletter.\n\nEmail: ${email}\n\nThanks!`);
       window.location.href = `mailto:e2shop.kinmo@gmail.com?subject=${subject}&body=${body}`;
       // Show feedback
       const btn = e.target.querySelector('button');
-      btn.textContent = 'Email opened';
-      setTimeout(() => { btn.textContent = 'Subscribe'; }, 3000);
+      btn.textContent = 'Opening mail app...';
+      setTimeout(() => {
+        btn.textContent = 'Subscribe';
+        // Show fallback for users without a default mail client
+        if (!e.target.querySelector('.newsletter-fallback')) {
+          const fallback = document.createElement('p');
+          fallback.className = 'newsletter-fallback';
+          fallback.style.cssText = 'margin-top:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.85);';
+          fallback.innerHTML = 'Mail app didn\'t open? Email us directly at <a href="mailto:e2shop.kinmo@gmail.com" style="color:#fff;text-decoration:underline;">e2shop.kinmo@gmail.com</a>';
+          e.target.appendChild(fallback);
+        }
+      }, 3000);
     }
   </script>
   <script src="js/main.js"></script>
