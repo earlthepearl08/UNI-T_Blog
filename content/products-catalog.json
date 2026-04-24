@@ -2091,7 +2091,7 @@
           "model": "UTi260K",
           "category": "Thermal Imagers",
           "subcategory": "EST / Body Temp Thermal",
-          "description": "256x192; 30°C-45°C; 56°x42.2°; 25Hz; 2.8\" TFT; For body",
+          "description": "Handheld 256×192 thermal camera tuned for body-temperature screening at clinics, schools, and building entrances. Tight 30-45°C range gives the accuracy general-purpose imagers lack.",
           "image": "/images/products/uti260k.jpg",
           "keySpecs": [
             "256x192",
@@ -2106,7 +2106,7 @@
           "model": "UTi120Mobile",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
-          "description": "120x90; -20°C-400°C; 50°x38°; 25Hz",
+          "description": "Plug-into-Android thermal camera for HVAC and electrical spot checks. The cheapest way into thermal imaging — no extra screen, just clip it to your phone.",
           "image": "/images/products/uti120mobile.jpg",
           "keySpecs": [
             "120x90",
@@ -2121,7 +2121,7 @@
           "model": "UTi120MS",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (iOS)",
-          "description": "120x90; -20°C-400°C; 50°x38°; 25Hz",
+          "description": "iPhone-compatible thermal camera for service techs already running iOS field apps. Lightning-port version of the popular UTi120Mobile.",
           "image": "/images/products/uti120ms.png",
           "keySpecs": [
             "120x90",
@@ -2136,7 +2136,7 @@
           "model": "UTi720M",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
-          "description": "256x192; -20°C-200°C; 56°x42.2°; 25Hz; 3.2mm lens",
+          "description": "256×192 Android thermal module with sharper resolution than the UTi120 series. The right pick for finding hidden water damage and insulation gaps in PH homes.",
           "image": "/images/products/uti720m.jpg",
           "keySpecs": [
             "256x192",
@@ -2151,7 +2151,7 @@
           "model": "UTi721M",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
-          "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.2mm lens; EST screening mode",
+          "description": "Android thermal module that adds 550°C high-temp range and EST screening mode. One device for both industrial hot-spots and body-temp checks.",
           "image": "/images/products/uti721m.jpg",
           "keySpecs": [
             "256x192",
@@ -2166,7 +2166,7 @@
           "model": "UTi722M",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
-          "description": "256x192; -20°C-550°C; 40°x30°; 25Hz; 4.3mm lens; Manual focus",
+          "description": "Android thermal module with manual-focus 4.3mm lens for sharper detail at distance. For inspectors needing to image PCB-level components or distant switchgear.",
           "image": "/images/products/uti722m.png",
           "keySpecs": [
             "256x192",
@@ -2181,7 +2181,7 @@
           "model": "UTi740M",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android)",
-          "description": "400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus",
+          "description": "Top-tier 400×300 Android thermal module with 9.5mm telephoto lens. For utility crews shooting overhead lines and substations from safe distance.",
           "image": "/images/products/uti740m.png",
           "keySpecs": [
             "400x300",
@@ -2196,7 +2196,7 @@
           "model": "UTi740MS",
           "category": "Thermal Imagers",
           "subcategory": "Smartphone Thermal (Android+iOS)",
-          "description": "400x300; -20°C-550°C; 29.2°x21.7°; 25Hz; 9.5mm lens; Manual focus",
+          "description": "Dual Android+iOS version of the UTi740M. The pick if your team mixes phone platforms but wants one shared thermal module.",
           "image": "/images/products/uti740ms.png",
           "keySpecs": [
             "400x300",
@@ -2211,7 +2211,7 @@
           "model": "UTi120P",
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
-          "description": "120x90; -20°C-400°C; ≤25Hz; 2.4\" TFT (320x240)",
+          "description": "Pocket standalone thermal camera — no phone needed. The point-and-shoot starter for electricians wanting their first thermal tool.",
           "image": "/images/products/uti120p.jpg",
           "keySpecs": [
             "120x90",
@@ -2225,7 +2225,7 @@
           "model": "UTi120T",
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
-          "description": "120x90; -20°C-400°C; 50°x38°; 25Hz; 3.5\" touch LCD",
+          "description": "Compact portable thermal camera with 3.5-inch touchscreen for easier on-screen analysis. Step up from the UTi120P when you want full UI controls.",
           "image": "/images/products/uti120t.jpg",
           "keySpecs": [
             "120x90",
@@ -2240,7 +2240,7 @@
           "model": "UTi720T",
           "category": "Thermal Imagers",
           "subcategory": "Portable Thermal",
-          "description": "256x192; -20°C-550°C; 56°x42°; 25Hz; 3.5\" touch LCD",
+          "description": "Touchscreen 256×192 portable thermal with 550°C high-end. The pick when you need both detail and the ability to image hot motors and breaker panels.",
           "image": "/images/products/uti720t.png",
           "keySpecs": [
             "256x192",
@@ -2255,7 +2255,7 @@
           "model": "UTi32",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "32x32; -20-1000°C; 30°x30°; 9Hz; 2.4\" LCD",
+          "description": "Specialized 1000°C high-temp thermal for foundries, kilns, and metalwork shops. Lower pixel count, but the only model that handles industrial furnace temps.",
           "image": "/images/products/uti32.png",
           "keySpecs": [
             "32x32",
@@ -2270,7 +2270,7 @@
           "model": "UTi712S",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "120x90; -20-400°C; 50°x38°; 25Hz; 2.4\" TFT",
+          "description": "Heavy-duty 120×90 thermal built to survive plant-floor abuse. Entry into the rugged S-series for facility maintenance teams.",
           "image": "/images/products/uti712s.png",
           "keySpecs": [
             "120x90",
@@ -2285,7 +2285,7 @@
           "model": "UTi716S",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "160x120; -20-550°C; 40°x30°; 25Hz; 2.4\" TFT; 2MP digital camera",
+          "description": "Step-up 160×120 thermal with 2MP visible camera for IR/visible blending. The right tool for clear inspection reports without WiFi overhead.",
           "image": "/images/products/uti716s.png",
           "keySpecs": [
             "160x120",
@@ -2300,7 +2300,7 @@
           "model": "UTi716B",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "160x120; SR 320x240; -20-550°C; 40°x30°; 25Hz; 2.8\" TFT; 2MP camera; IP65; WiFi; Video; T-mix",
+          "description": "IP65 rugged thermal with WiFi transfer and super-resolution to 320×240. The mid-range pick for outdoor utility and substation inspection.",
           "image": "/images/products/uti716s.png",
           "keySpecs": [
             "160x120",
@@ -2316,7 +2316,7 @@
           "model": "UTi120B",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "120x90; -20°C-400°C; 50°x38°; 25Hz; 2.8\" TFT",
+          "description": "Standalone 120×90 thermal with 2.8-inch screen — classic point-and-shoot rig for HVAC and electrical service calls.",
           "image": "/images/products/uti120b.jpg",
           "keySpecs": [
             "120x90",
@@ -2331,7 +2331,7 @@
           "model": "UTi720A",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "256x192; -20°C-400°C; 56°x42.2°; 25Hz; 2.8\" TFT",
+          "description": "256×192 thermal with 400°C ceiling — sweet spot for residential and small-commercial electrical work where 550°C isn't needed.",
           "image": "/images/products/uti720b.png",
           "keySpecs": [
             "256x192",
@@ -2346,7 +2346,7 @@
           "model": "UTi260B",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "256x192; -20°C-550°C; 56°x42°; 25Hz; 2.8\" TFT",
+          "description": "Workhorse 256×192 thermal camera for HVAC and electrical inspection. The most-recommended UNI-T thermal for daily field maintenance work.",
           "image": "/images/products/thermal-imager-uti260b.png",
           "keySpecs": [
             "256x192",
@@ -2361,7 +2361,7 @@
           "model": "UTi720B",
           "category": "Thermal Imagers",
           "subcategory": "Heavy Duty Thermal",
-          "description": "256x192; SR 512x384; -20°C-550°C; 56°x42°; 25Hz; 2.8\" TFT; 2MP camera; IP65; WiFi; Video; T-mix",
+          "description": "IP65 rugged 256×192 thermal with super-resolution to 512×384 and WiFi report transfer. The pro pick when reports go straight to the client.",
           "image": "/images/products/uti720b.png",
           "keySpecs": [
             "256x192",
@@ -2377,7 +2377,7 @@
           "model": "UTi720E",
           "category": "Thermal Imagers",
           "subcategory": "Enhanced Thermal",
-          "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5\" IPS; WiFi",
+          "description": "Enhanced 256×192 thermal with 3.5-inch IPS screen and WiFi for sharper UI and easier on-camera review. Bigger display than the UTi720B.",
           "image": "/images/products/uti720e.jpg",
           "keySpecs": [
             "256x192",
@@ -2393,7 +2393,7 @@
           "model": "UTi730E",
           "category": "Thermal Imagers",
           "subcategory": "Enhanced Thermal",
-          "description": "320x240; -20°C-550°C; 56°x42°; 25Hz; 3.5\" IPS; WiFi",
+          "description": "320×240 enhanced thermal with WiFi — the resolution upgrade for predictive maintenance teams who need to spot smaller defects.",
           "image": "/images/products/uti730e.jpg",
           "keySpecs": [
             "320x240",
@@ -2409,7 +2409,7 @@
           "model": "UTi720V",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "256x192; -20°C-550°C; 56°x42.2°; 25Hz; 3.5\" IPS touch; Laser ranging; 5MP camera; Video; WiFi",
+          "description": "Pro 256×192 thermal with laser rangefinder, 5MP camera, and video recording. For inspectors building full-detail reports with measurement and walk-through clips.",
           "image": "/images/products/uti720v.png",
           "keySpecs": [
             "256x192",
@@ -2425,7 +2425,7 @@
           "model": "UTi730V",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "320x240; -40°C-400°C; 56°x42°; 9Hz; 3.5\" IPS touch; Laser ranging; 5MP camera; Video; WiFi",
+          "description": "Pro 320×240 thermal with -40°C low-end for cold-storage and refrigeration inspection. Laser ranging and 5MP camera built in.",
           "image": "/images/products/uti730v.png",
           "keySpecs": [
             "320x240",
@@ -2441,7 +2441,7 @@
           "model": "UTi740H",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "384x288; -30°C-650°C; 28°x21°; 25Hz; 4.3\" IPS; Manual focus; WiFi",
+          "description": "High-res 384×288 thermal with manual focus and 4.3-inch screen. Steps up image clarity for predictive maintenance on motors, transformers, and switchgear.",
           "image": "/images/products/uti740h.jpg",
           "keySpecs": [
             "384x288",
@@ -2457,7 +2457,7 @@
           "model": "UTi256G",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "256x192; -20°C-550°C; 28°x20°; 30Hz; 3.5\" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer",
+          "description": "256×192 telephoto thermal with manual focus and 28°x20° field for distant targets. Bluetooth and WiFi push reports straight to phone.",
           "image": "/images/products/uti256g.jpg",
           "keySpecs": [
             "256x192",
@@ -2473,7 +2473,7 @@
           "model": "UTi384G",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "384x288; -20°C-550°C; 42°x30°; 30Hz; 3.5\" IPS touch; WiFi; Bluetooth; Manual focus; Laser pointer; Video",
+          "description": "Pro 384×288 wide-angle thermal with WiFi, Bluetooth, and video recording. The pick when you need both detail and a wider field of view.",
           "image": "/images/products/uti384g.jpg",
           "keySpecs": [
             "384x288",
@@ -2489,7 +2489,7 @@
           "model": "UTi384J",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "384x288; SR 768x576; 10.5mm lens; 25°x19°; 30Hz; 4.3\" LCD touch (800x480); Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 8MP camera; WiFi; BT; Laser distance",
+          "description": "Top-of-line 384×288 thermal with auto-focus, IP54 rugged build, 2m drop spec, and laser distance. The flagship for professional thermography services.",
           "image": "/images/products/uti384j.png",
           "keySpecs": [
             "384x288",
@@ -2505,7 +2505,7 @@
           "model": "UTi640J",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "640x480; SR 1280x960; 17.7mm lens; 25°x19°; 30Hz; 4.3\" LCD touch; Auto/manual/touch focus; -40°C~150°C, 0°C~650°C; IP54; 2m drop; 13MP camera; WiFi; BT; Laser distance",
+          "description": "640×480 high-resolution thermal flagship for utility-grade inspection. The detail level lets you spot single-cell PV faults and hair-fine wiring hot spots.",
           "image": "/images/products/uti640j.png",
           "keySpecs": [
             "640x480",
@@ -2521,7 +2521,7 @@
           "model": "UTi760X",
           "category": "Thermal Imagers",
           "subcategory": "Pro Enhanced Thermal",
-          "description": "640x512; SR 1280x1024; NETD<35mK; 18mm lens; 24°x19.3°; 30Hz; 5\" IPS touch; Auto/manual focus; -20°C-1200°C; ±1.5°C/1.5%; 13MP camera; WiFi; BT; Laser rangefinder; Replaceable battery; IP54; 2m drop",
+          "description": "Top-tier 640×512 thermal with 1200°C high-end and <35mK sensitivity. The professional choice for serious thermography, industrial audits, and substation surveys.",
           "image": "/images/products/uti760x.png",
           "keySpecs": [
             "640x512",
@@ -2537,7 +2537,7 @@
           "model": "UTx210W",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "256x192; 17.5°x13.1°; 50Hz; 10mm lens; Video output; Focus-free; WiFi",
+          "description": "Compact thermal monocular for outdoor security, hunting, and night observation. Focus-free design with WiFi streaming — point and watch.",
           "image": "/images/products/utx210w.png",
           "keySpecs": [
             "256x192",
@@ -2553,7 +2553,7 @@
           "model": "UTx313",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "384x288; 20.3°x15.2°; 50Hz; 13.5mm lens; Manual focus; Laser pointer; Video output",
+          "description": "384×288 thermal monocular with 13mm lens for medium-range outdoor observation. Laser pointer helps mark targets for the spotter.",
           "image": "/images/products/utx313.jpg",
           "keySpecs": [
             "384x288",
@@ -2568,7 +2568,7 @@
           "model": "UTx318",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "384x288; 14.6°x11°; 50Hz; 18mm lens; Manual focus; Laser pointer; Video output",
+          "description": "384×288 thermal monocular with 18mm lens for longer-range outdoor scouting. Tighter field of view than the UTx313.",
           "image": "/images/products/utx318.jpg",
           "keySpecs": [
             "384x288",
@@ -2583,7 +2583,7 @@
           "model": "UTx325",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "384x288; 10.5°x7.9°; 50Hz; 25mm lens; Manual focus; Laser pointer; Video output",
+          "description": "384×288 thermal monocular with 25mm telephoto for long-range observation. The longest reach in the standard UTx3xx family.",
           "image": "/images/products/utx325.jpg",
           "keySpecs": [
             "384x288",
@@ -2598,7 +2598,7 @@
           "model": "UTx313M",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Photo/Video; WiFi; Multi-language",
+          "description": "Upgraded 400×300 thermal monocular with 25mK sensitivity and onboard photo/video. The M-series step up over the standard UTx313.",
           "image": "/images/products/utx313m.png",
           "keySpecs": [
             "400x300",
@@ -2614,7 +2614,7 @@
           "model": "UTx318M",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Photo/Video; WiFi; Multi-language",
+          "description": "400×300 thermal monocular with 18mm lens — mid-range reach with M-series sensitivity. The everyday choice for night patrols and wildlife observation.",
           "image": "/images/products/utx318m.png",
           "keySpecs": [
             "400x300",
@@ -2630,7 +2630,7 @@
           "model": "UTx325M",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language",
+          "description": "400×300 thermal monocular with 25mm telephoto — longest standard reach with photo/video and WiFi. For perimeter and long-range scouting.",
           "image": "/images/products/utx325m.png",
           "keySpecs": [
             "400x300",
@@ -2646,7 +2646,7 @@
           "model": "UTx313MR",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 20°x15°; 25mK; 50Hz; 13mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
+          "description": "400×300 thermal monocular with 1000m laser rangefinder built in. The MR-series adds distance measurement for tactical and surveying use.",
           "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
@@ -2662,7 +2662,7 @@
           "model": "UTx318MR",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 14.6°x11°; 25mK; 50Hz; 18mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
+          "description": "400×300 thermal monocular with 18mm lens and 1000m laser rangefinder. Mid-reach scope for outdoor security and wildlife teams who need range data.",
           "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
@@ -2678,7 +2678,7 @@
           "model": "UTx325MR",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "400x300; 10.5°x7.9°; 25mK; 50Hz; 25mm lens; Laser ranging up to 1000m; Photo/Video; WiFi",
+          "description": "400×300 thermal monocular with 25mm telephoto and 1000m laser ranging. Long reach plus distance — for serious outdoor and tactical applications.",
           "image": "/images/products/utx-mr-series.png",
           "keySpecs": [
             "400x300",
@@ -2694,7 +2694,7 @@
           "model": "UTx625M",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "640x512; 17.4°x14°; 25mK; 50Hz; 25mm lens; Photo/Video; WiFi; Multi-language",
+          "description": "640×512 high-res thermal monocular with 25mm lens. The flagship for spotting fine detail at distance — security pros and naturalists.",
           "image": "/images/products/utx625m.png",
           "keySpecs": [
             "640x512",
@@ -2710,7 +2710,7 @@
           "model": "UTx635M",
           "category": "Thermal Imagers",
           "subcategory": "Thermal Monocular",
-          "description": "640x512; 12.5°x10°; 25mK; 50Hz; 35mm lens; Photo/Video; WiFi; Multi-language",
+          "description": "640×512 thermal monocular with 35mm telephoto — top of the standard UTx line for long-range professional observation.",
           "image": "/images/products/utx635m.png",
           "keySpecs": [
             "640x512",
@@ -2786,7 +2786,7 @@
           "model": "LM50A",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "50m; LCD; m/ft/in; Front/Rear",
+          "description": "Pocket 50m laser distance meter for residential renovation, room sizing, and interior contractors. Front and rear reference makes corner measurement easy.",
           "image": "/images/products/lm50a.jpg",
           "keySpecs": [
             "50m",
@@ -2801,7 +2801,7 @@
           "model": "LM70A",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "70m; LCD; m/ft/in; Front/Rear",
+          "description": "70m laser distance meter for mid-size warehouse, retail, and commercial site work. Step up from the LM50A when 50m runs short.",
           "image": "/images/products/lm70a.jpg",
           "keySpecs": [
             "70m",
@@ -2816,7 +2816,7 @@
           "model": "LM100A",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "100m; LCD; m/ft/in; Front/Rear",
+          "description": "100m laser distance meter — the daily driver for surveyors, contractors, and warehouse layout teams measuring full-building spans.",
           "image": "/images/products/lm100a.jpg",
           "keySpecs": [
             "100m",
@@ -2831,7 +2831,7 @@
           "model": "LM120A",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "120m; LCD; m/ft/in; Front/Rear",
+          "description": "120m laser distance meter for commercial and industrial site surveying. The longest reach in the LM-A series.",
           "image": "/images/products/lm120a.jpg",
           "keySpecs": [
             "120m",
@@ -2846,7 +2846,7 @@
           "model": "LM40Mi",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "40m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "description": "40m laser distance meter with USB-C rechargeable Li-ion battery. No more dead AAA mid-job — the modern pick for daily indoor work.",
           "image": "/images/products/lm40mi.jpg",
           "keySpecs": [
             "40m",
@@ -2861,7 +2861,7 @@
           "model": "LM60Mi",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "60m; LCD; m/ft/in; Front/Rear; Li-ion + Type-C",
+          "description": "60m USB-C rechargeable laser distance meter — extra reach over the LM40Mi. The renovation contractor's everyday tool.",
           "image": "/images/products/lm60mi.jpg",
           "keySpecs": [
             "60m",
@@ -2876,7 +2876,7 @@
           "model": "LM40T",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "40m laser + 5m tape; 1.2\" LCD",
+          "description": "40m laser distance meter with built-in 5m steel tape. Two tools in one — for finish carpenters who switch between long and short measurements all day.",
           "image": "/images/products/lm40t.jpg",
           "keySpecs": [
             "40m laser + 5m tape",
@@ -2889,7 +2889,7 @@
           "model": "LM60T",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "60m laser + 5m tape; 1.2\" LCD",
+          "description": "60m laser plus 5m tape combo — extra laser reach over the LM40T. The clean-pocket choice for trim, cabinet, and renovation crews.",
           "image": "/images/products/lm60t.jpg",
           "keySpecs": [
             "60m laser + 5m tape",
@@ -2902,7 +2902,7 @@
           "model": "LM40",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 40m max range, length/area/volume measurement",
+          "description": "Pocket 40m laser meter with length/area/volume modes. The cheapest entry into laser distance measurement for DIY and small jobs.",
           "image": "/images/products/lm40.jpg",
           "keySpecs": [
             "40m range",
@@ -2917,7 +2917,7 @@
           "model": "LM50",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 50m max range",
+          "description": "Pocket 50m laser distance meter — the basic, reliable size for residential and commercial interior measurement.",
           "image": "/images/products/lm50.jpg",
           "keySpecs": [
             "50m range",
@@ -2931,7 +2931,7 @@
           "model": "LM60",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 60m max range",
+          "description": "Pocket 60m laser distance meter for general interior and small commercial site work. Mid-range pick when 50m won't cover full warehouse spans.",
           "image": "/images/products/lm60.jpg",
           "keySpecs": [
             "60m range",
@@ -2945,7 +2945,7 @@
           "model": "LM80",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "Laser distance meter, 80m max range",
+          "description": "80m laser distance meter for surveyors and contractors needing more reach than pocket sizes give. Solid mid-tier pick.",
           "image": "/images/products/lm80.jpg",
           "keySpecs": [
             "80m range"
@@ -2958,7 +2958,7 @@
           "model": "LM100",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "Laser distance meter, 100m max range",
+          "description": "100m laser distance meter for full-building surveys and site work. The most popular size for general construction.",
           "image": "/images/products/lm100.jpg",
           "keySpecs": [
             "100m range"
@@ -2971,7 +2971,7 @@
           "model": "LM120",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "Laser distance meter, 120m max range",
+          "description": "120m laser distance meter for warehouse, logistics, and outdoor commercial work. Step up from the LM100 when reach is a daily issue.",
           "image": "/images/products/lm120.jpg",
           "keySpecs": [
             "120m range"
@@ -2984,7 +2984,7 @@
           "model": "LM150",
           "category": "Laser Distance Meters",
           "subcategory": "Laser Distance Meter",
-          "description": "Laser distance meter, 150m max range",
+          "description": "150m laser distance meter — top reach in the standard LM line. For outdoor surveying, plant layout, and large facility audits.",
           "image": "/images/products/lm150.jpg",
           "keySpecs": [
             "150m range"
@@ -2997,7 +2997,7 @@
           "model": "LM40-I",
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
-          "description": "Industrial laser distance meter, 40m range, ±(2mm+5×10⁻⁵D) accuracy",
+          "description": "Industrial-grade 40m laser distance meter with Pythagoras mode. Built for factory layout, machine alignment, and metrology-critical work.",
           "image": "/images/products/lm40-i.jpg",
           "keySpecs": [
             "40m range",
@@ -3012,7 +3012,7 @@
           "model": "LM50-I",
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
-          "description": "Industrial laser distance meter, 50m range, ±(2mm+5×10⁻⁵D) accuracy",
+          "description": "Industrial 50m laser distance meter for plant maintenance and metal fabrication shops. Ruggedized version of the LM50 with ±2mm precision.",
           "image": "/images/products/lm50-i.jpg",
           "keySpecs": [
             "50m range",
@@ -3026,7 +3026,7 @@
           "model": "LM120-I",
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
-          "description": "Industrial laser distance meter, 120m range, auto-leveling",
+          "description": "Industrial 120m laser meter with auto-leveling for sloped and uneven sites. The pick for surveying teams working hilly terrain.",
           "image": "/images/products/lm120-i.jpg",
           "keySpecs": [
             "120m range",
@@ -3040,7 +3040,7 @@
           "model": "LM150-I",
           "category": "Laser Distance Meters",
           "subcategory": "Industrial Laser Distance Meter",
-          "description": "Industrial laser distance meter, 150m range, auto-leveling",
+          "description": "Industrial 150m laser distance meter with auto-leveling — flagship of the I-series. For utility, plant, and large infrastructure work.",
           "image": "/images/products/lm150-i.jpg",
           "keySpecs": [
             "150m range",
@@ -3054,7 +3054,7 @@
           "model": "LM40e",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 40m range, 1.8'' LCD, ±2mm accuracy",
+          "description": "40m pocket laser meter with bigger 1.8-inch LCD for easier reading at arm's length. The e-series upgrade — better screen, same compact size.",
           "image": "/images/products/lm40e.jpg",
           "keySpecs": [
             "40m",
@@ -3069,7 +3069,7 @@
           "model": "LM50e",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 50m range, 1.8'' LCD, ±2mm accuracy",
+          "description": "50m pocket laser meter with 1.8-inch LCD — the most popular e-series size. Daily measure tool for renovators and contractors.",
           "image": "/images/products/lm50e.jpg",
           "keySpecs": [
             "50m",
@@ -3084,7 +3084,7 @@
           "model": "LM60e",
           "category": "Laser Distance Meters",
           "subcategory": "Pocket Laser Distance Meter",
-          "description": "Pocket laser distance meter, 60m range, 1.8'' LCD, ±2mm accuracy",
+          "description": "60m pocket laser meter with 1.8-inch LCD — top of the e-series. The reach-and-readability sweet spot for commercial site teams.",
           "image": "/images/products/lm60e.jpg",
           "keySpecs": [
             "60m",
@@ -3108,7 +3108,7 @@
           "model": "UT300A+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-20°C~400°C; D:S 10:1; ε 0.95",
+          "description": "Entry-level IR thermometer for HVAC, food service, and home DIY checks up to 400°C. The cheapest way to add non-contact temperature to your toolkit.",
           "image": "/images/products/ut300-series.jpg",
           "keySpecs": [
             "-20°C~400°C",
@@ -3122,7 +3122,7 @@
           "model": "UT300S",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~400°C; Single laser; D:S 12:1; ε 0.10-1.00",
+          "description": "General-purpose IR thermometer with single laser pointer and adjustable emissivity. The bench-and-field workhorse for HVAC and electrical techs.",
           "image": "/images/products/ut300-series.jpg",
           "keySpecs": [
             "-32°C~400°C",
@@ -3137,7 +3137,7 @@
           "model": "UT306S",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-50°C~500°C; Single laser; D:S 12:1; ε 0.10-1.00",
+          "description": "Wider-range IR thermometer covering -50°C to 500°C — handles cold-storage and small industrial heat checks in one tool.",
           "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-50°C~500°C",
@@ -3152,7 +3152,7 @@
           "model": "UT306C",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-50°C~500°C; Circle laser; D:S 12:1; ε 0.10-1.00",
+          "description": "UT306S with circle laser instead of single dot — shows the actual measurement area, eliminating guesswork on exactly what you're reading.",
           "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-50°C~500°C",
@@ -3167,7 +3167,7 @@
           "model": "UT306A",
           "category": "Infrared Thermometers",
           "subcategory": "Mini IR Thermometer",
-          "description": "-35°C~300°C; D:S 6:1; ε 0.95",
+          "description": "Mini palm-sized IR thermometer — the pocket pick for kitchen, refrigeration, and quick spot checks. Lightweight, fixed emissivity, point-and-shoot simple.",
           "image": "/images/products/ut306-series.jpg",
           "keySpecs": [
             "-35°C~300°C",
@@ -3181,7 +3181,7 @@
           "model": "UT301A+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~420°C; Single laser; D:S 12:1; ε 0.10-1.00",
+          "description": "Solid mid-range IR gun for HVAC techs and electricians. Single-laser version with adjustable emissivity for varied surface materials.",
           "image": "/images/products/ut301-plus-series.jpg",
           "keySpecs": [
             "-32°C~420°C",
@@ -3196,7 +3196,7 @@
           "model": "UT301C+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~600°C; Circle laser; D:S 12:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
+          "description": "All-purpose IR thermometer for HVAC and electrical hot-spot detection up to 600°C. Circle laser shows the actual measurement area, not a confusing single dot.",
           "image": "/images/products/ut301c.png",
           "keySpecs": [
             "-32°C~600°C",
@@ -3211,7 +3211,7 @@
           "model": "UT301D+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~600°C; Dual laser; D:S 12:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
+          "description": "Dual-laser IR thermometer that brackets the spot size — easier than circle laser for spotting at distance. Top of the UT301+ series.",
           "image": "/images/products/ut301-plus-series.jpg",
           "keySpecs": [
             "-32°C~600°C",
@@ -3226,7 +3226,7 @@
           "model": "UT302A+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~700°C; Single laser; D:S 20:1; ε 0.10-1.00; Scheduled; Hi/Lo alarm",
+          "description": "20:1 IR thermometer for measuring at distance — useful when targets are behind guards or at height. Single laser, up to 700°C.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~700°C",
@@ -3241,7 +3241,7 @@
           "model": "UT302C+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~1100°C; Circle laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
+          "description": "Mid-temp industrial IR thermometer up to 1100°C with circle laser. For boiler, kiln, and hot-process work where 600°C isn't enough.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1100°C",
@@ -3256,7 +3256,7 @@
           "model": "UT302D+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~1100°C; Dual laser; D:S 20:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
+          "description": "Dual-laser version of the UT302C+ — clearer spot bracketing for long-distance shots up to 1100°C. The pick when accuracy of aim matters at range.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1100°C",
@@ -3271,7 +3271,7 @@
           "model": "UT303A+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~800°C; Single laser; D:S 30:1; ε 0.10-1.00; Hi/Lo alarm",
+          "description": "Long-range 30:1 IR thermometer up to 800°C — for measuring overhead lines, conveyor bearings, and inaccessible motors from safe distance.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~800°C",
@@ -3286,7 +3286,7 @@
           "model": "UT303C+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~1300°C; Circle laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled; Hi/Lo alarm",
+          "description": "High-temp 30:1 IR thermometer to 1300°C with circle laser. For furnace, smelting, and heat-treatment shops needing both reach and clear targeting.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1300°C",
@@ -3301,7 +3301,7 @@
           "model": "UT303D+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-32°C~1300°C; Dual laser; D:S 30:1; ε 0.10-1.00; 99 storage; Scheduled",
+          "description": "Dual-laser high-temp version of the UT303C+ to 1300°C. Cleaner spot bracketing for furnace and metalwork measurement at distance.",
           "image": "/images/products/ut302-303-plus-series.jpg",
           "keySpecs": [
             "-32°C~1300°C",
@@ -3316,7 +3316,7 @@
           "model": "UT305S",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-50°C~2000°C; D:S 50:1; ε 0.10-1.00; 99 storage; EBTN LCD",
+          "description": "Long-distance industrial IR thermometer up to 2000°C with 50:1 optics. For metalwork, foundries, and high-temp industrial process monitoring.",
           "image": "/images/products/ut305s.jpg",
           "keySpecs": [
             "-50°C~2000°C",
@@ -3331,7 +3331,7 @@
           "model": "UT305A+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-50°C~1850°C; D:S 55:1; ε 0.10-1.00; Single laser; 999 storage",
+          "description": "55:1 ratio IR thermometer to 1850°C with 999-reading storage. The data-logging upgrade for industrial QA teams tracking process temperatures.",
           "image": "/images/products/ut305-plus-series.jpg",
           "keySpecs": [
             "-50°C~1850°C",
@@ -3346,7 +3346,7 @@
           "model": "UT305C+",
           "category": "Infrared Thermometers",
           "subcategory": "IR Thermometer",
-          "description": "-50°C~2200°C; D:S 55:1; ε 0.10-1.00; Single laser; Class 2; 8-14μm; 999 storage",
+          "description": "Top-of-line IR thermometer up to 2200°C — the highest range UNI-T offers. For molten-metal foundries and the most extreme industrial heat work.",
           "image": "/images/products/ut305-plus-series.jpg",
           "keySpecs": [
             "-50°C~2200°C",
@@ -3361,7 +3361,7 @@
           "model": "UT309A",
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
-          "description": "-35°C~450°C; D:S 10:1; ε 0.95; Single laser; Class 2; IP65",
+          "description": "IP65-rated IR thermometer for outdoor and dirty industrial use up to 450°C. The pick when your workspace gets rained on or dusty.",
           "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~450°C",
@@ -3377,7 +3377,7 @@
           "model": "UT309C",
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
-          "description": "-35°C~650°C; D:S 12:1; ε 0.1-1; Dual lasers; Class 2; IP65",
+          "description": "IP65 dual-laser IR thermometer to 650°C — outdoor-rugged with bracketed targeting for plant-floor measurement on rainy days.",
           "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~650°C",
@@ -3393,7 +3393,7 @@
           "model": "UT309E",
           "category": "Infrared Thermometers",
           "subcategory": "Pro IR Thermometer",
-          "description": "-35°C~850°C; D:S 20:1; ε 0.1-1; Hi/Lo alarm; IP65",
+          "description": "IP65-rated pro IR thermometer for outdoor industrial use up to 850°C. The one to take into the rain or dusty plant floors.",
           "image": "/images/products/ut309-series.jpg",
           "keySpecs": [
             "-35°C~850°C",
@@ -3669,7 +3669,7 @@
           "model": "LM600",
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
-          "description": "5-600yd; 7X mag; 25mm objective; Height 250yd; Angle",
+          "description": "Entry-level 600-yard laser rangefinder for hunting, archery, and recreational shooting. The cheapest way into long-range distance measurement.",
           "image": "/images/products/lm600.jpg",
           "keySpecs": [
             "5-600yd",
@@ -3684,7 +3684,7 @@
           "model": "LM1000",
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
-          "description": "5-1000yd; 7X mag; 25mm objective; Height 450yd; Velocity; Angle",
+          "description": "1000-yard rangefinder with velocity measurement — the do-everything pick for hunters and outdoor sport. Step up from the LM600.",
           "image": "/images/products/lm1000.jpg",
           "keySpecs": [
             "5-1000yd",
@@ -3699,7 +3699,7 @@
           "model": "LM1500",
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
-          "description": "5-1500yd; 7X mag; 25mm objective; Height 451yd; Velocity; Angle",
+          "description": "1500-yard rangefinder for long-range hunters and tactical shooters. The reach upgrade when 1000 yards isn't enough.",
           "image": "/images/products/lm1500.jpg",
           "keySpecs": [
             "5-1500yd",
@@ -3714,7 +3714,7 @@
           "model": "LM2000",
           "category": "Laser Rangefinders",
           "subcategory": "Laser Rangefinder",
-          "description": "2000m; Type-C charging; USB export",
+          "description": "2000m laser rangefinder with USB-C and data export. For surveying and long-range observation when 1000m isn't enough.",
           "image": "/images/products/lm2000.jpg",
           "keySpecs": [
             "2000m",
@@ -3728,7 +3728,7 @@
           "model": "LM600G",
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
-          "description": "3-600m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
+          "description": "600m golf rangefinder with flagpole lock and slope correction — the entry pick for course play.",
           "image": "/images/products/lm600g.jpg",
           "keySpecs": [
             "3-600m",
@@ -3743,7 +3743,7 @@
           "model": "LM800G",
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
-          "description": "3-800m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
+          "description": "800m golf rangefinder for amateur and club players. The reach upgrade over the LM600G with same flagpole lock and slope features.",
           "image": "/images/products/lm800g.jpg",
           "keySpecs": [
             "3-800m",
@@ -3758,7 +3758,7 @@
           "model": "LM1000G",
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
-          "description": "3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
+          "description": "1000m golf rangefinder — the most popular size for serious club golfers. Reaches every pin on standard courses.",
           "image": "/images/products/lm1000g.jpg",
           "keySpecs": [
             "3-1000m",
@@ -3773,7 +3773,7 @@
           "model": "LM1200G",
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
-          "description": "3-1200m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
+          "description": "1200m golf rangefinder for tournament-class players who need max distance and slope correction in one device.",
           "image": "/images/products/lm1200g.jpg",
           "keySpecs": [
             "3-1200m",
@@ -3788,7 +3788,7 @@
           "model": "LM1500G",
           "category": "Laser Rangefinders",
           "subcategory": "Golf Rangefinder",
-          "description": "3-1500m; Flagpole lock; Golf trajectory; Slope; Height; Auto power off",
+          "description": "1500m golf rangefinder — top of the G-series with longest reach for serious tournament play and demanding course layouts.",
           "image": "/images/products/lm1500g.jpg",
           "keySpecs": [
             "3-1500m",
@@ -3803,7 +3803,7 @@
           "model": "LM600A",
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
-          "description": "3-600m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display",
+          "description": "600m pro rangefinder with external display, area/volume calculation, and slope. The do-everything model — golf, hunting, and surveying combined.",
           "image": "/images/products/lm600a.jpg",
           "keySpecs": [
             "3-600m",
@@ -3818,7 +3818,7 @@
           "model": "LM800A",
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
-          "description": "3-800m; Same features as LM600A + 800m range",
+          "description": "800m pro multi-use rangefinder — same surveying and golf features as the LM600A with extended reach.",
           "image": "/images/products/lm800a.jpg",
           "keySpecs": [
             "3-800m"
@@ -3830,7 +3830,7 @@
           "model": "LM1000A",
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
-          "description": "3-1000m; Flagpole lock; Golf trajectory; Slope; Height; Area; Volume; External display",
+          "description": "1000m pro rangefinder — most popular A-series for site surveying, hunting, and golf use combined.",
           "image": "/images/products/lm1000a.jpg",
           "keySpecs": [
             "3-1000m",
@@ -3845,7 +3845,7 @@
           "model": "LM1200A",
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
-          "description": "3-1200m; Same as LM1000A + longer range",
+          "description": "1200m pro rangefinder for surveyors and outdoor pros needing extra reach. Step up from the LM1000A.",
           "image": "/images/products/lm1200a.jpg",
           "keySpecs": [
             "3-1200m"
@@ -3857,7 +3857,7 @@
           "model": "LM1500A",
           "category": "Laser Rangefinders",
           "subcategory": "Pro Rangefinder",
-          "description": "3-1500m; Same as LM1000A + longest range",
+          "description": "1500m flagship pro rangefinder with longest reach in the A-series. For long-range surveying and serious outdoor professionals.",
           "image": "/images/products/lm1500a.jpg",
           "keySpecs": [
             "3-1500m"
@@ -3878,7 +3878,7 @@
           "model": "UT330B",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogging T/RH",
-          "description": "-40°C~80°C; 0-100% RH",
+          "description": "Compact T/RH datalogger for cold-chain shipments and pharmaceutical storage monitoring. Pocket-size with USB readout for compliance reports.",
           "image": "/images/products/ut330-series.jpg",
           "keySpecs": [
             "-40°C~80°C",
@@ -3891,7 +3891,7 @@
           "model": "UT330C",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogging T/RH/P",
-          "description": "-40°C~80°C; 0-100% RH; 750-1100hPa",
+          "description": "Three-in-one datalogger adding atmospheric pressure to T/RH. For meteorology, lab, and altitude-sensitive logistics applications.",
           "image": "/images/products/ut330-series.jpg",
           "keySpecs": [
             "-40°C~80°C",
@@ -3904,7 +3904,7 @@
           "model": "UT330T",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogger",
-          "description": "-30°C~70°C; 64000 storage; Alarm delay; IP65; Software",
+          "description": "IP65 rugged temperature datalogger with 64,000-reading memory. For outdoor and dirty-environment cold-chain monitoring.",
           "image": "/images/products/ut330t.jpg",
           "keySpecs": [
             "-30°C~70°C",
@@ -3919,7 +3919,7 @@
           "model": "UT330TH",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogger T/RH",
-          "description": "-30°C~70°C; 0-99.9% RH; 64000 storage; Alarm delay; Software; Type-A",
+          "description": "T/RH datalogger with 64K memory and USB-A connection. Standard pick for warehouse, museum, and cleanroom condition tracking.",
           "image": "/images/products/ut330th.png",
           "keySpecs": [
             "-30°C~70°C",
@@ -3934,7 +3934,7 @@
           "model": "UT330THC",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Datalogger T/RH",
-          "description": "-30°C~70°C; 0-99.9% RH; 64000 storage; Auto power off; Alarm delay; Software & APP; Type-C",
+          "description": "USB-C T/RH datalogger with mobile app — modern upgrade over the UT330TH. Read data straight to your phone, no laptop needed.",
           "image": "/images/products/ut330th-thc.jpg",
           "keySpecs": [
             "-30°C~70°C",
@@ -3949,7 +3949,7 @@
           "model": "UT331+",
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
-          "description": "-20-70°C ±0.5°C; Dew point; Wet bulb; Humidity; 299 storage; USB",
+          "description": "Handheld T/RH meter with dew-point and wet-bulb readings — useful for HVAC commissioning and indoor air quality checks.",
           "image": "/images/products/ut331-plus.jpg",
           "keySpecs": [
             "-20-70°C ±0.5°C",
@@ -3964,7 +3964,7 @@
           "model": "UT332+",
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
-          "description": "-20-70°C ±0.3°C; Dew point; Wet bulb; Humidity; 999 storage; USB",
+          "description": "Higher-accuracy T/RH meter with ±0.3°C precision — the upgrade pick for HVAC commissioning teams who can't tolerate sloppy readings.",
           "image": "/images/products/ut332.png",
           "keySpecs": [
             "-20-70°C ±0.3°C",
@@ -3979,7 +3979,7 @@
           "model": "UT333S",
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
-          "description": "-10-60°C; 0-100% RH; Overload alarm; Hold; Auto power off; Split design",
+          "description": "Split-design T/RH meter — sensor on a cable so you can monitor inside cabinets and ducts without crawling in. With overload alarm.",
           "image": "/images/products/environmental-ut333s.png",
           "keySpecs": [
             "-10-60°C",
@@ -3994,7 +3994,7 @@
           "model": "UT333",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Mini T/RH Meter",
-          "description": "-10-60°C; 0-100% RH; Overload; Auto power off",
+          "description": "Pocket T/RH meter for warehouse spot checks, server room monitoring, and home dehumidifier verification. Cheap, simple, instant readout.",
           "image": "/images/products/ut333.jpg",
           "keySpecs": [
             "-10-60°C",
@@ -4009,7 +4009,7 @@
           "model": "UT333BT",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Mini T/RH Meter",
-          "description": "-10-60°C; 0-100% RH; Bluetooth; Overload; Auto power off",
+          "description": "Bluetooth version of the UT333 — log to your phone for trend graphs. The pick when a single snapshot reading isn't enough.",
           "image": "/images/products/ut333.jpg",
           "keySpecs": [
             "-10-60°C",
@@ -4024,7 +4024,7 @@
           "model": "A12T",
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
-          "description": "LCD 4.5\"; -10-50°C; External probe; Humidity",
+          "description": "Wall-mount T/RH display with external probe and 4.5-inch LCD. Useful for office, lab, and storeroom continuous condition display.",
           "image": "/images/products/a12t.jpg",
           "keySpecs": [
             "LCD 4.5\"",
@@ -4039,7 +4039,7 @@
           "model": "A13T",
           "category": "Temperature & Humidity Meters",
           "subcategory": "T/RH Meter",
-          "description": "LCD 4.5\"; -10-50°C; Humidity",
+          "description": "Wall-mount T/RH display without external probe — simpler, cheaper version of the A12T for indoor-only monitoring.",
           "image": "/images/products/a13t.jpg",
           "keySpecs": [
             "LCD 4.5\"",
@@ -4053,7 +4053,7 @@
           "model": "A56 BT",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Bluetooth T/RH Datalogger",
-          "description": "-40°C~85°C ±0.3°C; 0-100% RH ±2.5%; 64000 storage; BT/PC; Audio+Visual alarm",
+          "description": "Bluetooth T/RH datalogger with audible and visual alarms. For pharmacy, museum, and cold-storage teams who need instant alerts on excursion.",
           "image": "/images/products/a56-bt.png",
           "keySpecs": [
             "-40°C~85°C ±0.3°C",
@@ -4068,7 +4068,7 @@
           "model": "A57 BT",
           "category": "Temperature & Humidity Meters",
           "subcategory": "Bluetooth T/RH Datalogger",
-          "description": "-40°C~85°C; 0-100% RH; 64000 storage; PC+BT; IP54; 3 sensor types",
+          "description": "IP54 Bluetooth T/RH datalogger with three swappable sensor types. The flexible field pick when one logger needs to handle multiple environments.",
           "image": "/images/products/a57-bt.png",
           "keySpecs": [
             "-40°C~85°C",
@@ -4093,7 +4093,7 @@
           "model": "UT663B",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "1m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD camera; IP67; Photo+Video; 32GB TF; 3000mAh Li",
+          "description": "Pro 5-inch HD borescope with bi-directional articulating tip and 1m probe. Best-in-class image quality for engine, gearbox, and pipe inspection.",
           "image": "/images/products/ut663b.png",
           "keySpecs": [
             "1m probe (fixed)",
@@ -4109,7 +4109,7 @@
           "model": "UT663B-2m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "2m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh",
+          "description": "2m-probe version of the UT663B for deeper engine, HVAC duct, and tank inspection. Same articulating tip and HD image.",
           "image": "/images/products/ut663b.png",
           "keySpecs": [
             "2m probe (fixed)",
@@ -4125,7 +4125,7 @@
           "model": "UT663B-3m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "3m probe (fixed); 5\" HD; 180° bi-direction; 8 LED; 1000K HD; IP67; Photo+Video; 32GB; 3000mAh",
+          "description": "3m-probe UT663B for plumbing drain runs, deep tank, and aircraft inspection. The longest reach in the articulating UT663B family.",
           "image": "/images/products/ut663b.png",
           "keySpecs": [
             "3m probe (fixed)",
@@ -4141,7 +4141,7 @@
           "model": "UT665",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "640x480; 1m probe; 2.4\" LCD; 9mm lens; 4 LED; IP67 probe",
+          "description": "Entry-level 1m borescope with 9mm camera tip — the cheapest pick for automotive, plumbing, and HVAC inspection. Standard SD-quality image.",
           "image": "/images/products/ut665.png",
           "keySpecs": [
             "640x480",
@@ -4157,7 +4157,7 @@
           "model": "UT665P",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "1m probe (replaceable); 4.3\" HD; 300K HD camera; 70° FOV; IP67; 8 LED; 2000mAh Li; Side mirror, magnet, hook",
+          "description": "Flexible 4.3-inch HD borescope with replaceable 1m probe and accessory kit (mirror, magnet, hook). The do-everything pick for service techs.",
           "image": "/images/products/ut665p.png",
           "keySpecs": [
             "1m probe (replaceable)",
@@ -4173,7 +4173,7 @@
           "model": "UT665P-5m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "5m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
+          "description": "5m-probe UT665P for mid-depth plumbing and conduit inspection. Same accessory kit and HD screen, longer reach.",
           "image": "/images/products/ut665p.png",
           "keySpecs": [
             "5m probe (replaceable)",
@@ -4189,7 +4189,7 @@
           "model": "UT665P-10m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "10m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
+          "description": "10m-probe UT665P for deep drain, sewer, and industrial conduit work. The longest reach in the UT665P family.",
           "image": "/images/products/ut665p.png",
           "keySpecs": [
             "4.3\" HD",
@@ -4204,7 +4204,7 @@
           "model": "UT667",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "1m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
+          "description": "Industrial 4.3-inch borescope with 1m replaceable probe — the standalone version of the UT665P without accessory kit.",
           "image": "/images/products/ut667.png",
           "keySpecs": [
             "1m probe (replaceable)",
@@ -4220,7 +4220,7 @@
           "model": "UT667-5m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "5m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
+          "description": "5m UT667 for plumbers and HVAC techs needing mid-range probe reach without the accessory kit.",
           "image": "/images/products/ut667.png",
           "keySpecs": [
             "5m probe (replaceable)",
@@ -4236,7 +4236,7 @@
           "model": "UT667-10m",
           "category": "Borescopes",
           "subcategory": "Borescope",
-          "description": "10m probe (replaceable); 4.3\" HD; 300K HD; 70° FOV; IP67; 8 LED; 2000mAh",
+          "description": "10m UT667 — longest reach in the UT667 line. For deep pipeline, sewer, and large industrial duct inspection work.",
           "image": "/images/products/ut667.png",
           "keySpecs": [
             "4.3\" HD",
@@ -4260,7 +4260,7 @@
           "model": "LM570LD-II",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Green LD; 2 lines",
+          "description": "Compact 2-line green laser level for shelving, picture-hanging, and DIY trim work. Bright green beam outshines red — visible even on sunny PH days.",
           "image": "/images/products/lm570ld-ii.jpg",
           "keySpecs": [
             "Green LD",
@@ -4273,7 +4273,7 @@
           "model": "LM570R-I",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Red; 1V1H; H110°/V110°",
+          "description": "Budget red-beam 1V1H laser level — cheapest indoor leveling tool for finish carpenters and DIY users.",
           "image": "/images/products/lm570r-i.jpg",
           "keySpecs": [
             "Red",
@@ -4286,7 +4286,7 @@
           "model": "LM573LD-II",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Green LD; 3D 12 lines",
+          "description": "12-line 3D green laser level for tile, drywall, and ceiling work. Self-leveling — the daily driver for finishing trades in PH renovation work.",
           "image": "/images/products/lm573ld-ii.jpg",
           "keySpecs": [
             "Green LD",
@@ -4299,7 +4299,7 @@
           "model": "LM575LD",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Green LD; 3D 12 lines",
+          "description": "12-line green laser with brighter LD module than the LM573LD-II — better visibility on bright sites and outdoor work.",
           "image": "/images/products/lm575ld.jpg",
           "keySpecs": [
             "Green LD",
@@ -4312,7 +4312,7 @@
           "model": "LM576LD",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Osram green LD; 3D 16 lines",
+          "description": "16-line green laser with German Osram LD — the brightest and most line-coverage in the family. For complex commercial fit-out work.",
           "image": "/images/products/lm576ld.jpg",
           "keySpecs": [
             "Osram green LD",
@@ -4325,7 +4325,7 @@
           "model": "LM585LD",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "Osram green LD; 8 lines",
+          "description": "8-line green laser with Osram LD for general construction layout. Mid-line option between the 12-line and 16-line models.",
           "image": "/images/products/lm585ld.jpg",
           "keySpecs": [
             "Osram green LD",
@@ -4338,7 +4338,7 @@
           "model": "LM573R",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
+          "description": "12-line red laser with rechargeable battery and remote — budget alternative to the green LM573LD-II for indoor projects.",
           "image": "/images/products/lm573r.jpg",
           "keySpecs": [
             "12 red lines",
@@ -4353,7 +4353,7 @@
           "model": "LM575R",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "12 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
+          "description": "12-line red laser with brighter beam than the LM573R — better visibility on bright sites without the cost of green.",
           "image": "/images/products/lm575r.jpg",
           "keySpecs": [
             "12 red lines",
@@ -4368,7 +4368,7 @@
           "model": "LM576R",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "16 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
+          "description": "16-line red laser — most lines in the red family for complex layout work. Cheaper than the equivalent green LM576LD.",
           "image": "/images/products/lm576r.jpg",
           "keySpecs": [
             "16 red lines",
@@ -4383,7 +4383,7 @@
           "model": "LM585R",
           "category": "Laser Levels",
           "subcategory": "Laser Level",
-          "description": "8 red lines; 3 brightness; Self-level ±3°; Rechargeable; Wireless remote",
+          "description": "8-line red laser — mid-tier for general construction layout. Cheapest 8-line option in the family.",
           "image": "/images/products/lm585r.jpg",
           "keySpecs": [
             "8 red lines",
@@ -4407,7 +4407,7 @@
           "model": "UT07A",
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
-          "description": "AC 230V 50-60Hz; Rated current 10A; Socket test",
+          "description": "Basic UK/EU socket wiring tester for verifying outlet polarity and earth connection. Plug in, watch the LEDs — quickest first check on any new install.",
           "image": "/images/products/ut07a.jpg",
           "keySpecs": [
             "AC 230V 50-60Hz",
@@ -4424,7 +4424,7 @@
           "model": "UT07B",
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
-          "description": "AC 230V 50-60Hz; Rated current 10A; Socket test; RCD test 30mA leakage",
+          "description": "EU socket tester with built-in 30mA RCD trip test — verifies wiring AND ground-fault protection in one device. Saves a separate trip with a megger.",
           "image": "/images/products/ut07b.jpg",
           "keySpecs": [
             "AC 230V 50-60Hz",
@@ -4441,7 +4441,7 @@
           "model": "UT08A",
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
-          "description": "AC 125V 50-60Hz; Wiring check",
+          "description": "US-pattern 125V socket wiring tester for OFW engineers and US/PH dual-spec installations. Verifies outlet polarity and ground.",
           "image": "/images/products/ut08a.png",
           "keySpecs": [
             "AC 125V 50-60Hz",
@@ -4454,7 +4454,7 @@
           "model": "UT08B",
           "category": "Socket & Continuity Testers",
           "subcategory": "Socket Tester",
-          "description": "AC 125V 50-60Hz; Wiring check; GFCI test",
+          "description": "US 125V socket tester with GFCI trip test for verifying ground-fault protection on US outlets. The full check for North American spec installs.",
           "image": "/images/products/ut08b.jpg",
           "keySpecs": [
             "AC 125V 50-60Hz",
@@ -4468,7 +4468,7 @@
           "model": "UT15B",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 12-690V; Phase rotation; Continuity; Polarity",
+          "description": "Two-pole voltage and continuity tester to 690V with phase rotation. The classic electrician's daily driver — quicker than a multimeter for live checks.",
           "image": "/images/products/ut15b.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
@@ -4483,7 +4483,7 @@
           "model": "UT15C",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 12-690V; Phase rotation; Continuity; Polarity; LCD",
+          "description": "UT15B with LCD readout — see exact voltage, not just LED bands. The pick when you need numeric values, not pass/fail.",
           "image": "/images/products/ut15c.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
@@ -4498,7 +4498,7 @@
           "model": "UT18C",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 12-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight",
+          "description": "Pro voltage tester with no-battery detection and RCD trip — keeps reading even when batteries die. The safety-first pick for industrial electricians.",
           "image": "/images/products/ut18c.jpg",
           "keySpecs": [
             "AC/DC 12-690V",
@@ -4513,7 +4513,7 @@
           "model": "UT18D",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 6-690V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; RCD; Flashlight",
+          "description": "Two-pole tester reading from 6V — useful for low-voltage controls and 12/24V automotive work alongside mains.",
           "image": "/images/products/ut18d.jpg",
           "keySpecs": [
             "AC/DC 6-690V",
@@ -4528,7 +4528,7 @@
           "model": "UT18E",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 12-1000V; LCD; Polarity; Phase rotation; Continuity; Self-inspect; No-battery V detect; RCD; Flashlight",
+          "description": "1000V two-pole tester for industrial and utility work above standard 690V. Top of the UT18 family — handles three-phase 600V circuits with margin.",
           "image": "/images/products/ut18d.jpg",
           "keySpecs": [
             "AC/DC 12-1000V",
@@ -4543,7 +4543,7 @@
           "model": "UT22B-EU",
           "category": "Socket & Continuity Testers",
           "subcategory": "Voltage / Continuity Tester",
-          "description": "AC/DC 12-400V; Polarity",
+          "description": "Compact EU-pattern voltage tester for residential and light commercial work to 400V. Pocket-size for everyday electrician use.",
           "image": "/images/products/ut22b-eu.jpg",
           "keySpecs": [
             "AC/DC 12-400V",
@@ -4565,7 +4565,7 @@
           "model": "UT273+",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 600Ω; 20A; 32mm jaw",
+          "description": "Single-clamp earth ground tester for verifying ground rod resistance without disconnecting. The starter clamp tester for residential and commercial work.",
           "image": "/images/products/ut273-plus.jpg",
           "keySpecs": [
             "Earth R 600Ω",
@@ -4579,7 +4579,7 @@
           "model": "UT275",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 1200Ω; 30A; 28mm jaw",
+          "description": "1200Ω-range earth clamp with 30A current measurement — wider range than the UT273+ for industrial grounding systems.",
           "image": "/images/products/ut275.jpg",
           "keySpecs": [
             "Earth R 1200Ω",
@@ -4593,7 +4593,7 @@
           "model": "UT276A+",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 590Ω; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD",
+          "description": "Earth ground clamp with audible/visual alarm for failed grounds — flags problems instantly. The pick for inspection rounds in plant facilities.",
           "image": "/images/products/ut276a-plus.jpg",
           "keySpecs": [
             "Earth R 590Ω",
@@ -4608,7 +4608,7 @@
           "model": "UT278A+",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 800Ω; 20A; 32mm jaw; Audio+Visual alarm; Auto power off; EBTN LCD",
+          "description": "800Ω earth clamp with 20A current and alarm — wider range and EBTN LCD upgrade over the UT276A+. Plant maintenance pick.",
           "image": "/images/products/ut278a-plus.jpg",
           "keySpecs": [
             "Earth R 800Ω",
@@ -4623,7 +4623,7 @@
           "model": "UT278B",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 0-1500Ω; AC 0-40A; 1uA resolution; 3/4-wire 0-3kΩ; Earth V 600V",
+          "description": "Multi-mode earth tester combining clamp, 3/4-wire, and earth voltage measurement. The all-in-one upgrade for utility crews.",
           "image": "/images/products/ut278b.jpg",
           "keySpecs": [
             "Earth R 0-1500Ω",
@@ -4638,7 +4638,7 @@
           "model": "UT278C",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 0-1800Ω; Leakage 0-50A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ; 68mm jaw",
+          "description": "Pro earth tester with 68mm jaw and soil resistivity mode — for substation, telecom tower, and large facility ground systems.",
           "image": "/images/products/ut278c.jpg",
           "keySpecs": [
             "Earth R 0-1800Ω",
@@ -4653,7 +4653,7 @@
           "model": "UT278D",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "Earth R 0-2000Ω; Leakage 0-60A; 3/4-wire 0-30kΩ; Soil resistivity 0-9999kΩ",
+          "description": "Top-of-line earth tester with 2000Ω range, 60A leakage, and soil resistivity. The flagship for utility commissioning and large-site grounding audits.",
           "image": "/images/products/ut278d.jpg",
           "keySpecs": [
             "Earth R 0-2000Ω",
@@ -4667,7 +4667,7 @@
           "model": "UT279",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Clamp Earth Tester",
-          "description": "AC 0-100A; AC 0-600V; F 10Hz-1000Hz; Transformer core ground current; AC leakage online",
+          "description": "Specialized leakage clamp for transformer core ground current monitoring. The pick for substation maintenance crews verifying earthing system loads.",
           "image": "/images/products/ut278d.jpg",
           "keySpecs": [
             "AC 0-100A",
@@ -4682,7 +4682,7 @@
           "model": "UT272A",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Earth Resistance Clamp Meter",
-          "description": "Earth clamp meter, 0.010–400Ω resistance, ±(1%+0.01Ω) accuracy, φ44mm jaw",
+          "description": "44mm-jaw earth clamp with 500-set memory for inspection rounds. The pick when you need to log multiple ground rod readings for a compliance report.",
           "image": "/images/products/ut272a.png",
           "keySpecs": [
             "0.010-400Ω",
@@ -4697,7 +4697,7 @@
           "model": "UT275A",
           "category": "Clamp Earth Ground Testers",
           "subcategory": "Earth Resistance + Current Clamp Meter",
-          "description": "Earth clamp meter with AC current, 0.010–1200Ω, 1mA–30A AC, Bluetooth, φ44mm jaw",
+          "description": "Earth clamp with both resistance and AC current measurement plus Bluetooth — log readings to your phone during plant grounding surveys.",
           "image": "/images/products/ut275a.png",
           "keySpecs": [
             "0.010-1200Ω",
@@ -4722,7 +4722,7 @@
           "model": "MSO7000X",
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
-          "description": "1GHz to 2GHz bandwidth, 4-channel mixed-signal oscilloscope with 10GSa/s sample rate",
+          "description": "Flagship 1-2GHz mixed-signal scope for embedded developers debugging high-speed digital plus analog. Logic analyzer built in saves a separate tool.",
           "image": "/images/products/mso7000x.png",
           "keySpecs": [
             "1-2GHz BW",
@@ -4738,7 +4738,7 @@
           "model": "UPO7000L",
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
-          "description": "1GHz to 2GHz bandwidth, 4-channel digital oscilloscope with 10GSa/s sample rate",
+          "description": "1-2GHz 4-channel scope without logic analyzer — same speed as MSO7000X for analog-only RF and high-speed signal work.",
           "image": "/images/products/upo7000l.png",
           "keySpecs": [
             "1-2GHz BW",
@@ -4753,7 +4753,7 @@
           "model": "MSO3000X",
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
-          "description": "350MHz to 500MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
+          "description": "350-500MHz mixed-signal scope — sweet spot for IoT, embedded, and motor-control development. Most popular MSO bandwidth.",
           "image": "/images/products/mso3000x.png",
           "keySpecs": [
             "350-500MHz BW",
@@ -4769,7 +4769,7 @@
           "model": "MSO2000X",
           "category": "Digital Oscilloscopes",
           "subcategory": "Mixed Signal Oscilloscope",
-          "description": "100MHz to 300MHz bandwidth, 4-channel mixed-signal oscilloscope with 5GSa/s sample rate",
+          "description": "Entry mixed-signal scope at 100-300MHz — the cheapest way for embedded shops to add logic analysis to a 4-channel scope.",
           "image": "/images/products/mso2000x.png",
           "keySpecs": [
             "100-300MHz BW",
@@ -4785,7 +4785,7 @@
           "model": "UPO1000",
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
-          "description": "50MHz to 200MHz bandwidth, 4-channel digital oscilloscope with 2GSa/s sample rate",
+          "description": "4-channel 50-200MHz scope — classroom and lab pick when you need 4 channels but don't need MSO logic analysis.",
           "image": "/images/products/upo1000.png",
           "keySpecs": [
             "50-200MHz BW",
@@ -4800,7 +4800,7 @@
           "model": "UPO1002",
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
-          "description": "100MHz to 200MHz bandwidth, 2-channel digital oscilloscope with 1GSa/s sample rate",
+          "description": "2-channel 100-200MHz scope — affordable bench pick for hobbyists, repair shops, and electronics service techs.",
           "image": "/images/products/upo1002.png",
           "keySpecs": [
             "100-200MHz BW",
@@ -4815,7 +4815,7 @@
           "model": "UTD2000CEX+",
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
-          "description": "50MHz to 200MHz bandwidth, 2-channel entry-level oscilloscope with 1GSa/s sample rate",
+          "description": "Entry-level 50-200MHz dual-channel scope — most popular UNI-T scope for service techs and hobbyists. Fast, simple, just works.",
           "image": "/images/products/utd2000cex-plus.png",
           "keySpecs": [
             "50-200MHz BW",
@@ -4830,7 +4830,7 @@
           "model": "UTD2000CL+",
           "category": "Digital Oscilloscopes",
           "subcategory": "Digital Storage Oscilloscope",
-          "description": "25MHz to 150MHz bandwidth, 2-channel oscilloscope with 500MSa/s sample rate",
+          "description": "Budget 25-150MHz dual-channel scope — the cheapest entry into UNI-T scopes. For schools, hobbyists, and basic audio/control work.",
           "image": "/images/products/utd2000cl-plus.png",
           "keySpecs": [
             "25-150MHz BW",
@@ -4845,7 +4845,7 @@
           "model": "UTD1000C",
           "category": "Digital Oscilloscopes",
           "subcategory": "Handheld Digital Oscilloscope",
-          "description": "60/100/200MHz bandwidth, 2-channel handheld digital oscilloscope",
+          "description": "Handheld 2-channel scope (60/100/200MHz) — for field service techs working on industrial machines and motor drives where carrying a bench scope isn't feasible.",
           "image": "/images/products/utd1000c.png",
           "keySpecs": [
             "60-200MHz BW",
@@ -4860,7 +4860,7 @@
           "model": "UTD1000L",
           "category": "Digital Oscilloscopes",
           "subcategory": "Handheld Digital Oscilloscope",
-          "description": "25MHz to 50MHz bandwidth, 1-2 channel handheld oscilloscope with 250MSa/s",
+          "description": "Compact 25-50MHz handheld scope — the cheapest portable scope option. For field automotive and basic motor control diagnostics.",
           "image": "/images/products/utd1000l.png",
           "keySpecs": [
             "25-50MHz BW",
@@ -4885,7 +4885,7 @@
           "model": "UDP4303S",
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
-          "description": "4-channel programmable DC power supply, 0–32V, 0–3A per channel",
+          "description": "4-channel programmable PSU at 32V/3A per channel — for electronics labs powering multi-rail boards from a single bench unit.",
           "image": "/images/products/udp4303s.png",
           "keySpecs": [
             "0-32V",
@@ -4901,7 +4901,7 @@
           "model": "UDP3000S",
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
-          "description": "4-channel programmable DC power supply, 0–30V, 0–5A per channel",
+          "description": "Programmable 4-channel DC supply at 30V/5A — sweet spot for R&D and electronics labs. Triple isolated outputs eliminate multi-PSU clutter.",
           "image": "/images/products/udp3000s.png",
           "keySpecs": [
             "0-30V",
@@ -4917,7 +4917,7 @@
           "model": "UDP3000",
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
-          "description": "3-channel linear DC power supply, 30V, 5A per channel",
+          "description": "3-channel linear DC supply with low ripple — for sensitive analog and audio circuits where switching noise matters.",
           "image": "/images/products/udp3000.png",
           "keySpecs": [
             "30V",
@@ -4933,7 +4933,7 @@
           "model": "UDP1000",
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
-          "description": "Single-channel linear DC power supply, 32V, 6A",
+          "description": "Single-channel 32V/6A linear DC supply — affordable bench pick for hobbyists and repair shops doing single-rail work.",
           "image": "/images/products/udp1000.png",
           "keySpecs": [
             "32V",
@@ -4949,7 +4949,7 @@
           "model": "UTP3300-II",
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
-          "description": "3-channel linear DC bench power supply, 32V, 5A per channel",
+          "description": "3-channel 32V/5A linear bench supply — workhorse for small electronics shops and engineering schools. Three isolated outputs in one box.",
           "image": "/images/products/utp3300-ii.png",
           "keySpecs": [
             "32V",
@@ -4964,7 +4964,7 @@
           "model": "UTP3300TFL-II",
           "category": "DC Power Supplies",
           "subcategory": "Linear DC Power Supply",
-          "description": "Single-channel linear DC bench power supply, 30V, 5A",
+          "description": "Compact single-channel 30V/5A linear bench supply — the cheapest UNI-T linear PSU. For starter labs and home workbenches.",
           "image": "/images/products/utp3300tfl-ii.png",
           "keySpecs": [
             "30V",
@@ -4979,7 +4979,7 @@
           "model": "UDP5000",
           "category": "DC Power Supplies",
           "subcategory": "High Power DC Power Supply",
-          "description": "Wide-range programmable DC power supply, 0–250V, 0–200A",
+          "description": "High-power 250V/200A programmable PSU for EV battery, solar inverter, and industrial motor test. Wide-range output covers most automotive HV systems.",
           "image": "/images/products/udp5000.png",
           "keySpecs": [
             "0-250V",
@@ -4995,7 +4995,7 @@
           "model": "UDP6720",
           "category": "DC Power Supplies",
           "subcategory": "High Power DC Power Supply",
-          "description": "Wide-range programmable DC power supply, 0–600V, 0–110A",
+          "description": "600V/110A high-voltage programmable PSU for solar string emulation and DC bus testing. Top voltage in the UDP series.",
           "image": "/images/products/udp6720.png",
           "keySpecs": [
             "0-600V",
@@ -5011,7 +5011,7 @@
           "model": "UDP6900",
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
-          "description": "Programmable DC power supply, 0–150V, 0–25A",
+          "description": "150V/25A programmable PSU — mid-power pick for EV component testing and industrial control development.",
           "image": "/images/products/udp6900.png",
           "keySpecs": [
             "0-150V",
@@ -5026,7 +5026,7 @@
           "model": "UDP6700",
           "category": "DC Power Supplies",
           "subcategory": "Programmable DC Power Supply",
-          "description": "Programmable DC power supply, 0–80V, 0–30A",
+          "description": "80V/30A programmable PSU — for 48V DC system development (telecom, marine, off-grid) and high-current low-voltage testing.",
           "image": "/images/products/udp6700.png",
           "keySpecs": [
             "0-80V",
@@ -5050,7 +5050,7 @@
           "model": "UT320A",
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
-          "description": "K/J; Single; °C/°F",
+          "description": "Single-input K/J thermocouple thermometer — entry pick for HVAC techs and food service measuring with contact probes.",
           "image": "/images/products/ut320a.jpg",
           "keySpecs": [
             "K/J",
@@ -5064,7 +5064,7 @@
           "model": "UT320D",
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
-          "description": "K/J; Dual; °C/°F; T1-T2 difference",
+          "description": "Dual-input K/J thermometer with T1-T2 differential — measures supply and return air temps simultaneously for HVAC commissioning.",
           "image": "/images/products/ut320d.jpg",
           "keySpecs": [
             "K/J",
@@ -5079,7 +5079,7 @@
           "model": "UT320T",
           "category": "Contact Thermometers",
           "subcategory": "2-in-1 Thermometer",
-          "description": "IR 40-300°C; Probe -40 to 300°C; IP54; Max/Min/Diff/Lock",
+          "description": "IR plus contact probe combo with IP54 rating — for kitchen and HVAC techs needing both surface and core readings in dirty environments.",
           "image": "/images/products/ut320t.jpg",
           "keySpecs": [
             "IR 40-300°C",
@@ -5094,7 +5094,7 @@
           "model": "UT325",
           "category": "Contact Thermometers",
           "subcategory": "Contact Thermometer",
-          "description": "Dual; K/J/T/E/R/S/N; °C/°F/K; 100 storage; USB",
+          "description": "Dual-input universal thermometer accepting all 7 standard TC types. The lab-grade pick when you can't predict which thermocouple will land on the bench.",
           "image": "/images/products/ut325.jpg",
           "keySpecs": [
             "Dual",
@@ -5109,7 +5109,7 @@
           "model": "UT325F",
           "category": "Contact Thermometers",
           "subcategory": "4-Channel Thermometer",
-          "description": "-200°C~1372°C Type-K; 7 TC types; T1-T2; APP/PC; 72000 storage",
+          "description": "4-channel datalogging thermocouple thermometer — for cold-chain audits, oven mapping, and multi-zone temperature qualification work.",
           "image": "/images/products/ut325f.jpg",
           "keySpecs": [
             "7 TC types",
@@ -5124,7 +5124,7 @@
           "model": "A61",
           "category": "Contact Thermometers",
           "subcategory": "Digital Thermometer",
-          "description": "40-250°C; 12mm probe; NTC; 20s stabilize",
+          "description": "Penetration probe thermometer for food service — meat, batter, and oil temp checks. Quick 20-second stabilization.",
           "image": "/images/products/a61.jpg",
           "keySpecs": [
             "40-250°C",
@@ -5139,7 +5139,7 @@
           "model": "A63",
           "category": "Contact Thermometers",
           "subcategory": "2-in-1 Food Thermometer",
-          "description": "IR 40-300°C; Probe -50 to 300°C; LED alarm; HACCP; T1-T2 diff",
+          "description": "HACCP-compliant 2-in-1 food thermometer with IR and probe modes plus LED safe-zone alarm. The pick for restaurant chains and catering compliance.",
           "image": "/images/products/a63.jpg",
           "keySpecs": [
             "IR 40-300°C",
@@ -5163,7 +5163,7 @@
           "model": "UT681L",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "RJ45/RJ11",
+          "description": "Basic RJ45/RJ11 cable tester for verifying network and phone wire continuity. The pocket starter for IT techs and electricians.",
           "image": "/images/products/network-tester-ut681.png",
           "keySpecs": [
             "RJ45/RJ11"
@@ -5175,7 +5175,7 @@
           "model": "UT681C",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "RJ45/RJ11/BNC",
+          "description": "RJ45/RJ11/BNC tester — adds coax/CCTV cable check to the basic UT681L. The pick for security installers as well as IT techs.",
           "image": "/images/products/network-tester-ut681.png",
           "keySpecs": [
             "RJ45/RJ11/BNC"
@@ -5187,7 +5187,7 @@
           "model": "UT681HDMI",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "HDMI/MINI-HDMI",
+          "description": "Specialized HDMI cable tester — checks all 19 pins for AV installers troubleshooting display issues. Saves swap-and-pray diagnostics.",
           "image": "/images/products/network-tester-ut681.png",
           "keySpecs": [
             "HDMI/MINI-HDMI"
@@ -5199,7 +5199,7 @@
           "model": "UT682",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "LAN/telephone/coax/electric; Wire alignment",
+          "description": "Multi-protocol cable tester for LAN, telephone, coax, and electrical wires. The do-everything pick for general electricians.",
           "image": "/images/products/ut682.jpg",
           "keySpecs": [
             "Wire alignment"
@@ -5211,7 +5211,7 @@
           "model": "UT682D",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "Telephone/twisted-pair/electric",
+          "description": "Telephone, twisted-pair, and electrical cable tester — slimmed-down version of the UT682 without coax mode.",
           "image": "/images/products/ut682d.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT682D",
@@ -5221,7 +5221,7 @@
           "model": "UT683KIT",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "Wire tracking RJ11>3000m; RJ45>100m; NCV; Headset jack",
+          "description": "Cable tracer kit with NCV — find buried network and phone runs through walls and ceilings. Essential for retrofit IT and telecom work.",
           "image": "/images/products/ut683kit.jpg",
           "keySpecs": [
             "RJ45>100m",
@@ -5235,7 +5235,7 @@
           "model": "UT685B KIT",
           "category": "Network & Cable Testers",
           "subcategory": "Cable Tester",
-          "description": "UTP/FTP/SSTP; 500m length; POE; Ethernet port test",
+          "description": "Pro network cable tester with PoE check, length measurement, and Ethernet port verification. The kit IT contractors take to enterprise installs.",
           "image": "/images/products/ut685b-kit.jpg",
           "keySpecs": [
             "UTP/FTP/SSTP",
@@ -5259,7 +5259,7 @@
           "model": "UTG9000T+",
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
-          "description": "500MHz, 4-channel arbitrary waveform/function generator",
+          "description": "500MHz 4-channel arbitrary waveform generator — high-end pick for RF and high-speed digital lab work.",
           "image": "/images/products/utg9000t-plus.png",
           "keySpecs": [
             "500MHz",
@@ -5274,7 +5274,7 @@
           "model": "UTG9000T",
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
-          "description": "600MHz, 4-channel arbitrary waveform/function generator",
+          "description": "Top-of-line 600MHz 4-channel AWG — flagship signal source for RF design, radar prototyping, and high-frequency test.",
           "image": "/images/products/utg9000t.png",
           "keySpecs": [
             "600MHz",
@@ -5289,7 +5289,7 @@
           "model": "UTG4000X",
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
-          "description": "250MHz, 4-channel arbitrary waveform/function generator",
+          "description": "250MHz 4-channel AWG — sweet spot for embedded systems and motor control development needing multi-phase signal generation.",
           "image": "/images/products/utg4000x.png",
           "keySpecs": [
             "250MHz",
@@ -5304,7 +5304,7 @@
           "model": "UTG4000A",
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
-          "description": "200MHz, 2-channel arbitrary waveform/function generator",
+          "description": "200MHz 2-channel AWG — popular mid-range pick for university labs and electronics development teams.",
           "image": "/images/products/utg4000a.png",
           "keySpecs": [
             "200MHz",
@@ -5319,7 +5319,7 @@
           "model": "UTG2000X",
           "category": "Waveform Generators",
           "subcategory": "Arbitrary Waveform Generator",
-          "description": "120MHz, 2-channel arbitrary waveform/function generator",
+          "description": "120MHz 2-channel AWG — affordable everyday signal source for service techs and small electronics labs.",
           "image": "/images/products/utg2000x.png",
           "keySpecs": [
             "120MHz",
@@ -5334,7 +5334,7 @@
           "model": "UTG900E",
           "category": "Waveform Generators",
           "subcategory": "Function/Arbitrary Generator",
-          "description": "60MHz, 2-channel function/arbitrary waveform generator",
+          "description": "60MHz 2-channel function/arbitrary generator — for audio, ultrasonic, and basic digital test work.",
           "image": "/images/products/utg900e.png",
           "keySpecs": [
             "60MHz",
@@ -5349,7 +5349,7 @@
           "model": "UTG1000X",
           "category": "Waveform Generators",
           "subcategory": "Function/Arbitrary Generator",
-          "description": "40MHz, 2-channel entry-level function/arbitrary waveform generator",
+          "description": "Entry 40MHz function generator — cheapest UNI-T signal source, perfect for schools and hobbyist benches.",
           "image": "/images/products/utg1000x.png",
           "keySpecs": [
             "40MHz",
@@ -5373,7 +5373,7 @@
           "model": "UT361",
           "category": "Anemometers",
           "subcategory": "Anemometer",
-          "description": "2-30 m/s; Wind count 0.001-9999x100; T 0-40°C; 2044 storage",
+          "description": "Vane anemometer for HVAC duct and outdoor wind speed checks. Storage memory for trend tracking on commissioning jobs.",
           "image": "/images/products/ut361.jpg",
           "keySpecs": [
             "2-30 m/s",
@@ -5387,7 +5387,7 @@
           "model": "UT362",
           "category": "Anemometers",
           "subcategory": "Anemometer",
-          "description": "2-30 m/s; T 0-40°C; 2045 storage; USB",
+          "description": "USB-equipped vane anemometer — export logged wind data to PC for HVAC test reports and outdoor environmental studies.",
           "image": "/images/products/ut362.jpg",
           "keySpecs": [
             "2-30 m/s",
@@ -5402,7 +5402,7 @@
           "model": "UT362H",
           "category": "Anemometers",
           "subcategory": "Anemometer",
-          "description": "0-30 m/s; -20-70°C; Flow 0-999900 m³/min; ±(4%+0.1m/s); Pt sensor; Split; 99 storage",
+          "description": "Pro split-probe anemometer with Pt temp sensor and air-flow calculation. The pick for HVAC commissioning teams measuring CFM in tight ducts.",
           "image": "/images/products/ut362h.png",
           "keySpecs": [
             "0-30 m/s",
@@ -5417,7 +5417,7 @@
           "model": "UT363",
           "category": "Anemometers",
           "subcategory": "Mini Anemometer",
-          "description": "0-30 m/s; -10-50°C; Wind scale 0-12; Auto power off",
+          "description": "Pocket vane anemometer for outdoor sailing, drone pilots, and basic HVAC checks. Cheapest UNI-T anemometer — palm-size, point-and-read.",
           "image": "/images/products/ut363.jpg",
           "keySpecs": [
             "0-30 m/s",
@@ -5432,7 +5432,7 @@
           "model": "UT363BT",
           "category": "Anemometers",
           "subcategory": "Mini Anemometer",
-          "description": "Same as UT363 + Bluetooth",
+          "description": "Bluetooth version of the UT363 — log wind data to your phone for trends. The pick for drone pilots checking takeoff conditions.",
           "image": "/images/products/ut363bt.jpg",
           "keySpecs": [
             "Bluetooth"
@@ -5444,7 +5444,7 @@
           "model": "UT363S",
           "category": "Anemometers",
           "subcategory": "Anemometer",
-          "description": "0.4-30 m/s; -10-50°C; Wind scale 0-12; Sampling rate; Overload",
+          "description": "Sensitive vane anemometer reading from 0.4 m/s — catches subtle airflow that the basic UT363 misses. For HVAC face-velocity checks.",
           "image": "/images/products/ut363s.jpg",
           "keySpecs": [
             "0.4-30 m/s",
@@ -5468,7 +5468,7 @@
           "model": "UT658",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Input 3-9V; 0-3A; Capacity 0-9999mAh; 10 storage",
+          "description": "Basic USB-A power tester for verifying chargers, cables, and powerbank capacity. The cheapest way to spot fake or weak USB chargers.",
           "image": "/images/products/ut658.jpg",
           "keySpecs": [
             "Input 3-9V",
@@ -5483,7 +5483,7 @@
           "model": "UT658B",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Input 3-9V; 0-3.5A; Capacity 0-9999mAh; 10 storage",
+          "description": "USB-A tester with 3.5A current range — handles fast-charge currents the basic UT658 can't measure.",
           "image": "/images/products/ut658b.jpg",
           "keySpecs": [
             "Input 3-9V",
@@ -5498,7 +5498,7 @@
           "model": "UT658A",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Type-A I/O; 2.0/3.0; 4-24VDC; Type-A 0.05-3A; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
+          "description": "Pro USB-A tester supporting USB 2.0/3.0, up to 24V, 5A — handles modern PD and QC fast-charge profiles.",
           "image": "/images/products/ut658a.jpg",
           "keySpecs": [
             "Type-A I/O",
@@ -5513,7 +5513,7 @@
           "model": "UT658C",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Type-C I/O; 2.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
+          "description": "USB-C only tester for the modern phone/laptop charger ecosystem. Verifies USB-C PD profiles up to 100W.",
           "image": "/images/products/ut658c.jpg",
           "keySpecs": [
             "Type-C I/O",
@@ -5528,7 +5528,7 @@
           "model": "UT658DUAL",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Type-A & Type-C I/O; 2.0/3.0/4.0; 4-24VDC; Type-A 0.05-3ADC; Type-C 0.05-5ADC; 0-99999mAh; 0-1000Wh",
+          "description": "Dual USB-A + USB-C tester — handles both old and new charging ecosystems. The do-everything tester for repair shops.",
           "image": "/images/products/ut658dual.jpg",
           "keySpecs": [
             "Type-A & Type-C I/O",
@@ -5543,7 +5543,7 @@
           "model": "UT658LOAD",
           "category": "USB Testers",
           "subcategory": "USB Tester",
-          "description": "Type-A I/O; 2.0/3.0; 4-24VDC; 0.05-3ADC; 0-99999mAh; 0-1000Wh; Equivalent R 1-480Ω",
+          "description": "USB tester with built-in electronic load — simulates a real device draw to test charger performance under load. The QA pick for power-bank manufacturers.",
           "image": "/images/products/ut658load.jpg",
           "keySpecs": [
             "Type-A I/O",
@@ -5567,7 +5567,7 @@
           "model": "UT387A",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
-          "description": "StudScan ferrous 19mm/non-ferrous 19mm/Cu live 50mm/wood 19mm; ThickScan ferrous 28.5mm/non-ferrous 28.5mm/Cu live 50mm/wood 28.5mm",
+          "description": "Entry stud and metal/AC scanner for finding hidden framing, pipes, and live wires before drilling. The renovator's pre-cut safety check.",
           "image": "/images/products/ut387a.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT387A",
@@ -5577,7 +5577,7 @@
           "model": "UT387C",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
-          "description": "Wood beam, metal, electric wire; Metal-scan 76mm; Stud-scan wood 28.5mm; Thick-scan wood 38mm; AC wire 51mm",
+          "description": "Mid-range wall scanner with deeper metal detection up to 76mm — for renovating concrete-heavy PH construction with embedded conduits.",
           "image": "/images/products/ut387c.jpg",
           "keySpecs": [
             "Metal-scan 76mm",
@@ -5592,7 +5592,7 @@
           "model": "UT387D",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
-          "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm",
+          "description": "Pro wall scanner with 100mm ferrous detection — finds rebar in concrete walls before core-drilling. The renovator's must-have for PH masonry work.",
           "image": "/images/products/ut387d.jpg",
           "keySpecs": [
             "Ferrous 100mm",
@@ -5607,7 +5607,7 @@
           "model": "UT387E",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner",
-          "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm",
+          "description": "UT387D with refined display and ergonomics — same depth performance, slightly upgraded UI for daily contractor use.",
           "image": "/images/products/ut387e.jpg",
           "keySpecs": [
             "Ferrous 100mm",
@@ -5622,7 +5622,7 @@
           "model": "UT387LM",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner + Laser",
-          "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m",
+          "description": "Wall scanner combined with 40m laser distance meter — two tools in one for renovators measuring AND scanning the same wall.",
           "image": "/images/products/ut387lm.jpg",
           "keySpecs": [
             "Ferrous 100mm",
@@ -5637,7 +5637,7 @@
           "model": "UT387S",
           "category": "Wall Scanners",
           "subcategory": "Wall Scanner + Moisture",
-          "description": "Ferrous 100mm; Non-ferrous 80mm; Wood 38mm; AC wire 40mm; Laser distance 40m; Wood moisture 6-40%",
+          "description": "Top-of-line wall scanner with laser distance and wood moisture in one. The home inspector's all-in-one tool for renovation surveys.",
           "image": "/images/products/ut387s.jpg",
           "keySpecs": [
             "Ferrous 100mm",
@@ -5661,7 +5661,7 @@
           "model": "MSO8000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
-          "description": "8GHz bandwidth, 4-channel high-resolution mixed-signal oscilloscope with 20GSa/s sample rate",
+          "description": "8GHz 12-bit MSO flagship — for radar, RF design, and high-speed serial bus development. Top of the high-res oscilloscope family.",
           "image": "/images/products/mso8000hd.png",
           "keySpecs": [
             "8GHz BW",
@@ -5677,7 +5677,7 @@
           "model": "MSO5000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
-          "description": "350MHz to 1GHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 5GSa/s sample rate",
+          "description": "350MHz-1GHz 12-bit MSO — for power electronics, EV motor drives, and signal-integrity work where 8-bit scopes fall short.",
           "image": "/images/products/mso5000hd.png",
           "keySpecs": [
             "350MHz-1GHz BW",
@@ -5693,7 +5693,7 @@
           "model": "MSO3000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
-          "description": "200MHz to 500MHz bandwidth, 4-channel 12-bit MSO with 2.5GSa/s sample rate",
+          "description": "200-500MHz 12-bit MSO — sweet spot for embedded development teams needing both logic analysis and high-resolution analog.",
           "image": "/images/products/mso3000hd.png",
           "keySpecs": [
             "200-500MHz BW",
@@ -5709,7 +5709,7 @@
           "model": "MSO1000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Mixed Signal Oscilloscope",
-          "description": "150MHz to 250MHz bandwidth, 4-channel 12-bit mixed-signal oscilloscope with 2.5GSa/s",
+          "description": "Entry 12-bit MSO at 150-250MHz — affordable upgrade for teams moving from 8-bit scopes for power and audio analysis.",
           "image": "/images/products/mso1000hd.png",
           "keySpecs": [
             "150-250MHz BW",
@@ -5725,7 +5725,7 @@
           "model": "UPO2000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Digital Oscilloscope",
-          "description": "70MHz to 200MHz bandwidth, 2/4 channel 12-bit oscilloscope with 2.5GSa/s sample rate",
+          "description": "Mid-range 12-bit DSO at 70-200MHz without logic analyzer — analog-only high-resolution work for audio, power, and instrumentation.",
           "image": "/images/products/upo2000hd.png",
           "keySpecs": [
             "70-200MHz BW",
@@ -5741,7 +5741,7 @@
           "model": "UPO1000HD",
           "category": "High Resolution Oscilloscopes",
           "subcategory": "12-bit Digital Oscilloscope",
-          "description": "80MHz to 150MHz bandwidth, 2/4 channel 12-bit digital oscilloscope with 1.25GSa/s",
+          "description": "Entry 12-bit DSO at 80-150MHz — cheapest path into high-resolution oscilloscopes for small electronics labs and education.",
           "image": "/images/products/upo1000hd.png",
           "keySpecs": [
             "80-150MHz BW",
@@ -5766,7 +5766,7 @@
           "model": "UTS7000A",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Wideband signal/spectrum analyzer covering 2Hz to 40GHz",
+          "description": "Flagship 40GHz spectrum analyzer — for radar, satellite, and millimeter-wave research labs. Top-of-line bandwidth in the UNI-T line.",
           "image": "/images/products/uts7000a.png",
           "keySpecs": [
             "2Hz-40GHz",
@@ -5780,7 +5780,7 @@
           "model": "UTS5000A",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Spectrum/signal analyzer covering 9kHz to 26.5GHz",
+          "description": "26.5GHz spectrum analyzer — for 5G NR, microwave link, and satellite uplink testing. Mid-flagship for telecom R&D.",
           "image": "/images/products/uts5000a.png",
           "keySpecs": [
             "9kHz-26.5GHz",
@@ -5794,7 +5794,7 @@
           "model": "UTS3000A",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+          "description": "8.4GHz spectrum analyzer — covers WiFi 6E, sub-6GHz 5G, and most consumer RF bands. Workhorse pick for IoT and wireless development.",
           "image": "/images/products/uts3000a.png",
           "keySpecs": [
             "9kHz-8.4GHz",
@@ -5808,7 +5808,7 @@
           "model": "UTS3000T+",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Tracking-generator spectrum analyzer covering 9kHz to 8.4GHz",
+          "description": "8.4GHz spectrum analyzer with built-in tracking generator — adds active filter and component characterization. Saves a separate signal source.",
           "image": "/images/products/uts3000t-plus.png",
           "keySpecs": [
             "9kHz-8.4GHz",
@@ -5822,7 +5822,7 @@
           "model": "UTS3000B",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Spectrum/signal analyzer covering 9kHz to 8.4GHz",
+          "description": "8.4GHz B-series spectrum analyzer — refined version of the UTS3000A with improved phase noise for sensitive RF measurement.",
           "image": "/images/products/uts3000b.png",
           "keySpecs": [
             "9kHz-8.4GHz",
@@ -5836,7 +5836,7 @@
           "model": "UTS1000B",
           "category": "Spectrum Analyzers",
           "subcategory": "Signal/Spectrum Analyzer",
-          "description": "Entry-level spectrum analyzer covering 9kHz to 3.2GHz",
+          "description": "Entry 3.2GHz spectrum analyzer — covers WiFi 2.4GHz and most consumer ISM bands. The starter pick for hobbyists and RF training.",
           "image": "/images/products/uts1000b.png",
           "keySpecs": [
             "9kHz-3.2GHz",
@@ -5859,7 +5859,7 @@
           "model": "UT691-01",
           "category": "Fiber Optic Testers",
           "subcategory": "Visual Fault Locator",
-          "description": "≥1mW; 2-3km",
+          "description": "1mW pen-style red laser fiber fault locator — finds breaks and bends in singlemode fiber up to 3km. The pocket essential for fiber techs.",
           "image": "/images/products/ut691-01.jpg",
           "keySpecs": [
             "≥1mW",
@@ -5872,7 +5872,7 @@
           "model": "UT691-10",
           "category": "Fiber Optic Testers",
           "subcategory": "Visual Fault Locator",
-          "description": "≥10mW; 8-10km",
+          "description": "10mW VFL with 10km reach — for long-haul telco fiber and metro network troubleshooting. Brighter beam visible through cable jackets.",
           "image": "/images/products/ut691-10.jpg",
           "keySpecs": [
             "≥10mW",
@@ -5885,7 +5885,7 @@
           "model": "UT692D",
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
-          "description": "-70 to +10 dBm; FC/SC/ST",
+          "description": "Optical power meter for telecom and CATV fiber installations. The standard tool for verifying loss budgets on FTTH and enterprise fiber drops.",
           "image": "/images/products/ut692d.jpg",
           "keySpecs": [
             "-70 to +10 dBm",
@@ -5898,7 +5898,7 @@
           "model": "UT692G",
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
-          "description": "-50 to +26 dBm; FC/SC/ST",
+          "description": "High-power optical meter to +26 dBm — for measuring CATV signal levels and EDFA output. Wider range than the UT692D for high-power systems.",
           "image": "/images/products/ut692g.jpg",
           "keySpecs": [
             "-50 to +26 dBm",
@@ -5911,7 +5911,7 @@
           "model": "UT693D",
           "category": "Fiber Optic Testers",
           "subcategory": "Fiber Optic Tester",
-          "description": "Optical Multimeter (Power Meter & VFL); -70 to +10 dBm; VFL 10mW; 8-10km",
+          "description": "Combined optical power meter and 10mW VFL — measure loss AND find faults with one device. Saves carrying two tools.",
           "image": "/images/products/ut693d.jpg",
           "keySpecs": [
             "-70 to +10 dBm",
@@ -5934,7 +5934,7 @@
           "model": "UT620A",
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Digital Micro Ohm Meter",
-          "description": "60mΩ/10A - 6kΩ/100uA; 10uΩ resolution",
+          "description": "Digital micro-ohm meter for connector, busbar, and cable joint resistance. The starter pick for substation maintenance and panel builders.",
           "image": "/images/products/ut620a.jpg",
           "keySpecs": [
             "60mΩ/10A - 6kΩ/100uA",
@@ -5947,7 +5947,7 @@
           "model": "UT620C+",
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Digital Micro Ohm Meter",
-          "description": "0.001mΩ-300kΩ; 1μΩ; ≥1A test; 4-wire; 2/s; Type-C; 5200mAh",
+          "description": "Pro 4-wire Kelvin micro-ohm meter with 1μΩ resolution and Type-C charging. The field-grade pick for utility crews and motor service teams.",
           "image": "/images/products/ut620c-plus.jpg",
           "keySpecs": [
             "1μΩ",
@@ -5962,7 +5962,7 @@
           "model": "UT620T",
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "DC Resistance Tester",
-          "description": "10A test; 0.1μΩ-1.0000MΩ; 0.1μΩ resolution; PC software",
+          "description": "DC resistance tester with 10A injection and PC software for trend logging. For transformer winding and motor armature resistance audits.",
           "image": "/images/products/ut620t.png",
           "keySpecs": [
             "10A test",
@@ -5977,7 +5977,7 @@
           "model": "UT625A",
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Low Resistance Ohmmeter",
-          "description": "100A test; 0.1uΩ-1000mΩ; 4-wire kelvin; 5-100A DC step; 10/20/30/60s; 100A up to 60s, 200A up to 180s",
+          "description": "100A injection low-resistance ohmmeter for circuit breaker contact, busbar, and primary winding tests. The pick for substation commissioning crews.",
           "image": "/images/products/ut625a.png",
           "keySpecs": [
             "100A test",
@@ -5992,7 +5992,7 @@
           "model": "UT625B",
           "category": "Micro Ohm / Low Resistance Meters",
           "subcategory": "Low Resistance Ohmmeter",
-          "description": "200A test; 0.1uΩ-2000mΩ; 4-wire kelvin; 5-200A DC step; 10/20/30/60s; 200A up to 60s, 100A up to 120s",
+          "description": "200A flagship low-resistance ohmmeter — top of the UT625 line for utility-grade busbar joint and high-current contact testing.",
           "image": "/images/products/ut625b.png",
           "keySpecs": [
             "200A test",
@@ -6016,7 +6016,7 @@
           "model": "UT701",
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
-          "description": "DC mV 100/1000mV; R 500Ω/5000Ω; TC J/K/T/E/R/S/B/N; RTD Pt10/100; Cu50/100",
+          "description": "Multi-function TC/RTD/mV/resistance source-and-measure calibrator. The instrumentation tech's everyday tool for sensor and transmitter calibration.",
           "image": "/images/products/ut701.jpg",
           "keySpecs": [
             "TC J/K/T/E/R/S/B/N",
@@ -6030,7 +6030,7 @@
           "model": "UT705",
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
-          "description": "DC 30V; DC 24mA; Loop 24mA; Source 24mA",
+          "description": "Loop calibrator dedicated to 4-20mA process signals — verifies and sources transmitter current loops in the field. The PLC commissioning essential.",
           "image": "/images/products/ut705.jpg",
           "keySpecs": [
             "DC 30V",
@@ -6045,7 +6045,7 @@
           "model": "UT714",
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
-          "description": "DC mV 50/500mV/30V; R 500Ω/5000Ω; TC R/S/K/E/J/T/N/B/L/U; RTD Pt100/200/500/1000/Cu/Ni; Continuity; Source 100mV/1000mV/10V",
+          "description": "Multi-function calibrator covering 10 TC types and full Pt RTD family. Replaces 3 separate tools on the instrumentation engineer's bench.",
           "image": "/images/products/ut714.jpg",
           "keySpecs": [
             "DC mV 50/500mV/30V",
@@ -6059,7 +6059,7 @@
           "model": "UT715",
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
-          "description": "DC 200mV/30V; DC 24mA; Loop 24mA; F 100Hz/1k/10k/100kHz; Continuity; Source 100mV/1000mV/10V; F source 200/2k/20k; Pulse 100/1k/10kHz; Loop 24V",
+          "description": "Frequency-aware process calibrator with pulse and loop power. For PLC and instrumentation work involving turbine flow meters and frequency-input sensors.",
           "image": "/images/products/ut715.jpg",
           "keySpecs": [
             "DC 200mV",
@@ -6074,7 +6074,7 @@
           "model": "UT725",
           "category": "Process Calibrators",
           "subcategory": "Process Calibrator",
-          "description": "DC 50/500mV/50V; DC 20mA; Loop 20mA; R 500Ω/5000Ω; F 100Hz-100kHz; TC R/S/K/E/J/T/N/B/L/U/XK/BP; RTD Pt/Cu/Ni; Source 100mV/1000mV/10V; F source 200Hz-100kHz",
+          "description": "Top-of-line all-in-one process calibrator covering 12 TC types, all RTDs, mA, mV, frequency, and pulse. The flagship for instrumentation pros.",
           "image": "/images/products/ut725.jpg",
           "keySpecs": [
             "DC 50/500mV",
@@ -6098,7 +6098,7 @@
           "model": "UT337A",
           "category": "Air Quality Meters",
           "subcategory": "CO Tester",
-          "description": "0-1000ppm",
+          "description": "Carbon monoxide tester for confined-space safety and combustion appliance verification. The pocket essential for HVAC and gas service techs.",
           "image": "/images/products/ut337a.jpg",
           "keySpecs": [
             "0-1000ppm"
@@ -6110,7 +6110,7 @@
           "model": "UT337B",
           "category": "Air Quality Meters",
           "subcategory": "Particle Counter",
-          "description": "6-channel 0.3-10.0μm; ISO/EU-GMP modes; T/RH/Dew point; 10000 storage; WiFi/APP; Camera",
+          "description": "6-channel particle counter with ISO/GMP modes and WiFi reporting. For pharma cleanroom certification, electronics fab, and HVAC IAQ surveys.",
           "image": "/images/products/ut337b.png",
           "keySpecs": [
             "6-channel 0.3-10.0μm",
@@ -6126,7 +6126,7 @@
           "model": "A25D",
           "category": "Air Quality Meters",
           "subcategory": "PM2.5 Meter",
-          "description": "PM2.5; T; RH",
+          "description": "Indoor PM2.5 air-quality meter with temperature and humidity. The pick for offices, schools, and homes monitoring Manila smog impact indoors.",
           "image": "/images/products/a25d.jpg",
           "keySpecs": [
             "PM2.5",
@@ -6140,7 +6140,7 @@
           "model": "A37",
           "category": "Air Quality Meters",
           "subcategory": "CO2 Meter",
-          "description": "CO2; T; RH",
+          "description": "CO2 monitor for office and classroom ventilation checks. Low CO2 means good airflow — high readings flag stuffy rooms before fatigue sets in.",
           "image": "/images/products/a37.jpg",
           "keySpecs": [
             "CO2",
@@ -6163,7 +6163,7 @@
           "model": "UT673A",
           "category": "Battery Testers",
           "subcategory": "Battery Tester",
-          "description": "12V battery 7-16VDC; 12/24V cranking 7-30VDC; 12/24V charging 7-30VDC",
+          "description": "12/24V automotive battery analyzer for shop mechanics. Tests battery, cranking, and charging system in one — no need for separate jumper-load testing.",
           "image": "/images/products/battery-tester-ut673a.png",
           "keySpecs": [
             "12V battery 7-16VDC"
@@ -6175,7 +6175,7 @@
           "model": "UT675A",
           "category": "Battery Testers",
           "subcategory": "Battery Tester",
-          "description": "12V battery 7-16VDC; 12/24V cranking 7-30VDC; 12/24V charging 7-30VDC; USB; Print",
+          "description": "Pro battery tester with USB and print receipt for shop documentation. The customer-facing pick when you need to prove the battery is dying.",
           "image": "/images/products/ut675a.jpg",
           "keySpecs": [
             "12V battery 7-16VDC",
@@ -6189,7 +6189,7 @@
           "model": "UT677A+",
           "category": "Battery Testers",
           "subcategory": "Battery Resistance Tester",
-          "description": "R 0-3Ω; V 0-71V; 4-terminal; 500 storage; Bluetooth",
+          "description": "4-terminal battery internal resistance tester with Bluetooth. For UPS, telecom, and stationary battery bank maintenance — finds bad cells before failure.",
           "image": "/images/products/ut677a-plus.jpg",
           "keySpecs": [
             "R 0-3Ω",
@@ -6205,7 +6205,7 @@
           "model": "UT677C",
           "category": "Battery Testers",
           "subcategory": "Battery Resistance Tester",
-          "description": "R 0-3Ω; V 0-120V; 4-terminal; 500 storage; Bluetooth",
+          "description": "120V version of the UT677A+ — for higher-voltage stationary battery strings in UPS rooms and telecom shelters.",
           "image": "/images/products/ut677c.jpg",
           "keySpecs": [
             "R 0-3Ω",
@@ -6230,7 +6230,7 @@
           "model": "UT521",
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
-          "description": "0-2000Ω; AC earth V 200V; 50/60Hz; 20 storage; 2/3-wire",
+          "description": "Entry-level 3-wire earth ground tester for verifying grounding systems on residential and small commercial installations. The starter tester for new electricians.",
           "image": "/images/products/ut521.png",
           "keySpecs": [
             "0-2000Ω",
@@ -6245,7 +6245,7 @@
           "model": "UT522",
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
-          "description": "0-4000Ω; AC earth V 400V; 50/60Hz; 20 storage; 2/3-wire",
+          "description": "4000Ω earth tester with 400V mains capability — wider range than the UT521 for industrial and 3-phase site work.",
           "image": "/images/products/ut522.jpg",
           "keySpecs": [
             "0-4000Ω",
@@ -6260,7 +6260,7 @@
           "model": "UT572",
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
-          "description": "4Ω-40kΩ; Soil resistivity 4Ω-40kΩ; Disturbance V 50V; 2/3/4-wire; F selectable; RH/RS/RK",
+          "description": "Pro 4-wire earth tester with soil resistivity for substation and tower installation surveys. Selectable test frequency cuts through utility interference.",
           "image": "/images/products/ut572.jpg",
           "keySpecs": [
             "4Ω-40kΩ",
@@ -6275,7 +6275,7 @@
           "model": "UT575B",
           "category": "Earth Ground Testers",
           "subcategory": "Earth Ground Tester",
-          "description": "2/3/4-wire 0-300kΩ; Selective ground 3000Ω; Double clamp 100Ω; Earth V 100V; Earth I 600A; Soil resistivity; F 128/111/105/94Hz auto; Short test 250mA; Open V 40V",
+          "description": "Top-of-line earth ground tester with selective method and double-clamp for live measurements. For utility crews and plant teams who can't disconnect to test.",
           "image": "/images/products/ut575b.jpg",
           "keySpecs": [
             "2/3/4-wire 0-300kΩ",
@@ -6299,7 +6299,7 @@
           "model": "UT281E+",
           "category": "Flex Clamp Sensors",
           "subcategory": "True RMS Flex Clamp",
-          "description": "AC 10000A; AC/DC 1000V; F 45-400Hz; 1100mm flex coil; CAT IV 600V",
+          "description": "10,000A True RMS flexible Rogowski clamp for utility, industrial, and large bus duct work. CAT IV 600V rated for substation use.",
           "image": "/images/products/ut281e-plus.png",
           "keySpecs": [
             "AC 10000A",
@@ -6315,7 +6315,7 @@
           "model": "UT-CS06A",
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
-          "description": "400A AC; 50-400Hz; CAT III 300V/CAT II 600V",
+          "description": "400A flexible coil sensor for use with multimeters and oscilloscopes. The accessory pick when a fixed-jaw clamp can't fit the conductor.",
           "image": "/images/products/ut-cs06a.jpg",
           "keySpecs": [
             "400A AC",
@@ -6329,7 +6329,7 @@
           "model": "UT-CS09D",
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
-          "description": "30A/300A/3000A AC; 45-500Hz; 45.7cm flex",
+          "description": "Multi-range 3000A flex sensor for industrial and large facility current measurement. Three switchable ranges cover most use cases.",
           "image": "/images/products/ut-cs09d.jpg",
           "keySpecs": [
             "45-500Hz",
@@ -6342,7 +6342,7 @@
           "model": "UT-CS07",
           "category": "Flex Clamp Sensors",
           "subcategory": "Flex Clamp Sensor",
-          "description": "1000A AC/DC; 50-400Hz; CAT III 1500V/CAT IV 600V",
+          "description": "1000A AC/DC flex sensor with CAT III 1500V rating — for solar PV string and EV battery measurement on high-voltage DC systems.",
           "image": "/images/products/ut-cs07.jpg",
           "keySpecs": [
             "1000A AC/DC",
@@ -6365,7 +6365,7 @@
           "model": "UT255A",
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
-          "description": "0-600A; 0-69kV; 50/60Hz; 33mm jaw; Auto; 99 storage",
+          "description": "69kV high-voltage clamp meter for distribution line and substation work. The pick for utility crews measuring overhead conductor current safely.",
           "image": "/images/products/ut255a.jpg",
           "keySpecs": [
             "0-600A",
@@ -6380,7 +6380,7 @@
           "model": "UT255B",
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
-          "description": "0-600A; 0-69kV; 50/60Hz; 33mm jaw; Wireless ≤30m; Auto; 99 storage",
+          "description": "Wireless 69kV HV clamp — read up to 30m away from the line. Safer than the UT255A for tap-changer and distribution work.",
           "image": "/images/products/ut255b.jpg",
           "keySpecs": [
             "0-600A",
@@ -6395,7 +6395,7 @@
           "model": "UT255C",
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
-          "description": "0-1000A; 0-60kV; 50/60Hz; 68mm jaw; Auto; 99 storage",
+          "description": "1000A capacity 60kV clamp with larger 68mm jaw — for thicker bundled conductors and substation bus work.",
           "image": "/images/products/ut255c.jpg",
           "keySpecs": [
             "0-1000A",
@@ -6410,7 +6410,7 @@
           "model": "UT255E",
           "category": "High Voltage Clamp Meters",
           "subcategory": "HV Clamp",
-          "description": "AC 20kA; F 45-75Hz; Phase distance 150m; <35kV; Max Ø168mm hook; 3.5\" color LCD; 9999 storage",
+          "description": "20,000A high-current HV clamp with 168mm hook for transmission line work. Top of the UT255 family — for major utility maintenance crews.",
           "image": "/images/products/ut255b.jpg",
           "keySpecs": [
             "AC 20kA",
@@ -6434,7 +6434,7 @@
           "model": "UT526",
           "category": "Installation Testers",
           "subcategory": "Multifunction Electric Tester",
-          "description": "IR 250V/500V/1000V; <2mA; RCD 220V 45-65Hz; 10/30/100/300mA; LowR 0-2000Ω; AC/DC 440V",
+          "description": "Multifunction electrical tester combining insulation resistance, RCD, and low-resistance in one. The do-everything pick for residential commissioning.",
           "image": "/images/products/ut526.jpg",
           "keySpecs": [
             "<2mA",
@@ -6449,7 +6449,7 @@
           "model": "UT528AU",
           "category": "Installation Testers",
           "subcategory": "Safety / PAT Tester",
-          "description": "Earth/Protective Conductor; IR; Leakage; Class 2; Polarity",
+          "description": "Portable Appliance Tester (PAT) for AU/PH workplace safety compliance. Tests Class 1/2 appliances for earth, IR, and leakage in one workflow.",
           "image": "/images/products/ut528au.jpg",
           "keySpecs": [
             "IR",
@@ -6464,7 +6464,7 @@
           "model": "UT593",
           "category": "Installation Testers",
           "subcategory": "Multifunctional Installation Tester",
-          "description": "IR 1000V/1000MΩ; <2mA; LowR 199Ω; Line Z 2000Ω; 230V output; 20A test; PFC 26kA; No-trip loop Z 2000Ω",
+          "description": "Pro multifunction installation tester with no-trip loop Z and PFC up to 26kA. The compliance pick for commercial electrical certification work.",
           "image": "/images/products/ut593.jpg",
           "keySpecs": [
             "<2mA",
@@ -6479,7 +6479,7 @@
           "model": "UT595",
           "category": "Installation Testers",
           "subcategory": "Multifunctional Installation Tester",
-          "description": "IR 1000V/1000MΩ; <2mA; LowR 0-199Ω; Line Z; No-trip loop Z; AC 0-440V; F 45-60Hz",
+          "description": "Streamlined multifunction installation tester for daily commissioning rounds. Lighter and faster workflow than the UT593.",
           "image": "/images/products/ut595.jpg",
           "keySpecs": [
             "<2mA",
@@ -6503,7 +6503,7 @@
           "model": "UT381A",
           "category": "Light Meters",
           "subcategory": "Illuminance Meter",
-          "description": "0-400000 Lux; APP; 99 storage; Color correction; Integrated+split probe",
+          "description": "Pro illuminance meter with split probe and mobile app — for lighting designers and OSH consultants verifying workplace lux levels.",
           "image": "/images/products/ut381a.jpg",
           "keySpecs": [
             "APP",
@@ -6518,7 +6518,7 @@
           "model": "UT383",
           "category": "Light Meters",
           "subcategory": "Mini Light Meter",
-          "description": "0-199900 Lux; 1Fc 0-9999 Fc; Overload; Auto power off",
+          "description": "Pocket Lux/Fc meter for quick workplace and classroom lighting checks. Cheapest UNI-T light meter — pocket-size and easy to use.",
           "image": "/images/products/ut383.jpg",
           "keySpecs": [
             "1Fc 0-9999 Fc",
@@ -6532,7 +6532,7 @@
           "model": "UT383BT",
           "category": "Light Meters",
           "subcategory": "Mini Light Meter",
-          "description": "Same as UT383 + Bluetooth",
+          "description": "Bluetooth UT383 — log lighting data to your phone for site reports. The pick for lighting design surveys and OSH audits.",
           "image": "/images/products/ut383bt.jpg",
           "keySpecs": [
             "Bluetooth"
@@ -6544,7 +6544,7 @@
           "model": "UT383S",
           "category": "Light Meters",
           "subcategory": "Digital Light Meter",
-          "description": "0-199900 Lux; MAX/MIN; Overload; Split design",
+          "description": "Split-design Lux meter — sensor on a cable lets you measure light at workstation level while reading at eye level.",
           "image": "/images/products/ut383s.jpg",
           "keySpecs": [
             "MAX/MIN",
@@ -6567,7 +6567,7 @@
           "model": "UT371",
           "category": "Tachometers",
           "subcategory": "Non-contact Tachometer",
-          "description": "10-99999 RPM; 0-99999 counts",
+          "description": "Non-contact laser tachometer for motors, fans, and rotating equipment up to 99,999 RPM. The starter pick for HVAC and machine maintenance.",
           "image": "/images/products/ut371.jpg",
           "keySpecs": [
             "10-99999 RPM",
@@ -6580,7 +6580,7 @@
           "model": "UT372",
           "category": "Tachometers",
           "subcategory": "Non-contact Tachometer",
-          "description": "10-99999 RPM; 0-99999 counts; USB",
+          "description": "UT371 with USB data export — for trend logging during machine commissioning and troubleshooting work.",
           "image": "/images/products/ut372.jpg",
           "keySpecs": [
             "10-99999 RPM",
@@ -6594,7 +6594,7 @@
           "model": "UT372D",
           "category": "Tachometers",
           "subcategory": "2-in-1 Tachometer",
-          "description": "m/ft/in; 10 group storage; Bluetooth",
+          "description": "Combined laser tach plus surface-speed tachometer with Bluetooth. Two measurement modes for conveyor, belt, and rotational work.",
           "image": "/images/products/ut372d.jpg",
           "keySpecs": [
             "m/ft/in",
@@ -6608,7 +6608,7 @@
           "model": "UT373",
           "category": "Tachometers",
           "subcategory": "Mini Tachometer",
-          "description": "10.0-99999 RPM; 0-99999 counts; Auto power off; Laser-on indication",
+          "description": "Mini pocket laser tachometer — cheapest UNI-T tach, palm-sized for one-off RPM checks on motors and fans.",
           "image": "/images/products/ut373.jpg",
           "keySpecs": [
             "10.0-99999 RPM",
@@ -6632,7 +6632,7 @@
           "model": "UT343A",
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
-          "description": "0-1750μm; Single/Continuous; EBTN; Ferrous/Non-ferrous; Audio+Visual alarm; 199 storage",
+          "description": "Coating thickness gauge for paint, powder coat, and galvanizing QA. Auto-detects ferrous/non-ferrous substrates — useful for body shops and metal fab.",
           "image": "/images/products/ut343a.jpg",
           "keySpecs": [
             "0-1750μm",
@@ -6647,7 +6647,7 @@
           "model": "UT343D",
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
-          "description": "0-1250μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 500 storage",
+          "description": "Coating gauge with TFT LCD and auto-rotate display — easier reading at any angle. The pick for QA inspectors doing volume checks.",
           "image": "/images/products/ut343d.jpg",
           "keySpecs": [
             "0-1250μm",
@@ -6662,7 +6662,7 @@
           "model": "UT343E",
           "category": "Thickness Gauges",
           "subcategory": "Coating Thickness",
-          "description": "0-2000μm; TFT LCD; Single/Continuous; Ferrous/Non-ferrous; Auto-rotate; 3300 storage; Bluetooth",
+          "description": "Top-of-line coating gauge with Bluetooth and 3300-reading memory. For automotive paint inspectors building per-vehicle thickness reports.",
           "image": "/images/products/ut343e.jpg",
           "keySpecs": [
             "0-2000μm",
@@ -6678,7 +6678,7 @@
           "model": "UT345A",
           "category": "Thickness Gauges",
           "subcategory": "Ultrasonic Thickness",
-          "description": "1.00-300.00mm; Sound velocity 1000-9999 m/s",
+          "description": "Ultrasonic thickness gauge for measuring metal wall thickness — pipe walls, pressure vessels, ship hulls. Single-side measurement on intact material.",
           "image": "/images/products/ut345a.jpg",
           "keySpecs": [
             "1.00-300.00mm"
@@ -6699,7 +6699,7 @@
           "model": "UT12S",
           "category": "Voltage Detectors",
           "subcategory": "NCV Detector",
-          "description": "AC 90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Flashlight; Audible+LED",
+          "description": "Pen-style non-contact voltage detector for verifying live wires before working. The pocket essential — every Filipino electrician needs one.",
           "image": "/images/products/voltage-detector-ut12s.png",
           "keySpecs": [
             "AC 90V-1000V",
@@ -6718,7 +6718,7 @@
           "model": "UT12D",
           "category": "Voltage Detectors",
           "subcategory": "NCV Detector",
-          "description": "AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Flashlight; Audible+LED",
+          "description": "NCV pen with low 24V threshold — detects control voltage and doorbell wiring the basic UT12S misses.",
           "image": "/images/products/voltage-detector-ut12s.png",
           "keySpecs": [
             "AC 24/90V-1000V",
@@ -6737,7 +6737,7 @@
           "model": "UT12E",
           "category": "Voltage Detectors",
           "subcategory": "NCV Detector",
-          "description": "AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Vibration; Flashlight; Audible+LED",
+          "description": "NCV pen with vibration alert — feel the warning even when ear protection is on. The pick for noisy plant floor electrical work.",
           "image": "/images/products/voltage-detector-ut12s.png",
           "keySpecs": [
             "AC 24/90V-1000V",
@@ -6756,7 +6756,7 @@
           "model": "UT12M",
           "category": "Voltage Detectors",
           "subcategory": "NCV Detector",
-          "description": "AC 24/90V-1000V; 50/60Hz; Neutral/Live; Breakpoint; Magnetic solenoid detect; Flashlight; Audible+LED",
+          "description": "NCV pen with magnetic solenoid detection — finds energized magnetic devices and contactors. The HVAC and motor service pick.",
           "image": "/images/products/voltage-detector-ut12s.png",
           "keySpecs": [
             "AC 24/90V-1000V",
@@ -6784,7 +6784,7 @@
           "model": "USG5000V",
           "category": "RF Signal Generators",
           "subcategory": "Vector RF Signal Generator",
-          "description": "Vector RF signal generator: CW 9kHz–22GHz, IQ 5MHz–6GHz",
+          "description": "Flagship 22GHz vector signal generator with IQ modulation — for 5G, WiFi, and radar waveform testing labs.",
           "image": "/images/products/usg5000v.png",
           "keySpecs": [
             "CW 9kHz-22GHz",
@@ -6799,7 +6799,7 @@
           "model": "USG3000V",
           "category": "RF Signal Generators",
           "subcategory": "Vector RF Signal Generator",
-          "description": "Vector RF signal generator: CW 9kHz–6.5GHz, IQ 5MHz–6GHz",
+          "description": "6.5GHz vector signal generator covering all sub-6 5G NR and WiFi bands. Sweet spot for IoT and consumer wireless development.",
           "image": "/images/products/usg3000v.png",
           "keySpecs": [
             "CW 9kHz-6.5GHz",
@@ -6814,7 +6814,7 @@
           "model": "USG5000M",
           "category": "RF Signal Generators",
           "subcategory": "Analog RF Signal Generator",
-          "description": "Analog RF signal generator covering 9kHz to 22GHz",
+          "description": "22GHz analog RF generator without IQ modulation — for CW interference, LO substitution, and basic spectrum testing labs.",
           "image": "/images/products/usg5000m.png",
           "keySpecs": [
             "9kHz-22GHz",
@@ -6829,7 +6829,7 @@
           "model": "USG3000M",
           "category": "RF Signal Generators",
           "subcategory": "Analog RF Signal Generator",
-          "description": "Analog RF signal generator covering 9kHz to 6.5GHz",
+          "description": "6.5GHz analog RF generator — affordable signal source for sub-6 GHz wireless testing and EMI characterization.",
           "image": "/images/products/usg3000m.png",
           "keySpecs": [
             "9kHz-6.5GHz",
@@ -6853,7 +6853,7 @@
           "model": "UT8806E",
           "category": "Bench Digital Multimeters",
           "subcategory": "6.5-digit Bench DMM",
-          "description": "6½-digit bench multimeter, 10000 rdgs/s, 300kHz, 0.0035% DC accuracy with USB/LAN/RS-232C/GPIB",
+          "description": "Flagship 6.5-digit bench DMM with GPIB and full instrumentation interface options. For metrology labs and high-end calibration work.",
           "image": "/images/products/ut8806e.png",
           "keySpecs": [
             "6.5 digit",
@@ -6869,7 +6869,7 @@
           "model": "UT8805E",
           "category": "Bench Digital Multimeters",
           "subcategory": "5.5-digit Bench DMM",
-          "description": "5½-digit bench multimeter, 5000 rdgs/s, 100kHz, 0.015% DC accuracy with USB/LAN/RS232",
+          "description": "5.5-digit bench DMM with LAN — sweet spot for production test stations and engineering R&D benches.",
           "image": "/images/products/ut8805e.png",
           "keySpecs": [
             "5.5 digit",
@@ -6885,7 +6885,7 @@
           "model": "UT8804E",
           "category": "Bench Digital Multimeters",
           "subcategory": "4.75-digit Bench DMM",
-          "description": "4⅚-digit bench multimeter, 100kHz, 0.025% DC accuracy with USB Device",
+          "description": "4.75-digit bench DMM — affordable upgrade from handheld for school labs and small electronics shops.",
           "image": "/images/products/ut8804e.png",
           "keySpecs": [
             "4.75 digit",
@@ -6901,7 +6901,7 @@
           "model": "UT8803E",
           "category": "Bench Digital Multimeters",
           "subcategory": "3.75-digit Bench DMM",
-          "description": "3⅚-digit entry bench multimeter, 100kHz, 0.3% DC accuracy with USB Device",
+          "description": "Entry 3.75-digit bench DMM — cheapest UNI-T bench meter, perfect for technical schools and starter benches.",
           "image": "/images/products/ut8803e.png",
           "keySpecs": [
             "3.75 digit",
@@ -6926,7 +6926,7 @@
           "model": "LM320D",
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
-          "description": "4x90°; HD backlit; Li-ion; Two-side magnets",
+          "description": "Digital protractor with magnetic mounting for steel layout, machine setup, and welding fab work. The starter pick for fabrication shops.",
           "image": "/images/products/lm320d.png",
           "keySpecs": [
             "4x90°",
@@ -6941,7 +6941,7 @@
           "model": "LM320E",
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
-          "description": "4x90°; HD backlit; Li-ion; Two-side lasers; Two-side magnets",
+          "description": "Angle meter with two-side laser projection — extends layout lines onto the workpiece. The pick for finish carpentry and tile work.",
           "image": "/images/products/lm320e.png",
           "keySpecs": [
             "4x90°",
@@ -6956,7 +6956,7 @@
           "model": "LM320F",
           "category": "Angle Meters",
           "subcategory": "Angle Meter",
-          "description": "4x90°; HD backlit; Li-ion; Three-side lasers; Three-side magnets",
+          "description": "Top-of-line 3-side laser angle meter — projects from any orientation. The flagship for serious construction layout teams.",
           "image": "/images/products/lm320f.png",
           "keySpecs": [
             "4x90°",
@@ -6980,7 +6980,7 @@
           "model": "UT601",
           "category": "LCR & Component Meters",
           "subcategory": "LC Meter",
-          "description": "R 20Ω-2000MΩ; C 200pF-20mF",
+          "description": "Compact RC meter for capacitor and resistor verification. The pocket pick for hobbyists and repair techs sorting unmarked components.",
           "image": "/images/products/ut601.jpg",
           "keySpecs": [
             "R 20Ω-2000MΩ",
@@ -6993,7 +6993,7 @@
           "model": "UT603",
           "category": "LCR & Component Meters",
           "subcategory": "LC Meter",
-          "description": "R 200Ω-20MΩ; C 2nF-600uF; L 2mH-20H",
+          "description": "RLC meter with inductance measurement — handles coils, transformers, and magnetic components the UT601 can't.",
           "image": "/images/products/ut603.jpg",
           "keySpecs": [
             "R 200Ω-20MΩ",
@@ -7007,7 +7007,7 @@
           "model": "UT612",
           "category": "LCR & Component Meters",
           "subcategory": "LCR Meter",
-          "description": "R 20Ω-200MΩ; C 200pF-20mF; L 20uH-2000H; Test F 100Hz/120Hz/1kHz/10kHz/100kHz; L/C/R/DCR/Q/D/θ/ESR",
+          "description": "Pro handheld LCR meter with 5 test frequencies and ESR/Q/D readouts. The pick for SMPS repair, audio crossover work, and serious electronics QA.",
           "image": "/images/products/ut612.jpg",
           "keySpecs": [
             "R 20Ω-200MΩ",
@@ -7031,7 +7031,7 @@
           "model": "UT377A",
           "category": "Moisture Meters",
           "subcategory": "Wood Moisture Meter",
-          "description": "2-40%; 2/s refresh; Auto power off; 4 wood categories; Ambient T correction",
+          "description": "Pin-type wood moisture meter for woodworkers and floor installers. Verifies lumber is dry enough before milling or installing.",
           "image": "/images/products/ut377a.jpg",
           "keySpecs": [
             "2-40%",
@@ -7046,7 +7046,7 @@
           "model": "UT377B",
           "category": "Moisture Meters",
           "subcategory": "Wood Moisture Meter",
-          "description": "Wood+building; 7.0-54.8%; 2/s; 7 wood categories; LED flashlight; 2m drop",
+          "description": "Pin moisture meter for both wood AND building materials (drywall, concrete). The pick for water damage assessors and home inspectors.",
           "image": "/images/products/ut377b.png",
           "keySpecs": [
             "Wood+building",
@@ -7061,7 +7061,7 @@
           "model": "UT377C",
           "category": "Moisture Meters",
           "subcategory": "Pinless Moisture Meter",
-          "description": "Non-destructive; EBTN color; Wood 4-32%; Building 0-99.9%; Wood ±4%; Flashlight; Audio-Light alarm",
+          "description": "Pinless moisture meter — measures without poking holes. The pick for finished surfaces, gypsum walls, and antique restoration work.",
           "image": "/images/products/ut377c.jpg",
           "keySpecs": [
             "Non-destructive",
@@ -7085,7 +7085,7 @@
           "model": "UT261A",
           "category": "Phase Sequence Testers",
           "subcategory": "Phase Sequence Indicator",
-          "description": "Contact; Phase sequence; Missing phase; LCD; Up to 400Hz",
+          "description": "Contact 3-phase rotation tester — verifies sequence on motor and 3-phase load installs. Flips a wrong-direction motor before damage.",
           "image": "/images/products/ut261a.jpg",
           "keySpecs": [
             "Contact",
@@ -7100,7 +7100,7 @@
           "model": "UT261B",
           "category": "Phase Sequence Testers",
           "subcategory": "Phase Sequence Indicator",
-          "description": "Contact; Phase sequence; Missing phase; Motor rotation; Up to 400Hz",
+          "description": "UT261A with motor rotation indication — shows the actual spin direction the motor will take. Saves a trial start.",
           "image": "/images/products/ut261b.jpg",
           "keySpecs": [
             "Contact",
@@ -7115,7 +7115,7 @@
           "model": "UT262E",
           "category": "Phase Sequence Testers",
           "subcategory": "Non-contact Phase Sequence",
-          "description": "Phase sequence R/L; Missing phase; Live power; Circuit break; AC 70-1000V; LED+Buzzer; Auto power off",
+          "description": "Non-contact phase sequence tester — no need to expose conductors. Safer pick for live panel work, just clamp around insulated cables.",
           "image": "/images/products/ut262e.jpg",
           "keySpecs": [
             "Phase sequence R/L",
@@ -7139,7 +7139,7 @@
           "model": "UT336P",
           "category": "Pressure Gauges",
           "subcategory": "Wireless Pressure Gauge",
-          "description": "-1 to 60bar; ±0.5%FS; Hi/Lo switching+LED; Hi/Lo alarms; Superheat/subcooling auto; Bluetooth; 8000 offline",
+          "description": "Wireless refrigerant pressure gauge with auto superheat/subcooling calculation. The HVAC tech's daily driver for AC commissioning and service.",
           "image": "/images/products/ut336a.jpg",
           "keySpecs": [
             "-1 to 60bar",
@@ -7155,7 +7155,7 @@
           "model": "UT336P Kit",
           "category": "Pressure Gauges",
           "subcategory": "Wireless Pressure Gauge Kit",
-          "description": "UT336P + Temperature Clamp",
+          "description": "UT336P pressure gauge bundled with temperature pipe clamp. Complete HVAC measurement kit — pressure plus pipe-temp in one purchase.",
           "image": "/images/products/ut336a.jpg",
           "keySpecs": [],
           "kinmoSearchUrl": "https://kinmo.com/search?q=UT336P%20Kit",
@@ -7165,7 +7165,7 @@
           "model": "UT366A",
           "category": "Pressure Gauges",
           "subcategory": "Digital Manometer",
-          "description": "kPa/mbar/bar/psi/mmHg/inH2O/inHg/ozin2/kgcm2/ftH2O/mmH2O/hPa; m/s fpm; Auto power off; FSTN",
+          "description": "Digital manometer with 12 pressure units and air velocity readout. The do-everything pick for HVAC commissioning and gas system audits.",
           "image": "/images/products/ut366a.jpg",
           "keySpecs": [
             "m/s fpm",
@@ -7188,7 +7188,7 @@
           "model": "UT352",
           "category": "Sound Level Meters",
           "subcategory": "Sound Level Meter",
-          "description": "30-130 dB; 31.5Hz-8kHz; FAST/SLOW; Analogue out; 63 storage",
+          "description": "Standard sound level meter with analog output for OSH and environmental noise audits. The pick for industrial workplace compliance.",
           "image": "/images/products/ut352.jpg",
           "keySpecs": [
             "30-130 dB",
@@ -7203,7 +7203,7 @@
           "model": "UT353",
           "category": "Sound Level Meters",
           "subcategory": "Mini Sound Level Meter",
-          "description": "30-130 dB A-weight; F/S 125ms/1000ms; 31.5Hz-8kHz; Overload; Auto power off",
+          "description": "Pocket sound level meter for everyday noise checks — office, classroom, and home use. Cheapest UNI-T SPL meter.",
           "image": "/images/products/ut353.jpg",
           "keySpecs": [
             "30-130 dB A-weight",
@@ -7218,7 +7218,7 @@
           "model": "UT353BT",
           "category": "Sound Level Meters",
           "subcategory": "Mini Sound Level Meter",
-          "description": "Same as UT353 + Bluetooth",
+          "description": "Bluetooth UT353 — log noise data to your phone for trend graphs. The pick for ongoing monitoring at events or construction sites.",
           "image": "/images/products/ut353bt.jpg",
           "keySpecs": [
             "Bluetooth"
@@ -7239,7 +7239,7 @@
           "model": "UT311A",
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
-          "description": "Acc 0.1-199.9 m/s²; Vel 0.1-199.9 mm/s; Disp 0.001-1999μm; Flashlight; Rotatable; 2.4\" TFT; 1350mAh Li",
+          "description": "Handheld vibration tester for motor, fan, and pump bearing checks. The pick for predictive maintenance teams catching bearing wear early.",
           "image": "/images/products/ut311a.jpg",
           "keySpecs": [
             "Acc 0.1-199.9 m/s²",
@@ -7254,7 +7254,7 @@
           "model": "UT312A",
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
-          "description": "Split type; same specs as UT311A",
+          "description": "Split-probe version of the UT311A — sensor on a cable for measuring vibration in tight or hot spots without contorting your wrist.",
           "image": "/images/products/ut312a.jpg",
           "keySpecs": [
             "Split type",
@@ -7267,7 +7267,7 @@
           "model": "UT315A",
           "category": "Vibration Meters",
           "subcategory": "Vibration Tester",
-          "description": "Acc 0-199.9 m/s² (10Hz-10kHz); Vel 0-19.99 cm/s (10Hz-1kHz); Disp 1-1.999mm (10Hz-500Hz); USB",
+          "description": "Wide-bandwidth vibration tester (to 10kHz) with USB export — for high-speed turbomachinery and detailed vibration analysis reports.",
           "image": "/images/products/ut311a.jpg",
           "keySpecs": [
             "USB"
@@ -7288,7 +7288,7 @@
           "model": "UTL8500X+",
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
-          "description": "Programmable DC electronic load, 200W–3000W, 500V/240A",
+          "description": "DC electronic load up to 3000W for testing PSUs, batteries, and renewables. The right load for solar inverter and EV battery commissioning work.",
           "image": "/images/products/utl8500x-plus.png",
           "keySpecs": [
             "200-3000W",
@@ -7303,7 +7303,7 @@
           "model": "UTL8500+",
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
-          "description": "Programmable DC electronic load, 150W/300W, 150V/30A",
+          "description": "Mid-tier 150-300W DC electronic load for power supply, battery, and small inverter QA. The lab-bench pick for electronics R&D.",
           "image": "/images/products/utl8500-plus.png",
           "keySpecs": [
             "150-300W",
@@ -7318,7 +7318,7 @@
           "model": "UTL8200+",
           "category": "DC Electronic Loads",
           "subcategory": "Programmable DC Electronic Load",
-          "description": "Programmable DC electronic load, 400W, 150V/20A or 40A",
+          "description": "400W DC electronic load — the workhorse pick for SMPS development and consumer charger QA testing.",
           "image": "/images/products/utl8200-plus.png",
           "keySpecs": [
             "400W",
@@ -7342,7 +7342,7 @@
           "model": "UTR2830",
           "category": "Bench LCR Meters",
           "subcategory": "Precision LCR Meter",
-          "description": "Precision LCR meter, 300kHz max, 0.05% accuracy, 6-digit display, 80 rdgs/s with DCR",
+          "description": "Top-tier 300kHz bench LCR meter with 0.05% accuracy. For incoming inspection and component characterization in electronics manufacturing.",
           "image": "/images/products/utr2830.png",
           "keySpecs": [
             "300kHz",
@@ -7358,7 +7358,7 @@
           "model": "UT622",
           "category": "Bench LCR Meters",
           "subcategory": "LCR Meter",
-          "description": "Bench LCR meter, 100kHz max, 0.1% accuracy, 5-digit display, 20 rdgs/s",
+          "description": "100kHz bench LCR meter — affordable mid-range pick for capacitor and inductor sorting on production lines.",
           "image": "/images/products/ut622.png",
           "keySpecs": [
             "100kHz",
@@ -7373,7 +7373,7 @@
           "model": "UTR2810+",
           "category": "Bench LCR Meters",
           "subcategory": "LCR Meter",
-          "description": "Bench LCR meter, 10kHz max, 0.1% accuracy, 6-digit display, 23 rdgs/s",
+          "description": "10kHz bench LCR meter with 6-digit display — entry pick for school labs and basic electronics R&D.",
           "image": "/images/products/utr2810-plus.png",
           "keySpecs": [
             "10kHz",
@@ -7397,7 +7397,7 @@
           "model": "UTE323",
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
-          "description": "Bench power analyzer: 75mV–600V, 2.5mA–20A, DC to 300kHz, ±0.1% rdg accuracy",
+          "description": "Bench power analyzer with 5-inch TFT display and 0.1% accuracy. For motor, lighting, and inverter efficiency testing in R&D labs.",
           "image": "/images/products/ute323.png",
           "keySpecs": [
             "75mV-600V",
@@ -7413,7 +7413,7 @@
           "model": "UTE300",
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
-          "description": "Bench power analyzer: 75mV–1000V, 25µA–50A, DC to 300kHz, ±0.1% rdg accuracy",
+          "description": "Higher-current 50A bench power analyzer to 1000V — for high-power inverter, motor drive, and EV component testing.",
           "image": "/images/products/ute300.png",
           "keySpecs": [
             "75mV-1000V",
@@ -7428,7 +7428,7 @@
           "model": "UTE9800+",
           "category": "Bench Power Meters",
           "subcategory": "Digital Power Meter",
-          "description": "Bench power meter: 0.5V–600V, 0.05mA–20A, 40Hz–400Hz",
+          "description": "Compact bench power meter limited to 40-400Hz — affordable pick for lighting, motor, and consumer appliance QA testing.",
           "image": "/images/products/ute9800-plus.png",
           "keySpecs": [
             "0.5V-600V",
@@ -7452,7 +7452,7 @@
           "model": "UT5470",
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
-          "description": "AC/DC hipot tester: AC 0.05–10kV, DC 0.05–12kV, 5'' touchscreen",
+          "description": "10kV AC / 12kV DC hipot tester with 5-inch touch UI — flagship for high-voltage withstand testing in transformer and motor manufacturing QA.",
           "image": "/images/products/ut5470.png",
           "keySpecs": [
             "AC 10kV",
@@ -7467,7 +7467,7 @@
           "model": "UT5320R-SxA",
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
-          "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV, 4.3'' display",
+          "description": "5kV AC / 6kV DC hipot tester — mid-range pick for consumer appliance and lighting product safety certification.",
           "image": "/images/products/ut5320r-sxa.png",
           "keySpecs": [
             "AC 5kV",
@@ -7482,7 +7482,7 @@
           "model": "UT5300+",
           "category": "Hipot Testers",
           "subcategory": "AC/DC Hipot Tester",
-          "description": "AC/DC hipot tester: AC 0.05–5kV, DC 0.05–6kV",
+          "description": "Compact 5kV AC / 6kV DC hipot tester — entry pick for production-line withstand testing without touchscreen overhead.",
           "image": "/images/products/ut5300-plus.png",
           "keySpecs": [
             "AC 5kV",
@@ -7506,7 +7506,7 @@
           "model": "UT267B",
           "category": "3-Phase Power Analyzers",
           "subcategory": "3-Phase Clamp Volt Ammeter",
-          "description": "AC 20A; AC 600V; 45-65Hz; AP 12kW; SP 12kVA; RP 12kVAR; PF -1 to 1; Phase 0-360°; Current vector 0mA-60A",
+          "description": "3-phase clamp power analyzer for residential and small commercial loads up to 12kW. The starter pick for energy auditors and panel surveys.",
           "image": "/images/products/ut267b.jpg",
           "keySpecs": [
             "AC 20A",
@@ -7521,7 +7521,7 @@
           "model": "UT268B",
           "category": "3-Phase Power Analyzers",
           "subcategory": "3-Phase Clamp Volt Ammeter",
-          "description": "AC 600V; AC 1000A; AP 600kW; SP 600kVA; RP 600kVAR; PF -1 to 1; Phase 0-360°",
+          "description": "Industrial 3-phase clamp power analyzer up to 600kW — for plant and large facility energy audits with 1000A clamps.",
           "image": "/images/products/ut268b.jpg",
           "keySpecs": [
             "AC 600V",
@@ -7545,7 +7545,7 @@
           "model": "UT659A",
           "category": "LED Testers",
           "subcategory": "LED Tester",
-          "description": "Output 300V; 30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight",
+          "description": "AC-input LED tube and bulb tester with 300V output. The pick for electricians and lighting suppliers verifying stock and installs.",
           "image": "/images/products/ut659a.jpg",
           "keySpecs": [
             "Output 300V",
@@ -7560,7 +7560,7 @@
           "model": "UT659D",
           "category": "LED Testers",
           "subcategory": "LED Tester",
-          "description": "Output 24V/300V; 2mA/30mA; Continuity; 5V DC; R 0-99.9Ω; Input 85-265V @ 50/60Hz; Backlight",
+          "description": "Dual 24V/300V LED tester — handles both low-voltage strip LEDs and standard fluorescent-replacement tubes.",
           "image": "/images/products/ut659d.jpg",
           "keySpecs": [
             "Output 24V/300V",
@@ -7584,7 +7584,7 @@
           "model": "UT582+",
           "category": "RCD Testers",
           "subcategory": "RCD Tester",
-          "description": "x1/2; x1; x5; AUTO RAMP; 195-253V; V 30-600V; F 45-65Hz; 1V resolution",
+          "description": "RCD/GFCI tester with auto-ramp — verifies trip thresholds on residential ground-fault breakers. The certifier's daily tool.",
           "image": "/images/products/ut582-plus.jpg",
           "keySpecs": [
             "x1/2",
@@ -7599,7 +7599,7 @@
           "model": "UT586+",
           "category": "RCD Testers",
           "subcategory": "RCD Tester",
-          "description": "RCD 10-1000mA; 0-2000ms @ 0°/180°; Multi-level; V 30-480V; Wiring check; Phase angle selection; Auto RAMP",
+          "description": "Pro RCD tester with phase-angle selection and 1000mA range — for industrial residual current devices on motor and machine circuits.",
           "image": "/images/products/ut586-plus.jpg",
           "keySpecs": [
             "RCD 10-1000mA",
@@ -7623,7 +7623,7 @@
           "model": "UT336A",
           "category": "Refrigerant Leak Detectors",
           "subcategory": "Refrigerant Leak Detector",
-          "description": "Negative Corona; 3g/a max; 6-step sensitivity; Audio+Light alarm; CFC/HCFC/HFC",
+          "description": "Negative-corona refrigerant leak detector for HVACR service — most sensitive method, finds tiny CFC/HCFC/HFC leaks before they cause comfort complaints.",
           "image": "/images/products/ut336a.jpg",
           "keySpecs": [
             "Negative Corona",
@@ -7638,7 +7638,7 @@
           "model": "UT336B",
           "category": "Refrigerant Leak Detectors",
           "subcategory": "Refrigerant Leak Detector",
-          "description": "Semiconductor; 3g/a max; 6-step; Audio+Visual; Auto-reset; Probe light",
+          "description": "Semiconductor refrigerant leak detector — cheaper alternative to corona-type with built-in probe light for dark mechanical rooms.",
           "image": "/images/products/ut336b.png",
           "keySpecs": [
             "Semiconductor",
@@ -7662,7 +7662,7 @@
           "model": "UT116A",
           "category": "SMD Testers",
           "subcategory": "SMD Tester",
-          "description": "R 30MΩ; C 30mF; Diode 3V; LED 21V/1mA; Continuity <30Ω; DC V 36V",
+          "description": "Tweezer-style SMD component tester — measure tiny resistors, caps, and diodes without removing them from the board. Repair tech essential.",
           "image": "/images/products/ut116a.jpg",
           "keySpecs": [
             "30MΩ",
@@ -7677,7 +7677,7 @@
           "model": "UT116C",
           "category": "SMD Testers",
           "subcategory": "SMD Tester",
-          "description": "R 60MΩ; C 100mF; Diode 3.2V; LED 21V/1mA; Continuity <50Ω; Battery test 10mA",
+          "description": "Wider-range SMD tweezer with battery test mode — handles bigger components and quick coin-cell verification.",
           "image": "/images/products/ut116c.jpg",
           "keySpecs": [
             "60MΩ",
@@ -7701,7 +7701,7 @@
           "model": "UT225A",
           "category": "Transformer Turns Ratio Testers",
           "subcategory": "Wireless Transformer Tester",
-          "description": "Primary 0-3000A; ±1%FS; Online 380V/220V; Wireless 100m; 3000 storage; Insulation 110Vrms",
+          "description": "Wireless CT ratio tester for low-voltage current transformers — clamp the primary, measure remotely up to 100m for utility maintenance crews.",
           "image": "/images/products/ut225a.jpg",
           "keySpecs": [
             "Primary 0-3000A",
@@ -7716,7 +7716,7 @@
           "model": "UT225B",
           "category": "Transformer Turns Ratio Testers",
           "subcategory": "Wireless Transformer Tester",
-          "description": "Primary 0-800A; ±0.5%FS; Online 35kV; Wireless 100m; 3000 storage; Insulation 3700Vrms",
+          "description": "High-voltage CT ratio tester rated for 35kV online use — for substation crews verifying metering CTs without dropping the line.",
           "image": "/images/products/ut225b.jpg",
           "keySpecs": [
             "Primary 0-800A",
@@ -7740,7 +7740,7 @@
           "model": "UT3515-Sx",
           "category": "Bench Micro Ohm Meters",
           "subcategory": "Multi-Channel Micro Ohm Meter",
-          "description": "Multi-channel micro ohm meter, scan mode 1µΩ–200kΩ, 230ms/10CH",
+          "description": "10-channel scanning micro-ohm meter for production-line connector and busbar QA. Sweeps all 10 channels in 230ms — fast for high-volume QA.",
           "image": "/images/products/ut3515-sx.png",
           "keySpecs": [
             "1µΩ-200kΩ",
@@ -7755,7 +7755,7 @@
           "model": "UT3510+",
           "category": "Bench Micro Ohm Meters",
           "subcategory": "Micro Ohm Meter",
-          "description": "Bench micro ohm meter, 1µΩ–20kΩ/2MΩ, 100 rdgs/s",
+          "description": "Single-channel bench micro-ohm meter at 100 rdgs/s — for incoming inspection of contacts, connectors, and PCB joints.",
           "image": "/images/products/ut3510-plus.png",
           "keySpecs": [
             "1µΩ-20kΩ",
@@ -7778,7 +7778,7 @@
           "model": "UT568B",
           "category": "Acoustic Imagers",
           "subcategory": "Acoustic Imager",
-          "description": "138-ch MEMS mic; 2-100kHz; Acoustic 60°x40°; 25FPS; 20-120dB SPL; 4.3\" touch",
+          "description": "138-channel acoustic camera that visualizes compressed-air leaks and partial discharge. The pick for plant energy audits — see waste leaks instantly.",
           "image": "/images/products/ut568b.jpg",
           "keySpecs": [
             "138-ch MEMS mic",
@@ -7802,7 +7802,7 @@
           "model": "UT25CL",
           "category": "Cable Locators",
           "subcategory": "Cable Locator",
-          "description": "TX 33kHz; AC/DC 8-480V; AC 50/60Hz/2.5%±3deg; RX 33kHz; Bipolar 0-0.5m; Unipolar 0-2.5m; NCV 80-1000V; Multi-TX 8",
+          "description": "Underground cable locator with 33kHz TX/RX and NCV — traces buried lines and identifies breakers in panels. The renovator's pre-trench tool.",
           "image": "/images/products/ut25cl.jpg",
           "keySpecs": [
             "TX 33kHz",
@@ -7827,7 +7827,7 @@
           "model": "UT25A",
           "category": "Circuit Breaker Testers",
           "subcategory": "Circuit Breaker Tester",
-          "description": "US; GFCI 90-120V AC; 47-63Hz; 6mA leakage",
+          "description": "Plug-in US-pattern GFCI circuit breaker tester for 120V outlets. Verifies trip threshold quickly — for OFW engineers and US/PH dual-spec installs.",
           "image": "/images/products/ut25a.jpg",
           "keySpecs": [
             "US",
@@ -7851,7 +7851,7 @@
           "model": "UT347A",
           "category": "Hardness Testers",
           "subcategory": "Leeb Hardness Tester",
-          "description": "HL/HB/HRC/HRB/HV/HS; 4 modes; 7 impact devices; 640x480 camera; Bluetooth",
+          "description": "Portable Leeb hardness tester with built-in camera and Bluetooth. For metal QA, weld inspection, and incoming material verification.",
           "image": "/images/products/ut347a.jpg",
           "keySpecs": [
             "HL/HB/HRC/HRB/HV/HS",
@@ -7875,7 +7875,7 @@
           "model": "UT345C",
           "category": "LPG Tank Checkers",
           "subcategory": "LPG Tank Level Checker",
-          "description": "Steel/aluminum standard propane/butane LPG; 8-14\" (~200-350mm); R/G LED; Flashlight",
+          "description": "Ultrasonic LPG tank level checker — non-invasive, just press to the tank wall. Useful for restaurants and homes verifying LPG levels before they run dry.",
           "image": "/images/products/ut345c.jpg",
           "keySpecs": [
             "R/G LED",
@@ -7897,7 +7897,7 @@
           "model": "UT385",
           "category": "Laser Power Meters",
           "subcategory": "Laser Power Meter",
-          "description": "0uW-39.99mW; 400-1100nm; Optional 520/633/650/780nm",
+          "description": "Visible-light laser power meter (400-1100nm) — for laser pointer, fiber transceiver, and laser module QA in electronics shops.",
           "image": "/images/products/ut385.jpg",
           "keySpecs": [
             "0uW-39.99mW"
@@ -7918,7 +7918,7 @@
           "model": "UT661D",
           "category": "Pipeline Detectors",
           "subcategory": "Pipeline Blockage Detector",
-          "description": "Signal wire 35m; 10h battery",
+          "description": "Pipeline blockage detector with 35m signal wire — locates clogs and breaks in drain, sewer, and conduit runs. The plumber's quick diagnostic tool.",
           "image": "/images/products/ut661d.jpg",
           "keySpecs": [
             "Signal wire 35m",
@@ -7940,7 +7940,7 @@
           "model": "UT230B-EU",
           "category": "Power Monitors",
           "subcategory": "Power Socket Monitor",
-          "description": "100V-260V; 0-16A; 45-65Hz; 1-3680W; PF 0-1; Energy 0-9999kWh",
+          "description": "Plug-in EU socket power monitor — measures appliance energy use to find phantom loads. Useful for Filipino homes auditing brownout-prone electric bills.",
           "image": "/images/products/ut230b-eu.jpg",
           "keySpecs": [
             "0-16A",
@@ -7964,7 +7964,7 @@
           "model": "UT285C",
           "category": "Power Quality Analyzers",
           "subcategory": "3-Phase Power Quality Analyzer",
-          "description": "Phase-to-N 1000V; Phase-to-Phase 2000V; DC 1000V; 10mA-1000A; AP 9999.9kW; RP 9999.9kVAR; SP 9999.9kVA; Phase -179°-180°; Harmonic 0-99.9%; K factor 1-99.99",
+          "description": "Full 3-phase power quality analyzer with harmonics and K-factor. The pick for solving plant-floor power issues — voltage sags, harmonics, and PF problems.",
           "image": "/images/products/ut285c.jpg",
           "keySpecs": [
             "Phase-to-N 1000V",
@@ -7988,7 +7988,7 @@
           "model": "UT334A",
           "category": "Radiation Detectors",
           "subcategory": "Radiation Dose Meter",
-          "description": "X, β, γ rays; 0.05μSv-50mSv; Audio+Visual alarm",
+          "description": "Personal radiation dose meter for X, beta, and gamma — for hospital radiology, NDT inspection, and industrial radiography teams.",
           "image": "/images/products/ut334a.jpg",
           "keySpecs": [
             "X, β, γ rays",
@@ -8011,7 +8011,7 @@
           "model": "UT673PV",
           "category": "Solar / PV Tools",
           "subcategory": "Solar MPPT Tester",
-          "description": "Max 5-800W; Imax 0-35A; Vmax 12-60V; OCV 12-60V; Isc 0-35A; Reverse polarity protect; OV/OC/OT/OP protect; Manual/Auto MPPT",
+          "description": "Solar panel MPPT tester for Filipino PV installers commissioning rooftop systems. Verifies actual panel performance vs nameplate spec — catches dud panels.",
           "image": "/images/products/ut673pv.jpg",
           "keySpecs": [
             "Max 5-800W",
@@ -8035,7 +8035,7 @@
           "model": "UAP500A-1000A",
           "category": "AC Power Sources",
           "subcategory": "Programmable AC Source",
-          "description": "Programmable AC power source, 1000VA, dual range L:150V/4.2A H:300V/8.4A",
+          "description": "1000VA programmable AC source for product compliance testing — simulates 110V/220V mains for global appliance certification work.",
           "image": "/images/products/uap500a-1000a.png",
           "keySpecs": [
             "1000VA",
@@ -8060,7 +8060,7 @@
           "model": "UT3560",
           "category": "Bench Battery Testers",
           "subcategory": "Battery Internal Resistance Tester",
-          "description": "Bench battery tester: 0.01mV–400V, 0.1µΩ–3.2kΩ, 0.01% V / 0.5% R accuracy",
+          "description": "Bench battery internal resistance tester for production-line cell sorting. Half-2U format slots into pack assembly QA stations.",
           "image": "/images/products/ut3560.png",
           "keySpecs": [
             "0.01mV-400V",
@@ -8084,7 +8084,7 @@
           "model": "UT5400",
           "category": "Electrical Safety Analyzers",
           "subcategory": "Multi-Function Safety Analyzer",
-          "description": "All-in-one safety analyzer: ACW 5kV/100mA, DCW 6kV/10mA, IR to 50GΩ, GB 40A, 5'' touchscreen",
+          "description": "All-in-one safety analyzer combining hipot, IR, and ground bond in one box. Replaces 3 instruments on the appliance certification bench.",
           "image": "/images/products/ut5400.png",
           "keySpecs": [
             "ACW 5kV",
@@ -8109,7 +8109,7 @@
           "model": "UT5583",
           "category": "Bench Insulation Resistance Testers",
           "subcategory": "Programmable Insulation Tester",
-          "description": "Bench insulation resistance tester: 1V–1000V DC, 10kΩ–10TΩ, 4.3'' TFT LCD",
+          "description": "Programmable bench insulation resistance tester to 10TΩ — for cable, motor winding, and capacitor production-line QA.",
           "image": "/images/products/ut5583.png",
           "keySpecs": [
             "1V-1000V DC",
@@ -8133,7 +8133,7 @@
           "model": "UT5140",
           "category": "Ground Bond Testers",
           "subcategory": "AC Ground Bond Tester",
-          "description": "Ground bond tester: 1–40A test current, 0–600mΩ resistance, 4-terminal method, 4.3'' TFT",
+          "description": "AC ground bond tester with 40A injection — verifies safety earth on appliances and Class I equipment for compliance certification.",
           "image": "/images/products/ut5140.png",
           "keySpecs": [
             "1-40A",
@@ -8157,7 +8157,7 @@
           "model": "UT3200+",
           "category": "Multi-Channel Temperature Loggers",
           "subcategory": "Temperature Data Logger",
-          "description": "Multi-channel temperature logger, up to 48 channels, 10 rdgs/s scan rate",
+          "description": "Up to 48-channel bench temperature logger — for oven mapping, refrigeration validation, and multi-zone thermal characterization.",
           "image": "/images/products/ut3200-plus.png",
           "keySpecs": [
             "8-48 channels",
