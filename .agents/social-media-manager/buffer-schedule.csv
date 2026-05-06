@@ -1,0 +1,96 @@
+post_date,post_time_pht,platform,asset_file,utm_link,copy
+2026-04-28,09:00,Facebook,01-fb-day1-hero.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=fb&utm_medium=social&utm_campaign=powercalc-launch&utm_content=day1-hero,"4 calculators in 1 free page — built for Filipino electricians and HVAC techs.
+
+✓ kW ↔ Amperes
+✓ Voltage transposition (220V/380V/480V)
+✓ Motor sizing (FLA, LRA, NEC 430)
+✓ Wire & breaker recommendation
+
+Walang signup. Free forever. Try it now: unit-philippines-blog.vercel.app/tools/power-calculator.html
+
+#UNIT #UNITPhilippines #Electrician #HVAC #ElectricalEngineering"
+2026-04-28,12:00,Instagram,02-ig-carousel-1.png + 2 + 3 + 4 + 5,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=ig&utm_medium=social&utm_campaign=powercalc-launch&utm_content=carousel,"Sizing a motor? Or transposing 220V to 380V? We built a free tool for it. → swipe
+
+Filipino electricians know: most online calculators are American (240V or 480V) or generic (no PH context). The Power Calculator is built for our voltage systems and our use cases.
+
+Free. No signup. Mobile-friendly. Link in bio.
+
+#electrician #electrical #electriciantips #UNITtools #electricalengineering #philippineselectrician #pinoyelectrician #hvactechnician"
+2026-04-28,20:00,Twitter,06-twitter.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=twitter&utm_medium=social&utm_campaign=powercalc-launch&utm_content=launch-thread,"Free Power Calculator for PH — kW ↔ A, voltage transposition (220/380/440V), motor FLA/LRA, wire & breaker sizing. Mobile-first. No signup.
+
+🧵 Why we built it 👇
+
+unit-philippines-blog.vercel.app/tools/power-calculator.html"
+2026-04-29,08:00,LinkedIn,04-linkedin.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=linkedin&utm_medium=social&utm_campaign=powercalc-launch&utm_content=facility,"Sizing a 5HP motor circuit at your facility? Here's the math nobody loves doing manually:
+
+• Full Load Amps (FLA) — derated for ambient temp
+• Locked Rotor Amps (LRA) — for inrush
+• Conductor sizing per NEC 430.22
+• Branch breaker per NEC 430.52
+
+We built a free Power Calculator with PH 220V / 380V presets specifically for facility managers and maintenance leads. Plug in HP and voltage, get the recommended sizes in seconds.
+
+No signup. No paywall. Built by Kinmo, the official UNI-T distributor in the Philippines.
+
+→ unit-philippines-blog.vercel.app/tools/power-calculator.html
+
+#ElectricalEngineering #FacilityManagement #PhilippinesEngineering #IndustrialMaintenance"
+2026-04-30,09:00,Facebook,01-fb-day1-hero.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=fb&utm_medium=social&utm_campaign=powercalc-launch&utm_content=day3-ofw,"Balikbayan? Naka-uwi ka with US/Japan equipment running at 240V or 100V?
+
+Sayang yung gear if hindi ka sure if pwede sa 220V PH outlets. Or if pwedeng mag-step-down nang safely.
+
+Quick check: pasok mo lang sa free Power Calculator namin. May voltage transposition tab — type your equipment's rated voltage, see what runs safely on 220V PH supply.
+
+✓ Step-down advisory
+✓ Current draw at 220V vs original
+✓ Cable + breaker recommendation
+
+Free use. Mobile-friendly. Walang signup.
+
+→ unit-philippines-blog.vercel.app/tools/power-calculator.html
+
+#OFW #Balikbayan #BalikbayanBox #UNITPhilippines"
+2026-05-02,18:00,Instagram,03-ig-reel-cover.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=ig&utm_medium=social&utm_campaign=powercalc-launch&utm_content=reel,"The 220V/380V trick — a 30-second walkthrough.
+
+Most online voltage calculators don't know what to do with PH 380V 3-phase. Ours does. Here's how to use it.
+
+(Reel — record screen capture: open tool → type 5kW → switch system 1P 220V → 3P 380V → see currents change)
+
+#electrician #electricalengineering #electriciantips #UNITPhilippines #pinoyelectrician #PHelectrical"
+2026-05-05,10:00,Facebook,02-ig-carousel-3.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=fb&utm_medium=social&utm_campaign=powercalc-launch&utm_content=day8-solar,"Solar installer? Stop estimating string current and pump amps with mental math.
+
+The free Power Calculator handles:
+• PV string sizing (current per voltage system)
+• Off-grid pump motor + AC inverter loads
+• Battery bank conversion math (kWh ↔ Ah at any voltage)
+• Wire/breaker recommendation for hybrid systems
+
+Built for the EPC + residential solar crowd. PH 220V/380V presets included.
+
+→ unit-philippines-blog.vercel.app/tools/power-calculator.html
+
+#SolarPhilippines #SolarInstaller #SolarPower #RenewableEnergy #UNITPhilippines"
+2026-05-06,11:00,Facebook,02-ig-carousel-2.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=fb&utm_medium=social&utm_campaign=powercalc-launch&utm_content=day9-genset,"Tag-init = brownouts. Brownouts = genset. Genset = LRA sizing.
+
+Most facility folks size gensets by total kW load and pray the inrush doesn't trip. The right way: size for Locked Rotor Amps (LRA), which can be 6–8x running current for big motors.
+
+Our free Power Calculator's Motor HP tab handles this:
+✓ Enter motor HP
+✓ Get FLA, SF amps, LRA
+✓ Recommended branch breaker (NEC 430)
+✓ Conductor size
+
+In the brownout season especially, get this right BEFORE the genset specs go to procurement.
+
+→ unit-philippines-blog.vercel.app/tools/power-calculator.html
+
+#FacilityManagement #BrownoutPH #GensetPhilippines #IndustrialMaintenance"
+2026-05-07,15:00,Instagram,05-quote-card.png,https://unit-philippines-blog.vercel.app/tools/power-calculator.html?utm_source=ig&utm_medium=social&utm_campaign=powercalc-launch&utm_content=quote-card,"17.3 A.
+
+That's what 5 kW pulls at 220V single-phase, PF 0.85.
+
+Calculated in 2 seconds with the free Power Calculator. Plug in your own kW + voltage system + power factor, get the answer.
+
+→ Link in bio.
+
+#electrician #electricalengineering #UNITPhilippines #electriciantips #pinoyelectrician"
