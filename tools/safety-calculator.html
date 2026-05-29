@@ -78,6 +78,23 @@
     }
     .calc-tab svg { width: 18px; height: 18px; flex-shrink: 0; }
 
+    /* On phones, wrap tabs to a 2-column grid so no tab scrolls off-screen
+       (the hidden scrollbar previously made the 4th tab look "missing"). */
+    @media (max-width: 640px) {
+      .calc-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow-x: visible;
+      }
+      .calc-tab {
+        min-width: 0;
+        padding: 0.85rem 0.5rem;
+        font-size: 0.82rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .calc-tab svg { width: 16px; height: 16px; }
+    }
+
     /* Panels */
     .calc-panel {
       display: none;
@@ -723,6 +740,13 @@
           <input type="number" id="wireVoltage" value="220" step="any" min="1">
         </div>
         <div class="form-group">
+          <label for="wirePhase">System Type</label>
+          <select id="wirePhase">
+            <option value="1" selected>1-Phase (line-neutral)</option>
+            <option value="3">3-Phase (line-line)</option>
+          </select>
+        </div>
+        <div class="form-group">
           <label for="wireDrop">Max Voltage Drop (%)</label>
           <select id="wireDrop">
             <option value="2">2% (recommended for feeders)</option>
@@ -921,7 +945,11 @@
     function calculateCAT() {
       const env = document.getElementById('catEnv').value;
       const conn = document.getElementById('catConnection').value;
-      const voltage = parseInt(catVoltage.value);
+      // Read the manual entry field (authoritative, step=1) rather than the
+      // range slider (step=10) so typed values like 615V aren't rounded for a
+      // safety-category decision.
+      const manualEl = document.getElementById('catVoltageManual');
+      const voltage = parseInt((manualEl && manualEl.value !== '') ? manualEl.value : catVoltage.value);
       const resultDiv = document.getElementById('catResult');
 
       if (!env || !conn) {
@@ -1175,6 +1203,7 @@
       const length = parseFloat(document.getElementById('wireLength').value);
       const voltage = parseFloat(document.getElementById('wireVoltage').value);
       const maxDrop = parseFloat(document.getElementById('wireDrop').value);
+      const phases = parseInt(document.getElementById('wirePhase').value) || 1;
       const resultDiv = document.getElementById('wireResult');
 
       if (isNaN(current) || isNaN(length) || isNaN(voltage) || current <= 0 || length <= 0 || voltage <= 0) {
@@ -1183,11 +1212,14 @@
         return;
       }
 
+      // Voltage-drop factor: 1-phase loop = 2; balanced 3-phase = sqrt(3).
+      const vdFactor = phases === 3 ? Math.sqrt(3) : 2;
+
       const maxDropVolts = (maxDrop / 100) * voltage;
 
-      // Find minimum wire by voltage drop: Vd = 2 * I * R_per_m * L
-      // R_per_m <= maxDropVolts / (2 * I * L)
-      const maxResistance = maxDropVolts / (2 * current * length);
+      // Find minimum wire by voltage drop: Vd = vdFactor * I * R_per_m * L
+      // R_per_m <= maxDropVolts / (vdFactor * I * L)
+      const maxResistance = maxDropVolts / (vdFactor * current * length);
 
       // Find wire that meets both ampacity and voltage drop
       let recommended = null;
@@ -1195,7 +1227,7 @@
 
       for (let i = 0; i < wireData.length; i++) {
         const w = wireData[i];
-        const vDrop = 2 * current * w.resistance * length;
+        const vDrop = vdFactor * current * w.resistance * length;
         const vDropPct = (vDrop / voltage) * 100;
         const meetsAmpacity = current <= w.ampacity;
         const meetsDrop = w.resistance <= maxResistance;
