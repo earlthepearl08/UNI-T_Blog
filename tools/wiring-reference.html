@@ -807,7 +807,7 @@
   <section class="tool-section" id="wiring">
     <div class="container">
       <h2>Philippine Wiring Color Codes</h2>
-      <p class="section-desc">Based on the Philippine Electrical Code (PEC) and IEC 60446 standards. Tap any wire to learn more.</p>
+      <p class="section-desc">Based on the Philippine Electrical Code (PEC) and IEC 60445 (identification of conductors; supersedes the withdrawn IEC 60446). Tap any wire to learn more.</p>
       <div class="wire-grid" id="wireGrid"></div>
     </div>
   </section>
@@ -919,27 +919,35 @@
   <section class="tool-section" id="breaker">
     <div class="container">
       <h2>Circuit Breaker Size Guide (Philippine)</h2>
-      <p class="section-desc">Wire size to breaker size mapping based on Philippine Electrical Code standards.</p>
+      <p class="section-desc">Philippine-market copper conductor sizes (PNS/JIS series &mdash; the wire actually sold in PH hardware stores) mapped to breaker size. Ampacity per PEC 2017 Table 3.10.1.16 (THHN/THWN copper, 75&deg;C column, 30&deg;C ambient); breaker per PEC 2.40.6 with the small-conductor cap (PEC 2.40.4(D)).</p>
       <div class="breaker-table-wrap">
         <table class="breaker-table">
           <thead>
             <tr>
               <th>Wire Size (mm&sup2;)</th>
+              <th>Ampacity (Cu, 75&deg;C)</th>
               <th>Max Breaker (A)</th>
-              <th>Typical Use</th>
+              <th>Typical PH Use</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="wire-size-cell">1.5 mm&sup2;</td><td class="amp-cell">15A</td><td>Lighting circuits</td></tr>
-            <tr><td class="wire-size-cell">2.5 mm&sup2;</td><td class="amp-cell">20A</td><td>General outlets / convenience receptacles</td></tr>
-            <tr><td class="wire-size-cell">4.0 mm&sup2;</td><td class="amp-cell">25A</td><td>Heavy-duty outlets, small air-conditioning units</td></tr>
-            <tr><td class="wire-size-cell">6.0 mm&sup2;</td><td class="amp-cell">32A</td><td>Large AC units, electric water heaters</td></tr>
-            <tr><td class="wire-size-cell">10 mm&sup2;</td><td class="amp-cell">50A</td><td>Sub-panel feeds, electric ranges</td></tr>
-            <tr><td class="wire-size-cell">16 mm&sup2;</td><td class="amp-cell">63A</td><td>Main panel feed</td></tr>
-            <tr><td class="wire-size-cell">25 mm&sup2;</td><td class="amp-cell">80A</td><td>Large main feed / service entrance</td></tr>
+            <tr><td class="wire-size-cell">2.0 mm&sup2;</td><td>20 A</td><td class="amp-cell">15A</td><td>Lighting circuits</td></tr>
+            <tr><td class="wire-size-cell">3.5 mm&sup2;</td><td>25 A</td><td class="amp-cell">20A</td><td>General convenience outlets</td></tr>
+            <tr><td class="wire-size-cell">5.5 mm&sup2;</td><td>35 A</td><td class="amp-cell">30A*</td><td>Heavy-duty outlets, window-type aircon</td></tr>
+            <tr><td class="wire-size-cell">8.0 mm&sup2;</td><td>50 A</td><td class="amp-cell">50A</td><td>Split-type aircon, electric water heaters</td></tr>
+            <tr><td class="wire-size-cell">14 mm&sup2;</td><td>65 A</td><td class="amp-cell">60A</td><td>Sub-panel feeders, electric ranges</td></tr>
+            <tr><td class="wire-size-cell">22 mm&sup2;</td><td>85 A</td><td class="amp-cell">80A</td><td>Sub-panel / small-home main feed</td></tr>
+            <tr><td class="wire-size-cell">30 mm&sup2;</td><td>100 A</td><td class="amp-cell">100A</td><td>Main service feed</td></tr>
+            <tr><td class="wire-size-cell">38 mm&sup2;</td><td>115 A</td><td class="amp-cell">110A</td><td>Large main service entrance</td></tr>
+            <tr><td class="wire-size-cell">50 mm&sup2;</td><td>130 A</td><td class="amp-cell">125A</td><td>Large residential / light-commercial main</td></tr>
+            <tr><td class="wire-size-cell">60 mm&sup2;</td><td>150 A</td><td class="amp-cell">150A</td><td>Commercial service</td></tr>
+            <tr><td class="wire-size-cell">80 mm&sup2;</td><td>175 A</td><td class="amp-cell">175A</td><td>Commercial service entrance</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="section-desc" style="margin-top:0.75rem;font-size:0.85rem;">
+        *5.5&nbsp;mm&sup2; carries ~35&nbsp;A but the breaker is capped at 30&nbsp;A by the small-conductor rule (PEC 2.40.4(D)). The conductor ampacity &mdash; not the breaker &mdash; is the design starting point; the breaker must protect the wire. Derate for ambient &gt;30&deg;C and for more than 3 current-carrying conductors in a raceway. For a single motor, size the conductor at &ge;125% of motor full-load current (PEC Art. 4.30). Nominal voltages: 230V single-phase; 400V/230V three-phase (legacy 380V/220V).
+      </p>
       <div class="wire-instrument" style="margin-top:1rem;max-width:600px;">
         <strong>Pro Tip:</strong> Always verify wire gauge with a UNI-T UT61E+ multimeter (continuity and resistance check) before connecting to a breaker. Use a UT210E clamp meter to confirm actual load current.
       </div>
@@ -1012,7 +1020,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/posts/">All Articles</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact Us</a></li>
             <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
             <li><a href="/rss.xml">RSS Feed</a></li>
           </ul>
@@ -1067,10 +1075,10 @@
       },
       {
         color: 'Blue', hex: '#1E88E5', textColor: '#fff',
-        function: 'Hot / Line (Phase C)', voltage: '380V (3-phase)',
-        description: 'Third phase conductor in a three-phase electrical system. Used in commercial and industrial installations.',
+        function: 'Hot / Line (Phase C) — PH/NEC convention', voltage: '400V (3-phase L-L)',
+        description: 'In traditional PH wiring (the PEC is derived from the US NEC), blue is commonly the third phase conductor alongside black and red. WARNING: this conflicts with IEC — under IEC 60445/60446, BLUE is reserved for the NEUTRAL. On imported machinery or IEC-wired panels a blue conductor is the neutral, not a phase.',
         location: 'Commercial buildings, factories, large motor installations, and 3-phase distribution panels.',
-        warning: 'Three-phase systems carry higher voltages between phases (380V line-to-line). Use appropriate PPE and CAT III/IV rated instruments.',
+        warning: 'Never assume a blue wire\'s role by color alone: it is a live phase in NEC-style PH wiring but the NEUTRAL under IEC. Always verify with a meter before working. PH 3-phase is nominally 400V line-to-line (legacy 380V). Use CAT III/IV rated instruments.',
         instrument: 'Use a UNI-T UT204+ clamp meter to measure current on individual phases without breaking the circuit.'
       },
       {
@@ -1092,18 +1100,10 @@
       {
         color: 'Green/Yellow', hex: '#2E7D32', textColor: '#fff', stripe: '#FFD600',
         function: 'Ground / Earth (IEC)', voltage: '0V',
-        description: 'International standard ground wire color per IEC 60446. Increasingly common in Philippine installations, especially in commercial and industrial settings.',
+        description: 'International standard protective-earth color per IEC 60445 (formerly IEC 60446). Increasingly common in Philippine installations, especially in commercial and industrial settings.',
         location: 'IEC-compliant installations, imported equipment, and modern commercial buildings.',
         warning: 'Same safety rules as green ground. This is strictly a protective earth conductor -- never use for any other purpose.',
         instrument: 'Verify ground bond integrity with a UNI-T UT522 earth resistance tester for proper grounding system performance.'
-      },
-      {
-        color: 'Orange', hex: '#FF9800', textColor: '#333',
-        function: 'Delta High Leg (3-phase)', voltage: '208V to ground',
-        description: 'Identifies the "wild" or "high" leg in a delta-connected 3-phase system. This leg produces a higher voltage to ground (208V instead of 120V).',
-        location: 'Older commercial buildings and industrial facilities with delta-configured transformers.',
-        warning: 'The high leg produces 208V to ground instead of the expected 120V. Connecting single-phase loads to this leg without a transformer can damage equipment.',
-        instrument: 'Use a UNI-T UT89X multimeter (CAT IV rated) to measure voltage between the orange wire and ground to confirm the high-leg voltage.'
       },
       {
         color: 'Brown', hex: '#795548', textColor: '#fff',
@@ -1221,8 +1221,8 @@
       { code: 'IP20', label: 'Indoor panels', solid: 2, liquid: 0,
         desc: 'Protection from finger contact but no water protection. Typical for indoor panel boards, breaker boxes, and desktop instruments.',
         instruments: 'Most UNI-T bench instruments like the UT8804N bench multimeter.' },
-      { code: 'IP44', label: 'Weatherproof', solid: 4, liquid: 4,
-        desc: 'Protected against solid objects over 1mm and splashing water. Common for outdoor junction boxes and weatherproof outlets.',
+      { code: 'IP44', label: 'Splash-resistant', solid: 4, liquid: 4,
+        desc: 'Protected against solid objects over 1mm and splashing water from any direction — NOT rain-tight for permanent outdoor exposure (that needs IP65+). Common for sheltered outdoor junction boxes and covered outlets.',
         instruments: 'UNI-T UT61E+ and similar handheld multimeters.' },
       { code: 'IP54', label: 'Dust + splash', solid: 5, liquid: 4,
         desc: 'Dust protected with splash water resistance. Good for construction sites and light industrial environments.',
@@ -1556,5 +1556,54 @@
 
   })();
   </script>
+
+<!-- Floating contact widget (Viber / Call / Email) -->
+<div id="kinmo-fab" aria-live="polite">
+  <div class="kfab-menu" hidden>
+    <a class="kfab-item kfab-viber" href="viber://chat?number=%2B639778407799" aria-label="Chat on Viber">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.9 2 10.7c0 2.6 1.3 4.9 3.4 6.5v3.6l3.2-1.8c1.1.3 2.2.5 3.4.5 5.5 0 10-3.9 10-8.8S17.5 2 12 2z"/></svg>
+      <span>Chat on Viber</span>
+    </a>
+    <a class="kfab-item kfab-call" href="tel:+639778407799" aria-label="Call us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+63 977 840 7799</span>
+    </a>
+    <a class="kfab-item kfab-mail" href="mailto:e2shop.kinmo@gmail.com" aria-label="Email us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Email us</span>
+    </a>
+  </div>
+  <button class="kfab-toggle" type="button" aria-expanded="false" aria-label="Contact Kinmo">
+    <svg class="kfab-ic-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <svg class="kfab-ic-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+<style>
+  #kinmo-fab{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:inherit}
+  #kinmo-fab .kfab-toggle{width:56px;height:56px;border-radius:50%;border:none;background:#E31E24;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;transition:transform .15s ease,background .15s ease}
+  #kinmo-fab .kfab-toggle:hover{background:#b71a1f;transform:translateY(-2px)}
+  #kinmo-fab .kfab-menu{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  #kinmo-fab .kfab-menu[hidden]{display:none}
+  #kinmo-fab .kfab-item{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1a1a1a;text-decoration:none;padding:9px 14px;border-radius:24px;font-size:.9rem;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.06);white-space:nowrap}
+  #kinmo-fab .kfab-item:hover{background:#f4f4f4}
+  #kinmo-fab .kfab-viber{color:#7360f2}
+  #kinmo-fab .kfab-call{color:#0a8f3c}
+  #kinmo-fab .kfab-mail{color:#E31E24}
+  #kinmo-fab .kfab-item span{color:#1a1a1a}
+  @media (prefers-reduced-motion:reduce){#kinmo-fab .kfab-toggle{transition:none}}
+</style>
+<script>
+  (function(){
+    var fab=document.getElementById('kinmo-fab');if(!fab)return;
+    var btn=fab.querySelector('.kfab-toggle'),menu=fab.querySelector('.kfab-menu');
+    var io=fab.querySelector('.kfab-ic-open'),ic=fab.querySelector('.kfab-ic-close');
+    btn.addEventListener('click',function(){
+      var open=menu.hasAttribute('hidden');
+      if(open){menu.removeAttribute('hidden');io.hidden=true;ic.hidden=false;btn.setAttribute('aria-expanded','true');}
+      else{menu.setAttribute('hidden','');io.hidden=false;ic.hidden=true;btn.setAttribute('aria-expanded','false');}
+    });
+  })();
+</script>
+
 </body>
 </html>

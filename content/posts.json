@@ -15,7 +15,7 @@
     "author": "UNI-T Philippines",
     "featured": true,
     "status": "published",
-    "image": "/images/products/multimeter-ut61e.png"
+    "image": "/images/products/multimeter-ut61e.webp"
   },
   {
     "id": 2,
@@ -33,7 +33,7 @@
     "author": "UNI-T Philippines",
     "featured": true,
     "status": "published",
-    "image": "/images/products/battery-tester-ut673a.png"
+    "image": "/images/products/battery-tester-ut673a.webp"
   },
   {
     "id": 3,
@@ -53,7 +53,7 @@
     "author": "UNI-T Philippines",
     "featured": true,
     "status": "published",
-    "image": "/images/composites/clamp-vs-multimeter.png"
+    "image": "/images/composites/clamp-vs-multimeter.webp"
   },
   {
     "id": 4,
@@ -71,7 +71,7 @@
     "author": "UNI-T Philippines",
     "featured": true,
     "status": "published",
-    "image": "/images/products/ut61b.png"
+    "image": "/images/products/ut61b.webp"
   },
   {
     "id": 5,
@@ -89,7 +89,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/thermal-imager-uti260b.png"
+    "image": "/images/products/thermal-imager-uti260b.webp"
   },
   {
     "id": 6,
@@ -110,7 +110,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/composites/insulation-vs-voltage.png"
+    "image": "/images/composites/insulation-vs-voltage.webp"
   },
   {
     "id": 7,
@@ -129,7 +129,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut202a.png"
+    "image": "/images/products/ut202a.webp"
   },
   {
     "id": 8,
@@ -148,7 +148,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/oscilloscope-utd2000.png"
+    "image": "/images/products/oscilloscope-utd2000.webp"
   },
   {
     "id": 9,
@@ -166,7 +166,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/voltage-detector-ut12s.png"
+    "image": "/images/products/voltage-detector-ut12s.webp"
   },
   {
     "id": 10,
@@ -185,7 +185,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut61d.png"
+    "image": "/images/products/ut61d.webp"
   },
   {
     "id": 11,
@@ -203,7 +203,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut61e.png"
+    "image": "/images/products/ut61e.webp"
   },
   {
     "id": 12,
@@ -221,7 +221,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut89xd.png"
+    "image": "/images/products/ut89xd.webp"
   },
   {
     "id": 13,
@@ -239,7 +239,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut123d.png"
+    "image": "/images/products/ut123d.webp"
   },
   {
     "id": 14,
@@ -257,7 +257,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/composites/bench-vs-handheld.png"
+    "image": "/images/composites/bench-vs-handheld.webp"
   },
   {
     "id": 15,
@@ -275,7 +275,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut665.png"
+    "image": "/images/products/ut665.webp"
   },
   {
     "id": 16,
@@ -294,7 +294,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut181a.png"
+    "image": "/images/products/ut181a.webp"
   },
   {
     "id": 17,
@@ -312,7 +312,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut139c.png"
+    "image": "/images/products/ut139c.webp"
   },
   {
     "id": 18,
@@ -330,7 +330,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut521.png"
+    "image": "/images/products/ut521.webp"
   },
   {
     "id": 19,
@@ -348,7 +348,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut332.png"
+    "image": "/images/products/ut332.webp"
   },
   {
     "id": 20,
@@ -366,7 +366,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut330th.png"
+    "image": "/images/products/ut330th.webp"
   },
   {
     "id": 21,
@@ -386,7 +386,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut181a.png"
+    "image": "/images/products/ut181a.webp"
   },
   {
     "id": 22,
@@ -406,7 +406,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut502a.png"
+    "image": "/images/products/ut502a.webp"
   },
   {
     "id": 23,
@@ -425,7 +425,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/network-tester-ut681.png"
+    "image": "/images/products/network-tester-ut681.webp"
   },
   {
     "id": 24,
@@ -443,7 +443,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/network-tester-ut681.png"
+    "image": "/images/products/network-tester-ut681.webp"
   },
   {
     "id": 25,
@@ -461,7 +461,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut08a.png"
+    "image": "/images/products/ut08a.webp"
   },
   {
     "id": 26,
@@ -480,7 +480,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut195ds.png"
+    "image": "/images/products/ut195ds.webp"
   },
   {
     "id": 27,
@@ -498,7 +498,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/composites/thermal-vs-ir-thermometer.png"
+    "image": "/images/composites/thermal-vs-ir-thermometer.webp"
   },
   {
     "id": 28,
@@ -516,7 +516,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut890c.png"
+    "image": "/images/products/ut890c.webp"
   },
   {
     "id": 29,
@@ -534,7 +534,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut890c.png"
+    "image": "/images/products/ut890c.webp"
   },
   {
     "id": 30,
@@ -552,7 +552,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut203.png"
+    "image": "/images/products/ut203.webp"
   },
   {
     "id": 31,
@@ -570,7 +570,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut139c.png"
+    "image": "/images/products/ut139c.webp"
   },
   {
     "id": 32,
@@ -588,7 +588,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut890d.png"
+    "image": "/images/products/ut890d.webp"
   },
   {
     "id": 33,
@@ -606,7 +606,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/multimeter-ut61e.png"
+    "image": "/images/products/multimeter-ut61e.webp"
   },
   {
     "id": 34,
@@ -624,7 +624,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut61b.png"
+    "image": "/images/products/ut61b.webp"
   },
   {
     "id": 35,
@@ -642,7 +642,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut61d.png"
+    "image": "/images/products/ut61d.webp"
   },
   {
     "id": 36,
@@ -660,7 +660,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut123d.png"
+    "image": "/images/products/ut123d.webp"
   },
   {
     "id": 37,
@@ -678,7 +678,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut195ds.png"
+    "image": "/images/products/ut195ds.webp"
   },
   {
     "id": 38,
@@ -697,7 +697,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut206a.png"
+    "image": "/images/products/ut206a.webp"
   },
   {
     "id": 39,
@@ -716,7 +716,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut61e.png"
+    "image": "/images/products/ut61e.webp"
   },
   {
     "id": 40,
@@ -735,7 +735,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/environmental-ut333s.png"
+    "image": "/images/products/environmental-ut333s.webp"
   },
   {
     "id": 41,
@@ -754,7 +754,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/insulation-tester-ut501a.png"
+    "image": "/images/products/insulation-tester-ut501a.webp"
   },
   {
     "id": 42,
@@ -773,7 +773,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/network-tester-ut681.png"
+    "image": "/images/products/network-tester-ut681.webp"
   },
   {
     "id": 43,
@@ -792,7 +792,7 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/ut89xd.png"
+    "image": "/images/products/ut89xd.webp"
   },
   {
     "id": 44,
@@ -811,6 +811,6 @@
     "author": "UNI-T Philippines",
     "featured": false,
     "status": "published",
-    "image": "/images/products/thermal-imager-uti260b.png"
+    "image": "/images/products/thermal-imager-uti260b.webp"
   }
 ]

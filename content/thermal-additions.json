@@ -8,7 +8,7 @@
       "category": "Thermal Imagers",
       "subcategory": "Smartphone Thermal Cameras",
       "description": "Pro-grade Android smartphone thermal camera module with 256x192 IR resolution and dual measurement modes for both elevated body temperature and industrial inspection. Plugs into Type-C, ships with a 1m extension cable.",
-      "image": "/images/products/uti260m.png",
+      "image": "/images/products/uti260m.webp",
       "imageRemoteUrl": "https://tufzen.com/cdn/shop/files/3807pg_600x.jpg?v=1765874649",
       "keySpecs": [
         "256x192 IR resolution",
@@ -28,7 +28,7 @@
       "category": "Thermal Imagers",
       "subcategory": "Handheld Entry-Level Thermal",
       "description": "Compact handheld thermal camera aimed at HVAC, electrical, and DIY troubleshooting. IP65 rated with 2 m drop durability, 5 color palettes, and on-board 16 GB microSD storage.",
-      "image": "/images/products/uti89pro.png",
+      "image": "/images/products/uti89pro.webp",
       "imageRemoteUrl": "https://www.ukobd2.com/upload/pro/uni-t-thermal-imager-uti89-pro-10772-1.jpg",
       "keySpecs": [
         "80x60 IR (4,800 px)",
@@ -48,7 +48,7 @@
       "category": "Thermal Imagers",
       "subcategory": "Body Temperature Screening / Medical",
       "description": "Tripod-mountable thermal camera dedicated to elevated body temperature (EBT) screening at 30 to 45 degC with +/-0.5 degC accuracy. Real-time PC software streaming with auto high-temp alarm makes it suitable for clinic, school, and entrance screening.",
-      "image": "/images/products/uti165k.png",
+      "image": "/images/products/uti165k.webp",
       "imageRemoteUrl": "https://digilifeweb.com/image/cache/catalog/Thermo%20Hygro/Thermal%20Camera/Thermal-Camera-UNIT-UTI165K-unit-digilife-500x500.jpg",
       "keySpecs": [
         "160x120 IR + 640x480 visible",

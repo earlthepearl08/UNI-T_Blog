@@ -649,8 +649,8 @@
           <label for="catConnection">Connection Point</label>
           <select id="catConnection">
             <option value="">-- Select connection --</option>
-            <option value="protected">Protected electronic equipment / outlets</option>
-            <option value="receptacle">Wall receptacle / appliance outlets</option>
+            <option value="protected">Protected electronic / signal-level equipment</option>
+            <option value="receptacle">Wall receptacle / appliance outlets (CAT II)</option>
             <option value="panel">Mains panel / sub-panel</option>
             <option value="distribution">Distribution bus / feeders</option>
             <option value="origin">Overhead / underground / utility entrance</option>
@@ -864,7 +864,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/posts/">All Articles</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact Us</a></li>
             <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
             <li><a href="/rss.xml">RSS Feed</a></li>
           </ul>
@@ -926,19 +926,19 @@
 
     // ===== Product Data =====
     const products = [
-      { name: 'UT61E+', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut61e.png', desc: 'True RMS digital multimeter with USB data logging', currentRange: 10, link: 'https://kinmo.com' },
-      { name: 'UT139C', cat: 'CAT III 600V / CAT IV 300V', type: 'multimeter', img: '/images/products/ut139c.png', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com' },
-      { name: 'UT890C', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890c.png', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com' },
-      { name: 'UT890D', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890d.png', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com' },
-      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut89xd.png', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com' },
-      { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut195ds.png', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com' },
-      { name: 'UT204+', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/clamp-meter-ut204.png', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT216C', cat: 'CAT III 600V / CAT IV 300V', type: 'clamp', img: '/images/products/ut216c.png', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.png', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com' },
-      { name: 'UT210E', cat: 'CAT III 300V / CAT II 600V', type: 'clamp', img: '/images/products/ut210e.png', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com' },
-      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.png', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT501A', cat: 'CAT III 600V', type: 'insulation', img: '/images/products/ut501a.png', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com' },
-      { name: 'UT12S', cat: 'CAT IV 1000V', type: 'detector', img: '/images/products/voltage-detector-ut12s.png', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com' },
+      { name: 'UT61E+', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut61e.webp', desc: 'True RMS digital multimeter with USB data logging', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT139C', cat: 'CAT III 600V / CAT IV 300V', type: 'multimeter', img: '/images/products/ut139c.webp', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT890C', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890c.webp', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT890D', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890d.webp', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut89xd.webp', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut195ds.webp', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT216C', cat: 'CAT III 600V / CAT IV 300V', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT210E', cat: 'CAT III 300V / CAT II 600V', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT501A', cat: 'CAT III 600V', type: 'insulation', img: '/images/products/ut501a.webp', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT12S', cat: 'CAT IV 1000V', type: 'detector', img: '/images/products/voltage-detector-ut12s.webp', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
 
     // ===== CAT Rating Calculator =====
@@ -1181,22 +1181,36 @@
     }
 
     // ===== Wire Size Calculator =====
-    // Copper wire data: PEC standard mm² sizes (primary), AWG (secondary reference)
-    // resistance in ohm/m at 75°C copper, ampacity per PEC THHN/THWN @30°C ambient
+    // PHILIPPINE-MARKET copper conductor sizes (PNS/JIS series: 2.0, 3.5, 5.5, 8.0,
+    // 14, 22, 38… mm²) — the conductors actually sold in PH hardware stores, NOT the
+    // European IEC series (2.5, 4, 6, 16, 35…). Ampacity = PEC 2017 Table 3.10.1.16,
+    // copper THHN/THWN, 75°C column, 30°C ambient. resistance = DC ohm/m at 75°C.
+    // maxBreaker = small-conductor overcurrent ceiling per PEC 2.40.4(D) / NEC 240.4(D).
     const wireData = [
-      { mm2: 1.5,  awg: 16,    resistance: 0.01380,  ampacity: 15 },
-      { mm2: 2.5,  awg: 14,    resistance: 0.00822,  ampacity: 20 },
-      { mm2: 4.0,  awg: 12,    resistance: 0.00514,  ampacity: 25 },
-      { mm2: 6.0,  awg: 10,    resistance: 0.00343,  ampacity: 32 },
-      { mm2: 10,   awg: 8,     resistance: 0.00206,  ampacity: 50 },
-      { mm2: 16,   awg: 6,     resistance: 0.00128,  ampacity: 63 },
-      { mm2: 25,   awg: 4,     resistance: 0.000823, ampacity: 80 },
-      { mm2: 35,   awg: 2,     resistance: 0.000588, ampacity: 100 },
-      { mm2: 50,   awg: 1,     resistance: 0.000411, ampacity: 125 },
-      { mm2: 70,   awg: '2/0', resistance: 0.000294, ampacity: 160 },
-      { mm2: 95,   awg: '3/0', resistance: 0.000216, ampacity: 195 },
-      { mm2: 120,  awg: '4/0', resistance: 0.000172, ampacity: 230 },
+      { mm2: 2.0,  awg: 14,          resistance: 0.01048,  ampacity: 20,  maxBreaker: 15 },
+      { mm2: 3.5,  awg: 12,          resistance: 0.00599,  ampacity: 25,  maxBreaker: 20 },
+      { mm2: 5.5,  awg: 10,          resistance: 0.00381,  ampacity: 35,  maxBreaker: 30 },
+      { mm2: 8.0,  awg: 8,           resistance: 0.00262,  ampacity: 50 },
+      { mm2: 14,   awg: 6,           resistance: 0.00150,  ampacity: 65 },
+      { mm2: 22,   awg: 4,           resistance: 0.000953, ampacity: 85 },
+      { mm2: 30,   awg: 3,           resistance: 0.000699, ampacity: 100 },
+      { mm2: 38,   awg: 2,           resistance: 0.000552, ampacity: 115 },
+      { mm2: 50,   awg: 1,           resistance: 0.000419, ampacity: 130 },
+      { mm2: 60,   awg: '1/0',       resistance: 0.000349, ampacity: 150 },
+      { mm2: 80,   awg: '2/0',       resistance: 0.000262, ampacity: 175 },
+      { mm2: 100,  awg: '3/0',       resistance: 0.000210, ampacity: 200 },
+      { mm2: 125,  awg: '4/0',       resistance: 0.000168, ampacity: 230 },
+      { mm2: 150,  awg: '300 kcmil', resistance: 0.000140, ampacity: 285 },
     ];
+    // Smallest standard breaker >= amps, capped by a conductor's small-conductor limit.
+    const STD_BREAKERS = [15,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400];
+    function breakerFor(w) {
+      // Protect the conductor: largest standard breaker <= ampacity, but never above maxBreaker.
+      let b = STD_BREAKERS[0];
+      for (const s of STD_BREAKERS) { if (s <= w.ampacity) b = s; }
+      if (w.maxBreaker && b > w.maxBreaker) b = w.maxBreaker;
+      return b;
+    }
 
     function calculateWire() {
       const current = parseFloat(document.getElementById('wireCurrent').value);
@@ -1299,10 +1313,13 @@
               <div class="result-value">${recommended.ampacity} <small>A</small></div>
             </div>
             <div class="result-item">
-              <div class="result-label">Load Current</div>
-              <div class="result-value">${current} <small>A</small></div>
+              <div class="result-label">Max Breaker</div>
+              <div class="result-value">${breakerFor(recommended)} <small>A</small></div>
             </div>
           </div>
+          <p class="result-explain" style="margin-top:0.75rem;">
+            Protect this run with a breaker no larger than <strong>${breakerFor(recommended)}A</strong>${recommended.maxBreaker ? ` (small-conductor rule, PEC 2.40.4(D))` : ''}. For a continuous load (on &gt;3&nbsp;hours), enter 125% of the actual load current above. PH nominal voltage is 230V single-phase / 400V three-phase.
+          </p>
         </div>
         <div class="result-card">
           <div class="result-label">Wire Size Comparison Table</div>
@@ -1394,5 +1411,54 @@
       }
     }
   </script>
+
+<!-- Floating contact widget (Viber / Call / Email) -->
+<div id="kinmo-fab" aria-live="polite">
+  <div class="kfab-menu" hidden>
+    <a class="kfab-item kfab-viber" href="viber://chat?number=%2B639778407799" aria-label="Chat on Viber">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.9 2 10.7c0 2.6 1.3 4.9 3.4 6.5v3.6l3.2-1.8c1.1.3 2.2.5 3.4.5 5.5 0 10-3.9 10-8.8S17.5 2 12 2z"/></svg>
+      <span>Chat on Viber</span>
+    </a>
+    <a class="kfab-item kfab-call" href="tel:+639778407799" aria-label="Call us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+63 977 840 7799</span>
+    </a>
+    <a class="kfab-item kfab-mail" href="mailto:e2shop.kinmo@gmail.com" aria-label="Email us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Email us</span>
+    </a>
+  </div>
+  <button class="kfab-toggle" type="button" aria-expanded="false" aria-label="Contact Kinmo">
+    <svg class="kfab-ic-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <svg class="kfab-ic-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+<style>
+  #kinmo-fab{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:inherit}
+  #kinmo-fab .kfab-toggle{width:56px;height:56px;border-radius:50%;border:none;background:#E31E24;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;transition:transform .15s ease,background .15s ease}
+  #kinmo-fab .kfab-toggle:hover{background:#b71a1f;transform:translateY(-2px)}
+  #kinmo-fab .kfab-menu{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  #kinmo-fab .kfab-menu[hidden]{display:none}
+  #kinmo-fab .kfab-item{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1a1a1a;text-decoration:none;padding:9px 14px;border-radius:24px;font-size:.9rem;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.06);white-space:nowrap}
+  #kinmo-fab .kfab-item:hover{background:#f4f4f4}
+  #kinmo-fab .kfab-viber{color:#7360f2}
+  #kinmo-fab .kfab-call{color:#0a8f3c}
+  #kinmo-fab .kfab-mail{color:#E31E24}
+  #kinmo-fab .kfab-item span{color:#1a1a1a}
+  @media (prefers-reduced-motion:reduce){#kinmo-fab .kfab-toggle{transition:none}}
+</style>
+<script>
+  (function(){
+    var fab=document.getElementById('kinmo-fab');if(!fab)return;
+    var btn=fab.querySelector('.kfab-toggle'),menu=fab.querySelector('.kfab-menu');
+    var io=fab.querySelector('.kfab-ic-open'),ic=fab.querySelector('.kfab-ic-close');
+    btn.addEventListener('click',function(){
+      var open=menu.hasAttribute('hidden');
+      if(open){menu.removeAttribute('hidden');io.hidden=true;ic.hidden=false;btn.setAttribute('aria-expanded','true');}
+      else{menu.setAttribute('hidden','');io.hidden=false;ic.hidden=true;btn.setAttribute('aria-expanded','false');}
+    });
+  })();
+</script>
+
 </body>
 </html>

@@ -844,7 +844,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/posts/">All Articles</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact Us</a></li>
             <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
             <li><a href="/rss.xml">RSS Feed</a></li>
           </ul>
@@ -934,36 +934,40 @@
 
     // ===== Product catalog =====
     const products = [
-      { name: 'UT210E', cat: 'CAT III 300V', type: 'clamp', img: '/images/products/ut210e.png', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com' },
-      { name: 'UT204+', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/clamp-meter-ut204.png', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT216C', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut216c.png', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.png', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com' },
-      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.png', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com' },
-      { name: 'UT203', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut203.png', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com' },
+      { name: 'UT210E', cat: 'CAT III 300V', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT216C', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT203', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut203.webp', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
 
-    // ===== Wire & breaker lookup tables =====
-    // Copper conductor ampacity — PEC THHN/THWN @30°C ambient.
-    // SINGLE SOURCE OF TRUTH: these ampacities match the Safety Calculator
-    // and Wiring Reference tables (16mm²=63A, 25mm²=80A, 35mm²=100A, ...).
-    // (Previous version mapped sizes to breaker thresholds, which OVERSTATED
-    //  ampacity by up to ~50% and could under-size conductors — fire hazard.)
+    // ===== Wire & breaker lookup tables (Philippine Electrical Code) =====
+    // Copper THHN/THWN ampacity — PEC 2017 Table 3.10.1.16, 75°C (termination-
+    // limited) column, 30°C ambient, ≤3 current-carrying conductors in raceway.
+    // SIZES ARE THE PH-MARKET / PNS-JIS SERIES (2.0, 3.5, 5.5, 8.0, 14, 22, 38…),
+    // i.e. the conductors actually sold in Philippine hardware stores — NOT the
+    // European IEC series (2.5, 4, 6, 16, 35…) which do not exist locally.
+    // ocpdMax = small-conductor overcurrent ceiling per PEC 2.40.4(D) / NEC 240.4(D):
+    // the breaker may never exceed this value for these sizes, regardless of ampacity.
     const CU_AMPACITY = [
-      { mm2: 1.5,  amp: 15  },
-      { mm2: 2.5,  amp: 20  },
-      { mm2: 4,    amp: 25  },
-      { mm2: 6,    amp: 32  },
-      { mm2: 10,   amp: 50  },
-      { mm2: 16,   amp: 63  },
-      { mm2: 25,   amp: 80  },
-      { mm2: 35,   amp: 100 },
-      { mm2: 50,   amp: 125 },
-      { mm2: 70,   amp: 160 },
-      { mm2: 95,   amp: 195 },
-      { mm2: 120,  amp: 230 },
-      { mm2: 150,  amp: 270 },
-      { mm2: 185,  amp: 305 },
-      { mm2: 240,  amp: 360 },
+      { mm2: 2.0,  amp: 20,  ocpdMax: 15 },   // 14 AWG — lighting circuits
+      { mm2: 3.5,  amp: 25,  ocpdMax: 20 },   // 12 AWG — general convenience outlets
+      { mm2: 5.5,  amp: 35,  ocpdMax: 30 },   // 10 AWG — heavy outlets / small aircon
+      { mm2: 8.0,  amp: 50  },                 // 8 AWG  — ranges / dedicated sub-circuits
+      { mm2: 14,   amp: 65  },                 // 6 AWG
+      { mm2: 22,   amp: 85  },                 // 4 AWG
+      { mm2: 30,   amp: 100 },                 // 3 AWG
+      { mm2: 38,   amp: 115 },                 // 2 AWG
+      { mm2: 50,   amp: 130 },                 // 1 AWG
+      { mm2: 60,   amp: 150 },                 // 1/0
+      { mm2: 80,   amp: 175 },                 // 2/0
+      { mm2: 100,  amp: 200 },                 // 3/0
+      { mm2: 125,  amp: 230 },                 // 4/0
+      { mm2: 150,  amp: 285 },                 // 300 kcmil
+      { mm2: 200,  amp: 335 },                 // 400 kcmil
+      { mm2: 250,  amp: 380 },                 // 500 kcmil
+      { mm2: 325,  amp: 420 },                 // 600 kcmil
     ];
     // Returns the smallest copper conductor whose ampacity >= the required amps.
     // Pass the design current already adjusted for the 125% continuous-load factor.
@@ -971,17 +975,36 @@
       for (let i = 0; i < CU_AMPACITY.length; i++) {
         if (CU_AMPACITY[i].amp >= amps) return CU_AMPACITY[i].mm2 + ' mm&sup2;';
       }
-      return '240 mm&sup2; or parallel runs (consult a PEE)';
+      return '325 mm&sup2; or parallel runs (consult a PEE)';
     }
 
-    // Standard breaker sizes (IEC) — pure round-up to the next available size.
+    // Standard overcurrent-device ampere ratings — PEC 2.40.1.6 / NEC 240.6(A).
+    // Includes the two most common PH residential ratings (15A, 30A).
     // Apply any 125%/250% load factor at the CALL SITE before calling this.
-    const BREAKER_SIZES = [6, 10, 13, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000];
+    const BREAKER_SIZES = [15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600, 700, 800, 1000];
     function suggestBreaker(amps) {
       for (let i = 0; i < BREAKER_SIZES.length; i++) {
         if (BREAKER_SIZES[i] >= amps) return BREAKER_SIZES[i];
       }
       return BREAKER_SIZES[BREAKER_SIZES.length - 1];
+    }
+
+    // Size a general branch circuit as a coherent conductor+breaker PAIR that
+    // respects the small-conductor rule: if the required breaker would exceed the
+    // chosen conductor's ocpdMax cap, step up to the next conductor. Pass the
+    // design current already multiplied by 1.25 for continuous loads.
+    // (Motor branch circuits are sized separately under PEC Art. 4.30, where the
+    //  short-circuit breaker may legitimately exceed conductor ampacity.)
+    function sizeBranchCircuit(designAmps) {
+      for (let i = 0; i < CU_AMPACITY.length; i++) {
+        const c = CU_AMPACITY[i];
+        if (c.amp >= designAmps) {
+          const breaker = suggestBreaker(designAmps);
+          if (c.ocpdMax && breaker > c.ocpdMax) continue; // conductor can't be protected — step up
+          return { wire: c.mm2 + ' mm&sup2;', breaker };
+        }
+      }
+      return { wire: '325 mm&sup2; or parallel runs (consult a PEE)', breaker: suggestBreaker(designAmps) };
     }
 
     // ===== Medium/High-voltage safety guard =====
@@ -1078,8 +1101,9 @@
       const Q = Math.sqrt(Math.max(S * S - P * P, 0));
 
       // Per PEC: continuous loads (>3hr) require conductor & breaker sized at 125% of load
-      const wireSize = suggestWireSize(I * 1.25);
-      const breaker = suggestBreaker(I * 1.25);
+      const branch = sizeBranchCircuit(I * 1.25);
+      const wireSize = branch.wire;
+      const breaker = branch.breaker;
 
       // MV/HV: LV conductor/breaker tables and clamp meters do not apply.
       const sizingCard = sys.mv ? mvNoticeHTML() : `
@@ -1096,7 +1120,7 @@
             </span>
           </div>
           <p class="result-explain" style="margin-top:0.75rem;">
-            Simplified lookup based on PEC ampacity for THHN/THWN copper at 30&deg;C ambient. For long runs, increase one size to limit voltage drop. Always verify with the latest Philippine Electrical Code and consider derating for ambient temperature, conduit fill, and continuous loads (1.25&times; for &gt;3 hour loads).
+            Philippine-market conductor sizes (2.0&ndash;325&nbsp;mm&sup2;), sized from PEC 2017 Table 3.10.1.16 ampacity for THHN/THWN copper (75&deg;C column, 30&deg;C ambient). The breaker is capped by the small-conductor rule (PEC 2.40.4(D): 2.0&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;15A, 3.5&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;20A, 5.5&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;30A max). For long runs, increase one size to limit voltage drop (keep &le;3% on a branch, &le;5% total). Always verify with the latest PEC and derate for ambient temperature and conduit fill.
           </p>
         </div>`;
 
@@ -1247,8 +1271,9 @@
       const targetI = (P_kW * 1000) / (kTgt * tgt.volts * PF);
       const ratio = targetI / sourceI;
 
-      const tgtWire = suggestWireSize(targetI * 1.25);
-      const tgtBreaker = suggestBreaker(targetI * 1.25);
+      const tgtBranch = sizeBranchCircuit(targetI * 1.25);
+      const tgtWire = tgtBranch.wire;
+      const tgtBreaker = tgtBranch.breaker;
       const involvesMV = src.mv || tgt.mv;
 
       let warning = '';
@@ -1439,5 +1464,54 @@
     calcMotor();
 
   </script>
+
+<!-- Floating contact widget (Viber / Call / Email) -->
+<div id="kinmo-fab" aria-live="polite">
+  <div class="kfab-menu" hidden>
+    <a class="kfab-item kfab-viber" href="viber://chat?number=%2B639778407799" aria-label="Chat on Viber">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.9 2 10.7c0 2.6 1.3 4.9 3.4 6.5v3.6l3.2-1.8c1.1.3 2.2.5 3.4.5 5.5 0 10-3.9 10-8.8S17.5 2 12 2z"/></svg>
+      <span>Chat on Viber</span>
+    </a>
+    <a class="kfab-item kfab-call" href="tel:+639778407799" aria-label="Call us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+63 977 840 7799</span>
+    </a>
+    <a class="kfab-item kfab-mail" href="mailto:e2shop.kinmo@gmail.com" aria-label="Email us">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>Email us</span>
+    </a>
+  </div>
+  <button class="kfab-toggle" type="button" aria-expanded="false" aria-label="Contact Kinmo">
+    <svg class="kfab-ic-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <svg class="kfab-ic-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+<style>
+  #kinmo-fab{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:inherit}
+  #kinmo-fab .kfab-toggle{width:56px;height:56px;border-radius:50%;border:none;background:#E31E24;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;transition:transform .15s ease,background .15s ease}
+  #kinmo-fab .kfab-toggle:hover{background:#b71a1f;transform:translateY(-2px)}
+  #kinmo-fab .kfab-menu{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  #kinmo-fab .kfab-menu[hidden]{display:none}
+  #kinmo-fab .kfab-item{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1a1a1a;text-decoration:none;padding:9px 14px;border-radius:24px;font-size:.9rem;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.2);border:1px solid rgba(0,0,0,.06);white-space:nowrap}
+  #kinmo-fab .kfab-item:hover{background:#f4f4f4}
+  #kinmo-fab .kfab-viber{color:#7360f2}
+  #kinmo-fab .kfab-call{color:#0a8f3c}
+  #kinmo-fab .kfab-mail{color:#E31E24}
+  #kinmo-fab .kfab-item span{color:#1a1a1a}
+  @media (prefers-reduced-motion:reduce){#kinmo-fab .kfab-toggle{transition:none}}
+</style>
+<script>
+  (function(){
+    var fab=document.getElementById('kinmo-fab');if(!fab)return;
+    var btn=fab.querySelector('.kfab-toggle'),menu=fab.querySelector('.kfab-menu');
+    var io=fab.querySelector('.kfab-ic-open'),ic=fab.querySelector('.kfab-ic-close');
+    btn.addEventListener('click',function(){
+      var open=menu.hasAttribute('hidden');
+      if(open){menu.removeAttribute('hidden');io.hidden=true;ic.hidden=false;btn.setAttribute('aria-expanded','true');}
+      else{menu.setAttribute('hidden','');io.hidden=false;ic.hidden=true;btn.setAttribute('aria-expanded','false');}
+    });
+  })();
+</script>
+
 </body>
 </html>
