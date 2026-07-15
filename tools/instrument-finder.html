@@ -130,11 +130,14 @@
     .btn-quiz {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      vertical-align: middle;
       gap: 0.5rem;
       padding: 1rem 2.5rem;
       background: #E31E24;
       color: #fff;
-      border: none;
+      /* transparent 2px border so solid + outline quiz buttons match height/align */
+      border: 2px solid transparent;
       border-radius: 12px;
       font-size: 1.1rem;
       font-weight: 700;
