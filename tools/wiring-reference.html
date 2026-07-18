@@ -630,6 +630,7 @@
       .section-nav a { padding: 0.6rem 0.75rem; font-size: 0.78rem; }
     }
   </style>
+  <link rel="canonical" href="https://unit-philippines-blog.vercel.app/tools/wiring-reference.html">
 </head>
 <body>
   <!-- Header -->
@@ -1384,13 +1385,14 @@
       if (isNaN(raw) || raw <= 0) { document.getElementById('reverseBands').textContent = 'Enter a valid positive number.'; return; }
       var ohms = raw * unit;
 
-      // Find 2-digit representation (4-band)
+      // Find 2-digit representation (4-band). Normalize to two significant digits
+      // (10-99) and track the power-of-ten multiplier. This must run for sub-1Ω
+      // values too (e.g. 0.47Ω -> 47 x0.01 = Yellow Violet Silver), so it is NOT
+      // guarded by temp >= 1 (that guard collapsed every <1Ω value to 0Ω).
       var multIndex = 0;
       var temp = ohms;
-      if (temp >= 1) {
-        while (temp >= 100) { temp /= 10; multIndex++; }
-        while (temp < 10) { temp *= 10; multIndex--; }
-      }
+      while (temp >= 100) { temp /= 10; multIndex++; }
+      while (temp < 10) { temp *= 10; multIndex--; }
       var d1 = Math.floor(temp / 10);
       var d2 = Math.round(temp % 10);
       if (d2 >= 10) { d1++; d2 = 0; multIndex++; }

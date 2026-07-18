@@ -5,7 +5,7 @@ const CONTENT_DIR = '/Users/kinmopw/Desktop/UNI-T Newsletter/content';
 const posts = JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, 'posts.json'), 'utf8'));
 const calendar = JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, 'calendar.json'), 'utf8'));
 
-const SITE_URL = 'https://unit-blog.vercel.app';
+const SITE_URL = 'https://unit-philippines-blog.vercel.app';
 
 // Hashtag sets
 const HASHTAGS = {

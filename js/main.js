@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Setup event delegation for dynamic content (fixes memory leak)
   setupEventDelegation();
 
+  // Only the blog listing pages (home, /posts/) need posts.json + category data.
+  // Catalog and tool pages have no blog container, so skip the ~400KB data load
+  // (and avoid double-binding main.js's search handler onto the catalog's own input).
+  if (!document.getElementById('featuredPosts') && !document.getElementById('allPosts')) return;
+
   // Show loading spinners
   showLoadingSpinners();
 

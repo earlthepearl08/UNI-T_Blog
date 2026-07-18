@@ -2879,3 +2879,8 @@ body.drawer-open {
 .author-bio-label { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--uni-red, #E31E24); font-weight: 700; }
 .author-bio-card strong { display: block; font-size: 1.05rem; margin: 0.15rem 0 0.35rem; }
 .author-bio-card p { margin: 0; color: var(--text-muted, #555); font-size: 0.95rem; }
+
+/* WCAG AA: the small red eyebrow labels (--uni-red #E31E24) fall below AA on the
+   dark card background; use the lighter --uni-red-light #FF4D52 (~5:1) in dark mode. */
+[data-theme="dark"] .post-card-category,
+[data-theme="dark"] .post-header .category { color: var(--uni-red-light); }

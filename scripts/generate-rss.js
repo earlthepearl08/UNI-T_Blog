@@ -8,7 +8,7 @@ const CATEGORIES_DIR = '/Users/kinmopw/Desktop/UNI-T Newsletter/categories';
 const posts = JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, 'posts.json'), 'utf8'));
 const categories = JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, 'categories.json'), 'utf8'));
 
-const SITE_URL = 'https://unit-blog.vercel.app';
+const SITE_URL = 'https://unit-philippines-blog.vercel.app';
 
 // Generate RSS Feed
 function generateRSS() {

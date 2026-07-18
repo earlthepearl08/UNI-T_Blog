@@ -452,6 +452,7 @@
     .mt-1 { margin-top: 1rem; }
     .mt-2 { margin-top: 2rem; }
   </style>
+  <link rel="canonical" href="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
 </head>
 <body>
   <!-- Header -->
@@ -1010,15 +1011,16 @@
       colorClass = catColors[catLevel];
       badgeClass = catBadges[catLevel];
 
-      // Filter products that meet or exceed this CAT level
+      // Filter products that meet or exceed this CAT level AND are rated for at
+      // least the working voltage AT that category. A "CAT III 600V" meter must
+      // NOT be recommended for 1000V work — matching the CAT numeral alone (the
+      // old bug) recommended under-rated instruments on a safety tool.
+      const catVals = { 'I': 1, 'II': 2, 'III': 3, 'IV': 4 };
       const recommended = products.filter(p => {
-        const match = p.cat.match(/CAT\s*(IV|III|II|I)/g);
-        if (!match) return false;
-        const catVals = { 'I': 1, 'II': 2, 'III': 3, 'IV': 4 };
-        return match.some(m => {
-          const level = m.replace('CAT ', '');
-          return catVals[level] >= catLevel;
-        });
+        const ratings = [...p.cat.matchAll(/CAT\s*(IV|III|II|I)\s*(\d+)\s*V/gi)]
+          .map(m => ({ level: catVals[m[1].toUpperCase()], volts: parseInt(m[2], 10) }));
+        // Need an explicit rating that meets the required category AND voltage.
+        return ratings.some(r => r.level >= catLevel && r.volts >= voltage);
       });
 
       let recoHTML = '';
@@ -1037,6 +1039,13 @@
                 </div>
               `).join('')}
             </div>
+          </div>
+        `;
+      } else {
+        recoHTML = `
+          <div class="reco-section">
+            <h3>Instruments for ${catName} at ${voltage}V</h3>
+            <p style="color:var(--text-muted);">None of the listed UNI-T handhelds are rated <strong>${catName}</strong> at <strong>${voltage}V</strong> or above. For work at this category and voltage, <a href="/contact.html">contact Kinmo</a> for the correct instrument &mdash; do not use an under-rated meter.</p>
           </div>
         `;
       }
@@ -1113,8 +1122,20 @@
         calcV = i * r; computed = 'voltage';
         vEl.value = +calcV.toFixed(6);
       } else {
-        // All three provided — check consistency
-        calcP = calcV * calcI;
+        // All three provided — they must be physically consistent (V = I × R),
+        // otherwise the "Formulas Used" block would print false equations
+        // (e.g. V=10, I=2, R=100 → "2 × 100 = 10"). Verify before rendering.
+        const expectedV = calcI * calcR;
+        const denom = Math.max(Math.abs(calcV), Math.abs(expectedV), 1e-9);
+        if (Math.abs(calcV - expectedV) / denom > 0.01) {
+          resultDiv.innerHTML = `<div class="result-card yellow">
+            <p style="color:var(--text-primary);font-weight:600;">These three values are inconsistent.</p>
+            <p class="result-explain" style="margin-top:0.4rem;">Ohm's Law requires <strong>V = I &times; R</strong>. For I = ${+calcI.toFixed(4)} A and R = ${+calcR.toFixed(4)} &Omega;, the voltage should be <strong>${+expectedV.toFixed(4)} V</strong> &mdash; you entered ${+calcV.toFixed(4)} V. Clear one field and let the calculator derive it, or correct your inputs.</p>
+          </div>`;
+          resultDiv.classList.remove('hidden');
+          resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
         computed = 'power-only';
       }
 
