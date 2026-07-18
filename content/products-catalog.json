@@ -7,7 +7,7 @@
       "id": "multimeters",
       "name": "Digital Multimeters",
       "description": "Handheld, palm, pocket, pen, smart, industrial, datalogging, and bench digital multimeters covering every test workflow.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 83,
       "products": [
         {
@@ -1277,7 +1277,7 @@
       "id": "clamp-meters",
       "name": "Clamp Meters",
       "description": "AC and AC/DC clamp meters from mini 200A pocket models to 2500A True RMS industrial clamps, plus fork and leakage variants.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 53,
       "products": [
         {
@@ -2084,7 +2084,7 @@
       "id": "thermal-imagers",
       "name": "Thermal Imagers",
       "description": "Smartphone, handheld, heavy-duty, enhanced, pro, and monocular thermal imagers for predictive maintenance, building diagnostics, and inspection.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 44,
       "products": [
         {
@@ -2779,7 +2779,7 @@
       "id": "laser-distance-meters",
       "name": "Laser Distance Meters",
       "description": "Pocket laser distance meters from 40m to 120m, with USB-C charging and laser-plus-tape combo formats.",
-      "icon": "📏",
+      "icon": "",
       "productCount": 22,
       "products": [
         {
@@ -3101,7 +3101,7 @@
       "id": "ir-thermometers",
       "name": "Infrared Thermometers",
       "description": "Single, circle, and dual-laser non-contact infrared thermometers covering -50°C to 2200°C for industrial and HVAC use.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 20,
       "products": [
         {
@@ -3411,7 +3411,7 @@
       "id": "insulation-testers",
       "name": "Insulation Testers",
       "description": "Standard, fast, PV, and high-voltage megohm insulation testers up to 12kV / 10TΩ with PI/DAR analysis.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 16,
       "products": [
         {
@@ -3662,7 +3662,7 @@
       "id": "laser-rangefinders",
       "name": "Laser Rangefinders",
       "description": "Long-range laser rangefinders for hunting, golf, and surveying — 600 to 2000 yard/meter ranges with slope and angle modes.",
-      "icon": "🎯",
+      "icon": "",
       "productCount": 14,
       "products": [
         {
@@ -3871,7 +3871,7 @@
       "id": "temperature-humidity-meters",
       "name": "Temperature & Humidity Meters",
       "description": "T/RH meters and dataloggers for cold-chain, cleanroom, museum, and HVAC monitoring — Bluetooth, WiFi, and IP-rated variants.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 14,
       "products": [
         {
@@ -4086,7 +4086,7 @@
       "id": "borescopes",
       "name": "Borescopes",
       "description": "Industrial inspection borescopes with HD cameras, IP67 probes, replaceable extensions, and onboard photo/video.",
-      "icon": "🔍",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -4253,7 +4253,7 @@
       "id": "laser-levels",
       "name": "Laser Levels",
       "description": "Self-leveling green and red beam line lasers for construction, tile, and finishing work — 1H, 1V, 3D 12-line, and 16-line models.",
-      "icon": "📐",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -4400,7 +4400,7 @@
       "id": "socket-continuity-testers",
       "name": "Socket & Continuity Testers",
       "description": "Socket wiring testers, GFCI/RCD testers, and voltage/continuity testers for installation and maintenance work.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -4558,7 +4558,7 @@
       "id": "clamp-earth-ground-testers",
       "name": "Clamp Earth Ground Testers",
       "description": "Single-clamp earth resistance testers for measuring ground rod and bonding resistance without disconnecting the system.",
-      "icon": "⏚",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -4715,7 +4715,7 @@
       "id": "digital-oscilloscopes",
       "name": "Digital Oscilloscopes",
       "description": "Bench and handheld digital storage and mixed-signal oscilloscopes from 25MHz to 2GHz bandwidth.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -4878,7 +4878,7 @@
       "id": "dc-power-supplies",
       "name": "DC Power Supplies",
       "description": "Linear, programmable, and high-power DC power supplies for R&D and production test.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 10,
       "products": [
         {
@@ -5043,7 +5043,7 @@
       "id": "contact-thermometers",
       "name": "Contact Thermometers",
       "description": "K/J/T/E/R/S/N type thermocouple thermometers with single, dual, 4-channel, IR-combo, and food-safe HACCP variants.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 7,
       "products": [
         {
@@ -5156,7 +5156,7 @@
       "id": "network-cable-testers",
       "name": "Network & Cable Testers",
       "description": "RJ45/RJ11/coax/HDMI cable testers and network kits for verifying LAN, telephone, video, and electrical wiring.",
-      "icon": "🔗",
+      "icon": "",
       "productCount": 7,
       "products": [
         {
@@ -5252,7 +5252,7 @@
       "id": "waveform-generators",
       "name": "Waveform Generators",
       "description": "Arbitrary waveform and function generators from 40MHz to 600MHz, 2 to 4 channels.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 7,
       "products": [
         {
@@ -5366,7 +5366,7 @@
       "id": "anemometers",
       "name": "Anemometers",
       "description": "Vane and split-probe anemometers measuring wind speed, air flow, and air temperature for HVAC and field use.",
-      "icon": "🌪️",
+      "icon": "",
       "productCount": 6,
       "products": [
         {
@@ -5461,7 +5461,7 @@
       "id": "usb-testers",
       "name": "USB Testers",
       "description": "USB Type-A and Type-C voltage, current, capacity, and power testers supporting USB 2.0/3.0/4.0 and PD profiles.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 6,
       "products": [
         {
@@ -5560,7 +5560,7 @@
       "id": "wall-scanners",
       "name": "Wall Scanners",
       "description": "Stud and metal/AC wire scanners for detecting hidden objects in walls, with optional laser distance and moisture sensing.",
-      "icon": "🔍",
+      "icon": "",
       "productCount": 6,
       "products": [
         {
@@ -5654,7 +5654,7 @@
       "id": "high-resolution-oscilloscopes",
       "name": "High Resolution Oscilloscopes",
       "description": "12-bit high-resolution mixed-signal and digital oscilloscopes from 70MHz to 8GHz bandwidth.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 6,
       "products": [
         {
@@ -5759,7 +5759,7 @@
       "id": "spectrum-analyzers",
       "name": "Spectrum Analyzers",
       "description": "Signal and spectrum analyzers from 9kHz entry-level up to 40GHz wideband.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 6,
       "products": [
         {
@@ -5852,7 +5852,7 @@
       "id": "fiber-optic-testers",
       "name": "Fiber Optic Testers",
       "description": "Visual fault locators and optical power meters covering FC/SC/ST connectors and -70 to +26 dBm range.",
-      "icon": "💡",
+      "icon": "",
       "productCount": 5,
       "products": [
         {
@@ -5927,7 +5927,7 @@
       "id": "micro-ohm-meters",
       "name": "Micro Ohm / Low Resistance Meters",
       "description": "4-wire Kelvin micro-ohm meters and DC resistance testers up to 200A for contact, busbar, and winding resistance.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 5,
       "products": [
         {
@@ -6009,7 +6009,7 @@
       "id": "process-calibrators",
       "name": "Process Calibrators",
       "description": "Loop, mV, mA, frequency, RTD, and thermocouple sources/calibrators for instrument and PLC calibration work.",
-      "icon": "🔧",
+      "icon": "",
       "productCount": 5,
       "products": [
         {
@@ -6091,7 +6091,7 @@
       "id": "air-quality-meters",
       "name": "Air Quality Meters",
       "description": "CO, CO2, PM2.5, and particle counter meters for indoor air quality, GMP cleanroom, and environmental monitoring.",
-      "icon": "💨",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6156,7 +6156,7 @@
       "id": "battery-testers",
       "name": "Battery Testers",
       "description": "12V/24V automotive battery analyzers and 4-terminal battery internal resistance testers with Bluetooth logging.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6223,7 +6223,7 @@
       "id": "earth-ground-testers",
       "name": "Earth Ground Testers",
       "description": "2-, 3-, and 4-wire earth resistance testers and soil resistivity meters for grounding system verification.",
-      "icon": "⏚",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6292,7 +6292,7 @@
       "id": "flex-clamp-sensors",
       "name": "Flex Clamp Sensors",
       "description": "Flexible Rogowski-coil current clamps and CT accessories for measuring large or awkwardly-positioned conductors.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6358,7 +6358,7 @@
       "id": "high-voltage-clamp-meters",
       "name": "High Voltage Clamp Meters",
       "description": "High-voltage clamp meters up to 69kV for substation, distribution, and utility maintenance.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6427,7 +6427,7 @@
       "id": "installation-testers",
       "name": "Installation Testers",
       "description": "Multifunction installation testers, PAT testers, and safety testers combining IR, low-R, loop Z, and RCD functions.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6496,7 +6496,7 @@
       "id": "light-meters",
       "name": "Light Meters",
       "description": "Lux/Fc illuminance meters with split-probe and integrated designs for lighting design and workplace verification.",
-      "icon": "💡",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6560,7 +6560,7 @@
       "id": "tachometers",
       "name": "Tachometers",
       "description": "Non-contact laser tachometers for RPM and surface-speed measurement on motors, fans, and rotating machinery.",
-      "icon": "⏱️",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6625,7 +6625,7 @@
       "id": "thickness-gauges",
       "name": "Thickness Gauges",
       "description": "Coating thickness gauges (ferrous/non-ferrous) and ultrasonic material thickness gauges for QA and inspection.",
-      "icon": "🔍",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6692,7 +6692,7 @@
       "id": "voltage-detectors",
       "name": "Voltage Detectors",
       "description": "Non-contact voltage detectors with breakpoint, magnetic, vibration, audible, and LED indication for fast live-circuit checks.",
-      "icon": "📡",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6777,7 +6777,7 @@
       "id": "rf-signal-generators",
       "name": "RF Signal Generators",
       "description": "Analog and vector RF signal generators covering 9kHz up to 22GHz.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6846,7 +6846,7 @@
       "id": "bench-digital-multimeters",
       "name": "Bench Digital Multimeters",
       "description": "Bench-top precision digital multimeters from 3.75-digit to 6.5-digit resolution with USB/LAN/GPIB.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 4,
       "products": [
         {
@@ -6919,7 +6919,7 @@
       "id": "angle-meters",
       "name": "Angle Meters",
       "description": "Digital protractors and angle meters with magnetic mounting and laser-line projection for machining and layout.",
-      "icon": "📐",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -6973,7 +6973,7 @@
       "id": "lcr-component-meters",
       "name": "LCR & Component Meters",
       "description": "LC and LCR meters for inductance, capacitance, resistance, ESR, and Q/D measurement at multiple test frequencies.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7024,7 +7024,7 @@
       "id": "moisture-meters",
       "name": "Moisture Meters",
       "description": "Pin and pinless moisture meters for wood, drywall, concrete, and building material inspection.",
-      "icon": "💧",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7078,7 +7078,7 @@
       "id": "phase-sequence-testers",
       "name": "Phase Sequence Testers",
       "description": "Contact and non-contact 3-phase rotation testers with motor-direction and missing-phase detection.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7132,7 +7132,7 @@
       "id": "pressure-gauges",
       "name": "Pressure Gauges",
       "description": "Wireless refrigeration pressure gauges and digital manometers covering kPa, psi, bar, mmHg, and inH2O units.",
-      "icon": "🌬️",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7181,7 +7181,7 @@
       "id": "sound-level-meters",
       "name": "Sound Level Meters",
       "description": "30-130 dB A-weighted sound level meters for occupational, environmental, and HVAC noise measurement.",
-      "icon": "🔊",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7232,7 +7232,7 @@
       "id": "vibration-meters",
       "name": "Vibration Meters",
       "description": "Acceleration, velocity, and displacement vibration testers in handheld and split-probe formats for rotating machinery.",
-      "icon": "⚙️",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7281,7 +7281,7 @@
       "id": "dc-electronic-loads",
       "name": "DC Electronic Loads",
       "description": "Programmable DC electronic loads from 150W to 3000W for power supply and battery testing.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7335,7 +7335,7 @@
       "id": "bench-lcr-meters",
       "name": "Bench LCR Meters",
       "description": "Bench-top LCR meters for precision component characterization up to 300kHz.",
-      "icon": "⚙️",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7390,7 +7390,7 @@
       "id": "bench-power-meters",
       "name": "Bench Power Meters",
       "description": "Bench-top digital power analyzers for AC/DC power, harmonics, and efficiency measurement.",
-      "icon": "📊",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7445,7 +7445,7 @@
       "id": "hipot-testers",
       "name": "Hipot Testers",
       "description": "AC/DC withstand voltage hipot testers up to 12kV for electrical safety verification.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 3,
       "products": [
         {
@@ -7499,7 +7499,7 @@
       "id": "3-phase-power-analyzers",
       "name": "3-Phase Power Analyzers",
       "description": "3-phase clamp volt-ammeters measuring active, reactive, and apparent power, power factor, and phase angle.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7538,7 +7538,7 @@
       "id": "led-testers",
       "name": "LED Testers",
       "description": "AC-input LED tube and bulb test instruments with continuity and DC output for production-line and field LED checks.",
-      "icon": "💡",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7577,7 +7577,7 @@
       "id": "rcd-testers",
       "name": "RCD Testers",
       "description": "Residual current device (RCD/GFCI) testers covering 10mA-1000mA trip currents with multi-level and ramp-up modes.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7616,7 +7616,7 @@
       "id": "refrigerant-leak-detectors",
       "name": "Refrigerant Leak Detectors",
       "description": "Negative-corona and semiconductor refrigerant leak detectors for HVACR service of CFC, HCFC, and HFC systems.",
-      "icon": "💨",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7655,7 +7655,7 @@
       "id": "smd-testers",
       "name": "SMD Testers",
       "description": "Tweezer-style SMD component testers for measuring R, C, and diode/LED on tiny surface-mount parts.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7694,7 +7694,7 @@
       "id": "transformer-turns-ratio-testers",
       "name": "Transformer Turns Ratio Testers",
       "description": "Wireless current transformer (CT) ratio testers with 100m wireless link and on-line measurement.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7733,7 +7733,7 @@
       "id": "bench-micro-ohm-meters",
       "name": "Bench Micro Ohm Meters",
       "description": "Bench micro-ohm and low-resistance meters with multi-channel scanning options.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 2,
       "products": [
         {
@@ -7771,7 +7771,7 @@
       "id": "acoustic-imagers",
       "name": "Acoustic Imagers",
       "description": "MEMS microphone-array acoustic cameras for visualizing compressed-air leaks and partial discharge.",
-      "icon": "📡",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7795,7 +7795,7 @@
       "id": "cable-locators",
       "name": "Cable Locators",
       "description": "Underground cable and breaker locators with TX/RX 33kHz signaling and NCV detection for tracing energized and de-energized lines.",
-      "icon": "🔗",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7820,7 +7820,7 @@
       "id": "circuit-breaker-testers",
       "name": "Circuit Breaker Testers",
       "description": "GFCI/AFCI circuit breaker testers for verifying trip thresholds in residential and light-commercial wiring.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7844,7 +7844,7 @@
       "id": "hardness-testers",
       "name": "Hardness Testers",
       "description": "Portable Leeb hardness testers with HL/HB/HRC/HRB/HV/HS scales and 7 impact-device options for metal hardness QA.",
-      "icon": "🔍",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7868,7 +7868,7 @@
       "id": "lpg-tank-checkers",
       "name": "LPG Tank Checkers",
       "description": "Ultrasonic LPG tank level checkers for steel and aluminum propane/butane cylinders.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7890,7 +7890,7 @@
       "id": "laser-power-meters",
       "name": "Laser Power Meters",
       "description": "uW-mW laser power meters for 400-1100 nm wavelengths used in laser alignment and module QA.",
-      "icon": "💡",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7911,7 +7911,7 @@
       "id": "pipeline-detectors",
       "name": "Pipeline Detectors",
       "description": "Pipeline blockage and signal detectors for plumbing, drainage, and underground utility tracing.",
-      "icon": "🔍",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7933,7 +7933,7 @@
       "id": "power-monitors",
       "name": "Power Monitors",
       "description": "Plug-in power socket monitors for measuring voltage, current, power factor, and energy consumption of appliances.",
-      "icon": "🔌",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7957,7 +7957,7 @@
       "id": "power-quality-analyzers",
       "name": "Power Quality Analyzers",
       "description": "Full 3-phase power quality analyzers covering harmonics, K-factor, voltage events, and energy logging.",
-      "icon": "⚡",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -7981,7 +7981,7 @@
       "id": "radiation-detectors",
       "name": "Radiation Detectors",
       "description": "Personal radiation dose meters detecting X, β, and γ rays for industrial and medical safety monitoring.",
-      "icon": "📡",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8004,7 +8004,7 @@
       "id": "solar-pv-tools",
       "name": "Solar / PV Tools",
       "description": "MPPT solar panel testers and PV-specific instruments for solar installer commissioning and troubleshooting.",
-      "icon": "☀️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8028,7 +8028,7 @@
       "id": "ac-power-sources",
       "name": "AC Power Sources",
       "description": "Programmable AC power sources for compliance testing and AC product validation.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8053,7 +8053,7 @@
       "id": "bench-battery-testers",
       "name": "Bench Battery Testers",
       "description": "Bench battery internal resistance and voltage testers for production and QA lines.",
-      "icon": "🔋",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8077,7 +8077,7 @@
       "id": "electrical-safety-analyzers",
       "name": "Electrical Safety Analyzers",
       "description": "All-in-one electrical safety analyzers combining hipot, insulation, and ground-bond testing.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8102,7 +8102,7 @@
       "id": "bench-insulation-resistance-testers",
       "name": "Bench Insulation Resistance Testers",
       "description": "Programmable bench insulation resistance testers up to 1000V DC and 10TΩ.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8126,7 +8126,7 @@
       "id": "ground-bond-testers",
       "name": "Ground Bond Testers",
       "description": "AC ground bond testers using the 4-terminal method for safety compliance verification.",
-      "icon": "🛡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {
@@ -8150,7 +8150,7 @@
       "id": "multi-channel-temperature-loggers",
       "name": "Multi-Channel Temperature Loggers",
       "description": "Multi-channel bench temperature data loggers with up to 48 channels for thermal characterization.",
-      "icon": "🌡️",
+      "icon": "",
       "productCount": 1,
       "products": [
         {

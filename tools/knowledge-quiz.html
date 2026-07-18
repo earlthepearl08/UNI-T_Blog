@@ -728,7 +728,7 @@
       <h1>Test Your <span class="accent">Knowledge</span></h1>
       <p>Think you know your way around test instruments and electrical systems? Prove it.</p>
       <div class="best-score hidden" id="bestScoreBadge">
-        <span>&#127942;</span> Your Best: <strong id="bestScoreValue">0/10</strong>
+        <span></span> Your Best: <strong id="bestScoreValue">0/10</strong>
       </div>
     </div>
   </section>
@@ -737,31 +737,27 @@
   <!-- Start Screen -->
   <section class="container quiz-start" id="startScreen">
     <h2 style="font-family:'Plus Jakarta Sans','Inter',sans-serif; font-weight:800; margin-bottom:0.5rem;">How It Works</h2>
-    <p style="opacity:0.6; max-width:480px; margin:0 auto;">10 randomly selected questions, 20 seconds each. See how you stack up!</p>
+    <p style="opacity:0.6; max-width:480px; margin:0 auto;">10 randomly selected questions, timed by difficulty (20s easy / 30s medium / 45s hard). See how you stack up!</p>
     <div class="rules">
       <div class="rule-card">
-        <div class="rule-icon">&#128218;</div>
         <div>
           <h4>10 Questions</h4>
           <p>Randomly picked from a pool of 15 covering easy, medium, and hard topics.</p>
         </div>
       </div>
       <div class="rule-card">
-        <div class="rule-icon">&#9201;</div>
         <div>
-          <h4>20s Timer</h4>
-          <p>Each question has a 20-second countdown. No answer = wrong answer!</p>
+          <h4>Timed</h4>
+          <p>Countdown scales with difficulty: 20s easy, 30s medium, 45s hard. No answer = wrong answer!</p>
         </div>
       </div>
       <div class="rule-card">
-        <div class="rule-icon">&#127941;</div>
         <div>
           <h4>Earn a Badge</h4>
           <p>Score high enough and you could be crowned a Master Electrician.</p>
         </div>
       </div>
       <div class="rule-card">
-        <div class="rule-icon">&#128640;</div>
         <div>
           <h4>Share & Compete</h4>
           <p>Share your result on social media and challenge your friends.</p>
@@ -769,7 +765,7 @@
       </div>
     </div>
     <button class="btn-start" id="startBtn" onclick="startQuiz()">
-      Start Quiz &#9889;
+      Start Quiz 
     </button>
   </section>
 
@@ -777,7 +773,7 @@
   <section class="quiz-area hidden" id="quizArea">
     <div class="quiz-top-bar">
       <div class="quiz-counter">Question <span id="qNum">1</span> of <span>10</span></div>
-      <div class="quiz-score-live">&#9733; Score: <span id="liveScore">0</span></div>
+      <div class="quiz-score-live"> Score: <span id="liveScore">0</span></div>
     </div>
     <div class="progress-dots" id="progressDots"></div>
     <div class="timer-text" id="timerText">20s</div>
@@ -906,7 +902,7 @@
       },
       {
         id: 5, difficulty: 'medium',
-        question: 'What CAT rating do you need for working on a main distribution panel?',
+        question: 'What is the minimum CAT rating for working on a distribution panel or sub-panel?',
         choices: ['CAT I', 'CAT II', 'CAT III', 'No rating needed'],
         correct: 2,
         explanation: 'CAT III rated instruments are required for working on distribution-level circuits, including main panels, sub-panels, and fixed wiring. CAT IV is for utility-level work at the service entrance.',
@@ -930,7 +926,7 @@
         question: 'What is the standard household voltage in the Philippines?',
         choices: ['110V, 50Hz', '120V, 60Hz', '220V, 60Hz', '240V, 50Hz'],
         correct: 2,
-        explanation: 'The Philippines uses 220V at 60Hz for household electricity. This is important to know when selecting test instruments and setting measurement ranges.',
+        explanation: 'The Philippine grid runs at 60Hz. The nominal single-phase voltage is 230V under PEC 2017 (harmonized from the legacy 220/380 to 230/400; "220V" remains common shorthand), and 220-240V-rated appliances all operate normally. Knowing the nominal matters when selecting test instruments and measurement ranges.',
         learnMore: '/posts/diy-electrical-safety_-must-have-test-instruments-for-your-home-tool-kit.html'
       },
       {
@@ -950,7 +946,7 @@
         learnMore: '/posts/the-practical-guide-to-choosing-the-right-digital-multimeter-for-work-study-or-h.html'
       },
       {
-        id: 10, difficulty: 'hard',
+        id: 10, difficulty: 'medium',
         question: 'What does the "Hold" button on a multimeter do?',
         choices: [
           'Pauses the timer',
@@ -963,7 +959,7 @@
         learnMore: '/posts/how-to-safely-use-a-digital-multimeter_-a-beginners-practical-guide.html'
       },
       {
-        id: 11, difficulty: 'hard',
+        id: 11, difficulty: 'medium',
         question: 'If you see "OL" on your multimeter display, what does it mean?',
         choices: [
           'Overloaded battery',
@@ -1024,7 +1020,7 @@
           'A battery-powered multimeter'
         ],
         correct: 2,
-        explanation: 'VFDs produce non-sinusoidal output waveforms (PWM). Only a True RMS multimeter can accurately measure these distorted waveforms. A regular (average-responding) meter will give significantly inaccurate readings.',
+        explanation: 'VFDs produce a PWM (pulse-width-modulated) output. A True RMS meter is required — but a plain True RMS DMM (bandwidth ~20 kHz+) also picks up the PWM carrier and switching noise, so on the drive OUTPUT it can read as much as 20-30% higher than the drive controller / motor fundamental. For accurate output readings use a True RMS meter with a low-pass filter (VFC/LPF) mode that rejects signals above ~1 kHz — e.g. the UNI-T UT171B or the UT61E+ with LPF. For drive INPUT and motor current, a True RMS meter alone is fine.',
         learnMore: '/posts/the-practical-guide-to-choosing-the-right-digital-multimeter-for-work-study-or-h.html'
       }
     ];
@@ -1082,7 +1078,14 @@
 
     // ── Start Quiz ──
     function startQuiz() {
-      quizQuestions = shuffle(QUESTIONS).slice(0, 10);
+      // Shuffle the question order AND the choice order within each question, then
+      // remap the correct index — otherwise 13 of 15 answers sit at option C and a
+      // repeat player can score ~87% just by always picking the third choice.
+      quizQuestions = shuffle(QUESTIONS).slice(0, 10).map(q => {
+        const correctText = q.choices[q.correct];
+        const choices = shuffle(q.choices);
+        return { ...q, choices, correct: choices.indexOf(correctText) };
+      });
       currentQ = 0;
       score = 0;
       results = [];
@@ -1210,11 +1213,11 @@
       const fb = document.getElementById('feedback');
       fb.innerHTML = `
         <div class="explanation wrong-exp">
-          <strong>&#9200; Time's up!</strong>
+          <strong> Time's up!</strong>
           ${q.explanation}
         </div>
         <button class="btn-next" onclick="nextQuestion()">
-          ${currentQ < 9 ? 'Next Question &#8594;' : 'See Results &#127942;'}
+          ${currentQ < 9 ? 'Next Question &#8594;' : 'See Results '}
         </button>
       `;
     }
@@ -1252,11 +1255,11 @@
       const fb = document.getElementById('feedback');
       fb.innerHTML = `
         <div class="explanation ${isCorrect ? 'correct-exp' : 'wrong-exp'}">
-          <strong>${isCorrect ? '&#10004; Correct!' : '&#10008; Not quite!'}</strong>
+          <strong>${isCorrect ? '&#10003; Correct!' : '&#10007; Not quite!'}</strong>
           ${q.explanation}
         </div>
         <button class="btn-next" onclick="nextQuestion()">
-          ${currentQ < 9 ? 'Next Question &#8594;' : 'See Results &#127942;'}
+          ${currentQ < 9 ? 'Next Question &#8594;' : 'See Results '}
         </button>
       `;
     }
@@ -1288,22 +1291,22 @@
       // Determine rank
       let rank, emoji, badgeClass, subtitle;
       if (score >= 9) {
-        rank = 'Master Electrician'; emoji = '&#127942;'; badgeClass = 'badge-gold'; subtitle = 'You really know your stuff!';
+        rank = 'Master Electrician'; emoji = ''; badgeClass = 'badge-gold'; subtitle = 'You really know your stuff!';
       } else if (score >= 7) {
-        rank = 'Senior Technician'; emoji = '&#129352;'; badgeClass = 'badge-silver'; subtitle = 'Impressive knowledge!';
+        rank = 'Senior Technician'; emoji = ''; badgeClass = 'badge-silver'; subtitle = 'Impressive knowledge!';
       } else if (score >= 5) {
-        rank = 'Apprentice'; emoji = '&#128295;'; badgeClass = 'badge-bronze'; subtitle = 'Good foundation, keep learning!';
+        rank = 'Apprentice'; emoji = ''; badgeClass = 'badge-bronze'; subtitle = 'Good foundation, keep learning!';
       } else if (score >= 3) {
-        rank = 'Student'; emoji = '&#128218;'; badgeClass = 'badge-student'; subtitle = 'Check out our guides to level up!';
+        rank = 'Student'; emoji = ''; badgeClass = 'badge-student'; subtitle = 'Check out our guides to level up!';
       } else {
-        rank = 'Beginner'; emoji = '&#127793;'; badgeClass = 'badge-beginner'; subtitle = 'Everyone starts somewhere! Our articles can help.';
+        rank = 'Beginner'; emoji = ''; badgeClass = 'badge-beginner'; subtitle = 'Everyone starts somewhere! Our articles can help.';
       }
 
       const wrongOnes = results.filter(r => !r.correct);
       const timedOut = results.filter(r => r.timedOut).length;
       const correctCount = results.filter(r => r.correct).length;
 
-      const shareText = `I scored ${score}/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? &#128295;&#9889;`;
+      const shareText = `I scored ${score}/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? `;
       const shareUrl = window.location.origin + window.location.pathname;
 
       let wrongReviewHTML = '';
@@ -1316,7 +1319,7 @@
               return `
                 <div class="wrong-item">
                   <div class="wrong-q">${q.question}</div>
-                  <div class="wrong-a">&#10004; ${q.choices[q.correct]}</div>
+                  <div class="wrong-a">&#10003; ${q.choices[q.correct]}</div>
                   ${q.learnMore ? `<a href="${q.learnMore}" style="font-size:0.82rem;color:#E31E24;font-weight:600;text-decoration:none;">Learn more &#8594;</a>` : ''}
                 </div>
               `;
@@ -1421,12 +1424,12 @@
       window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank', 'width=600,height=400');
     }
     function shareQuizTW() {
-      const text = encodeURIComponent('I scored ' + score + '/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? \uD83D\uDD27\u26A1');
+      const text = encodeURIComponent('I scored ' + score + '/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? ');
       const url = encodeURIComponent(quizPageUrl());
       window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank', 'width=600,height=400');
     }
     function copyQuizLink() {
-      const text = 'I scored ' + score + '/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? \uD83D\uDD27\u26A1 ' + quizPageUrl();
+      const text = 'I scored ' + score + '/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me?  ' + quizPageUrl();
       Promise.resolve(copyToClipboard(text)).then(ok => {
         showToast(ok ? 'Score copied to clipboard!' : 'Copy failed - please copy manually');
       });

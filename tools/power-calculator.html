@@ -909,9 +909,9 @@
       { id: '3p-480', label: '3-Phase 480V', phases: 3, volts: 480 },
       // ── Medium / High Voltage (PH distribution & transmission) ──
       // Metering ONLY via instrument transformers (PT/CT). NEVER direct contact.
-      { id: 'mv-132',  label: '⚡ 13.2 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 13200, mv: true },
-      { id: 'mv-345',  label: '⚡ 34.5 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 34500, mv: true },
-      { id: 'mv-69',   label: '⚡ 69 kV (HV transmission — PT/CT metering only)',   phases: 3, volts: 69000, mv: true },
+      { id: 'mv-132',  label: ' 13.2 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 13200, mv: true },
+      { id: 'mv-345',  label: ' 34.5 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 34500, mv: true },
+      { id: 'mv-69',   label: ' 69 kV (HV transmission — PT/CT metering only)',   phases: 3, volts: 69000, mv: true },
     ];
 
     function findSystem(id) { return VOLTAGE_SYSTEMS.find(s => s.id === id); }
@@ -1014,7 +1014,6 @@
     function mvNoticeHTML() {
       return `
         <div class="callout danger" style="border:2px solid var(--uni-red, #E31E24);">
-          <span class="callout-icon">&#9888;&#65039;</span>
           <div><strong>Medium/High-Voltage circuit selected.</strong> The current figure above is the
           primary-side reference value only. <strong>Do NOT measure MV/HV directly with handheld
           instruments.</strong> Conductor and breaker sizing here use low-voltage (&le;600 V) tables that
@@ -1038,7 +1037,6 @@
       if (isMV) {
         return `
           <div class="callout info">
-            <span class="callout-icon">&#128274;</span>
             <div><strong>No handheld clamp meter recommended.</strong> At medium/high voltage, measure the
             current on the <strong>secondary of a metering CT</strong> (typically 5 A) using a CAT III/IV
             instrument &mdash; never clamp the primary conductor. For LV verification of downstream feeders,
@@ -1206,7 +1204,6 @@
         </div>
 
         <div class="callout info">
-          <span class="callout-icon">&#128161;</span>
           <div>For accurate kW measurement on inductive loads (motors, transformers, ballasts), measure power factor with a true power meter. Assumed PF can be off by 20-30% for unloaded motors.</div>
         </div>
 
@@ -1282,12 +1279,10 @@
         warning = mvNoticeHTML();
       } else if (targetI > 200) {
         warning = `<div class="callout danger">
-          <span class="callout-icon">&#9888;&#65039;</span>
           <div><strong>Heads up:</strong> Target current of ${fmt(targetI, 1)}A exceeds typical residential breaker sizes. You will need industrial-grade breakers (${tgtBreaker}A+) and properly sized feeders.</div>
         </div>`;
       } else if (targetI > 100) {
         warning = `<div class="callout">
-          <span class="callout-icon">&#9888;&#65039;</span>
           <div>Target current ${fmt(targetI, 1)}A requires a ${tgtBreaker}A breaker &mdash; verify your panel can accept this branch and that wiring meets the suggested ${tgtWire} cross-section.</div>
         </div>`;
       }
@@ -1295,7 +1290,6 @@
       let phaseWarning = '';
       if (src.phases !== tgt.phases) {
         phaseWarning = `<div class="callout danger" style="border:2px solid var(--uni-red, #E31E24); margin-bottom: 1rem;">
-          <span class="callout-icon">&#9888;&#65039;</span>
           <div><strong>Phase mismatch &mdash; ${src.phases}-phase to ${tgt.phases}-phase is NOT directly interchangeable.</strong> The equipment must be physically rewired or replaced. The numbers below show the equivalent current draw for reference only &mdash; do not connect ${src.phases}-phase equipment to a ${tgt.phases}-phase circuit.</div>
         </div>`;
       }
@@ -1450,7 +1444,6 @@
         </div>
 
         <div class="callout info">
-          <span class="callout-icon">&#128161;</span>
           <div><strong>Inrush:</strong> The ${fmt(LRA, 0)}A locked-rotor current (&asymp;6&times; FLA estimate) lasts only a few cycles during start. Use Type D MCBs or motor-rated breakers, or step up to a soft-starter / VFD if frequent starts cause nuisance trips.</div>
         </div>`}
 
