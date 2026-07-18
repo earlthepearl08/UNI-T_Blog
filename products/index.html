@@ -13,6 +13,27 @@
   <meta property="og:title" content="Complete UNI-T Product Catalog | UNI-T Philippines">
   <meta property="og:description" content="504 UNI-T test instruments across 72 categories. Find your model and buy from the official Philippine distributor.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/products/">
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/products/multimeter-ut61e.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Complete UNI-T Product Catalog",
+    "description": "504 UNI-T test and measurement instruments across 72 categories, from the authorized Philippine distributor Kinmo PW.",
+    "url": "https://unit-philippines-blog.vercel.app/products/",
+    "isPartOf": { "@type": "WebSite", "name": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app" },
+    "about": { "@type": "Brand", "name": "UNI-T" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://unit-philippines-blog.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Product Catalog", "item": "https://unit-philippines-blog.vercel.app/products/" }
+      ]
+    }
+  }
+  </script>
 
   <link rel="stylesheet" href="/css/styles.css">
 
@@ -1288,7 +1309,7 @@
       <h2>Need Help Finding the Right Tool?</h2>
       <p class="lead">Our interactive tools and team are here to make the choice easy.</p>
       <div class="cta-grid">
-        <a href="/contact.html" class="cta-card">
+        <a href="/contact.html#quote" class="cta-card">
           <span class="icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
           <h3>Can't find what you need?</h3>
           <p>Reach out to Kinmo and we'll help you source the right UNI-T instrument.</p>
@@ -1589,7 +1610,7 @@
               <div class="icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
               <h3>Couldn't load the catalog</h3>
               <p>Please refresh the page. If the problem persists, contact us and we'll help you find the right product.</p>
-              <a href="/contact.html" class="reset-btn">Contact Kinmo</a>
+              <a href="/contact.html#quote" class="reset-btn">Contact Kinmo</a>
             </div>`;
         }
       }
@@ -1832,7 +1853,7 @@
             ${product.subcategory ? `<div class="modal-subcat">${escapeHtml(product.subcategory)}</div>` : ''}
             ${product.description
               ? `<p class="modal-desc">${escapeHtml(product.description)}</p>`
-              : `<p class="modal-desc modal-desc-empty">Detailed description coming soon. <a href="/contact.html">Contact Kinmo</a> for full specifications.</p>`
+              : `<p class="modal-desc modal-desc-empty">Detailed description coming soon. <a href="/contact.html#quote">Contact Kinmo</a> for full specifications.</p>`
             }
             ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div></div>` : ''}
             ${regionsHtml}

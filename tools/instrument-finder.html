@@ -247,6 +247,11 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(227, 30, 36, 0.12);
     }
+    .answer-card:focus-visible {
+      outline: 3px solid #E31E24;
+      outline-offset: 2px;
+      border-color: #E31E24;
+    }
     .answer-card.selected {
       border-color: #E31E24;
       background: rgba(227, 30, 36, 0.06);
@@ -1018,8 +1023,8 @@
           <h2 class="question-title">${q.title}</h2>
           <div class="answer-grid">
             ${q.options.map(opt => `
-              <div class="answer-card" data-question="${idx}" data-value="${opt.value}" onclick="selectAnswer(this, ${idx}, '${opt.value}')">
-                <span class="answer-icon">${opt.icon}</span>
+              <div class="answer-card" role="button" tabindex="0" aria-label="${opt.label}${opt.desc ? ' — ' + opt.desc : ''}" data-question="${idx}" data-value="${opt.value}" onclick="selectAnswer(this, ${idx}, '${opt.value}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectAnswer(this, ${idx}, '${opt.value}');}">
+                <span class="answer-icon" aria-hidden="true">${opt.icon}</span>
                 <span class="answer-label">${opt.label}</span>
                 ${opt.desc ? `<span class="answer-desc">${opt.desc}</span>` : ''}
               </div>

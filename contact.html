@@ -172,6 +172,76 @@
   </section>
   <div class="accent-bar"></div>
 
+  <!-- Request a Quote form -->
+  <section class="container" id="quote" style="max-width:760px;margin:2.5rem auto 1rem;scroll-margin-top:90px;">
+    <h2 style="margin-bottom:0.35rem;">Request a Quote</h2>
+    <p class="subtitle" style="margin:0 0 1.5rem;">Tell us what you need &mdash; model, quantity, and any requirements &mdash; and Kinmo will reply with pricing and availability. For institutions and resellers we handle POs and bulk orders.</p>
+    <form id="inquiryForm" class="quote-form" novalidate>
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" class="qf-hp">
+      <div class="qf-row">
+        <div class="qf-field"><label for="qf-name">Name <span aria-hidden="true">*</span></label><input id="qf-name" name="name" type="text" required autocomplete="name"></div>
+        <div class="qf-field"><label for="qf-company">Company / institution</label><input id="qf-company" name="company" type="text" autocomplete="organization"></div>
+      </div>
+      <div class="qf-row">
+        <div class="qf-field"><label for="qf-email">Email <span aria-hidden="true">*</span></label><input id="qf-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="qf-field"><label for="qf-phone">Phone / Viber</label><input id="qf-phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="qf-row">
+        <div class="qf-field"><label for="qf-product">Product / model of interest</label><input id="qf-product" name="product" type="text" placeholder="e.g. UT61E+, UTi260B"></div>
+        <div class="qf-field qf-qty"><label for="qf-qty">Quantity</label><input id="qf-qty" name="quantity" type="text" placeholder="e.g. 10 units"></div>
+      </div>
+      <div class="qf-field"><label for="qf-message">Message <span aria-hidden="true">*</span></label><textarea id="qf-message" name="message" rows="5" required placeholder="What do you need a quote for?"></textarea></div>
+      <div class="qf-actions">
+        <button type="submit" class="btn btn-primary" id="qf-submit">Send inquiry</button>
+        <span id="inquiryStatus" role="status" aria-live="polite" class="qf-status"></span>
+      </div>
+    </form>
+  </section>
+  <style>
+    .quote-form .qf-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+    .quote-form .qf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .quote-form .qf-field{display:flex;flex-direction:column;margin-bottom:1rem;}
+    .quote-form label{font-size:0.85rem;font-weight:600;margin-bottom:0.35rem;color:var(--text-secondary,#555);}
+    .quote-form label span{color:var(--uni-red);}
+    .quote-form input,.quote-form textarea{padding:0.7rem 0.85rem;border:1.5px solid var(--border-color,#d1d5db);border-radius:var(--border-radius,8px);background:var(--input-bg,#fff);color:var(--text-primary,#111);font:inherit;font-size:0.95rem;}
+    .quote-form input:focus,.quote-form textarea:focus{outline:2px solid var(--uni-red);outline-offset:1px;border-color:var(--uni-red);}
+    [data-theme="dark"] .quote-form input,[data-theme="dark"] .quote-form textarea{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);}
+    .quote-form .qf-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;}
+    .quote-form .qf-status{font-weight:600;font-size:0.92rem;}
+    .quote-form .qf-status.ok{color:#0a8f3c;}
+    .quote-form .qf-status.err{color:var(--uni-red);}
+    @media(max-width:560px){.quote-form .qf-row{grid-template-columns:1fr;}}
+  </style>
+  <script>
+    (function(){
+      var form=document.getElementById('inquiryForm');if(!form)return;
+      var statusEl=document.getElementById('inquiryStatus');
+      var btn=document.getElementById('qf-submit');
+      function mailtoFallback(d){
+        var body='Name: '+d.name+'\nCompany: '+(d.company||'')+'\nEmail: '+d.email+'\nPhone: '+(d.phone||'')+'\nProduct/model: '+(d.product||'')+'\nQuantity: '+(d.quantity||'')+'\n\n'+d.message;
+        var subj='Quote request: '+(d.product||'general')+' - '+d.name;
+        window.location.href='mailto:e2shop.kinmo@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+      }
+      form.addEventListener('submit',async function(e){
+        e.preventDefault();
+        if(!form.reportValidity())return;
+        var fd=new FormData(form),d={};fd.forEach(function(v,k){d[k]=v;});
+        if(d.company_website)return; // bot
+        statusEl.className='qf-status';statusEl.textContent='Sending…';btn.disabled=true;
+        try{
+          var r=await fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
+          var j=await r.json().catch(function(){return{};});
+          if(r.ok&&j.ok&&j.delivered){statusEl.className='qf-status ok';statusEl.textContent='Thanks — your inquiry has been sent. Kinmo will get back to you shortly.';form.reset();btn.disabled=false;return;}
+          if(r.status===400&&j.error){statusEl.className='qf-status err';statusEl.textContent=j.error;btn.disabled=false;return;}
+          // reachable but not yet configured to deliver -> mailto fallback
+          statusEl.className='qf-status';statusEl.textContent='Opening your email app to send…';btn.disabled=false;mailtoFallback(d);
+        }catch(err){
+          statusEl.className='qf-status';statusEl.textContent='Opening your email app to send…';btn.disabled=false;mailtoFallback(d);
+        }
+      });
+    })();
+  </script>
+
   <!-- Contact Cards -->
   <section class="container">
     <div class="contact-grid">
