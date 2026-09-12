@@ -7,9 +7,13 @@
 //   LEAD_WEBHOOK_URL  – POSTs the lead JSON to a URL (e.g. a Google Apps Script
 //                       web app that appends a row to a Google Sheet, or Zapier).
 //   RESEND_API_KEY    – emails the lead via Resend (set LEAD_TO / LEAD_FROM too).
-// If neither is set, it returns {ok:true, delivered:false} and the browser falls
-// back to opening the user's mail client with the inquiry pre-filled, so no lead
-// is ever silently lost.
+// A destination only counts as delivered when it answers 2xx. If nothing is
+// configured, or every destination fails, this returns {ok:true, delivered:false},
+// logs the full lead, and the page shows the visitor their inquiry with a copy /
+// email / Viber / phone panel — so a lead is never silently lost.
+//
+// Setup steps: docs/LEAD-DELIVERY.md. Check the live state with
+//   curl https://<site>/api/inquiry
 
 function isEmail(s) {
   return typeof s === 'string' && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s);
@@ -73,13 +77,29 @@ module.exports = async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
   res.setHeader('Vary', 'Origin');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
 
+  // Setup health check. Reports only WHETHER a lead destination exists — never
+  // its URL, key or address — so the person configuring the project can confirm
+  // delivery is live without posting a fake inquiry through the real form:
+  //   curl https://<site>/api/inquiry
+  if (req.method === 'GET') {
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(200).json({
+      ok: true,
+      configured: !!(process.env.LEAD_WEBHOOK_URL || process.env.RESEND_API_KEY),
+      destinations: {
+        webhook: !!process.env.LEAD_WEBHOOK_URL,
+        email: !!process.env.RESEND_API_KEY,
+      },
+    });
+  }
+
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST, OPTIONS');
+    res.setHeader('Allow', 'GET, POST, OPTIONS');
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
@@ -128,49 +148,70 @@ module.exports = async function handler(req, res) {
 
   const webhook = process.env.LEAD_WEBHOOK_URL;
   const resendKey = process.env.RESEND_API_KEY;
+  const configured = !!(webhook || resendKey);
   let delivered = false;
+  const failures = [];
 
-  try {
-    if (webhook) {
-      await fetch(webhook, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(lead),
-      });
-      delivered = true;
+  // A destination that answers with an error is NOT a delivery. fetch() only
+  // rejects on a network-level failure, so an expired Resend key (401), an
+  // unverified sender domain (403) or an Apps Script that threw (500) used to
+  // resolve normally and be counted as success: the visitor was told "your
+  // inquiry has been sent", the browser fallback never ran, and the lead was
+  // gone with nothing in the logs. Check the status, and time out rather than
+  // hanging until the platform kills the function.
+  async function deliverTo(label, url, opts) {
+    try {
+      const r = await fetch(url, Object.assign({ signal: AbortSignal.timeout(8000) }, opts));
+      if (r.ok) { delivered = true; return; }
+      const detail = await r.text().catch(() => '');
+      failures.push(label + ' HTTP ' + r.status + ' ' + detail.slice(0, 300));
+    } catch (e) {
+      failures.push(label + ' ' + (e && e.message ? e.message : e));
     }
-    if (resendKey) {
-      await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { Authorization: 'Bearer ' + resendKey, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: process.env.LEAD_FROM || 'UNI-T Philippines <onboarding@resend.dev>',
-          to: [process.env.LEAD_TO || 'e2shop.kinmo@gmail.com'],
-          reply_to: email,
-          subject: oneLine(`New inquiry: ${product || 'general'} — ${name}${company ? ' (' + company + ')' : ''}`).slice(0, 200),
-          text: [
-            `Name: ${name}`, `Company: ${company}`, `Email: ${email}`, `Phone: ${phone}`,
-            `Product/model: ${product}`, `Quantity: ${quantity}`, '', 'Message:', message, '',
-            `Submitted: ${lead.submittedAt}`, `From page: ${lead.source}`,
-          ].join('\n'),
-        }),
-      });
-      delivered = true;
-    }
-  } catch (e) {
-    // Log it. Swallowing this silently meant a broken webhook or an expired API
-    // key looked identical to "no destination configured", so lead loss was
-    // invisible in the Vercel function logs.
-    console.error('INQUIRY DELIVERY FAILED:', e && e.message ? e.message : e,
-      '| lead:', JSON.stringify({ name: lead.name, email: lead.email, product: lead.product, submittedAt: lead.submittedAt }));
-    return res.status(200).json({ ok: true, delivered: false });
+  }
+
+  if (webhook) {
+    await deliverTo('webhook', webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(lead),
+    });
+  }
+
+  if (resendKey) {
+    await deliverTo('resend', 'https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + resendKey, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: process.env.LEAD_FROM || 'UNI-T Philippines <onboarding@resend.dev>',
+        to: [process.env.LEAD_TO || 'e2shop.kinmo@gmail.com'],
+        reply_to: email,
+        subject: oneLine(`New inquiry: ${product || 'general'} — ${name}${company ? ' (' + company + ')' : ''}`).slice(0, 200),
+        text: [
+          `Name: ${name}`, `Company: ${company}`, `Email: ${email}`, `Phone: ${phone}`,
+          `Product/model: ${product}`, `Quantity: ${quantity}`, '', 'Message:', message, '',
+          `Submitted: ${lead.submittedAt}`, `From page: ${lead.source}`,
+        ].join('\n'),
+      }),
+    });
+  }
+
+  if (failures.length) {
+    console.error('INQUIRY DELIVERY FAILED:', failures.join(' | '));
   }
 
   if (!delivered) {
-    // No destination configured yet. Surface in Vercel function logs and let the
-    // browser fall back to mailto so the lead still reaches Kinmo.
-    console.log('INQUIRY (no delivery destination configured):', JSON.stringify(lead));
+    // Log the WHOLE lead, not just a summary. These function logs are the last
+    // copy of an inquiry that reached the server but no destination, so they
+    // have to contain enough to actually answer the customer.
+    console.log(
+      configured
+        ? 'INQUIRY NOT DELIVERED (every configured destination failed) — full lead follows:'
+        : 'INQUIRY NOT DELIVERED (no destination configured — set LEAD_WEBHOOK_URL or RESEND_API_KEY) — full lead follows:',
+      JSON.stringify(lead)
+    );
     return res.status(200).json({ ok: true, delivered: false });
   }
+
   return res.status(200).json({ ok: true, delivered: true });
 }

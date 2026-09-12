@@ -234,10 +234,29 @@
         <span id="inquiryStatus" role="status" aria-live="polite" class="qf-status"></span>
       </div>
     </form>
+
+    <!-- Shown only when the inquiry could not be handed to the server. The old
+         fallback was a bare window.location='mailto:…', which silently does
+         nothing on a phone with no mail app configured — the customer saw
+         "Opening your email app…" and the lead simply evaporated. This keeps
+         what they typed on screen and gives them a route that always works. -->
+    <div id="qf-fallback" class="qf-fallback" hidden>
+      <h3>Your inquiry wasn't sent automatically</h3>
+      <p>Nothing is lost — everything you typed is below. Send it whichever way suits you, or call and we'll take the details down.</p>
+      <label class="visually-hidden" for="qf-fb-text">Your inquiry details</label>
+      <textarea id="qf-fb-text" readonly rows="9"></textarea>
+      <div class="qf-fb-actions">
+        <button type="button" class="btn btn-primary" id="qf-fb-copy">Copy details</button>
+        <a class="btn btn-outline" id="qf-fb-mail" href="mailto:e2shop.kinmo@gmail.com">Open email app</a>
+        <a class="btn btn-outline" href="viber://chat?number=%2B639778407799">Viber</a>
+        <a class="btn btn-outline" href="tel:+63282515598">(02) 8251-5598</a>
+        <span id="qf-fb-copied" class="qf-copied" role="status" aria-live="polite"></span>
+      </div>
+    </div>
   </section>
   <style>
     .quote-form .qf-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
-    .quote-form .qf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .quote-form .qf-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;}
     .quote-form .qf-field{display:flex;flex-direction:column;margin-bottom:1rem;}
     .quote-form label{font-size:0.85rem;font-weight:600;margin-bottom:0.35rem;color:var(--text-secondary,#555);}
     .quote-form label span{color:var(--uni-red);}
@@ -248,6 +267,16 @@
     .quote-form .qf-status{font-weight:600;font-size:0.92rem;}
     .quote-form .qf-status.ok{color:#0a8f3c;}
     .quote-form .qf-status.err{color:var(--uni-red);}
+    .qf-fallback{margin-top:1.5rem;padding:1.1rem 1.2rem;border:1px solid var(--border-color,#d1d5db);border-left:3px solid var(--uni-red);border-radius:var(--border-radius,8px);background:rgba(0,0,0,0.025);}
+    [data-theme="dark"] .qf-fallback{background:rgba(255,255,255,0.045);border-color:rgba(255,255,255,0.15);}
+    .qf-fallback h3{margin:0 0 0.35rem;font-size:1.02rem;}
+    .qf-fallback p{margin:0 0 0.8rem;font-size:0.9rem;color:var(--text-secondary,#555);}
+    .qf-fallback textarea{width:100%;box-sizing:border-box;padding:0.7rem 0.85rem;border:1.5px solid var(--border-color,#d1d5db);border-radius:var(--border-radius,8px);background:var(--input-bg,#fff);color:var(--text-primary,#111);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.82rem;line-height:1.5;}
+    [data-theme="dark"] .qf-fallback textarea{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);}
+    .qf-fb-actions{display:flex;flex-wrap:wrap;align-items:center;gap:0.6rem;margin-top:0.85rem;}
+    .qf-fb-actions .btn{font-size:0.9rem;padding:0.55rem 1rem;line-height:1.45;display:inline-flex;align-items:center;justify-content:center;}
+    .qf-copied{font-size:0.85rem;font-weight:600;color:#0a8f3c;}
+    [data-theme="dark"] .qf-copied{color:#4ade80;}
     @media(max-width:560px){.quote-form .qf-row{grid-template-columns:1fr;}}
   </style>
   <script>
@@ -255,26 +284,90 @@
       var form=document.getElementById('inquiryForm');if(!form)return;
       var statusEl=document.getElementById('inquiryStatus');
       var btn=document.getElementById('qf-submit');
-      function mailtoFallback(d){
-        var body='Name: '+d.name+'\nCompany: '+(d.company||'')+'\nEmail: '+d.email+'\nPhone: '+(d.phone||'')+'\nProduct/model: '+(d.product||'')+'\nQuantity: '+(d.quantity||'')+'\n\n'+d.message;
-        var subj='Quote request: '+(d.product||'general')+' - '+d.name;
-        window.location.href='mailto:e2shop.kinmo@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+      var panel=document.getElementById('qf-fallback');
+      var fbText=document.getElementById('qf-fb-text');
+      var fbMail=document.getElementById('qf-fb-mail');
+      var fbCopy=document.getElementById('qf-fb-copy');
+      var fbCopied=document.getElementById('qf-fb-copied');
+      var MAIL='e2shop.kinmo@gmail.com';
+
+      function leadText(d){
+        return 'Name: '+(d.name||'')
+          +'\nCompany: '+(d.company||'')
+          +'\nEmail: '+(d.email||'')
+          +'\nPhone: '+(d.phone||'')
+          +'\nProduct/model: '+(d.product||'')
+          +'\nQuantity: '+(d.quantity||'')
+          +'\n\n'+(d.message||'');
       }
+
+      // Never navigate away on its own. Put the inquiry on screen with every
+      // route out of here, and let the visitor pick one.
+      function showFallback(d){
+        if(!panel)return;
+        var body=leadText(d);
+        var subj='Quote request: '+(d.product||'general')+' - '+(d.name||'');
+        fbText.value=body;
+        fbMail.href='mailto:'+MAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+        fbCopied.textContent='';
+        panel.hidden=false;
+        try{panel.scrollIntoView({behavior:'smooth',block:'nearest'});}catch(e){panel.scrollIntoView();}
+      }
+
+      if(fbCopy){
+        fbCopy.addEventListener('click',function(){
+          var done=function(){fbCopied.textContent='Copied.';};
+          // execCommand is the fallback: navigator.clipboard is undefined on
+          // http:// and in a few in-app browsers (Facebook, Messenger) that a
+          // lot of our traffic arrives through.
+          if(navigator.clipboard&&navigator.clipboard.writeText){
+            navigator.clipboard.writeText(fbText.value).then(done,function(){legacyCopy(done);});
+          }else{legacyCopy(done);}
+        });
+      }
+      function legacyCopy(done){
+        try{
+          fbText.removeAttribute('readonly');
+          fbText.focus();fbText.setSelectionRange(0,fbText.value.length);
+          var ok=document.execCommand('copy');
+          fbText.setAttribute('readonly','');
+          fbCopied.textContent=ok?'Copied.':'Press Ctrl/Cmd+C to copy.';
+        }catch(e){fbCopied.textContent='Press Ctrl/Cmd+C to copy.';}
+      }
+
       form.addEventListener('submit',async function(e){
         e.preventDefault();
         if(!form.reportValidity())return;
         var fd=new FormData(form),d={};fd.forEach(function(v,k){d[k]=v;});
         if(d.company_website)return; // bot
+        if(panel)panel.hidden=true;
         statusEl.className='qf-status';statusEl.textContent='Sending…';btn.disabled=true;
         try{
-          var r=await fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
+          // Without a deadline a hung function left the button disabled and the
+          // visitor staring at "Sending…" until the platform timed it out.
+          var ctrl=('AbortController' in window)?new AbortController():null;
+          var timer=ctrl?setTimeout(function(){ctrl.abort();},12000):null;
+          var r=await fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d),signal:ctrl?ctrl.signal:undefined});
+          if(timer)clearTimeout(timer);
           var j=await r.json().catch(function(){return{};});
-          if(r.ok&&j.ok&&j.delivered){statusEl.className='qf-status ok';statusEl.textContent='Thanks — your inquiry has been sent. Kinmo will get back to you shortly.';form.reset();btn.disabled=false;return;}
-          if(r.status===400&&j.error){statusEl.className='qf-status err';statusEl.textContent=j.error;btn.disabled=false;return;}
-          // reachable but not yet configured to deliver -> mailto fallback
-          statusEl.className='qf-status';statusEl.textContent='Opening your email app to send…';btn.disabled=false;mailtoFallback(d);
+          btn.disabled=false;
+          if(r.ok&&j.ok&&j.delivered){
+            statusEl.className='qf-status ok';
+            statusEl.textContent='Thanks — your inquiry has been sent. Kinmo will get back to you shortly.';
+            form.reset();return;
+          }
+          if(r.status===400&&j.error){statusEl.className='qf-status err';statusEl.textContent=j.error;return;}
+          if(r.status===429&&j.error){statusEl.className='qf-status err';statusEl.textContent=j.error;showFallback(d);return;}
+          // Reached the server but nothing accepted the lead — treat it as a
+          // failure rather than telling the customer it was sent.
+          statusEl.className='qf-status err';
+          statusEl.textContent="We couldn't send that automatically.";
+          showFallback(d);
         }catch(err){
-          statusEl.className='qf-status';statusEl.textContent='Opening your email app to send…';btn.disabled=false;mailtoFallback(d);
+          btn.disabled=false;
+          statusEl.className='qf-status err';
+          statusEl.textContent=(err&&err.name==='AbortError')?'That took too long to send.':"We couldn't send that automatically.";
+          showFallback(d);
         }
       });
     })();
