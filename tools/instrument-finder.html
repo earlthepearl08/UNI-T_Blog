@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Find Your Perfect Test Instrument | UNI-T Philippines">
 
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912161617">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912162227">
   <style>
     /* Quiz-specific styles */
     .quiz-wrapper {
@@ -760,7 +760,7 @@
         <h2 class="result-title" id="resultTitle">We Found Your Instrument!</h2>
         <p class="result-subtitle" id="resultSubtitle"></p>
         <div class="result-card">
-          <img id="resultImage" class="result-image" src="" alt="">
+          <img id="resultImage" class="result-image" alt="" hidden>
           <div class="result-product-name" id="resultProductName"></div>
           <div class="result-product-type" id="resultProductType"></div>
           <p class="result-reason" id="resultReason"></p>
@@ -781,7 +781,7 @@
         </div>
 
         <div class="share-section">
-          <h4>Share Your Result</h4>
+          <h3>Share Your Result</h3>
           <div class="share-buttons">
             <a class="share-btn" id="shareFacebook" href="#" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -820,7 +820,7 @@
           </p>
         </div>
         <div class="footer-section">
-          <h4>Categories</h4>
+          <h3>Categories</h3>
           <ul>
             <li><a href="/categories/equipment-guides/">Equipment Guides</a></li>
             <li><a href="/categories/safety-techniques/">Safety & Techniques</a></li>
@@ -829,16 +829,16 @@
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <ul>
             <li><a href="/posts/">All Articles</a></li>
             <li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact Us</a></li>
-            <li><a href="https://kinmo.com" target="_blank">Kinmo Store</a></li>
+            <li><a href="https://kinmo.com" target="_blank" rel="noopener noreferrer">Kinmo Store</a></li>
             <li><a href="/rss.xml">RSS Feed</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Contact</h4>
+          <h3>Contact</h3>
           <ul>
             <li><a href="tel:+639778407799">+63 977 840 7799</a></li>
             <li><a href="tel:+639167050208">+63 916 705 0208</a></li>
@@ -1332,7 +1332,10 @@
       document.getElementById('questionsContainer').style.display = 'none';
       document.getElementById('quizProgress').style.display = 'none';
 
-      document.getElementById('resultImage').src = product.image;
+      const resImg = document.getElementById('resultImage');
+      resImg.src = product.image;
+      resImg.hidden = false;
+      resImg.onerror = function () { this.hidden = true; };
       document.getElementById('resultImage').alt = product.name;
       document.getElementById('resultProductName').textContent = product.name;
       document.getElementById('resultProductType').textContent = product.type;

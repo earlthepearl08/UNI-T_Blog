@@ -1,0 +1,10 @@
+# Source images superseded by the .webp versions actually referenced by the site.
+# Kept in the repo so they can be re-exported, but excluded from the deploy:
+# they were 96 MB of the 108 MB bundle and nothing links to them.
+images/_originals/
+
+# Build-time only
+scripts/
+node_modules/
+docs/
+*.md
