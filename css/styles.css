@@ -1393,7 +1393,7 @@ p {
   line-height: 1.7;
 }
 
-.footer-section h4 {
+.footer-section h3, .footer-section h4 {
   color: #FFFFFF;
   margin-bottom: 1.25rem;
   font-size: 1rem;
@@ -1403,7 +1403,7 @@ p {
   padding-bottom: 0.75rem;
 }
 
-.footer-section h4::after {
+.footer-section h3::after, .footer-section h4::after {
   content: '';
   position: absolute;
   bottom: 0;
