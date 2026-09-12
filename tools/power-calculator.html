@@ -14,6 +14,9 @@
   <meta property="og:description" content="Convert kW to Amperes, transpose voltage systems, and size motors with wire and breaker recommendations for Philippine 1P/3P circuits.">
   <meta property="og:type" content="website">
 
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/brand/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/power-calculator.html">
   <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
@@ -1004,7 +1007,18 @@
       for (let i = 0; i < BREAKER_SIZES.length; i++) {
         if (BREAKER_SIZES[i] >= amps) return BREAKER_SIZES[i];
       }
-      return BREAKER_SIZES[BREAKER_SIZES.length - 1];
+      // Beyond the largest tabulated frame size, return null so the caller can say
+      // so explicitly. Silently returning 1000 A printed an UNDERSIZED breaker for
+      // large loads, which reads as a valid recommendation.
+      return null;
+    }
+
+    // suggestBreaker() returns null above the largest tabulated frame size.
+    // Render that honestly instead of printing a smaller, wrong number.
+    function breakerLabel(b) {
+      return (b === null || b === undefined)
+        ? 'above 1000 A &mdash; consult a PEE'
+        : b + ' A';
     }
 
     // Size a general branch circuit as a coherent conductor+breaker PAIR that
@@ -1018,11 +1032,12 @@
         const c = CU_AMPACITY[i];
         if (c.amp >= designAmps) {
           const breaker = suggestBreaker(designAmps);
+          if (breaker === null) continue;
           if (c.ocpdMax && breaker > c.ocpdMax) continue; // conductor can't be protected — step up
           return { wire: c.mm2 + ' mm&sup2;', breaker };
         }
       }
-      return { wire: '325 mm&sup2; or parallel runs (consult a PEE)', breaker: suggestBreaker(designAmps) };
+      return { wire: '325 mm&sup2; or parallel runs (consult a PEE)', breaker: suggestBreaker(designAmps) };  // breaker may be null — rendered as 'consult a PEE'
     }
 
     // ===== Medium/High-voltage safety guard =====
@@ -1141,10 +1156,13 @@
       const denom = (sys.phases === 3 ? Math.sqrt(3) : 1) * V * PF * eta;
       const I = (P * 1000) / denom;
 
-      // Apparent power S = P / PF (kVA)
-      const S = P / PF;
-      // Reactive power Q = sqrt(S^2 - P^2) (kVAR)
-      const Q = Math.sqrt(Math.max(S * S - P * P, 0));
+      // Efficiency converts shaft/output power into the INPUT power the supply
+      // actually delivers. The current above is already an input-side figure, so
+      // S and Q must be derived from input power too — using the output power
+      // here made the kVA contradict the amperes whenever efficiency < 1.
+      const Pin = P / eta;                       // real input power, kW
+      const S = Pin / PF;                        // apparent power, kVA
+      const Q = Math.sqrt(Math.max(S * S - Pin * Pin, 0));  // reactive power, kVAR
 
       // Per PEC: continuous loads (>3hr) require conductor & breaker sized at 125% of load
       const branch = sizeBranchCircuit(I * 1.25);
@@ -1162,11 +1180,11 @@
             </span>
             <span class="spec-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
-              Breaker: ${breaker} A (recommended)
+              Breaker: ${breakerLabel(breaker)}${breaker === null ? '' : ' (recommended)'}
             </span>
           </div>
           <p class="result-explain" style="margin-top:0.75rem;">
-            Philippine-market conductor sizes (2.0&ndash;325&nbsp;mm&sup2;), sized from PEC 2017 Table 3.10.1.16 ampacity for THHN/THWN copper (75&deg;C column, 30&deg;C ambient). The breaker is capped by the small-conductor rule (PEC 2.40.4(D): 2.0&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;15A, 3.5&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;20A, 5.5&nbsp;mm&sup2;&nbsp;&rarr;&nbsp;30A max). For long runs, increase one size to limit voltage drop (keep &le;3% on a branch, &le;5% total). Always verify with the latest PEC and derate for ambient temperature and conduit fill.
+            Sized from PEC 2017 Table 3.10.1.16 ampacity for THHN/THWN copper, <strong>75&deg;C column at 30&deg;C ambient with no more than three current-carrying conductors</strong>, and capped by the small-conductor rule (PEC 2.40.4(D)). <strong>No ambient-temperature correction, conductor-bundling adjustment or voltage drop has been applied</strong> &mdash; in a PH ceiling space at 35&ndash;40&deg;C, or with more than three conductors in one conduit, the required size is larger. Check voltage drop separately (&le;3% branch, &le;5% total) with the <a href="/tools/safety-calculator.html#wire">wire-size calculator</a>, and confirm terminal temperature ratings.
           </p>
         </div>`;
 
@@ -1179,8 +1197,9 @@
           </div>
           <div class="result-row">
             <div class="result-item">
-              <div class="result-label">Real Power (P)</div>
-              <div class="result-value">${fmt(P, 2)} <small>kW</small></div>
+              <div class="result-label">Real Power (P${eta < 1 ? ' in' : ''})</div>
+              <div class="result-value">${fmt(Pin, 2)} <small>kW</small></div>
+              ${eta < 1 ? `<div class="result-sub">${fmt(P, 2)} kW output &divide; ${fmt(eta, 2)} efficiency</div>` : ''}
             </div>
             <div class="result-item">
               <div class="result-label">Apparent Power (S)</div>
@@ -1326,11 +1345,11 @@
         warning = mvNoticeHTML();
       } else if (targetI > 200) {
         warning = `<div class="callout danger">
-          <div><strong>Heads up:</strong> Target current of ${fmt(targetI, 1)}A exceeds typical residential breaker sizes. You will need industrial-grade breakers (${tgtBreaker}A+) and properly sized feeders.</div>
+          <div><strong>Heads up:</strong> Target current of ${fmt(targetI, 1)}A exceeds typical residential breaker sizes. You will need industrial-grade breakers (${breakerLabel(tgtBreaker)}+) and properly sized feeders.</div>
         </div>`;
       } else if (targetI > 100) {
         warning = `<div class="callout">
-          <div>Target current ${fmt(targetI, 1)}A requires a ${tgtBreaker}A breaker &mdash; verify your panel can accept this branch and that wiring meets the suggested ${tgtWire} cross-section.</div>
+          <div>Target current ${fmt(targetI, 1)}A requires a ${breakerLabel(tgtBreaker)} breaker &mdash; verify your panel can accept this branch and that wiring meets the suggested ${tgtWire} cross-section.</div>
         </div>`;
       }
 
@@ -1478,7 +1497,7 @@
             </span>
             <span class="spec-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
-              Inverse-Time Breaker: ${breaker}A (250% &times; FLA)
+              Inverse-Time Breaker: ${breakerLabel(breaker)} (250% &times; FLA)
             </span>
             <span class="spec-badge">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>

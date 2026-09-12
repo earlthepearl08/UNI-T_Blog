@@ -8,8 +8,18 @@ let currentCategory = 'all';
 let searchQuery = '';
 
 // Dark Mode Toggle
+// localStorage throws (not returns null) in private mode and when the browser is
+// set to block site data. initTheme() runs at top level, so an unguarded throw
+// here aborted the rest of main.js and left the homepage post list empty.
+function readStored(key) {
+  try { return localStorage.getItem(key); } catch (e) { return null; }
+}
+function writeStored(key, value) {
+  try { localStorage.setItem(key, value); } catch (e) { /* private mode — ignore */ }
+}
+
 function initTheme() {
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = readStored('theme');
 
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -23,7 +33,7 @@ function toggleTheme() {
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
   document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
+  writeStored('theme', newTheme);
 }
 
 // Initialize theme immediately to prevent flash

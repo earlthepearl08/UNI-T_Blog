@@ -14,6 +14,9 @@
   <meta property="og:description" content="Determine CAT ratings, calculate Ohm's Law, find wire sizes, and convert units for electrical work.">
   <meta property="og:type" content="website">
 
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/brand/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
   <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
@@ -668,7 +671,8 @@
             <option value="">-- Select connection --</option>
             <option value="protected">Isolated secondary / SELV circuit NOT connected to mains (battery, bench supply)</option>
             <option value="receptacle">Wall receptacle / appliance outlets (CAT II)</option>
-            <option value="panel">Mains panel / sub-panel</option>
+            <option value="panel">Sub-panel / distribution board (downstream of the main)</option>
+            <option value="service">Main service entrance / meter base / main breaker</option>
             <option value="distribution">Distribution bus / feeders</option>
             <option value="origin">Overhead / underground / utility entrance</option>
           </select>
@@ -940,6 +944,10 @@
       if (v < 0) v = 0;
       if (v > 1000) v = 1000;
       catVoltage.value = v;
+      // Clamp the manual field too. Previously only the slider was clamped, so a
+      // typed 13200 stayed in the field and calculateCAT() — which reads the
+      // manual field — treated medium voltage as if it were an LV circuit.
+      if (String(v) !== catVoltageManual.value) catVoltageManual.value = v;
     });
 
     // ===== Product Data =====
@@ -976,6 +984,21 @@
         return;
       }
 
+      // Above 1000 V this is no longer a handheld-instrument question: MV/HV work
+      // requires switchgear, instrument transformers and a licensed PEE.
+      if (voltage > 1000) {
+        resultDiv.innerHTML = `
+          <div class="result-card red">
+            <p style="color:var(--text-primary);font-weight:700;margin-bottom:0.5rem;">Medium/high voltage &mdash; outside the scope of this tool</p>
+            <p style="color:var(--text-primary);">IEC&nbsp;61010 measurement categories and handheld test instruments apply up to
+            1000&nbsp;V. At ${voltage}&nbsp;V you must measure only on the secondary of a properly installed
+            metering CT/PT (typically 5&nbsp;A / 120&nbsp;V), using switchgear and procedures specified by a licensed
+            <strong>Professional Electrical Engineer (PEE)</strong>. Never apply a handheld meter to an MV conductor.</p>
+          </div>`;
+        resultDiv.classList.remove('hidden');
+        return;
+      }
+
       // Determine base CAT from connection point
       let catLevel = 1;
       let catName = 'CAT I';
@@ -986,7 +1009,8 @@
       const connectionMap = {
         'protected': { cat: 1, desc: 'Protected electronic equipment and signal-level circuits have the lowest transient overvoltage risk.' },
         'receptacle': { cat: 2, desc: 'Single-phase receptacle-connected loads (appliances, portable tools) at standard outlets.' },
-        'panel': { cat: 3, desc: 'Three-phase distribution, including panel boards, bus bars, and permanently connected equipment.' },
+        'panel': { cat: 3, desc: 'Three-phase distribution downstream of the main: sub-panels, bus bars, and permanently connected equipment.' },
+        'service': { cat: 4, desc: 'Main service entrance, meter base and main breaker. This is the origin of the installation, where transient energy is highest — IEC 61010 puts it in CAT IV, not CAT III.' },
         'distribution': { cat: 3, desc: 'Distribution-level wiring including feeders, sub-panels, and fixed installations.' },
         'origin': { cat: 4, desc: 'Origin of installation: utility connections, service entrance, outdoor overhead, and underground lines.' }
       };
@@ -1382,6 +1406,12 @@
           </p>
         </div>
         <div class="result-card">
+          <p class="result-caveat">Ampacity is the PEC 2017 Table 3.10.1.16 <strong>75&deg;C copper</strong> column at
+          30&deg;C ambient with no more than three current-carrying conductors. <strong>No ambient-temperature
+          correction and no conduit-fill adjustment have been applied</strong>, and terminations on most
+          PH residential equipment are rated 60&deg;C, which limits the usable ampacity further (PEC 1.10.1.14).
+          In a 35&ndash;40&deg;C ceiling space, or with more than three conductors in a conduit, the required
+          conductor is larger than shown. Verify against the current PEC before installing.</p>
           <div class="result-label">Wire Size Comparison Table</div>
           <div style="overflow-x:auto;">
             <table class="wire-table">

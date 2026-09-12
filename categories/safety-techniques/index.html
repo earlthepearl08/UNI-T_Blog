@@ -7,9 +7,10 @@
   <meta name="description" content="Browse Safety & Techniques articles about UNI-T test instruments.">
   <meta property="og:title" content="Safety & Techniques | UNI-T Philippines">
   <meta property="og:description" content="Learn safe practices and proper techniques for using UNI-T test instruments.">
-  <meta property="og:image" content="/images/products/voltage-detector-ut12s.webp">
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/products/voltage-detector-ut12s.webp">
   <meta property="og:type" content="website">
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/categories/safety-techniques/">
   <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 </head>
 <body>
@@ -544,7 +545,7 @@
 
   <script>
     function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
+      const savedTheme = (function(){try{return localStorage.getItem('theme')}catch(e){return null}})();
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -556,7 +557,7 @@
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      (function(){try{localStorage.setItem('theme',newTheme)}catch(e){}})();
     }
     initTheme();
     (function(){var t=document.getElementById('themeToggle'); if(t) t.addEventListener('click', toggleTheme);})();

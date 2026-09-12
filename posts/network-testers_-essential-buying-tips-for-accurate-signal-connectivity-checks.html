@@ -10,14 +10,14 @@
   <meta property="og:title" content="Network Testers: Essential Buying Tips for Accurate Signal & Connectivity Checks">
   <meta property="og:description" content="Essential buying tips for UNI-T network testers. Features to look for when checking signal quality and connectivity in Philippine facilities.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="/images/products/network-tester-ut681.webp">
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/products/network-tester-ut681.webp">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/posts/network-testers_-essential-buying-tips-for-accurate-signal-connectivity-checks.html">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Network Testers: Essential Buying Tips for Accurate Signal & Connectivity Checks">
   <meta name="twitter:description" content="Essential buying tips for UNI-T network testers. Features to look for when checking signal quality and connectivity in Philippine facilities.">
-  <meta name="twitter:image" content="/images/products/network-tester-ut681.webp">
+  <meta name="twitter:image" content="https://unit-philippines-blog.vercel.app/images/products/network-tester-ut681.webp">
 
   <!-- Article metadata -->
   <meta property="article:published_time" content="2026-01-12">
@@ -284,7 +284,7 @@
   <script>
     // Theme toggle
     function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
+      const savedTheme = (function(){try{return localStorage.getItem('theme')}catch(e){return null}})();
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -296,7 +296,7 @@
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      (function(){try{localStorage.setItem('theme',newTheme)}catch(e){}})();
     }
     initTheme();
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);

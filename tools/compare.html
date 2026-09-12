@@ -14,6 +14,9 @@
   <meta property="og:description" content="Compare UNI-T test instruments side-by-side to make informed purchase decisions.">
   <meta property="og:type" content="website">
 
+  <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/brand/og-default.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/compare.html">
   <link rel="stylesheet" href="/css/styles.css?v=202609111642">
   <style>
     /* ── Compare Tool Styles ── */
@@ -479,6 +482,13 @@
       font-size: 0.85rem;
     }
     [data-theme="dark"] .compare-table .spec-yes { color: #34d399; }
+    .compare-table .spec-unlisted {
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--text-muted, #9ca3af);
+      cursor: help;
+      border-bottom: 1px dotted currentColor;
+    }
     .compare-table .spec-no {
       color: var(--text-muted, #9ca3af);
       font-size: 1.1rem;
@@ -1365,30 +1375,47 @@
         </tr>
       ` : '';
 
-      // Build union of all keySpecs across selected products (preserving order)
-      const allSpecs = [];
-      const seen = new Set();
-      chosen.forEach(p => {
-        p.keySpecs.forEach(s => {
-          const key = s.trim();
-          const lower = key.toLowerCase();
-          if (!seen.has(lower)) {
-            seen.add(lower);
-            allSpecs.push(key);
-          }
+      // Spec strings are free text from a price list, so the SAME capability is
+      // written several ways ("DC/AC 1000V" vs "AC/DC 1000V", "60MΩ" vs "60 M ohm").
+      // Comparing raw strings made the table print "—" against capabilities the
+      // product actually has. Normalise to a canonical key before comparing, but
+      // still display the original wording.
+      function normalizeSpec(raw) {
+        let t = String(raw).toLowerCase().trim();
+        t = t.replace(/\u03a9|\u2126/g, 'ohm');       // Ω -> ohm
+        t = t.replace(/\u00b5|\u03bc/g, 'u');          // µ -> u
+        t = t.replace(/\s*\/\s*/g, '/');               // " / " -> "/"
+        t = t.replace(/(\d)\s+([a-z])/g, '$1$2');      // "1000 v" -> "1000v"
+        t = t.replace(/[(),]/g, ' ');
+        t = t.replace(/\s+/g, ' ').trim();
+        // order-insensitive for slash pairs: dc/ac == ac/dc
+        t = t.replace(/\b([a-z]+)\/([a-z]+)\b/g, (m, a, b) => [a, b].sort().join('/'));
+        return t;
+      }
+
+      // Union of specs across the chosen products, keyed by canonical form.
+      const specMap = new Map();   // canonical -> { label, holders:Set }
+      chosen.forEach((p, i) => {
+        p.keySpecs.forEach(raw => {
+          const key = normalizeSpec(raw);
+          if (!key) return;
+          if (!specMap.has(key)) specMap.set(key, { label: raw.trim(), holders: new Set() });
+          specMap.get(key).holders.add(i);
         });
       });
 
-      // Spec rows: ✓ if product has this exact spec, — otherwise
-      const specRows = allSpecs.map(spec => `
+      // "—" previously read as "this model does not do that". The catalog is a
+      // price-list extract, so an absent chip only means it was not listed.
+      const specRows = [...specMap.values()].map(entry => `
         <tr data-diffable="true">
-          <td>${escapeHtml(spec)}</td>
-          ${chosen.map(p => {
-            const has = p.keySpecs.some(s => s.trim().toLowerCase() === spec.toLowerCase());
-            return '<td>' + (has ? '<span class="spec-yes">✓</span>' : '<span class="spec-no">—</span>') + '</td>';
-          }).join('')}
+          <td>${escapeHtml(entry.label)}</td>
+          ${chosen.map((p, i) => entry.holders.has(i)
+              ? '<td><span class="spec-yes" aria-label="Listed">&#10003;</span></td>'
+              : '<td><span class="spec-unlisted" title="Not listed in the price-list extract — this does not mean the model lacks it. Check the datasheet.">not listed</span></td>'
+            ).join('')}
         </tr>
       `).join('');
+      const allSpecs = [...specMap.keys()];
 
       const specsSection = allSpecs.length > 0 ? specRows : `
         <tr>
