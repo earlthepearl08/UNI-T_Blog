@@ -3407,19 +3407,31 @@ img { max-width: 100%; height: auto; }
    be repainted by the dark-mode red-text override — that rule is for links on
    surfaces that actually change colour with the theme. Without this, the nav and
    footer links flipped from white to brand red when dark mode was on. */
-[data-theme="dark"] .header a:not(.btn),
-[data-theme="dark"] .nav a,
-[data-theme="dark"] .footer a:not(.btn),
-[data-theme="dark"] .footer-legal a,
-[data-theme="dark"] .side-drawer a:not(.btn) {
-  color: inherit;
+/* These must out-specify the dark-mode red-text rule above, which selects
+   `[data-theme="dark"] a:not([class]):not(.btn):not(.share-btn)` at (0,4,1).
+   An earlier attempt used (0,3,1) and lost, leaving the drawer links red.
+   Matching :not() chains here take these to (0,4,1)+ and they come later. */
+[data-theme="dark"] .header a:not([class]):not(.btn),
+[data-theme="dark"] .nav a:not(.btn):not(.share-btn),
+[data-theme="dark"] .side-drawer a:not([class]):not(.btn),
+[data-theme="dark"] .drawer-nav a:not(.btn):not(.share-btn) {
+  color: rgba(255, 255, 255, 0.85);
 }
-[data-theme="dark"] .nav a,
-[data-theme="dark"] .footer a:not(.btn) { color: #fff; }
-[data-theme="dark"] .footer-legal a { color: rgba(255, 255, 255, 0.75); }
-[data-theme="dark"] .nav a:hover,
-[data-theme="dark"] .footer a:not(.btn):hover,
-[data-theme="dark"] .footer-legal a:hover { color: var(--uni-red-light, #FF4D52); }
+[data-theme="dark"] .footer a:not([class]):not(.btn),
+[data-theme="dark"] .footer-links a:not(.btn):not(.share-btn) {
+  color: rgba(255, 255, 255, 0.85);
+}
+[data-theme="dark"] .footer-legal a:not(.btn):not(.share-btn) {
+  color: rgba(255, 255, 255, 0.75);
+}
+[data-theme="dark"] .header a:not([class]):not(.btn):hover,
+[data-theme="dark"] .nav a:not(.btn):not(.share-btn):hover,
+[data-theme="dark"] .side-drawer a:not([class]):not(.btn):hover,
+[data-theme="dark"] .drawer-nav a:not(.btn):not(.share-btn):hover,
+[data-theme="dark"] .footer a:not([class]):not(.btn):hover,
+[data-theme="dark"] .footer-legal a:not(.btn):not(.share-btn):hover {
+  color: var(--uni-red-light, #FF4D52);
+}
 
 /* Sub-line under a result figure, e.g. "5 kW output ÷ 0.9 efficiency".
    It was being emitted by the power calculator with no rule at all. */
