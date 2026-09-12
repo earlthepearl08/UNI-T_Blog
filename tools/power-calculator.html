@@ -14,7 +14,7 @@
   <meta property="og:description" content="Convert kW to Amperes, transpose voltage systems, and size motors with wire and breaker recommendations for Philippine 1P/3P circuits.">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -105,21 +105,27 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
     /* Form elements */
+    /* minmax(0, 1fr) instead of 1fr: a bare 1fr resolves to minmax(auto, 1fr),
+       so the min-content width of the <select> (its longest option string)
+       inflates the track past the viewport and the whole page scrolls
+       horizontally on phones. min-width:0 on the item and width:100% on the
+       controls keep the grid honest at 360-414px. */
     .calc-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 1.5rem;
       max-width: 800px;
     }
-    @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
-    .calc-grid.three-col { grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: 1fr; } }
-    .calc-grid.full-width { grid-template-columns: 1fr; }
+    @media (max-width: 640px) { .calc-grid { grid-template-columns: minmax(0, 1fr); } }
+    .calc-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: minmax(0, 1fr); } }
+    .calc-grid.full-width { grid-template-columns: minmax(0, 1fr); }
 
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
+      min-width: 0;
     }
     .form-group label {
       font-size: 0.8rem;
@@ -139,6 +145,9 @@
     .form-group select,
     .form-group input[type="number"],
     .form-group input[type="text"] {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
       padding: 0.75rem 1rem;
       border: 2px solid var(--border-color);
       border-radius: var(--border-radius);
@@ -623,6 +632,13 @@
   </section>
 
   <!-- Tabs -->
+  <div class="container">
+    <div class="tool-disclaimer" role="note">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p><b>For preliminary basis only.</b> These figures come from simplified assumptions and are not proof that a design is correct, safe or code-compliant &mdash; verify against the current Philippine Electrical Code and site conditions, and have the installation designed by a licensed <b>Professional Electrical Engineer (PEE)</b> or Registered Master Electrician. <a href="/disclaimer.html">Full disclaimer</a></p>
+    </div>
+  </div>
+
   <div class="calc-tabs" role="tablist">
     <button class="calc-tab active" data-tab="ptoi" role="tab" aria-selected="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -861,6 +877,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+        <p class="footer-legal"><a href="/disclaimer.html">Disclaimer &amp; Terms of Use</a><a href="/privacy.html">Privacy Notice</a><a href="/contact.html">Contact</a></p>
       </div>
     </div>
   </footer>
@@ -909,9 +926,9 @@
       { id: '3p-480', label: '3-Phase 480V', phases: 3, volts: 480 },
       // ── Medium / High Voltage (PH distribution & transmission) ──
       // Metering ONLY via instrument transformers (PT/CT). NEVER direct contact.
-      { id: 'mv-132',  label: ' 13.2 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 13200, mv: true },
-      { id: 'mv-345',  label: ' 34.5 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 34500, mv: true },
-      { id: 'mv-69',   label: ' 69 kV (HV transmission — PT/CT metering only)',   phases: 3, volts: 69000, mv: true },
+      { id: 'mv-132',  label: '13.2 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 13200, mv: true },
+      { id: 'mv-345',  label: '34.5 kV (MV distribution — PT/CT metering only)', phases: 3, volts: 34500, mv: true },
+      { id: 'mv-69',   label: '69 kV (HV transmission — PT/CT metering only)',   phases: 3, volts: 69000, mv: true },
     ];
 
     function findSystem(id) { return VOLTAGE_SYSTEMS.find(s => s.id === id); }
@@ -935,12 +952,12 @@
 
     // ===== Product catalog =====
     const products = [
-      { name: 'UT210E', cat: 'CAT III 300V', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT216C', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT203', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut203.webp', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT210E', cat: 'CAT III 300V', catVolts: 300, type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT216C', cat: 'CAT III 600V', catVolts: 600, type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT III 600V', catVolts: 600, type: 'clamp', img: '/images/products/ut202a.webp', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT III 600V', catVolts: 600, type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT203', cat: 'CAT III 600V', catVolts: 600, type: 'clamp', img: '/images/products/ut203.webp', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
 
     // ===== Wire & breaker lookup tables (Philippine Electrical Code) =====
@@ -1023,16 +1040,27 @@
         </div>`;
     }
 
-    // Recommend a clamp meter that can handle the calculated current
-    function suggestClamp(amps) {
-      // Sort by smallest range that still covers
-      const fitted = products
-        .filter(p => p.type === 'clamp' && p.currentRange >= amps * 1.2) // 20% headroom
+    // Recommend a clamp meter that can handle the calculated current AND is rated
+    // for the system voltage. IEC 61010: the instrument's measurement category
+    // voltage must EQUAL OR EXCEED the working voltage at the point of measurement.
+    // Filtering on current alone previously offered CAT III 300V meters for
+    // 380-480V three-phase systems, which is a shock/arc-flash hazard.
+    function suggestClamp(amps, sys) {
+      const sysVolts = sys && isFinite(sys.volts) ? sys.volts : 0;
+      const safe = products.filter(p => p.type === 'clamp' && p.catVolts >= sysVolts);
+      const fitted = safe
+        .filter(p => p.currentRange >= amps * 1.2) // 20% headroom
         .sort((a, b) => a.currentRange - b.currentRange);
-      return fitted.length ? fitted.slice(0, 3) : products.filter(p => p.type === 'clamp').sort((a, b) => b.currentRange - a.currentRange).slice(0, 3);
+      if (fitted.length) return { list: fitted.slice(0, 3), underRange: false, noneRated: false };
+      // Nothing covers the current: offer the largest CAT-safe clamps, flagged.
+      if (safe.length) {
+        return { list: safe.sort((a, b) => b.currentRange - a.currentRange).slice(0, 3), underRange: true, noneRated: false };
+      }
+      // Nothing in this shortlist is rated for the system voltage at all.
+      return { list: [], underRange: false, noneRated: true };
     }
 
-    function clampRecoHTML(amps, heading, isMV) {
+    function clampRecoHTML(amps, heading, isMV, sys) {
       // No handheld clamp meter is rated for direct MV/HV contact.
       if (isMV) {
         return `
@@ -1043,7 +1071,17 @@
             switch the voltage selector to a &le;600 V system.</div>
           </div>`;
       }
-      const recos = suggestClamp(amps);
+      const reco = suggestClamp(amps, sys);
+      const recos = reco.list;
+      if (reco.noneRated) {
+        return `
+          <div class="callout danger">
+            <div><strong>No clamp meter in this shortlist is rated for ${fmt(sys && sys.volts, 0)} V.</strong>
+            Under IEC 61010 the instrument's measurement-category voltage must equal or exceed the working
+            voltage at the point of measurement. Contact Kinmo for a CAT III/IV 1000&nbsp;V instrument &mdash;
+            do not use a lower-rated meter on this system.</div>
+          </div>`;
+      }
       if (!recos.length) return '';
       return `
         <div class="reco-section">
@@ -1054,11 +1092,20 @@
                 <img src="${p.img}" alt="${p.name}" loading="lazy">
                 <h4>UNI-T ${p.name}</h4>
                 <p>${p.desc}</p>
-                <span class="reco-cat">Up to ${p.currentRange}A</span>
+                <span class="reco-cat">${p.cat}</span>
+                <span class="reco-range">Up to ${p.currentRange}A</span>
                 <br><a href="${p.link}" target="_blank">View Product &rarr;</a>
               </div>
             `).join('')}
           </div>
+          ${reco.underRange ? `
+          <div class="callout danger">
+            <div><strong>None of these covers ${fmt(amps, 0)}&nbsp;A.</strong> The instruments above are the
+            highest-range models rated for this system voltage. Use a clamp whose range exceeds the load current,
+            or measure through a metering CT.</div>
+          </div>` : ''}
+          <p class="reco-cat-note">Measurement category must equal or exceed the working voltage at the point of
+          measurement (IEC&nbsp;61010). Confirm the CAT rating printed on the instrument and its datasheet.</p>
           <p style="text-align:center;margin-top:1rem;">
             <a href="/tools/compare.html" style="color:var(--uni-red);font-weight:600;">Compare these instruments side-by-side &rarr;</a>
           </p>
@@ -1148,7 +1195,7 @@
 
         ${sizingCard}
 
-        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter to Verify', sys.mv)}
+        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter to Verify', sys.mv, sys)}
       `;
     }
 
@@ -1208,7 +1255,7 @@
         </div>
 
         ${sys.mv ? mvNoticeHTML() : ''}
-        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter for This Range', sys.mv)}
+        ${clampRecoHTML(I, 'Recommended UNI-T Clamp Meter for This Range', sys.mv, sys)}
       `;
     }
 
@@ -1343,7 +1390,7 @@
           </p>
         </div>`}
 
-        ${clampRecoHTML(targetI, 'Recommended Clamp Meter for ' + fmt(targetI, 0) + 'A', involvesMV)}
+        ${clampRecoHTML(targetI, 'Recommended Clamp Meter for ' + fmt(targetI, 0) + 'A', involvesMV, tgt)}
       `;
     }
 
@@ -1447,7 +1494,7 @@
           <div><strong>Inrush:</strong> The ${fmt(LRA, 0)}A locked-rotor current (&asymp;6&times; FLA estimate) lasts only a few cycles during start. Use Type D MCBs or motor-rated breakers, or step up to a soft-starter / VFD if frequent starts cause nuisance trips.</div>
         </div>`}
 
-        ${clampRecoHTML(LRA, 'Recommended Clamp Meter (sized for inrush)', sys.mv)}
+        ${clampRecoHTML(LRA, 'Recommended Clamp Meter (sized for locked-rotor current)', sys.mv, sys)}
       `;
     }
 

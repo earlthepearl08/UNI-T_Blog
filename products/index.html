@@ -35,7 +35,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
     /* ===== Catalog page styles ===== */
@@ -1230,6 +1230,11 @@
   </section>
 
   <div class="container">
+  <div class="tool-disclaimer" role="note">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <p><b>Specifications are indicative only.</b> They are compiled from a distributor price list and may be incomplete or out of date &mdash; a blank or dash does not prove a model lacks a feature. Always confirm against the <b>official UNI-T datasheet</b> for the exact variant. <a href="/disclaimer.html">Full disclaimer</a></p>
+  </div>
+
     <!-- Featured categories -->
     <section class="featured-cats">
       <h2>Featured Categories</h2>
@@ -1374,6 +1379,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+        <p class="footer-legal"><a href="/disclaimer.html">Disclaimer &amp; Terms of Use</a><a href="/privacy.html">Privacy Notice</a><a href="/contact.html">Contact</a></p>
       </div>
     </div>
   </footer>
@@ -1587,6 +1593,8 @@
                 description: p.description || '',
                 image: p.image,
                 officialUrl: p.officialUrl,
+                officialUrlKind: p.officialUrlKind || '',
+                imageShared: !!p.imageShared,
                 kinmoSearchUrl: p.kinmoSearchUrl,
                 keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
                 source: p.source || 'scraped',
@@ -1782,15 +1790,28 @@
 
         const catTagHtml = `<button type="button" class="cat-tag cat-tag-clickable" data-cat-filter="${escapeHtml(p.categoryId)}" aria-label="Filter by ${escapeHtml(p.category)}">${escapeHtml(p.category)}</button>`;
 
+        // This photo is shared across a model series, so it is representative
+        // rather than a photo of this exact variant. Say so instead of implying
+        // the picture is of the model named on the card.
+        const seriesNote = p.imageShared
+          ? `<div class="card-img-note" title="This photo represents the product series, not necessarily this exact variant">Series photo &mdash; representative</div>`
+          : '';
+
+        const specsBtn = p.officialUrl
+          ? `<a class="card-btn card-btn-outline" href="${encodeURI(p.officialUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${safeModel} on the UNI-T official site">Full specs</a>`
+          : '';
+
         body.innerHTML = `
           ${catTagHtml}
           <div class="card-model">UNI-T ${safeModel}</div>
+          ${seriesNote}
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
           <div class="card-actions">
             <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" aria-label="Buy ${safeModel} on Kinmo">
               Buy on Kinmo
             </a>
+            ${specsBtn}
             <span class="card-hint" aria-hidden="true">Click card for details &rarr;</span>
           </div>
         `;
@@ -1835,11 +1856,17 @@
         // for the model (verified working: uni-trend.com/?s=MODEL).
         const uniTUrl = product.officialUrl
           || ('https://www.uni-trend.com/?s=' + encodeURIComponent(product.model || ''));
-        const officialBtn = `<a class="modal-btn modal-btn-outline" href="${encodeURI(uniTUrl)}" target="_blank" rel="noopener" aria-label="View ${escapeHtml(product.model)} on UNI-T official site">View on UNI-T <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg></a>`;
+        const officialLabel = product.officialUrl
+          ? (product.officialUrlKind === 'series' ? 'Full specs (series page)' : 'Full specs on UNI-T')
+          : 'Search UNI-T';
+        const officialBtn = `<a class="modal-btn modal-btn-outline" href="${encodeURI(uniTUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${escapeHtml(product.model)} on the UNI-T official site">${officialLabel} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg></a>`;
 
-        const imageHtml = product.image
+        const imageHtml = (product.image
           ? `<img id="modalProductImg" src="${encodeURI(product.image)}" alt="UNI-T ${escapeHtml(product.model)}" referrerpolicy="no-referrer">`
-          : `<div class="modal-img-fallback">${escapeHtml(fallbackLetter)}</div>`;
+          : `<div class="modal-img-fallback">${escapeHtml(fallbackLetter)}</div>`)
+          + (product.imageShared
+              ? `<p class="modal-img-note">Series photo &mdash; representative of the range. Confirm the exact variant on the datasheet.</p>`
+              : '');
 
         const regionsHtml = (product.regions && product.regions.length)
           ? `<div class="modal-regions">Available regions: ${escapeHtml(product.regions.join(', '))}</div>`
@@ -1855,7 +1882,10 @@
               ? `<p class="modal-desc">${escapeHtml(product.description)}</p>`
               : `<p class="modal-desc modal-desc-empty">Detailed description coming soon. <a href="/contact.html#quote">Contact Kinmo</a> for full specifications.</p>`
             }
-            ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div></div>` : ''}
+            ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div>
+              <p class="modal-specs-more">These are headline figures only. ${product.officialUrl
+                ? `<a href="${encodeURI(product.officialUrl)}" target="_blank" rel="noopener">Read the full specification on UNI-T\u2019s site &rarr;</a>`
+                : `No UNI-T page is published for this model &mdash; <a href="/contact.html#quote">ask Kinmo for the datasheet</a>.`}</p></div>` : ''}
             ${regionsHtml}
             <div class="modal-actions">
               <a class="modal-btn modal-btn-primary" href="${encodeURI(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">

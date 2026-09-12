@@ -14,7 +14,7 @@
   <meta property="og:description" content="Determine CAT ratings, calculate Ohm's Law, find wire sizes, and convert units for electrical work.">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -105,21 +105,27 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
     /* Form elements */
+    /* minmax(0, 1fr) instead of 1fr: a bare 1fr resolves to minmax(auto, 1fr),
+       so the min-content width of the <select> (its longest option string)
+       inflates the track past the viewport and the whole page scrolls
+       horizontally on phones. min-width:0 on the item and width:100% on the
+       controls keep the grid honest at 360-414px. */
     .calc-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 1.5rem;
       max-width: 800px;
     }
-    @media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
-    .calc-grid.three-col { grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: 1fr; } }
-    .calc-grid.full-width { grid-template-columns: 1fr; }
+    @media (max-width: 640px) { .calc-grid { grid-template-columns: minmax(0, 1fr); } }
+    .calc-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 768px) { .calc-grid.three-col { grid-template-columns: minmax(0, 1fr); } }
+    .calc-grid.full-width { grid-template-columns: minmax(0, 1fr); }
 
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
+      min-width: 0;
     }
     .form-group label {
       font-size: 0.8rem;
@@ -131,6 +137,9 @@
     .form-group select,
     .form-group input[type="number"],
     .form-group input[type="text"] {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
       padding: 0.75rem 1rem;
       border: 2px solid var(--border-color);
       border-radius: var(--border-radius);
@@ -609,6 +618,13 @@
   </section>
 
   <!-- Tabs -->
+  <div class="container">
+    <div class="tool-disclaimer" role="note">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p><b>For preliminary basis only.</b> These figures come from simplified assumptions and are not proof that a design is correct, safe or code-compliant &mdash; verify against the current Philippine Electrical Code and site conditions, and have the installation designed by a licensed <b>Professional Electrical Engineer (PEE)</b> or Registered Master Electrician. <a href="/disclaimer.html">Full disclaimer</a></p>
+    </div>
+  </div>
+
   <div class="calc-tabs" role="tablist">
     <button class="calc-tab active" data-tab="cat" role="tab" aria-selected="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
@@ -650,7 +666,7 @@
           <label for="catConnection">Connection Point</label>
           <select id="catConnection">
             <option value="">-- Select connection --</option>
-            <option value="protected">Protected electronic / signal-level equipment</option>
+            <option value="protected">Isolated secondary / SELV circuit NOT connected to mains (battery, bench supply)</option>
             <option value="receptacle">Wall receptacle / appliance outlets (CAT II)</option>
             <option value="panel">Mains panel / sub-panel</option>
             <option value="distribution">Distribution bus / feeders</option>
@@ -881,6 +897,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+        <p class="footer-legal"><a href="/disclaimer.html">Disclaimer &amp; Terms of Use</a><a href="/privacy.html">Privacy Notice</a><a href="/contact.html">Contact</a></p>
       </div>
     </div>
   </footer>
@@ -976,6 +993,17 @@
 
       catLevel = connectionMap[conn].cat;
       explanation = connectionMap[conn].desc;
+
+      // IEC 61010-1 floor: CAT I applies ONLY to circuits that are NOT derived
+      // from the mains supply. Anything fed from the low-voltage mains is CAT II
+      // at minimum, so a mains-derived voltage can never return CAT I.
+      const MAINS_THRESHOLD_V = 50; // 50 V AC / 120 V DC — IEC extra-low-voltage limit
+      if (catLevel < 2 && voltage >= MAINS_THRESHOLD_V) {
+        catLevel = 2;
+        explanation += ' Because this circuit is supplied from the mains at ' + voltage +
+          ' V, IEC 61010-1 sets a floor of CAT II — CAT I applies only to circuits that are ' +
+          'not connected to the mains (battery, SELV or an isolated bench supply).';
+      }
 
       // Environment can bump category up
       if (env === 'industrial' && catLevel < 3) {
@@ -1266,9 +1294,15 @@
         const vDropPct = (vDrop / voltage) * 100;
         const meetsAmpacity = current <= w.ampacity;
         const meetsDrop = w.resistance <= maxResistance;
-        const meets = meetsAmpacity && meetsDrop;
+        // A conductor is only usable if a standard overcurrent device exists that
+        // both protects it and carries the load. Without this test the tool
+        // returned 2.0 mm2 for a 20 A load while printing "Max Breaker 15 A" —
+        // a self-contradictory result that violates PEC 2.40.4(D).
+        const ocpd = breakerFor(w);
+        const meetsOCPD = ocpd >= current;
+        const meets = meetsAmpacity && meetsDrop && meetsOCPD;
 
-        if (meets && !recommended) recommended = { ...w, vDrop, vDropPct };
+        if (meets && !recommended) recommended = { ...w, vDrop, vDropPct, ocpd };
 
         const isReco = recommended && recommended.mm2 === w.mm2;
         const sizeLabel = w.mm2 + ' mm&sup2;';
@@ -1279,8 +1313,13 @@
             <td>${sizeLabel}</td>
             <td>${awgRef}</td>
             <td>${w.ampacity} A</td>
+            <td>${ocpd} A</td>
             <td>${vDropPct.toFixed(2)}%</td>
-            <td>${meets ? '<span style="color:#22c55e;font-weight:700;">Pass</span>' : '<span style="color:#ef4444;">Fail</span>'}</td>
+            <td>${meets
+                  ? '<span style="color:#22c55e;font-weight:700;">Pass</span>'
+                  : '<span style="color:#ef4444;">Fail &mdash; ' +
+                    (!meetsAmpacity ? 'ampacity' : !meetsOCPD ? 'no breaker this size can carry the load' : 'voltage drop') +
+                    '</span>'}</td>
           </tr>
         `;
       }
@@ -1346,7 +1385,7 @@
           <div class="result-label">Wire Size Comparison Table</div>
           <div style="overflow-x:auto;">
             <table class="wire-table">
-              <thead><tr><th>Size (mm&sup2;)</th><th>AWG ref.</th><th>Ampacity</th><th>V-Drop</th><th>Status</th></tr></thead>
+              <thead><tr><th>Size (mm&sup2;)</th><th>AWG ref.</th><th>Ampacity</th><th>Max breaker</th><th>V-Drop</th><th>Status</th></tr></thead>
               <tbody>${tableRows}</tbody>
             </table>
           </div>

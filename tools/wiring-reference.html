@@ -14,7 +14,7 @@
   <meta property="og:description" content="Interactive Philippine wiring color codes, resistor calculator, formulas, and more.">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=202609111642">
 
   <style>
     /* ===== Tool Page Layout ===== */
@@ -192,13 +192,22 @@
     /* ===== 2. Resistor Calculator ===== */
     .resistor-calc {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      /* minmax(0, ...) so wide <select> options cannot inflate the track and
+         force horizontal page scroll on phones (see .calc-grid note). */
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 2rem;
       align-items: start;
     }
+    .resistor-calc > * { min-width: 0; }
+    .resistor-calc select,
+    .resistor-calc input {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
     @media (max-width: 768px) {
       .resistor-calc {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
     }
     .resistor-visual {
@@ -650,6 +659,13 @@
           <span></span>
         </button>
       </nav>
+  <div class="container">
+    <div class="tool-disclaimer" role="note">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p><b>Quick reference &mdash; preliminary basis only.</b> Ampacity and breaker figures depend on insulation rating, ambient temperature, conductor grouping and termination rating, so these tables do not replace the current Philippine Electrical Code, the equipment nameplate, or a design sealed by a licensed <b>PEE</b>. <a href="/disclaimer.html">Full disclaimer</a></p>
+    </div>
+  </div>
+
     </div>
   </header>
 
@@ -1037,6 +1053,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+        <p class="footer-legal"><a href="/disclaimer.html">Disclaimer &amp; Terms of Use</a><a href="/privacy.html">Privacy Notice</a><a href="/contact.html">Contact</a></p>
       </div>
     </div>
   </footer>
@@ -1116,11 +1133,11 @@
       },
       {
         color: 'Gray', hex: '#9E9E9E', textColor: '#333',
-        function: 'Neutral (IEC)', voltage: '0V (ideally)',
-        description: 'IEC standard neutral conductor color. Used in place of white in European and IEC-compliant wiring systems.',
-        location: 'IEC-standard installations, imported equipment, and dual-standard commercial buildings.',
-        warning: 'Same precautions as white neutral. In mixed installations, verify the wiring standard to avoid confusion between gray neutral (IEC) and other uses.',
-        instrument: 'Use a UNI-T UT61E+ to measure the voltage between gray and ground. Should be near 0V if it is a true neutral.'
+        function: 'Neutral under PEC -- but LINE (L3) under IEC', voltage: '0V under PEC / 220V as IEC L3',
+        description: 'Gray means two opposite things depending on the standard. Under the PEC (following NEC 200.6) gray is a permitted color for the grounded (neutral) conductor, alongside white. Under IEC 60445 gray is NOT a neutral at all -- it is line conductor L3 (brown = L1, black = L2, gray = L3), and the IEC neutral is BLUE.',
+        location: 'PEC-wired Philippine installations (as a neutral), and imported IEC-wired machinery and control panels (as a live line conductor).',
+        warning: 'DANGER: on imported IEC-wired equipment a gray conductor is LIVE at line voltage, not a neutral. Never assume gray is safe to touch. Always prove the conductor dead with a contact tester before working on it, and confirm which standard the panel was wired to.',
+        instrument: 'Prove it dead with a UNI-T UT61E+ or a two-pole tester -- test a known live source before and after. Never rely on a non-contact pen alone.'
       }
     ];
 

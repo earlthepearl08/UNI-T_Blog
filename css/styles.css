@@ -1163,6 +1163,18 @@ p {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
+/* The post generator emits EVERY table cell as <th> and wraps the text in <p>.
+   `.post-content p { color: var(--text-secondary) }` (#333) then applies directly
+   to that paragraph and beats the white inherited from the th, leaving dark-grey
+   text on the black cell (1.38:1). Force descendants to inherit the cell colour. */
+.post-content th p,
+.post-content th li,
+.post-content th span,
+.post-content th strong,
+.post-content th em,
+.post-content th a {
+  color: inherit;
+}
 
 .post-content td {
   background: var(--card-bg);
@@ -2884,3 +2896,211 @@ body.drawer-open {
    dark card background; use the lighter --uni-red-light #FF4D52 (~5:1) in dark mode. */
 [data-theme="dark"] .post-card-category,
 [data-theme="dark"] .post-header .category { color: var(--uni-red-light); }
+
+/* ==========================================================================
+   Callouts + tool disclaimers
+   `.callout` previously lived only inside tools/power-calculator.html, so no
+   other page could reuse it. Promoted here so every tool, the catalog and the
+   article template can carry the same "basis only" caveat.
+   ========================================================================== */
+.callout {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  background: rgba(234, 179, 8, 0.1);
+  border-left: 4px solid #eab308;
+  border-radius: var(--border-radius, 8px);
+  margin: 1rem 0;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.callout.danger { background: rgba(239, 68, 68, 0.1); border-left-color: #ef4444; }
+.callout.info   { background: rgba(59, 130, 246, 0.1); border-left-color: #3b82f6; }
+[data-theme="dark"] .callout        { background: rgba(234, 179, 8, 0.18); }
+[data-theme="dark"] .callout.danger { background: rgba(239, 68, 68, 0.18); }
+[data-theme="dark"] .callout.info   { background: rgba(59, 130, 246, 0.18); }
+
+/* Canonical "for basis only" disclaimer shown on every calculator/tool.
+   Deliberately compact and low-chroma: it must be unmissable and honest without
+   shouting over the page or fighting the black/red brand. */
+.tool-disclaimer {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border-left: 3px solid #d99e0b;
+  background: rgba(217, 158, 11, 0.06);
+  border-radius: var(--border-radius, 8px);
+  padding: 0.8rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.855rem;
+  line-height: 1.55;
+  color: var(--text-muted, #555);
+}
+[data-theme="dark"] .tool-disclaimer {
+  background: rgba(217, 158, 11, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #d99e0b;
+  color: rgba(255, 255, 255, 0.72);
+}
+.tool-disclaimer > svg {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.16rem;
+  color: #b7860b;
+}
+[data-theme="dark"] .tool-disclaimer > svg { color: #e0a913; }
+.tool-disclaimer p { margin: 0; }
+.tool-disclaimer b {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+[data-theme="dark"] .tool-disclaimer b { color: rgba(255, 255, 255, 0.95); }
+.tool-disclaimer a {
+  color: var(--uni-red);
+  font-weight: 600;
+  white-space: nowrap;
+}
+[data-theme="dark"] .tool-disclaimer a { color: var(--uni-red-light, #FF4D52); }
+
+/* One-line variant pinned directly under a result block. */
+.result-caveat {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted, #555);
+}
+[data-theme="dark"] .result-caveat { color: rgba(255, 255, 255, 0.62); }
+.result-caveat a { color: inherit; text-decoration: underline; }
+
+/* Footer legal row */
+.footer-legal {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  justify-content: center;
+}
+.footer-legal a { color: inherit; opacity: 0.8; }
+.footer-legal a:hover { opacity: 1; }
+
+@media print {
+  .tool-disclaimer { break-inside: avoid; border-left-width: 3px; }
+}
+
+/* Legal pages (disclaimer, privacy) */
+.legal-page h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.6rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color, rgba(0,0,0,0.08));
+}
+.legal-page h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 0.5rem; }
+.legal-page p { line-height: 1.7; margin: 0 0 1rem; color: var(--text-muted, #555); }
+[data-theme="dark"] .legal-page p { color: rgba(255,255,255,0.74); }
+.legal-page p strong { color: var(--text-primary); }
+.legal-page a { color: var(--uni-red); font-weight: 600; }
+[data-theme="dark"] .legal-page a { color: var(--uni-red-light, #FF4D52); }
+.legal-updated {
+  margin-top: 2rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, rgba(0,0,0,0.08));
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Instrument recommendation cards: CAT rating is the safety-critical badge, the
+   current range is secondary. Previously only the range was shown, styled with a
+   class named .reco-cat, which implied it was the measurement category. */
+.reco-range {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-muted, #555);
+}
+[data-theme="dark"] .reco-range { color: rgba(255,255,255,0.6); }
+.reco-cat-note {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted, #555);
+  text-align: center;
+}
+[data-theme="dark"] .reco-cat-note { color: rgba(255,255,255,0.62); }
+
+/* Catalog: honesty markers + direct route to the manufacturer datasheet.
+   77 of 504 products share a series photo; label those rather than implying the
+   picture is of that exact variant. */
+.card-img-note,
+.modal-img-note {
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted, #666);
+  margin: 0.15rem 0 0.4rem;
+}
+[data-theme="dark"] .card-img-note,
+[data-theme="dark"] .modal-img-note { color: rgba(255,255,255,0.55); }
+.modal-img-note { margin-top: 0.6rem; text-align: center; }
+
+.card-btn-outline {
+  border: 1px solid var(--border-color, rgba(0,0,0,0.15));
+  background: transparent;
+  color: var(--text-primary);
+}
+.card-btn-outline:hover { border-color: var(--uni-red); color: var(--uni-red); }
+[data-theme="dark"] .card-btn-outline { border-color: rgba(255,255,255,0.18); }
+
+.modal-specs-more {
+  margin: 0.6rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted, #555);
+}
+[data-theme="dark"] .modal-specs-more { color: rgba(255,255,255,0.62); }
+.modal-specs-more a { color: var(--uni-red); font-weight: 600; }
+[data-theme="dark"] .modal-specs-more a { color: var(--uni-red-light, #FF4D52); }
+
+/* Post safety warning — shown at the top of articles that walk the reader
+   through measuring real circuits. Deliberately heavier than .tool-disclaimer:
+   this one is about not being electrocuted. */
+.post-safety-warning {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-left: 4px solid #ef4444;
+  background: rgba(239, 68, 68, 0.06);
+  border-radius: var(--border-radius, 8px);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.75rem;
+}
+[data-theme="dark"] .post-safety-warning {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.post-safety-warning > svg {
+  flex: 0 0 auto; width: 20px; height: 20px; margin-top: 0.2rem; color: #dc2626;
+}
+[data-theme="dark"] .post-safety-warning > svg { color: #f87171; }
+.post-safety-warning strong {
+  display: block; margin-bottom: 0.4rem;
+  color: var(--text-primary); font-size: 0.98rem;
+}
+.post-safety-warning p {
+  margin: 0 0 0.55rem;
+  font-size: 0.875rem !important;
+  line-height: 1.55;
+  color: var(--text-muted, #555) !important;
+}
+[data-theme="dark"] .post-safety-warning p { color: rgba(255,255,255,0.72) !important; }
+.post-safety-warning p:last-child { margin-bottom: 0; }
+.post-safety-warning b { color: var(--text-primary); }
+[data-theme="dark"] .post-safety-warning b { color: rgba(255,255,255,0.95); }
+.post-safety-warning a { color: var(--uni-red); font-weight: 600; }
+[data-theme="dark"] .post-safety-warning a { color: var(--uni-red-light, #FF4D52); }
+
+.post-safety-footer { margin: 2rem 0 0; }

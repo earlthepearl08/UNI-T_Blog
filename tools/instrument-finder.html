@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Find Your Perfect Test Instrument | UNI-T Philippines">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=202609111642">
   <style>
     /* Quiz-specific styles */
     .quiz-wrapper {
@@ -673,6 +673,13 @@
 
   <!-- Quiz Content -->
   <main class="quiz-wrapper">
+  <div class="container">
+    <div class="tool-disclaimer" role="note">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p><b>A guide, not a specification.</b> This suggestion comes from a short questionnaire and cannot see your actual working conditions &mdash; confirm the <b>measurement category (CAT) and voltage rating</b> on the official datasheet meet or exceed the circuits you work on. <a href="/disclaimer.html">Full disclaimer</a></p>
+    </div>
+  </div>
+
     <div class="container">
 
       <!-- Progress Bar (hidden on welcome) -->
@@ -725,6 +732,10 @@
           <div class="result-product-type" id="resultProductType"></div>
           <p class="result-reason" id="resultReason"></p>
           <div class="result-specs" id="resultSpecs"></div>
+          <div class="tool-disclaimer" id="ncvWarning" role="note" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <p><b>This is a detector, not a tester.</b> A non-contact pen shows that voltage is probably present &mdash; it can miss voltage in metal conduit, shielded or armoured cable, on DC, or with a weak battery. <b>Never use it as proof a circuit is dead.</b> Switch off, lock out, then prove dead with a two-pole tester or multimeter, checking your tester on a known live source before and after.</p>
+          </div>
           <div class="result-actions">
             <a id="resultShopLink" href="https://kinmo.com/product-category/uni-t/" target="_blank" rel="noopener" class="btn-quiz">
               <span id="resultShopLabel">Shop Now</span>
@@ -804,6 +815,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 UNI-T Philippines. Distributed by Kinmo PW Corporation. All rights reserved.</p>
+        <p class="footer-legal"><a href="/disclaimer.html">Disclaimer &amp; Terms of Use</a><a href="/privacy.html">Privacy Notice</a><a href="/contact.html">Contact</a></p>
       </div>
     </div>
   </footer>
@@ -1179,10 +1191,52 @@
       if (a.frequency === 'occasional') { scores.ut12s += 3; scores.ut139c += 2; }
       if (a.frequency === 'learning') { scores.ut139c += 3; scores.ut61d += 2; scores.utd2102 += 1; }
 
-      // Find winner
+      // === Safety gate (applied AFTER scoring, before choosing a winner) =====
+      // IEC 61010: the instrument's measurement-category voltage must equal or
+      // exceed the working voltage where it is used. Scoring alone previously
+      // returned the UT204+ (CAT III 300V) for industrial-plant users on a
+      // 230/400V system, and returned the UT12S — which measures nothing — to
+      // users who said they measure voltage and current.
+      //
+      // catVolts = the CAT III working voltage. contact:false means the tool
+      // never touches a live conductor, so the CAT floor does not apply.
+      const SAFETY = {
+        ut61e:   { catVolts: 1000, contact: true,  measures: true  },
+        ut61d:   { catVolts: 1000, contact: true,  measures: true  },
+        ut890c:  { catVolts: 600,  contact: true,  measures: true  },
+        ut139c:  { catVolts: 600,  contact: true,  measures: true  },
+        ut204:   { catVolts: 300,  contact: true,  measures: true  },
+        ut501a:  { catVolts: 600,  contact: true,  measures: true  },
+        ut285c:  { catVolts: 600,  contact: true,  measures: true  },
+        ut12s:   { catVolts: 1000, contact: true,  measures: false }, // detector only
+        utd2102: { catVolts: 0,    contact: true,  measures: true  }, // bench scope
+        ut675a:  { catVolts: 0,    contact: true,  measures: true  }, // 12V battery
+        uti260b: { catVolts: 0,    contact: false, measures: true  }, // thermal, no contact
+        ut685b:  { catVolts: 0,    contact: false, measures: true  }  // de-energized cabling
+      };
+
+      // Minimum CAT III working voltage implied by where the user works.
+      // PH industrial/commercial distribution is 230/400V, so CAT III 600V is the
+      // floor; outdoors / service entrance is CAT IV territory.
+      const FLOOR = { residential: 0, lab: 0, commercial: 600, industrial: 600, outdoor: 600 };
+      const required = FLOOR[a.workplace] || 0;
+
+      let eligible = Object.keys(scores).filter(k => {
+        const sf = SAFETY[k];
+        if (!sf) return true;
+        // A detector that measures nothing must never be the answer for someone
+        // who told us they need to measure voltage/current.
+        if (!sf.measures && (a.measurement === 'voltage_current' || a.measurement === 'multiple')) return false;
+        if (!sf.contact) return true;              // no live contact -> CAT floor n/a
+        if (!required) return true;
+        return sf.catVolts >= required;
+      });
+      if (!eligible.length) eligible = Object.keys(scores);
+
+      // Find winner among the eligible instruments only
       let best = null;
       let bestScore = -1;
-      Object.keys(scores).forEach(k => {
+      eligible.forEach(k => {
         if (scores[k] > bestScore) {
           bestScore = scores[k];
           best = k;
@@ -1240,6 +1294,14 @@
       const specsContainer = document.getElementById('resultSpecs');
       specsContainer.innerHTML = product.specs.map(s => `<span class="spec-tag">${s}</span>`).join('');
 
+      // A non-contact detector indicates presence of voltage only. It has well
+      // known false-negative modes and must never be used to prove a circuit dead.
+      const ncvNote = document.getElementById('ncvWarning');
+      if (ncvNote) {
+        const isNCV = (productKey === 'ut12s');
+        ncvNote.hidden = !isNCV;
+      }
+
       // Result subtitle
       document.getElementById('resultSubtitle').textContent = `Based on your answers, here's the instrument that fits you best.`;
 
@@ -1274,7 +1336,10 @@
       questionHistory = [];
       currentQuestion = 0;
       document.getElementById('quizResults').classList.remove('active');
-      document.getElementById('quizResults').style.display = 'none';
+      // Remove the inline display instead of setting 'none': an inline style beats
+      // the .quiz-results.active { display:block } class, so setting it here left
+      // the results screen permanently blank on every retake.
+      document.getElementById('quizResults').style.removeProperty('display');
       document.getElementById('questionsContainer').style.display = 'block';
       document.getElementById('quizProgress').style.display = 'block';
       document.getElementById('progressFill').style.width = '0%';
