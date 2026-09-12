@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/compare.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912162227">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912162727">
   <style>
     /* ── Compare Tool Styles ── */
     .compare-hero {
@@ -1308,9 +1308,35 @@
         );
       }
 
-      // Cap rendered DOM to first 80 items for performance
+      // Cap rendered DOM to first 80 items for performance.
+      // In the unfiltered "All" view the catalogue is grouped by category, so a
+      // plain slice(0,80) returned 80 digital multimeters and nothing else —
+      // the default browse view showed one category out of 72. Round-robin
+      // across categories instead, so the first 80 span the catalogue.
       const MAX = 80;
-      const displayed = filtered.slice(0, MAX);
+      let displayed;
+      if (activeCatFilter === 'all' && !q && filtered.length > MAX) {
+        const buckets = new Map();
+        filtered.forEach(p => {
+          if (!buckets.has(p.category)) buckets.set(p.category, []);
+          buckets.get(p.category).push(p);
+        });
+        const lists = [...buckets.values()];
+        displayed = [];
+        for (let i = 0; displayed.length < MAX; i++) {
+          let added = false;
+          for (const list of lists) {
+            if (i < list.length) {
+              displayed.push(list[i]);
+              added = true;
+              if (displayed.length >= MAX) break;
+            }
+          }
+          if (!added) break;
+        }
+      } else {
+        displayed = filtered.slice(0, MAX);
+      }
       const overflow = filtered.length - displayed.length;
 
       if (filtered.length === 0) {

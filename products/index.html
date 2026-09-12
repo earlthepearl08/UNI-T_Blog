@@ -36,7 +36,7 @@
   </script>
 
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912162227">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912162727">
 
   <style>
     /* ===== Catalog page styles ===== */
@@ -2077,9 +2077,10 @@
         searchClear.classList.toggle('visible', !!v);
         clearTimeout(searchTimer);
         searchTimer = setTimeout(() => {
-          const trimmed = v.trim();
-          // Skip single-char queries to avoid rendering hundreds of cards. Empty string still resets.
-          if (trimmed.length === 1) return;
+          // No minimum length: results are paginated, so even a one-character
+          // query renders only the first page. The old length===1 early-return
+          // left the PREVIOUS query's cards on screen while the box showed the
+          // new text, which read as a wrong result rather than a skipped search.
           activeSearch = v;
           pageSize = PAGE_SIZE;
           writeUrlState(true);
