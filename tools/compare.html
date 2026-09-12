@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/compare.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912183350">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912184027">
   <style>
     /* ── Compare Tool Styles ── */
     .compare-hero {
@@ -1442,8 +1442,11 @@
       // product actually has. Normalise to a canonical key before comparing, but
       // still display the original wording.
       function normalizeSpec(raw) {
-        let t = String(raw).toLowerCase().trim();
-        t = t.replace(/\u03a9|\u2126/g, 'ohm');       // Ω -> ohm
+        // Normalise the symbols BEFORE lower-casing: toLowerCase() maps
+        // U+03A9 (Ω) to U+03C9 (ω), so a post-lowercase replace never matched.
+        let t = String(raw).replace(/\u03a9|\u2126/g, 'ohm');
+        t = t.toLowerCase().trim();
+        t = t.replace(/\u03c9/g, 'ohm');               // lowercase omega, just in case
         t = t.replace(/\u00b5|\u03bc/g, 'u');          // µ -> u
         t = t.replace(/\s*\/\s*/g, '/');               // " / " -> "/"
         t = t.replace(/(\d)\s+([a-z])/g, '$1$2');      // "1000 v" -> "1000v"

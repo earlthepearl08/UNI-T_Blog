@@ -88,13 +88,6 @@ module.exports = async function handler(req, res) {
     return res.status(403).json({ ok: false, error: 'Forbidden' });
   }
 
-  if (rateLimited(req)) {
-    res.setHeader('Retry-After', '600');
-    return res.status(429).json({
-      ok: false,
-      error: 'Too many submissions from this connection. Please try again in a few minutes, or email us directly.',
-    });
-  }
 
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
@@ -113,6 +106,17 @@ module.exports = async function handler(req, res) {
 
   if (!name || !isEmail(email) || !message) {
     return res.status(400).json({ ok: false, error: 'Please provide your name, a valid email, and a message.' });
+  }
+
+  // Rate-limit only VALID submissions. Counting rejected 400s meant someone
+  // mistyping their email five times used up the quota and got a 429 on the
+  // attempt that was finally correct.
+  if (rateLimited(req)) {
+    res.setHeader('Retry-After', '600');
+    return res.status(429).json({
+      ok: false,
+      error: 'Too many submissions from this connection. Please try again in a few minutes, or email us directly.',
+    });
   }
 
   const lead = {
