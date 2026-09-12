@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="UNI-T Philippines Blog">
   <meta name="twitter:description" content="Expert guides on test instruments for Filipino professionals">
 
-  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182622">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Blog RSS" href="/rss.xml">
 
   <script type="application/ld+json">
@@ -199,17 +199,19 @@
 
     function closeDrawer() {
       document.removeEventListener('keydown', trapDrawerFocus, true);
-      if (lastFocused && typeof lastFocused.focus === 'function') {
-        try { lastFocused.focus(); } catch (e) {}
-      }
+      // Capture where focus should go, but restore it at the END — the
+      // unconditional hamburger.focus() below used to run after this and
+      // overwrote it, making the restore dead code.
+      const restoreTo = (lastFocused && typeof lastFocused.focus === 'function') ? lastFocused : hamburger;
       lastFocused = null;
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
       hamburger.setAttribute('aria-expanded', 'false');
-      // A11y: return focus to hamburger
-      hamburger.focus();
+      // A11y: return focus to whatever opened the drawer (the hamburger in
+      // practice, but a keyboard user may have entered from elsewhere).
+      try { restoreTo.focus(); } catch (e) { hamburger.focus(); }
     }
 
     hamburger.addEventListener('click', openDrawer);

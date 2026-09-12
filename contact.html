@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/contact.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182622">
   <link rel="canonical" href="https://unit-philippines-blog.vercel.app/contact.html">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact UNI-T Philippines", "description": "Get in touch with Kinmo PW Corporation for UNI-T test instrument sales, quotations and technical support in the Philippines.", "url": "https://unit-philippines-blog.vercel.app/contact.html", "inLanguage": "en-PH", "isPartOf": {"@type": "WebSite", "name": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app"}, "publisher": {"@type": "Organization", "name": "Kinmo PW Corporation", "alternateName": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app", "logo": "https://unit-philippines-blog.vercel.app/images/brand/unit-logo.svg", "foundingDate": "2014", "areaServed": "PH", "address": [{"@type": "PostalAddress", "name": "Main Office", "streetAddress": "1732 Jose Abad Santos Avenue, Tondo", "addressLocality": "Manila", "addressRegion": "Metro Manila", "postalCode": "1013", "addressCountry": "PH"}, {"@type": "PostalAddress", "name": "Showroom", "streetAddress": "121 Sct Lazcano St, Diliman", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH"}], "contactPoint": {"@type": "ContactPoint", "telephone": "+63-977-840-7799", "email": "e2shop.kinmo@gmail.com", "contactType": "sales", "areaServed": "PH", "availableLanguage": ["en", "fil"]}}, "mainEntity": {"@type": "Organization", "name": "Kinmo PW Corporation", "alternateName": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app", "logo": "https://unit-philippines-blog.vercel.app/images/brand/unit-logo.svg", "foundingDate": "2014", "areaServed": "PH", "address": [{"@type": "PostalAddress", "name": "Main Office", "streetAddress": "1732 Jose Abad Santos Avenue, Tondo", "addressLocality": "Manila", "addressRegion": "Metro Manila", "postalCode": "1013", "addressCountry": "PH"}, {"@type": "PostalAddress", "name": "Showroom", "streetAddress": "121 Sct Lazcano St, Diliman", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH"}], "contactPoint": {"@type": "ContactPoint", "telephone": "+63-977-840-7799", "email": "e2shop.kinmo@gmail.com", "contactType": "sales", "areaServed": "PH", "availableLanguage": ["en", "fil"]}}}
@@ -167,17 +167,19 @@
 
     function closeDrawer() {
       document.removeEventListener('keydown', trapDrawerFocus, true);
-      if (lastFocused && typeof lastFocused.focus === 'function') {
-        try { lastFocused.focus(); } catch (e) {}
-      }
+      // Capture where focus should go, but restore it at the END — the
+      // unconditional hamburger.focus() below used to run after this and
+      // overwrote it, making the restore dead code.
+      const restoreTo = (lastFocused && typeof lastFocused.focus === 'function') ? lastFocused : hamburger;
       lastFocused = null;
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
       hamburger.setAttribute('aria-expanded', 'false');
-      // A11y: return focus to hamburger
-      hamburger.focus();
+      // A11y: return focus to whatever opened the drawer (the hamburger in
+      // practice, but a keyboard user may have entered from elsewhere).
+      try { restoreTo.focus(); } catch (e) { hamburger.focus(); }
     }
 
     hamburger.addEventListener('click', openDrawer);

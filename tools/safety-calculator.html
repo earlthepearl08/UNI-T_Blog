@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182622">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -350,6 +350,7 @@
       padding: 1.5rem;
       margin-bottom: 1.25rem;
     }
+    .converter-group h3,
     .converter-group h4 {
       font-family: var(--font-heading);
       font-size: 1rem;
@@ -613,17 +614,19 @@
 
     function closeDrawer() {
       document.removeEventListener('keydown', trapDrawerFocus, true);
-      if (lastFocused && typeof lastFocused.focus === 'function') {
-        try { lastFocused.focus(); } catch (e) {}
-      }
+      // Capture where focus should go, but restore it at the END — the
+      // unconditional hamburger.focus() below used to run after this and
+      // overwrote it, making the restore dead code.
+      const restoreTo = (lastFocused && typeof lastFocused.focus === 'function') ? lastFocused : hamburger;
       lastFocused = null;
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.classList.remove('drawer-open');
       hamburger.setAttribute('aria-expanded', 'false');
-      // A11y: return focus to hamburger
-      hamburger.focus();
+      // A11y: return focus to whatever opened the drawer (the hamburger in
+      // practice, but a keyboard user may have entered from elsewhere).
+      try { restoreTo.focus(); } catch (e) { hamburger.focus(); }
     }
 
     hamburger.addEventListener('click', openDrawer);
@@ -717,7 +720,7 @@
         <div style="display:flex;align-items:center;gap:1rem;">
           <input type="range" id="catVoltage" min="0" max="1000" value="220" step="10" style="flex:1;">
           <div class="voltage-input-group" style="display:flex;align-items:center;gap:0.25rem;">
-            <input type="number" id="catVoltageManual" min="0" max="1000" step="1" value="220" style="width:80px;padding:0.5rem 0.6rem;border:1px solid var(--border-color,#ddd);border-radius:6px;font-size:1.1rem;font-weight:700;text-align:center;background:var(--card-bg,#fff);color:var(--text-primary,#222);outline:none;" onfocus="this.style.borderColor='#E31E24'" onblur="this.style.borderColor=''">
+            <input type="number" id="catVoltageManual" min="0" step="1" value="220" style="width:80px;padding:0.5rem 0.6rem;border:1px solid var(--border-color,#ddd);border-radius:6px;font-size:1.1rem;font-weight:700;text-align:center;background:var(--card-bg,#fff);color:var(--text-primary,#222);outline:none;" onfocus="this.style.borderColor='#E31E24'" onblur="this.style.borderColor=''">
             <span style="font-size:0.9rem;color:var(--text-muted,#888);font-weight:600;">V</span>
           </div>
         </div>
@@ -1013,16 +1016,28 @@
     catVoltage.addEventListener('input', () => {
       catVoltageManual.value = catVoltage.value;
     });
+    // Keep the slider in step while typing, but do NOT rewrite the field on every
+    // keystroke: clamping mid-entry turned "13200" into "1000" before the user
+    // finished, and backspacing to empty forced a "0" back in. The value is
+    // range-checked on change/blur, and calculateCAT() validates it again.
     catVoltageManual.addEventListener('input', () => {
-      let v = parseInt(catVoltageManual.value) || 0;
-      if (v < 0) v = 0;
-      if (v > 1000) v = 1000;
-      catVoltage.value = v;
-      // Clamp the manual field too. Previously only the slider was clamped, so a
-      // typed 13200 stayed in the field and calculateCAT() — which reads the
-      // manual field — treated medium voltage as if it were an LV circuit.
-      if (String(v) !== catVoltageManual.value) catVoltageManual.value = v;
+      const raw = catVoltageManual.value.trim();
+      if (raw === '') return;                       // allow an empty field while editing
+      const v = parseInt(raw, 10);
+      if (!isFinite(v)) return;
+      catVoltage.value = Math.min(Math.max(v, 0), 1000);
     });
+    function commitManualVoltage() {
+      const raw = catVoltageManual.value.trim();
+      if (raw === '') { catVoltageManual.value = catVoltage.value; return; }
+      let v = parseInt(raw, 10);
+      if (!isFinite(v)) v = parseInt(catVoltage.value, 10) || 220;
+      if (v < 0) v = 0;
+      catVoltageManual.value = v;                   // >1000 is kept so the MV guard can fire
+      catVoltage.value = Math.min(v, 1000);
+    }
+    catVoltageManual.addEventListener('change', commitManualVoltage);
+    catVoltageManual.addEventListener('blur', commitManualVoltage);
 
     // ===== Product Data =====
     const products = [
@@ -1098,9 +1113,11 @@
       const MAINS_THRESHOLD_V = 50; // 50 V AC / 120 V DC — IEC extra-low-voltage limit
       if (catLevel < 2 && voltage >= MAINS_THRESHOLD_V) {
         catLevel = 2;
-        explanation += ' Because this circuit is supplied from the mains at ' + voltage +
-          ' V, IEC 61010-1 sets a floor of CAT II — CAT I applies only to circuits that are ' +
-          'not connected to the mains (battery, SELV or an isolated bench supply).';
+        explanation += ' You selected an isolated/SELV circuit, but ' + voltage + ' V is a ' +
+          'mains-level voltage, so this result is raised to CAT II as a precaution. A genuinely ' +
+          'isolated circuit (battery, SELV, or an isolated bench supply) normally sits well below ' +
+          '50 V — if that is your case, enter its actual working voltage. If the circuit is fed ' +
+          'from the mains in any way, CAT II is the minimum under IEC 61010-1.';
       }
 
       // Environment can bump category up
