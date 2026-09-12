@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912161617">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -466,6 +466,9 @@
     .mt-2 { margin-top: 2rem; }
   </style>
   <link rel="canonical" href="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Electrical Safety Calculator", "description": "Determine the required IEC 61010 measurement category, solve Ohm's law, size conductors against voltage drop, and convert units.", "url": "https://unit-philippines-blog.vercel.app/tools/safety-calculator.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "PHP"}, "publisher": {"@type": "Organization", "name": "Kinmo PW Corporation", "alternateName": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app", "logo": "https://unit-philippines-blog.vercel.app/images/brand/unit-logo.svg", "foundingDate": "2014", "areaServed": "PH", "address": [{"@type": "PostalAddress", "name": "Main Office", "streetAddress": "1732 Jose Abad Santos Avenue, Tondo", "addressLocality": "Manila", "addressRegion": "Metro Manila", "postalCode": "1013", "addressCountry": "PH"}, {"@type": "PostalAddress", "name": "Showroom", "streetAddress": "121 Sct Lazcano St, Diliman", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH"}], "contactPoint": {"@type": "ContactPoint", "telephone": "+63-977-840-7799", "email": "e2shop.kinmo@gmail.com", "contactType": "sales", "areaServed": "PH", "availableLanguage": ["en", "fil"]}}, "inLanguage": "en-PH"}
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -982,19 +985,19 @@
 
     // ===== Product Data =====
     const products = [
-      { name: 'UT61E+', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut61e.webp', desc: 'True RMS digital multimeter with USB data logging', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT139C', cat: 'CAT III 600V / CAT IV 300V', type: 'multimeter', img: '/images/products/ut139c.webp', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT890C', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890c.webp', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT890D', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut890d.webp', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut89xd.webp', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', type: 'multimeter', img: '/images/products/ut195ds.webp', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT216C', cat: 'CAT III 600V / CAT IV 300V', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT206A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT210E', cat: 'CAT III 300V / CAT II 600V', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT202A', cat: 'CAT III 600V', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT501A', cat: 'CAT III 600V', type: 'insulation', img: '/images/products/ut501a.webp', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT12S', cat: 'CAT IV 1000V', type: 'detector', img: '/images/products/voltage-detector-ut12s.webp', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT61E+', cat: 'CAT III 1000V / CAT IV 600V', catSrc: 'unverified', type: 'multimeter', img: '/images/products/ut61e.webp', desc: 'True RMS digital multimeter with USB data logging', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT139C', cat: 'CAT III 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut139c.webp', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT890C', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut890c.webp', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT890D', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unverified', type: 'multimeter', img: '/images/products/ut890d.webp', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', catSrc: 'unverified', type: 'multimeter', img: '/images/products/ut89xd.webp', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut195ds.webp', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unit', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT216C', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unit', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT210E', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT501A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'insulation', img: '/images/products/ut501a.webp', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT12S', cat: 'CAT IV 1000V', catSrc: 'unverified', type: 'detector', img: '/images/products/voltage-detector-ut12s.webp', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
 
     // ===== CAT Rating Calculator =====
@@ -1117,6 +1120,9 @@
                   <h4>UNI-T ${p.name}</h4>
                   <p>${p.desc}</p>
                   <span class="reco-cat">${p.cat}</span>
+                  ${p.catSrc === 'unit'
+                    ? '<span class="cat-src cat-src-ok" title="Matches UNI-T\u2019s published specification">manufacturer-confirmed</span>'
+                    : '<span class="cat-src cat-src-check" title="We could not confirm this on UNI-T\u2019s site — check the datasheet before relying on it">confirm on datasheet</span>'}
                   <br><a href="${p.link}" target="_blank">View Product &rarr;</a>
                 </div>
               `).join('')}

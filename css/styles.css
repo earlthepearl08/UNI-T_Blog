@@ -3267,3 +3267,16 @@ body.drawer-open {
    light red regardless of the theme attribute. #E31E24 on #1A1A1A is 3.71:1 —
    fine for the 24px logo (3:1 bar) but below AA for this 13.6px label. */
 .post-header .category { color: var(--uni-red-light, #FF4D52); }
+
+/* CAT-rating provenance. Several ratings on this site were copied from the
+   flagship spec and overstated the real one by up to two categories, so each
+   rating now says whether it matches UNI-T's published specification. */
+.cat-src {
+  display: inline-block; margin-left: 0.35rem; padding: 0.1rem 0.4rem;
+  border-radius: 3px; font-size: 0.62rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.02em; cursor: help; vertical-align: middle;
+}
+.cat-src-ok    { background: rgba(34,197,94,0.14); color: #15803d; }
+.cat-src-check { background: rgba(217,158,11,0.16); color: #92700a; }
+[data-theme="dark"] .cat-src-ok    { background: rgba(34,197,94,0.18); color: #86efac; }
+[data-theme="dark"] .cat-src-check { background: rgba(217,158,11,0.2); color: #f0c74e; }

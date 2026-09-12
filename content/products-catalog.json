@@ -566,7 +566,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT136C%2B&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-t-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut136plus-series/",
      "officialUrlKind": "verified-body"
     },
     {
@@ -617,7 +617,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT39C%2B&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-t-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut39plus-series/",
      "officialUrlKind": "verified-body"
     },
     {
@@ -2196,7 +2196,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT222&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-t-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut220-series/",
      "officialUrlKind": "verified-body"
     },
     {
@@ -2376,7 +2376,8 @@
       "25Hz"
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UTi260K&post_type=product",
-     "regions": []
+     "regions": [],
+     "medNotice": "Screening aid only. Elevated-skin-temperature screening is not a medical diagnosis and this instrument is not a medical device or a thermometer for clinical use. It does not detect illness or infection. Any clinical decision must be made with an approved medical device by a qualified health professional, under FDA Philippines rules."
     },
     {
      "model": "UTi120Mobile",
@@ -2436,7 +2437,8 @@
       "25Hz"
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UTi721M&post_type=product",
-     "regions": []
+     "regions": [],
+     "medNotice": "Screening aid only. Elevated-skin-temperature screening is not a medical diagnosis and this instrument is not a medical device or a thermometer for clinical use. It does not detect illness or infection. Any clinical decision must be made with an approved medical device by a qualified health professional, under FDA Philippines rules."
     },
     {
      "model": "UTi722M",
@@ -3021,7 +3023,8 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UTi260M&post_type=product",
      "officialUrl": "https://thermal.uni-trend.com/product/uti260m/",
      "source": "thermal-uni-trend",
-     "officialUrlKind": "preexisting"
+     "officialUrlKind": "preexisting",
+     "medNotice": "Screening aid only. Elevated-skin-temperature screening is not a medical diagnosis and this instrument is not a medical device or a thermometer for clinical use. It does not detect illness or infection. Any clinical decision must be made with an approved medical device by a qualified health professional, under FDA Philippines rules."
     },
     {
      "model": "UTi89Pro",
@@ -3057,7 +3060,8 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UTi165K&post_type=product",
      "officialUrl": "https://thermal.uni-trend.com/product/uti165k/",
      "source": "thermal-uni-trend",
-     "officialUrlKind": "preexisting"
+     "officialUrlKind": "preexisting",
+     "medNotice": "Screening aid only. Elevated-skin-temperature screening is not a medical diagnosis and this instrument is not a medical device or a thermometer for clinical use. It does not detect illness or infection. Any clinical decision must be made with an approved medical device by a qualified health professional, under FDA Philippines rules."
     }
    ]
   },
@@ -3924,7 +3928,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT512&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-w-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut510-series/",
      "officialUrlKind": "verified-body",
      "imageShared": true
     },
@@ -3971,12 +3975,12 @@
      "description": "5000V insulation tester for high-voltage motors, generators, and substation equipment — basic entry into the 5kV megger category.",
      "image": "/images/products/ut510-series.webp",
      "keySpecs": [
-      "DC 600V",
+      "5000V test",
       ">3mA short"
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT513A&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-l-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut510-series/",
      "officialUrlKind": "verified-body",
      "imageShared": true
     },
@@ -6981,7 +6985,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT521&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-l-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut520-series/",
      "officialUrlKind": "verified-body"
     },
     {
@@ -6998,7 +7002,7 @@
      ],
      "kinmoSearchUrl": "https://kinmo.com/?s=UT522&post_type=product",
      "regions": [],
-     "officialUrl": "https://meters.uni-trend.com/product/ut-l-series/",
+     "officialUrl": "https://meters.uni-trend.com/product/ut520-series/",
      "officialUrlKind": "verified-body"
     },
     {

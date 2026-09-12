@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/compare.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912161617">
   <style>
     /* ── Compare Tool Styles ── */
     .compare-hero {
@@ -724,6 +724,9 @@
     body.modal-open { overflow: hidden; }
   </style>
   <link rel="canonical" href="https://unit-philippines-blog.vercel.app/tools/compare.html">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "UNI-T Instrument Comparison Tool", "description": "Compare up to three UNI-T test instruments side by side across the full 504-model catalogue.", "url": "https://unit-philippines-blog.vercel.app/tools/compare.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "PHP"}, "publisher": {"@type": "Organization", "name": "Kinmo PW Corporation", "alternateName": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app", "logo": "https://unit-philippines-blog.vercel.app/images/brand/unit-logo.svg", "foundingDate": "2014", "areaServed": "PH", "address": [{"@type": "PostalAddress", "name": "Main Office", "streetAddress": "1732 Jose Abad Santos Avenue, Tondo", "addressLocality": "Manila", "addressRegion": "Metro Manila", "postalCode": "1013", "addressCountry": "PH"}, {"@type": "PostalAddress", "name": "Showroom", "streetAddress": "121 Sct Lazcano St, Diliman", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH"}], "contactPoint": {"@type": "ContactPoint", "telephone": "+63-977-840-7799", "email": "e2shop.kinmo@gmail.com", "contactType": "sales", "areaServed": "PH", "availableLanguage": ["en", "fil"]}}, "inLanguage": "en-PH"}
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -1119,7 +1122,7 @@
     // ── Fetch catalog ──
     async function loadCatalog() {
       try {
-        const cacheBust = '7d43cada31';
+        const cacheBust = '7fc6f66c93';
         const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();

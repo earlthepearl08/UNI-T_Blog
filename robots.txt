@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://unit-philippines-blog.vercel.app/sitemap.xml

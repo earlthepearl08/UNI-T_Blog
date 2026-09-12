@@ -24,7 +24,7 @@
   <meta property="og:image" content="https://unit-philippines-blog.vercel.app/images/brand/og-default.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912161617">
   <style>
     /* ── Quiz Page Styles ── */
     .quiz-hero {
@@ -578,6 +578,9 @@
     }
   </style>
   <link rel="canonical" href="https://unit-philippines-blog.vercel.app/tools/knowledge-quiz.html">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebApplication", "name": "Electrical Knowledge Quiz", "description": "A 10-question self-study quiz on electrical fundamentals and safe instrument use for Philippine practice.", "url": "https://unit-philippines-blog.vercel.app/tools/knowledge-quiz.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "browserRequirements": "Requires JavaScript", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "PHP"}, "publisher": {"@type": "Organization", "name": "Kinmo PW Corporation", "alternateName": "UNI-T Philippines", "url": "https://unit-philippines-blog.vercel.app", "logo": "https://unit-philippines-blog.vercel.app/images/brand/unit-logo.svg", "foundingDate": "2014", "areaServed": "PH", "address": [{"@type": "PostalAddress", "name": "Main Office", "streetAddress": "1732 Jose Abad Santos Avenue, Tondo", "addressLocality": "Manila", "addressRegion": "Metro Manila", "postalCode": "1013", "addressCountry": "PH"}, {"@type": "PostalAddress", "name": "Showroom", "streetAddress": "121 Sct Lazcano St, Diliman", "addressLocality": "Quezon City", "addressRegion": "Metro Manila", "addressCountry": "PH"}], "contactPoint": {"@type": "ContactPoint", "telephone": "+63-977-840-7799", "email": "e2shop.kinmo@gmail.com", "contactType": "sales", "areaServed": "PH", "availableLanguage": ["en", "fil"]}}, "inLanguage": "en-PH"}
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -793,7 +796,7 @@
       <div class="rule-card">
         <div>
           <h4>Earn a Badge</h4>
-          <p>Score high enough and you could be crowned a Master Electrician.</p>
+          <p>See how your knowledge stacks up. This is a self-study quiz, not a credential &mdash; electrical practice in the Philippines is regulated by the PRC.</p>
         </div>
       </div>
       <div class="rule-card">
@@ -1331,13 +1334,13 @@
       // Determine rank
       let rank, emoji, badgeClass, subtitle;
       if (score >= 9) {
-        rank = 'Master Electrician'; emoji = ''; badgeClass = 'badge-gold'; subtitle = 'You really know your stuff!';
+        rank = 'Top of the Class'; emoji = ''; badgeClass = 'badge-gold'; subtitle = 'You really know your stuff. (A quiz score is not a licence \u2014 Master Electrician is a PRC-regulated title.)';
       } else if (score >= 7) {
-        rank = 'Senior Technician'; emoji = ''; badgeClass = 'badge-silver'; subtitle = 'Impressive knowledge!';
+        rank = 'Strong Knowledge'; emoji = ''; badgeClass = 'badge-silver'; subtitle = 'Impressive knowledge!';
       } else if (score >= 5) {
-        rank = 'Apprentice'; emoji = ''; badgeClass = 'badge-bronze'; subtitle = 'Good foundation, keep learning!';
+        rank = 'Solid Foundation'; emoji = ''; badgeClass = 'badge-bronze'; subtitle = 'Good foundation, keep learning!';
       } else if (score >= 3) {
-        rank = 'Student'; emoji = ''; badgeClass = 'badge-student'; subtitle = 'Check out our guides to level up!';
+        rank = 'Getting There'; emoji = ''; badgeClass = 'badge-student'; subtitle = 'Check out our guides to level up!';
       } else {
         rank = 'Beginner'; emoji = ''; badgeClass = 'badge-beginner'; subtitle = 'Everyone starts somewhere! Our articles can help.';
       }
@@ -1346,7 +1349,7 @@
       const timedOut = results.filter(r => r.timedOut).length;
       const correctCount = results.filter(r => r.correct).length;
 
-      const shareText = `I scored ${score}/10 on the UNI-T Electrical Knowledge Quiz! Can you beat me? `;
+      const shareText = `I scored ${score}/10 on the UNI-T Philippines electrical knowledge quiz (just for fun \u2014 not a credential). Can you beat me? `;
       const shareUrl = window.location.origin + window.location.pathname;
 
       let wrongReviewHTML = '';
