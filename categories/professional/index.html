@@ -11,7 +11,8 @@
   <meta property="og:type" content="website">
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/categories/professional/">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912111504">
+  <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912111945">
 </head>
 <body>
   <header class="header">
@@ -105,14 +106,38 @@
 
     if (!hamburger || !drawer) return;
 
+
+    // --- drawer focus trap -------------------------------------------------
+    let lastFocused = null;
+    function drawerFocusables() {
+      return Array.prototype.slice.call(drawer.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(function (el) { return el.offsetParent !== null; });
+    }
+    function trapDrawerFocus(e) {
+      if (!drawer.classList.contains('open')) return;
+      if (e.key === 'Escape') { closeDrawer(); return; }
+      if (e.key !== 'Tab') return;
+      var f = drawerFocusables();
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      else if (!drawer.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    }
+
     function openDrawer() {
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
-      // A11y: move focus into drawer
+      // A11y: move focus into the drawer and trap it there. Without a trap the
+      // 31 focusable elements behind the open drawer stay tabbable, so keyboard
+      // and screen-reader users tab straight out of the menu into hidden content.
+      lastFocused = document.activeElement;
       setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
+      document.addEventListener('keydown', trapDrawerFocus, true);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -126,6 +151,11 @@
     }
 
     function closeDrawer() {
+      document.removeEventListener('keydown', trapDrawerFocus, true);
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        try { lastFocused.focus(); } catch (e) {}
+      }
+      lastFocused = null;
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');

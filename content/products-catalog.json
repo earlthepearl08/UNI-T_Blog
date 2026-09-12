@@ -4942,7 +4942,12 @@
       "EU"
      ],
      "officialUrl": "https://meters.uni-trend.com/product/ut07-series/",
-     "officialUrlKind": "series"
+     "officialUrlKind": "series",
+     "phCompat": {
+      "level": "warn",
+      "label": "EU/UK plug pattern — may not fit PH outlets",
+      "note": "Voltage is correct for the Philippines (230V), but the plug/socket pattern is EU or UK. Most Philippine outlets are Type A/B; confirm fit or use the correct variant before ordering."
+     }
     },
     {
      "model": "UT07B",
@@ -4961,7 +4966,12 @@
       "EU"
      ],
      "officialUrl": "https://meters.uni-trend.com/product/ut07-series/",
-     "officialUrlKind": "series"
+     "officialUrlKind": "series",
+     "phCompat": {
+      "level": "warn",
+      "label": "EU/UK plug pattern — may not fit PH outlets",
+      "note": "Voltage is correct for the Philippines (230V), but the plug/socket pattern is EU or UK. Most Philippine outlets are Type A/B; confirm fit or use the correct variant before ordering."
+     }
     },
     {
      "model": "UT08A",
@@ -4976,7 +4986,12 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UT08A&post_type=product",
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut08-series/",
-     "officialUrlKind": "series"
+     "officialUrlKind": "series",
+     "phCompat": {
+      "level": "danger",
+      "label": "Not for Philippine outlets — 120V rated",
+      "note": "This model is rated for a 100-127V supply. Philippine mains is 230V, and its US-pattern plug fits a Philippine outlet, so it can be plugged in and damaged or made unsafe. Use the 230V equivalent (UT07 series) instead."
+     }
     },
     {
      "model": "UT08B",
@@ -4992,7 +5007,12 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UT08B&post_type=product",
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut08-series/",
-     "officialUrlKind": "series"
+     "officialUrlKind": "series",
+     "phCompat": {
+      "level": "danger",
+      "label": "Not for Philippine outlets — 120V rated",
+      "note": "This model is rated for a 100-127V supply. Philippine mains is 230V, and its US-pattern plug fits a Philippine outlet, so it can be plugged in and damaged or made unsafe. Use the 230V equivalent (UT07 series) instead."
+     }
     },
     {
      "model": "UT15B",
@@ -5094,7 +5114,12 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UT22B-EU&post_type=product",
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut22b-eu/",
-     "officialUrlKind": "exact"
+     "officialUrlKind": "exact",
+     "phCompat": {
+      "level": "warn",
+      "label": "EU/UK plug pattern — may not fit PH outlets",
+      "note": "Voltage is correct for the Philippines (230V), but the plug/socket pattern is EU or UK. Most Philippine outlets are Type A/B; confirm fit or use the correct variant before ordering."
+     }
     }
    ]
   },
@@ -8717,7 +8742,12 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UT25A&post_type=product",
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut25a/",
-     "officialUrlKind": "exact"
+     "officialUrlKind": "exact",
+     "phCompat": {
+      "level": "danger",
+      "label": "Not for Philippine outlets — 120V rated",
+      "note": "This model is rated for a 100-127V supply. Philippine mains is 230V, and its US-pattern plug fits a Philippine outlet, so it can be plugged in and damaged or made unsafe. Use the 230V equivalent (UT07 series) instead."
+     }
     }
    ]
   },
@@ -8840,7 +8870,12 @@
      "kinmoSearchUrl": "https://kinmo.com/?s=UT230B-EU&post_type=product",
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut230b-eu/",
-     "officialUrlKind": "exact"
+     "officialUrlKind": "exact",
+     "phCompat": {
+      "level": "warn",
+      "label": "EU/UK plug pattern — may not fit PH outlets",
+      "note": "Voltage is correct for the Philippines (230V), but the plug/socket pattern is EU or UK. Most Philippine outlets are Type A/B; confirm fit or use the correct variant before ordering."
+     }
     }
    ]
   },

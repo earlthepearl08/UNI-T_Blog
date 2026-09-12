@@ -35,7 +35,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css?v=20260912111504">
+  <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912111945">
 
   <style>
     /* ===== Catalog page styles ===== */
@@ -1167,14 +1168,38 @@
 
     if (!hamburger || !drawer) return;
 
+
+    // --- drawer focus trap -------------------------------------------------
+    let lastFocused = null;
+    function drawerFocusables() {
+      return Array.prototype.slice.call(drawer.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(function (el) { return el.offsetParent !== null; });
+    }
+    function trapDrawerFocus(e) {
+      if (!drawer.classList.contains('open')) return;
+      if (e.key === 'Escape') { closeDrawer(); return; }
+      if (e.key !== 'Tab') return;
+      var f = drawerFocusables();
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      else if (!drawer.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    }
+
     function openDrawer() {
       drawer.classList.add('open');
       backdrop.classList.add('open');
       hamburger.classList.add('open');
       hamburger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('drawer-open');
-      // A11y: move focus into drawer
+      // A11y: move focus into the drawer and trap it there. Without a trap the
+      // 31 focusable elements behind the open drawer stay tabbable, so keyboard
+      // and screen-reader users tab straight out of the menu into hidden content.
+      lastFocused = document.activeElement;
       setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 100);
+      document.addEventListener('keydown', trapDrawerFocus, true);
 
       const currentPath = window.location.pathname;
       drawer.querySelectorAll('.drawer-nav a').forEach(a => {
@@ -1188,6 +1213,11 @@
     }
 
     function closeDrawer() {
+      document.removeEventListener('keydown', trapDrawerFocus, true);
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        try { lastFocused.focus(); } catch (e) {}
+      }
+      lastFocused = null;
       drawer.classList.remove('open');
       backdrop.classList.remove('open');
       hamburger.classList.remove('open');
@@ -1571,7 +1601,10 @@
       async function loadCatalog() {
         try {
           // Cache-bust with a daily-rotating query string so updates show without hard-refresh
-          const cacheBust = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+          // Content hash of products-catalog.json, bumped only when the catalog
+          // actually changes. A daily-rotating value forced every visitor to
+          // re-download 316 KB each day AND hid same-day edits behind the cache.
+          const cacheBust = '7d43cada31';
           const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
           if (!res.ok) throw new Error('Failed to load catalog');
           const data = await res.json();
@@ -1595,6 +1628,7 @@
                 officialUrl: p.officialUrl,
                 officialUrlKind: p.officialUrlKind || '',
                 imageShared: !!p.imageShared,
+                phCompat: p.phCompat || null,
                 kinmoSearchUrl: p.kinmoSearchUrl,
                 keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
                 source: p.source || 'scraped',
@@ -1797,6 +1831,10 @@
           ? `<div class="card-img-note" title="This photo represents the product series, not necessarily this exact variant">Series photo &mdash; representative</div>`
           : '';
 
+        const compat = p.phCompat
+          ? `<div class="ph-compat ph-compat-${p.phCompat.level}" title="${escapeHtml(p.phCompat.note)}">${escapeHtml(p.phCompat.label)}</div>`
+          : '';
+
         const specsBtn = p.officialUrl
           ? `<a class="card-btn card-btn-outline" href="${encodeURI(p.officialUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${safeModel} on the UNI-T official site">Full specs</a>`
           : '';
@@ -1804,6 +1842,7 @@
         body.innerHTML = `
           ${catTagHtml}
           <div class="card-model">UNI-T ${safeModel}</div>
+          ${compat}
           ${seriesNote}
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
@@ -1878,6 +1917,10 @@
             <div class="modal-category">${escapeHtml(product.category)}</div>
             <h2 id="productModalTitle" class="modal-title">UNI-T ${escapeHtml(product.model)}</h2>
             ${product.subcategory ? `<div class="modal-subcat">${escapeHtml(product.subcategory)}</div>` : ''}
+            ${product.phCompat ? `<div class="ph-compat-block ph-compat-${product.phCompat.level}">
+              <strong>${escapeHtml(product.phCompat.label)}</strong>
+              <p>${escapeHtml(product.phCompat.note)}</p>
+            </div>` : ''}
             ${product.description
               ? `<p class="modal-desc">${escapeHtml(product.description)}</p>`
               : `<p class="modal-desc modal-desc-empty">Detailed description coming soon. <a href="/contact.html#quote">Contact Kinmo</a> for full specifications.</p>`

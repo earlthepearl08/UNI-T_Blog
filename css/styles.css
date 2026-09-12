@@ -3172,3 +3172,37 @@ body.drawer-open {
     max-width: 100%;
   }
 }
+
+/* Philippine compatibility flags. A US-pattern 120V tester physically fits a PH
+   outlet but is rated for half the voltage, so this needs to be unmissable on
+   the card, not buried in the description. */
+.ph-compat {
+  display: inline-block;
+  margin: 0.25rem 0 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: help;
+}
+.ph-compat-danger { background: rgba(239,68,68,0.14); color: #b91c1c; border: 1px solid rgba(239,68,68,0.4); }
+.ph-compat-warn   { background: rgba(217,158,11,0.14); color: #92700a; border: 1px solid rgba(217,158,11,0.4); }
+[data-theme="dark"] .ph-compat-danger { color: #fca5a5; background: rgba(239,68,68,0.18); }
+[data-theme="dark"] .ph-compat-warn   { color: #f0c74e; background: rgba(217,158,11,0.18); }
+
+.ph-compat-block {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius, 8px);
+  border-left: 3px solid currentColor;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.ph-compat-block strong { display: block; margin-bottom: 0.25rem; }
+.ph-compat-block p { margin: 0; opacity: 0.9; }
+.ph-compat-block.ph-compat-danger { background: rgba(239,68,68,0.08); color: #b91c1c; }
+.ph-compat-block.ph-compat-warn   { background: rgba(217,158,11,0.08); color: #92700a; }
+[data-theme="dark"] .ph-compat-block.ph-compat-danger { color: #fca5a5; background: rgba(239,68,68,0.12); }
+[data-theme="dark"] .ph-compat-block.ph-compat-warn   { color: #f0c74e; background: rgba(217,158,11,0.12); }

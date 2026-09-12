@@ -1,3 +1,30 @@
+#!/usr/bin/env node
+/* ============================================================================
+ * STOP — THIS SCRIPT IS STALE AND WILL REGRESS THE LIVE SITE IF RUN AS-IS.
+ * ----------------------------------------------------------------------------
+ * The pages under /posts, /categories, /tools and /products have been edited by
+ * hand since this generator was last used. Its templates no longer contain:
+ *   - the versioned stylesheet URL (/css/styles.css?v=...)
+ *   - the mobile drawer / theme-toggle markup and the FOUC guard
+ *   - the safety warning and "preliminary basis only" disclaimer blocks
+ *   - the footer legal links (/disclaimer.html, /privacy.html)
+ *   - absolute og:image / og:url tags and RSS autodiscovery
+ *   - guarded localStorage access
+ * Re-running it would overwrite those pages with the older template and undo
+ * the pre-release fixes.
+ *
+ * Before using this script again, bring its templates back in line with a
+ * current page (diff against one under /posts) and re-run the checks in
+ * docs/RELEASE-CHECKS.md.
+ *
+ * Set ALLOW_STALE_GENERATOR=1 to run anyway, deliberately.
+ * ==========================================================================*/
+if (!process.env.ALLOW_STALE_GENERATOR) {
+  console.error('\n  Refusing to run: this generator is stale and would regress the site.');
+  console.error('  Read the banner at the top of this file. Set ALLOW_STALE_GENERATOR=1 to override.\n');
+  process.exit(1);
+}
+
 const fs = require('fs');
 const path = require('path');
 
