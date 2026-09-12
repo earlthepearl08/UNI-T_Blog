@@ -396,10 +396,14 @@ p {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* minmax(0, 1fr), not 1fr: a bare 1fr is minmax(auto, 1fr), so the min-content
+     width of the headline and the button row inflated the track past the
+     container and clipped the H1, subtitle and both CTAs on a 360px phone. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: center;
 }
+.hero-content > * { min-width: 0; }
 
 .hero-text {
   text-align: left;
@@ -508,7 +512,7 @@ p {
   border-radius: var(--border-radius-lg);
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   min-height: 380px;
@@ -546,8 +550,11 @@ p {
   border: 1px solid rgba(0,0,0,0.15);
 }
 
+/* The tile background is forced to #ffffff in dark theme (above), so the caption
+   must stay dark — setting it to white rendered white-on-white and the category
+   labels vanished entirely. */
 [data-theme="dark"] .hero-product-item span {
-  color: rgba(255,255,255,0.9);
+  color: var(--uni-black);
 }
 
 [data-theme="dark"] .hero-product-item img {
@@ -600,7 +607,7 @@ p {
 
 @media (max-width: 992px) {
   .hero-product-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: auto;
     min-height: 280px;
     padding: 1rem;
@@ -661,7 +668,7 @@ p {
 /* Hero responsive */
 @media (max-width: 992px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     text-align: center;
   }
 
@@ -1367,7 +1374,7 @@ p {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -1498,7 +1505,7 @@ p {
 /* Responsive */
 @media (max-width: 992px) {
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1581,7 +1588,7 @@ p {
   }
 
   .posts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .post-header {
@@ -1598,7 +1605,7 @@ p {
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
 
@@ -2049,7 +2056,7 @@ p {
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -2137,7 +2144,7 @@ p {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -2279,7 +2286,7 @@ p {
 
 @media (max-width: 768px) {
   .tools-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .tools-grid .tool-card:last-child:nth-child(odd) {
@@ -2287,7 +2294,7 @@ p {
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .newsletter-content {
@@ -2668,7 +2675,7 @@ body.drawer-open {
   border-radius: 20px;
   padding: 3rem 3rem 3rem;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.minmax(0, 5fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: center;
   color: #fff;
@@ -2778,7 +2785,7 @@ body.drawer-open {
 
 @media (max-width: 768px) {
   .catalog-promo-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 2rem 1.5rem;
     gap: 2rem;
   }
@@ -2803,12 +2810,12 @@ body.drawer-open {
 }
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-@media (max-width: 768px) { .trust-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .trust-grid { grid-template-columns: minmax(0, 1fr); } }
 .trust-card {
   background: var(--card-bg, #fff);
   border: 1px solid var(--border-color, #e5e7eb);
@@ -3104,3 +3111,64 @@ body.drawer-open {
 [data-theme="dark"] .post-safety-warning a { color: var(--uni-red-light, #FF4D52); }
 
 .post-safety-footer { margin: 2rem 0 0; }
+
+
+/* The floating contact button and the back-to-top button both pin to the bottom
+   right; the FAB covered ~84% of back-to-top, so back-to-top could not be
+   clicked on any page that has both. Stack them instead of overlapping. */
+.back-to-top { bottom: calc(1.5rem + 68px); }
+@media (max-width: 640px) { .back-to-top { bottom: calc(1rem + 62px); } }
+
+/* Article tables are authored as raw <table> by the post generator with no
+   scroll container, so a 4-column spec table overflows a 360px phone by ~160px
+   and the right-hand columns are simply unreachable. Make the table itself
+   scrollable within the article column. */
+.post-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+}
+.post-content table thead,
+.post-content table tbody { display: table; width: 100%; min-width: 520px; }
+@media (min-width: 760px) {
+  .post-content table { display: table; }
+  .post-content table thead,
+  .post-content table tbody { display: table-row-group; min-width: 0; }
+}
+
+/* A bare `1fr` grid track is minmax(auto, 1fr): the track cannot shrink below the
+   min-content width of its contents, so a long headline, a wide <select> or a
+   button row pushes the track past a narrow viewport and the content is clipped.
+   Every track above now uses minmax(0, 1fr); these belt-and-braces rules stop
+   grid/flex children from re-inflating their track. */
+.hero-content > *,
+.calc-grid > *,
+.catalog-promo-card > *,
+.footer-content > *,
+.tools-grid > *,
+.trust-grid > * { min-width: 0; }
+
+
+/* The three catalog stats sat in a nowrap flex row, so the third ("1 Trusted
+   Distributor") ran ~46px past a 360px screen and was clipped. Let them wrap. */
+.catalog-promo-stats { flex-wrap: wrap; }
+@media (max-width: 420px) {
+  .catalog-promo-stats { gap: 1rem 1.25rem; }
+  .catalog-promo-stats .stat { flex: 0 1 auto; }
+}
+
+/* Long single-word captions ("OSCILLOSCOPES") overrun the ~77px tile on a 360px
+   phone. Shrink and allow a break rather than letting the word escape the card. */
+@media (max-width: 480px) {
+  .hero-product-item span {
+    font-size: 0.58rem;
+    letter-spacing: 0.2px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    max-width: 100%;
+  }
+}
