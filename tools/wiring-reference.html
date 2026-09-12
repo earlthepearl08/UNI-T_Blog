@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/wiring-reference.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912111945">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
 
   <style>
     /* ===== Tool Page Layout ===== */
@@ -970,7 +970,7 @@
   <section class="tool-section" id="breaker">
     <div class="container">
       <h2>Circuit Breaker Size Guide (Philippine)</h2>
-      <p class="section-desc">Philippine-market copper conductor sizes (PNS/JIS series &mdash; the wire actually sold in PH hardware stores) mapped to breaker size. Ampacity per PEC 2017 Table 3.10.1.16 (THHN/THWN copper, 75&deg;C column, 30&deg;C ambient); breaker per PEC 2.40.6 with the small-conductor cap (PEC 2.40.4(D)).</p>
+      <p class="section-desc">Philippine-market copper conductor sizes (PNS/JIS series &mdash; the wire actually sold in PH hardware stores) mapped to breaker size. Ampacity per PEC 2017 Table 3.10.1.16 (THHN/THWN copper, 75&deg;C column, 30&deg;C ambient); breaker per PEC 2.40.1.6 (cf. NEC 240.6(A)) with the small-conductor cap (PEC 2.40.4(D), cf. NEC 240.4(D)). Section numbering differs between PEC editions &mdash; confirm the clause in the edition you are working to.</p>
       <div class="breaker-table-wrap">
         <table class="breaker-table">
           <thead>
@@ -1446,7 +1446,10 @@
       while (temp < 10) { temp *= 10; multIndex--; }
       var d1 = Math.floor(temp / 10);
       var d2 = Math.round(temp % 10);
-      if (d2 >= 10) { d1++; d2 = 0; multIndex++; }
+      // A rounding carry must bump the decade ONCE, not twice. Previously both
+      // branches incremented multIndex, so any value whose second digit rounded
+      // up past 9 (e.g. 99.6 ohm) came back a full decade too high (1000 ohm).
+      if (d2 >= 10) { d1++; d2 = 0; }
       if (d1 > 9) { d1 = 1; d2 = 0; multIndex++; }
 
       // Find color names

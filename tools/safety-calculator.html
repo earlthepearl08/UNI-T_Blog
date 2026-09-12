@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912111945">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -1288,7 +1288,7 @@
     // 14, 22, 38… mm²) — the conductors actually sold in PH hardware stores, NOT the
     // European IEC series (2.5, 4, 6, 16, 35…). Ampacity = PEC 2017 Table 3.10.1.16,
     // copper THHN/THWN, 75°C column, 30°C ambient. resistance = DC ohm/m at 75°C.
-    // maxBreaker = small-conductor overcurrent ceiling per PEC 2.40.4(D) / NEC 240.4(D).
+    // maxBreaker = small-conductor overcurrent ceiling per PEC 2.40.4(D) (cf. NEC 240.4(D)).
     const wireData = [
       { mm2: 2.0,  awg: 14,          resistance: 0.01048,  ampacity: 20,  maxBreaker: 15 },
       { mm2: 3.5,  awg: 12,          resistance: 0.00599,  ampacity: 25,  maxBreaker: 20 },

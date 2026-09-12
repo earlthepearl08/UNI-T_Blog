@@ -3206,3 +3206,64 @@ body.drawer-open {
 .ph-compat-block.ph-compat-warn   { background: rgba(217,158,11,0.08); color: #92700a; }
 [data-theme="dark"] .ph-compat-block.ph-compat-danger { color: #fca5a5; background: rgba(239,68,68,0.12); }
 [data-theme="dark"] .ph-compat-block.ph-compat-warn   { color: #f0c74e; background: rgba(217,158,11,0.12); }
+
+/* ==========================================================================
+   WCAG AA: brand red as TEXT in dark mode
+   --uni-red (#E31E24) measures 3.39-4.09:1 on the dark surfaces this site uses
+   (#222 / #1A1A1A / #121212 / #0F0F0F). That clears the 3:1 bar for large text
+   and UI, but fails the 4.5:1 bar for body-size text. --uni-red-light (#FF4D52)
+   measures 4.88-5.87:1 on the same surfaces and passes.
+   Red on LIGHT surfaces (e.g. the white promo button) is deliberately excluded
+   so the saturated brand red is kept where it is already legible.
+   ========================================================================== */
+[data-theme="dark"] a:not([class]):not(.btn):not(.share-btn),
+[data-theme="dark"] .hero-accent,
+[data-theme="dark"] .hero-stat-number,
+[data-theme="dark"] .category-pill:hover,
+[data-theme="dark"] .post-card-category,
+[data-theme="dark"] .post-card-title a:hover,
+[data-theme="dark"] .tag:hover,
+[data-theme="dark"] .post-header .category,
+[data-theme="dark"] .post-content .content-container > p:first-of-type::first-letter,
+[data-theme="dark"] .post-content ul li::marker,
+[data-theme="dark"] .post-content blockquote::before,
+[data-theme="dark"] .post-content a,
+[data-theme="dark"] .contact-card a,
+[data-theme="dark"] .contact-card .icon,
+[data-theme="dark"] .pagination a:hover,
+[data-theme="dark"] .text-red,
+[data-theme="dark"] .breadcrumbs a:hover,
+[data-theme="dark"] .back-to-posts a:hover,
+[data-theme="dark"] .drawer-title .accent,
+[data-theme="dark"] .result-caveat a,
+[data-theme="dark"] .reco-cat-note a {
+  color: var(--uni-red-light, #FF4D52);
+}
+
+/* .btn-outline uses red for both text and border: lighten the text, keep the
+   border reading as brand red. .btn-primary and the share buttons keep white
+   text on their filled backgrounds and must not be caught by this. */
+[data-theme="dark"] .btn-outline:not(.btn-primary) { color: var(--uni-red-light, #FF4D52); }
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .share-btn,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .share-btn:hover { color: #fff; }
+/* Links inside a tinted callout inherit that callout's own link colour rules. */
+[data-theme="dark"] .callout a,
+[data-theme="dark"] .post-safety-warning a,
+[data-theme="dark"] .tool-disclaimer a { color: var(--uni-red-light, #FF4D52); }
+
+/* Remaining small red text that fell below AA on dark surfaces (3.55-3.99:1). */
+.text-red-link { color: var(--uni-red); font-weight: 600; }
+[data-theme="dark"] .text-red-link,
+[data-theme="dark"] .tool-card-tag,
+[data-theme="dark"] .author-bio-label,
+[data-theme="dark"] .card-hint,
+[data-theme="dark"] .modal-category,
+[data-theme="dark"] .quiz-badge,
+[data-theme="dark"] .spec-badge { color: var(--uni-red-light, #FF4D52); }
+
+/* The post header is a dark band in BOTH themes, so red text on it must use the
+   light red regardless of the theme attribute. #E31E24 on #1A1A1A is 3.71:1 —
+   fine for the 24px logo (3:1 bar) but below AA for this 13.6px label. */
+.post-header .category { color: var(--uni-red-light, #FF4D52); }

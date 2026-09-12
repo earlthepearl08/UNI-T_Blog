@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/power-calculator.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912111945">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912112556">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -999,7 +999,7 @@
     // SIZES ARE THE PH-MARKET / PNS-JIS SERIES (2.0, 3.5, 5.5, 8.0, 14, 22, 38…),
     // i.e. the conductors actually sold in Philippine hardware stores — NOT the
     // European IEC series (2.5, 4, 6, 16, 35…) which do not exist locally.
-    // ocpdMax = small-conductor overcurrent ceiling per PEC 2.40.4(D) / NEC 240.4(D):
+    // ocpdMax = small-conductor overcurrent ceiling per PEC 2.40.4(D) (cf. NEC 240.4(D)):
     // the breaker may never exceed this value for these sizes, regardless of ampacity.
     const CU_AMPACITY = [
       { mm2: 2.0,  amp: 20,  ocpdMax: 15 },   // 14 AWG — lighting circuits
@@ -1029,7 +1029,7 @@
       return '325 mm&sup2; or parallel runs (consult a PEE)';
     }
 
-    // Standard overcurrent-device ampere ratings — PEC 2.40.1.6 / NEC 240.6(A).
+    // Standard overcurrent-device ampere ratings — PEC 2.40.1.6 (cf. NEC 240.6(A)).
     // Includes the two most common PH residential ratings (15A, 30A).
     // Apply any 125%/250% load factor at the CALL SITE before calling this.
     const BREAKER_SIZES = [15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 125, 150, 175, 200, 225, 250, 300, 350, 400, 450, 500, 600, 700, 800, 1000];
@@ -1152,7 +1152,7 @@
           <p class="reco-cat-note">Measurement category must equal or exceed the working voltage at the point of
           measurement (IEC&nbsp;61010). Confirm the CAT rating printed on the instrument and its datasheet.</p>
           <p style="text-align:center;margin-top:1rem;">
-            <a href="/tools/compare.html" style="color:var(--uni-red);font-weight:600;">Compare these instruments side-by-side &rarr;</a>
+            <a href="/tools/compare.html" class="text-red-link">Compare these instruments side-by-side &rarr;</a>
           </p>
         </div>
       `;
