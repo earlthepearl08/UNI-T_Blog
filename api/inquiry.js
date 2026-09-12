@@ -46,18 +46,33 @@ function rateLimited(req) {
   return arr.length > RATE.maxPerIp;
 }
 
-const ALLOWED_ORIGINS = [
+// The form posts to a relative /api/inquiry, so any legitimate request is
+// same-origin. Comparing the Origin's host against the request's own Host keeps
+// that working on the production domain, on Vercel preview deployments
+// (…-git-main-*.vercel.app) and on any custom domain added later — a hardcoded
+// list would 403 every submission the moment the domain changed.
+const EXTRA_ALLOWED_ORIGINS = [
   'https://unit-philippines-blog.vercel.app',
-  'https://www.unit-philippines-blog.vercel.app',
 ];
+
+function originAllowed(req, origin) {
+  if (!origin) return true;                       // same-origin requests may omit it
+  if (EXTRA_ALLOWED_ORIGINS.indexOf(origin) !== -1) return true;
+  try {
+    const host = (req.headers['x-forwarded-host'] || req.headers.host || '').toString();
+    return !!host && new URL(origin).host === host;
+  } catch (e) {
+    return false;
+  }
+}
 
 module.exports = async function handler(req, res) {
   const origin = (req.headers.origin || '').toString();
-  const allowed = ALLOWED_ORIGINS.includes(origin);
-  if (allowed) {
+  const allowed = originAllowed(req, origin);
+  if (allowed && origin) {
     res.setHeader('Access-Control-Allow-Origin', origin);
-    res.setHeader('Vary', 'Origin');
   }
+  res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -68,9 +83,8 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
-  // Reject cross-origin posts from anywhere but the site itself. Same-origin
-  // browser requests may omit Origin, so only block when it is present and wrong.
-  if (origin && !allowed) {
+  // Reject cross-origin posts from anywhere but the site itself.
+  if (!allowed) {
     return res.status(403).json({ ok: false, error: 'Forbidden' });
   }
 

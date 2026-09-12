@@ -245,14 +245,14 @@ function renderPosts() {
 function createPostCard(post, featured = false) {
   // Default images by category (transparent PNGs)
   const defaultImages = {
-    'equipment-guides': '/images/products/multimeter-ut61e.png',
-    'safety-techniques': '/images/products/voltage-detector-ut12s.png',
-    'professional': '/images/products/clamp-meter-ut204.png',
-    'faqs': '/images/products/oscilloscope-utd2000.png'
+    'equipment-guides': '/images/products/multimeter-ut61e.webp',
+    'safety-techniques': '/images/products/voltage-detector-ut12s.webp',
+    'professional': '/images/products/clamp-meter-ut204.webp',
+    'faqs': '/images/products/oscilloscope-utd2000.webp'
   };
 
   // Use post image if available, otherwise use category default
-  const imageSrc = post.image || defaultImages[post.category] || '/images/products/multimeter-ut61e.png';
+  const imageSrc = post.image || defaultImages[post.category] || '/images/products/multimeter-ut61e.webp';
 
   // Escape HTML in title to prevent XSS
   const safeTitle = post.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -260,7 +260,7 @@ function createPostCard(post, featured = false) {
   return `
     <article class="post-card">
       <div class="post-card-image">
-        <img src="${imageSrc}" alt="${safeTitle}" loading="lazy" onerror="this.src='/images/products/multimeter-ut61e.png'">
+        <img src="${imageSrc}" alt="${safeTitle}" loading="lazy" onerror="this.src='/images/products/multimeter-ut61e.webp'">
       </div>
       <div class="post-card-content">
         <span class="post-card-category">${post.categoryName}</span>

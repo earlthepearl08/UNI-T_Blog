@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Find Your Perfect Test Instrument | UNI-T Philippines">
 
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912162727">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
   <style>
     /* Quiz-specific styles */
     .quiz-wrapper {
@@ -906,6 +906,7 @@
           { value: 'insulation', icon: '', label: 'Insulation Resistance', desc: 'Megohm testing' },
           { value: 'network', icon: '', label: 'Network Cables', desc: 'LAN & data cabling' },
           { value: 'power_quality', icon: '', label: 'Power Quality', desc: 'Harmonics & power factor' },
+          { value: 'battery', icon: '', label: 'Batteries & Starting Systems', desc: 'CCA, cranking, charging' },
           { value: 'multiple', icon: '', label: 'Multiple Things', desc: 'A bit of everything' }
         ]
       },
@@ -1192,6 +1193,7 @@
       if (a.measurement === 'insulation') { scores.ut501a += 5; }
       if (a.measurement === 'network') { scores.ut685b += 10; }
       if (a.measurement === 'power_quality') { scores.ut285c += 10; }
+      if (a.measurement === 'battery') { scores.ut675a += 10; }
       if (a.measurement === 'multiple') { scores.ut61e += 2; scores.ut61d += 2; scores.ut890c += 2; scores.ut204 += 1; }
 
       // === Budget scoring ===
@@ -1211,7 +1213,7 @@
       if (a.feature === 'accuracy') { scores.ut61e += 3; scores.utd2102 += 2; }
       // Safety = highest CAT rating. Reward the meters genuinely rated CAT III 1000V /
       // CAT IV 600V (UT61E+, UT61D+) and the CAT IV 1000V detector — NOT the UT204+
-      // (only CAT II 600V / CAT III 300V) or UT890C+ (CAT III 600V).
+      // (only CAT II 600V / CAT III 300V) or UT890C (CAT III 600V).
       if (a.feature === 'safety') { scores.ut61e += 2; scores.ut61d += 2; scores.ut12s += 2; }
       if (a.feature === 'data_logging') { scores.ut61e += 3; scores.uti260b += 2; }
       // Only the UTi260B has genuine wireless (WiFi + app); the UT61E+ is USB-wired only.
@@ -1234,19 +1236,23 @@
       //
       // catVolts = the CAT III working voltage. contact:false means the tool
       // never touches a live conductor, so the CAT floor does not apply.
+      // elec = can this instrument actually measure voltage and current?
+      // 'measures something' is not enough: a thermal camera measures temperature
+      // and a battery tester measures CCA, so neither is an answer for a user who
+      // told us they measure voltage and current.
       const SAFETY = {
-        ut61e:   { catVolts: 1000, contact: true,  measures: true  },
-        ut61d:   { catVolts: 1000, contact: true,  measures: true  },
-        ut890c:  { catVolts: 600,  contact: true,  measures: true  },
-        ut139c:  { catVolts: 600,  contact: true,  measures: true  },
-        ut204:   { catVolts: 300,  contact: true,  measures: true  },
-        ut501a:  { catVolts: 600,  contact: true,  measures: true  },
-        ut285c:  { catVolts: 600,  contact: true,  measures: true  },
-        ut12s:   { catVolts: 1000, contact: true,  measures: false }, // detector only
-        utd2102: { catVolts: 0,    contact: true,  measures: true  }, // bench scope
-        ut675a:  { catVolts: 0,    contact: true,  measures: true  }, // 12V battery
-        uti260b: { catVolts: 0,    contact: false, measures: true  }, // thermal, no contact
-        ut685b:  { catVolts: 0,    contact: false, measures: true  }  // de-energized cabling
+        ut61e:   { catVolts: 1000, contact: true,  elec: true  },
+        ut61d:   { catVolts: 1000, contact: true,  elec: true  },
+        ut890c:  { catVolts: 600,  contact: true,  elec: true  },
+        ut139c:  { catVolts: 600,  contact: true,  elec: true  },
+        ut204:   { catVolts: 300,  contact: true,  elec: true  },
+        ut501a:  { catVolts: 600,  contact: true,  elec: false }, // insulation resistance
+        ut285c:  { catVolts: 600,  contact: true,  elec: true  }, // 3-phase power analyser
+        ut12s:   { catVolts: 1000, contact: true,  elec: false }, // detector, measures nothing
+        utd2102: { catVolts: 0,    contact: true,  elec: true  }, // bench scope
+        ut675a:  { catVolts: 0,    contact: true,  elec: false }, // 12V battery CCA
+        uti260b: { catVolts: 0,    contact: false, elec: false }, // thermal
+        ut685b:  { catVolts: 0,    contact: false, elec: false }  // cable tester
       };
 
       // Minimum CAT III working voltage implied by where the user works.
@@ -1258,9 +1264,9 @@
       let eligible = Object.keys(scores).filter(k => {
         const sf = SAFETY[k];
         if (!sf) return true;
-        // A detector that measures nothing must never be the answer for someone
-        // who told us they need to measure voltage/current.
-        if (!sf.measures && (a.measurement === 'voltage_current' || a.measurement === 'multiple')) return false;
+        // An instrument that cannot read volts and amps must never be the answer
+        // for someone who told us that is what they measure.
+        if (!sf.elec && (a.measurement === 'voltage_current' || a.measurement === 'multiple')) return false;
         if (!sf.contact) return true;              // no live contact -> CAT floor n/a
         if (!required) return true;
         return sf.catVolts >= required;
@@ -1288,7 +1294,8 @@
       temperature:   'you need temperature measurement, which needs a thermal instrument',
       insulation:    'you need insulation resistance testing, which needs a megohmmeter',
       network:       'you need network and cable testing, which needs a dedicated cable tester',
-      power_quality: 'you need power-quality analysis, which needs a 3-phase analyser'
+      power_quality: 'you need power-quality analysis, which needs a 3-phase analyser',
+      battery:       'you need battery and starting-system testing, which needs a dedicated battery tester'
     };
     function needNote() {
       const n = NEED_DRIVEN[answers.measurement];
@@ -1314,7 +1321,7 @@
         ut61d: `The UT61D+ hits the sweet spot -- it's capable enough for ${fieldText} but won't overwhelm ${expText}. True RMS accuracy and auto-ranging make it ideal for ${freqText}.`,
         ut139c: `As ${expText}, the UT139C is your ideal starting companion. It's affordable, reliable, has all the essential functions, and the NCV detector adds a nice safety feature for ${fieldText}.`,
         ut12s: `Sometimes you just need to know: "Is there voltage?" The UT12S is a pocket-sized, CAT IV-rated voltage detector that's perfect for quick safety checks during ${freqText}. Simple, reliable, and budget-friendly.`,
-        ut890c: `For ${freqText} in ${fieldText}, you need a multimeter that's tough and dependable. The UT890C+ is a rugged True RMS meter built for the daily grind -- it just works, every time.`,
+        ut890c: `For ${freqText} in ${fieldText}, you need a multimeter that's tough and dependable. The UT890C is a rugged True RMS meter built for the daily grind -- it just works, every time.`,
         ut675a: `For ${fieldText}, battery diagnostics are everything. The UT675A tests CCA, cranking performance, and overall battery health -- exactly what ${expText} needs for reliable ${freqText}.`,
         ut685b: `For network and LAN cabling you need a dedicated cable tester, not a multimeter. The UT685B KIT wiremaps RJ45/RJ11/coax, measures cable length by TDR up to 500m, tests PoE, and locates opens and shorts -- the right tool for structured-cabling work.`,
         ut285c: `Harmonics and power factor can't be read on a plain clamp or DMM -- they need a power quality analyzer. The UT285C measures 3-phase power (kW/kVA/kVAR), power factor, harmonics to the 50th order, THD, and unbalance -- built for ${fieldText} power-quality audits.`
@@ -1348,10 +1355,12 @@
 
       // A non-contact detector indicates presence of voltage only. It has well
       // known false-negative modes and must never be used to prove a circuit dead.
+      // The UT12S is never a primary result (it measures nothing), so tying this
+      // warning to it alone left it dead. Show it to anyone who picked safety as
+      // their priority — the reader most likely to reach for an NCV pen.
       const ncvNote = document.getElementById('ncvWarning');
       if (ncvNote) {
-        const isNCV = (productKey === 'ut12s');
-        ncvNote.hidden = !isNCV;
+        ncvNote.hidden = !(productKey === 'ut12s' || answers.feature === 'safety');
       }
 
       // Result subtitle

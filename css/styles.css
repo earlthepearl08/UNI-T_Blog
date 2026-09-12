@@ -2675,7 +2675,7 @@ body.drawer-open {
   border-radius: 20px;
   padding: 3rem 3rem 3rem;
   display: grid;
-  grid-template-columns: 1.minmax(0, 5fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   gap: 3rem;
   align-items: center;
   color: #fff;
@@ -3293,9 +3293,25 @@ img { max-width: 100%; height: auto; }
    ========================================================================== */
 @media print {
   .header, .side-drawer, .drawer-backdrop, .hamburger-btn, .back-to-top,
-  .footer, .contact-fab, .floating-contact, .section-nav, .calc-tabs,
-  .reco-section, .post-cta-card, .share-btn, .breadcrumbs, .pagination,
+  .footer, .kfab, .kfab-wrap, [class^="kfab"], [class*=" kfab"],
+  .contact-fab, .floating-contact, .section-nav, .calc-tabs,
+  .post-cta-card, .share-btn, .breadcrumbs, .pagination,
   .catalog-promo, .tools-hero .btn, .cta-section { display: none !important; }
+
+  /* Drop the product CARDS from a printed result, but KEEP the measurement-category
+     note that sits in the same section — that sentence is the safety guidance the
+     printed sheet most needs. */
+  .reco-section .reco-grid,
+  .reco-section h3,
+  .reco-section .reco-card { display: none !important; }
+  .reco-section .reco-cat-note {
+    display: block !important;
+    border: 1px solid #999 !important;
+    padding: 6pt 8pt !important;
+    margin-top: 8pt !important;
+    color: #000 !important;
+    text-align: left !important;
+  }
 
   :root, body { background: #fff !important; color: #000 !important; }
   body { font-size: 11pt; }
@@ -3351,4 +3367,38 @@ img { max-width: 100%; height: auto; }
   padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
   white-space: nowrap; border: 0;
+}
+
+/* The `hidden` attribute is a UA-stylesheet rule, so ANY class that sets display
+   silently defeats it (.tool-disclaimer{display:flex} kept the NCV warning on
+   screen for every result; .result-image{display:block} did the same for the
+   placeholder). Make hidden win. */
+[hidden] { display: none !important; }
+
+/* Footer column headings moved from <h4> to <h3>; the footer is dark in both
+   themes, so they need the light colour explicitly or they vanish in light mode
+   where h3 inherits the dark body colour. */
+.footer h3, .footer-links h3, .footer-contact h3, .footer-column h3 {
+  color: #fff;
+}
+.footer .footer-legal a { color: rgba(255,255,255,0.75); }
+.footer .footer-legal a:hover { color: #fff; }
+
+/* The catalog promo card has a saturated red background, so any button sitting
+   on it must stay white. The dark-mode .btn-outline rule above was repainting
+   them #FF4D52 — light red on red, measured 1.0:1, i.e. invisible. */
+.catalog-promo-cta .btn,
+.catalog-promo-cta .btn-outline,
+[data-theme="dark"] .catalog-promo-cta .btn,
+[data-theme="dark"] .catalog-promo-cta .btn-outline,
+.btn-outline-white,
+[data-theme="dark"] .btn-outline-white {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.catalog-promo-cta .btn-primary,
+[data-theme="dark"] .catalog-promo-cta .btn-primary {
+  color: var(--uni-red);
+  background: #fff;
+  border-color: #fff;
 }

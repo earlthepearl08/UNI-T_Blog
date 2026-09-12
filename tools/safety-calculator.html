@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://unit-philippines-blog.vercel.app/tools/safety-calculator.html">
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912162727">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
 
   <style>
     /* ===== Tool-specific styles ===== */
@@ -777,7 +777,7 @@
 
     <!-- ==================== WIRE SIZE CALCULATOR ==================== -->
     <div class="calc-panel" id="panel-wire" role="tabpanel">
-      <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Wire Size Calculator</h2>
+      <span id="wire"></span><h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Wire Size Calculator</h2>
       <p style="color:var(--text-muted);margin-bottom:1.5rem;">Find the recommended wire gauge based on Philippine Electrical Code standards (copper conductors).</p>
 
       <div class="calc-grid">
@@ -1361,9 +1361,22 @@
     // Smallest standard breaker >= amps, capped by a conductor's small-conductor limit.
     const STD_BREAKERS = [15,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400];
     function breakerFor(w) {
-      // Protect the conductor: largest standard breaker <= ampacity, but never above maxBreaker.
-      let b = STD_BREAKERS[0];
-      for (const s of STD_BREAKERS) { if (s <= w.ampacity) b = s; }
+      // PEC 2.40.4(B) / NEC 240.4(B): where a conductor's ampacity does not
+      // correspond to a standard overcurrent rating, the NEXT HIGHER standard
+      // rating is permitted for circuits up to 800 A. Taking only the largest
+      // rating at-or-below ampacity left 251-285 A with no legal conductor at
+      // all (150 mm2 carries 285 A but was capped at a 250 A breaker), and
+      // needlessly pushed several other loads up a size.
+      let atOrBelow = STD_BREAKERS[0], nextUp = null, exact = false;
+      for (const s of STD_BREAKERS) {
+        if (s === w.ampacity) exact = true;
+        if (s <= w.ampacity) atOrBelow = s;
+        else if (nextUp === null) nextUp = s;
+      }
+      let b = atOrBelow;
+      if (!exact && nextUp !== null && nextUp <= 800) b = nextUp;
+      // 2.40.4(D) small-conductor rule is an absolute ceiling and overrides the
+      // round-up allowance above.
       if (w.maxBreaker && b > w.maxBreaker) b = w.maxBreaker;
       return b;
     }

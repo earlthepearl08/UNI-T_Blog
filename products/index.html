@@ -36,7 +36,7 @@
   </script>
 
   <link rel="alternate" type="application/rss+xml" title="UNI-T Philippines Blog" href="/rss.xml">
-  <link rel="stylesheet" href="/css/styles.css?v=20260912162727">
+  <link rel="stylesheet" href="/css/styles.css?v=20260912182015">
 
   <style>
     /* ===== Catalog page styles ===== */
@@ -1840,7 +1840,7 @@
           : '';
 
         const specsBtn = p.officialUrl
-          ? `<a class="card-btn card-btn-outline" href="${encodeURI(p.officialUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${safeModel} on the UNI-T official site">Full specs</a>`
+          ? `<a class="card-btn card-btn-outline" href="${escapeHtml(p.officialUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${safeModel} on the UNI-T official site">Full specs</a>`
           : '';
 
         body.innerHTML = `
@@ -1852,7 +1852,7 @@
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
           <div class="card-actions">
-            <a class="card-btn card-btn-primary" href="${encodeURI(p.kinmoSearchUrl || '#')}" aria-label="Buy ${safeModel} on Kinmo">
+            <a class="card-btn card-btn-primary" href="${escapeHtml(p.kinmoSearchUrl || '#')}" aria-label="Buy ${safeModel} on Kinmo">
               Buy on Kinmo
             </a>
             ${specsBtn}
@@ -1903,7 +1903,7 @@
         const officialLabel = product.officialUrl
           ? (product.officialUrlKind === 'series' ? 'Full specs (series page)' : 'Full specs on UNI-T')
           : 'Search UNI-T';
-        const officialBtn = `<a class="modal-btn modal-btn-outline" href="${encodeURI(uniTUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${escapeHtml(product.model)} on the UNI-T official site">${officialLabel} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg></a>`;
+        const officialBtn = `<a class="modal-btn modal-btn-outline" href="${escapeHtml(uniTUrl)}" target="_blank" rel="noopener" aria-label="Full specifications for ${escapeHtml(product.model)} on the UNI-T official site">${officialLabel} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg></a>`;
 
         const imageHtml = (product.image
           ? `<img id="modalProductImg" src="${encodeURI(product.image)}" alt="UNI-T ${escapeHtml(product.model)}" referrerpolicy="no-referrer">`
@@ -1936,11 +1936,11 @@
             }
             ${allSpecsChips ? `<div class="modal-specs"><div class="modal-specs-label">Key Specifications</div><div class="modal-chips">${allSpecsChips}</div>
               <p class="modal-specs-more">These are headline figures only. ${product.officialUrl
-                ? `<a href="${encodeURI(product.officialUrl)}" target="_blank" rel="noopener">Read the full specification on UNI-T\u2019s site &rarr;</a>`
+                ? `<a href="${escapeHtml(product.officialUrl)}" target="_blank" rel="noopener">Read the full specification on UNI-T\u2019s site &rarr;</a>`
                 : `No UNI-T page is published for this model &mdash; <a href="/contact.html#quote">ask Kinmo for the datasheet</a>.`}</p></div>` : ''}
             ${regionsHtml}
             <div class="modal-actions">
-              <a class="modal-btn modal-btn-primary" href="${encodeURI(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">
+              <a class="modal-btn modal-btn-primary" href="${escapeHtml(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">
                 Buy on Kinmo
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg>
               </a>
