@@ -129,6 +129,11 @@ function generatePostPage(post, allPosts) {
 
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="canonical" href="https://unit-philippines-blog.vercel.app/posts/${post.slug}.html">
+  <!-- Vercel Web Analytics: aggregate page views only. No cookies, no
+       cross-site tracking, no personal data, so it needs no consent banner.
+       Also has to be switched on once at Vercel -> Project -> Analytics. -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -347,6 +352,11 @@ function generatePostsIndex() {
   <title>All Articles | UNI-T Philippines</title>
   <meta name="description" content="Browse all articles about UNI-T test instruments, guides, and tutorials.">
   <link rel="stylesheet" href="../css/styles.css">
+  <!-- Vercel Web Analytics: aggregate page views only. No cookies, no
+       cross-site tracking, no personal data, so it needs no consent banner.
+       Also has to be switched on once at Vercel -> Project -> Analytics. -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <header class="header">
