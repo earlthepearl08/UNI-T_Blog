@@ -8,8 +8,9 @@
  * Setup notes are in docs/LEAD-DELIVERY.md.
  */
 
-// Leave blank for no email notification, or put an address here to get one per lead.
-var NOTIFY_EMAIL = '';
+// A copy of every lead also goes here. The row in the sheet is the record; this
+// is the notification, so nobody has to remember to check the sheet.
+var NOTIFY_EMAIL = 'e2shop.kinmo@gmail.com';
 
 var HEADERS = [
   'Received', 'Name', 'Company', 'Email', 'Phone',
@@ -44,6 +45,7 @@ function doPost(e) {
     ]);
 
     if (NOTIFY_EMAIL) {
+      try {
       MailApp.sendEmail({
         to: NOTIFY_EMAIL,
         subject: 'New UNI-T inquiry: ' + (lead.product || 'general') + ' — ' + (lead.name || ''),
@@ -59,6 +61,10 @@ function doPost(e) {
           '', 'From page: ' + (lead.source || '')
         ].join('\n')
       });
+      } catch (mailErr) {
+        // Row is already in the sheet; the notification is best-effort.
+        console.error('lead saved but notification failed: ' + mailErr);
+      }
     }
 
     return json({ ok: true });

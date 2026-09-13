@@ -162,9 +162,32 @@ module.exports = async function handler(req, res) {
   async function deliverTo(label, url, opts) {
     try {
       const r = await fetch(url, Object.assign({ signal: AbortSignal.timeout(8000) }, opts));
-      if (r.ok) { delivered = true; return; }
-      const detail = await r.text().catch(() => '');
-      failures.push(label + ' HTTP ' + r.status + ' ' + detail.slice(0, 300));
+      const body = await r.text().catch(() => '');
+
+      if (!r.ok) {
+        failures.push(label + ' HTTP ' + r.status + ' ' + body.slice(0, 300));
+        return;
+      }
+
+      // A 200 is still not proof of delivery. Google Apps Script answers 200
+      // even when doPost threw and returned {ok:false}, and if the web app's
+      // access is set to anything but "Anyone" it answers 200 with an HTML
+      // sign-in page. Trusting the status alone would reintroduce exactly the
+      // bug this function exists to prevent, one layer down.
+      if (/^\s*<(?:!doctype|html)/i.test(body)) {
+        failures.push(label + ' returned an HTML page instead of a response — the ' +
+          'webhook is probably not publicly reachable (Apps Script access must be "Anyone")');
+        return;
+      }
+
+      let parsed = null;
+      try { parsed = JSON.parse(body); } catch (e) { /* a non-JSON 200 is acceptable */ }
+      if (parsed && parsed.ok === false) {
+        failures.push(label + ' returned ok:false ' + String(parsed.error || '').slice(0, 300));
+        return;
+      }
+
+      delivered = true;
     } catch (e) {
       failures.push(label + ' ' + (e && e.message ? e.message : e));
     }
