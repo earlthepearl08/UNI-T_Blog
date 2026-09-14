@@ -816,7 +816,7 @@
     <!-- ==================== TAB 4: MOTOR HP ==================== -->
     <div class="calc-panel" id="panel-motor" role="tabpanel">
       <h2 style="font-family:var(--font-heading);margin-bottom:0.25rem;">Motor HP Calculator</h2>
-      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Quick reference for motor full-load amps (FLA), locked-rotor amps (LRA), and starter sizing.</p>
+      <p style="color:var(--text-muted);margin-bottom:1.5rem;">Quick reference for motor full-load amps (FLA) and locked-rotor amps (LRA). Starter selection needs the motor nameplate and is not calculated here.</p>
 
       <div class="calc-grid">
         <div class="form-group">
@@ -852,14 +852,14 @@
         <div class="form-group">
           <label for="motorSF">Service Factor</label>
           <input type="number" id="motorSF" value="1.0" min="1.0" max="1.5" step="0.05">
-          <span class="helper-text">Continuous-duty motors: 1.15. Standard: 1.0</span>
+          <span class="helper-text">Read it off the nameplate (often 1.0 or 1.15). It is not a duty rating &mdash; it sets the overload trip: 125% of nameplate FLA at SF&nbsp;&ge;&nbsp;1.15, otherwise 115%. Do not use the service-factor margin to carry load continuously.</span>
         </div>
       </div>
 
       <div class="formula-card">
         <strong>FLA (1P):</strong> I = (HP &times; 746) / (V &times; PF &times; &eta;)<br>
         <strong>FLA (3P):</strong> I = (HP &times; 746) / (&radic;3 &times; V &times; PF &times; &eta;)<br>
-        <strong>LRA &asymp; 6 &times; FLA</strong> (Code G/H letter typical)
+        <strong>LRA &asymp; 4&times; to 10&times; FLA</strong> &mdash; set by the nameplate code letter, which this tool does not ask for
       </div>
 
       <div id="motorResult" class="result-area"></div>
@@ -1039,9 +1039,9 @@
       { name: 'UT210E', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, catSrc: 'unverified', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini AC/DC clamp meter, 100A range. Perfect for residential and light commercial.', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, catSrc: 'unit', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC True RMS clamp meter, 600A range. Workhorse for industrial work.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT216C', cat: 'CAT II 1000V / CAT III 600V', catVolts: 600, catSrc: 'unit', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter with frequency, 600A.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT202A', cat: 'CAT III 600V', catVolts: 600, catSrc: 'unverified', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT206A', cat: 'CAT III 600V', catVolts: 600, catSrc: 'unverified', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT203', cat: 'CAT III 600V', catVolts: 600, catSrc: 'unverified', type: 'clamp', img: '/images/products/ut203.webp', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, catSrc: 'unit', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'Reliable AC clamp meter, 600A with data hold.', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, catSrc: 'unit', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range. Heavy industrial / motor sizing.', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT203', cat: 'CAT II 600V / CAT III 300V', catVolts: 300, catSrc: 'unit', type: 'clamp', img: '/images/products/ut203.webp', desc: 'AC/DC clamp meter, 400A. Compact workhorse.', currentRange: 400, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
 
     // ===== Wire & breaker lookup tables (Philippine Electrical Code) =====
@@ -1524,9 +1524,14 @@
       // Service factor amps
       const SFA = FLA * SF;
 
-      // LRA — locked-rotor amps; ~6x FLA is a NEMA code-letter G/H approximation.
-      // Small motors can run 7-10x; treat as an estimate for inrush only.
-      const LRA = FLA * 6;
+      // Locked-rotor current is set by the nameplate CODE LETTER, which this tool
+      // never asks for. Across the letter range it spans roughly 4x to 10x FLA, so
+      // publishing a single 6x number as "the" LRA — and then sizing a clamp meter
+      // from it — sold the customer an instrument on an assumption they were never
+      // shown. Show the range, and size the instrument off the TOP of it so the
+      // recommendation cannot come up short.
+      const LRA_LOW = FLA * 4;
+      const LRA_HIGH = FLA * 10;
 
       // PEC Article 4.30 (harmonized with NEC 430) sizing: branch-circuit
       // short-circuit & ground-fault protection. Inverse-time breaker = 250% of FLA.
@@ -1537,18 +1542,16 @@
       const wireAmps = FLA * 1.25;
       const wireSize = suggestWireSize(wireAmps);
 
-      // Recommended starter size — based on FLA buckets
-      let starter;
-      if (FLA <= 9) starter = 'NEMA Size 00 / IEC 6A';
-      else if (FLA <= 18) starter = 'NEMA Size 0 / IEC 12A';
-      else if (FLA <= 27) starter = 'NEMA Size 1 / IEC 18A';
-      else if (FLA <= 45) starter = 'NEMA Size 2 / IEC 32A';
-      else if (FLA <= 90) starter = 'NEMA Size 3 / IEC 65A';
-      else if (FLA <= 135) starter = 'NEMA Size 4 / IEC 95A';
-      else if (FLA <= 270) starter = 'NEMA Size 5 / IEC 185A';
-      else starter = 'NEMA Size 6 or larger / Soft-starter / VFD';
+      // The starter badge that used to sit here picked a NEMA size from FLA
+      // buckets. NEMA starters are selected by HORSEPOWER AND VOLTAGE, not by
+      // continuous current, and on this tool's own defaults the bucket answer was
+      // a full frame size too small at 2 HP, 5 HP and 10 HP — three of the four
+      // commonest PH motor ratings. The paired "IEC 6A / 12A / 18A" ladder was
+      // worse: IEC contactors are rated by AC-3 current at a utilisation category
+      // and there is no standard IEC size ladder mapping onto NEMA. Removed rather
+      // than patched: starter selection needs the motor nameplate, not a formula.
 
-      const kW_input = (HP * 0.746) / eta;
+      const kW_input = (HP * 746 / 1000) / eta;
 
       out.innerHTML = `
         <div class="result-card primary">
@@ -1559,8 +1562,9 @@
           </div>
           <div class="result-row">
             <div class="result-item">
-              <div class="result-label">Locked Rotor (LRA)</div>
-              <div class="result-value">${fmt(LRA, 1)} <small>A</small></div>
+              <div class="result-label">Locked Rotor (LRA), estimated</div>
+              <div class="result-value">${fmt(LRA_LOW, 0)}&ndash;${fmt(LRA_HIGH, 0)} <small>A</small></div>
+              <div class="result-sub">4&times;&ndash;10&times; FLA. Read the nameplate code letter for the real figure.</div>
             </div>
             <div class="result-item">
               <div class="result-label">Service Factor Amps</div>
@@ -1585,21 +1589,21 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="9" r="1.5"/></svg>
               Inverse-Time Breaker: ${breakerLabel(breaker)} (250% &times; FLA)
             </span>
-            <span class="spec-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
-              Starter: ${starter}
-            </span>
           </div>
           <p class="result-explain" style="margin-top:0.75rem;">
-            <strong>PEC Article 4.30</strong> (harmonized with NEC 430) requires conductors sized at 125% of motor FLA. Inverse-time breakers may go up to 250% of FLA (or 400% for non-time-delay fuses) for short-circuit and ground-fault protection &mdash; not overload. Overload protection is set at 115-125% of nameplate FLA in the starter. <strong>Note:</strong> this uses the <em>calculated</em> FLA; for code-legal sizing use the motor full-load-current value from the PEC FLC table (4.30 series), which may be higher.
+            <strong>PEC Article 4.30</strong> (harmonized with NEC 430) requires conductors sized at 125% of motor full-load current. For short-circuit and ground-fault protection &mdash; <em>not</em> overload &mdash; the maxima are 250% for an inverse-time breaker, 300% for a non-time-delay fuse and 175% for a dual-element time-delay fuse (PEC Table 4.30.52 / NEC Table 430.52). Those percentages are for squirrel-cage and synchronous AC motors; <strong>wound-rotor and DC motors are 150%</strong> in the same table, and this tool does not ask which you have.
+            <br><br>
+            <strong>This figure is not code-legal sizing.</strong> It is computed from the horsepower, power factor and efficiency you entered. PEC Art. 4.30 requires the conductor and the breaker to be sized from the <em>full-load-current table</em> (the 4.30 series, cf. NEC Tables 430.248/430.250), not from a calculated or nameplate current &mdash; the table value is often higher, so this result can be a full trade size small. Nameplate current is used only to set the overload device.
+            <br><br>
+            <strong>Overload protection is not calculated here at all.</strong> The breaker above protects against short circuits only. A motor also needs a separate running-overload device, typically set at 115&ndash;125% of <em>nameplate</em> FLA depending on service factor (PEC 4.30 Part III / NEC 430.32). Without it the conductor is protected only by a device rated 250% of its load.
           </p>
         </div>
 
         <div class="callout info">
-          <div><strong>Inrush:</strong> The ${fmt(LRA, 0)}A locked-rotor current (&asymp;6&times; FLA estimate) lasts only a few cycles during start. Use Type D MCBs or motor-rated breakers, or step up to a soft-starter / VFD if frequent starts cause nuisance trips.</div>
+          <div><strong>Inrush:</strong> The estimated ${fmt(LRA_LOW, 0)}&ndash;${fmt(LRA_HIGH, 0)}A locked-rotor current lasts only a few cycles during start. Use Type D MCBs or motor-rated breakers, or step up to a soft-starter / VFD if frequent starts cause nuisance trips.</div>
         </div>`}
 
-        ${clampRecoHTML(LRA, 'Recommended Clamp Meter (sized for locked-rotor current)', sys.mv, sys)}
+        ${clampRecoHTML(LRA_HIGH, 'Recommended Clamp Meter (sized for the upper locked-rotor estimate)', sys.mv, sys)}
       `;
     }
 

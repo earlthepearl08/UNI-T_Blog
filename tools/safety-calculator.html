@@ -792,6 +792,15 @@
         <div class="form-group">
           <label for="wireCurrent">Current Load (Amps)</label>
           <input type="number" id="wireCurrent" placeholder="e.g. 20" step="any" min="0">
+          <span class="helper-text">Enter the actual load. Do not pre-multiply &mdash; use the selector.</span>
+        </div>
+        <div class="form-group">
+          <label for="wireDuty">Load Type</label>
+          <select id="wireDuty">
+            <option value="1.25" selected>Continuous &mdash; on 3 hours or more (&times;125%)</option>
+            <option value="1">Non-continuous (&times;100%)</option>
+          </select>
+          <span class="helper-text">Aircon, lighting and water heaters are continuous.</span>
         </div>
         <div class="form-group">
           <label for="wireLength">One-Way Wire Length (meters)</label>
@@ -868,9 +877,10 @@
           <button class="swap-btn" onclick="swapPower()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4"/></svg>
           </button>
-          <input type="number" id="convPowerB" placeholder="746" step="any" oninput="convertPower('b')">
+          <input type="number" id="convPowerB" placeholder="745.7" step="any" oninput="convertPower('b')">
           <span class="unit-label">W</span>
         </div>
+        <p class="helper-text" style="margin-top:0.5rem;">1&nbsp;HP&nbsp;=&nbsp;745.7&nbsp;W exactly. Motor and code calculations conventionally round this to 746&nbsp;W, so a figure from the <a href="/tools/power-calculator.html#motor">motor calculator</a> can differ by about 0.04%.</p>
       </div>
 
       <!-- PSI <-> Bar <-> kPa -->
@@ -1050,13 +1060,13 @@
       { name: 'UT139C', cat: 'CAT III 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut139c.webp', desc: 'True RMS multimeter, ideal for general electrical work', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT890C', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut890c.webp', desc: 'Professional true RMS multimeter with backlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT890D', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unverified', type: 'multimeter', img: '/images/products/ut890d.webp', desc: 'Advanced multimeter with NCV and LED flashlight', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT89XD', cat: 'CAT III 1000V / CAT IV 600V', catSrc: 'unverified', type: 'multimeter', img: '/images/products/ut89xd.webp', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT89XD', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut89xd.webp', desc: 'Industrial-grade true RMS multimeter with LED test', currentRange: 20, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT195DS', cat: 'CAT III 1000V / CAT IV 600V', catSrc: 'unit', type: 'multimeter', img: '/images/products/ut195ds.webp', desc: 'IP65 waterproof professional multimeter', currentRange: 10, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT204+', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unit', type: 'clamp', img: '/images/products/clamp-meter-ut204.webp', desc: 'AC/DC clamp meter, 600A range', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT216C', cat: 'CAT II 1000V / CAT III 600V', catSrc: 'unit', type: 'clamp', img: '/images/products/ut216c.webp', desc: 'True RMS AC/DC clamp meter, 600A', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT206A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT206A', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unit', type: 'clamp', img: '/images/products/ut206a.webp', desc: 'AC clamp meter, 1000A range with auto power off', currentRange: 1000, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT210E', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut210e.webp', desc: 'Mini clamp meter, AC/DC 100A, compact design', currentRange: 100, link: 'https://kinmo.com/product-category/uni-t/' },
-      { name: 'UT202A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
+      { name: 'UT202A', cat: 'CAT II 600V / CAT III 300V', catSrc: 'unit', type: 'clamp', img: '/images/products/ut202a.webp', desc: 'AC clamp meter, 600A with data hold', currentRange: 600, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT501A', cat: 'CAT III 600V', catSrc: 'unverified', type: 'insulation', img: '/images/products/ut501a.webp', desc: 'Insulation resistance tester, 1000V/2G ohm', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
       { name: 'UT12S', cat: 'CAT IV 1000V', catSrc: 'unverified', type: 'detector', img: '/images/products/voltage-detector-ut12s.webp', desc: 'Non-contact voltage detector with LED flashlight', currentRange: 0, link: 'https://kinmo.com/product-category/uni-t/' },
     ];
@@ -1382,6 +1392,18 @@
     ];
     // Smallest standard breaker >= amps, capped by a conductor's small-conductor limit.
     const STD_BREAKERS = [15,20,25,30,35,40,45,50,60,70,80,90,100,110,125,150,175,200,225,250,300,350,400];
+    // The device the LOAD calls for: smallest standard rating that carries the
+    // design current, never exceeding what the conductor may be protected at.
+    // breakerFor(w) below is the conductor ceiling and takes no load argument —
+    // the two are different questions and were being answered with one number.
+    function breakerForLoad(designCurrent, w) {
+      const ceiling = breakerFor(w);
+      for (const r of STD_BREAKERS) {
+        if (r >= designCurrent) return Math.min(r, ceiling);
+      }
+      return ceiling;
+    }
+
     function breakerFor(w) {
       // PEC 2.40.4(B) / NEC 240.4(B): where a conductor's ampacity does not
       // correspond to a standard overcurrent rating, the NEXT HIGHER standard
@@ -1426,6 +1448,13 @@
       // R_per_m <= maxDropVolts / (vdFactor * I * L)
       const maxResistance = maxDropVolts / (vdFactor * current * length);
 
+      // PEC 2.10.1.19(A) / 2.10.2.0(A) (cf. NEC 210.19(A)(1), 210.20(A)): both the
+      // conductor and the overcurrent device must be rated at least 125% of a
+      // continuous load. Voltage drop stays on the ACTUAL current — it is a real
+      // operating condition, not a code multiplier.
+      const dutyFactor = parseFloat((document.getElementById('wireDuty') || {}).value || '1.25');
+      const designCurrent = current * dutyFactor;
+
       // Find wire that meets both ampacity and voltage drop
       let recommended = null;
       let tableRows = '';
@@ -1434,17 +1463,19 @@
         const w = wireData[i];
         const vDrop = vdFactor * current * w.resistance * length;
         const vDropPct = (vDrop / voltage) * 100;
-        const meetsAmpacity = current <= w.ampacity;
+        const meetsAmpacity = designCurrent <= w.ampacity;
         const meetsDrop = w.resistance <= maxResistance;
         // A conductor is only usable if a standard overcurrent device exists that
         // both protects it and carries the load. Without this test the tool
         // returned 2.0 mm2 for a 20 A load while printing "Max Breaker 15 A" —
         // a self-contradictory result that violates PEC 2.40.4(D).
         const ocpd = breakerFor(w);
-        const meetsOCPD = ocpd >= current;
+        const meetsOCPD = ocpd >= designCurrent;
         const meets = meetsAmpacity && meetsDrop && meetsOCPD;
 
-        if (meets && !recommended) recommended = { ...w, vDrop, vDropPct, ocpd };
+        if (meets && !recommended) {
+          recommended = { ...w, vDrop, vDropPct, ocpd, loadBreaker: breakerForLoad(designCurrent, w) };
+        }
 
         const isReco = recommended && recommended.mm2 === w.mm2;
         const sizeLabel = w.mm2 + ' mm&sup2;';
@@ -1515,12 +1546,13 @@
               <div class="result-value">${recommended.ampacity} <small>A</small></div>
             </div>
             <div class="result-item">
-              <div class="result-label">Max Breaker</div>
-              <div class="result-value">${breakerFor(recommended)} <small>A</small></div>
+              <div class="result-label">Breaker for this load</div>
+              <div class="result-value">${recommended.loadBreaker} <small>A</small></div>
+              <div class="result-sub">ceiling for this conductor: ${breakerFor(recommended)} A</div>
             </div>
           </div>
           <p class="result-explain" style="margin-top:0.75rem;">
-            Protect this run with a breaker no larger than <strong>${breakerFor(recommended)}A</strong>${recommended.maxBreaker ? ` (small-conductor rule, PEC 2.40.4(D))` : ''}. For a continuous load (on &gt;3&nbsp;hours), enter 125% of the actual load current above. PH nominal voltage is 230V single-phase / 400V three-phase.
+            Sized for a design current of <strong>${designCurrent.toFixed(1)}A</strong>${dutyFactor > 1 ? ` (125% &times; ${current}A continuous load)` : ` (${current}A non-continuous)`}. A <strong>${recommended.loadBreaker}A</strong> device suits this load; <strong>${breakerFor(recommended)}A</strong> is the largest this conductor may ever be protected at${recommended.maxBreaker ? ` under the small-conductor rule (PEC 2.40.1.4(d))` : ''} &mdash; that is a ceiling, not a recommendation. PH nominal voltage is 230V single-phase / 400V three-phase.
           </p>
         </div>
         <div class="result-card">
