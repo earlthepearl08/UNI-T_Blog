@@ -1073,7 +1073,24 @@
     let answers = {};
     let questionHistory = [];
 
+    // A shared link carries ?r=<product>; jump straight to that result.
+    (function deepLinkToResult() {
+      try {
+        const key = new URLSearchParams(location.search).get('r');
+        if (!key || !products[key]) return;
+        document.addEventListener('DOMContentLoaded', function () {
+          const welcome = document.getElementById('quizWelcome');
+          if (welcome) welcome.style.display = 'none';
+          showResults(key);
+          const results = document.getElementById('quizResults');
+          if (results) results.scrollIntoView({ block: 'start' });
+        });
+      } catch (e) {}
+    })();
+
     function startQuiz() {
+      const w = document.getElementById('quizWelcome');
+      if (w) w.style.removeProperty('display');
       document.getElementById('quizWelcome').style.display = 'none';
       document.getElementById('quizProgress').style.display = 'block';
       renderQuestions();
@@ -1339,8 +1356,8 @@
     }
 
     // ========== RESULTS ==========
-    function showResults() {
-      const productKey = getRecommendation();
+    function showResults(forcedKey) {
+      const productKey = forcedKey || getRecommendation();
       const product = products[productKey];
       const reason = buildReason(productKey);
 
@@ -1376,7 +1393,10 @@
 
       // Set up share links
       const shareText = `I got the ${product.name} on the UNI-T Instrument Finder Quiz! Find your perfect test instrument:`;
-      const shareUrl = window.location.href;
+      // Put the result in the address bar so a shared link lands on the result,
+      // not on question one.
+      try { history.replaceState({}, '', location.pathname + '?r=' + encodeURIComponent(productKey)); } catch (e) {}
+      const shareUrl = location.origin + location.pathname + '?r=' + encodeURIComponent(productKey);
       document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
       document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
 
@@ -1401,6 +1421,7 @@
     }
 
     function retakeQuiz() {
+      try { history.replaceState({}, '', location.pathname); } catch (e) {}
       answers = {};
       questionHistory = [];
       currentQuestion = 0;
