@@ -988,7 +988,7 @@
             <tr>
               <th>Wire Size (mm&sup2;)</th>
               <th>Ampacity (Cu, 75&deg;C)</th>
-              <th>Max Breaker (A)</th>
+              <th>Breaker at or below ampacity (A)</th>
               <th>Typical PH Use</th>
             </tr>
           </thead>
@@ -1008,7 +1008,7 @@
         </table>
       </div>
       <p class="section-desc" style="margin-top:0.75rem;font-size:0.85rem;">
-        *5.5&nbsp;mm&sup2; carries ~35&nbsp;A but the breaker is capped at 30&nbsp;A by the small-conductor rule (PEC 2.40.4(D)). The conductor ampacity &mdash; not the breaker &mdash; is the design starting point; the breaker must protect the wire. Derate for ambient &gt;30&deg;C and for more than 3 current-carrying conductors in a raceway. For a single motor, size the conductor at &ge;125% of motor full-load current (PEC Art. 4.30). Nominal voltages: 230V single-phase; 400V/230V three-phase (legacy 380V/220V).
+        *5.5&nbsp;mm&sup2; carries ~35&nbsp;A but the breaker is capped at 30&nbsp;A by the small-conductor rule (PEC 2.40.4(D)). The conductor ampacity &mdash; not the breaker &mdash; is the design starting point; the breaker must protect the wire. <strong>This column rounds DOWN</strong> to the largest standard rating at or below ampacity. The <a href="/tools/safety-calculator.html#wire">wire-size calculator</a> may show a higher figure for the same conductor, because it applies the next-higher-standard-rating allowance (PEC 2.40.1.4(b) / NEC 240.4(B)) &mdash; that is a permitted ceiling, not a recommendation. Size the device for your actual load, not for the conductor. Derate for ambient &gt;30&deg;C and for more than 3 current-carrying conductors in a raceway. For a single motor, size the conductor at &ge;125% of motor full-load current (PEC Art. 4.30). Nominal voltages: 230V single-phase; 400V/230V three-phase (legacy 380V/220V).
       </p>
       <div class="wire-instrument" style="margin-top:1rem;max-width:600px;">
         <strong>Pro Tip:</strong> Always verify wire gauge with a UNI-T UT61E+ multimeter (continuity and resistance check) before connecting to a breaker. Use a UT210E clamp meter to confirm actual load current.
@@ -1122,19 +1122,19 @@
     const wireData = [
       {
         color: 'Black', hex: '#1A1A1A', textColor: '#fff',
-        function: 'Hot / Line (Phase A)', voltage: '220V',
-        description: 'The primary hot wire in Philippine residential wiring. Carries 220V from the service panel to outlets and switches.',
+        function: 'Hot / Line (Phase A)', voltage: '230V',
+        description: 'The primary hot wire in Philippine residential wiring. Carries 230V from the service panel to outlets and switches.',
         location: 'Found in most residential circuits from the panel to outlets and lighting.',
         warning: 'ALWAYS assume black wires are live. Never touch without verifying with a voltage detector first.',
         instrument: 'Use a UNI-T UT12S non-contact voltage detector to quickly check if the wire is energized before handling.'
       },
       {
         color: 'Red', hex: '#E31E24', textColor: '#fff',
-        function: 'Hot / Line (Phase B)', voltage: '220V',
+        function: 'Hot / Line (Phase B)', voltage: '230V',
         description: 'Second hot wire in a split-phase or multi-wire branch circuit. Also used as a switch leg or traveler wire in 3-way switch installations.',
         location: 'Split-phase panels, 3-way switches, and 240V appliance circuits.',
         warning: 'Red wires carry full voltage. In a 3-way switch circuit, the red wire may be live even if the switch is off.',
-        instrument: 'Verify with a UNI-T UT61E+ multimeter set to AC voltage mode. Measure between red and neutral for 220V.'
+        instrument: 'Verify with a UNI-T UT61E+ multimeter set to AC voltage mode. Measure between red and neutral for 230V.'
       },
       {
         color: 'Blue', hex: '#1E88E5', textColor: '#fff',
@@ -1170,7 +1170,7 @@
       },
       {
         color: 'Brown', hex: '#795548', textColor: '#fff',
-        function: 'Hot / Line (IEC)', voltage: '220V',
+        function: 'Hot / Line (IEC)', voltage: '230V',
         description: 'Standard hot/line wire color under IEC conventions. Used as the primary live conductor in European and IEC-compliant installations.',
         location: 'IEC-compliant installations, imported machinery, and some modern Philippine commercial buildings.',
         warning: 'If you see brown wires in a Philippine installation, confirm the wiring standard being used before working on the circuit.',
@@ -1178,7 +1178,7 @@
       },
       {
         color: 'Gray', hex: '#9E9E9E', textColor: '#333',
-        function: 'Neutral under PEC -- but LINE (L3) under IEC', voltage: '0V under PEC / 220V as IEC L3',
+        function: 'Neutral under PEC -- but LINE (L3) under IEC', voltage: '0V under PEC / 230V as IEC L3',
         description: 'Gray means two opposite things depending on the standard. Under the PEC (following NEC 200.6) gray is a permitted color for the grounded (neutral) conductor, alongside white. Under IEC 60445 gray is NOT a neutral at all -- it is line conductor L3 (brown = L1, black = L2, gray = L3), and the IEC neutral is BLUE.',
         location: 'PEC-wired Philippine installations (as a neutral), and imported IEC-wired machinery and control panels (as a live line conductor).',
         warning: 'DANGER: on imported IEC-wired equipment a gray conductor is LIVE at line voltage, not a neutral. Never assume gray is safe to touch. Always prove the conductor dead with a contact tester before working on it, and confirm which standard the panel was wired to.',
@@ -1233,7 +1233,7 @@
       {
         name: 'Electrical Power', icon: 'P', equation: 'P = V x I',
         description: 'Power (Watts) equals Voltage times Current.',
-        example: '<strong>Example:</strong> A 220V outlet supplying 5A:<br>P = 220V x 5A = <strong>1,100W (1.1 kW)</strong>'
+        example: '<strong>Example:</strong> A 230V outlet supplying 5A:<br>P = 230V x 5A = <strong>1,150W (1.15 kW)</strong>'
       },
       {
         name: 'Three-Phase Power', icon: '3P', equation: 'P = sqrt(3) x V x I x PF',
