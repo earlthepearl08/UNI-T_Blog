@@ -713,6 +713,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
       Commissioning
     </button>
+    <button class="calc-tab" data-tab="picker" role="tab" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/><path d="M21 21l-5.2-5.2"/></svg>
+      Which Instrument
+    </button>
     <button class="calc-tab" data-tab="quick" role="tab" aria-selected="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
       Quick Sizing
@@ -964,6 +968,39 @@
       <div id="cmResult" class="result-area"></div>
     </div>
 
+    <!-- ==================== INSTRUMENT PICKER ==================== -->
+    <div class="calc-panel" id="panel-picker" role="tabpanel">
+      <h2 class="calc-h2">Which Instrument</h2>
+      <p class="calc-sub">Tell it what you are measuring and it names one to three instruments that are actually rated for the job &mdash; and says which ones are <b>not</b>, and why. Thermal picks are chosen on whether the camera can resolve your target at your working distance, not on price.</p>
+
+      <div class="calc-grid">
+        <div class="form-group">
+          <label for="pkTask">What are you doing?</label>
+          <select id="pkTask"></select>
+        </div>
+        <div class="form-group" id="pkVoltWrap">
+          <label for="pkVolt">Array maximum system voltage (V)</label>
+          <input type="number" id="pkVolt" value="600" step="10" min="12" max="1500">
+          <span class="helper-text">Use the cold-morning Voc from the String Sizing tab, not the nameplate.</span>
+        </div>
+        <div class="form-group" id="pkCtxWrap" hidden>
+          <label for="pkCtx">What are you inspecting?</label>
+          <select id="pkCtx"></select>
+        </div>
+        <div class="form-group" id="pkDistWrap" hidden>
+          <label for="pkDist">Working distance (m)</label>
+          <input type="number" id="pkDist" value="8" step="0.5" min="0.3" max="200">
+          <span class="helper-text">How far the camera will actually be from the target.</span>
+        </div>
+        <div class="form-group" id="pkTgtWrap" hidden>
+          <label for="pkTgt">Smallest thing you need to measure</label>
+          <select id="pkTgt"></select>
+        </div>
+      </div>
+      <button class="calc-btn mt-2" onclick="calcPicker()">Recommend Instruments</button>
+      <div id="pkResult" class="result-area"></div>
+    </div>
+
     <!-- ==================== QUICK SIZING ==================== -->
     <div class="calc-panel" id="panel-quick" role="tabpanel">
       <h2 class="calc-h2">Quick Sizing</h2>
@@ -1185,6 +1222,7 @@
       { id: 'utcs07',  label: 'UT-CS07 flex clamp — CAT III 1500 V',      level: 3, volts: 1500 },
       { id: 'ut196',   label: 'UT196 — CAT III 1000 V',                   level: 3, volts: 1000 },
       { id: 'ut219ds', label: 'UT219DS clamp — CAT III 1000 V / CAT IV 600 V', level: 3, volts: 1000 },
+      { id: 'ut503pv', label: 'UT503PV PV insulation tester — 1000 V DC, PV mode', level: 3, volts: 1000 },
       { id: 'ut526',   label: 'UT526 installation tester — CAT III 600 V', level: 3, volts: 600 },
       { id: 'ut204',   label: 'UT204+ clamp — CAT II 600 V / CAT III 300 V', level: 3, volts: 300 },
       { id: 'ut673pv', label: 'UT673PV MPPT tester — CAT 0, 60 V',        level: 0, volts: 60 },
@@ -1314,6 +1352,7 @@
         <div class="result-card">
           <p class="result-caveat"><b>Where the numbers come from.</b> GHI is Solargis Global Solar Atlas long-term average (model v2.2.68, data through 2025). The PR default of 0.76 is the Solargis <em>rooftopSmall</em> model; a measured 2.72&nbsp;kWp system in Tarlac City achieved 77.1% over 2020–2023. Modelled losses for PH rooftop run about 12.9%, of which soiling is ~4.5% and temperature 10–12% — materially worse than the 5–7% temperate default.
           <br><br><b>No month-by-month table is published here</b> because the monthly values could not be verified to a source we trust. Annual, worst-month and seasonal spread were.
+          <br><br><b>This is a model, not a measurement.</b> To prove an actual commissioning figure or diagnose underperformance you need irradiance measured on the plane of the array &mdash; the <b>UT381PV</b> reads irradiance, temperature, inclination and azimuth together.
           <br><br><b>Tilt:</b> in the Philippines, tilt optimisation buys only <b>+0.8% (Davao) to +5.6% (Laoag)</b> over horizontal. Choose tilt for rain self-cleaning, wind loading and roof pitch — not for yield.</p>
         </div>`;
     }
@@ -1576,7 +1615,7 @@
         ['6.4', 'String open-circuit voltage', 'UT197PV for any system. UT196 or UT219DS up to 1000 V only.'],
         ['6.5', 'String short-circuit or operational current', 'UT219DS clamp, or the UT-CS07 flex sensor. <b>Must be Hall-effect AC/DC</b> — an AC-only clamp reads zero on DC.'],
         ['6.6', 'Functional tests and thermal survey', 'UTi260B thermal imager for hot-spot and connection scanning under load.'],
-        ['6.7', 'Insulation resistance of the DC circuits', '<b>Performed last</b>, after the array is proven correctly built and polarised.'],
+        ['6.7', 'Insulation resistance of the DC circuits', 'UT503PV, using its dedicated PV mode. <b>Performed last</b>, after the array is proven correctly built and polarised.'],
       ];
 
       out.innerHTML = `
@@ -1620,12 +1659,238 @@
           </ol>
         </div>
 
-        <div class="callout danger">
-          <div><b>Honest gap in the instrument line-up:</b> there is <b>no adequate insulation-resistance tester</b> for PV in the UNI-T range stocked here. The UT197PV and UT196 have no insulation function at all — their "60 M&Omega;" is the ordinary ohmmeter range. The UT526 offers 250/500/1000 V but is only CAT III 600 V, and its own manual prohibits testing live equipment. For step 6.7 on a real array you need a dedicated PV-mode insulation tester from another line. We would rather tell you that than sell you the wrong tool.</div>
+        <div class="callout info">
+          <div><b>For step 6.7 you need a dedicated PV insulation tester &mdash; the UT503PV.</b> It has a purpose-built PV insulation mode (500&ndash;1000&nbsp;V, 4&nbsp;G&Omega;) with auto-discharge, a live-circuit warning and an IP54 body, which is what array testing actually demands. Do <b>not</b> substitute a general-purpose meter: the UT197PV and UT196 have no insulation function at all &mdash; their &ldquo;60&nbsp;M&Omega;&rdquo; is the ordinary ohmmeter range &mdash; and the UT526, while it does offer 250/500/1000&nbsp;V, is only CAT III 600&nbsp;V and its manual prohibits testing live equipment.</div>
         </div>
 
         <div class="callout warn">
           <div><b>Safe sequence for Voc and Isc:</b> (1) inverter off and AC disconnect open; (2) open the load-break-rated DC isolator; (3) confirm zero DC current with a Hall-effect clamp on <b>one</b> conductor; (4) only then separate the string at a non-load-break device if you must; (5) measure. Earth-clamp testers (UT272A / UT275A) are CAT IV 300 V — loop configurations only, never clamped around live PV DC above 300 V.</div>
+        </div>`;
+    }
+
+
+    // ============================== TAB 6 ==============================
+    // Instrument picker. SRP figures are the published Kinmo SRP, carried here
+    // as flat numbers — no cost basis, multiplier or dealer tier is present in
+    // this file, and none may ever be added: it is a public page and anything
+    // computed client-side is readable in view-source.
+    const KIT = [
+      { id:'ut197pv', name:'UT197PV', srp:34790, role:'Solar multimeter', catLevel:3, catVolts:1500, dcRange:2500,
+        note:'CAT IV 1000 V / CAT III 1500 V, 2500 V DC range. The only meter here rated for a 1500 V array.' },
+      { id:'ut196', name:'UT196', srp:17990, role:'Solar multimeter', catLevel:3, catVolts:1000, dcRange:1700,
+        note:'CAT III 1000 V. Its 1700 V display range is NOT a safety rating — do not take it onto a 1500 V array.' },
+      { id:'ut219ds', name:'UT219DS', srp:19190, role:'Clamp meter, AC/DC', catLevel:3, catVolts:1000, dcRange:1000, clampA:600, hall:true,
+        note:'CAT III 1000 V / CAT IV 600 V, 600 A AC/DC, IP54. Hall-effect, so it reads DC.' },
+      { id:'utcs07', name:'UT-CS07', srp:15690, role:'Flex clamp sensor', catLevel:3, catVolts:1500, clampA:1000, hall:true, needsMeter:true,
+        note:'CAT III 1500 V, 1000 A AC/DC flexible sensor. Needs a host meter — it outputs mV/A.' },
+      { id:'ut503pv', name:'UT503PV', srp:47290, role:'PV insulation tester', catLevel:3, catVolts:1000, pvIR:true,
+        note:'Dedicated PV insulation mode 500–1000 V to 4 GΩ, auto-discharge, live-circuit warning, IP54.' },
+      { id:'ut595', name:'UT595', srp:75690, role:'Installation tester', catLevel:3, catVolts:440, continuity:true,
+        note:'Insulation to 1000 V, low-resistance continuity, loop and no-trip loop impedance. AC-side commissioning.' },
+      { id:'ut593', name:'UT593', srp:51490, role:'Installation tester', catLevel:3, catVolts:440, continuity:true,
+        note:'Same class as the UT595 without the extended ranges — the cheaper AC-side commissioning option.' },
+      { id:'ut526', name:'UT526', srp:23490, role:'Multifunction tester', catLevel:3, catVolts:440, continuity:true,
+        note:'Insulation 250/500/1000 V, RCD, and low-resistance continuity 0–2000 Ω. Its manual forbids testing live circuits.' },
+      { id:'ut381pv', name:'UT381PV', srp:27690, role:'Solar irradiance meter', irradiance:true,
+        note:'Irradiance, temperature, inclination and azimuth in one, IP65, Bluetooth logging. Measures what the Yield tab only models.' },
+      { id:'ut673pv', name:'UT673PV', srp:5290, role:'MPPT module tester', moduleV:60, moduleW:800,
+        note:'12–60 V, 5–800 W, 0–35 A. ONE MODULE AT A TIME — CAT 0, 60 V absolute ceiling.' },
+      { id:'ut673pvp', name:'UT673PV+', srp:10390, role:'MPPT module tester', moduleV:150, moduleW:1800,
+        note:'10–150 V, 5–1800 W, 0–20 A. Covers higher-voltage modules and a short series pair — still NOT a full string.' },
+      { id:'ut273p', name:'UT273+', srp:41390, role:'Clamp earth tester', earth:true, note:'Clamp-on earth resistance to 600 Ω, 32 mm jaw. Loop configurations only.' },
+      { id:'ut275', name:'UT275', srp:56290, role:'Clamp earth tester', earth:true, note:'Clamp-on earth resistance to 1200 Ω with 30 A current measurement.' },
+      { id:'ut521', name:'UT521', srp:19690, role:'Earth ground tester', earth:true, stake:true, note:'Stake (fall-of-potential) method, 0–2000 Ω. The reference method where a clamp cannot be used.' },
+    ];
+
+    // Thermal imagers, with IFOV derived from the published detector and field of
+    // view: IFOV(mrad) = radians(FOV_H) / horizontal_pixels x 1000. Spot size at a
+    // distance is IFOV x distance, and you need roughly three spots across a target
+    // to MEASURE it rather than merely see it. Cross-checked against UNI-T's own
+    // published 3.8 mrad for the UTi260B.
+    const IMAGERS = [
+      { name:'UTi120MS',   px:'120x90',  ifov:7.272, srp:14790, phone:'iOS' },
+      { name:'UTi120Mobile',px:'120x90', ifov:7.272, srp:14790, phone:'Android' },
+      { name:'UTi712S',    px:'120x90',  ifov:7.272, srp:18190 },
+      { name:'UTi716S',    px:'160x120', ifov:4.363, srp:22590 },
+      { name:'UTi720M',    px:'256x192', ifov:3.818, srp:24890, phone:'Android' },
+      { name:'UTi716B',    px:'160x120', ifov:4.363, srp:31690 },
+      { name:'UTi720A',    px:'256x192', ifov:3.818, srp:33990 },
+      { name:'UTi722M',    px:'256x192', ifov:2.727, srp:33990, phone:'Android' },
+      { name:'UTi120B',    px:'120x90',  ifov:7.272, srp:36290 },
+      { name:'UTi720T',    px:'256x192', ifov:3.818, srp:47890 },
+      { name:'UTi720B',    px:'256x192', ifov:3.818, srp:52190 },
+      { name:'UTi260B',    px:'256x192', ifov:3.818, srp:54190 },
+      { name:'UTi720E',    px:'256x192', ifov:3.818, srp:68190 },
+      { name:'UTi740M',    px:'400x300', ifov:1.274, srp:79590, phone:'Android' },
+      { name:'UTi740MS',   px:'400x300', ifov:1.274, srp:79590, phone:'Android + iOS' },
+      { name:'UTi730E',    px:'320x240', ifov:3.054, srp:95790 },
+      { name:'UTi720V',    px:'256x192', ifov:3.818, srp:125190 },
+      { name:'UTi730V',    px:'320x240', ifov:3.054, srp:157090 },
+      { name:'UTi740H+',   px:'400x300', ifov:1.265, srp:227790 },
+      { name:'UTi740H',    px:'384x288', ifov:1.273, srp:261990 },
+      { name:'UTi256G',    px:'256x192', ifov:1.909, srp:296190 },
+      { name:'UTi384G',    px:'384x288', ifov:1.909, srp:330390 },
+      { name:'UTi760H',    px:'640x480', ifov:0.654, srp:341990 },
+      { name:'UTi740X',    px:'400x300', ifov:1.209, srp:478590 },
+      { name:'UTi740XH',   px:'400x300', ifov:0.637, srp:592590 },
+      { name:'UTi760X',    px:'640x512', ifov:0.654, srp:820590 },
+    ];
+
+    const TASKS = [
+      { id:'voc',        label:'String voltage and polarity (IEC 62446 6.2 / 6.4)' },
+      { id:'current',    label:'String or array current (6.5)' },
+      { id:'insulation', label:'Insulation resistance of the DC circuits (6.7)' },
+      { id:'continuity', label:'Continuity and equipotential bonding (6.1)' },
+      { id:'earth',      label:'Earth electrode resistance' },
+      { id:'irradiance', label:'Irradiance and site survey' },
+      { id:'module',     label:'Single-module performance / MPPT test' },
+      { id:'thermal',    label:'Thermal inspection' },
+    ];
+
+    // Target sizes that decide whether a camera can measure, not just see.
+    const TARGETS = [
+      { id:'cell',     label:'A cell hot-spot (about 150 mm)',            mm:150 },
+      { id:'module',   label:'A whole under-performing module (~1.7 m)',  mm:1700 },
+      { id:'joint',    label:'A busbar or solder joint (about 10 mm)',    mm:10 },
+      { id:'terminal', label:'A panel-board terminal (about 20 mm)',      mm:20 },
+    ];
+
+    const CONTEXTS = [
+      { id:'roof',    label:'Rooftop array, walking the roof',        dist:8,  tgt:'cell' },
+      { id:'ground',  label:'Ground-mount rows, walking the aisles',  dist:15, tgt:'cell' },
+      { id:'farm',    label:'Solar farm, scanning from a distance',   dist:60, tgt:'cell' },
+      { id:'combiner',label:'Combiner box / panel board / switchgear', dist:1, tgt:'terminal' },
+      { id:'bench',   label:'Single module on the bench',             dist:1,  tgt:'joint' },
+    ];
+
+    (function populatePicker() {
+      TASKS.forEach(t => { const o=document.createElement('option'); o.value=t.id; o.textContent=t.label; $('pkTask').appendChild(o); });
+      CONTEXTS.forEach(c => { const o=document.createElement('option'); o.value=c.id; o.textContent=c.label; $('pkCtx').appendChild(o); });
+      TARGETS.forEach(t => { const o=document.createElement('option'); o.value=t.id; o.textContent=t.label; $('pkTgt').appendChild(o); });
+      $('pkTask').addEventListener('change', syncPicker);
+      $('pkCtx').addEventListener('change', () => {
+        const c = CONTEXTS.find(x => x.id === $('pkCtx').value);
+        if (c) { $('pkDist').value = c.dist; $('pkTgt').value = c.tgt; }
+      });
+      syncPicker();
+    })();
+
+    function syncPicker() {
+      const t = $('pkTask').value;
+      const thermal = t === 'thermal';
+      $('pkCtxWrap').hidden = !thermal;
+      $('pkDistWrap').hidden = !thermal;
+      $('pkTgtWrap').hidden = !thermal;
+      $('pkVoltWrap').hidden = ['irradiance','earth','thermal'].indexOf(t) !== -1;
+    }
+
+    const peso = n => '₱' + Number(n).toLocaleString('en-PH');
+
+    function pickCard(name, srp, why, rank, warn) {
+      return `
+        <div class="result-card ${rank === 1 ? 'green' : ''}${warn ? ' warn' : ''}">
+          <div class="result-label">${rank === 1 ? 'First choice' : rank === 2 ? 'Alternative' : 'Also works'}</div>
+          <div class="result-value" style="font-size:1.5rem;">${name} <small>${peso(srp)}</small></div>
+          <div class="result-sub">${why}</div>
+        </div>`;
+    }
+
+    function calcPicker() {
+      const task = $('pkTask').value;
+      const volts = parseFloat($('pkVolt').value) || 0;
+      const out = $('pkResult');
+      const K = id => KIT.find(k => k.id === id);
+      let picks = [], excluded = [], intro = '';
+
+      if (task === 'thermal') {
+        const dist = parseFloat($('pkDist').value);
+        const tgt = TARGETS.find(t => t.id === $('pkTgt').value);
+        if (!(dist > 0) || !tgt) { out.innerHTML = '<div class="callout danger"><div>Enter a working distance and a target size.</div></div>'; return; }
+        // Need the target to span at least three spots to measure it.
+        const maxIfov = (tgt.mm / 3) / dist;
+        const able = IMAGERS.filter(i => i.ifov <= maxIfov).sort((a, b) => a.srp - b.srp);
+        const near = IMAGERS.filter(i => i.ifov > maxIfov).sort((a, b) => a.ifov - b.ifov).slice(0, 3);
+        if (!able.length) {
+          out.innerHTML = `
+            <div class="callout danger">
+              <div><b>Nothing in the range can measure a ${tgt.mm} mm target at ${dist} m.</b> You would need an instantaneous field of view of ${maxIfov.toFixed(2)} mrad or better; the tightest here is ${near[0].ifov} mrad (${near[0].name}), which puts a ${(near[0].ifov * dist).toFixed(0)} mm spot on your target. Move closer, or use a telephoto lens on a UTi740/UTi760 body.</div>
+            </div>`;
+          return;
+        }
+        const top = able.slice(0, 3);
+        out.innerHTML = `
+          <div class="result-card">
+            <div class="result-label">Requirement</div>
+            <div class="result-value" style="font-size:1.4rem;">${maxIfov.toFixed(2)} <small>mrad or better</small></div>
+            <div class="result-sub">To <b>measure</b> a ${tgt.mm} mm target at ${dist} m you need about three detector spots across it. ${able.length} of ${IMAGERS.length} imagers qualify; the cheapest three are below.</div>
+          </div>
+          ${top.map((i, n) => pickCard(i.name + (i.phone ? ' <small>(' + i.phone + ' phone module)</small>' : ''), i.srp,
+              `${i.px} detector, ${i.ifov} mrad &rarr; a <b>${(i.ifov * dist).toFixed(0)} mm</b> spot at ${dist} m. ${i.phone ? 'Needs a phone — no standalone screen or battery.' : 'Standalone, no phone needed.'}`,
+              n + 1, false)).join('')}
+          ${(function(){
+            const cheaper = IMAGERS.filter(i => i.srp < top[0].srp && i.ifov > maxIfov)
+                                   .sort((a,b) => a.srp - b.srp)[0];
+            if (!cheaper) return '';
+            const d = (tgt.mm / 3) / cheaper.ifov;
+            if (d < dist * 0.4) return '';   // too far off the job to be useful advice
+            return `<div class="callout info"><div><b>Cheaper option if you can work closer:</b> the ${cheaper.name} (${peso(cheaper.srp)}) resolves the same ${tgt.mm} mm target out to <b>${d.toFixed(1)} m</b>. If your real working distance is inside that, it will do the job for ${peso(top[0].srp - cheaper.srp)} less.</div></div>`;
+          })()}
+          <div class="result-card">
+            <p class="result-caveat"><b>Ruled out at this distance:</b> ${near.map(i => `${i.name} (${i.ifov} mrad &rarr; ${(i.ifov * dist).toFixed(0)} mm spot)`).join(', ')}. They will still <em>show</em> a warm area — they just cannot put a trustworthy number on something that small from there. That is the difference between finding a fault and reporting one.
+            <br><br>Spot size = IFOV &times; distance, where IFOV = the horizontal field of view in radians divided by the detector's horizontal pixel count. Cross-checked against UNI-T's published 3.8 mrad for the UTi260B.</p>
+          </div>`;
+        return;
+      }
+
+      if (task === 'voc') {
+        intro = `Measuring up to ${volts} V DC. PV arrays are a CAT III environment, and within a category the voltage is a transient-withstand figure — not merely a range limit.`;
+        const able = [K('ut197pv'), K('ut196'), K('ut219ds')].filter(k => k.catVolts >= volts);
+        picks = able.slice(0, 3);
+        excluded = [K('ut197pv'), K('ut196'), K('ut219ds')].filter(k => k.catVolts < volts);
+      } else if (task === 'current') {
+        intro = 'An AC-only clamp reads <b>zero</b> on a live DC string. Both picks below are Hall-effect, so they read DC.';
+        const able = [K('ut219ds'), K('utcs07')].filter(k => k.catVolts >= volts);
+        picks = able; excluded = [K('ut219ds'), K('utcs07')].filter(k => k.catVolts < volts);
+      } else if (task === 'insulation') {
+        intro = 'Test <b>last</b>, after continuity, polarity and Voc have proven the array is correctly built. Isolate from the inverter first.';
+        picks = [K('ut503pv')];
+        if (volts <= 600) picks.push(K('ut526'));
+        excluded = volts > 600 ? [K('ut526')] : [];
+      } else if (task === 'continuity') {
+        intro = 'IEC 61557-4 requires the instrument to source more than 200 mA. <b>A multimeter continuity buzzer does not satisfy this</b> and will happily pass a high-resistance joint.';
+        picks = [K('ut526'), K('ut593'), K('ut595')];
+      } else if (task === 'earth') {
+        intro = 'Clamp-on testers need a complete loop through other electrodes. Where there is no loop — a single rod, or a new installation — the stake method is the reference.';
+        picks = [K('ut521'), K('ut273p'), K('ut275')];
+      } else if (task === 'irradiance') {
+        intro = 'The Array &amp; Yield tab <em>models</em> irradiance from long-term satellite data. This measures it where you are standing, which is what you need to prove a commissioning figure or diagnose underperformance.';
+        picks = [K('ut381pv')];
+      } else if (task === 'module') {
+        intro = 'These connect to <b>one module at a time</b>, disconnected from the string. Neither is a string tester.';
+        picks = [K('ut673pv'), K('ut673pvp')];
+      }
+
+      picks = picks.filter(Boolean);
+      if (!picks.length) {
+        out.innerHTML = `
+          <div class="callout danger">
+            <div><b>Nothing in the stocked range is rated for ${volts} V on this task.</b> ${task === 'voc' ? 'Above 1500 V you are outside what any meter here covers.' : 'Ask Kinmo — this needs a model outside the usual line.'}</div>
+          </div>`;
+        return;
+      }
+
+      out.innerHTML = `
+        <div class="result-card">
+          <div class="result-label">What you are doing</div>
+          <div class="result-sub" style="margin-top:0.4rem;">${intro}</div>
+        </div>
+        ${picks.slice(0, 3).map((k, n) => pickCard(k.name, k.srp, `<b>${k.role}.</b> ${k.note}${k.needsMeter ? ' <b>Pair it with a UT197PV or UT219DS.</b>' : ''}`, n + 1, false)).join('')}
+        ${excluded.length ? `
+        <div class="callout warn">
+          <div><b>Not rated for ${volts} V and excluded:</b> ${excluded.map(k => `${k.name} (${k.catVolts} V)`).join(', ')}. ${excluded.some(k => k.id === 'ut196') ? 'The UT196 in particular <em>displays</em> to 1700 V — that is a measurement range, not a safety rating.' : ''}</div>
+        </div>` : ''}
+        <div class="callout info">
+          <div>Prices are Kinmo published SRP and exclude delivery. <a href="/contact.html#quote">Ask for a quote</a> if you need several, or are not sure which fits your site.</div>
         </div>`;
     }
 
