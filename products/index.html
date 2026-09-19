@@ -1074,6 +1074,8 @@
   <script defer src="/_vercel/insights/script.js"></script>
   <style>
     .modal-btn-rfq{background:transparent;border:2px solid var(--uni-red);color:var(--uni-red);}
+    .modal-btn-fb{background:transparent;border:2px solid #1877F2;color:#1877F2;}
+    .modal-btn-fb:hover{background:#1877F2;color:#fff;}
     .modal-btn-rfq:hover{background:var(--uni-red);color:#fff;}
     .catalog-rfq{margin:2rem auto 0;max-width:760px;padding:1.1rem 1.25rem;border:1px solid var(--border-color,#d1d5db);border-left:3px solid var(--uni-red);border-radius:var(--border-radius,8px);background:rgba(0,0,0,0.025);display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;}
     [data-theme="dark"] .catalog-rfq{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.15);}
@@ -1081,6 +1083,11 @@
     [data-theme="dark"] .catalog-rfq p{color:rgba(255,255,255,0.75);}
     .catalog-rfq strong{color:var(--text-primary,#111);}
     [data-theme="dark"] .catalog-rfq strong{color:#fff;}
+  </style>
+  <style>
+    .footer-social{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;}
+    .footer-social a{display:inline-flex;align-items:center;gap:0.45rem;padding:0.45rem 0.8rem;border:1px solid rgba(255,255,255,0.22);border-radius:999px;font-size:0.82rem;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;transition:all .2s;}
+    .footer-social a:hover{background:#1877F2;border-color:#1877F2;color:#fff;}
   </style>
 </head>
 <body>
@@ -1282,6 +1289,7 @@
       <div class="catalog-rfq">
         <p><strong>Prices are not published here.</strong> Tell us what you need and we will quote it &mdash; or ask for the full dealer price list.</p>
         <a class="btn btn-primary" href="/contact.html?request=pricelist#quote">Request the price list</a>
+        <a class="btn btn-outline" href="https://m.me/UniT.Philippines" target="_blank" rel="noopener noreferrer">Message us on Facebook</a>
       </div>
 </section>
 
@@ -1405,6 +1413,10 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#E31E24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
             Exclusive Philippine Distributor
           </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/UniT.Philippines" target="_blank" rel="noopener noreferrer me" aria-label="UNI-T Philippines on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg><span>UNI-T.PH</span></a>
+            <a href="https://www.facebook.com/kinmopwcorporation" target="_blank" rel="noopener noreferrer me" aria-label="Kinmo PW Corporation on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg><span>Kinmo PW</span></a>
+          </div>
         </div>
         <div class="footer-section">
           <h3>Categories</h3>
@@ -1966,6 +1978,10 @@
               <a class="modal-btn modal-btn-primary" href="${escapeHtml(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">
                 Buy on Kinmo
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg>
+              </a>
+              <a class="modal-btn modal-btn-fb" href="https://m.me/UniT.Philippines?ref=${encodeURIComponent(product.model)}" target="_blank" rel="noopener noreferrer">
+                Message on Facebook
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
               </a>
               <a class="modal-btn modal-btn-rfq" href="/contact.html?product=${encodeURIComponent(product.model)}#quote">
                 Request a quote
