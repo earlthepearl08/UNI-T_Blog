@@ -287,6 +287,30 @@
   <script>
     (function(){
       var form=document.getElementById('inquiryForm');if(!form)return;
+
+      // Arriving from a product card or the price-list button: prefill so the
+      // visitor does not retype a model number they just clicked, and so the
+      // lead says WHICH product without them having to explain.
+      (function prefillFromQuery(){
+        try{
+          var q=new URLSearchParams(location.search);
+          var model=q.get('product');
+          var req=q.get('request');
+          if(model){
+            var pf=document.getElementById('qf-product');
+            if(pf&&!pf.value) pf.value=model;
+            var msg=document.getElementById('qf-message');
+            if(msg&&!msg.value) msg.value='Please send me a quotation for the '+model+'.';
+          } else if(req==='pricelist'){
+            var msg2=document.getElementById('qf-message');
+            if(msg2&&!msg2.value) msg2.value='Please send me the full UNI-T dealer price list.';
+          }
+          if(model||req){
+            var name=document.getElementById('qf-name');
+            if(name) name.focus({preventScroll:true});
+          }
+        }catch(e){}
+      })();
       var statusEl=document.getElementById('inquiryStatus');
       var btn=document.getElementById('qf-submit');
       var panel=document.getElementById('qf-fallback');

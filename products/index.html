@@ -1072,6 +1072,16 @@
        Also has to be switched on once at Vercel -> Project -> Analytics. -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    .modal-btn-rfq{background:transparent;border:2px solid var(--uni-red);color:var(--uni-red);}
+    .modal-btn-rfq:hover{background:var(--uni-red);color:#fff;}
+    .catalog-rfq{margin:2rem auto 0;max-width:760px;padding:1.1rem 1.25rem;border:1px solid var(--border-color,#d1d5db);border-left:3px solid var(--uni-red);border-radius:var(--border-radius,8px);background:rgba(0,0,0,0.025);display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;}
+    [data-theme="dark"] .catalog-rfq{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.15);}
+    .catalog-rfq p{margin:0;font-size:0.92rem;line-height:1.6;color:var(--text-secondary,#555);}
+    [data-theme="dark"] .catalog-rfq p{color:rgba(255,255,255,0.75);}
+    .catalog-rfq strong{color:var(--text-primary,#111);}
+    [data-theme="dark"] .catalog-rfq strong{color:#fff;}
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -1267,7 +1277,12 @@
       <h1>Complete UNI-T <span class="accent">Product Catalog</span></h1>
       <p>Browse every UNI-T test instrument across 72 categories. Click any product to find it on Kinmo.</p>
     </div>
-  </section>
+  
+      <div class="catalog-rfq">
+        <p><strong>Prices are not published here.</strong> Tell us what you need and we will quote it &mdash; or ask for the full dealer price list.</p>
+        <a class="btn btn-primary" href="/contact.html?request=pricelist#quote">Request the price list</a>
+      </div>
+</section>
 
   <div class="container">
   <div class="tool-disclaimer" role="note">
@@ -1950,6 +1965,10 @@
               <a class="modal-btn modal-btn-primary" href="${escapeHtml(product.kinmoSearchUrl || '#')}" target="_blank" rel="noopener">
                 Buy on Kinmo
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2"/><path d="M17 17V7H7"/></svg>
+              </a>
+              <a class="modal-btn modal-btn-rfq" href="/contact.html?product=${encodeURIComponent(product.model)}#quote">
+                Request a quote
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H5.2L4 17.2z"/></svg>
               </a>
               <a class="modal-btn modal-btn-secondary" href="/tools/compare.html?compare=${encodeURIComponent(slug)}">
                 Compare with Others
