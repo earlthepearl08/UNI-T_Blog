@@ -1,7 +1,7 @@
 {
  "scrapedAt": "2026-04-18",
  "source": "Kinmo PW UNI-T Distributor Price List (PDF)",
- "totalProducts": 504,
+ "totalProducts": 517,
  "categories": [
   {
    "id": "multimeters",
@@ -1444,7 +1444,7 @@
    "name": "Clamp Meters",
    "description": "AC and AC/DC clamp meters from mini 200A pocket models to 2500A True RMS industrial clamps, plus fork and leakage variants.",
    "icon": "",
-   "productCount": 53,
+   "productCount": 54,
    "products": [
     {
      "model": "UT200A",
@@ -2353,6 +2353,24 @@
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut258a/",
      "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT206C",
+     "category": "Clamp Meters",
+     "subcategory": "Digital Clamp Meter",
+     "description": "AC current: 1000A; DC/AC voltage: 600V; Capacitance:10mF; VFD; 16mm thick",
+     "image": "/images/products/ut206c.webp",
+     "keySpecs": [
+      "AC current: 1000A",
+      "DC/AC voltage: 600V",
+      "Capacitance:10mF",
+      "VFD",
+      "16mm thick"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT206C&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut206c/",
+     "officialUrlKind": "exact"
     }
    ]
   },
@@ -2361,7 +2379,7 @@
    "name": "Thermal Imagers",
    "description": "Smartphone, handheld, heavy-duty, enhanced, pro, and monocular thermal imagers for predictive maintenance, building diagnostics, and inspection.",
    "icon": "",
-   "productCount": 44,
+   "productCount": 49,
    "products": [
     {
      "model": "UTi260K",
@@ -3062,6 +3080,77 @@
      "source": "thermal-uni-trend",
      "officialUrlKind": "preexisting",
      "medNotice": "Screening aid only. Elevated-skin-temperature screening is not a medical diagnosis and this instrument is not a medical device or a thermometer for clinical use. It does not detect illness or infection. Any clinical decision must be made with an approved medical device by a qualified health professional, under FDA Philippines rules."
+    },
+    {
+     "model": "UTi740H+",
+     "category": "Thermal Imagers",
+     "subcategory": "Professional enhanced thermal imager",
+     "description": "400x300;Super resolution: 800×600; -20°C ~ 650°C; Accuracy up to ±1.5°C/±1.5% ; 29°×21.5°; 30Hz; 4.3' IPS display; Manual focus; Wi-Fi,Video recording,T-mix",
+     "image": "/images/products/uti740hplus.webp",
+     "keySpecs": [
+      "400x300",
+      "Super resolution: 800×600",
+      "-20°C ~ 650°C",
+      "Accuracy up to ±1.5°C/±1.5%",
+      "29°×21.5°"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UTi740H%2B&post_type=product",
+     "regions": []
+    },
+    {
+     "model": "UTi740X",
+     "category": "Thermal Imagers",
+     "subcategory": "Professional enhanced thermal imager",
+     "description": "400x300,super IR (800×600),NETD<35mk;18mm lens(standard),27.7°(H)×20.6°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, -20°C~1200°C, ±1.5°C or ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop p",
+     "image": "/images/products/uti740x.webp",
+     "keySpecs": [
+      "400x300,super IR (800×600),NETD<35mk",
+      "18mm lens(standard),27.7°(H)×20.6°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, -20°C~1200°C, ±1.5°C or ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop proof"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UTi740X&post_type=product",
+     "regions": []
+    },
+    {
+     "model": "UTi740XH",
+     "category": "Thermal Imagers",
+     "subcategory": "Professional enhanced thermal imager",
+     "description": "400x300,super IR (800×600),NETD<35mk;18mm lens,14.6°(H)×10.9°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, 1000°C~2200°C, ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop proof",
+     "image": "/images/products/uti740xh.webp",
+     "keySpecs": [
+      "400x300,super IR (800×600),NETD<35mk",
+      "18mm lens,14.6°(H)×10.9°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, 1000°C~2200°C, ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop proof"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UTi740XH&post_type=product",
+     "regions": []
+    },
+    {
+     "model": "UTi760H",
+     "category": "Thermal Imagers",
+     "subcategory": "Professional enhanced thermal imager",
+     "description": "640×480;Super resolution: 1280×960; -20°C ~ 650°C; Accuracy up to ±1.5°C/±1.5% ; 24°×19.3°; 30Hz; 4.3' IPS display; Manual focus; Wi-Fi,Video recording,T-mix",
+     "image": "/images/products/uti760h.webp",
+     "keySpecs": [
+      "640×480",
+      "Super resolution: 1280×960",
+      "-20°C ~ 650°C",
+      "Accuracy up to ±1.5°C/±1.5%",
+      "24°×19.3°"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UTi760H&post_type=product",
+     "regions": []
+    },
+    {
+     "model": "UTi760XH",
+     "category": "Thermal Imagers",
+     "subcategory": "Professional enhanced thermal imager",
+     "description": "640x512,super IR (1280×1024),NETD<35mk;18mm lens,24°(H)×19.3°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, 1000°C~2200°C, ±1.5°C or ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop proof",
+     "image": "/images/products/uti760xh.webp",
+     "keySpecs": [
+      "640x512,super IR (1280×1024),NETD<35mk",
+      "18mm lens,24°(H)×19.3°(V), 30Hz, 5ʺ IPS Touch screen, Auto/manual focus, 1000°C~2200°C, ±1.5°C or ±1.5% , 13MP Digital camera resolution, WIFI, Bluetooth, Laser range finder, Replaceable battery, IP54 & 2m drop proof"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UTi760XH&post_type=product",
+     "regions": []
     }
    ]
   },
@@ -5657,7 +5746,7 @@
    "name": "Contact Thermometers",
    "description": "K/J/T/E/R/S/N type thermocouple thermometers with single, dual, 4-channel, IR-combo, and food-safe HACCP variants.",
    "icon": "",
-   "productCount": 7,
+   "productCount": 8,
    "products": [
     {
      "model": "UT320A",
@@ -5776,6 +5865,24 @@
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/a63/",
      "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT320i",
+     "category": "Contact Thermometers",
+     "subcategory": "Wireless Temperature Clamp",
+     "description": "Temperature range: -50 ~150°C; Accuracy: ±0.5°C (-50 ~80°C); 10000 data storage; High-temperature resistant jaw; Mobile APP and UT336E connection; 100m connection distance; IP65; 2m dropproof; Measured pipe diameter: 6 ~ 42mm; 1400mAh rechargeable lithium batt",
+     "image": "/images/products/ut320i.webp",
+     "keySpecs": [
+      "Temperature range: -50 ~150°C",
+      "Accuracy: ±0.5°C (-50 ~80°C)",
+      "10000 data storage",
+      "High-temperature resistant jaw",
+      "Mobile APP and UT336E connection"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT320i&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut320i/",
+     "officialUrlKind": "exact"
     }
    ]
   },
@@ -5784,7 +5891,7 @@
    "name": "Network & Cable Testers",
    "description": "RJ45/RJ11/coax/HDMI cable testers and network kits for verifying LAN, telephone, video, and electrical wiring.",
    "icon": "",
-   "productCount": 7,
+   "productCount": 8,
    "products": [
     {
      "model": "UT681L",
@@ -5889,6 +5996,19 @@
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut685b-kit/",
      "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT685A KIT",
+     "category": "Network & Cable Testers",
+     "subcategory": "Cable Tester",
+     "description": "Tested cable type: UTP , FTP, SSTP; Cable length test 300m, POE detection, Ethernet port test,Cripping test",
+     "image": "/images/products/ut685a-kit.webp",
+     "keySpecs": [
+      "Tested cable type: UTP , FTP, SSTP",
+      "Cable length test 300m, POE detection, Ethernet port test,Cripping test"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT685A%20KIT&post_type=product",
+     "regions": []
     }
    ]
   },
@@ -7978,7 +8098,7 @@
    "name": "Pressure Gauges",
    "description": "Wireless refrigeration pressure gauges and digital manometers covering kPa, psi, bar, mmHg, and inH2O units.",
    "icon": "",
-   "productCount": 3,
+   "productCount": 6,
    "products": [
     {
      "model": "UT336P",
@@ -8027,6 +8147,60 @@
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut366a/",
      "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT336E",
+     "category": "Pressure Gauges",
+     "subcategory": "Digital Manifold Gauge",
+     "description": "Pressure range:-1.00~+60.00 bar;Accuracy:±0.5% FS;Temperature range:-50~150°C;3.5-inch TFT color screen;Multiple modes;10,000 data storage;Built-in 160+ refrigerants;Automatically calculate superheat and subcooling;5200mAh rechargeable lithium battery;Mobile A",
+     "image": "/images/products/ut336e.webp",
+     "keySpecs": [
+      "Pressure range:-1.00~+60.00 bar",
+      "Accuracy:±0.5% FS",
+      "Temperature range:-50~150°C",
+      "3.5-inch TFT color screen",
+      "Multiple modes"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT336E&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut336e/",
+     "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT336V",
+     "category": "Pressure Gauges",
+     "subcategory": "Wireless Vacuum Gauge",
+     "description": "Range: 1~19000 micron; Ambient temperature measurement; Judgement of H2O Status; Mobile APP and UT336E connection via Bluetooth; Audible and visual alarm; 8000 sets of data storage; 11 pressure units available; OTA upgrade; IP54 rating; Hook design",
+     "image": "/images/products/ut336v.webp",
+     "keySpecs": [
+      "Range: 1~19000 micron",
+      "Ambient temperature measurement",
+      "Judgement of H2O Status",
+      "Mobile APP and UT336E connection via Bluetooth",
+      "Audible and visual alarm"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT336V&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut336v/",
+     "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT336E KIT",
+     "category": "Pressure Gauges",
+     "subcategory": "Digital Manifold Gauge with Wireless Temperature Clamps",
+     "description": "Pressure range:-1.00~+60.00 bar;Accuracy:±0.5% FS;Temperature range:-50~150°C;3.5-inch TFT color screen;Multiple modes;10,000 data storage;Built-in 160+ refrigerants;Automatically calculate superheat and subcooling;5200mAh rechargeable lithium battery;Mobile A",
+     "image": "/images/products/ut336e.webp",
+     "keySpecs": [
+      "Pressure range:-1.00~+60.00 bar",
+      "Accuracy:±0.5% FS",
+      "Temperature range:-50~150°C",
+      "3.5-inch TFT color screen",
+      "Multiple modes"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT336E%20KIT&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut336e/",
+     "officialUrlKind": "series"
     }
    ]
   },
@@ -8939,7 +9113,7 @@
    "name": "Solar / PV Tools",
    "description": "MPPT solar panel testers and PV-specific instruments for solar installer commissioning and troubleshooting.",
    "icon": "",
-   "productCount": 1,
+   "productCount": 3,
    "products": [
     {
      "model": "UT673PV",
@@ -8957,6 +9131,40 @@
      "regions": [],
      "officialUrl": "https://meters.uni-trend.com/product/ut673pv-solar-mppt-meter/",
      "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT381PV",
+     "category": "Solar / PV Tools",
+     "subcategory": "Solar Irradiance Meter",
+     "description": "Multiple targets measurement: solar irradiance, temperature, inclination, azimuth;Simultaneous dual-temperature display;UV-resistant housing: F1;12800 Sets of data storage;Mobile APP and UT541 connection via Bluetooth;Audible and visible Alarm;Quick-release br",
+     "image": "/images/products/ut381pv.webp",
+     "keySpecs": [
+      "Multiple targets measurement: solar irradiance, temperature, inclination, azimuth",
+      "Simultaneous dual-temperature display",
+      "UV-resistant housing: F1",
+      "12800 Sets of data storage",
+      "Mobile APP and UT541 connection via Bluetooth"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT381PV&post_type=product",
+     "regions": [],
+     "officialUrl": "https://meters.uni-trend.com/product/ut381pv-solar-irradiance-meter/",
+     "officialUrlKind": "exact"
+    },
+    {
+     "model": "UT673PV+",
+     "category": "Solar / PV Tools",
+     "subcategory": "Solar MTTP Tester",
+     "description": "Max power measurement: 5~1800W ; Max power current(DC): 0~20A ; Max power voltage(DC): 10~150V ; Open circuit current(DC): 10~150V ; Short circuit current(DC): 0~20A : Reverse polarity connect Protection;Over voltage protection; Over current protection; Over t",
+     "image": "/images/products/ut673pvplus.webp",
+     "keySpecs": [
+      "Max power measurement: 5~1800W",
+      "Max power current(DC): 0~20A",
+      "Max power voltage(DC): 10~150V",
+      "Open circuit current(DC): 10~150V",
+      "Short circuit current(DC): 0~20A : Reverse polarity connect Protection"
+     ],
+     "kinmoSearchUrl": "https://kinmo.com/?s=UT673PV%2B&post_type=product",
+     "regions": []
     }
    ]
   },
@@ -9113,10 +9321,5 @@
    ]
   }
  ],
- "officialUrlCoverage": {
-  "linked": 456,
-  "total": 504,
-  "source": "meters.uni-trend.com product sitemap, model verified on page",
-  "checkedAt": "2026-09-12"
- }
+ "officialUrlCoverage": "462/517"
 }
