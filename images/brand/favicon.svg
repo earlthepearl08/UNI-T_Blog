@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="UNI-T Philippines">
   <rect width="100" height="100" rx="22" fill="#E31E24"/>
-  <circle cx="50" cy="50" r="34" fill="none" stroke="#FFFFFF" stroke-width="3"/>
-  <text x="50" y="58" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">UNI-T</text>
+  <text x="50" y="50" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central"
+        font-family="'Arial Black','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-weight="900" font-size="54" letter-spacing="-3">UT</text>
 </svg>
