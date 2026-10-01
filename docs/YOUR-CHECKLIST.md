@@ -1,6 +1,13 @@
 # What Earl needs to do
 
-**As of 21 September 2026.** Everything here is something I cannot do for you —
+> **UPDATE — 1 October 2026: items 1 and 2 are DONE.** Lead delivery is live
+> (`"configured": true`) and verified end to end through the real form; Vercel
+> Web Analytics is enabled on the Hobby plan. Items 3 onward are still open.
+> One fix was needed on the day: the 8-second delivery budget produced a false
+> negative in production — the lead reached the sheet but the visitor was told
+> it had failed — so the budget is now 25s with a 30s function limit.
+
+**Originally written 21 September 2026.** Everything here is something I cannot do for you —
 it needs your accounts, your credentials, or your business decision. Ordered by
 what actually moves the needle.
 
