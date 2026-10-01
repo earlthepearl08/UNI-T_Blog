@@ -1,5 +1,29 @@
 # What Earl needs to do
 
+> ## 🚨 0. kinmo.com IS DOWN — found 1 October 2026, 15:30 PHT
+>
+> **Every page of kinmo.com returns HTTP 403 and a GoDaddy error page:**
+> *"Something's wrong here… If you're the site owner, contact your hosting
+> provider."* Homepage, the UNI-T category, and product search — all of it.
+> Tested repeatedly from two different clients.
+>
+> **Your domain is fine.** `kinmo.com` is registered and paid through
+> **16 March 2028**, status ACTIVE. This is not a domain-renewal problem.
+>
+> **It is the hosting.** The domain resolves to `160.153.0.77`, a GoDaddy
+> server, and GoDaddy serves that exact page when a hosting plan has lapsed,
+> been suspended, or been deactivated.
+>
+> **What to do:** log in to GoDaddy → **My Products → Web Hosting** and look
+> for an expired plan, a failed payment, or a suspension notice. If it all
+> looks paid and active, ring GoDaddy support — their own error page is telling
+> you to.
+>
+> **Why this outranks everything below:** every "Buy on Kinmo" button on all
+> 517 products, plus the shop links on `contact.html`, `about.html` and every
+> page footer, currently sends customers to an error page. The blog is working
+> and collecting leads; the shop it points at is not.
+
 > **UPDATE — 1 October 2026: items 1 and 2 are DONE.** Lead delivery is live
 > (`"configured": true`) and verified end to end through the real form; Vercel
 > Web Analytics is enabled on the Hobby plan. Items 3 onward are still open.
@@ -103,7 +127,9 @@ unsubmitted.
 ## 4. Add the missing products to kinmo.com  🟠 high, ongoing
 
 **307 of your 517 catalogued products are not on kinmo.com.** I tested every
-one. That means "Buy on Kinmo" — the primary button on your product cards —
+one on 21 September 2026. ⚠️ **I could not re-check this on 1 October — the
+store is down (item 0), so right now *all 517* fail, not just 307.** Re-run the
+audit once hosting is restored. That means "Buy on Kinmo" — the primary button on your product cards —
 lands on an empty search for the majority of the range, including instruments
 the solar picker actively recommends (UT381PV, UT673PV, UT-CS07, UT197PV).
 
