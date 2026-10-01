@@ -159,9 +159,17 @@ module.exports = async function handler(req, res) {
   // inquiry has been sent", the browser fallback never ran, and the lead was
   // gone with nothing in the logs. Check the status, and time out rather than
   // hanging until the platform kills the function.
+  // Google Apps Script is slow — measured at 3.5-4s from a local machine and
+  // comfortably more from Vercel's region, especially on a cold start. The
+  // original 8s budget produced a FALSE NEGATIVE in production: the row was
+  // written to the sheet, the function gave up waiting, and the visitor was
+  // told the form had failed. That is worse than a real failure, because it
+  // pushes a customer who did get through into emailing instead.
+  const DELIVERY_TIMEOUT_MS = 25000;
+
   async function deliverTo(label, url, opts) {
     try {
-      const r = await fetch(url, Object.assign({ signal: AbortSignal.timeout(8000) }, opts));
+      const r = await fetch(url, Object.assign({ signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS) }, opts));
       const body = await r.text().catch(() => '');
 
       if (!r.ok) {
