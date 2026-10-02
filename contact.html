@@ -308,7 +308,8 @@
             if(msg&&!msg.value) msg.value='Please send me a quotation for the '+model+'.';
           } else if(req==='pricelist'){
             var msg2=document.getElementById('qf-message');
-            if(msg2&&!msg2.value) msg2.value='Please send me the full UNI-T dealer price list.';
+            // Public site shows SRP; this prefill asks for SRP/availability — not a dealer net list.
+            if(msg2&&!msg2.value) msg2.value='Please send me current UNI-T SRP / availability for the models I need (or a quote if SRP is RFQ).';
           }
           if(model||req){
             var name=document.getElementById('qf-name');

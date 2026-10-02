@@ -511,6 +511,34 @@
       line-height: 1.25;
       letter-spacing: -0.01em;
     }
+    .card-price {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin: 0.15rem 0 0.55rem;
+      padding-top: 0.35rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .card-price-amount {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
+    }
+    .card-price-lbl {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+    .card-price.is-rfq .card-price-amount {
+      color: var(--uni-red);
+      font-size: 0.98rem;
+    }
     .card-desc {
       color: var(--text-secondary);
       font-size: 0.875rem;
@@ -1081,6 +1109,12 @@
     .modal-btn-fb{background:transparent;border:2px solid #1877F2;color:#1877F2;}
     .modal-btn-fb:hover{background:#1877F2;color:#fff;}
     .modal-btn-rfq:hover{background:var(--uni-red);color:#fff;}
+    .modal-price{margin:0.35rem 0 0.85rem;padding:0.65rem 0.85rem;border:1px solid var(--border-color);border-radius:8px;background:rgba(0,0,0,0.02);display:flex;align-items:baseline;justify-content:space-between;gap:0.75rem;flex-wrap:wrap;}
+    [data-theme="dark"] .modal-price{background:rgba(255,255,255,0.04);}
+    .modal-price-amount{font-family:var(--font-heading);font-size:1.35rem;font-weight:800;color:var(--text-primary);font-variant-numeric:tabular-nums;}
+    .modal-price-lbl{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);}
+    .modal-price-note{width:100%;margin:0.15rem 0 0;font-size:0.78rem;line-height:1.45;color:var(--text-muted);}
+    .modal-price.is-rfq .modal-price-amount{color:var(--uni-red);}
     .catalog-rfq{margin:2rem auto 0;max-width:760px;padding:1.1rem 1.25rem;border:1px solid var(--border-color,#d1d5db);border-left:3px solid var(--uni-red);border-radius:var(--border-radius,8px);background:rgba(0,0,0,0.025);display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:space-between;}
     [data-theme="dark"] .catalog-rfq{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.15);}
     .catalog-rfq p{margin:0;font-size:0.92rem;line-height:1.6;color:var(--text-secondary,#555);}
@@ -1291,8 +1325,8 @@
     </div>
   
       <div class="catalog-rfq">
-        <p><strong>Prices are not published here.</strong> Tell us what you need and we will quote it &mdash; or ask for the full dealer price list.</p>
-        <a class="btn btn-primary" href="/contact.html?request=pricelist#quote">Request the price list</a>
+        <p><strong>Suggested retail (SRP) is shown where available.</strong> Items over ₱100,000 or without a listed SRP show <strong>RFQ</strong> &mdash; request a quote and we will confirm current pricing.</p>
+        <a class="btn btn-primary" href="/contact.html#quote">Request a quote</a>
         <a class="btn btn-outline" href="https://m.me/UniT.Philippines" target="_blank" rel="noopener noreferrer">Message us on Facebook</a>
       </div>
 </section>
@@ -1646,7 +1680,7 @@
           // Content hash of products-catalog.json, bumped only when the catalog
           // actually changes. A daily-rotating value forced every visitor to
           // re-download 316 KB each day AND hid same-day edits behind the cache.
-          const cacheBust = 'eebcf4bbc9';
+          const cacheBust = '93065fa5d7';
           const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
           if (!res.ok) throw new Error('Failed to load catalog');
           const data = await res.json();
@@ -1675,6 +1709,9 @@
                 kinmoSearchUrl: p.kinmoSearchUrl,
                 keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
                 source: p.source || 'scraped',
+                srp: (p.srp == null || p.srp === '') ? null : Number(p.srp),
+                currency: p.currency || 'PHP',
+                priceAsOf: p.priceAsOf || (data.pricing && data.pricing.priceAsOf) || '',
                 _featuredOrder: catIdx * 1000 + idx
               });
             });
@@ -1812,6 +1849,47 @@
       }
 
       // ----- Card renderer -----
+      const RFQ_THRESHOLD_PHP = 100000;
+
+      function formatPhp(n) {
+        return new Intl.NumberFormat('en-PH', {
+          style: 'currency',
+          currency: 'PHP',
+          maximumFractionDigits: 0
+        }).format(n);
+      }
+
+      /** Public display policy: numeric SRP ≤ ₱100k, else RFQ (missing or over threshold). */
+      function publicPrice(p) {
+        const raw = p && p.srp;
+        const n = raw == null || raw === '' ? NaN : Number(raw);
+        if (!Number.isFinite(n)) return { mode: 'rfq', reason: 'missing', label: 'RFQ', amountText: 'RFQ' };
+        if (n > RFQ_THRESHOLD_PHP) return { mode: 'rfq', reason: 'threshold', label: 'RFQ', amountText: 'RFQ', amount: n };
+        return { mode: 'srp', reason: 'ok', label: 'SRP', amountText: formatPhp(n), amount: n };
+      }
+
+      function priceBlockHtml(p, variant) {
+        const price = publicPrice(p);
+        const isRfq = price.mode === 'rfq';
+        const cls = variant === 'modal'
+          ? `modal-price${isRfq ? ' is-rfq' : ''}`
+          : `card-price${isRfq ? ' is-rfq' : ''}`;
+        const amtCls = variant === 'modal' ? 'modal-price-amount' : 'card-price-amount';
+        const lblCls = variant === 'modal' ? 'modal-price-lbl' : 'card-price-lbl';
+        const note = variant === 'modal'
+          ? (isRfq
+              ? `<p class="modal-price-note">${price.reason === 'threshold'
+                  ? 'Over ₱100,000 suggested retail — request a quote for current pricing.'
+                  : 'SRP not listed for this model — request a quote for current pricing.'}</p>`
+              : `<p class="modal-price-note">Suggested retail price${p.priceAsOf ? ` (as of ${escapeHtml(p.priceAsOf)})` : ''}. Confirm with Kinmo before ordering.</p>`)
+          : '';
+        return `<div class="${cls}" aria-label="${isRfq ? 'Request for quote' : 'Suggested retail price'}">
+          <span class="${amtCls}">${escapeHtml(price.amountText)}</span>
+          <span class="${lblCls}">${isRfq ? 'Request quote' : 'SRP'}</span>
+          ${note}
+        </div>`;
+      }
+
       function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, c => ({
           '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -1888,6 +1966,7 @@
           ${compat}
           ${p.medNotice ? `<div class="ph-compat ph-compat-warn" title="${escapeHtml(p.medNotice)}">Screening aid &mdash; not a medical device</div>` : ''}
           ${seriesNote}
+          ${priceBlockHtml(p, 'card')}
           <div class="card-desc">${safeDesc}</div>
           ${chipsHtml ? `<div class="card-chips">${chipsHtml}</div>` : ''}
           <div class="card-actions">
@@ -1961,6 +2040,7 @@
             <div class="modal-category">${escapeHtml(product.category)}</div>
             <h2 id="productModalTitle" class="modal-title">UNI-T ${escapeHtml(product.model)}</h2>
             ${product.subcategory ? `<div class="modal-subcat">${escapeHtml(product.subcategory)}</div>` : ''}
+            ${priceBlockHtml(product, 'modal')}
             ${product.medNotice ? `<div class="ph-compat-block ph-compat-warn">
               <strong>Screening aid &mdash; not a medical device</strong>
               <p>${escapeHtml(product.medNotice)}</p>

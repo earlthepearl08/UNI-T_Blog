@@ -549,6 +549,28 @@
       transition: background 0.2s;
     }
     .compare-table .buy-btn:hover { background: #c91920; }
+    .compare-table .price-cell {
+      font-variant-numeric: tabular-nums;
+    }
+    .compare-table .price-srp {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-primary, #111);
+    }
+    .compare-table .price-rfq {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #E31E24;
+    }
+    .compare-table .price-lbl {
+      display: block;
+      margin-top: 0.15rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #9ca3af;
+    }
     .compare-table .official-link {
       display: block;
       margin-top: 0.4rem;
@@ -1139,11 +1161,22 @@
     function escapeAttr(s) {
       return String(s).replace(/['"\\]/g, '');
     }
+    const RFQ_THRESHOLD_PHP = 100000;
+    function formatPhp(n) {
+      return new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP', maximumFractionDigits: 0 }).format(n);
+    }
+    function publicPrice(p) {
+      const raw = p && p.srp;
+      const n = raw == null || raw === '' ? NaN : Number(raw);
+      if (!Number.isFinite(n)) return { mode: 'rfq', reason: 'missing', amountText: 'RFQ' };
+      if (n > RFQ_THRESHOLD_PHP) return { mode: 'rfq', reason: 'threshold', amountText: 'RFQ', amount: n };
+      return { mode: 'srp', reason: 'ok', amountText: formatPhp(n), amount: n };
+    }
 
     // ── Fetch catalog ──
     async function loadCatalog() {
       try {
-        const cacheBust = 'eebcf4bbc9';
+        const cacheBust = '93065fa5d7';
         const res = await fetch('/content/products-catalog.json?v=' + cacheBust, { cache: 'default' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
@@ -1161,7 +1194,10 @@
               image: p.image || null,
               keySpecs: Array.isArray(p.keySpecs) ? p.keySpecs : [],
               kinmoSearchUrl: p.kinmoSearchUrl || ('https://kinmo.com/?s=' + encodeURIComponent(p.model)),
-              officialUrl: p.officialUrl || ''
+              officialUrl: p.officialUrl || '',
+              srp: (p.srp == null || p.srp === '') ? null : Number(p.srp),
+              currency: p.currency || 'PHP',
+              priceAsOf: p.priceAsOf || (data.pricing && data.pricing.priceAsOf) || ''
             });
           });
           if (cat.name) categories.push({ name: cat.name, icon: cat.icon || '', count: (cat.products || []).length });
@@ -1446,6 +1482,19 @@
         </tr>
       `;
 
+      const priceRow = `
+        <tr data-diffable="true">
+          <td>Price (SRP)</td>
+          ${chosen.map(p => {
+            const price = publicPrice(p);
+            if (price.mode === 'rfq') {
+              return `<td class="price-cell"><span class="price-rfq">RFQ</span><span class="price-lbl">${price.reason === 'threshold' ? 'Over ₱100k' : 'Ask for quote'}</span></td>`;
+            }
+            return `<td class="price-cell"><span class="price-srp">${escapeHtml(price.amountText)}</span><span class="price-lbl">SRP</span></td>`;
+          }).join('')}
+        </tr>
+      `;
+
       // Subcategory row (only if any has one)
       const hasSub = chosen.some(p => p.subcategory);
       const subRow = hasSub ? `
@@ -1532,6 +1581,7 @@
             <thead><tr><th scope="col"><span class="sr-only">Specification</span></th>${headerCells}</tr></thead>
             <tbody>
               ${descRow}
+              ${priceRow}
               ${subRow}
               ${specsSection}
               ${buyRow}
