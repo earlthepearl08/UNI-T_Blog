@@ -8,3 +8,14 @@ scripts/
 node_modules/
 docs/
 *.md
+
+# Internal / sensitive content — must NOT be publicly served on Vercel.
+# Runtime front-end only fetches: posts.json, categories.json, products-catalog.json.
+# tags.json is unused by the front-end today but is non-sensitive taxonomy; left deployable.
+content/uni-t-distributor-pricelist.txt
+content/social-posts.json
+content/social-posts.csv
+content/social-posts.md
+content/products-additions.json
+content/thermal-additions.json
+content/calendar.json
